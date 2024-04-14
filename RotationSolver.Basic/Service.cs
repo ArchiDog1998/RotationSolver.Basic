@@ -5,6 +5,9 @@ using FFXIVClientStructs.Attributes;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
 using RotationSolver.Basic.Configuration;
+using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+using RotationSolver.Basic.Configuration.Timeline;
 
 namespace RotationSolver.Basic;
 
@@ -62,18 +65,39 @@ internal class Service : IDisposable
 
         _checkerHook = Svc.Hook.HookFromSignature<OnCheckIsIconReplaceableDelegate>("E8 ?? ?? ?? ?? 84 C0 74 4C 8B D3", IsAdjustedActionIdDetour);
         _checkerHook.Enable();
+
+        try
+        {
+            Config = JsonConvert.DeserializeObject<Configs>(
+                File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName),
+                new BaseTimelineItemConverter(), new BaseDrawingGetterConverter(), new ITimelineConditionConverter())
+                ?? new Configs();
+        }
+        catch (Exception ex)
+        {
+            Svc.Log.Warning(ex, "Failed to load config");
+            Config = new Configs();
+        }
+
+        Svc.ClientState.Login += ClientState_Login;
+        ClientState_Login();
+    }
+
+    private void ClientState_Login()
+    {
+        ObjectHelper.UploadYourHash(Config.IWannaBeSayedHello);
     }
 
     private static bool IsReplaced(uint actionID)
     {
-        if (Service.Config.ReplaceIcon)
+        if (Config.ReplaceIcon)
         {
             switch (actionID)
             {
-                case (uint)ActionID.SleepPvE when Service.Config.ReplaceSleep:
-                case (uint)ActionID.FootGrazePvE when Service.Config.ReplaceFootGraze:
-                case (uint)ActionID.LegGrazePvE when Service.Config.ReplaceLegGraze:
-                case (uint)ActionID.ReposePvE when Service.Config.ReplaceRepose:
+                case (uint)ActionID.SleepPvE when Config.ReplaceSleep:
+                case (uint)ActionID.FootGrazePvE when Config.ReplaceFootGraze:
+                case (uint)ActionID.LegGrazePvE when Config.ReplaceLegGraze:
+                case (uint)ActionID.ReposePvE when Config.ReplaceRepose:
                     return true;
             }
         }
@@ -115,5 +139,7 @@ internal class Service : IDisposable
         }
         _adjustActionIdHook?.Dispose();
         _checkerHook?.Dispose();
+
+        Svc.ClientState.Login -= ClientState_Login;
     }
 }

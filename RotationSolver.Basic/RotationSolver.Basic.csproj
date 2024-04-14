@@ -81,4 +81,7 @@
 		<PackagePath>\</PackagePath>
 	  </None>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Octokit" Version="11.0.0" />
+  </ItemGroup>
 </Project>

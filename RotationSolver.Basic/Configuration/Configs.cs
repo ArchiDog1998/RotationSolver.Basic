@@ -4,7 +4,6 @@ using ECommons.ExcelServices;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Data;
 using XIVConfigUI;
-using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration;
 
@@ -405,6 +404,9 @@ internal partial class Configs : IPluginConfiguration
     [UI("Say hello only one time to the same user.",
         Parent = nameof(SayHelloToAll))]
     public ConditionBoolean JustSayHelloOnce { get; private set; } = new(false, nameof(JustSayHelloOnce));
+
+    [UI("I wanna be sayed hello", (int)UiString.ConfigWindow_Basic_Others, Section = 1)]
+    public bool IWannaBeSayedHello { get; set ; }
 
     [JobFilter(PvP = JobFilterType.NoHealer, PvE = JobFilterType.NoHealer)]
     [UI("Only Heal self when not a healer.", 
