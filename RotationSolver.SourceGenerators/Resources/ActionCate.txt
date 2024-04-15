@@ -3,7 +3,7 @@
 #nullable enable
 namespace RotationSolver.Basic.Data;
 /// <summary> The ActionCate </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "4.2.6.5")]
+[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.0")]
 public enum ActionCate : byte
 {
     /// <summary/>
