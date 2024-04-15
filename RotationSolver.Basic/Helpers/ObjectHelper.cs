@@ -157,45 +157,6 @@ public static class ObjectHelper
         }
     }
 
-    internal static async void UploadYourHash(bool add)
-    {
-        var player = Player.Object;
-        if (player == null) return;
-
-        var newClient = new GitHubClient(new ProductHeaderValue("ophion"))
-        {
-            Credentials = new("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")
-        };
-
-        var content = (await newClient.Repository.Content.GetAllContents("ArchiDog1998", "UsersHash", "UsersHash.json"))[0];
-
-        HashSet<string> value;
-        try
-        {
-            value = JsonConvert.DeserializeObject<HashSet<string>>(content.Content) ?? [];
-        }
-        catch
-        {
-            value = [];
-        }
-
-        var hash = player.EncryptString();
-        if (add && !value.Contains(hash))
-        {
-            value.Add(hash);
-            await newClient.Repository.Content.UpdateFile("ArchiDog1998", "UsersHash", "UsersHash.json", new("Added one Hash", JsonConvert.SerializeObject(value), content.Sha));
-        }
-        else if(!add && value.Contains(hash))
-        {
-            value.Remove(hash);
-            await newClient.Repository.Content.UpdateFile("ArchiDog1998", "UsersHash", "UsersHash.json", new("Removed one Hash", JsonConvert.SerializeObject(value), content.Sha));
-        }
-        else
-        {
-            Svc.Log.Error("Not the time");
-        }
-    }
-
     internal static unsafe bool IsInEnemiesList(this BattleChara battleChara)
     {
         var addons = Service.GetAddons<AddonEnemyList>();
