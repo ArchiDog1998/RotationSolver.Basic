@@ -9,6 +9,20 @@ internal static class DownloadHelper
     public static string[] LinkLibraries { get; private set; } = [];
     public static string[] UsersHash { get; private set; } = [];
     public static string[] Supporters { get; private set; } = [];
+    private static string[] SupportersHash { get; set; } = [];
+    internal static string[] ContributorsHash { get; private set; } = [];
+
+    public static bool IsSupporter
+    {
+        get
+        {
+            if (!Player.Available) return false;
+
+            var hash = Player.Object.EncryptString();
+
+            return SupportersHash.Union(ContributorsHash).Contains(hash);
+        }
+    }
     public static IncompatiblePlugin[] IncompatiblePlugins { get; private set; } = [];
 
     public static async Task DownloadAsync()
@@ -16,11 +30,13 @@ internal static class DownloadHelper
         LinkLibraries = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/downloadList.json") ?? [];
         IncompatiblePlugins = await DownloadOneAsync<IncompatiblePlugin[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/IncompatiblePlugins.json") ?? [];
 
-        DataCenter.ContributorsHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/ContributorsHash.json") ?? [];
+        ContributorsHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/ContributorsHash.json") ?? [];
 
         UsersHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/UsersHash.json") ?? [];
 
         Supporters = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/Supporters.json") ?? [];
+
+        SupportersHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/SupportersHash.json") ?? [];
     }
 
     static Dictionary<string, byte> _data = [];

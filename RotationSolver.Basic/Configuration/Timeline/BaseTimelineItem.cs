@@ -21,7 +21,7 @@ internal abstract class BaseTimelineItem
 
             if (_enable)
             {
-                if (DownloadHelper.Supporters.Contains(Player.Object?.EncryptString()))
+                if (DownloadHelper.IsSupporter)
                 {
                     OnEnable();
                 }

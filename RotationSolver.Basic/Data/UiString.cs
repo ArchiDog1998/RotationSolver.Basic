@@ -736,9 +736,12 @@ internal enum UiString
     [Description("The pvp feature can only be used when your config \"{0}\" is on!")]
     CantUseInPvP,
 
-    [Description("The high-end duty can only be used when your config \"{0}\" is on!")]
+    [Description("This feature in high end duties is avaliable only for supporters!")]
     CantUseInHighEnd,
 
     [Description("The timeline feature is supporters-only feature!")]
     CantUseTimeline,
+
+    [Description("Copied your hash to the clipboard!")]
+    CopiedYourHash,
 }
