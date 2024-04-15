@@ -17,37 +17,39 @@ internal static class GithubRecourcesHelper
 
     internal static async Task ModifyFile<T>(string path, ModifyValueDelegate<T?> modifyFile)
     {
-        IReadOnlyList<RepositoryContent> content;
-
+        bool shouldCreate = true;
+        string sha = string.Empty;
+        T? value = default;
         try
         {
+            IReadOnlyList<RepositoryContent> content;
+
             content = await GitHubClient.Repository.Content.GetAllContents(XIVConfigUIMain.UserName, RepoName, path);
+
+            shouldCreate = content.Count == 0;
+
+            if (!shouldCreate)
+            {
+                sha = content[0].Sha;
+                try
+                {
+                    value = JsonConvert.DeserializeObject<T>(content[0].Content);
+                }
+                catch
+                {
+                    value = default;
+                }
+            }
         }
-        catch(Exception ex)
+        catch (NotFoundException ex)
         {
-            Svc.Log.Error(ex, $"Failed to find the file {path}.");
+            Svc.Log.Info(ex, $"Failed to find the file {path}.");
+        }
+        catch (Exception ex)
+        {
+            Svc.Log.Error(ex, $"Failed to find the download {path}.");
             return;
         }
-
-        var shouldCreate = content.Count == 0;
-
-        T? value;
-        if (shouldCreate)
-        {
-            value = default;
-        }
-        else
-        {
-            try
-            {
-                value = JsonConvert.DeserializeObject<T>(content[0].Content);
-            }
-            catch
-            {
-                value = default;
-            }
-        }
-
 
         if (!modifyFile(ref value, out var commit))
         {
@@ -62,7 +64,7 @@ internal static class GithubRecourcesHelper
             }
             else
             {
-                await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented), content[0].Sha));
+                await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented), sha));
             }
         }
         catch(Exception ex)
@@ -128,6 +130,9 @@ internal static class GithubRecourcesHelper
             if (player == null) return false;
 
             var hash = player.EncryptString();
+
+            if (value.TryGetValue(hash, out var v) && v == rate) return false;
+
             value[hash] = rate;
             return true;
         }

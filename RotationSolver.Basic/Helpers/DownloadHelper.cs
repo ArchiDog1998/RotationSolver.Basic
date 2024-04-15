@@ -1,4 +1,5 @@
 ﻿using ECommons.DalamudServices;
+using ECommons.GameHelpers;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Helpers;
@@ -35,6 +36,12 @@ internal static class DownloadHelper
         return [];
     }
 
+    public static void ModifyMyRate(byte rate)
+    {
+        if (!Player.Available) return;
+        _data[Player.Object.EncryptString()] = rate;
+    }
+
     private static async void UpdateRating(Type rotationType)
     {
         _data = await DownloadOneAsync<Dictionary<string, byte>>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/Rating/{rotationType.FullName ?? rotationType.Name}.json")
@@ -53,7 +60,7 @@ internal static class DownloadHelper
         }
         catch (Exception ex)
         {
-            Svc.Log.Information(ex, "Failed to download list.");
+            Svc.Log.Information(ex, $"Failed to download list: {url}.");
             return default;
         }
     }

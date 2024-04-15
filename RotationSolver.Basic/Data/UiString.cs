@@ -729,4 +729,7 @@ internal enum UiString
 
     [Description("Some features that shouldn't be included in RS but help you.")]
     Item_Extra,
+
+    [Description("There are still {0}s left to rate.")]
+    Rotation_Rate,
 }
