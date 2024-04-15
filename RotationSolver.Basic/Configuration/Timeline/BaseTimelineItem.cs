@@ -1,4 +1,6 @@
-﻿using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+﻿using ECommons.DalamudServices;
+using ECommons.GameHelpers;
+using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
 namespace RotationSolver.Basic.Configuration.Timeline;
 
@@ -18,7 +20,14 @@ internal abstract class BaseTimelineItem
 
             if (_enable)
             {
-                OnEnable();
+                if (DownloadHelper.Supporters.Contains(Player.Object?.EncryptString()))
+                {
+                    OnEnable();
+                }
+                else
+                {
+                    Svc.Chat.PrintError("The timeline feature is supporters only feature!");
+                }
             }
             else
             {

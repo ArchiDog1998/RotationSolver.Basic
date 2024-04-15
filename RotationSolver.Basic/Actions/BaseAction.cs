@@ -176,6 +176,20 @@ public class BaseAction : IBaseAction
     /// <inheritdoc/>
     public unsafe bool Use()
     {
+        if (!Service.Config.IWannaBeSaidHello)
+        {
+            if (DataCenter.IsPvP)
+            {
+                Svc.Chat.PrintError("The pvp feature can only be used when your config \"I wanna be said hello\" is on!");
+                return false;
+            }
+            if (DataCenter.IsInHighEndDuty)
+            {
+                Svc.Chat.PrintError("The high-end duty can only be used when your config \"I wanna be said hello\" is on!");
+                return false;
+            }
+        }
+
         var target = Target;
 
         var adjustId = AdjustedID;
