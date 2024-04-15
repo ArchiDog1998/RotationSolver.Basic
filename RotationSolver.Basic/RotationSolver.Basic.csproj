@@ -1,5 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+	  <TargetFramework>net8.0-windows</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Authors>ArchiTed</Authors>
+	  <Version>4.2.6.5</Version>
+	  <PlatformTarget>x64</PlatformTarget>
+	  <Platforms>AnyCPU</Platforms>
+	  <LangVersion>latest</LangVersion>
+	  <Nullable>enable</Nullable>
 	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	  <PackageIcon>Logo.png</PackageIcon>
 	  <Description>A basic library for rotation development in FFXIV in RotationSolver.</Description>
@@ -47,9 +55,9 @@
 	  
 	  <Using Include="System.ComponentModel" />
 	  <Using Include="Dalamud.Game.ClientState.JobGauge.Types" />
-
 	  <Using Include="Dalamud.Game.ClientState.Objects.Types" />
-
+	  <Using Include="System.Numerics" />
+	  <Using Include="System.Reflection" />
 	  <Using Include="RotationSolver.Basic" />
 	  <Using Include="RotationSolver.Basic.Actions" />
 	  <Using Include="RotationSolver.Basic.Attributes" />

@@ -1,8 +1,8 @@
 ﻿using Lumina.Excel.GeneratedSheets;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
-using static RotationSolver.GameData.SyntaxHelper;
 
 namespace RotationSolver.GameData.Getters;
 internal class TraitRotationGetter(Lumina.GameData gameData, ClassJob job)

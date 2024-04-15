@@ -1,5 +1,6 @@
 ﻿using Lumina.Excel.GeneratedSheets;
 using Microsoft.CodeAnalysis;
+using System.Reflection;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.Actions;
