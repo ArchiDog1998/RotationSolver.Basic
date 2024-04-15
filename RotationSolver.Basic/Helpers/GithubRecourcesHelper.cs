@@ -11,7 +11,7 @@ internal static class GithubRecourcesHelper
         Credentials = new("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")
     };
 
-    private const string RepoName = "RotationSolver.Resources";
+    internal const string RepoName = "RotationSolver.Resources";
 
     internal delegate bool ModifyValueDelegate<T>(ref T value, out string commit);
 
@@ -81,37 +81,55 @@ internal static class GithubRecourcesHelper
         {
             await ModifyFile<HashSet<string>>("UsersHash.json", RemoveHash);
         }
+
+        static bool AddHash(ref HashSet<string>? value, out string commit)
+        {
+            commit = "Added one Hash.";
+            value ??= [];
+
+            var player = Player.Object;
+            if (player == null) return false;
+
+            var hash = player.EncryptString();
+
+            if (value.Contains(hash)) return false;
+
+            value.Add(hash);
+            return true;
+        }
+
+        static bool RemoveHash(ref HashSet<string>? value, out string commit)
+        {
+            commit = "Removed one Hash.";
+            value ??= [];
+
+            var player = Player.Object;
+            if (player == null) return false;
+
+            var hash = player.EncryptString();
+
+            if (!value.Contains(hash)) return false;
+
+            value.Remove(hash);
+            return true;
+        }
     }
 
-    private static bool AddHash(ref HashSet<string>? value, out string commit)
+    internal static async void ModifyYourRate(Type rotationType, byte rate)
     {
-        commit = "Added one Hash.";
-        if (value == null) return false;
+        await ModifyFile<Dictionary<string, byte>>($"Rating/{rotationType.FullName ?? rotationType.Name}.json", ModifyRate);
 
-        var player = Player.Object;
-        if (player == null) return false;
+        bool ModifyRate(ref Dictionary<string, byte>? value, out string commit)
+        {
+            commit = $"Modify the rateing to {rate}.";
+            value ??= [];
 
-        var hash = player.EncryptString();
+            var player = Player.Object;
+            if (player == null) return false;
 
-        if (value.Contains(hash)) return false;
-
-        value.Add(hash);
-        return true;
-    }
-
-    private static bool RemoveHash(ref HashSet<string>? value, out string commit)
-    {
-        commit = "Removed one Hash.";
-        if (value == null) return false;
-
-        var player = Player.Object;
-        if (player == null) return false;
-
-        var hash = player.EncryptString();
-
-        if (!value.Contains(hash)) return false;
-
-        value.Remove(hash);
-        return true;
+            var hash = player.EncryptString();
+            value[hash] = rate;
+            return true;
+        }
     }
 }

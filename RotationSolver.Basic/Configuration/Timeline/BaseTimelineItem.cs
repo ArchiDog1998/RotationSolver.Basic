@@ -26,7 +26,7 @@ internal abstract class BaseTimelineItem
                 }
                 else
                 {
-                    Svc.Chat.PrintError("The timeline feature is supporters only feature!");
+                    Svc.Chat.PrintError("The timeline feature is supporters-only feature!");
                 }
             }
             else

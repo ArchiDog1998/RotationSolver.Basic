@@ -3,12 +3,8 @@ using XIVConfigUI;
 
 namespace RotationSolver.Basic.Helpers;
 
-public static class DownloadHelper
+internal static class DownloadHelper
 {
-    /// <summary>
-    /// <see href="https://garlandtools.org/db/#status/1093"><strong>HP and MP Boost</strong></see> ↑ (All Classes)
-    /// <para>Maximum HP and MP are increased.</para>
-    /// </summary>
     public static string[] LinkLibraries { get; private set; } = [];
     public static string[] UsersHash { get; private set; } = [];
     public static string[] Supporters { get; private set; } = [];
@@ -21,9 +17,30 @@ public static class DownloadHelper
 
         DataCenter.ContributorsHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/ContributorsHash.json") ?? [];
 
-        UsersHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/ArchiDog1998/UsersHash/main/UsersHash.json") ?? [];
+        UsersHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/UsersHash.json") ?? [];
 
         Supporters = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/Supporters.json") ?? [];
+    }
+
+    static Dictionary<string, byte> _data = [];
+    static Type? _loadedType;
+    static bool _isLoading = false;
+    public static Dictionary<string, byte> GetRating(Type rotationType)
+    {
+        if (_loadedType == rotationType) return _data;
+        if (_isLoading) return [];
+
+        _isLoading = true;
+        UpdateRating(rotationType);
+        return [];
+    }
+
+    private static async void UpdateRating(Type rotationType)
+    {
+        _data = await DownloadOneAsync<Dictionary<string, byte>>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/Rating/{rotationType.FullName ?? rotationType.Name}.json")
+            ?? [];
+        _loadedType = rotationType;
+        _isLoading = false;
     }
 
     private static async Task<T?> DownloadOneAsync<T>(string url)
@@ -36,7 +53,7 @@ public static class DownloadHelper
         }
         catch (Exception ex)
         {
-            Svc.Log.Information(ex, "Failed to load downloading List.");
+            Svc.Log.Information(ex, "Failed to download list.");
             return default;
         }
     }
