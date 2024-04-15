@@ -29,21 +29,25 @@ internal static class GithubRecourcesHelper
             return;
         }
 
-        if (content.Count == 0)
-        {
-            Svc.Log.Error($"Failed to find the file {path} in {RepoName}!");
-            return;
-        }
+        var shouldCreate = content.Count == 0;
 
         T? value;
-        try
-        {
-            value = JsonConvert.DeserializeObject<T>(content[0].Content);
-        }
-        catch
+        if (shouldCreate)
         {
             value = default;
         }
+        else
+        {
+            try
+            {
+                value = JsonConvert.DeserializeObject<T>(content[0].Content);
+            }
+            catch
+            {
+                value = default;
+            }
+        }
+
 
         if (!modifyFile(ref value, out var commit))
         {
@@ -52,7 +56,14 @@ internal static class GithubRecourcesHelper
 
         try
         {
-            await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented), content[0].Sha));
+            if (shouldCreate)
+            {
+                await GitHubClient.Repository.Content.CreateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented)));
+            }
+            else
+            {
+                await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented), content[0].Sha));
+            }
         }
         catch(Exception ex)
         {
