@@ -732,4 +732,13 @@ internal enum UiString
 
     [Description("There are still {0}s left to rate.")]
     Rotation_Rate,
+
+    [Description("The pvp feature can only be used when your config \"{0}\" is on!")]
+    CantUseInPvP,
+
+    [Description("The high-end duty can only be used when your config \"{0}\" is on!")]
+    CantUseInHighEnd,
+
+    [Description("The timeline feature is supporters-only feature!")]
+    CantUseTimeline,
 }

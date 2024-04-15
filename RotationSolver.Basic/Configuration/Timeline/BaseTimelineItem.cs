@@ -1,6 +1,7 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration.Timeline;
 
@@ -26,7 +27,7 @@ internal abstract class BaseTimelineItem
                 }
                 else
                 {
-                    Svc.Chat.PrintError("The timeline feature is supporters-only feature!");
+                    Svc.Toasts.ShowError(UiString.CantUseTimeline.Local());
                 }
             }
             else

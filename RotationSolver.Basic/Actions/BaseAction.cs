@@ -1,6 +1,9 @@
-﻿using ECommons.DalamudServices;
+﻿using Dalamud.Utility;
+using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
+using RotationSolver.Basic.Configuration;
+using XIVConfigUI;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.Basic.Actions;
@@ -178,14 +181,16 @@ public class BaseAction : IBaseAction
     {
         if (!Service.Config.IWannaBeSaidHello)
         {
+            var uiName = Service.Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
+
             if (DataCenter.IsPvP)
             {
-                Svc.Chat.PrintError("The pvp feature can only be used when your config \"I wanna be said hello\" is on!");
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInPvP.Local(), uiName));
                 return false;
             }
             if (DataCenter.IsInHighEndDuty)
             {
-                Svc.Chat.PrintError("The high-end duty can only be used when your config \"I wanna be said hello\" is on!");
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local(), uiName));
                 return false;
             }
         }
