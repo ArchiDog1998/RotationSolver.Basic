@@ -188,7 +188,7 @@ public class BaseAction : IBaseAction
                 Svc.Toasts.ShowError(string.Format(UiString.CantUseInPvP.Local(), uiName));
                 return false;
             }
-            if (DownloadHelper.IsSupporter)
+            if (DataCenter.IsInHighEndDuty && !DownloadHelper.IsSupporter)
             {
                 Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local(), uiName));
                 return false;

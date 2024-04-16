@@ -20,7 +20,8 @@ internal static class DownloadHelper
 
             var hash = Player.Object.EncryptString();
 
-            return SupportersHash.Union(ContributorsHash).Contains(hash);
+            return SupportersHash.Contains(hash)
+                || ContributorsHash.Contains(hash);
         }
     }
     public static IncompatiblePlugin[] IncompatiblePlugins { get; private set; } = [];
