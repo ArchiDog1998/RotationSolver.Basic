@@ -164,6 +164,9 @@ internal partial class Configs : IPluginConfiguration
     [UI ("Shows the hostile targets icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowHostilesIcons { get; private set; } = new(true, nameof(ShowHostilesIcons));
 
+    [UI("Shows the RS user's icon.", Parent = nameof(UseOverlayWindow))]
+    public ConditionBoolean ShowUsersIcons { get; private set; } = new(true, nameof(ShowUsersIcons));
+
     [UI ("Teaching mode.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the next suggested ability that should be used")]
     
@@ -620,9 +623,17 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
     public float HostileIconHeight { get; set; } = 0.5f;
 
+    [UI("User Icon height from position", Parent = nameof(ShowUsersIcons))]
+    [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
+    public float UserIconHeight { get; set; } = 1f;
+
     [UI("Hostile Icon size", Parent = nameof(ShowHostilesIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float HostileIconSize { get; set; } = 0.5f;
+
+    [UI("User Icon size", Parent = nameof(ShowUsersIcons))]
+    [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
+    public float UserIconSize { get; set; } = 0.5f;
 
     [UI("State icon height", Parent =nameof(ShowStateIcon))]
     [Range(0, 3, ConfigUnitType.Pixels, 0.002f)]
