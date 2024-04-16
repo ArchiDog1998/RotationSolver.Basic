@@ -80,7 +80,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
 
         var isAuto = !DataCenter.IsManual || IsTargetFriendly;
-        return targetables.Where(b => isAuto || b.ObjectId == Svc.Targets.Target?.ObjectId)
+        return targetables.Where(b => isAuto || b.ObjectId == Svc.Targets.Target?.ObjectId || b.ObjectId == Player.Object?.ObjectId)
             .Where(InViewTarget).Where(action.Setting.CanTarget);
     }
 
