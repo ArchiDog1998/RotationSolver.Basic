@@ -170,9 +170,9 @@ public readonly struct ActionCooldownInfo : ICooldown
             {
                 if (DataCenter.NextAbilityToNextGCD > _action.Info.AnimationLockTime + DataCenter.Ping + DataCenter.MinAnimationLock) return false;
             }
-            else if (!ignoreClippingCheck)
+            if (!ignoreClippingCheck)
             {
-                if (DataCenter.NextAbilityToNextGCD < _action.Info.AnimationLockTime) return false;
+                if (DataCenter.NextAbilityToNextGCD < _action.Info.AnimationLockTime + DataCenter.Ping) return false;
             }
         }
 
