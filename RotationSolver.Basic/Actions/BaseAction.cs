@@ -179,19 +179,28 @@ public class BaseAction : IBaseAction
     /// <inheritdoc/>
     public unsafe bool Use()
     {
-        if (!Service.Config.IWannaBeSaidHello)
+        if (!DownloadHelper.IsSupporter)
         {
-            var uiName = Service.Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
-
-            if (DataCenter.IsPvP)
+            if (DataCenter.IsInHighEndDuty)
             {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInPvP.Local(), uiName));
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local()));
                 return false;
             }
-            if (DataCenter.IsInHighEndDuty && !DownloadHelper.IsSupporter)
+
+            if (!Service.Config.IWannaBeSaidHello)
             {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local(), uiName));
-                return false;
+                var uiName = Service.Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
+
+                if (DataCenter.IsPvP)
+                {
+                    Svc.Toasts.ShowError(string.Format(UiString.CantUseInPvP.Local(), uiName));
+                    return false;
+                }
+                if (Player.Object.Level >= 90)
+                {
+                    Svc.Toasts.ShowError(string.Format(UiString.CantUseAtTopLevel.Local(), uiName));
+                    return false;
+                }
             }
         }
 

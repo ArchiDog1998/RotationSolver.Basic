@@ -736,6 +736,9 @@ internal enum UiString
     [Description("The pvp feature can only be used when your config \"{0}\" is on!")]
     CantUseInPvP,
 
+    [Description("This feature at the top level is avaliable only when your config \"{0}\" is on!")]
+    CantUseAtTopLevel,
+
     [Description("This feature in high end duties is avaliable only for supporters!")]
     CantUseInHighEnd,
 
