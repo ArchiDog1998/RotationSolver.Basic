@@ -753,4 +753,7 @@ internal enum UiString
 
     [Description("You are not the Supporter, some features are NOT available.")]
     NotSupporterWarning,
+
+    [Description("The SequencerAction feature is avaliable only for supporters!")]
+    CantUseSequencerAction,
 }

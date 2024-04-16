@@ -7,6 +7,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Fate;
 using Lumina.Excel.GeneratedSheets;
 using RotationSolver.Basic.Configuration.Conditions;
 using RotationSolver.Basic.Rotations.Duties;
+using XIVConfigUI;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 using CharacterManager = FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterManager;
 
@@ -112,7 +113,26 @@ internal static class DataCenter
     public static HashSet<uint> DisabledActionSequencer { get; set; } = [];
 
     private static List<NextAct> NextActs = [];
-    public static IAction? ActionSequencerAction { private get; set; }
+    private static IAction? _actionSequencerAction;
+    public static IAction? ActionSequencerAction 
+    {
+        private get => _actionSequencerAction;
+        set
+        {
+            if (value == null)
+            {
+                _actionSequencerAction = null;
+                return;
+            }
+            if (!DownloadHelper.IsSupporter)
+            {
+                _actionSequencerAction = null;
+                Svc.Toasts.ShowError(UiString.CantUseSequencerAction.Local());
+                return;
+            }
+            _actionSequencerAction = value;
+        }
+    }
     public static IAction? CommandNextAction
     {
         get
