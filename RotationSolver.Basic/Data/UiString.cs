@@ -744,4 +744,13 @@ internal enum UiString
 
     [Description("Copied your hash to the clipboard!")]
     CopiedYourHash,
+
+    [Description("Your hash has been added. \nIf you want to remove it, please disable \"{0}\".")]
+    AddedYourHash,
+
+    [Description("Your hash has beed removed.")]
+    RemovedYourHash,
+
+    [Description("You are not the Supporter, some features are NOT available.")]
+    NotSupporterWarning,
 }

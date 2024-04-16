@@ -1,6 +1,8 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.GameHelpers;
+using ECommons.ImGuiMethods;
 using Octokit;
+using RotationSolver.Basic.Configuration;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Helpers;
@@ -96,6 +98,8 @@ internal static class GithubRecourcesHelper
 
             if (value.Contains(hash)) return false;
 
+            Notify.Success(string.Format(UiString.AddedYourHash.Local(), 
+                typeof(Configs).GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? nameof(Configs.IWannaBeSaidHello)));
             value.Add(hash);
             return true;
         }
@@ -112,6 +116,7 @@ internal static class GithubRecourcesHelper
 
             if (!value.Contains(hash)) return false;
 
+            Notify.Success(UiString.RemovedYourHash.Local());
             value.Remove(hash);
             return true;
         }
