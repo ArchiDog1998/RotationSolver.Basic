@@ -3,6 +3,7 @@ using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using RotationSolver.Basic.Configuration.Timeline;
 using XIVConfigUI;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration;
 
@@ -133,15 +134,14 @@ internal partial class Configs : IPluginConfiguration
     [UI("Use MP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseMpPotions { get; private set; } = new(false, nameof(UseMpPotions));
 
-    [UI("Draw the melee buffer area on the screen.", (int)UiString.ConfigWindow_UI_Overlay,
+    [UI("Draw the melee buffer area on the screen.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the area where no actions will be used between ranged and melee type actions.")]
     public ConditionBoolean DrawMeleeOffset { get; private set; } = new(true, nameof(DrawMeleeOffset));
 
-    [UI("Shows the target of the movement action.",
-        (int)UiString.ConfigWindow_UI_Overlay)]
+    [UI("Shows the target of the movement action.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowMoveTarget { get; private set; } = new(true, nameof(ShowMoveTarget));
 
-    [UI("Shows target related drawing.", (int)UiString.ConfigWindow_UI_Overlay,
+    [UI("Shows target related drawing.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the next ability under the target and AoE attacks effect area")]
     public ConditionBoolean ShowTarget { get; private set; } = new(true, nameof(ShowTarget));
 
@@ -161,11 +161,10 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Target_Config)]
     public ConditionBoolean FilterStopMark { get; private set; } = new(true, nameof(FilterStopMark));
 
-    [UI ("Shows the hostile targets icon.",
-        (int)UiString.ConfigWindow_UI_Overlay)]
+    [UI ("Shows the hostile targets icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowHostilesIcons { get; private set; } = new(true, nameof(ShowHostilesIcons));
 
-    [UI ("Teaching mode.", (int)UiString.ConfigWindow_UI_Overlay,
+    [UI ("Teaching mode.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the next suggested ability that should be used")]
     
     public ConditionBoolean TeachingMode { get; private set; } = new(true, nameof(TeachingMode));
@@ -383,10 +382,10 @@ internal partial class Configs : IPluginConfiguration
         Parent = nameof(AutoOpenChest))]
     public ConditionBoolean AutoCloseChestWindow { get; private set; } = new(true, nameof(AutoCloseChestWindow));
 
-    [UI("Show RS state icon.", (int)UiString.ConfigWindow_UI_Overlay)]
+    [UI("Show RS state icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowStateIcon { get; private set; } = new(true, nameof(ShowStateIcon));
 
-    [UI("Show beneficial AoE locations.", (int)UiString.ConfigWindow_UI_Overlay)]
+    [UI("Show beneficial AoE locations.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowBeneficialPositions { get; private set; } = new(true, nameof(ShowBeneficialPositions));
 
     [UI("Hide all warnings.", (int)UiString.ConfigWindow_UI_Information)]
@@ -430,6 +429,10 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Use additional conditions", (int)UiString.ConfigWindow_Basic_Others)]
     public bool UseAdditionalConditions { get; set; } = false;
+
+    [UIType(UiType.Padding), Range(0, 500, ConfigUnitType.Pixels)]
+    [UI("The window padding for icons.", Parent = nameof(UseOverlayWindow))]
+    public Vector4 WindowPadding { get; private set; } = Vector4.One * 40;
 
     #region Float
     [UI("Auto turn off RS when combat is over more for more then...",
