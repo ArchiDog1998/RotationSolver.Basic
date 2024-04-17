@@ -215,8 +215,11 @@ public readonly struct ActionBasicInfo
         {
             if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Action, AdjustedID))) return false;
 
-            //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
-            if (ActionManager.Instance()->CheckActionResources(ActionType.Action, AdjustedID) != 0) return false;
+            if(_action.Setting.Ninjutsu == null)
+            {
+                //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
+                if (ActionManager.Instance()->CheckActionResources(ActionType.Action, AdjustedID) != 0) return false;
+            }
         }
 
         return true;

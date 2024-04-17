@@ -407,7 +407,7 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean JustSayHelloOnce { get; private set; } = new(false, nameof(JustSayHelloOnce));
 
     [UI("I wanna be said hello", (int)UiString.ConfigWindow_Basic_Others, Section = 1)]
-    public bool IWannaBeSaidHello { get; set ; }
+    public bool IWannaBeSaidHello { get; set; } = true;
 
     [JobFilter(PvP = JobFilterType.NoHealer, PvE = JobFilterType.NoHealer)]
     [UI("Only Heal self when not a healer.", 
