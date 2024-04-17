@@ -64,11 +64,11 @@ public class JobConfigGenerator : IIncrementalGenerator
                     foreach (var attr in attrSet.Attributes)
                     {
                         if (model.GetSymbolInfo(attr).Symbol?.GetFullMetadataName()
-                            is "RotationSolver.Basic.Attributes.UIAttribute"
-                            or "RotationSolver.Basic.Attributes.UnitAttribute"
-                            or "RotationSolver.Basic.Attributes.RangeAttribute"
-                            or "RotationSolver.Basic.Attributes.JobConfigAttribute"
-                            or "RotationSolver.Basic.Attributes.LinkDescriptionAttribute")
+                            is "XIVConfigUI.Attributes.UIAttribute"
+                            or "XIVConfigUI.Attributes.UnitAttribute"
+                            or "XIVConfigUI.Attributes.RangeAttribute"
+                            or "XIVConfigUI.Attributes.JobConfigAttribute"
+                            or "XIVConfigUI.Attributes.LinkDescriptionAttribute")
                         {
                             names.Add(attr.ToString());
                         }
@@ -103,6 +103,7 @@ public class JobConfigGenerator : IIncrementalGenerator
 
             var code = $$"""
              using ECommons.ExcelServices;
+             using XIVConfigUI.Attributes;
 
              namespace {{nameSpace}}
              {
