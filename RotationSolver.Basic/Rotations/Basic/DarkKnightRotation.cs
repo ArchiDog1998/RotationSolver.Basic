@@ -66,6 +66,11 @@ partial class DarkKnightRotation
         => ShadowTimeEndAfter(GCDTime(gctCount, offset));
     #endregion
 
+    static partial void ModifyPlungePvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyBloodspillerPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Blood >= 50 || !Player.WillStatusEnd(0, true, StatusID.Delirium_1972);

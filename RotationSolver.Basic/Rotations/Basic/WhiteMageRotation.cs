@@ -44,6 +44,11 @@ partial class WhiteMageRotation
 
     private protected sealed override IBaseAction Raise => RaisePvE;
 
+    static partial void ModifySeraphStrikePvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyMedicaIiPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.MedicaIi, StatusID.TrueMedicaIi];

@@ -33,6 +33,12 @@ partial class RedMageRotation
     #endregion
 
     private static readonly StatusID[] SwiftcastStatus = [.. StatusHelper.SwiftcastStatus, StatusID.Acceleration];
+
+    static partial void ModifyCorpsacorpsPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyJoltPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = SwiftcastStatus;

@@ -105,6 +105,11 @@ partial class MonkRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
+    static partial void ModifyThunderclapPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     /// <inheritdoc/>
     [RotationDesc(ActionID.ThunderclapPvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)

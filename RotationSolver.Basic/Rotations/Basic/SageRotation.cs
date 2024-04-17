@@ -48,6 +48,11 @@ partial class SageRotation
     #endregion
     private protected sealed override IBaseAction Raise => EgeiroPvE;
 
+    static partial void ModifyIcarusPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyEukrasianDiagnosisPvE(ref ActionSetting setting)
     {
         setting.TargetType = TargetType.BeAttacked;

@@ -100,7 +100,6 @@ partial class BlackMageRotation
         => ElementTimeEndAfter(GCDTime(gctCount, offset));
     #endregion
 
-
     /// <summary>
     /// 
     /// </summary>
@@ -110,6 +109,11 @@ partial class BlackMageRotation
     /// 
     /// </summary>
     protected static bool HasThunder => Player.HasStatus(true, StatusID.Thundercloud);
+
+    static partial void ModifyAetherialManipulationPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
 
     static partial void ModifyThunderPvE(ref ActionSetting setting)
     {

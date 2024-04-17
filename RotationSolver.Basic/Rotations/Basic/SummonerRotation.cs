@@ -124,6 +124,11 @@ partial class SummonerRotation
         ImGui.Text("Pet: " + DataCenter.HasPet.ToString());
     }
 
+    static partial void ModifyCrimsonCyclonePvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifySummonRubyPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.IfritsFavor];

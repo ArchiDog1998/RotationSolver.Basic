@@ -60,6 +60,11 @@ partial class SamuraiRotation
     public static byte SenCount => (byte)((HasGetsu ? 1 : 0) + (HasSetsu ? 1 : 0) + (HasKa ? 1 : 0));
     #endregion
 
+    static partial void ModifyHissatsuSotenPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyShohaPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => MeditationStacks == 3;

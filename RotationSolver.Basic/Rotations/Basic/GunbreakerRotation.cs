@@ -35,6 +35,11 @@ partial class GunbreakerRotation
     public static byte MaxAmmo => CartridgeChargeIiTrait.EnoughLevel ? (byte)3 : (byte)2;
     #endregion
 
+    static partial void ModifyRoughDividePvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyBurstStrikePvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Ammo > 0;

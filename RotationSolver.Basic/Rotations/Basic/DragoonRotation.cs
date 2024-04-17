@@ -43,6 +43,11 @@ partial class DragoonRotation
     protected static bool LOTDEndAfterGCD(uint gctCount = 0, float offset = 0)
         => LOTDEndAfter(GCDTime(gctCount, offset));
 
+    static partial void ModifyHighJumpPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyVorpalThrustPvE(ref ActionSetting setting)
     {
         setting.ComboIds = [ActionID.RaidenThrustPvE];

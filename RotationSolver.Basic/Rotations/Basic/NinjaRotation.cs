@@ -37,6 +37,12 @@ partial class NinjaRotation
         => HutonEndAfter(GCDTime(gctCount, offset));
     #endregion
 
+    static partial void ModifyShukuchiPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
+
     static partial void ModifyArmorCrushPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => HutonEndAfter(25) && !HutonEndAfterGCD();

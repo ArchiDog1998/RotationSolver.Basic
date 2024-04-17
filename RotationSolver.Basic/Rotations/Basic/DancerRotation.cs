@@ -29,6 +29,11 @@ partial class DancerRotation
     /// </summary>
     public static byte CompletedSteps => JobGauge.CompletedSteps;
 
+    static partial void ModifyEnAvantPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyCascadePvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.SilkenSymmetry];
