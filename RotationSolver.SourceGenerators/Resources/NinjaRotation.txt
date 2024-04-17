@@ -13,7 +13,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SpinningEdgePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SpinningEdgePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2240, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySpinningEdgePvE(ref setting);
@@ -32,7 +32,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ShadeShiftPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ShadeShiftPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2241, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyShadeShiftPvE(ref setting);
@@ -51,7 +51,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GustSlashPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.GustSlashPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2242, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyGustSlashPvE(ref setting);
@@ -70,7 +70,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HidePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HidePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2245, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHidePvE(ref setting);
@@ -89,7 +89,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AssassinatePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.AssassinatePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2246, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyAssassinatePvE(ref setting);
@@ -108,7 +108,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ThrowingDaggerPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ThrowingDaggerPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2247, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyThrowingDaggerPvE(ref setting);
@@ -127,7 +127,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MugPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MugPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2248, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMugPvE(ref setting);
@@ -146,7 +146,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DeathBlossomPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DeathBlossomPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2254, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDeathBlossomPvE(ref setting);
@@ -165,7 +165,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AeolianEdgePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.AeolianEdgePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2255, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyAeolianEdgePvE(ref setting);
@@ -184,7 +184,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TrickAttackPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TrickAttackPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2258, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTrickAttackPvE(ref setting);
@@ -203,7 +203,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TenPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TenPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2259, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTenPvE(ref setting);
@@ -222,7 +222,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _NinjutsuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.NinjutsuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2260, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyNinjutsuPvE(ref setting);
@@ -241,7 +241,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ChiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ChiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2261, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyChiPvE(ref setting);
@@ -260,7 +260,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ShukuchiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ShukuchiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2262, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyShukuchiPvE(ref setting);
@@ -279,7 +279,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _JinPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.JinPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2263, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyJinPvE(ref setting);
@@ -298,7 +298,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KassatsuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KassatsuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2264, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKassatsuPvE(ref setting);
@@ -317,7 +317,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FumaShurikenPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FumaShurikenPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2265, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFumaShurikenPvE(ref setting);
@@ -336,7 +336,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KatonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KatonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2266, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKatonPvE(ref setting);
@@ -355,7 +355,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RaitonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.RaitonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2267, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyRaitonPvE(ref setting);
@@ -374,7 +374,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HyotonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HyotonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2268, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHyotonPvE(ref setting);
@@ -393,7 +393,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HutonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HutonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2269, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHutonPvE(ref setting);
@@ -412,7 +412,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DotonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DotonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2270, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDotonPvE(ref setting);
@@ -431,7 +431,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SuitonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SuitonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2271, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySuitonPvE(ref setting);
@@ -450,7 +450,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RabbitMediumPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.RabbitMediumPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)2272, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyRabbitMediumPvE(ref setting);
@@ -469,7 +469,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ArmorCrushPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ArmorCrushPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3563, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyArmorCrushPvE(ref setting);
@@ -488,7 +488,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DreamWithinADreamPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DreamWithinADreamPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3566, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDreamWithinADreamPvE(ref setting);
@@ -507,7 +507,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HellfrogMediumPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HellfrogMediumPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7401, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHellfrogMediumPvE(ref setting);
@@ -526,7 +526,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BhavacakraPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BhavacakraPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7402, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBhavacakraPvE(ref setting);
@@ -545,7 +545,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TenChiJinPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TenChiJinPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7403, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTenChiJinPvE(ref setting);
@@ -564,7 +564,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HakkeMujinsatsuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HakkeMujinsatsuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16488, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHakkeMujinsatsuPvE(ref setting);
@@ -583,7 +583,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MeisuiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MeisuiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16489, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMeisuiPvE(ref setting);
@@ -602,7 +602,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GokaMekkyakuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.GokaMekkyakuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16491, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyGokaMekkyakuPvE(ref setting);
@@ -621,7 +621,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HyoshoRanryuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HyoshoRanryuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16492, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHyoshoRanryuPvE(ref setting);
@@ -640,7 +640,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BunshinPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BunshinPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16493, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBunshinPvE(ref setting);
@@ -659,7 +659,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TenPvE_18805Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TenPvE_18805, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18805, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTenPvE_18805(ref setting);
@@ -678,7 +678,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ChiPvE_18806Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ChiPvE_18806, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18806, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyChiPvE_18806(ref setting);
@@ -697,7 +697,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _JinPvE_18807Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.JinPvE_18807, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18807, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyJinPvE_18807(ref setting);
@@ -716,7 +716,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FumaShurikenPvE_18873Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FumaShurikenPvE_18873, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18873, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFumaShurikenPvE_18873(ref setting);
@@ -735,7 +735,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FumaShurikenPvE_18874Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FumaShurikenPvE_18874, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18874, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFumaShurikenPvE_18874(ref setting);
@@ -754,7 +754,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FumaShurikenPvE_18875Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FumaShurikenPvE_18875, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18875, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFumaShurikenPvE_18875(ref setting);
@@ -773,7 +773,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KatonPvE_18876Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KatonPvE_18876, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18876, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKatonPvE_18876(ref setting);
@@ -792,7 +792,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RaitonPvE_18877Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.RaitonPvE_18877, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18877, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyRaitonPvE_18877(ref setting);
@@ -811,7 +811,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HyotonPvE_18878Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HyotonPvE_18878, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18878, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHyotonPvE_18878(ref setting);
@@ -830,7 +830,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HutonPvE_18879Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HutonPvE_18879, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18879, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHutonPvE_18879(ref setting);
@@ -849,7 +849,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DotonPvE_18880Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DotonPvE_18880, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18880, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDotonPvE_18880(ref setting);
@@ -868,7 +868,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SuitonPvE_18881Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SuitonPvE_18881, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)18881, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySuitonPvE_18881(ref setting);
@@ -887,7 +887,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhantomKamaitachiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhantomKamaitachiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25774, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhantomKamaitachiPvE(ref setting);
@@ -906,7 +906,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HollowNozuchiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HollowNozuchiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25776, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHollowNozuchiPvE(ref setting);
@@ -925,7 +925,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ForkedRaijuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ForkedRaijuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25777, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyForkedRaijuPvE(ref setting);
@@ -944,7 +944,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FleetingRaijuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FleetingRaijuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25778, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFleetingRaijuPvE(ref setting);
@@ -963,7 +963,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuraijinPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HuraijinPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25876, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHuraijinPvE(ref setting);
@@ -982,7 +982,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SpinningEdgePvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SpinningEdgePvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29500, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySpinningEdgePvP(ref setting);
@@ -1001,7 +1001,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GustSlashPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.GustSlashPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29501, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyGustSlashPvP(ref setting);
@@ -1020,7 +1020,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AeolianEdgePvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.AeolianEdgePvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29502, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyAeolianEdgePvP(ref setting);
@@ -1039,7 +1039,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AssassinatePvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.AssassinatePvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29503, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyAssassinatePvP(ref setting);
@@ -1058,7 +1058,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GokaMekkyakuPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.GokaMekkyakuPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29504, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyGokaMekkyakuPvP(ref setting);
@@ -1077,7 +1077,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FumaShurikenPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FumaShurikenPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29505, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFumaShurikenPvP(ref setting);
@@ -1096,7 +1096,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HyoshoRanryuPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HyoshoRanryuPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29506, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHyoshoRanryuPvP(ref setting);
@@ -1115,7 +1115,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ThreeMudraPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ThreeMudraPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29507, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyThreeMudraPvP(ref setting);
@@ -1134,7 +1134,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MeisuiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MeisuiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29508, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMeisuiPvP(ref setting);
@@ -1153,7 +1153,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MugPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MugPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29509, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMugPvP(ref setting);
@@ -1172,7 +1172,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ForkedRaijuPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ForkedRaijuPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29510, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyForkedRaijuPvP(ref setting);
@@ -1191,7 +1191,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BunshinPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BunshinPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29511, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBunshinPvP(ref setting);
@@ -1210,7 +1210,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HutonPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HutonPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29512, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHutonPvP(ref setting);
@@ -1229,7 +1229,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ShukuchiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ShukuchiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29513, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyShukuchiPvP(ref setting);
@@ -1248,7 +1248,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DotonPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DotonPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29514, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDotonPvP(ref setting);
@@ -1267,7 +1267,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SeitonTenchuPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SeitonTenchuPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29515, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySeitonTenchuPvP(ref setting);
@@ -1286,7 +1286,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SeitonTenchuPvP_29516Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SeitonTenchuPvP_29516, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29516, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySeitonTenchuPvP_29516(ref setting);
@@ -1305,7 +1305,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FleetingRaijuPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.FleetingRaijuPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29707, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyFleetingRaijuPvP(ref setting);
@@ -1408,7 +1408,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BraverPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BraverPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)200, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBraverPvE(ref setting);
@@ -1431,7 +1431,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BladedancePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBladedancePvE(ref setting);
@@ -1454,7 +1454,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ChimatsuriPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ChimatsuriPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4243, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyChimatsuriPvE(ref setting);

@@ -13,7 +13,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24283, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDosisPvE(ref setting);
@@ -32,7 +32,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DiagnosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DiagnosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24284, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDiagnosisPvE(ref setting);
@@ -51,7 +51,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KardiaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KardiaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24285, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKardiaPvE(ref setting);
@@ -70,7 +70,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PrognosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PrognosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24286, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPrognosisPvE(ref setting);
@@ -89,7 +89,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EgeiroPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EgeiroPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24287, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEgeiroPvE(ref setting);
@@ -108,7 +108,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhysisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhysisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24288, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhysisPvE(ref setting);
@@ -127,7 +127,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhlegmaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhlegmaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24289, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhlegmaPvE(ref setting);
@@ -146,7 +146,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasiaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasiaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24290, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasiaPvE(ref setting);
@@ -165,7 +165,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDiagnosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianDiagnosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24291, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianDiagnosisPvE(ref setting);
@@ -184,7 +184,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianPrognosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianPrognosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24292, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianPrognosisPvE(ref setting);
@@ -203,7 +203,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDosisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianDosisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24293, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianDosisPvE(ref setting);
@@ -222,7 +222,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SoteriaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.SoteriaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24294, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifySoteriaPvE(ref setting);
@@ -241,7 +241,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _IcarusPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.IcarusPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24295, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyIcarusPvE(ref setting);
@@ -260,7 +260,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DruocholePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DruocholePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24296, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDruocholePvE(ref setting);
@@ -279,7 +279,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DyskrasiaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DyskrasiaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24297, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDyskrasiaPvE(ref setting);
@@ -298,7 +298,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KeracholePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KeracholePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24298, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKeracholePvE(ref setting);
@@ -317,7 +317,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _IxocholePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.IxocholePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24299, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyIxocholePvE(ref setting);
@@ -336,7 +336,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ZoePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ZoePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24300, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyZoePvE(ref setting);
@@ -355,7 +355,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PepsisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PepsisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24301, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPepsisPvE(ref setting);
@@ -374,7 +374,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhysisIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhysisIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24302, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhysisIiPvE(ref setting);
@@ -393,7 +393,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TaurocholePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TaurocholePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24303, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTaurocholePvE(ref setting);
@@ -412,7 +412,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ToxikonPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ToxikonPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24304, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyToxikonPvE(ref setting);
@@ -431,7 +431,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HaimaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HaimaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24305, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHaimaPvE(ref setting);
@@ -450,7 +450,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DosisIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DosisIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24306, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDosisIiPvE(ref setting);
@@ -469,7 +469,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhlegmaIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhlegmaIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24307, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhlegmaIiPvE(ref setting);
@@ -488,7 +488,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDosisIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianDosisIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24308, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianDosisIiPvE(ref setting);
@@ -507,7 +507,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RhizomataPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.RhizomataPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24309, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyRhizomataPvE(ref setting);
@@ -526,7 +526,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HolosPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HolosPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24310, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHolosPvE(ref setting);
@@ -545,7 +545,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PanhaimaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PanhaimaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24311, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPanhaimaPvE(ref setting);
@@ -564,7 +564,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DosisIiiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DosisIiiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24312, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDosisIiiPvE(ref setting);
@@ -583,7 +583,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhlegmaIiiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhlegmaIiiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24313, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhlegmaIiiPvE(ref setting);
@@ -602,7 +602,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDosisIiiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianDosisIiiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24314, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianDosisIiiPvE(ref setting);
@@ -621,7 +621,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DyskrasiaIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DyskrasiaIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24315, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDyskrasiaIiPvE(ref setting);
@@ -640,7 +640,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ToxikonIiPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ToxikonIiPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24316, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyToxikonIiPvE(ref setting);
@@ -659,7 +659,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KrasisPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KrasisPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24317, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKrasisPvE(ref setting);
@@ -678,7 +678,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PneumaPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PneumaPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24318, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPneumaPvE(ref setting);
@@ -697,7 +697,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DosisIiiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DosisIiiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29256, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyDosisIiiPvP(ref setting);
@@ -716,7 +716,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDosisIiiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasianDosisIiiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29257, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasianDosisIiiPvP(ref setting);
@@ -735,7 +735,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasiaPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.EukrasiaPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29258, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyEukrasiaPvP(ref setting);
@@ -754,7 +754,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhlegmaIiiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PhlegmaIiiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29259, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPhlegmaIiiPvP(ref setting);
@@ -773,7 +773,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PneumaPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PneumaPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29260, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyPneumaPvP(ref setting);
@@ -792,7 +792,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _IcarusPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.IcarusPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29261, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyIcarusPvP(ref setting);
@@ -811,7 +811,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ToxikonPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ToxikonPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29262, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyToxikonPvP(ref setting);
@@ -830,7 +830,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ToxikonIiPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ToxikonIiPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29263, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyToxikonIiPvP(ref setting);
@@ -849,7 +849,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KardiaPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.KardiaPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29264, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyKardiaPvP(ref setting);
@@ -868,7 +868,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MesotesPvPCreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MesotesPvP, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29266, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMesotesPvP(ref setting);
@@ -887,7 +887,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MesotesPvP_29267Creator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.MesotesPvP_29267, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29267, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyMesotesPvP_29267(ref setting);
@@ -978,7 +978,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HealingWindPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.HealingWindPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)206, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyHealingWindPvE(ref setting);
@@ -1001,7 +1001,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyBreathOfTheEarthPvE(ref setting);
@@ -1024,7 +1024,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.0")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TechneMakrePvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TechneMakrePvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24859, false);
         CustomRotation.LoadActionSetting(ref action);
         var setting = action.Setting;
         ModifyTechneMakrePvE(ref setting);

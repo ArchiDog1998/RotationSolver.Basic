@@ -51,7 +51,6 @@ public class BaseAction : IBaseAction
     /// <inheritdoc/>
     public string Name => Info.Name;
 
-
     /// <inheritdoc/>
     public string Description => string.Empty;
 
