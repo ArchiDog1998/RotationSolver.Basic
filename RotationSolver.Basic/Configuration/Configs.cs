@@ -22,10 +22,10 @@ internal partial class Configs : IPluginConfiguration
     public MacroInfo DutyStart { get; set; } = new MacroInfo();
     public MacroInfo DutyEnd { get; set; } = new MacroInfo();
 
-    [UI("Show RS logo animation.", (int)UiString.ConfigWindow_UI_Windows)]
+    [UI("Shows RS logo animation.", (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean DrawIconAnimation { get; private set; } = new(true, nameof(DrawIconAnimation));
 
-    [UI("Turns auto mode  off when player is switching between different maps.",
+    [UI("Turns auto mode off when player is switching between different maps.",
         (int)UiString.ConfigWindow_Basic_AutoSwitch)]
     public ConditionBoolean AutoOffBetweenArea { get; private set; } = new(true, nameof(AutoOffBetweenArea));
 
@@ -41,20 +41,20 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Basic_AutoSwitch)]
     public ConditionBoolean AutoOffWhenDutyCompleted { get; private set; } = new(true, nameof(AutoOffWhenDutyCompleted));
 
-    [UI("Consider only fate targets in the current fate area",
+    [UI("Considers only fate targets that are in the current fate area.",
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean ChangeTargetForFate  { get; private set; } = new(true, nameof(ChangeTargetForFate));
 
-    [UI("Use movement actions towards the closest object from the center of the screen",(int)UiString.ConfigWindow_Target_Config,
+    [UI("Uses movement actions towards the closest object from the center of the screen.",(int)UiString.ConfigWindow_Target_Config,
         Description = "Use movement actions towards the closest object from the center of the screen, otherwise toward your current facing direction.",
          Section = 2)]
     public ConditionBoolean MoveTowardsScreenCenter { get; private set; } = new(true, nameof(MoveTowardsScreenCenter));
 
-    [UI("Audio notification for addon mode changes",
+    [UI("Audio notifications for addon mode changes.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean SayOutStateChanged { get; private set; } = new(true, nameof(SayOutStateChanged));
 
-    [UI("Display plugin status in server info bar",
+    [UI("Displays plugin status in server info bar.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowInfoOnDtr { get; private set; } = new(true, nameof(ShowInfoOnDtr));
 
@@ -62,11 +62,11 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section =1)]
     public ConditionBoolean HealOutOfCombat { get; private set; } = new(false, nameof(HealOutOfCombat));
 
-    [UI("Displays plugin status with toast notifications",
+    [UI("Displays plugin status using toast notifications.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowInfoOnToast { get; private set; } = new(true, nameof(ShowInfoOnToast));
 
-    [UI("Lock the movement when casting or when doing some other actions.", (int)UiString.ConfigWindow_Extra_Others)]
+    [UI("Locks the movement when casting or when doing some other actions.", (int)UiString.ConfigWindow_Extra_Others)]
     public ConditionBoolean PoslockCasting { get; private set; } = new(true, nameof(PoslockCasting));
 
     [UI("", Action = (uint)ActionID.PassageOfArmsPvE, Parent = nameof(PoslockCasting))]
@@ -81,7 +81,7 @@ internal partial class Configs : IPluginConfiguration
     [UI("", Action = (uint)ActionID.ImprovisationPvE, Parent = nameof(PoslockCasting))]
     public bool PosImprovisation { get; set; } = false;
 
-    [UI("Replace the action icon.", (int)UiString.ConfigWindow_Extra_Others)]
+    [UI("Replaces the action icon.", (int)UiString.ConfigWindow_Extra_Others)]
     public ConditionBoolean ReplaceIcon { get; private set; } = new(false, nameof(ReplaceIcon));
 
     [UI("", Action = (uint)ActionID.LegGrazePvE, Parent = nameof(ReplaceIcon))]
@@ -97,17 +97,17 @@ internal partial class Configs : IPluginConfiguration
     public bool ReplaceSleep { get; set; } = true;
 
     [JobFilter(PvE = JobFilterType.Raise, PvP = JobFilterType.NoJob)]
-    [UI("Raise player while swiftcast is on cooldown",
+    [UI("Raises players while swiftcast is on cooldown.",
         (int)UiString.ConfigWindow_Auto_ActionUsage, Section = 2)]
     public ConditionBoolean RaisePlayerByCasting { get; private set; } = new(true, nameof(RaisePlayerByCasting));
 
     [JobFilter(PvE = JobFilterType.Raise, PvP = JobFilterType.NoJob)]
-    [UI("Raise any player in range (even if they are not in your party)",
+    [UI("Raises any player in range (even if they are not in your party).",
         (int)UiString.ConfigWindow_Auto_ActionUsage, Section = 2)]
     public ConditionBoolean RaiseAll { get; private set; } = new(false, nameof(RaiseAll));
 
     [JobFilter(PvE = JobFilterType.Raise, PvP = JobFilterType.NoJob)]
-    [UI("Raise players that have the Brink of Death debuff",
+    [UI("Raises players that have the Brink of Death debuff.",
         (int)UiString.ConfigWindow_Auto_ActionUsage, Section = 2)]
     public ConditionBoolean RaiseBrinkOfDeath { get; private set; } = new(true, nameof(RaiseBrinkOfDeath));
 
@@ -117,35 +117,35 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 10, ConfigUnitType.Seconds, 0.002f)]
     public Vector2 RaiseDelay { get; set; } = new(1, 2);
 
-    [UI("Add enemy list to the hostile targets.",
+    [UI("Adds enemy list to the hostile targets.",
         (int)UiString.ConfigWindow_Target_Config)]
     public ConditionBoolean AddEnemyListToHostile { get; private set; } = new(true, nameof(AddEnemyListToHostile));
 
-    [UI("Only attack targets in the enemy list.",
+    [UI("Only attacks targets in the enemy list.",
         Parent = nameof(AddEnemyListToHostile))]
     public ConditionBoolean OnlyAttackInEnemyList { get; private set; } = new(false, nameof(OnlyAttackInEnemyList));
 
-    [UI("Use Tinctures.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
+    [UI("Uses Tinctures.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseTinctures { get; private set; } = new(false, nameof(UseTinctures));
 
-    [UI("Use HP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
+    [UI("Uses HP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseHpPotions { get; private set; } = new(false, nameof(UseHpPotions));
 
-    [UI("Use MP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
+    [UI("Uses MP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseMpPotions { get; private set; } = new(false, nameof(UseMpPotions));
 
-    [UI("Draw the melee buffer area on the screen.", Parent = nameof(UseOverlayWindow),
+    [UI("Draws the melee buffer area on the screen.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the area where no actions will be used between ranged and melee type actions.")]
     public ConditionBoolean DrawMeleeOffset { get; private set; } = new(true, nameof(DrawMeleeOffset));
 
-    [UI("Shows the target of the movement action.", Parent = nameof(UseOverlayWindow))]
+    [UI("Shows the target of the movement actions.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowMoveTarget { get; private set; } = new(true, nameof(ShowMoveTarget));
 
     [UI("Shows target related drawing.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the next ability under the target and AoE attacks effect area")]
     public ConditionBoolean ShowTarget { get; private set; } = new(true, nameof(ShowTarget));
 
-    [UI("Show the target's estimated time to kill.",
+    [UI("Shows the target's estimated time to kill.",
         Parent = nameof(ShowTarget))]
     public ConditionBoolean ShowTargetTimeToKill { get; private set; } = new(false, nameof(ShowTargetTimeToKill));
 
@@ -157,7 +157,7 @@ internal partial class Configs : IPluginConfiguration
         Parent = nameof(ChooseAttackMark))]
     public ConditionBoolean CanAttackMarkAoe { get; private set; } = new(true, nameof(CanAttackMarkAoe));
 
-    [UI("Never attack targets with stop markers.",
+    [UI("Never attacks targets with stop markers.",
         (int)UiString.ConfigWindow_Target_Config)]
     public ConditionBoolean FilterStopMark { get; private set; } = new(true, nameof(FilterStopMark));
 
@@ -192,25 +192,25 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Basic_AutoSwitch, Section =1)]
     public ConditionBoolean StartOnAttackedBySomeone { get; private set; } = new(false, nameof(StartOnAttackedBySomeone));
 
-    [UI("Don't attack new mobs by AoE.", Description = "Avoids usage of AoE abilities when new enemies would be aggroed.",
+    [UI("Doesn't attack new mobs while using AoE actions.", Description = "Avoids usage of AoE abilities when new enemies would be aggroed.",
         Parent =nameof(UseAoeAction))]
     public ConditionBoolean NoNewHostiles { get; private set; } = new(false, nameof(NoNewHostiles));
 
     [JobFilter(PvE = JobFilterType.NoHealer, PvP = JobFilterType.NoJob)]
-    [UI("Use healing abilities when playing a non-healer role.",
+    [UI("Uses healing abilities when playing a non-healer role.",
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean UseHealWhenNotAHealer { get; private set; } = new(true, nameof(UseHealWhenNotAHealer));
 
-    [UI("Target allies for friendly actions.",
+    [UI("Targets allies for friendly actions.",
         (int)UiString.ConfigWindow_Target_Config, Section = 3)]
     public ConditionBoolean SwitchTargetFriendly { get; private set; } = new(false, nameof(SwitchTargetFriendly));
 
     [JobFilter(PvE = JobFilterType.Interrupt, PvP = JobFilterType.NoJob)]
-    [UI("Use interrupt abilities if possible.",
+    [UI("Uses interrupt abilities if possible.",
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 3)]
     public ConditionBoolean InterruptibleMoreCheck { get; private set; } = new(true, nameof(InterruptibleMoreCheck));
 
-    [UI("Use work task for acceleration.",
+    [UI("Uses work task for acceleration.",
         (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean UseWorkTask { get; private set; } = new(false, nameof(UseWorkTask));
 
@@ -226,22 +226,22 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean OnlyAttackInView { get; private set; } = new(false, nameof(OnlyAttackInView));
 
-    [UI("Only attack the targets within the character's vision cone.",
+    [UI("Only attacks the targets within the character's vision cone.",
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean OnlyAttackInVisionCone { get; private set; } = new(false, nameof(OnlyAttackInVisionCone));
 
     [JobFilter(PvE = JobFilterType.Healer, PvP = JobFilterType.Healer)]
-    [UI("Use single target healing over time actions only on tanks.",
+    [UI("Uses single target healing over time actions only on tanks.",
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean OnlyHotOnTanks { get; private set; } = new(false, nameof(OnlyHotOnTanks));
 
     [UI("Debug Mode.", -1)]
     public ConditionBoolean InDebug { get; private set; } = new(false, nameof(InDebug));
 
-    [UI("Auto Download Rotations.", (int)UiString.ConfigWindow_Rotations_Settings)]
+    [UI("Auto Downloads Rotations.", (int)UiString.ConfigWindow_Rotations_Settings)]
     public ConditionBoolean DownloadRotations { get; private set; } = new(true, nameof(DownloadRotations));
 
-    [UI("Auto Update Rotations.", Parent = nameof(DownloadRotations))]
+    [UI("Auto Updates Rotations.", Parent = nameof(DownloadRotations))]
     public ConditionBoolean AutoUpdateRotations { get; private set; } = new(true, nameof(AutoUpdateRotations));
 
     [UI("Make /rotation Manual as a toggle command.",
@@ -252,19 +252,19 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean ToggleAuto { get; private set; } = new(false, nameof(ToggleAuto));
 
-    [UI("Only show these windows if there are enemies in or in duty.",
+    [UI("Only shows these windows if there are enemies in or in duty.",
         (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean OnlyShowWithHostileOrInDuty { get; private set; } = new(true, nameof(OnlyShowWithHostileOrInDuty));
 
-    [UI("Show Control Window.",
+    [UI("Shows Control Window.",
         (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean ShowControlWindow { get; private set; } = new(false, nameof(ShowControlWindow));
 
-    [UI("Lock Control Window.",
+    [UI("Locks Control Window.",
         (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean IsControlWindowLock { get; private set; } = new(false, nameof(IsControlWindowLock));
 
-    [UI("Show Next Action Window.", (byte) UiString.ConfigWindow_UI_Windows)]
+    [UI("Shows Next Action Window.", (byte) UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean ShowNextActionWindow { get; private set; } = new(true, nameof(ShowNextActionWindow));
 
     [UI("No Inputs.", Parent = nameof(ShowNextActionWindow))]
@@ -273,50 +273,50 @@ internal partial class Configs : IPluginConfiguration
     [UI("No Move.", Parent = nameof(ShowNextActionWindow))]
     public ConditionBoolean IsInfoWindowNoMove { get; private set; } = new(false, nameof(IsInfoWindowNoMove));
 
-    [UI("Show Items Cooldown.",
+    [UI("Shows Items Cooldowns.",
         Parent = nameof(ShowCooldownWindow))]
     public ConditionBoolean ShowItemsCooldown { get; private set; } = new(false, nameof(ShowItemsCooldown));
 
-    [UI("Show GCD Cooldown.",
+    [UI("Shows GCD Cooldown.",
         Parent = nameof(ShowCooldownWindow))]
     public ConditionBoolean ShowGcdCooldown { get; private set; } = new(false, nameof(ShowGcdCooldown));
 
-    [UI("Show Original Cooldown.",
+    [UI("Shows Original Cooldown.",
         Parent = nameof(ShowCooldownWindow))]
     public ConditionBoolean UseOriginalCooldown { get; private set; } = new(true, nameof(UseOriginalCooldown));
 
-    [UI("Show tooltips.",
+    [UI("Shows tooltips.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowTooltips { get; private set; } = new(true, nameof(ShowTooltips));
 
-    [UI("Auto load custom rotation files.",
+    [UI("Auto loads custom rotation files.",
         (int)UiString.ConfigWindow_Rotations_Settings)]
     public ConditionBoolean AutoLoadCustomRotations { get; private set; } = new(false, nameof(AutoLoadCustomRotations));
 
-    [UI("Prioritize fate targets.",
+    [UI("Prioritizes fate targets.",
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean TargetFatePriority { get; private set; } = new(true, nameof(TargetFatePriority));
 
-    [UI("Prioritize Hunt/Relic/Leve targets.",
+    [UI("Prioritizes Hunt/Relic/Leve targets.",
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean TargetHuntingRelicLevePriority { get; private set; } = new(true, nameof(TargetHuntingRelicLevePriority));
 
-    [UI("Prioritize Quest targets.",
+    [UI("Prioritizes Quest targets.",
         (int)UiString.ConfigWindow_Target_Config, Section = 1)]
 
     public ConditionBoolean TargetQuestPriority { get; private set; } = new(true, nameof(TargetQuestPriority));
 
-    [UI("Display manually triggered actions feedback on toast",
+    [UI("Displays manually triggered actions feedback on toast.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowToastsAboutDoAction { get; private set; } = new(true, nameof(ShowToastsAboutDoAction));
 
-    [UI("Use AoE actions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
+    [UI("Uses AoE actions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseAoeAction { get; private set; } = new(true, nameof(UseAoeAction));
 
-    [UI("Use AoE actions in manual mode.", Parent = nameof(UseAoeAction))]
+    [UI("Uses AoE actions in manual mode.", Parent = nameof(UseAoeAction))]
     public ConditionBoolean UseAoeWhenManual { get; private set; } = new(false, nameof(UseAoeWhenManual));
 
-    [UI("Automatically trigger dps burst phase.", (int)UiString.ConfigWindow_Auto_ActionCondition)]
+    [UI("Automatically triggers dps burst phase.", (int)UiString.ConfigWindow_Auto_ActionCondition)]
     public ConditionBoolean AutoBurst { get; private set; } = new(true, nameof(AutoBurst));
 
     [UI("Automatic Healing.", (int)UiString.ConfigWindow_Auto_ActionCondition)]
@@ -330,12 +330,12 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean UseDefenseAbility { get; private set; } = new(true, nameof(UseDefenseAbility));
 
     [JobFilter(PvE = JobFilterType.Tank)]
-    [UI("Automatically activate tank stance.", Parent =nameof(UseAbility))]
+    [UI("Automatically activates tank stance.", Parent =nameof(UseAbility))]
     public ConditionBoolean AutoTankStance { get; private set; } = new(true, nameof(AutoTankStance));
 
     [JobFilter(PvE = JobFilterType.Tank)]
 
-    [UI("Auto provoke non-tank attacking targets.", Description = "Automatically use provoke when an enemy is attacking a non-tank member of the party.", Parent = nameof(UseAbility))]
+    [UI("Auto provokes non-tank attacking targets.", Description = "Automatically use provoke when an enemy is attacking a non-tank member of the party.", Parent = nameof(UseAbility))]
     public ConditionBoolean AutoProvokeForTank { get; private set; } = new(true, nameof(AutoProvokeForTank));
 
     [JobFilter(PvE = JobFilterType.Melee)]
@@ -343,66 +343,66 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean AutoUseTrueNorth { get; private set; } = new(true, nameof(AutoUseTrueNorth));
 
     [JobFilter(PvE = JobFilterType.Healer)]
-    [UI("Raise player by using swiftcast if available",
+    [UI("Raises players by using swiftcast if available.",
         Parent = nameof(UseAbility))]
     public ConditionBoolean RaisePlayerBySwift { get; private set; } = new(true, nameof(RaisePlayerBySwift));
 
-    [UI("Use movement speed increase abilities when out of combat.", Parent = nameof(UseAbility))]
+    [UI("Uses movement speed increase abilities when out of combat.", Parent = nameof(UseAbility))]
     public ConditionBoolean AutoSpeedOutOfCombat { get; private set; } = new(true, nameof(AutoSpeedOutOfCombat));
 
     [JobFilter(PvE = JobFilterType.Healer)]
-    [UI("Use beneficial ground-targeted actions.", Parent = nameof(UseAbility))]
+    [UI("Uses beneficial ground-targeted actions.", Parent = nameof(UseAbility))]
     public ConditionBoolean UseGroundBeneficialAbility { get; private set; } = new(true, nameof(UseGroundBeneficialAbility));
 
-    [UI("Use Anti-Knockback abilities", Parent = nameof(UseAbility))]
+    [UI("Uses anti-knockback abilities", Parent = nameof(UseAbility))]
     public ConditionBoolean UseKnockback { get; private set; } = new(true, nameof(UseKnockback));
 
-    [UI("Use beneficial AoE actions while moving.", Parent = nameof(UseGroundBeneficialAbility))]
+    [UI("Uses beneficial AoE actions while moving.", Parent = nameof(UseGroundBeneficialAbility))]
     public ConditionBoolean UseGroundBeneficialAbilityWhenMoving { get; private set; } = new(false, nameof(UseGroundBeneficialAbilityWhenMoving));
 
-    [UI("Consider all players for friendly actions (include passerby).",
+    [UI("Considers all players for friendly actions (include passerby).",
         (int)UiString.ConfigWindow_Target_Config, Section = 3)]
     public ConditionBoolean TargetAllForFriendly { get; private set; } = new(false, nameof(TargetAllForFriendly));
 
-    [UI("Show Cooldown Window.", (int)UiString.ConfigWindow_UI_Windows)]
+    [UI("Shows cooldown window.", (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean ShowCooldownWindow { get; private set; } = new(false, nameof(ShowCooldownWindow));
 
-    [UI("Record AoE actions.", (int)UiString.ConfigWindow_List_HostileCastingArea)]
+    [UI("Records AoE actions.", (int)UiString.ConfigWindow_List_HostileCastingArea)]
     public ConditionBoolean RecordCastingArea { get; private set; } = new(true, nameof(RecordCastingArea));
 
-    [UI("Record Knockback actions.", (int)UiString.ConfigWindow_List_HostileCastingKnockback)]
+    [UI("Records knockback actions.", (int)UiString.ConfigWindow_List_HostileCastingKnockback)]
     public ConditionBoolean RecordKnockback { get; private set; } = new(true, nameof(RecordKnockback));
 
-    [UI("Auto turn off RS when combat is over more for more then...",
+    [UI("Auto turns off RS when combat is over more for more then...",
         (int)UiString.ConfigWindow_Basic_AutoSwitch)]
     public ConditionBoolean AutoOffAfterCombat { get; private set; } = new(true, nameof(AutoOffAfterCombat));
 
-    [UI("Auto open treasure chests",
+    [UI("Auto opens treasure chests.",
         (int)UiString.ConfigWindow_Extra_Others)]
     public ConditionBoolean AutoOpenChest { get; private set; } = new(false, nameof(AutoOpenChest));
 
-    [UI("Auto close the loot window when auto opened the chest.",
+    [UI("Auto closes the loot window after you auto open a chest.",
         Parent = nameof(AutoOpenChest))]
     public ConditionBoolean AutoCloseChestWindow { get; private set; } = new(true, nameof(AutoCloseChestWindow));
 
-    [UI("Show RS state icon.", Parent = nameof(UseOverlayWindow))]
+    [UI("Shows RS state icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowStateIcon { get; private set; } = new(true, nameof(ShowStateIcon));
 
-    [UI("Show beneficial AoE locations.", Parent = nameof(UseOverlayWindow))]
+    [UI("Shows beneficial AoE locations.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowBeneficialPositions { get; private set; } = new(true, nameof(ShowBeneficialPositions));
 
-    [UI("Hide all warnings.", (int)UiString.ConfigWindow_UI_Information)]
+    [UI("Hides all warnings.", (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean HideWarning { get; private set; } = new(false, nameof(HideWarning));
 
-    [UI("Heal party members using GCD healing if there is nothing to do while in combat.",
+    [UI("Heals party members using GCD healing if there is nothing to do while in combat.",
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean HealWhenNothingTodo { get; private set; } = new(true, nameof(HealWhenNothingTodo));
 
-    [UI("Say hello to all other users of Rotation Solver.", (int)UiString.ConfigWindow_Basic_Others, 
+    [UI("Says hello to other players that use Rotation Solver.", (int)UiString.ConfigWindow_Basic_Others, 
         Description = "If you want to be greeted by other users, please DM ArchiTed with your Hash!", Section = 1)]
     public ConditionBoolean SayHelloToAll { get; private set; } = new(true, nameof(SayHelloToAll));
 
-    [UI("Say hello only one time to the same user.",
+    [UI("Say hello only once to the same user.",
         Parent = nameof(SayHelloToAll))]
     public ConditionBoolean JustSayHelloOnce { get; private set; } = new(false, nameof(JustSayHelloOnce));
 
@@ -410,19 +410,19 @@ internal partial class Configs : IPluginConfiguration
     public bool IWannaBeSaidHello { get; set; } = true;
 
     [JobFilter(PvP = JobFilterType.NoHealer, PvE = JobFilterType.NoHealer)]
-    [UI("Only Heal self when not a healer.", 
+    [UI("Only heals self when not a healer.", 
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean OnlyHealSelfWhenNoHealer { get; private set; } = new(false, nameof(OnlyHealSelfWhenNoHealer));
 
-    [UI("Display toggle action feedback on chat.",
+    [UI("Displays toggle action feedback on chat.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowToggledActionInChat { get; private set; } = new(true, nameof(ShowToggledActionInChat));
 
-    [UI("Show the timeline assigned drawings in game.",
+    [UI("Shows the timeline assigned drawings in game.",
     (int)UiString.TimelineRaidTime)]
     public ConditionBoolean ShowTimelineDrawing { get; private set; } = new(true, nameof(ShowTimelineDrawing));
 
-    [UI("Enable auto movement using timeline assignments.",
+    [UI("Enables auto movement using timeline assignments.",
         (int)UiString.TimelineRaidTime)]
     public ConditionBoolean EnableTimelineMovement { get; private set; } = new(true, nameof(EnableTimelineMovement));
 
@@ -430,7 +430,7 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Basic_Timer, Section = 2)]
     public ConditionBoolean NoPingCheck { get; private set; } = new(false, nameof(NoPingCheck));
 
-    [UI("Use additional conditions", (int)UiString.ConfigWindow_Basic_Others)]
+    [UI("Uses additional conditions", (int)UiString.ConfigWindow_Basic_Others)]
     public bool UseAdditionalConditions { get; set; } = false;
 
     [UIType(UiType.Padding), Range(0, 500, ConfigUnitType.Pixels)]
@@ -438,7 +438,7 @@ internal partial class Configs : IPluginConfiguration
     public Vector4 WindowPadding { get; private set; } = Vector4.One * 40;
 
     #region Float
-    [UI("Auto turn off RS when combat is over more for more then...",
+    [UI("Auto turns off RS when combat is over more for more then...",
         Parent =nameof(AutoOffAfterCombat))]
     [Range(0, 600, ConfigUnitType.Seconds)]
     public float AutoOffAfterCombatTime { get; set; } = 30;
@@ -447,10 +447,10 @@ internal partial class Configs : IPluginConfiguration
     [Range(0.005f, 0.05f, ConfigUnitType.Yalms, 0.001f)]
     public float SampleLength { get; set; } = 1;
 
-    [UI("Use tasks for making the overlay window faster.", Parent = nameof(UseOverlayWindow))]
+    [UI("Uses tasks for making the overlay window faster.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean UseTasksForOverlay { get; private set; } = new(false, nameof(UseTasksForOverlay));
 
-    [UI("The angle of your vision cone", Parent = nameof(OnlyAttackInVisionCone))]
+    [UI("The angle of your vision cone.", Parent = nameof(OnlyAttackInVisionCone))]
     [Range(0, 90, ConfigUnitType.Degree, 0.02f)]
     public float AngleOfVisionCone { get; set; } = 45;
 
@@ -459,17 +459,17 @@ internal partial class Configs : IPluginConfiguration
     public float HealthDifference { get; set; } = 0.25f;
 
     [JobFilter(PvE = JobFilterType.Melee, PvP = JobFilterType.NoJob)]
-    [UI("Maximum melee range action usage before using offset setting", 
+    [UI("Maximum melee range action usage before using offset setting.", 
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 3)]
     [Range(0, 5, ConfigUnitType.Yalms, 0.02f)]
     public float MeleeRangeOffset { get; set; } = 1;
 
-    [UI("The time ahead of the last oGCD before the next GCD being available to start trying using it (may affect skill weaving)",
+    [UI("The time ahead of the last oGCD before the next GCD being available to start trying using it (may affect skill weaving).",
         (int)UiString.ConfigWindow_Basic_Timer)]
     [Range(0, 0.4f, ConfigUnitType.Seconds, 0.002f)]
     public float MinLastAbilityAdvanced { get; set; } = 0.1f;
 
-    [UI("Heal party members that are lower then the selected percentage", Parent = nameof(HealWhenNothingTodo))]
+    [UI("Heals party members that are lower then the selected percentage.", Parent = nameof(HealWhenNothingTodo))]
     [Range(0, 1, ConfigUnitType.Percent, 0.002f)]
     public float HealWhenNothingTodoBelow { get; set; } = 0.8f;
 
@@ -484,13 +484,13 @@ internal partial class Configs : IPluginConfiguration
     public float MistakeRatio { get; set; } = 0;
 
     [JobFilter(PvE = JobFilterType.Healer, PvP = JobFilterType.Healer)]
-    [UI("Prioritize tank healing if its HP is lower than the selected percentage.",
+    [UI("Prioritizes tank healing if its HP is lower than the selected percentage.",
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     [Range(0, 1, ConfigUnitType.Percent, 0.02f)]
     public float HealthTankRatio { get; set; } = 0.4f;
 
     [JobFilter(PvE = JobFilterType.Healer, PvP = JobFilterType.Healer)]
-    [UI("Prioritize healer healing if its HP is lower than the selected percentage", 
+    [UI("Prioritizes healer healing if its HP is lower than the selected percentage", 
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     [Range(0, 1, ConfigUnitType.Percent, 0.02f)]
     public float HealthHealerRatio { get; set; } = 0.4f;
@@ -524,7 +524,7 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 10, ConfigUnitType.Seconds, 0.05f)]
     public Vector2 ProvokeDelay { get; set; } = new(0.5f, 1);
 
-    [UI("Random delay for Not In Combat.",
+    [UI("Random delay for leaving combat.",
         (int)UiString.ConfigWindow_Basic_Others)]
     [Range(0, 10, ConfigUnitType.Seconds, 0.002f)]
     public Vector2 NotInCombatDelay { get; set; } = new(3, 4);
@@ -552,11 +552,11 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
     public Vector2 AntiKnockbackDelay { get; set; } = new(2, 3);
 
-    [UI("The random delay between for the auto defense single.", Parent = nameof(UseDefenseAbility))]
+    [UI("The random delay between single target defensive abilities being used.", Parent = nameof(UseDefenseAbility))]
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
     public Vector2 DefenseSingleDelay { get; set; } = new(2, 3);
 
-    [UI("The random delay between for the auto defense area.", Parent = nameof(UseDefenseAbility))]
+    [UI("The random delay between AoE defensive abilities being used.", Parent = nameof(UseDefenseAbility))]
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
     public Vector2 DefenseAreaDelay { get; set; } = new(2, 3);
 
@@ -586,31 +586,31 @@ internal partial class Configs : IPluginConfiguration
     [Range(9.6f, 96, ConfigUnitType.Pixels, 0.1f)]
     public float CooldownFontSize { get; set; } = 16;
 
-    [UI("Cooldown window icon size", Parent = nameof(ShowCooldownWindow))]
+    [UI("Cooldown window icon size.", Parent = nameof(ShowCooldownWindow))]
     [Range(0, 80, ConfigUnitType.Pixels, 0.2f)]
     public float CooldownWindowIconSize { get; set; } = 30;
 
-    [UI("Next Action Size Ratio", Parent = nameof(ShowControlWindow))]
+    [UI("Next Action Size Ratio.", Parent = nameof(ShowControlWindow))]
     [Range(0, 10, ConfigUnitType.Percent, 0.02f)]
     public float ControlWindowNextSizeRatio { get; set; } = 1.5f;
 
-    [UI("GCD icon size", Parent = nameof(ShowControlWindow))]
+    [UI("GCD icon size.", Parent = nameof(ShowControlWindow))]
     [Range(0, 80, ConfigUnitType.Pixels, 0.2f)]
     public float ControlWindowGCDSize { get; set; } = 40;
 
-    [UI("oGCD icon size", Parent = nameof(ShowControlWindow))]
+    [UI("oGCD icon size.", Parent = nameof(ShowControlWindow))]
     [Range(0, 80, ConfigUnitType.Pixels, 0.2f)]
     public float ControlWindow0GCDSize { get; set; } = 30;
 
-    [UI("Next Action Size Ratio", Parent = nameof(ShowNextActionWindow))]
+    [UI("Next Action Size Ratio.", Parent = nameof(ShowNextActionWindow))]
     [Range(0, 10, ConfigUnitType.Percent, 0.02f)]
     public float NextActionNextSizeRatio { get; set; } = 1.5f;
 
-    [UI("Control Progress Height")]
+    [UI("Control Progress Height.")]
     [Range( 2, 30, ConfigUnitType.Yalms)]
     public float ControlProgressHeight { get; set; } = 8;
 
-    [UI("Use gapcloser as a damage ability if the distance to your target is less then this.",
+    [UI("Use gapcloser abilities as damage abilities if the distance to your target is less then this.",
         (int)UiString.ConfigWindow_Target_Config, Section = 2)]
     [Range(0, 30, ConfigUnitType.Yalms, 1f)]
     public float DistanceForMoving { get; set; } = 1.2f;
@@ -619,31 +619,31 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 30, ConfigUnitType.Seconds, 0.02f)]
     public float AutoHealTimeToKill { get; set; } = 8f;
 
-    [UI("Hostile Icon height from position", Parent =nameof(ShowHostilesIcons))]
+    [UI("Hostile icons height from position.", Parent =nameof(ShowHostilesIcons))]
     [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
     public float HostileIconHeight { get; set; } = 0.5f;
 
-    [UI("User Icon height from position", Parent = nameof(ShowUsersIcons))]
+    [UI("User icon height from position.", Parent = nameof(ShowUsersIcons))]
     [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
     public float UserIconHeight { get; set; } = 1f;
 
-    [UI("Hostile Icon size", Parent = nameof(ShowHostilesIcons))]
+    [UI("Hostile icon size.", Parent = nameof(ShowHostilesIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float HostileIconSize { get; set; } = 0.5f;
 
-    [UI("User Icon size", Parent = nameof(ShowUsersIcons))]
+    [UI("User icon size.", Parent = nameof(ShowUsersIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float UserIconSize { get; set; } = 0.5f;
 
-    [UI("State icon height", Parent =nameof(ShowStateIcon))]
+    [UI("State icon height.", Parent =nameof(ShowStateIcon))]
     [Range(0, 3, ConfigUnitType.Pixels, 0.002f)]
     public float StateIconHeight { get; set; } = 1;
 
-    [UI("State icon size", Parent = nameof(ShowStateIcon))]
+    [UI("State icon size.", Parent = nameof(ShowStateIcon))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float StateIconSize { get; set; } = 0.5f;
 
-    [UI("The minimum time between updating RS information.",
+    [UI("The interval for updating RS information.",
         (int)UiString.ConfigWindow_Basic_Timer)]
     [Range(0, 1, ConfigUnitType.Seconds, 0.002f)]
     public float MinUpdatingTime { get; set; } = 0.02f;
@@ -654,25 +654,25 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 1, ConfigUnitType.Percent, 0.02f)]
     public float HealthForGuard { get; set; } = 0.15f;
 
-    [UI("Prompt box color of teaching mode", Parent =nameof(TeachingMode))]
+    [UI("Box outline color of teaching mode.", Parent =nameof(TeachingMode))]
     public Vector4 TeachingModeColor { get; set; } = new(0f, 1f, 0.8f, 1f);
 
-    [UI("Target color", Parent =nameof(TargetColor))]
+    [UI("Target color.", Parent =nameof(TargetColor))]
     public Vector4 TargetColor { get; set; } = new(1f, 0.2f, 0f, 0.8f);
 
-    [UI("The color of beneficial AoE positions", Parent =nameof(ShowBeneficialPositions))]
+    [UI("The color of beneficial AoE positions.", Parent =nameof(ShowBeneficialPositions))]
     public Vector4 BeneficialPositionColor { get; set; } = new(0.5f, 0.9f, 0.1f, 0.7f);
 
-    [UI("The color of the hovered beneficial position", Parent = nameof(ShowBeneficialPositions))]
+    [UI("The color of the hovered beneficial position.", Parent = nameof(ShowBeneficialPositions))]
     public Vector4 HoveredBeneficialPositionColor { get; set; } = new(1f, 0.5f, 0f, 0.8f);
 
-    [UI("Locked Control Window's Background", Parent = nameof(ShowControlWindow))]
+    [UI("Locked control window's background.", Parent = nameof(ShowControlWindow))]
     public Vector4 ControlWindowLockBg { get; set; } = new (0, 0, 0, 0.55f);
 
-    [UI("Unlocked Control Window's Background", Parent =nameof(ShowControlWindow))]
+    [UI("Unlocked control window's background.", Parent =nameof(ShowControlWindow))]
     public Vector4 ControlWindowUnlockBg { get; set; } = new(0, 0, 0, 0.75f);
 
-    [UI("Next Action Window's Background", Parent = nameof(ShowNextActionWindow))]
+    [UI("Next action window's background.", Parent = nameof(ShowNextActionWindow))]
     public Vector4 NextWindowBg { get; set; } = new(0, 0, 0, 0.4f);
 
     [UI("The text color of the time to kill indicator.", Parent =nameof(ShowTargetTimeToKill))]
@@ -735,7 +735,7 @@ internal partial class Configs : IPluginConfiguration
 
     [JobFilter(PvE = JobFilterType.Tank, PvP = JobFilterType.NoJob)]
     [JobConfig, Range(0, 1, ConfigUnitType.Percent, 0.02f)]
-    [UI("The HP%% for tanks to use invulnerability", 
+    [UI("The HP%% for tanks to use their invulnerability ability", 
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 3)]
     private readonly float _healthForDyingTanks = 0.15f;
 
