@@ -67,7 +67,7 @@ public class JobChoiceConfigGenerator : IIncrementalGenerator
                             is "XIVConfigUI.Attributes.UIAttribute"
                             or "XIVConfigUI.Attributes.UnitAttribute"
                             or "XIVConfigUI.Attributes.RangeAttribute"
-                            or "XIVConfigUI.Attributes.JobChoiceConfigAttribute"
+                            or "RotationSolver.Basic.Attributes.JobChoiceConfigAttribute"
                             or "XIVConfigUI.Attributes.LinkDescriptionAttribute")
                         {
                             names.Add(attr.ToString());
