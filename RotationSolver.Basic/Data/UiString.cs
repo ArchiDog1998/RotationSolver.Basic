@@ -37,7 +37,7 @@ internal enum UiString
     [Description("Rotation Solver helped you by clicking actions {0:N0} times.")]
     ConfigWindow_About_ClickingCount,
 
-    [Description("You have said hello to other users {0:N0} times!")]
+    [Description("You have greeted other users {0:N0} times!")]
     ConfigWindow_About_SayHelloCount,
 
     [Description("Macro")]
@@ -55,7 +55,7 @@ internal enum UiString
     [Description("Please don't relog without closing the game. Crashes may occur.")]
     ConfigWindow_About_Compatibility_Others,
 
-    [Description("Literally, Rotation Solver helps you to choose the target and then click the action. So any plugin that changes these will affect its decision.\n\nHere is a list of known incompatible plugins:")]
+    [Description("Literally, Rotation Solver helps you to choose the target and then clicks the action for you. So any plugin that interacts with these will affect its decision.\n\nHere is a list of known incompatible plugins:")]
     ConfigWindow_About_Compatibility_Description,
 
     [Description("Can't properly execute the behavior that RS wants to do.")]
@@ -67,10 +67,10 @@ internal enum UiString
     [Description("Causes the game to crash.")]
     ConfigWindow_About_Compatibility_Crash,
 
-    [Description("Many thanks to the sponsors.")]
+    [Description("Many thanks to everyone that is supporting and enjoying the plugin.")]
     ConfigWindow_About_ThanksToSupporters,
 
-    [Description("Open Config Folder")]
+    [Description("Open config Folder")]
     ConfigWindow_About_OpenConfigFolder,
 
     [Description("Description")]
@@ -106,16 +106,16 @@ internal enum UiString
     [Description("Can be used by mistake")]
     ConfigWindow_Actions_IsInMistake,
 
-    [Description("TTK that this action needs the target be.")]
+    [Description("Minimum target time to kill that the ability will be used at.")]
     ConfigWindow_Actions_TTK,
 
-    [Description("Time to untargetable that this action needs the timeline be.")]
+    [Description("Minimum time until the target becomes untargetable that the ability will be used at.")]
     ConfigWindow_Actions_TTU,
 
-    [Description("How many targets are needed to use this action.")]
+    [Description("Minimum number of targets that are needed for this ability to be used.")]
     ConfigWindow_Actions_AoeCount,
 
-    [Description("Should this action check the stauts.")]
+    [Description("Should this action check if it was not already used by another player.")]
     ConfigWindow_Actions_CheckStatus,
 
     [Description("How many gcds are needed to add the status.")]
@@ -124,10 +124,10 @@ internal enum UiString
     [Description("The HP ratio to auto heal")]
     ConfigWindow_Actions_HealRatio,
 
-    [Description("Forced Conditions have a higher priority. If Forced Conditions are met, Disabled Condition will be ignored.")]
+    [Description("Forced Conditions have a higher priority. If Forced Conditions are met, Disabled Conditions will be ignored.")]
     ConfigWindow_Actions_ConditionDescription,
 
-    [Description("Forced Condition")]
+    [Description("Forced Conditions")]
     ConfigWindow_Actions_ForcedConditionSet,
 
     [Description("Conditions for forced automatic use of action.")]
