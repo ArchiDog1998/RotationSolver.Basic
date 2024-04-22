@@ -43,7 +43,7 @@ public interface IBaseAction : IAction
     /// <summary>
     /// The cd information.
     /// </summary>
-    new ActionCooldownInfo Cooldown { get; }
+    new ActionCooldownInfo CD { get; }
 
     /// <summary>
     /// The setting to use this action.

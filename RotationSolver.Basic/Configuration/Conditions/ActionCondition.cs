@@ -25,16 +25,16 @@ internal class ActionCondition : DelayCondition
         switch (ActionConditionType)
         {
             case ActionConditionType.Elapsed:
-                return _action.Cooldown.ElapsedOneChargeAfter(Time); // Bigger
+                return _action.CD.ElapsedOneChargeAfter(Time); // Bigger
 
             case ActionConditionType.ElapsedGCD:
-                return _action.Cooldown.ElapsedOneChargeAfterGCD((uint)Param1, Param2); // Bigger
+                return _action.CD.ElapsedOneChargeAfterGCD((uint)Param1, Param2); // Bigger
 
             case ActionConditionType.Remain:
-                return !_action.Cooldown.WillHaveOneCharge(Time); //Smaller
+                return !_action.CD.WillHaveOneCharge(Time); //Smaller
 
             case ActionConditionType.RemainGCD:
-                return !_action.Cooldown.WillHaveOneChargeGCD((uint)Param1, Param2); // Smaller
+                return !_action.CD.WillHaveOneChargeGCD((uint)Param1, Param2); // Smaller
 
             case ActionConditionType.CanUse:
                 return _action.CanUse(out _, (CanUseOption)Param1);
@@ -43,17 +43,17 @@ internal class ActionCondition : DelayCondition
                 return _action.EnoughLevel;
 
             case ActionConditionType.IsCoolDown:
-                return _action.Cooldown.IsCoolingDown;
+                return _action.CD.IsCoolingDown;
 
             case ActionConditionType.CurrentCharges:
                 switch (Param2)
                 {
                     case 0:
-                        return _action.Cooldown.CurrentCharges > Param1;
+                        return _action.CD.CurrentCharges > Param1;
                     case 1:
-                        return _action.Cooldown.CurrentCharges < Param1;
+                        return _action.CD.CurrentCharges < Param1;
                     case 2:
-                        return _action.Cooldown.CurrentCharges == Param1;
+                        return _action.CD.CurrentCharges == Param1;
                 }
                 break;
 
@@ -61,11 +61,11 @@ internal class ActionCondition : DelayCondition
                 switch (Param2)
                 {
                     case 0:
-                        return _action.Cooldown.MaxCharges > Param1;
+                        return _action.CD.MaxCharges > Param1;
                     case 1:
-                        return _action.Cooldown.MaxCharges < Param1;
+                        return _action.CD.MaxCharges < Param1;
                     case 2:
-                        return _action.Cooldown.MaxCharges == Param1;
+                        return _action.CD.MaxCharges == Param1;
                 }
                 break;
         }

@@ -85,7 +85,7 @@ public class BaseItem : IBaseItem
     /// Is the item in the cd window.
     /// </summary>
 
-    public bool IsInCooldown
+    public bool IsInCD
     {
         get => Config.IsInCooldown;
         set => Config.IsInCooldown = value;
@@ -128,7 +128,7 @@ public class BaseItem : IBaseItem
     protected virtual bool CanUseThis => true;
 
     /// <inheritdoc/>
-    public ICooldown Cooldown { get; }
+    public ICooldown CD { get; }
 
     /// <summary>
     /// Create by row.
@@ -153,7 +153,7 @@ public class BaseItem : IBaseItem
             _ => 65535, //TODO: better A4!
         };
         SortKey = (uint)ActionManager.Instance()->GetRecastGroup((int)ActionType.Item, ID);
-        Cooldown = new ItemCooldown(ID);
+        CD = new ItemCooldown(ID);
     }
 
     /// <summary>
@@ -173,7 +173,7 @@ public class BaseItem : IBaseItem
         if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Item, ID))
             && ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Item, ID + 1000000))) return false;
 
-        var remain = Cooldown.RecastTimeOneChargeRaw - Cooldown.RecastTimeElapsedRaw;
+        var remain = CD.RecastTimeOneChargeRaw - CD.RecastTimeElapsedRaw;
 
         if (remain > DataCenter.AnimationLocktime) return false;
 

@@ -29,9 +29,9 @@ public class BaseAction : IBaseAction
     public ActionBasicInfo Info { get; }
 
     /// <inheritdoc/>
-    public ActionCooldownInfo Cooldown { get; }
+    public ActionCooldownInfo CD { get; }
 
-    ICooldown IAction.Cooldown => Cooldown;
+    ICooldown IAction.CD => CD;
 
     /// <inheritdoc/>
     public uint ID => Info.ID;
@@ -43,7 +43,7 @@ public class BaseAction : IBaseAction
     public float AnimationLockTime => Info.AnimationLockTime;
 
     /// <inheritdoc/>
-    public uint SortKey => Cooldown.CoolDownGroup;
+    public uint SortKey => CD.CoolDownGroup;
 
     /// <inheritdoc/>
     public uint IconID => Info.IconID;
@@ -65,7 +65,7 @@ public class BaseAction : IBaseAction
     }
 
     /// <inheritdoc/>
-    public bool IsInCooldown
+    public bool IsInCD
     {
         get => Config.IsInCooldown;
         set => Config.IsInCooldown = value;
@@ -113,7 +113,7 @@ public class BaseAction : IBaseAction
         Action = Service.GetSheet<Action>().GetRow((uint)actionID)!;
         TargetInfo = new(this);
         Info = new(this, isDutyAction);
-        Cooldown = new(this);
+        CD = new(this);
 
         Setting = new();
     }
@@ -143,7 +143,7 @@ public class BaseAction : IBaseAction
 
         if (!Info.BasicCheck(skipStatusProvideCheck, skipComboCheck, skipCastingCheck)) return false;
 
-        if (!Cooldown.CooldownCheck(usedUp, onLastAbility, skipClippingCheck, gcdCountForAbility)) return false;
+        if (!CD.CooldownCheck(usedUp, onLastAbility, skipClippingCheck, gcdCountForAbility)) return false;
 
         if (Setting.SpecialType is SpecialActionType.MeleeRange
             && IActionHelper.IsLastAction(IActionHelper.MovingActions)) return false; //No range actions after moving.
