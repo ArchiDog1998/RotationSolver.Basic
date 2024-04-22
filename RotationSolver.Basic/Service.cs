@@ -85,7 +85,11 @@ internal class Service : IDisposable
 
     private void ClientState_Login()
     {
-        GithubRecourcesHelper.UploadYourHash(OtherConfiguration.RotationSolverRecord.ClickingCount > 2000 && Config.IWannaBeSaidHello);
+        var count = OtherConfiguration.RotationSolverRecord.ClickingCount;
+        if (count != 0)
+        {
+            GithubRecourcesHelper.UploadYourHash(count > 2000 && Config.IWannaBeSaidHello);
+        }
     }
 
     private static bool IsReplaced(uint actionID)
