@@ -185,6 +185,21 @@ public class BaseAction : IBaseAction
                 Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local()));
                 return false;
             }
+            if (DataCenter.TerritoryContentType is TerritoryContentType.DeepDungeons)
+            {
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInDeepDungeons.Local()));
+                return false;
+            }
+            else if (DataCenter.TerritoryContentType is TerritoryContentType.Eureka)
+            {
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInEureka.Local()));
+                return false;
+            }
+            else if (DataCenter.TerritoryContentType is (TerritoryContentType)29)
+            {
+                Svc.Toasts.ShowError(string.Format(UiString.CantUseInBozja.Local()));
+                return false;
+            }
 
             if (!Service.Config.IWannaBeSaidHello)
             {

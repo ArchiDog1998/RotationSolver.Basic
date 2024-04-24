@@ -739,7 +739,7 @@ internal enum UiString
     [Description("This feature at the top level is avaliable only when your config \"{0}\" is on!")]
     CantUseAtTopLevel,
 
-    [Description("This feature in high end duties is avaliable only for supporters!")]
+    [Description("This feature in high-end duties is avaliable only for supporters!")]
     CantUseInHighEnd,
 
     [Description("The timeline feature is supporters-only feature!")]
@@ -759,4 +759,13 @@ internal enum UiString
 
     [Description("The SequencerAction feature is avaliable only for supporters!")]
     CantUseSequencerAction,
+
+    [Description("This feature in deep dungeons is avaliable only for supporters!")]
+    CantUseInDeepDungeons,
+
+    [Description("This feature in Eureka is avaliable only for supporters!")]
+    CantUseInEureka,
+
+    [Description("This feature in Bozja is avaliable only for supporters!")]
+    CantUseInBozja,
 }
