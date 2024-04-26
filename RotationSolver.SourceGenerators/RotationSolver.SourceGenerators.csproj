@@ -9,6 +9,5 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
 		<EmbeddedResource Include="Resources\*.txt" />
-	    <Folder Include="Resources\" />
 	</ItemGroup>
 </Project>

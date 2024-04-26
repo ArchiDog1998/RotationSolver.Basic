@@ -141,7 +141,7 @@ public readonly struct ActionCooldownInfo : ICooldown
         return elapsed + DataCenter.WeaponRemain < time;
     }
 
-    internal bool CooldownCheck(bool isEmpty, bool onLastAbility, bool ignoreClippingCheck, byte gcdCountForAbility)
+    internal bool CooldownCheck(bool isEmpty, bool onLastAbility, bool ignoreClippingCheck, byte gcdCountForAbility, out WhyActionCantUse whyCant)
     {
         if (!_action.Info.IsGeneralGCD)
         {
@@ -149,33 +149,53 @@ public readonly struct ActionCooldownInfo : ICooldown
             {
                 if (_action.Info.IsRealGCD)
                 {
-                    if (!WillHaveOneChargeGCD(0, 0)) return false;
+                    if (!WillHaveOneChargeGCD(0, 0))
+                    {
+                        whyCant = WhyActionCantUse.NoChargesGCD;
+                        return false;
+                    }
                 }
                 else
                 {
-                    if (!HasOneCharge && RecastTimeRemainOneChargeRaw > DataCenter.AnimationLocktime) return false;
+                    if (!HasOneCharge && RecastTimeRemainOneChargeRaw > DataCenter.AnimationLocktime)
+                    {
+                        whyCant = WhyActionCantUse.NoCharges0GCD;
+                        return false;
+                    }
                 }
             }
 
             if (!isEmpty)
             {
                 if (RecastTimeRemain > DataCenter.WeaponRemain + DataCenter.WeaponTotal * gcdCountForAbility)
+                {
+                    whyCant = WhyActionCantUse.NotEmpty;
                     return false;
+                }
             }
         }
 
-        if (!_action.Info.IsRealGCD)
+        if (!_action.Info.IsRealGCD) //0GCD
         {
             if (onLastAbility)
             {
-                if (DataCenter.NextAbilityToNextGCD > _action.Info.AnimationLockTime + DataCenter.Ping + DataCenter.MinAnimationLock) return false;
+                if (DataCenter.NextAbilityToNextGCD > _action.Info.AnimationLockTime + DataCenter.Ping + DataCenter.MinAnimationLock)
+                {
+                    whyCant = WhyActionCantUse.OnLast;
+                    return false;
+                }
             }
             if (!ignoreClippingCheck)
             {
-                if (DataCenter.NextAbilityToNextGCD < _action.Info.AnimationLockTime + DataCenter.Ping) return false;
+                if (DataCenter.NextAbilityToNextGCD < _action.Info.AnimationLockTime + DataCenter.Ping)
+                {
+                    whyCant = WhyActionCantUse.Clipping;
+                    return false;
+                }
             }
         }
 
+        whyCant = WhyActionCantUse.None;
         return true;
     }
 }

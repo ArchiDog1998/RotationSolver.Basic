@@ -147,43 +147,79 @@ public readonly struct ActionBasicInfo
         Aspect = (Aspect)_action.Action.Aspect;
     }
 
-    internal readonly bool BasicCheck(bool skipStatusProvideCheck, bool skipComboCheck, bool skipCastingCheck)
+    internal readonly bool BasicCheck(bool skipStatusProvideCheck, bool skipComboCheck, bool skipCastingCheck, out WhyActionCantUse whyCant)
     {
-        if (!_action.Config.IsEnabled || !IsOnSlot) return false;
+        if (!_action.Config.IsEnabled || !IsOnSlot)
+        {
+            whyCant = WhyActionCantUse.Diabled;
+            return false;
+        }
 
         //Disabled.
-        if (DataCenter.DisabledActionSequencer?.Contains(ID) ?? false) return false;
+        if (DataCenter.DisabledActionSequencer?.Contains(ID) ?? false)
+        {
+            whyCant = WhyActionCantUse.DiabledSequencer;
+            return false;
+        }
 
-        if (!EnoughLevel) return false;
-        if (DataCenter.CurrentMp < MPNeed) return false;
+        if (!EnoughLevel)
+        {
+            whyCant = WhyActionCantUse.NotEnoughLevel;
+            return false;
+        }
+        if (DataCenter.CurrentMp < MPNeed)
+        {
+            whyCant = WhyActionCantUse.NoMp;
+            return false;
+        }
 
         var player = Player.Object;
 
         if (_action.Setting.StatusNeed != null)
         {
             if (player.WillStatusEndGCD(0, 0,
-                _action.Setting.StatusFromSelf, _action.Setting.StatusNeed)) return false;
+                _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
+            {
+                whyCant = WhyActionCantUse.NoStatusNeed;
+                return false;
+            }
         }
 
         if (_action.Setting.StatusProvide != null && !skipStatusProvideCheck)
         {
             if (!player.WillStatusEndGCD(_action.Config.StatusGcdCount, 0,
-                _action.Setting.StatusFromSelf, _action.Setting.StatusProvide)) return false;
+                _action.Setting.StatusFromSelf, _action.Setting.StatusProvide))
+            {
+                whyCant = WhyActionCantUse.HasTheStatus;
+                return false;
+            }
         }
 
         if (_action.Action.ActionCategory.Row == 15)
         {
-            if (CustomRotation.LimitBreakLevel <= 1) return false;
+            if (CustomRotation.LimitBreakLevel <= 1)
+            {
+                whyCant = WhyActionCantUse.LimitBreakPvP;
+                return false;
+            }
         }
 
         if (!skipComboCheck && IsGeneralGCD)
         {
-            if (!CheckForCombo()) return false;
+            if (!CheckForCombo())
+            {
+                whyCant = WhyActionCantUse.Combo;
+                return false;
+            }
         }
 
         if (_action.Action.IsRoleAction)
         {
-            if (!_action.Action.ClassJobCategory.Value?.IsJobInCategory(DataCenter.Job) ?? false) return false;
+            if (!_action.Action.ClassJobCategory.Value?.IsJobInCategory(DataCenter.Job) ?? false)
+            {
+                whyCant = WhyActionCantUse.JobMeet;
+                return false;
+            }
         }
 
         //Need casting.
@@ -196,32 +232,64 @@ public readonly struct ActionBasicInfo
             && !ActionsNoNeedCasting.Contains(ID))
         {
             //No casting.
-            if(DataCenter.SpecialType == SpecialCommandType.NoCasting) return false;
+            if (DataCenter.SpecialType == SpecialCommandType.NoCasting)
+            {
+                whyCant = WhyActionCantUse.NoCasting;
+                return false;
+            }
 
             //Is knocking back.
-            if (DateTime.Now > DataCenter.KnockbackStart && DateTime.Now < DataCenter.KnockbackFinished) return false;
-
-            if (DataCenter.NoPoslock && DataCenter.IsMoving && !skipCastingCheck) return false;
-        }
-
-        if (IsGeneralGCD && _action.Setting.StatusProvide?.Length > 0 && _action.Setting.IsFriendly
-            && IActionHelper.IsLastGCD(true, _action)
-            && DataCenter.TimeSinceLastAction.TotalSeconds < 3) return false;
-
-        if (!(_action.Setting.ActionCheck?.Invoke() ?? true)) return false;
-        if (!IBaseAction.ForceEnable && !(_action.Setting.RotationCheck?.Invoke() ?? true)) return false;
-
-        unsafe
-        {
-            if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Action, AdjustedID))) return false;
-
-            if(_action.Setting.Ninjutsu == null)
+            if (DateTime.Now > DataCenter.KnockbackStart && DateTime.Now < DataCenter.KnockbackFinished)
             {
-                //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
-                if (ActionManager.Instance()->CheckActionResources(ActionType.Action, AdjustedID) != 0) return false;
+                whyCant = WhyActionCantUse.KnockingBack;
+                return false;
+            }
+
+            if (DataCenter.NoPoslock && DataCenter.IsMoving && !skipCastingCheck)
+            {
+                whyCant = WhyActionCantUse.Moving;
+                return false;
             }
         }
 
+        if (IsGeneralGCD && _action.Setting.StatusProvide?.Length > 0 && _action.Setting.IsFriendly
+            && IActionHelper.IsLastGCD(true, _action))
+        {
+            whyCant = WhyActionCantUse.JustAddedTheStatus;
+            return false;
+        }
+
+        if (!(_action.Setting.ActionCheck?.Invoke() ?? true))
+        {
+            whyCant = WhyActionCantUse.ActionCheck;
+            return false;
+        }
+
+        if (!IBaseAction.ForceEnable && !(_action.Setting.RotationCheck?.Invoke() ?? true))
+        {
+            whyCant = WhyActionCantUse.RotationCheck;
+            return false;
+        }
+
+        unsafe
+        {
+            if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Action, AdjustedID)))
+            {
+                whyCant = WhyActionCantUse.BadStatus;
+                return false;
+            }
+            if (_action.Setting.Ninjutsu == null)
+            {
+                //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
+                if (ActionManager.Instance()->CheckActionResources(ActionType.Action, AdjustedID) != 0)
+                {
+                    whyCant = WhyActionCantUse.ActionResources;
+                    return false;
+                }
+            }
+        }
+
+        whyCant = WhyActionCantUse.None;
         return true;
     }
 

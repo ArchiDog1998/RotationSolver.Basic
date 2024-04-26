@@ -103,6 +103,9 @@ public class BaseAction : IBaseAction
         }
     }
 
+    WhyActionCantUse IBaseAction.WhyCant => _whyCant;
+    private WhyActionCantUse _whyCant = WhyActionCantUse.None;
+
     /// <summary>
     /// The default constructor
     /// </summary>
@@ -141,23 +144,48 @@ public class BaseAction : IBaseAction
             skipClippingCheck = true;
         }
 
-        if (!Info.BasicCheck(skipStatusProvideCheck, skipComboCheck, skipCastingCheck)) return false;
+        if (!Info.BasicCheck(skipStatusProvideCheck, skipComboCheck, skipCastingCheck, out var whyCant))
+        {
+            _whyCant = whyCant;
+            return false;
+        }
 
-        if (!CD.CooldownCheck(usedUp, onLastAbility, skipClippingCheck, gcdCountForAbility)) return false;
+        if (!CD.CooldownCheck(usedUp, onLastAbility, skipClippingCheck, gcdCountForAbility, out whyCant))
+        {
+            _whyCant = whyCant;
+            return false;
+        }
 
         if (Setting.SpecialType is SpecialActionType.MeleeRange
-            && IActionHelper.IsLastAction(IActionHelper.MovingActions)) return false; //No range actions after moving.
+            && IActionHelper.IsLastAction(IActionHelper.MovingActions))
+        {
+            _whyCant = WhyActionCantUse.NoRangeActionsAfterMovingForMelee;
+            return false;
+        }
 
-        if (DataCenter.AverageTimeToKill < Config.TimeToKill) return false;
-        if (DataCenter.TimeToUntargetable < Config.TimeToUntargetable) return false;
+        if (DataCenter.AverageTimeToKill < Config.TimeToKill)
+        {
+            _whyCant = WhyActionCantUse.TTK;
+            return false;
+        }
+        if (DataCenter.TimeToUntargetable < Config.TimeToUntargetable)
+        {
+            _whyCant = WhyActionCantUse.TimeToUntargetable;
+            return false;
+        }
 
         PreviewTarget = TargetInfo.FindTarget(skipAoeCheck, skipStatusProvideCheck);
-        if (PreviewTarget == null) return false;
+        if (PreviewTarget == null)
+        {
+            _whyCant = WhyActionCantUse.Target;
+            return false;
+        }
         if (!IBaseAction.ActionPreview)
         {
             Target = PreviewTarget.Value;
         }
 
+        _whyCant = WhyActionCantUse.None;
         return true;
     }
 
@@ -243,4 +271,9 @@ public class BaseAction : IBaseAction
 
     /// <inheritdoc/>
     public override string ToString() => Name;
+
+    bool IBaseAction.CanUse(out IAction act, bool skipStatusProvideCheck, bool skipComboCheck, bool skipCastingCheck, bool usedUp, bool onLastAbility, bool skipClippingCheck, bool skipAoeCheck, byte gcdCountForAbility)
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -40,6 +40,8 @@ public interface IBaseAction : IAction
     /// </summary>
     ActionBasicInfo Info { get; }
 
+    internal WhyActionCantUse WhyCant { get; }
+
     /// <summary>
     /// The cd information.
     /// </summary>

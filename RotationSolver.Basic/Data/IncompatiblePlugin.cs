@@ -1,5 +1,6 @@
 ﻿namespace RotationSolver.Basic.Data;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 public struct IncompatiblePlugin
 {
     public string Name { get; set; }
