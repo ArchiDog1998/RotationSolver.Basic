@@ -52,6 +52,9 @@
 		  <HintPath>$(DalamudLibPath)Newtonsoft.Json.dll</HintPath>
 		  <Private>False</Private>
 	  </Reference>
+	  <Reference Include="Serilog">
+	    <HintPath>$(DalamudLibPath)Serilog.dll</HintPath>
+	  </Reference>
 	  
 	  <Using Include="System.ComponentModel" />
 	  <Using Include="Dalamud.Game.ClientState.JobGauge.Types" />

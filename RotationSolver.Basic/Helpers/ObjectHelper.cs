@@ -65,8 +65,15 @@ public static class ObjectHelper
 
     internal static unsafe bool IsOthersPlayers(this GameObject obj)
     {
+        var type = obj.GetEventType();
+        if (type == EventHandlerType.QuestBattleDirector) //Others' quest actions.
+        {
+            var eventId = obj.Struct()->EventId;
+            var playerEventId = Player.GameObject->EventId.Id;
+            if (eventId.Id != 0 && eventId.Id != playerEventId) return true;
+        }
         //SpecialType but no NamePlateIcon
-        if (_eventType.Contains(obj.GetEventType()))
+        else if (_eventType.Contains(type))
         {
             return obj.GetNamePlateIcon() == 0;
         }
