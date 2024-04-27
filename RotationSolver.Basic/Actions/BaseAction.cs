@@ -271,9 +271,4 @@ public class BaseAction : IBaseAction
 
     /// <inheritdoc/>
     public override string ToString() => Name;
-
-    bool IBaseAction.CanUse(out IAction act, bool skipStatusProvideCheck, bool skipComboCheck, bool skipCastingCheck, bool usedUp, bool onLastAbility, bool skipClippingCheck, bool skipAoeCheck, byte gcdCountForAbility)
-    {
-        throw new NotImplementedException();
-    }
 }

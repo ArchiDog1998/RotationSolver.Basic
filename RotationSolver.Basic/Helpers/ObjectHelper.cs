@@ -124,9 +124,9 @@ public static class ObjectHelper
 
         //Tar on me
         if (battleChara.TargetObject == Player.Object
-        || battleChara.TargetObject?.OwnerId == Player.Object.ObjectId) return true;
+            || battleChara.TargetObject?.OwnerId == Player.Object.ObjectId) return true;
 
-        //Remove other's treasure.
+        //Remove other's target.
         if (battleChara.IsOthersPlayers()) return false;
 
         if (battleChara.IsTopPriorityHostile()) return true;
