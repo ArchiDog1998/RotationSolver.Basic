@@ -164,6 +164,9 @@ internal partial class Configs : IPluginConfiguration
     [UI ("Shows the hostile targets icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowHostilesIcons { get; private set; } = new(true, nameof(ShowHostilesIcons));
 
+    [UI("Shows the alliance icon.", Parent = nameof(UseOverlayWindow))]
+    public ConditionBoolean ShowAllianceIcons { get; private set; } = new(true, nameof(ShowAllianceIcons));
+
     [UI("Shows the RS user's icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowUsersIcons { get; private set; } = new(true, nameof(ShowUsersIcons));
 
@@ -619,6 +622,10 @@ internal partial class Configs : IPluginConfiguration
     [Range(0, 30, ConfigUnitType.Seconds, 0.02f)]
     public float AutoHealTimeToKill { get; set; } = 8f;
 
+    [UI("Alliance icons height from position.", Parent = nameof(ShowAllianceIcons))]
+    [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
+    public float AllianceIconHeight { get; set; } = 0.5f;
+
     [UI("Hostile icons height from position.", Parent =nameof(ShowHostilesIcons))]
     [Range(0, 10, ConfigUnitType.Pixels, 0.002f)]
     public float HostileIconHeight { get; set; } = 0.5f;
@@ -630,6 +637,10 @@ internal partial class Configs : IPluginConfiguration
     [UI("Hostile icon size.", Parent = nameof(ShowHostilesIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float HostileIconSize { get; set; } = 0.5f;
+
+    [UI("Allicance icon size.", Parent = nameof(ShowAllianceIcons))]
+    [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
+    public float AllianceIconSize { get; set; } = 0.5f;
 
     [UI("User icon size.", Parent = nameof(ShowUsersIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
