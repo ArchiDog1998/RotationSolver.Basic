@@ -213,10 +213,6 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 3)]
     public ConditionBoolean InterruptibleMoreCheck { get; private set; } = new(true, nameof(InterruptibleMoreCheck));
 
-    [UI("Uses work task for acceleration.",
-        (int)UiString.ConfigWindow_Basic_Others)]
-    public ConditionBoolean UseWorkTask { get; private set; } = new(false, nameof(UseWorkTask));
-
     [UI("Stops casting when the target is dead.", (int)UiString.ConfigWindow_Extra_Others)]
     public ConditionBoolean UseStopCasting { get; private set; } = new(false, nameof(UseStopCasting));
 
