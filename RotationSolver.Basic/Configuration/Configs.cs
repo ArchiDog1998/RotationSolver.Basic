@@ -775,10 +775,52 @@ internal partial class Configs : IPluginConfiguration
     [JobChoiceConfig]
     private readonly Dictionary<string, string> _rotationConfigurations = [];
 
-    public Dictionary<uint, string> DutyRotationChoice { get; set; } = [];
-
     [JobConfig]
     private readonly Dictionary<uint, Dictionary<float, List<BaseTimelineItem>>> _timeline = [];
+
+    [JsonProperty]
+    private Dictionary<uint, string> _dutyRotationChoice { get; set; } = [];
+
+    [JsonIgnore]
+    public string DutyRotationChoice
+    {
+        get
+        {
+            if (Svc.ClientState == null) return string.Empty;
+
+            if (_dutyRotationChoice.TryGetValue(Svc.ClientState.TerritoryType, out var value)) return value;
+
+            return string.Empty;
+        }
+        set
+        {
+            if (Svc.ClientState == null) return;
+            _dutyRotationChoice[Svc.ClientState.TerritoryType] = value;
+        }
+    }
+
+    [JsonProperty]
+    private Dictionary<uint, Dictionary<string, Dictionary<string, string>>> _dutyRotationConfig = [];
+
+    [JsonIgnore]
+    public Dictionary<string, string> DutyRotationConfig
+    {
+        get
+        {
+            var territoryId = DataCenter.Territory?.RowId ?? 0;
+            if (!_dutyRotationConfig.TryGetValue(territoryId, out var dict))
+            {
+                dict = _dutyRotationConfig[territoryId] = [];
+            }
+
+            if (!dict.TryGetValue(DutyRotationChoice, out var value))
+            {
+                value = dict[RotationChoice] = _rotationConfigurations;
+            }
+
+            return value;
+        }
+    }
 
     public void Save()
     {

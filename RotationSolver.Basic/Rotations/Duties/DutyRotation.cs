@@ -5,13 +5,14 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
+using RotationSolver.Basic.Configuration;
+using XIVConfigUI;
 
 namespace RotationSolver.Basic.Rotations.Duties;
 
 partial class DutyRotation : IDisposable
 {
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
     #region GCD
     public virtual bool EmergencyGCD(out IAction? act)
     {
@@ -501,6 +502,27 @@ partial class DutyRotation : IDisposable
 
     }
     #endregion
+
+    internal SearchableCollection Configs { get; private set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    protected DutyRotation()
+    {
+        Configs = new SearchableCollection(this, new RotationSearchableConfig());
+
+        //Load from config.
+        var savedConfigs = Service.Config.DutyRotationConfig;
+        foreach (var item in Configs)
+        {
+            item._default = item._property.GetValue(this)!;
+            if (savedConfigs.TryGetValue(item._property.Name, out var value))
+            {
+                item.OnCommand(value);
+            }
+        }
+    }
 
     /// <inheritdoc/>
     public void Dispose()
