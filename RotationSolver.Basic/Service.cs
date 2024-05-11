@@ -8,6 +8,7 @@ using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
 using RotationSolver.Basic.Configuration.Timeline;
+using RotationSolver.Basic.Watch;
 
 namespace RotationSolver.Basic;
 
@@ -81,6 +82,7 @@ internal class Service : IDisposable
 
         Svc.ClientState.Login += ClientState_Login;
         ClientState_Login();
+        Recorder.Init();
     }
 
     private void ClientState_Login()
@@ -145,5 +147,6 @@ internal class Service : IDisposable
         _checkerHook?.Dispose();
 
         Svc.ClientState.Login -= ClientState_Login;
+        Recorder.Dispose();
     }
 }

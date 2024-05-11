@@ -713,6 +713,10 @@ internal partial class Configs : IPluginConfiguration
     [UI("Number of hostiles", Parent = nameof(UseDefenseAbility))]
     [Range(1, 8, ConfigUnitType.None, 0.05f)]
     public int AutoDefenseNumber { get; set; } = 2;
+
+    [Range(32, int.MaxValue, ConfigUnitType.None, 1)]
+    [UI("The watcher counting", (int)UiString.ConfigWindow_Extra_Others)]//TODO: the recorder ui.
+    public int WatcherCount { get; set; } = 64;
     #endregion
 
     #region Jobs

@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+﻿using RotationSolver.Basic.Watch;
+
+namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
 [Description("Map Effect")]
 internal class TimelineConditionMapEffect : ITimelineCondition
@@ -9,7 +11,7 @@ internal class TimelineConditionMapEffect : ITimelineCondition
     public int Param2 { get; set; }
     public bool IsTrue(TimelineItem item)
     {
-        return DataCenter.MapEffects.Reverse().Any(effect =>
+        return Recorder.MapEffects.Any(effect =>
         {
             var time = effect.TimeDuration.TotalSeconds;
 

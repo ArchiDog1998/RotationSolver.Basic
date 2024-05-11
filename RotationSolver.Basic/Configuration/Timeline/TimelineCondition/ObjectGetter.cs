@@ -1,5 +1,6 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using ECommons.GameHelpers;
+using RotationSolver.Basic.Watch;
 using System.Text.RegularExpressions;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
@@ -57,7 +58,7 @@ internal class ObjectGetter
 
         if (!string.IsNullOrEmpty(VfxPath))
         {
-            if (!DataCenter.VfxNewData.Reverse().Any(effect =>
+            if (!Recorder.VfxNewData.Any(effect =>
             {
                 if (effect.ObjectId != obj.ObjectId) return false;
 
@@ -74,7 +75,7 @@ internal class ObjectGetter
 
         if (ObjectEffect1 != 0 || ObjectEffect2 != 0)
         {
-            if (!DataCenter.ObjectEffects.Reverse().Any(effect =>
+            if (!Recorder.ObjectEffects.Any(effect =>
             {
                 if (effect.ObjectId != obj.ObjectId) return false;
 

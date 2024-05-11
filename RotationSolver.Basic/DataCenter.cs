@@ -7,6 +7,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Fate;
 using Lumina.Excel.GeneratedSheets;
 using RotationSolver.Basic.Configuration.Conditions;
 using RotationSolver.Basic.Rotations.Duties;
+using RotationSolver.Basic.Watch;
 using XIVConfigUI;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 using CharacterManager = FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterManager;
@@ -28,10 +29,6 @@ internal static class DataCenter
             _hostileTargetId = value?.ObjectId ?? GameObject.InvalidGameObjectId;
         }
     }
-
-    internal static Queue<MapEffectData> MapEffects { get; } = new(64);
-    internal static Queue<ObjectEffectData> ObjectEffects { get; } = new(64);
-    internal static Queue<VfxNewData> VfxNewData { get; } = new(64);
 
     /// <summary>
     /// This one never be null.
@@ -470,9 +467,7 @@ internal static class DataCenter
         _timeLastActionUsed = DateTime.Now;
         _actions.Clear();
 
-        MapEffects.Clear();
-        ObjectEffects.Clear();
-        VfxNewData.Clear();
+        Recorder.Clear();
     }
 
     internal static void AddDamageRec(float damageRatio)

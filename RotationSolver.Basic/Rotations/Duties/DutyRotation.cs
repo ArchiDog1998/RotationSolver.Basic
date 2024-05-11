@@ -6,6 +6,8 @@ using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using RotationSolver.Basic.Configuration;
+using RotationSolver.Basic.Watch;
+using RotationSolver.Basic.Watcher;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Rotations.Duties;
@@ -374,17 +376,17 @@ partial class DutyRotation : IDisposable
     /// <summary>
     /// The map effects.
     /// </summary>
-    public static IEnumerable<MapEffectData> MapEffects => DataCenter.MapEffects.Reverse();
+    public static IEnumerable<MapEffectData> MapEffects => Recorder.MapEffects;
 
     /// <summary>
     /// The object Effects.
     /// </summary>
-    public static IEnumerable<ObjectEffectData> ObjectEffects => DataCenter.ObjectEffects.Reverse();
+    public static IEnumerable<ObjectEffectData> ObjectEffects => Recorder.ObjectEffects;
 
     /// <summary>
     /// The vfx effects.
     /// </summary>
-    public static IEnumerable<VfxNewData> VfxNewData => DataCenter.VfxNewData.Reverse();
+    public static IEnumerable<VfxNewData> VfxNewData => Recorder.VfxNewData;
 
     /// <summary>
     /// The timeline Items.
@@ -453,7 +455,7 @@ partial class DutyRotation : IDisposable
     /// When a new actor showned.
     /// </summary>
     /// <param name="actor"></param>
-    public virtual void OnNewActor(GameObject actor)
+    public virtual void OnNewActor(in ObjectNewData actor)
     {
 
     }
