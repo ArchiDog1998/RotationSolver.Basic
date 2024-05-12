@@ -166,7 +166,6 @@ partial class DarkKnightRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.PlungePvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (PlungePvE.CanUse(out act)) return true;

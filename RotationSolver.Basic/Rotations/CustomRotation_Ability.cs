@@ -276,7 +276,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-    [RotationDesc(DescType.MoveForwardAbility)]
     protected virtual bool MoveForwardAbility(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.MoveForwardAbility(out act) ?? false) return true;
@@ -288,7 +287,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-    [RotationDesc(DescType.MoveBackAbility)]
     protected virtual bool MoveBackAbility(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.MoveBackAbility(out act) ?? false) return true;
@@ -300,7 +298,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-    [RotationDesc(DescType.HealSingleAbility)]
     protected virtual bool HealSingleAbility(out IAction? act)
     {
         if (RecuperatePvP.CanUse(out act)) return true;
@@ -313,7 +310,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-    [RotationDesc(DescType.HealAreaAbility)]
     protected virtual bool HealAreaAbility(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.HealAreaAbility(out act) ?? false) return true;
@@ -325,7 +321,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-    [RotationDesc(DescType.DefenseSingleAbility)]
     protected virtual bool DefenseSingleAbility(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.DefenseSingleAbility(out act) ?? false) return true;
@@ -337,8 +332,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-
-    [RotationDesc(DescType.DefenseAreaAbility)]
     protected virtual bool DefenseAreaAbility(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.DefenseAreaAbility(out act) ?? false) return true;
@@ -350,9 +343,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act">Result action.</param>
     /// <returns>Can we use it.</returns>
-
-    [RotationDesc(DescType.SpeedAbility)]
-    [RotationDesc(ActionID.SprintPvE)]
     protected virtual bool SpeedAbility(out IAction? act)
     {
         if (SprintPvP.CanUse(out act)) return true;

@@ -153,7 +153,6 @@ partial class NinjaRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ShukuchiPvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (ShukuchiPvE.CanUse(out act)) return true;
@@ -161,7 +160,6 @@ partial class NinjaRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.FeintPvE)]
     protected sealed override bool DefenseAreaAbility(out IAction? act)
     {
         if (FeintPvE.CanUse(out act)) return true;
@@ -169,7 +167,6 @@ partial class NinjaRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ShadeShiftPvE)]
     protected override bool DefenseSingleAbility(out IAction? act)
     {
         if (ShadeShiftPvE.CanUse(out act)) return true;

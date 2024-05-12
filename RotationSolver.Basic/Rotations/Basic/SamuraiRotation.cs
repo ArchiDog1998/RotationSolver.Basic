@@ -180,7 +180,6 @@ partial class SamuraiRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.HissatsuGyotenPvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (HissatsuGyotenPvE.CanUse(out act)) return true;
@@ -188,7 +187,6 @@ partial class SamuraiRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.FeintPvE)]
     protected sealed override bool DefenseAreaAbility(out IAction? act)
     {
         if (FeintPvE.CanUse(out act)) return true;
@@ -196,7 +194,6 @@ partial class SamuraiRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ThirdEyePvE)]
     protected override bool DefenseSingleAbility(out IAction? act)
     {
         if (ThirdEyePvE.CanUse(out act)) return true;

@@ -245,7 +245,6 @@ partial class SummonerRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.RadiantAegisPvE)]
     protected sealed override bool DefenseSingleAbility(out IAction? act)
     {
         if (RadiantAegisPvE.CanUse(out act)) return true;
@@ -253,7 +252,6 @@ partial class SummonerRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.PhysickPvE)]
     protected sealed override bool HealSingleGCD(out IAction? act)
     {
         if (PhysickPvE.CanUse(out act)) return true;
@@ -261,7 +259,6 @@ partial class SummonerRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.AddlePvE)]
     protected override bool DefenseAreaAbility(out IAction? act)
     {
         if (AddlePvE.CanUse(out act)) return true;

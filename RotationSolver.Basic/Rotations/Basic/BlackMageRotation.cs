@@ -250,7 +250,6 @@ partial class BlackMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ManawardPvE)]
     protected sealed override bool DefenseSingleGCD(out IAction? act)
     {
         if (ManawardPvE.CanUse(out act)) return true;
@@ -258,7 +257,6 @@ partial class BlackMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.AddlePvE)]
     protected override bool DefenseAreaAbility(out IAction act)
     {
         if (AddlePvE.CanUse(out act)) return true;
@@ -266,7 +264,6 @@ partial class BlackMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.AetherialManipulationPvE)]
     protected sealed override bool MoveForwardGCD(out IAction? act)
     {
         if (AetherialManipulationPvE.CanUse(out act)) return true;

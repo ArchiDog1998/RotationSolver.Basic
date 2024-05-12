@@ -8,7 +8,7 @@ partial class RedMageRotation
     public override MedicineType MedicineType => MedicineType.Intelligence;
 
     /// <inheritdoc/>
-    public override bool CanHealSingleSpell => DataCenter.PartyMembers.Count() == 1 && base.CanHealSingleSpell;
+    public override bool CanHealSingleSpell => DataCenter.PartyMembers.Length == 1 && base.CanHealSingleSpell;
 
     #region Job Gauge
     /// <summary>
@@ -147,7 +147,6 @@ partial class RedMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.VercurePvE)]
     protected sealed override bool HealSingleGCD(out IAction? act)
     {
         if (VercurePvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
@@ -155,7 +154,6 @@ partial class RedMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.CorpsacorpsPvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (CorpsacorpsPvE.CanUse(out act)) return true;
@@ -163,7 +161,6 @@ partial class RedMageRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.AddlePvE, ActionID.MagickBarrierPvE)]
     protected sealed override bool DefenseAreaAbility(out IAction? act)
     {
         if (AddlePvE.CanUse(out act)) return true;

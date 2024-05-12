@@ -111,7 +111,6 @@ partial class MonkRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ThunderclapPvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (ThunderclapPvE.CanUse(out act)) return true;
@@ -119,7 +118,6 @@ partial class MonkRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.FeintPvE)]
     protected sealed override bool DefenseAreaAbility(out IAction? act)
     {
         if (FeintPvE.CanUse(out act)) return true;
@@ -127,7 +125,6 @@ partial class MonkRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.MantraPvE)]
     protected sealed override bool HealAreaAbility(out IAction? act)
     {
         if (MantraPvE.CanUse(out act)) return true;
@@ -135,7 +132,6 @@ partial class MonkRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.RiddleOfEarthPvE)]
     protected sealed override bool DefenseSingleAbility(out IAction? act)
     {
         if (RiddleOfEarthPvE.CanUse(out act, usedUp: true)) return true;

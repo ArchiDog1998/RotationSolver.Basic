@@ -227,7 +227,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
-    [RotationDesc(DescType.MoveForwardGCD)]
     protected virtual bool MoveForwardGCD(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.MoveForwardGCD(out act) ?? false) return true;
@@ -239,7 +238,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
-    [RotationDesc(DescType.HealSingleGCD)]
     protected virtual bool HealSingleGCD(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.HealSingleGCD(out act) ?? false) return true;
@@ -251,7 +249,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
-    [RotationDesc(DescType.HealAreaGCD)]
     protected virtual bool HealAreaGCD(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.HealAreaGCD(out act) ?? false) return true;
@@ -263,7 +260,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
-    [RotationDesc(DescType.DefenseSingleGCD)]
     protected virtual bool DefenseSingleGCD(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.DefenseSingleGCD(out act) ?? false) return true;
@@ -275,7 +271,6 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
-    [RotationDesc(DescType.DefenseAreaGCD)]
     protected virtual bool DefenseAreaGCD(out IAction? act)
     {
         if (DataCenter.RightNowDutyRotation?.DefenseAreaGCD(out act) ?? false) return true;

@@ -118,7 +118,6 @@ partial class PaladinRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.IntervenePvE)]
     protected sealed override bool MoveForwardAbility(out IAction? act)
     {
         if (IntervenePvE.CanUse(out act)) return true;
@@ -126,7 +125,6 @@ partial class PaladinRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.ClemencyPvE)]
     protected sealed override bool HealSingleGCD(out IAction? act)
     {
         if (ClemencyPvE.CanUse(out act)) return true;

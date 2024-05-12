@@ -153,7 +153,6 @@ partial class WarriorRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.OnslaughtPvE)]
     protected override bool MoveForwardAbility(out IAction? act)
     {
         if (OnslaughtPvE.CanUse(out act)) return true;
@@ -161,7 +160,6 @@ partial class WarriorRotation
     }
 
     /// <inheritdoc/>
-    [RotationDesc(ActionID.PrimalRendPvE)]
     protected override bool MoveForwardGCD(out IAction? act)
     {
         if (PrimalRendPvE.CanUse(out act, skipAoeCheck: true)) return true;
