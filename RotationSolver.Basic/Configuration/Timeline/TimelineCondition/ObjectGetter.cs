@@ -1,6 +1,6 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using ECommons.GameHelpers;
-using RotationSolver.Basic.Watch;
+using RotationSolver.Basic.Record;
 using System.Text.RegularExpressions;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
@@ -58,15 +58,9 @@ internal class ObjectGetter
 
         if (!string.IsNullOrEmpty(VfxPath))
         {
-            if (!Recorder.VfxNewData.Any(effect =>
+            if (!Recorder.GetData<VfxNewData>(TimeDuration).Any(effect =>
             {
-                if (effect.ObjectId != obj.ObjectId) return false;
-
-                var time = effect.TimeDuration.TotalSeconds;
-
-                if (time < TimeDuration.X) return false;
-                if (time > TimeDuration.Y) return false;
-
+                if (effect.Object.ObjectId != obj.ObjectId) return false;
                 if (effect.Path != VfxPath) return false;
 
                 return true;
@@ -75,14 +69,9 @@ internal class ObjectGetter
 
         if (ObjectEffect1 != 0 || ObjectEffect2 != 0)
         {
-            if (!Recorder.ObjectEffects.Any(effect =>
+            if (!Recorder.GetData<ObjectEffectData>(TimeDuration).Any(effect =>
             {
-                if (effect.ObjectId != obj.ObjectId) return false;
-
-                var time = effect.TimeDuration.TotalSeconds;
-
-                if (time < TimeDuration.X) return false;
-                if (time > TimeDuration.Y) return false;
+                if (effect.Object.ObjectId != obj.ObjectId) return false;
 
                 if (effect.Param1 != ObjectEffect1) return false;
                 if (effect.Param2 != ObjectEffect2) return false;

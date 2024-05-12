@@ -1,21 +1,43 @@
-﻿namespace RotationSolver.Basic.Watcher;
+﻿namespace RotationSolver.Basic.Record;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
-public record ObjectNewData(GameObject Object) : RecordData;
-
-public record ObjectEffectData(uint ObjectId, ushort Param1, ushort Param2) : RecordData;
-
-public record MapEffectData(uint Position, ushort Param1, ushort Param2) : RecordData;
-
-public record VfxNewData(uint ObjectId, string Path) : RecordData;
-
-public record RecordData
+public record struct ObjectBeginCastData(GameObject? Object)
 {
-    private readonly DateTime _time = DateTime.Now;
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
 
-    /// <summary>
-    /// The time duration.
-    /// </summary>
-    public TimeSpan TimeDuration => DateTime.Now - _time;
+public record struct ObjectNewData(GameObject? Object)
+{
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
+
+public record struct ObjectEffectData(GameObject? Object, ushort Param1, ushort Param2)
+{
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
+
+public record struct VfxNewData(GameObject? Object, string Path)
+{
+    public override string ToString()
+    {
+        return base.ToString();
+    }
+}
+
+public record struct MapEffectData(uint Position, ushort Param1, ushort Param2)
+{
+    public override string ToString()
+    {
+        return base.ToString();
+    }
 }

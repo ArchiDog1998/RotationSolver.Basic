@@ -1,25 +1,30 @@
 ﻿using ECommons.DalamudServices;
-using RotationSolver.Basic.Watcher;
+using ECommons.Hooks.ActionEffectTypes;
 
-namespace RotationSolver.Basic.Watch;
+namespace RotationSolver.Basic.Record;
+
 internal static class Recorder
 {
-    private static readonly Queue<RecordData> _data = new(64);
+    private static readonly Dictionary<DateTime, object> _data = new(64);
+    public static T[] GetData<T>(Vector2 duration) where T : struct
+    {
+        return GetData<T>(duration.X, duration.Y);
+    }
+    public static T[] GetData<T>(double timeStart, double timeEnd) where T : struct
+    {
+        var now = DateTime.Now;
 
-    /// <summary>
-    /// The map effects.
-    /// </summary>
-    public static IEnumerable<MapEffectData> MapEffects => _data.OfType<MapEffectData>().Reverse();
+        List<object> dataInTime = [];
+        foreach (var pair in _data)
+        {
+            var time = (now - pair.Key).TotalSeconds;
 
-    /// <summary>
-    /// The object Effects.
-    /// </summary>
-    public static IEnumerable<ObjectEffectData> ObjectEffects => _data.OfType<ObjectEffectData>().Reverse();
+            if (time < timeStart || time > timeEnd) continue;
+            dataInTime.Add(pair.Value);
+        }
 
-    /// <summary>
-    /// The vfx effects.
-    /// </summary>
-    public static IEnumerable<VfxNewData> VfxNewData => _data.OfType<VfxNewData>().Reverse();
+        return [.. dataInTime.OfType<T>()];
+    }
 
     public static void Init()
     {
@@ -29,12 +34,16 @@ internal static class Recorder
     public static void Dispose()
     {
         Svc.Framework.Update -= Framework_Update;
+    }
 
+    private static void Framework_Update(Dalamud.Plugin.Services.IFramework framework)
+    {
+        UpdateObjectNewData();
+        UpdateCastingObjectData();
     }
 
     private static GameObject[] _lastObjs = [];
-
-    private static void Framework_Update(Dalamud.Plugin.Services.IFramework framework)
+    private static void UpdateObjectNewData()
     {
         foreach (var obj in Svc.Objects.Except(_lastObjs))
         {
@@ -44,18 +53,38 @@ internal static class Recorder
         _lastObjs = [.. Svc.Objects];
     }
 
-    public static void Enqueue(RecordData data)
+    private static BattleChara[] _lastCastingObjs = [];
+    private static void UpdateCastingObjectData()
+    {
+        var castingObjects = DataCenter.AllHostileTargets.Where(b => b.IsCasting && b.AdjustedTotalCastTime > 2.5f);
+
+        foreach (var obj in castingObjects.Except(_lastCastingObjs))
+        {
+            Enqueue(new ObjectBeginCastData(obj));
+        }
+
+        _lastCastingObjs = [.. castingObjects];
+    }
+
+    public static void Enqueue<T>(T data) where T : struct
     {
         if (_data.Count >= Service.Config.WatcherCount)
         {
-            _data.TryDequeue(out _);
+            _data.Remove(_data.Keys.First());
         }
-        _data.Enqueue(data);
+        _data[DateTime.Now] = data;
 
-        UpdateNowDutyRotation(data);
+        try
+        {
+            UpdateNowDutyRotation(data);
+        }
+        catch (Exception e)
+        {
+            Svc.Log.Warning(e, "Failed to act on the duty rotation about acion on enemy.");
+        }
     }
 
-    private static void UpdateNowDutyRotation(RecordData data)
+    private static void UpdateNowDutyRotation(object data)
     {
         var rotation = DataCenter.RightNowDutyRotation;
         if (rotation == null) return;
@@ -72,9 +101,17 @@ internal static class Recorder
         {
             rotation.OnMapEffect(mapEffectData);
         }
-        else if(data is ObjectEffectData objectEffectData)
+        else if (data is ObjectEffectData objectEffectData)
         {
             rotation.OnObjectEffect(objectEffectData);
+        }
+        else if (data is ObjectBeginCastData objectBeginCastData)
+        {
+            rotation.OnStartCasting(objectBeginCastData);
+        }
+        else if (data is ActionEffectSet actionEffect)
+        {
+            rotation.OnActionFromEnemy(actionEffect);
         }
     }
 

@@ -1,4 +1,4 @@
-﻿using RotationSolver.Basic.Watch;
+﻿using RotationSolver.Basic.Record;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
@@ -11,13 +11,8 @@ internal class TimelineConditionMapEffect : ITimelineCondition
     public int Param2 { get; set; }
     public bool IsTrue(TimelineItem item)
     {
-        return Recorder.MapEffects.Any(effect =>
+        return Recorder.GetData<MapEffectData>(TimeDuration).Any(effect =>
         {
-            var time = effect.TimeDuration.TotalSeconds;
-
-            if (time < TimeDuration.X) return false;
-            if (time > TimeDuration.Y) return false;
-
             if (effect.Position != Position) return false;
             if (effect.Param1 != Param1) return false;
             if (effect.Param2 != Param2) return false;

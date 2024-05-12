@@ -8,7 +8,7 @@ using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
 using RotationSolver.Basic.Configuration.Timeline;
-using RotationSolver.Basic.Watch;
+using RotationSolver.Basic.Record;
 
 namespace RotationSolver.Basic;
 
@@ -16,10 +16,10 @@ internal class Service : IDisposable
 {
     public const string COMMAND = "/rotation";
 
-    // From https://GitHub.com/PunishXIV/Orbwalker/blame/master/Orbwalker/Memory.cs#L85-L87
-    [Signature("F3 0F 10 05 ?? ?? ?? ?? 0F 2E C6 0F 8A", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible)]
+    // From https://github.com/UnknownX7/Cammy/blob/5c92ef3b1b0f8fdfd8cb690cc0825316721642a1/Game.cs#L31
+    [Signature("F3 0F 10 05 ?? ?? ?? ?? 0F 2E C6 0F 8A", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible, Offset = 4)]
     static IntPtr forceDisableMovementPtr = IntPtr.Zero;
-    private static unsafe ref int ForceDisableMovement => ref *(int*)(forceDisableMovementPtr + 4);
+    private static unsafe ref int ForceDisableMovement => ref *(int*)forceDisableMovementPtr;
 
     private unsafe delegate uint AdjustedActionId(ActionManager* manager, uint actionID);
     private static Hook<AdjustedActionId>? _adjustActionIdHook;

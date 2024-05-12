@@ -5,9 +5,7 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
-using RotationSolver.Basic.Configuration;
-using RotationSolver.Basic.Watch;
-using RotationSolver.Basic.Watcher;
+using RotationSolver.Basic.Record;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Rotations.Duties;
@@ -374,21 +372,6 @@ partial class DutyRotation : IDisposable
 
     #region Duty
     /// <summary>
-    /// The map effects.
-    /// </summary>
-    public static IEnumerable<MapEffectData> MapEffects => Recorder.MapEffects;
-
-    /// <summary>
-    /// The object Effects.
-    /// </summary>
-    public static IEnumerable<ObjectEffectData> ObjectEffects => Recorder.ObjectEffects;
-
-    /// <summary>
-    /// The vfx effects.
-    /// </summary>
-    public static IEnumerable<VfxNewData> VfxNewData => Recorder.VfxNewData;
-
-    /// <summary>
     /// The timeline Items.
     /// </summary>
     public static TimelineItem[] TimelineItems => DataCenter.TimelineItems;
@@ -400,47 +383,9 @@ partial class DutyRotation : IDisposable
     #endregion
 
     #region Drawing
-    /// <summary>
-    /// When anyone casting this, what should do.
-    /// </summary>
-    protected virtual Dictionary<(float time, uint actionId), Action> CastingAction { get; } = [];
-    private readonly Dictionary<(float time, uint actionId), DateTime> _usedTime = [];
     internal void UpdateInfo()
     {
-        UpdateCasting();
         UpdateDrawing();
-    }
-
-    private void UpdateCasting()
-    {
-        if (CastingAction.Count == 0) return;
-
-        foreach (var target in DataCenter.AllHostileTargets)
-        {
-            if (!target.IsCasting) continue;
-            if (target.TotalCastTime < 2.5) continue;
-
-            var last = target.TotalCastTime - target.CurrentCastTime;
-            var id = target.CastActionId;
-            CanInvoke(last, id);
-        }
-    }
-
-    private void CanInvoke(float last, uint id)
-    {
-        foreach ((var key, var value) in CastingAction)
-        {
-            if (key.actionId != id) continue;
-            if (key.time < last) continue;
-            if (key.time - 1 > last) continue;
-            if (_usedTime.TryGetValue(key, out var time))
-            {
-                if ((DateTime.Now - time).TotalSeconds < 1.5) continue;
-            }
-
-            _usedTime[key] = DateTime.Now;
-            value?.Invoke();
-        }
     }
 
     /// <summary>
@@ -452,10 +397,19 @@ partial class DutyRotation : IDisposable
     }
 
     /// <summary>
+    /// When the target is start casting.
+    /// </summary>
+    /// <param name="data"></param>
+    public virtual void OnStartCasting(in ObjectBeginCastData data)
+    {
+
+    }
+
+    /// <summary>
     /// When a new actor showned.
     /// </summary>
-    /// <param name="actor"></param>
-    public virtual void OnNewActor(in ObjectNewData actor)
+    /// <param name="data"></param>
+    public virtual void OnNewActor(in ObjectNewData data)
     {
 
     }
