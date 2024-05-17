@@ -63,6 +63,11 @@ public class ActionSetting()
     public StatusID[]? StatusProvide { get; set; } = null;
 
     /// <summary>
+    /// You can't use this action when the player has this status.
+    /// </summary>
+    public StatusID[]? StatusPenalty { get; set; } = null;
+
+    /// <summary>
     /// Status that this action needs.
     /// </summary>
     public StatusID[]? StatusNeed { get; set; } = null;

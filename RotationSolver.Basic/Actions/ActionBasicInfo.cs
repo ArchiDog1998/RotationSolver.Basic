@@ -185,6 +185,16 @@ public readonly struct ActionBasicInfo
             }
         }
 
+        if (_action.Setting.StatusPenalty != null)
+        {
+            if (!player.WillStatusEndGCD(0, 0,
+                false, _action.Setting.StatusPenalty))
+            {
+                whyCant = WhyActionCantUse.HasThePenaltyStatus;
+                return false;
+            }
+        }
+
         if (_action.Setting.StatusProvide != null && !skipStatusProvideCheck)
         {
             if (!player.WillStatusEndGCD(_action.Config.StatusGcdCount, 0,

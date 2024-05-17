@@ -22,6 +22,9 @@ internal enum WhyActionCantUse : byte
     [Description("There are the statuses that this action provide!")]
     HasTheStatus,
 
+    [Description("There are the pernalty statuses of this action!")]
+    HasThePenaltyStatus,
+
     [Description("Not enough Enough Limit Level!")]
     LimitBreakPvP,
 

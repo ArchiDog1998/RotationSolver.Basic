@@ -365,7 +365,7 @@ partial class CustomRotation
         if (DataCenter.RightNowDutyRotation?.GeneralAbility(out act) ?? false) return true;
         act = null; return false;
     }
-
+    
     /// <summary>
     /// The ability that attacks some enemy.
     /// </summary>

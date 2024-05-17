@@ -94,8 +94,9 @@ partial class CustomRotation
         };
     }
 
-    static partial void ModifyIsleSprintPvE(ref ActionSetting setting)
+    static partial void ModifySprintPvE(ref ActionSetting setting)
     {
+        setting.StatusPenalty = [StatusID.SprintPenalty];
         setting.StatusProvide = [StatusID.Dualcast];
     }
     #endregion
