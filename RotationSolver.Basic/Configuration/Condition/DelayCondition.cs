@@ -1,6 +1,6 @@
 ﻿using ECommons.GameHelpers;
 
-namespace RotationSolver.Basic.Configuration.Conditions;
+namespace RotationSolver.Basic.Configuration.Condition;
 
 internal abstract class DelayCondition : ICondition
 {

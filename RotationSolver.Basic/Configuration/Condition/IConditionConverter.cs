@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 
-namespace RotationSolver.Basic.Configuration.Conditions;
+namespace RotationSolver.Basic.Configuration.Condition;
 
 internal class IConditionConverter : JsonCreationConverter<ICondition>
 {

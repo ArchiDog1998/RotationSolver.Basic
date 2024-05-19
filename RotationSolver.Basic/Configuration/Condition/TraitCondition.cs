@@ -1,7 +1,7 @@
 ﻿using ECommons.GameHelpers;
 using RotationSolver.Basic.Traits;
 
-namespace RotationSolver.Basic.Configuration.Conditions;
+namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Trait Condition")]
 internal class TraitCondition : DelayCondition

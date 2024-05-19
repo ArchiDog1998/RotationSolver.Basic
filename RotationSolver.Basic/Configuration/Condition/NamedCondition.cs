@@ -1,4 +1,4 @@
-﻿namespace RotationSolver.Basic.Configuration.Conditions;
+﻿namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Named Condition")]
 internal class NamedCondition : DelayCondition

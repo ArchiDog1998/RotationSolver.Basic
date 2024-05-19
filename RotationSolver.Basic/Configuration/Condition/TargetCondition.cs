@@ -2,7 +2,7 @@
 using ECommons.GameHelpers;
 using Lumina.Excel.GeneratedSheets;
 
-namespace RotationSolver.Basic.Configuration.Conditions;
+namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Target Condition")]
 internal class TargetCondition : DelayCondition

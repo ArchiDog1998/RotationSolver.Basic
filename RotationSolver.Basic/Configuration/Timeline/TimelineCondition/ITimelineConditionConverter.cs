@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using RotationSolver.Basic.Configuration.Conditions;
+using RotationSolver.Basic.Configuration.Condition;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 internal class ITimelineConditionConverter : JsonCreationConverter<ITimelineCondition>

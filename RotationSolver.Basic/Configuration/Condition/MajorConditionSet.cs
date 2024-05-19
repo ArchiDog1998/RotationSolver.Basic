@@ -1,7 +1,7 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 
-namespace RotationSolver.Basic.Configuration.Conditions;
+namespace RotationSolver.Basic.Configuration.Condition;
 
 internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
 {

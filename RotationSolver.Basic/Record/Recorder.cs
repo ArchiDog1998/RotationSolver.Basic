@@ -1,11 +1,12 @@
-﻿using ECommons.DalamudServices;
+﻿using Dalamud.Game.ClientState.Objects.SubKinds;
+using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
 
 namespace RotationSolver.Basic.Record;
 
 internal static class Recorder
 {
-    private static readonly Dictionary<DateTime, object> _data = new(64);
+    public static List<(DateTime, object)> Data { get; } = new(64);
     public static T[] GetData<T>(Vector2 duration) where T : struct
     {
         return GetData<T>(duration.X, duration.Y);
@@ -15,12 +16,12 @@ internal static class Recorder
         var now = DateTime.Now;
 
         List<object> dataInTime = [];
-        foreach (var pair in _data)
+        foreach ((var createdTime, var data) in Data)
         {
-            var time = (now - pair.Key).TotalSeconds;
+            var time = (now - createdTime).TotalSeconds;
 
             if (time < timeStart || time > timeEnd) continue;
-            dataInTime.Add(pair.Value);
+            dataInTime.Add(data);
         }
 
         return [.. dataInTime.OfType<T>()];
@@ -45,12 +46,14 @@ internal static class Recorder
     private static GameObject[] _lastObjs = [];
     private static void UpdateObjectNewData()
     {
-        foreach (var obj in Svc.Objects.Except(_lastObjs))
+        var objs = Svc.Objects.Where(obj => obj is not PlayerCharacter).Except(_lastObjs);
+
+        foreach (var obj in objs)
         {
             Enqueue(new ObjectNewData(obj));
         }
 
-        _lastObjs = [.. Svc.Objects];
+        _lastObjs = [.. objs];
     }
 
     private static BattleChara[] _lastCastingObjs = [];
@@ -68,11 +71,11 @@ internal static class Recorder
 
     public static void Enqueue<T>(T data) where T : struct
     {
-        if (_data.Count >= Service.Config.WatcherCount)
+        if (Data.Count >= Service.Config.WatcherCount)
         {
-            _data.Remove(_data.Keys.First());
+            Data.RemoveAt(0);
         }
-        _data[DateTime.Now] = data;
+        Data.Add((DateTime.Now,data));
 
         try
         {
@@ -117,6 +120,6 @@ internal static class Recorder
 
     public static void Clear()
     {
-        _data.Clear();
+        Data.Clear();
     }
 }
