@@ -38,6 +38,11 @@ public class ActionSetting()
     public StatusID[]? TargetStatusProvide { get; set; } = null;
 
     /// <summary>
+    /// You can't use this action when the target has this status.
+    /// </summary>
+    public StatusID[]? TargetStatusPenalty { get; set; } = null;
+
+    /// <summary>
     /// The status that it needs on the target.
     /// </summary>
     public StatusID[]? TargetStatusNeed { get; set; } = null;

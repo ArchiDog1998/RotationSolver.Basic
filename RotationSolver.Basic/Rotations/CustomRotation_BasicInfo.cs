@@ -1,10 +1,8 @@
-﻿using Dalamud.Interface.Utility;
-using ECommons.DalamudServices;
+﻿using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using Lumina.Excel.GeneratedSheets;
 using XIVConfigUI;
 using XIVConfigUI.Attributes;
-using XIVConfigUI.SearchableConfigs;
 
 namespace RotationSolver.Basic.Rotations;
 

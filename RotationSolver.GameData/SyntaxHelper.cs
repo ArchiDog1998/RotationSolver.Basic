@@ -19,7 +19,6 @@ public static class SyntaxHelper
          private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _{{actionName}}Creator = new(() => 
          {
              global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID){{item.RowId}}, {{isDuty.ToString().ToLower()}});
-             CustomRotation.LoadActionSetting(ref action);
          
              var setting = action.Setting;
              Modify{{actionName}}(ref setting);

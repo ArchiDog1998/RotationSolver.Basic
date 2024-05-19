@@ -119,6 +119,51 @@ public class BaseAction : IBaseAction
         CD = new(this);
 
         Setting = new();
+
+        IsFriendly();
+        Penalty();
+
+        void IsFriendly()
+        {
+            var a = Action;
+            if (a.CanTargetFriendly || a.CanTargetParty)
+            {
+                Setting.IsFriendly = true;
+            }
+            else if (a.CanTargetHostile)
+            {
+                Setting.IsFriendly = false;
+            }
+            else
+            {
+                Setting.IsFriendly = TargetInfo.EffectRange > 5;
+            }
+
+            //TODO: better target type check. (NoNeed?) 
+        }
+
+        void Penalty()
+        {
+            if (Info.AttackType == AttackType.Magic)
+            {
+                Setting.TargetStatusPenalty = [.. StatusHelper.MagicResistance,
+                .. Setting.TargetStatusPenalty ?? []];
+            }
+            else if (Info.Aspect != Aspect.Piercing) // Physic
+            {
+                Setting.TargetStatusPenalty = [.. StatusHelper.PhysicResistancec,
+                .. Setting.TargetStatusPenalty ?? []];
+            }
+            if (TargetInfo.Range >= 20) // Range
+            {
+                Setting.TargetStatusPenalty = 
+                [
+                    StatusID.RangedResistance,
+                    StatusID.EnergyField,
+                    .. Setting.TargetStatusPenalty ?? []
+                ];
+            }
+        }
     }
 
     /// <inheritdoc/>

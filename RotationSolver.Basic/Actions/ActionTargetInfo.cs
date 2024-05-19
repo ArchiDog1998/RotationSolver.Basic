@@ -160,8 +160,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
 
         return CheckStatus(gameObject, skipStatusProvideCheck) 
-            && CheckTimeToKill(gameObject)
-            && CheckResistance(gameObject);
+            && CheckTimeToKill(gameObject);
     }
 
     private readonly bool CheckStatus(GameObject gameObject, bool skipStatusProvideCheck)
@@ -180,33 +179,11 @@ public struct ActionTargetInfo(IBaseAction action)
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusProvide)) return false;
         }
 
-        return true;
-    }
-
-    private readonly bool CheckResistance(GameObject gameObject)
-    {
-        if (action.Info.AttackType == AttackType.Magic)
+        if (action.Setting.TargetStatusPenalty != null)
         {
-            if (gameObject.HasStatus(false, StatusHelper.MagicResistance))
-            {
-                return false;
-            }
+            if (!gameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
+                action.Setting.StatusFromSelf, action.Setting.TargetStatusPenalty)) return false;
         }
-        else if(action.Info.Aspect != Aspect.Piercing) // Physic
-        {
-            if (gameObject.HasStatus(false, StatusHelper.PhysicResistancec))
-            {
-                return false;
-            }
-        }
-        if (Range >= 20) // Range
-        {
-            if (gameObject.HasStatus(false, StatusID.RangedResistance, StatusID.EnergyField))
-            {
-                return false;
-            }
-        }
-
         return true;
     }
 

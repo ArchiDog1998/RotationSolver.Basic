@@ -4,24 +4,6 @@ namespace RotationSolver.Basic.Rotations;
 
 partial class CustomRotation
 {
-    internal static void LoadActionSetting(ref IBaseAction action)
-    {
-        var a = action.Action;
-        if (a.CanTargetFriendly || a.CanTargetParty)
-        {
-            action.Setting.IsFriendly = true;
-        }
-        else if (a.CanTargetHostile)
-        {
-            action.Setting.IsFriendly = false;
-        }
-        else
-        {
-            action.Setting.IsFriendly = action.TargetInfo.EffectRange > 5;
-        }
-        //TODO: better target type check. (NoNeed?)
-    }
-
     #region Role Actions
     static partial void ModifyTrueNorthPvE(ref ActionSetting setting)
     {

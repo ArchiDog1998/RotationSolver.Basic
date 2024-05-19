@@ -3,239 +3,239 @@
 #nullable enable
 namespace RotationSolver.Basic.Data;
 /// <summary> The OpCode </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.0")]
+[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
 public enum OpCode : ushort
 {
     /// <summary/>
     None = 0,
-    /// <summary> Actor Control Target </summary>
-    [global::System.ComponentModel.Description("Actor Control Target")]
-    ActorControlTarget = 110,
-    /// <summary> Airship Status </summary>
-    [global::System.ComponentModel.Description("Airship Status")]
-    AirshipStatus = 960,
-    /// <summary> Airship Exploration Result </summary>
-    [global::System.ComponentModel.Description("Airship Exploration Result")]
-    AirshipExplorationResult = 432,
-    /// <summary> Actor Set Pos </summary>
-    [global::System.ComponentModel.Description("Actor Set Pos")]
-    ActorSetPos = 401,
-    /// <summary> Actor Control </summary>
-    [global::System.ComponentModel.Description("Actor Control")]
-    ActorControl = 819,
-    /// <summary> Actor Control Self </summary>
-    [global::System.ComponentModel.Description("Actor Control Self")]
-    ActorControlSelf = 273,
     /// <summary> Actor Gauge </summary>
     [global::System.ComponentModel.Description("Actor Gauge")]
-    ActorGauge = 851,
+    ActorGauge = 947,
+    /// <summary> Actor Control Target </summary>
+    [global::System.ComponentModel.Description("Actor Control Target")]
+    ActorControlTarget = 812,
+    /// <summary> Actor Set Pos </summary>
+    [global::System.ComponentModel.Description("Actor Set Pos")]
+    ActorSetPos = 669,
+    /// <summary> Airship Status </summary>
+    [global::System.ComponentModel.Description("Airship Status")]
+    AirshipStatus = 657,
+    /// <summary> Actor Control Self </summary>
+    [global::System.ComponentModel.Description("Actor Control Self")]
+    ActorControlSelf = 605,
     /// <summary> Airship Status List </summary>
     [global::System.ComponentModel.Description("Airship Status List")]
-    AirshipStatusList = 852,
+    AirshipStatusList = 571,
+    /// <summary> Airship Exploration Result </summary>
+    [global::System.ComponentModel.Description("Airship Exploration Result")]
+    AirshipExplorationResult = 445,
     /// <summary> Actor Cast </summary>
     [global::System.ComponentModel.Description("Actor Cast")]
-    ActorCast = 913,
-    /// <summary> Airship Timers </summary>
-    [global::System.ComponentModel.Description("Airship Timers")]
-    AirshipTimers = 634,
+    ActorCast = 443,
+    /// <summary> Actor Control </summary>
+    [global::System.ComponentModel.Description("Actor Control")]
+    ActorControl = 328,
     /// <summary> Actor Move </summary>
     [global::System.ComponentModel.Description("Actor Move")]
-    ActorMove = 949,
-    /// <summary> CFNotify </summary>
-    [global::System.ComponentModel.Description("CFNotify")]
-    CFNotify = 549,
-    /// <summary> Currency Crystal Info </summary>
-    [global::System.ComponentModel.Description("Currency Crystal Info")]
-    CurrencyCrystalInfo = 117,
+    ActorMove = 284,
+    /// <summary> Airship Timers </summary>
+    [global::System.ComponentModel.Description("Airship Timers")]
+    AirshipTimers = 291,
     /// <summary> Container Info </summary>
     [global::System.ComponentModel.Description("Container Info")]
-    ContainerInfo = 501,
+    ContainerInfo = 105,
+    /// <summary> Currency Crystal Info </summary>
+    [global::System.ComponentModel.Description("Currency Crystal Info")]
+    CurrencyCrystalInfo = 734,
+    /// <summary> CFNotify </summary>
+    [global::System.ComponentModel.Description("CFNotify")]
+    CFNotify = 633,
     /// <summary> Desynth Result </summary>
     [global::System.ComponentModel.Description("Desynth Result")]
-    DesynthResult = 583,
-    /// <summary> Examine Search Info </summary>
-    [global::System.ComponentModel.Description("Examine Search Info")]
-    ExamineSearchInfo = 869,
-    /// <summary> Event Finish </summary>
-    [global::System.ComponentModel.Description("Event Finish")]
-    EventFinish = 561,
-    /// <summary> Event Play 128 </summary>
-    [global::System.ComponentModel.Description("Event Play 128")]
-    EventPlay128 = 694,
-    /// <summary> Examine </summary>
-    [global::System.ComponentModel.Description("Examine")]
-    Examine = 703,
-    /// <summary> Event Play 255 </summary>
-    [global::System.ComponentModel.Description("Event Play 255")]
-    EventPlay255 = 731,
-    /// <summary> Effect </summary>
-    [global::System.ComponentModel.Description("Effect")]
-    Effect = 458,
-    /// <summary> Event Play 16 </summary>
-    [global::System.ComponentModel.Description("Event Play 16")]
-    EventPlay16 = 128,
-    /// <summary> Effect Result </summary>
-    [global::System.ComponentModel.Description("Effect Result")]
-    EffectResult = 397,
-    /// <summary> Event Play 4 </summary>
-    [global::System.ComponentModel.Description("Event Play 4")]
-    EventPlay4 = 791,
-    /// <summary> Event Start </summary>
-    [global::System.ComponentModel.Description("Event Start")]
-    EventStart = 146,
+    DesynthResult = 127,
     /// <summary> Event Play 32 </summary>
     [global::System.ComponentModel.Description("Event Play 32")]
-    EventPlay32 = 312,
-    /// <summary> Event Play 64 </summary>
-    [global::System.ComponentModel.Description("Event Play 64")]
-    EventPlay64 = 170,
-    /// <summary> Event Play </summary>
-    [global::System.ComponentModel.Description("Event Play")]
-    EventPlay = 298,
-    /// <summary> Environment Control </summary>
-    [global::System.ComponentModel.Description("Environment Control")]
-    EnvironmentControl = 280,
+    EventPlay32 = 719,
+    /// <summary> Event Play 4 </summary>
+    [global::System.ComponentModel.Description("Event Play 4")]
+    EventPlay4 = 208,
     /// <summary> Effect Result Basic </summary>
     [global::System.ComponentModel.Description("Effect Result Basic")]
-    EffectResultBasic = 378,
+    EffectResultBasic = 570,
     /// <summary> Event Play 8 </summary>
     [global::System.ComponentModel.Description("Event Play 8")]
-    EventPlay8 = 826,
+    EventPlay8 = 555,
+    /// <summary> Event Play 64 </summary>
+    [global::System.ComponentModel.Description("Event Play 64")]
+    EventPlay64 = 468,
+    /// <summary> Event Play 16 </summary>
+    [global::System.ComponentModel.Description("Event Play 16")]
+    EventPlay16 = 210,
+    /// <summary> Environment Control </summary>
+    [global::System.ComponentModel.Description("Environment Control")]
+    EnvironmentControl = 764,
+    /// <summary> Examine </summary>
+    [global::System.ComponentModel.Description("Examine")]
+    Examine = 704,
+    /// <summary> Event Finish </summary>
+    [global::System.ComponentModel.Description("Event Finish")]
+    EventFinish = 825,
+    /// <summary> Effect </summary>
+    [global::System.ComponentModel.Description("Effect")]
+    Effect = 893,
+    /// <summary> Event Play </summary>
+    [global::System.ComponentModel.Description("Event Play")]
+    EventPlay = 341,
+    /// <summary> Examine Search Info </summary>
+    [global::System.ComponentModel.Description("Examine Search Info")]
+    ExamineSearchInfo = 330,
+    /// <summary> Event Play 128 </summary>
+    [global::System.ComponentModel.Description("Event Play 128")]
+    EventPlay128 = 927,
+    /// <summary> Event Start </summary>
+    [global::System.ComponentModel.Description("Event Start")]
+    EventStart = 326,
+    /// <summary> Event Play 255 </summary>
+    [global::System.ComponentModel.Description("Event Play 255")]
+    EventPlay255 = 115,
+    /// <summary> Effect Result </summary>
+    [global::System.ComponentModel.Description("Effect Result")]
+    EffectResult = 822,
     /// <summary> Free Company Dialog </summary>
     [global::System.ComponentModel.Description("Free Company Dialog")]
-    FreeCompanyDialog = 686,
+    FreeCompanyDialog = 671,
     /// <summary> Free Company Info </summary>
     [global::System.ComponentModel.Description("Free Company Info")]
-    FreeCompanyInfo = 154,
-    /// <summary> Item Market Board Info </summary>
-    [global::System.ComponentModel.Description("Item Market Board Info")]
-    ItemMarketBoardInfo = 359,
-    /// <summary> Inventory Action Ack </summary>
-    [global::System.ComponentModel.Description("Inventory Action Ack")]
-    InventoryActionAck = 173,
+    FreeCompanyInfo = 725,
     /// <summary> Item Info </summary>
     [global::System.ComponentModel.Description("Item Info")]
-    ItemInfo = 836,
-    /// <summary> Inventory Transaction </summary>
-    [global::System.ComponentModel.Description("Inventory Transaction")]
-    InventoryTransaction = 513,
-    /// <summary> Island Workshop Supply Demand </summary>
-    [global::System.ComponentModel.Description("Island Workshop Supply Demand")]
-    IslandWorkshopSupplyDemand = 790,
-    /// <summary> Inventory Transaction Finish </summary>
-    [global::System.ComponentModel.Description("Inventory Transaction Finish")]
-    InventoryTransactionFinish = 180,
+    ItemInfo = 752,
     /// <summary> Init Zone </summary>
     [global::System.ComponentModel.Description("Init Zone")]
-    InitZone = 795,
+    InitZone = 721,
+    /// <summary> Inventory Transaction </summary>
+    [global::System.ComponentModel.Description("Inventory Transaction")]
+    InventoryTransaction = 701,
+    /// <summary> Inventory Transaction Finish </summary>
+    [global::System.ComponentModel.Description("Inventory Transaction Finish")]
+    InventoryTransactionFinish = 156,
+    /// <summary> Island Workshop Supply Demand </summary>
+    [global::System.ComponentModel.Description("Island Workshop Supply Demand")]
+    IslandWorkshopSupplyDemand = 316,
+    /// <summary> Inventory Action Ack </summary>
+    [global::System.ComponentModel.Description("Inventory Action Ack")]
+    InventoryActionAck = 221,
+    /// <summary> Item Market Board Info </summary>
+    [global::System.ComponentModel.Description("Item Market Board Info")]
+    ItemMarketBoardInfo = 444,
     /// <summary> Logout </summary>
     [global::System.ComponentModel.Description("Logout")]
-    Logout = 668,
-    /// <summary> Market Board Search Result </summary>
-    [global::System.ComponentModel.Description("Market Board Search Result")]
-    MarketBoardSearchResult = 762,
+    Logout = 888,
     /// <summary> Market Board Item Listing Count </summary>
     [global::System.ComponentModel.Description("Market Board Item Listing Count")]
-    MarketBoardItemListingCount = 749,
-    /// <summary> Market Board Item Listing </summary>
-    [global::System.ComponentModel.Description("Market Board Item Listing")]
-    MarketBoardItemListing = 997,
+    MarketBoardItemListingCount = 646,
     /// <summary> Market Board Purchase </summary>
     [global::System.ComponentModel.Description("Market Board Purchase")]
-    MarketBoardPurchase = 529,
+    MarketBoardPurchase = 323,
+    /// <summary> Market Board Search Result </summary>
+    [global::System.ComponentModel.Description("Market Board Search Result")]
+    MarketBoardSearchResult = 353,
+    /// <summary> Market Board Item Listing </summary>
+    [global::System.ComponentModel.Description("Market Board Item Listing")]
+    MarketBoardItemListing = 995,
     /// <summary> Market Board Item Listing History </summary>
     [global::System.ComponentModel.Description("Market Board Item Listing History")]
-    MarketBoardItemListingHistory = 265,
+    MarketBoardItemListingHistory = 553,
     /// <summary> Npc Spawn </summary>
     [global::System.ComponentModel.Description("Npc Spawn")]
-    NpcSpawn = 701,
+    NpcSpawn = 167,
     /// <summary> Object Spawn </summary>
     [global::System.ComponentModel.Description("Object Spawn")]
-    ObjectSpawn = 788,
+    ObjectSpawn = 952,
     /// <summary> Place Field Marker </summary>
     [global::System.ComponentModel.Description("Place Field Marker")]
-    PlaceFieldMarker = 671,
-    /// <summary> Prepare Zoning </summary>
-    [global::System.ComponentModel.Description("Prepare Zoning")]
-    PrepareZoning = 935,
-    /// <summary> Player Spawn </summary>
-    [global::System.ComponentModel.Description("Player Spawn")]
-    PlayerSpawn = 246,
+    PlaceFieldMarker = 740,
     /// <summary> Playtime </summary>
     [global::System.ComponentModel.Description("Playtime")]
-    Playtime = 797,
-    /// <summary> Player Stats </summary>
-    [global::System.ComponentModel.Description("Player Stats")]
-    PlayerStats = 370,
-    /// <summary> Player Setup </summary>
-    [global::System.ComponentModel.Description("Player Setup")]
-    PlayerSetup = 534,
+    Playtime = 990,
     /// <summary> Place Field Marker Preset </summary>
     [global::System.ComponentModel.Description("Place Field Marker Preset")]
-    PlaceFieldMarkerPreset = 503,
-    /// <summary> Retainer Information </summary>
-    [global::System.ComponentModel.Description("Retainer Information")]
-    RetainerInformation = 219,
+    PlaceFieldMarkerPreset = 778,
+    /// <summary> Player Stats </summary>
+    [global::System.ComponentModel.Description("Player Stats")]
+    PlayerStats = 847,
+    /// <summary> Player Setup </summary>
+    [global::System.ComponentModel.Description("Player Setup")]
+    PlayerSetup = 863,
+    /// <summary> Player Spawn </summary>
+    [global::System.ComponentModel.Description("Player Spawn")]
+    PlayerSpawn = 924,
+    /// <summary> Prepare Zoning </summary>
+    [global::System.ComponentModel.Description("Prepare Zoning")]
+    PrepareZoning = 292,
     /// <summary> Result Dialog </summary>
     [global::System.ComponentModel.Description("Result Dialog")]
-    ResultDialog = 480,
+    ResultDialog = 866,
+    /// <summary> Retainer Information </summary>
+    [global::System.ComponentModel.Description("Retainer Information")]
+    RetainerInformation = 237,
     /// <summary> Submarine Exploration Result </summary>
     [global::System.ComponentModel.Description("Submarine Exploration Result")]
-    SubmarineExplorationResult = 793,
+    SubmarineExplorationResult = 682,
     /// <summary> System Log Message </summary>
     [global::System.ComponentModel.Description("System Log Message")]
-    SystemLogMessage = 487,
+    SystemLogMessage = 937,
     /// <summary> Status Effect List </summary>
     [global::System.ComponentModel.Description("Status Effect List")]
-    StatusEffectList = 241,
+    StatusEffectList = 899,
     /// <summary> Submarine Progression Status </summary>
     [global::System.ComponentModel.Description("Submarine Progression Status")]
-    SubmarineProgressionStatus = 441,
+    SubmarineProgressionStatus = 733,
     /// <summary> Status Effect List 2 </summary>
     [global::System.ComponentModel.Description("Status Effect List 2")]
-    StatusEffectList2 = 559,
-    /// <summary> Status Effect List 3 </summary>
-    [global::System.ComponentModel.Description("Status Effect List 3")]
-    StatusEffectList3 = 137,
-    /// <summary> Submarine Status List </summary>
-    [global::System.ComponentModel.Description("Submarine Status List")]
-    SubmarineStatusList = 580,
+    StatusEffectList2 = 873,
     /// <summary> Submarine Timers </summary>
     [global::System.ComponentModel.Description("Submarine Timers")]
-    SubmarineTimers = 524,
-    /// <summary> Update Hp Mp Tp </summary>
-    [global::System.ComponentModel.Description("Update Hp Mp Tp")]
-    UpdateHpMpTp = 337,
-    /// <summary> Update Search Info </summary>
-    [global::System.ComponentModel.Description("Update Search Info")]
-    UpdateSearchInfo = 276,
+    SubmarineTimers = 389,
+    /// <summary> Submarine Status List </summary>
+    [global::System.ComponentModel.Description("Submarine Status List")]
+    SubmarineStatusList = 994,
+    /// <summary> Status Effect List 3 </summary>
+    [global::System.ComponentModel.Description("Status Effect List 3")]
+    StatusEffectList3 = 355,
     /// <summary> Update Inventory Slot </summary>
     [global::System.ComponentModel.Description("Update Inventory Slot")]
-    UpdateInventorySlot = 862,
+    UpdateInventorySlot = 845,
     /// <summary> Update Class Info </summary>
     [global::System.ComponentModel.Description("Update Class Info")]
-    UpdateClassInfo = 210,
+    UpdateClassInfo = 370,
+    /// <summary> Update Hp Mp Tp </summary>
+    [global::System.ComponentModel.Description("Update Hp Mp Tp")]
+    UpdateHpMpTp = 125,
+    /// <summary> Update Search Info </summary>
+    [global::System.ComponentModel.Description("Update Search Info")]
+    UpdateSearchInfo = 207,
     /// <summary> Weather Change </summary>
     [global::System.ComponentModel.Description("Weather Change")]
-    WeatherChange = 509,
+    WeatherChange = 541,
     /// <summary> Client Trigger </summary>
     [global::System.ComponentModel.Description("Client Trigger")]
-    ClientTrigger = 129,
+    ClientTrigger = 860,
     /// <summary> Inventory Modify Handler </summary>
     [global::System.ComponentModel.Description("Inventory Modify Handler")]
-    InventoryModifyHandler = 301,
+    InventoryModifyHandler = 574,
     /// <summary> Market Board Purchase Handler </summary>
     [global::System.ComponentModel.Description("Market Board Purchase Handler")]
-    MarketBoardPurchaseHandler = 460,
+    MarketBoardPurchaseHandler = 802,
     /// <summary> Set Search Info Handler </summary>
     [global::System.ComponentModel.Description("Set Search Info Handler")]
-    SetSearchInfoHandler = 181,
+    SetSearchInfoHandler = 416,
     /// <summary> Update Position Instance </summary>
     [global::System.ComponentModel.Description("Update Position Instance")]
-    UpdatePositionInstance = 217,
+    UpdatePositionInstance = 551,
     /// <summary> Update Position Handler </summary>
     [global::System.ComponentModel.Description("Update Position Handler")]
-    UpdatePositionHandler = 538,
+    UpdatePositionHandler = 598,
     /// <summary> Lobby Error </summary>
     [global::System.ComponentModel.Description("Lobby Error")]
     LobbyError = 2,
