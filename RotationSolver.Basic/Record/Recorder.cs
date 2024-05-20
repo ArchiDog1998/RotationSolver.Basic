@@ -46,9 +46,9 @@ internal static class Recorder
     private static GameObject[] _lastObjs = [];
     private static void UpdateObjectNewData()
     {
-        var objs = Svc.Objects.Where(obj => obj is not PlayerCharacter).Except(_lastObjs);
+        var objs = Svc.Objects.Where(obj => obj is not PlayerCharacter);
 
-        foreach (var obj in objs)
+        foreach (var obj in objs.Except(_lastObjs))
         {
             Enqueue(new ObjectNewData(obj));
         }

@@ -1,4 +1,7 @@
 ﻿using ECommons.DalamudServices;
+using RotationSolver.Basic.Configuration.Timeline;
+using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration;
@@ -21,6 +24,93 @@ internal class OtherConfiguration
     public static HashSet<uint> NoCastingStatus = [];
 
     public static RotationSolverRecord RotationSolverRecord = new();
+
+    #region Territory Config
+    private static Dictionary<uint, TerritoryConfig> _territoryConfigs = [];
+    private static readonly List<uint> _downloadingList = [];
+    private static readonly TerritoryConfig Empty = new ();
+    public static TerritoryConfig TerritoryConfig
+    {
+        get
+        {
+            if (Svc.ClientState == null)
+            {
+                if (_territoryConfigs.TryGetValue(0, out var v)) return v;
+                else return _territoryConfigs[0] = new();
+            }
+
+            var id = Svc.ClientState.TerritoryType;
+
+            if (_territoryConfigs.TryGetValue(id, out var value)) return value;
+
+            LoadConfig(id);
+            return Empty;
+        }
+    }
+
+    public static TerritoryConfig GetTerritoryConfigById(uint id)
+    {
+        if (_territoryConfigs.TryGetValue(id, out var value)) return value;
+
+        LoadConfig(id);
+        return Empty;
+    }
+
+    public static void SetTerritoryConfigById(uint id, string text)
+    {
+        _territoryConfigs[id] = FromTxt(text);
+    }
+
+    private static void LoadConfig(uint id)
+    {
+        var path = GetFilePath("TerritoryConfigs\\" + id);
+        if (File.Exists(path))
+        {
+            try
+            {
+                var str = File.ReadAllText(path);
+                _territoryConfigs[id] = FromTxt(str);
+            }
+            catch
+            {
+                _territoryConfigs[id] = new();
+            }
+        }
+
+        if (_downloadingList.Contains(id)) return;
+        _downloadingList.Add(id);
+
+        Task.Run(() =>
+        {
+            DownloadTerritoryPrivate(id);
+        });
+    }
+
+    private static TerritoryConfig FromTxt(string str)
+    {
+        return JsonConvert.DeserializeObject<TerritoryConfig>(str,
+                    new BaseTimelineItemConverter(), new BaseDrawingGetterConverter(), new ITimelineConditionConverter())!;
+    }
+
+    private static void DownloadTerritoryPrivate(uint id)
+    {
+        try
+        {
+            using var client = new HttpClient();
+            var str = client.GetStringAsync($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/TerritoryConfigs/{id}.json").Result;
+
+            _territoryConfigs[id] = FromTxt(str);
+        }
+        catch (Exception ex)
+        {
+#if DEBUG
+            Svc.Log.Error(ex, $"Failed to download the timeline {id}.");
+#endif
+            return;
+        }
+        _downloadingList.Remove(id);
+    }
+    #endregion
 
     public static void Init()
     {
@@ -59,6 +149,18 @@ internal class OtherConfiguration
             await SaveNoProvokeNames();
             await SaveNoCastingStatus();
             await SaveHostileCastingKnockback();
+            await SaveTerritoryConfigs();
+        });
+    }
+
+    public static Task SaveTerritoryConfigs()
+    {
+        return Task.Run(() =>
+        {
+            foreach (var pair in _territoryConfigs)
+            {
+                SavePath(pair.Value, GetFilePath("TerritoryConfigs\\" + pair.Key));
+            }
         });
     }
 

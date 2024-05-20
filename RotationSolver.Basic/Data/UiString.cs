@@ -277,6 +277,9 @@ internal enum UiString
     [Description("Actions")]
     ConfigWindow_Timeline_Actions,
 
+    [Description("Job Actions")]
+    ConfigWindow_Timeline_JobActions,
+
     [Description("OOOps! RS clicked the wrong action ({0})!")]
     ClickingMistakeMessage,
 

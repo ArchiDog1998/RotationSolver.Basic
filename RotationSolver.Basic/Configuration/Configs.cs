@@ -779,11 +779,8 @@ internal partial class Configs : IPluginConfiguration
     [JobChoiceConfig]
     private readonly Dictionary<string, string> _rotationConfigurations = [];
 
-    [JobConfig]
-    private readonly Dictionary<uint, Dictionary<float, List<BaseTimelineItem>>> _timeline = [];
-
     [JsonProperty]
-    private Dictionary<uint, string> _dutyRotationChoice { get; set; } = [];
+    private Dictionary<uint, string> _dutyRotationChoice = [];
 
     [JsonIgnore]
     public string DutyRotationChoice
@@ -831,40 +828,40 @@ internal partial class Configs : IPluginConfiguration
 #if DEBUG
         Svc.Log.Information("Saved configurations.");
 
-        Dictionary<uint, Dictionary<float, List<BaseTimelineItem>>> dict = [];
-        foreach((var job, var timelineSet) in this._timelineDict)
-        {
-            foreach ((var id, var timeline) in timelineSet)
-            {
-                var refineTimeline = timeline.Select(i => (i.Key, i.Value.Where(j => j is DrawingTimeline).ToList())).ToDictionary();
+        //Dictionary<uint, Dictionary<float, List<BaseTimelineItem>>> dict = [];
+        //foreach((var job, var timelineSet) in this._timelineDict)
+        //{
+        //    foreach ((var id, var timeline) in timelineSet)
+        //    {
+        //        var refineTimeline = timeline.Select(i => (i.Key, i.Value.Where(j => j is DrawingTimeline).ToList())).ToDictionary();
 
-                var count = refineTimeline.Sum(i => i.Value.Count);
+        //        var count = refineTimeline.Sum(i => i.Value.Count);
 
-                if (count == 0) continue;
+        //        if (count == 0) continue;
 
-                if (dict.TryGetValue(id, out var lastTimeline))
-                {
-                    if (lastTimeline.Sum(i => i.Value.Count) >= count)
-                    {
-                        continue;
-                    }
-                }
-                dict[id] = refineTimeline;
-            }
-        }
+        //        if (dict.TryGetValue(id, out var lastTimeline))
+        //        {
+        //            if (lastTimeline.Sum(i => i.Value.Count) >= count)
+        //            {
+        //                continue;
+        //            }
+        //        }
+        //        dict[id] = refineTimeline;
+        //    }
+        //}
         
-        foreach ((var id, var timeline) in dict)
-        {
-            var dirInfo = Svc.PluginInterface.AssemblyLocation.Directory;
-            dirInfo = dirInfo?.Parent!.Parent!.Parent!.Parent!;
-            var dir = dirInfo.FullName + @"\Resources\Timelines";
-            if (!Directory.Exists(dir))
-            {
-                Svc.Log.Error("Failed to save the resources: " + dir);
-                continue;
-            }
-            File.WriteAllText(dir + @$"\{id}.json", JsonConvert.SerializeObject(timeline, Formatting.Indented));
-        }
+        //foreach ((var id, var timeline) in dict)
+        //{
+        //    var dirInfo = Svc.PluginInterface.AssemblyLocation.Directory;
+        //    dirInfo = dirInfo?.Parent!.Parent!.Parent!.Parent!;
+        //    var dir = dirInfo.FullName + @"\Resources\Timelines";
+        //    if (!Directory.Exists(dir))
+        //    {
+        //        Svc.Log.Error("Failed to save the resources: " + dir);
+        //        continue;
+        //    }
+        //    File.WriteAllText(dir + @$"\{id}.json", JsonConvert.SerializeObject(timeline, Formatting.Indented));
+        //}
 #endif
         File.WriteAllText(Svc.PluginInterface.ConfigFile.FullName,
             JsonConvert.SerializeObject(this, Formatting.Indented));
