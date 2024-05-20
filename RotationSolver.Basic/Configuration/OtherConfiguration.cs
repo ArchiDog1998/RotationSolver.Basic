@@ -103,6 +103,7 @@ internal class OtherConfiguration
         }
         catch (Exception ex)
         {
+            _territoryConfigs[id] = new();
 #if DEBUG
             Svc.Log.Error(ex, $"Failed to download the timeline {id}.");
 #endif
@@ -233,6 +234,9 @@ internal class OtherConfiguration
         if (!Directory.Exists(dir))
         {
             Svc.Log.Error("Failed to save the resources: " + dir);
+        }
+        else
+        {
             directory = dir;
         }
 #endif
