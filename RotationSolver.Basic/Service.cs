@@ -10,6 +10,7 @@ using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Record;
 using RotationSolver.Basic.Configuration.Drawing;
 using RotationSolver.Basic.Configuration.TerritoryAction;
+using RotationSolver.Basic.Configuration.Trigger;
 
 namespace RotationSolver.Basic;
 
@@ -73,7 +74,8 @@ internal class Service : IDisposable
             Config = JsonConvert.DeserializeObject<Configs>(
                 File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName),
                 new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
-                new ITimelineConditionConverter(), new BaseTimelineItemConverter())
+                new ITimelineConditionConverter(), new BaseTimelineItemConverter(),
+                new BaseTriggerItemConverter())
                 ?? new Configs();
         }
         catch (Exception ex)

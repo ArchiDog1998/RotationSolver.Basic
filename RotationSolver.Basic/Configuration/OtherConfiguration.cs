@@ -3,6 +3,7 @@ using RotationSolver.Basic.Configuration.Drawing;
 using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+using RotationSolver.Basic.Configuration.Trigger;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration;
@@ -91,7 +92,8 @@ internal class OtherConfiguration
     {
         return JsonConvert.DeserializeObject<TerritoryConfig>(str,
                     new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
-                    new ITimelineConditionConverter(), new BaseTimelineItemConverter())!;
+                    new ITimelineConditionConverter(), new BaseTimelineItemConverter(),
+                    new BaseTriggerItemConverter())!;
     }
 
     private static void DownloadTerritoryPrivate(uint id)

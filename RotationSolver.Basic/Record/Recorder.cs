@@ -1,17 +1,19 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
+using ECommons.Schedulers;
+using RotationSolver.Basic.Configuration;
 
 namespace RotationSolver.Basic.Record;
 
 internal static class Recorder
 {
-    public static List<(DateTime, object)> Data { get; } = new(64);
-    public static T[] GetData<T>(Vector2 duration) where T : struct
+    public static List<(DateTime, IRecordData)> Data { get; } = new(64);
+    public static T[] GetData<T>(Vector2 duration) where T : struct, IRecordData
     {
         return GetData<T>(duration.X, duration.Y);
     }
-    public static T[] GetData<T>(double timeStart, double timeEnd) where T : struct
+    public static T[] GetData<T>(double timeStart, double timeEnd) where T : struct, IRecordData
     {
         var now = DateTime.Now;
 
@@ -69,13 +71,23 @@ internal static class Recorder
         _lastCastingObjs = [.. castingObjects];
     }
 
-    public static void Enqueue<T>(T data) where T : struct
+    public static void Enqueue<T>(T data) where T : struct, IRecordData
     {
         if (Data.Count >= Service.Config.WatcherCount)
         {
             Data.RemoveAt(0);
         }
-        Data.Add((DateTime.Now,data));
+
+        Data.Add((DateTime.Now, data));
+
+        if (OtherConfiguration.TerritoryConfig.Trigger.TryGetValue(data.ToTriggerData(), out var items))
+        {
+            foreach (var item in items)
+            {
+                _ = new TickScheduler(item.TerritoryAction.Enable, (long)(item.StartTime * 1000));
+                _ = new TickScheduler(item.TerritoryAction.Disable, (long)((item.StartTime + item.Duration) * 1000));
+            }
+        }
 
         try
         {

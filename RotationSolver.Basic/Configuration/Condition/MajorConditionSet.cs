@@ -107,7 +107,13 @@ internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
 
     public void Save(string folder)
     {
-        if (!Directory.Exists(folder)) return;
+        if (!Directory.Exists(folder))
+        {
+#if DEBUG
+            Svc.Log.Warning("Failed to find the folder "  + folder + ". So it failed to save the conditions");
+#endif
+            return;
+        }
         var path = Path.Combine(folder, Name + ".json");
 
         var str = JsonConvert.SerializeObject(this, Formatting.Indented);

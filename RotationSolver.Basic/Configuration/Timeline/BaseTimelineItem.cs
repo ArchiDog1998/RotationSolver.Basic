@@ -12,6 +12,8 @@ internal abstract class BaseTimelineItem
     internal abstract ITerritoryAction TerritoryAction { get;}
 
     public float Time { get; set; } = 3;
+    public float Duration { get; set; } = 3;
+
     private bool _enable = false;
     internal bool Enable
     {
@@ -38,13 +40,13 @@ internal abstract class BaseTimelineItem
             }
         }
     }
+
     public virtual bool InPeriod(TimelineItem item)
     {
         var time = item.Time - DataCenter.RaidTimeRaw;
 
-        if (time < 0) return false;
-
-        if (time > Time || Time - time > 3) return false;
+        if (time > Time) return false;
+        if (time < Time - Duration) return false;
 
         if (!Condition.IsTrue(item)) return false;
 

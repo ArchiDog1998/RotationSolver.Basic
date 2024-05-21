@@ -3,8 +3,6 @@
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class DrawingAction : ITerritoryAction
 {
-    public float Duration { get; set; } = 6;
-
     public List<BaseDrawingGetter> DrawingGetters { get; set; } = [];
 
     private IDisposable[] _drawings = [];

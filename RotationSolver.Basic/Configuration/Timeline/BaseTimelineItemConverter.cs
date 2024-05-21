@@ -15,9 +15,9 @@ internal class BaseTimelineItemConverter : JsonCreationConverter<BaseTimelineIte
         {
             return new StateTimelineItem();
         }
-        else if (FieldExists(nameof(DrawingTimeline.DrawingAction), jObject))
+        else if (FieldExists(nameof(DrawingTimelineItem.DrawingAction), jObject))
         {
-            return new DrawingTimeline();
+            return new DrawingTimelineItem();
         }
         else if (FieldExists(nameof(MacroTimelineItem.MacroAction), jObject))
         {

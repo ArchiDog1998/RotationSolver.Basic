@@ -95,7 +95,4 @@
   <ItemGroup>
     <PackageReference Include="Octokit" Version="11.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\Trigger\" />
-  </ItemGroup>
 </Project>
