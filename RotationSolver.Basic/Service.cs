@@ -6,9 +6,10 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
 using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
-using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Record;
+using RotationSolver.Basic.Configuration.Drawing;
+using RotationSolver.Basic.Configuration.TerritoryAction;
 
 namespace RotationSolver.Basic;
 
@@ -71,7 +72,8 @@ internal class Service : IDisposable
         {
             Config = JsonConvert.DeserializeObject<Configs>(
                 File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName),
-                new BaseTimelineItemConverter(), new BaseDrawingGetterConverter(), new ITimelineConditionConverter())
+                new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
+                new ITimelineConditionConverter(), new BaseTimelineItemConverter())
                 ?? new Configs();
         }
         catch (Exception ex)

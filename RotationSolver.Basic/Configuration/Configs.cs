@@ -419,11 +419,11 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Shows the timeline assigned drawings in game.",
     (int)UiString.TimelineRaidTime)]
-    public ConditionBoolean ShowTimelineDrawing { get; private set; } = new(true, nameof(ShowTimelineDrawing));
+    public ConditionBoolean ShowDrawing { get; private set; } = new(true, nameof(ShowDrawing));
 
     [UI("Enables auto movement using timeline assignments.",
         (int)UiString.TimelineRaidTime)]
-    public ConditionBoolean EnableTimelineMovement { get; private set; } = new(true, nameof(EnableTimelineMovement));
+    public ConditionBoolean EnableMovement { get; private set; } = new(true, nameof(EnableMovement));
 
     [UI("Skips ping checking. Please use it along with NoClippy",
         (int)UiString.ConfigWindow_Basic_Timer, Section = 2)]

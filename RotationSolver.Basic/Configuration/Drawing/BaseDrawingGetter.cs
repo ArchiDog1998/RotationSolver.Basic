@@ -1,4 +1,5 @@
-﻿namespace RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+﻿namespace RotationSolver.Basic.Configuration.Drawing; 
+
 internal abstract class BaseDrawingGetter
 {
     public bool Enable { get; set; } = true;

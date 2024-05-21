@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using RotationSolver.Basic.Configuration.Condition;
 
-namespace RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+namespace RotationSolver.Basic.Configuration.Drawing;
 
 internal class BaseDrawingGetterConverter : JsonCreationConverter<BaseDrawingGetter>
 {

@@ -7,27 +7,27 @@ internal class BaseTimelineItemConverter : JsonCreationConverter<BaseTimelineIte
 {
     protected override BaseTimelineItem? Create(JObject jObject)
     {
-        if (FieldExists(nameof(ActionTimelineItem.ID), jObject))
+        if (FieldExists(nameof(ActionTimelineItem.ActionAction), jObject))
         {
             return new ActionTimelineItem();
         }
-        else if (FieldExists(nameof(StateTimelineItem.State), jObject))
+        else if (FieldExists(nameof(StateTimelineItem.StateAction), jObject))
         {
             return new StateTimelineItem();
         }
-        else if (FieldExists(nameof(DrawingTimeline.Condition), jObject))
+        else if (FieldExists(nameof(DrawingTimeline.DrawingAction), jObject))
         {
             return new DrawingTimeline();
         }
-        else if (FieldExists(nameof(MacroTimelineItem.Macro), jObject))
+        else if (FieldExists(nameof(MacroTimelineItem.MacroAction), jObject))
         {
             return new MacroTimelineItem();
         }
-        else if (FieldExists(nameof(MoveTimelineItem.Points), jObject))
+        else if (FieldExists(nameof(MoveTimelineItem.MoveAction), jObject))
         {
             return new MoveTimelineItem();
         }
-        else if (FieldExists(nameof(PathfindTimelineItem.Destination), jObject))
+        else if (FieldExists(nameof(PathfindTimelineItem.PathfindAction), jObject))
         {
             return new PathfindTimelineItem();
         }

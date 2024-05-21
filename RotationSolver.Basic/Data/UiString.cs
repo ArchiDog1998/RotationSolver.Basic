@@ -745,8 +745,8 @@ internal enum UiString
     [Description("This feature in high-end duties is avaliable only for supporters!")]
     CantUseInHighEnd,
 
-    [Description("The timeline feature is supporters-only feature!")]
-    CantUseTimeline,
+    [Description("The territory action feature is supporters-only feature!")]
+    CantUseTerritoryAction,
 
     [Description("Copied your hash to the clipboard!")]
     CopiedYourHash,

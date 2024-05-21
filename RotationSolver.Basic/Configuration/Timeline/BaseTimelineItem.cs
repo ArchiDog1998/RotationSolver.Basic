@@ -1,4 +1,5 @@
 ﻿using ECommons.DalamudServices;
+using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using XIVConfigUI;
 
@@ -7,6 +8,8 @@ namespace RotationSolver.Basic.Configuration.Timeline;
 internal abstract class BaseTimelineItem
 {
     public TimelineConditionSet Condition { get; set; } = new();
+
+    internal abstract ITerritoryAction TerritoryAction { get;}
 
     public float Time { get; set; } = 3;
     private bool _enable = false;
@@ -22,21 +25,29 @@ internal abstract class BaseTimelineItem
             {
                 if (DownloadHelper.IsSupporter)
                 {
-                    OnEnable();
+                    TerritoryAction.Enable();
                 }
                 else
                 {
-                    Svc.Toasts.ShowError(UiString.CantUseTimeline.Local());
+                    Svc.Toasts.ShowError(UiString.CantUseTerritoryAction.Local());
                 }
             }
             else
             {
-                OnDisable();
+                TerritoryAction.Disable();
             }
         }
     }
-    public abstract bool InPeriod(TimelineItem item);
+    public virtual bool InPeriod(TimelineItem item)
+    {
+        var time = item.Time - DataCenter.RaidTimeRaw;
 
-    internal virtual void OnEnable() { }
-    internal virtual void OnDisable() { }
+        if (time < 0) return false;
+
+        if (time > Time || Time - time > 3) return false;
+
+        if (!Condition.IsTrue(item)) return false;
+
+        return true;
+    }
 }

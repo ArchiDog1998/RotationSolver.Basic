@@ -1,0 +1,24 @@
+﻿using ECommons.DalamudServices;
+
+namespace RotationSolver.Basic.Configuration.TerritoryAction;
+internal class ActionAction : ITerritoryAction
+{
+    public ActionID ID { get; set; } = ActionID.None;
+
+    public void Disable()
+    {
+    }
+
+    public void Enable()
+    {
+        var act = DataCenter.RightNowRotation?.AllBaseActions.FirstOrDefault(a => (ActionID)a.ID == ID);
+
+        if (act == null) return;
+
+        DataCenter.AddCommandAction(act, Service.Config.SpecialDuration);
+
+#if DEBUG
+        Svc.Log.Debug($"Added the action {act} to timeline.");
+#endif   
+    }
+}

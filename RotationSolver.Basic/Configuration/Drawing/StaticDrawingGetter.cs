@@ -2,7 +2,7 @@
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using XIVDrawer.Vfx;
 
-namespace RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+namespace RotationSolver.Basic.Configuration.Drawing;
 
 [Description("Static Drawing")]
 internal class StaticDrawingGetter : BaseDrawingGetter

@@ -1,6 +1,7 @@
 ﻿using XIVDrawer.Element3D;
 
-namespace RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+namespace RotationSolver.Basic.Configuration.Drawing; 
+
 internal class TextDrawing
 {
     public string Text { get; set; } = "";

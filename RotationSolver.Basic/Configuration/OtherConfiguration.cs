@@ -1,7 +1,8 @@
 ﻿using ECommons.DalamudServices;
+using RotationSolver.Basic.Configuration.Drawing;
+using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
-using RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration;
@@ -89,7 +90,8 @@ internal class OtherConfiguration
     private static TerritoryConfig FromTxt(string str)
     {
         return JsonConvert.DeserializeObject<TerritoryConfig>(str,
-                    new BaseTimelineItemConverter(), new BaseDrawingGetterConverter(), new ITimelineConditionConverter())!;
+                    new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
+                    new ITimelineConditionConverter(), new BaseTimelineItemConverter())!;
     }
 
     private static void DownloadTerritoryPrivate(uint id)

@@ -3,9 +3,9 @@ using ECommons.GameFunctions;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using XIVDrawer;
 using XIVDrawer.Vfx;
-using Action = Lumina.Excel.GeneratedSheets.Action;
+using GAction = Lumina.Excel.GeneratedSheets.Action;
 
-namespace RotationSolver.Basic.Configuration.Timeline.TimelineDrawing;
+namespace RotationSolver.Basic.Configuration.Drawing;
 
 [Description("Action Drawing")]
 internal class ActionDrawingGetter : BaseDrawingGetter
@@ -34,7 +34,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
     private IDisposable? GetActionDrawing(GameObject? obj)
     {
         if (ActionID == 0) return null;
-        var action = Svc.Data.GetExcelSheet<Action>()?.GetRow(ActionID);
+        var action = Svc.Data.GetExcelSheet<GAction>()?.GetRow(ActionID);
         if (action == null) return null;
         var omen = action.Omen.Value?.Path?.RawString;
         omen = string.IsNullOrEmpty(omen) ? Path : omen.Omen();
