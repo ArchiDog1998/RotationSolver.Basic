@@ -27,6 +27,10 @@ internal class BaseTimelineItemConverter : JsonCreationConverter<BaseTimelineIte
         {
             return new MoveTimelineItem();
         }
+        else if (FieldExists(nameof(PathfindTimelineItem.Destination), jObject))
+        {
+            return new PathfindTimelineItem();
+        }
         return null;
     }
 }

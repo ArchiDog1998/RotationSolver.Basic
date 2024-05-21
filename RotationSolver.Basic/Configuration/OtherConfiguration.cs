@@ -26,7 +26,7 @@ internal class OtherConfiguration
     public static RotationSolverRecord RotationSolverRecord = new();
 
     #region Territory Config
-    private static Dictionary<uint, TerritoryConfig> _territoryConfigs = [];
+    private static readonly Dictionary<uint, TerritoryConfig> _territoryConfigs = [];
     private static readonly List<uint> _downloadingList = [];
     private static readonly TerritoryConfig Empty = new ();
     public static TerritoryConfig TerritoryConfig
@@ -241,7 +241,13 @@ internal class OtherConfiguration
         }
 #endif
 
-        return directory + $"\\{name}.json";
+        var path = directory + $"\\{name}.json";
+        var d = new FileInfo(path).Directory;
+        if (d != null && !d.Exists)
+        {
+            d.Create();
+        }
+        return path;
     }
 
     private static void Save<T>(T value, string name)
