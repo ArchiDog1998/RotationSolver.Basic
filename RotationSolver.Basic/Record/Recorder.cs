@@ -1,7 +1,6 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using ECommons.DalamudServices;
 using ECommons.Hooks.ActionEffectTypes;
-using ECommons.Schedulers;
 using RotationSolver.Basic.Configuration;
 
 namespace RotationSolver.Basic.Record;
@@ -84,8 +83,7 @@ internal static class Recorder
         {
             foreach (var item in items)
             {
-                _ = new TickScheduler(item.TerritoryAction.Enable, (long)(item.StartTime * 1000));
-                _ = new TickScheduler(item.TerritoryAction.Disable, (long)((item.StartTime + item.Duration) * 1000));
+                item.Invoke();
             }
         }
 

@@ -413,8 +413,7 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean OnlyHealSelfWhenNoHealer { get; private set; } = new(false, nameof(OnlyHealSelfWhenNoHealer));
 
-    [UI("Displays toggle action feedback on chat.",
-        (int)UiString.ConfigWindow_UI_Information)]
+    [UI("Displays toggle action feedback on chat.", (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowToggledActionInChat { get; private set; } = new(true, nameof(ShowToggledActionInChat));
 
     [UI("Shows the timeline assigned drawings in game.",
