@@ -397,15 +397,6 @@ partial class DutyRotation : IDisposable
     }
 
     /// <summary>
-    /// When the target is start casting.
-    /// </summary>
-    /// <param name="data"></param>
-    public virtual void OnStartCasting(in ObjectBeginCastData data)
-    {
-
-    }
-
-    /// <summary>
     /// When a new actor showned.
     /// </summary>
     /// <param name="data"></param>

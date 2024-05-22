@@ -120,10 +120,6 @@ internal static class Recorder
         {
             rotation.OnObjectEffect(objectEffectData);
         }
-        else if (data is ObjectBeginCastData objectBeginCastData)
-        {
-            rotation.OnStartCasting(objectBeginCastData);
-        }
         else if (data is ActionEffectSet actionEffect)
         {
             rotation.OnActionFromEnemy(actionEffect);
