@@ -58,9 +58,22 @@ internal class OtherConfiguration
         return Empty;
     }
 
-    public static void SetTerritoryConfigById(uint id, string text)
+    public static void SetTerritoryConfigById(uint id, string text, bool isTimeline)
     {
-        _territoryConfigs[id] = FromTxt(text);
+        var newConfig = FromTxt(text);
+
+        if (!_territoryConfigs.TryGetValue(id, out var config)) config = new();
+
+        if (isTimeline)
+        {
+            config.JobConfig.Timeline = newConfig.JobConfig.Timeline;
+            config.Config.Timeline = newConfig.Config.Timeline;
+        }
+        else
+        {
+            config.JobConfig.Trigger = newConfig.JobConfig.Trigger;
+            config.Config.Trigger = newConfig.Config.Trigger;
+        }
     }
 
     private static void LoadConfig(uint id)

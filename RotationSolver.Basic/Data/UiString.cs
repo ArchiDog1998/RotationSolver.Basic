@@ -283,6 +283,15 @@ internal enum UiString
     [Description("Log")]
     ConfigWindow_Trigger_Log,
 
+    [Description("Trigger Data")]
+    ConfigWindow_Trigger_TriggerData,
+
+    [Description("Left-click to add the general Trigger Data.\nRight-click to add the job Trigger Data.")]
+    ConfigWindow_Trigger_AddTrggerDataDesc,
+
+    [Description("Is Job Trigger")]
+    ConfigWindow_Trigger_IsJob,
+
     [Description("OOOps! RS clicked the wrong action ({0})!")]
     ClickingMistakeMessage,
 
@@ -732,6 +741,9 @@ internal enum UiString
 
     [Description("Your custom time line about the specific duty.")]
     Item_Timeline,
+
+    [Description("Yout custom trigger about the specific duty.")]
+    Item_Trigger,
 
     [Description("Some features that shouldn't be included in RS but help you.")]
     Item_Extra,

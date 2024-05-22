@@ -5,48 +5,16 @@ using RotationSolver.Basic.Configuration.Trigger;
 namespace RotationSolver.Basic.Record;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-internal static class RecordString
-{
-    public static string ObjectStr(GameObject obj)
-    {
-        return $"{obj.Name} ({obj.DataId})";
-    }
-
-    public static string ActionStr(Lumina.Excel.GeneratedSheets.Action act)
-    {
-        return $"{act.Name} ({act.RowId})";
-    }
-}
-
 public interface IRecordData
 {
     TriggerData ToTriggerData();
 }
 
-public record struct ActionEffectSetData(ActionEffectSet set) : IRecordData
-{
-    public TriggerData ToTriggerData()
-    {
-        return new()
-        {
-            Type = TriggerDataType.ActionEffect,
-            ObjectDataId =set.Source.DataId,
-            PositionOrActionId = set.Action.RowId,
-        };
-    }
-}
 public record struct ObjectBeginCastData(BattleChara Object) : IRecordData
 {
-    public override readonly string ToString()
-    {
-        var act = Svc.Data.GetExcelSheet<Lumina.Excel.GeneratedSheets.Action>()?.GetRow(Object.CastActionId);
+    public override readonly string ToString() => ToTriggerData().ToString();
 
-        if (act == null) return $"Begin Cast: {RecordString.ObjectStr(Object)}";
-
-        return $"Begin Cast: {RecordString.ObjectStr(Object)} -> {RecordString.ActionStr(act)}";
-    }
-
-    public TriggerData ToTriggerData()
+    public readonly TriggerData ToTriggerData()
     {
         return new()
         {
@@ -59,12 +27,9 @@ public record struct ObjectBeginCastData(BattleChara Object) : IRecordData
 
 public record struct ObjectNewData(GameObject Object) : IRecordData
 {
-    public override readonly string ToString()
-    {
-        return $"New Object: {RecordString.ObjectStr(Object)}";
-    }
+    public override readonly string ToString() => ToTriggerData().ToString();
 
-    public TriggerData ToTriggerData()
+    public readonly TriggerData ToTriggerData()
     {
         return new()
         {
@@ -76,12 +41,9 @@ public record struct ObjectNewData(GameObject Object) : IRecordData
 
 public record struct ObjectEffectData(GameObject Object, ushort Param1, ushort Param2) : IRecordData
 {
-    public override readonly string ToString()
-    {
-        return $"Object Effect: {RecordString.ObjectStr(Object)}, P1 {Param1}, P2 {Param2}";
-    }
+    public override readonly string ToString() => ToTriggerData().ToString();
 
-    public TriggerData ToTriggerData()
+    public readonly TriggerData ToTriggerData()
     {
         return new()
         {
@@ -95,12 +57,9 @@ public record struct ObjectEffectData(GameObject Object, ushort Param1, ushort P
 
 public record struct VfxNewData(GameObject Object, string Path) : IRecordData
 {
-    public override readonly string ToString()
-    {
-        return $"New Vfx: {RecordString.ObjectStr(Object)}, Path {Path}";
-    }
+    public override readonly string ToString() => ToTriggerData().ToString();
 
-    public TriggerData ToTriggerData()
+    public readonly TriggerData ToTriggerData()
     {
         return new()
         {
@@ -111,12 +70,9 @@ public record struct VfxNewData(GameObject Object, string Path) : IRecordData
     }
 }
 
-public record struct MapEffectData(uint Position, ushort Param1, ushort Param2) : IRecordData
+public readonly record struct MapEffectData(uint Position, ushort Param1, ushort Param2) : IRecordData
 {
-    public override readonly string ToString()
-    {
-        return $"Map Effect: Position {Position}, P1 {Param1}, P2 {Param2}";
-    }
+    public override  string ToString() => ToTriggerData().ToString();
 
     public TriggerData ToTriggerData()
     {
@@ -126,6 +82,21 @@ public record struct MapEffectData(uint Position, ushort Param1, ushort Param2) 
             PositionOrActionId = Position,
             Param1 = Param1,
             Param2 = Param2,
+        };
+    }
+}
+
+public readonly record struct ActionEffectSetData(ActionEffectSet Set) : IRecordData
+{
+    public override string ToString() => ToTriggerData().ToString();
+
+    public TriggerData ToTriggerData()
+    {
+        return new()
+        {
+            Type = TriggerDataType.ActionEffect,
+            ObjectDataId = Set.Source.DataId,
+            PositionOrActionId = Set.Action.RowId,
         };
     }
 }

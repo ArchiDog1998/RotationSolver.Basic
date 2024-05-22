@@ -1,14 +1,13 @@
 ﻿using ECommons.ExcelServices;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Configuration.Trigger;
-using RotationSolver.Basic.Record;
 
 namespace RotationSolver.Basic.Configuration;
 
 internal class TerritoryConfig
 {
     [JsonProperty]
-    private Dictionary<Job, TerritoryConfigItem> _jobConfigs { get; set; } = [];
+    private Dictionary<Job, TerritoryConfigItem> _jobConfigs = [];
 
     [JsonIgnore]
     public TerritoryConfigItem JobConfig
