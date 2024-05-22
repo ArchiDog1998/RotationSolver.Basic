@@ -134,4 +134,9 @@ public enum OtherCommandType : byte
     /// </summary>
     [Description("Do the next action")]
     NextAction,
+
+    /// <summary>
+    /// 
+    /// </summary>
+    ToggleActionGroup,
 }

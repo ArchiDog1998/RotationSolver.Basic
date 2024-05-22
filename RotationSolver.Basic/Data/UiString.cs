@@ -786,4 +786,7 @@ internal enum UiString
 
     [Description("This feature in Bozja is avaliable only for supporters!")]
     CantUseInBozja,
+
+    [Description("The condition boolean is avaliable only for supporters!")]
+    CantUseConditionBoolean,
 }
