@@ -365,6 +365,9 @@ internal partial class Configs : IPluginConfiguration
     [UI("Shows cooldown window.", (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean ShowCooldownWindow { get; private set; } = new(false, nameof(ShowCooldownWindow));
 
+    [UI("Shows action group window.", (int)UiString.ConfigWindow_UI_Windows)]
+    public ConditionBoolean ShowActionGroupWindow { get; private set; } = new(false, nameof(ShowActionGroupWindow));
+
     [UI("Records AoE actions.", (int)UiString.ConfigWindow_List_HostileCastingArea)]
     public ConditionBoolean RecordCastingArea { get; private set; } = new(true, nameof(RecordCastingArea));
 
@@ -769,7 +772,7 @@ internal partial class Configs : IPluginConfiguration
     #endregion
 
     [JobConfig]
-    private readonly List<ActionGroup> _actionGroup = [];
+    private readonly List<ActionGroup> _actionGroups = [];
 
     [JobConfig]
     private readonly Dictionary<uint, ActionConfig> _rotationActionConfig = [];
