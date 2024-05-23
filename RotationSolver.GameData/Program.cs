@@ -14,5 +14,6 @@ var dirInfo = new DirectoryInfo(typeof(Program).Assembly.Location);
 dirInfo = dirInfo.Parent!.Parent!.Parent!.Parent!.Parent!;
 
 await CodeGenerator.CreateCode(gameData, dirInfo);
+DiscordGenerator.CreateCode(gameData, dirInfo);
 
 Console.WriteLine("Finished!");
