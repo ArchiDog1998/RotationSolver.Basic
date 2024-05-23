@@ -72,7 +72,7 @@ internal static class Recorder
 
     public static void Enqueue<T>(T data) where T : struct, IRecordData
     {
-        if (Data.Count >= Service.Config.WatcherCount)
+        if (Data.Count >= Service.Config.RecordCount)
         {
             Data.RemoveAt(0);
         }

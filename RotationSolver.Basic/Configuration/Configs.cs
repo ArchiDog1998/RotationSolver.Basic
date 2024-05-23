@@ -418,12 +418,10 @@ internal partial class Configs : IPluginConfiguration
     [UI("Displays toggle action feedback on chat.", (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowToggledActionInChat { get; private set; } = new(true, nameof(ShowToggledActionInChat));
 
-    [UI("Shows the timeline assigned drawings in game.",
-    (int)UiString.TimelineRaidTime)]
+    [UI("Shows the assigned drawings in game.", (int)UiString.TimelineRaidTime)]
     public ConditionBoolean ShowDrawing { get; private set; } = new(true, nameof(ShowDrawing));
 
-    [UI("Enables auto movement using timeline assignments.",
-        (int)UiString.TimelineRaidTime)]
+    [UI("Enables auto movement using assignments.", (int)UiString.TimelineRaidTime)]
     public ConditionBoolean EnableMovement { get; private set; } = new(true, nameof(EnableMovement));
 
     [UI("Skips ping checking. Please use it along with NoClippy",
@@ -716,8 +714,8 @@ internal partial class Configs : IPluginConfiguration
     public int AutoDefenseNumber { get; set; } = 2;
 
     [Range(32, int.MaxValue, ConfigUnitType.None, 1)]
-    [UI("The watcher counting", (int)UiString.ConfigWindow_Extra_Others)]//TODO: the recorder ui.
-    public int WatcherCount { get; set; } = 64;
+    [UI("The record count", (int)UiString.Item_Trigger)]
+    public int RecordCount { get; set; } = 64;
     #endregion
 
     #region Jobs
