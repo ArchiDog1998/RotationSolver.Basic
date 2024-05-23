@@ -13,11 +13,11 @@ internal class ActionGroup
             ..DataCenter.RightNowDutyRotation?.AllActions ?? [],
         ];
 
-    internal bool IsValid => ShowInWindow && !string.IsNullOrEmpty(Name);
+    internal bool IsValid => ShowInWindow && !string.IsNullOrEmpty(Name) && ActionIds.Any(i => i != 0);
 
     public string Name { get; set; } = string.Empty;
 
-    public Vector4 Color { get; private set; } = ImGuiColors.DalamudWhite;
+    public Vector4 Color { get; set; } = ImGuiColors.DalamudWhite;
 
     public List<uint> ActionIds { get; set; } = [];
 

@@ -184,7 +184,7 @@ internal enum UiString
     [Description("Action Groups")]
     ConfigWindow_List_ActionGroups,
 
-    [Description("The Name of the action group")]
+    [Description("The Name of it")]
     ConfigWindow_List_ActionGroups_Name,
 
     [Description("Is this group enabled. True to turn all actions on.")]
