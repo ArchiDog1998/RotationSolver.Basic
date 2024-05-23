@@ -86,10 +86,12 @@ internal class OtherConfiguration
                 var str = File.ReadAllText(path);
                 _territoryConfigs[id] = FromTxt(str);
             }
-            catch
+            catch(Exception ex)
             {
+                Svc.Log.Warning(ex, "Failed to load the territory config");
                 _territoryConfigs[id] = new();
             }
+            return;
         }
 
         if (_downloadingList.Contains(id)) return;

@@ -30,16 +30,16 @@ public enum TriggerDataType : byte
     ActionEffect,
 }
 
-public readonly record struct TriggerData
+public struct TriggerData
 {
-    public TriggerDataType Type { get; init; }
-    public uint ObjectDataId { get; init; }
-    public uint PositionOrActionId { get; init; }
-    public ushort Param1 { get; init; }
-    public ushort Param2 { get; init; }
-    public string Path { get; init; }
+    public TriggerDataType Type { get; set; }
+    public uint ObjectDataId { get; set; }
+    public uint PositionOrActionId { get; set; }
+    public ushort Param1 { get; set; }
+    public ushort Param2 { get; set; }
+    public string Path { get; set; }
 
-    public override string ToString()
+    public override readonly string ToString()
     {
         return Type switch
         {

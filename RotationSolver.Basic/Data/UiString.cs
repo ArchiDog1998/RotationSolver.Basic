@@ -301,8 +301,8 @@ internal enum UiString
     [Description("Left-click to add the general Trigger Data.\nRight-click to add the job Trigger Data.")]
     ConfigWindow_Trigger_AddTrggerDataDesc,
 
-    [Description("Is Job Trigger")]
-    ConfigWindow_Trigger_IsJob,
+    [Description("Clear Log")]
+    ConfigWindow_Trigger_Clear,
 
     [Description("OOOps! RS clicked the wrong action ({0})!")]
     ClickingMistakeMessage,
@@ -658,8 +658,6 @@ internal enum UiString
     [Description("Position")]
     TimelinePosition,
 
-    [Description("Duration")]
-    TimelineDuration,
 
     [Description("Target Count")]
     TimelineTargetCount,
@@ -712,8 +710,8 @@ internal enum UiString
     [Description("Place On Target")]
     TimelinePlaceOnTarget,
 
-    [Description("Add a timeline item.")]
-    AddTimelineButton,
+    [Description("Add a territory action.")]
+    AddTerritoryActionButton,
 
     [Description("Add a condition item.")]
     AddTimelineCondition,

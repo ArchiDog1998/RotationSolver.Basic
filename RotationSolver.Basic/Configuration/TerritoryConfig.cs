@@ -15,6 +15,7 @@ internal class TerritoryConfig
         get
         {
             var job = DataCenter.Job;
+
             if (_jobConfigs.TryGetValue(job, out var config)) return config;
 
             return _jobConfigs[job] = new ();
@@ -66,18 +67,18 @@ internal class TerritoryConfig
 
             foreach (var pair in timeline1)
             {
-                result[pair.Key] = new(pair.Value);
+                result[pair.Item1] = new(pair.Item2);
             }
 
             foreach (var pair in timeline2)
             {
-                if (result.TryGetValue(pair.Key, out var list))
+                if (result.TryGetValue(pair.Item1, out var list))
                 {
-                    list.AddRange(pair.Value);
+                    list.AddRange(pair.Item2);
                 }
                 else
                 {
-                    result[pair.Key] = new(pair.Value);
+                    result[pair.Item1] = new(pair.Item2);
                 }
             }
 
@@ -90,5 +91,5 @@ internal class TerritoryConfigItem
 {
     public Dictionary<float, List<BaseTimelineItem>> Timeline { get; set; } = [];
 
-    public Dictionary<TriggerData, List<BaseTriggerItem>> Trigger { get; set; } = [];
+    public List<(TriggerData, List<BaseTriggerItem>)> Trigger { get; set; } = [];
 }
