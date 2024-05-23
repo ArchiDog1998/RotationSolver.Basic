@@ -13,6 +13,8 @@ internal class ActionGroup
             ..DataCenter.RightNowDutyRotation?.AllActions ?? [],
         ];
 
+    internal bool IsValid => ShowInWindow && !string.IsNullOrEmpty(Name);
+
     public string Name { get; set; } = string.Empty;
 
     public Vector4 Color { get; private set; } = ImGuiColors.DalamudWhite;

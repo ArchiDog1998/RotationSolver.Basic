@@ -181,6 +181,18 @@ internal enum UiString
     [Description("Map specific settings")]
     ConfigWindow_List_Territories,
 
+    [Description("Action Groups")]
+    ConfigWindow_List_ActionGroups,
+
+    [Description("The Name of the action group")]
+    ConfigWindow_List_ActionGroups_Name,
+
+    [Description("Is this group enabled. True to turn all actions on.")]
+    ConfigWindow_List_ActionGroups_Enable,
+
+    [Description("Show this action group in the action group window.")]
+    ConfigWindow_List_ActionGroups_Show,
+
     [Description("Status name or id")]
     ConfigWindow_List_StatusNameOrId,
 

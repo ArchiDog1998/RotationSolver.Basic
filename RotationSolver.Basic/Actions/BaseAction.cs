@@ -1,5 +1,4 @@
-﻿using Dalamud.Utility;
-using ECommons.DalamudServices;
+﻿using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
