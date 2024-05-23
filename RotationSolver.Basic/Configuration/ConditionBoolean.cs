@@ -1,7 +1,4 @@
-﻿using ECommons.DalamudServices;
-using XIVConfigUI;
-
-namespace RotationSolver.Basic.Configuration;
+﻿namespace RotationSolver.Basic.Configuration;
 
 internal class ConditionBoolean(bool defaultValue, string key)
 {
@@ -21,32 +18,15 @@ internal class ConditionBoolean(bool defaultValue, string key)
     public static implicit operator bool(ConditionBoolean condition)
     {
         if (!Service.Config.UseAdditionalConditions) return condition.Value;
+        if (!DownloadHelper.IsSupporter) return condition.Value;
+
         var rotation = DataCenter.RightNowRotation;
         var set = DataCenter.RightSet;
+
         if (rotation != null)
         {
-            if (condition.Enable && (set.GetEnableCondition(condition.Key).IsTrue(rotation) ?? false))
-            {
-                if (DownloadHelper.IsSupporter)
-                {
-                    return true;
-                }
-                else
-                {
-                    Svc.Toasts.ShowError(string.Format(UiString.CantUseConditionBoolean.Local()));
-                }
-            }
-            if (condition.Disable && (set.GetDisableCondition(condition.Key).IsTrue(rotation) ?? false))
-            {
-                if (DownloadHelper.IsSupporter)
-                {
-                    return false;
-                }
-                else
-                {
-                    Svc.Toasts.ShowError(string.Format(UiString.CantUseConditionBoolean.Local()));
-                }
-            }
+            if (condition.Enable && (set.GetEnableCondition(condition.Key).IsTrue(rotation) ?? false)) return true;
+            if (condition.Disable && (set.GetDisableCondition(condition.Key).IsTrue(rotation) ?? false)) return false;
         }
         return condition.Value;
     }
