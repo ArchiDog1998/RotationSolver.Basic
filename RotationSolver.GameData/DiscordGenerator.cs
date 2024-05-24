@@ -6,10 +6,12 @@ internal static class DiscordGenerator
     {
         var dir = dirInfo.Parent!.Parent!.FullName + "\\RotationSolver.DiscordBot\\RotationSolver.DiscordBot\\Resource.cs";
 
-        var dict = new Dictionary<string, ContentFinderCondition>();
-        foreach (var item in gameData.GetExcelSheet<ContentFinderCondition>()!
+        var contents = gameData.GetExcelSheet<ContentFinderCondition>()!
             .Where(i => i.Image != 0)
-            .Where(i => !string.IsNullOrEmpty(i.Name)))
+            .Where(i => !string.IsNullOrEmpty(i.Name));
+
+        var dict = new Dictionary<string, ContentFinderCondition>();
+        foreach (var item in contents)
         {
             dict[item.Name] = item;
         }
@@ -21,6 +23,8 @@ internal static class DiscordGenerator
 
          internal static class Resource
          {
+             public const string DefaultDuty = "{{contents.Last().Name.RawString}}";
+
              public static readonly List<(string, uint, ushort)> DutyAndImage =
              [
          {{string.Join("\n", items)}}
