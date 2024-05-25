@@ -164,7 +164,7 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean ShowHostilesIcons { get; private set; } = new(true, nameof(ShowHostilesIcons));
 
     [UI("Shows the alliance icon.", Parent = nameof(UseOverlayWindow))]
-    public ConditionBoolean ShowAllianceIcons { get; private set; } = new(true, nameof(ShowAllianceIcons));
+    public ConditionBoolean ShowAllianceIcons { get; private set; } = new(false, nameof(ShowAllianceIcons));
 
     [UI("Shows the RS user's icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowUsersIcons { get; private set; } = new(true, nameof(ShowUsersIcons));

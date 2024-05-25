@@ -151,7 +151,7 @@ internal enum UiString
     [Description("Loaded")]
     ConfigWindow_Rotations_Loaded,
 
-    [Description("Github")]
+    [Description("GitHub")]
     ConfigWindow_Rotations_GitHub,
 
     [Description("Libraries")]
@@ -169,7 +169,7 @@ internal enum UiString
     [Description("The folder contains rotation libs or the download url about rotation lib.")]
     ConfigWindow_Rotations_Library,
 
-    [Description("In this window, you can set the parameters that can be customised using lists.")]
+    [Description("In this window, you can set the parameters that can be customized using lists.")]
     ConfigWindow_List_Description,
 
     [Description("Statuses")]
@@ -299,7 +299,7 @@ internal enum UiString
     ConfigWindow_Trigger_TriggerData,
 
     [Description("Left-click to add the general Trigger Data.\nRight-click to add the job Trigger Data.")]
-    ConfigWindow_Trigger_AddTrggerDataDesc,
+    ConfigWindow_Trigger_AddTriggerDataDesc,
 
     [Description("Clear Log")]
     ConfigWindow_Trigger_Clear,
@@ -388,7 +388,7 @@ internal enum UiString
     [Description("Windows")]
     ConfigWindow_UI_Windows,
 
-    [Description("Change the way that RS atomatically uses actions.")]
+    [Description("Change the way that RS automatically uses actions.")]
     ConfigWindow_Auto_Description,
 
     [Description("Action Usage")]
@@ -722,8 +722,11 @@ internal enum UiString
     [Description("Click to toggle the timeline item condition.")]
     TimelineItemCondition,
 
-    [Description("The time before this action.")]
+    [Description("The time before this timeline raised.")]
     TimelineItemTime,
+
+    [Description("The time after this trigger raised.")]
+    TriggerItemTime,
 
     [Description("The duration of this action.")]
     TimelineItemDuration,
@@ -752,7 +755,7 @@ internal enum UiString
     [Description("Your custom time line about the specific duty.")]
     Item_Timeline,
 
-    [Description("Yout custom trigger about the specific duty.")]
+    [Description("Your custom trigger about the specific duty.")]
     Item_Trigger,
 
     [Description("Some features that shouldn't be included in RS but help you.")]
@@ -764,10 +767,10 @@ internal enum UiString
     [Description("The pvp feature can only be used when your config \"{0}\" is on!")]
     CantUseInPvP,
 
-    [Description("This feature at the top level is avaliable only when your config \"{0}\" is on!")]
+    [Description("This feature at the top level is available only when your config \"{0}\" is on!")]
     CantUseAtTopLevel,
 
-    [Description("This feature in high-end duties is avaliable only for supporters!")]
+    [Description("This feature in high-end duties is available only for supporters!")]
     CantUseInHighEnd,
 
     [Description("The territory action feature is supporters-only feature!")]
@@ -779,24 +782,30 @@ internal enum UiString
     [Description("Your hash has been added. \nIf you want to remove it, please disable \"{0}\".")]
     AddedYourHash,
 
-    [Description("Your hash has beed removed.")]
+    [Description("Your hash has been removed.")]
     RemovedYourHash,
 
     [Description("You are not the Supporter, some features are NOT available.")]
     NotSupporterWarning,
 
-    [Description("The SequencerAction feature is avaliable only for supporters!")]
+    [Description("The SequencerAction feature is available only for supporters!")]
     CantUseSequencerAction,
 
-    [Description("This feature in deep dungeons is avaliable only for supporters!")]
+    [Description("This feature in deep dungeons is available only for supporters!")]
     CantUseInDeepDungeons,
 
-    [Description("This feature in Eureka is avaliable only for supporters!")]
+    [Description("This feature in Eureka is available only for supporters!")]
     CantUseInEureka,
 
-    [Description("This feature in Bozja is avaliable only for supporters!")]
+    [Description("This feature in Bozja is available only for supporters!")]
     CantUseInBozja,
 
-    [Description("The condition boolean is avaliable only for supporters!")]
+    [Description("The condition boolean is available only for supporters!")]
     CantUseConditionBoolean,
+
+    [Description("This feature is available for supporter! You can modify it, but it will not take effect.")]
+    SupporterOnlyWarning,
+
+    [Description("There are some limits if you turn {0} off!")]
+    IWannaBeSaidHelloWarning,
 }
