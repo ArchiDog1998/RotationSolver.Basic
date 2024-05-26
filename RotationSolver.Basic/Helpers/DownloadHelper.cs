@@ -43,7 +43,21 @@ internal static class DownloadHelper
     static Dictionary<string, byte> _data = [];
     static Type? _loadedType;
     static bool _isLoading = false;
-    public static Dictionary<string, byte> GetRating(Type rotationType)
+    public static Dictionary<string, byte> GetRating(Type rotationType, out string rate)
+    {
+        var data = GetRating(rotationType);
+
+        rate = "??";
+
+        if (data.Count > 0)
+        {
+            rate = data.Sum(i => Math.Min(Math.Max((byte)1, i.Value), (byte)10) / (double)data.Count).ToString("F1");
+        }
+
+        return data;
+    }
+
+    private static Dictionary<string, byte> GetRating(Type rotationType)
     {
         if (_loadedType == rotationType) return _data;
         if (_isLoading) return [];
