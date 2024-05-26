@@ -250,44 +250,11 @@ public class BaseAction : IBaseAction
     /// <inheritdoc/>
     public unsafe bool Use()
     {
-        if (!DownloadHelper.IsSupporter)
+        var message = Service.InvalidUseString;
+        if (!string.IsNullOrEmpty(message))
         {
-            if (DataCenter.IsInHighEndDuty)
-            {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInHighEnd.Local()));
-                return false;
-            }
-            if (DataCenter.TerritoryContentType is TerritoryContentType.DeepDungeons)
-            {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInDeepDungeons.Local()));
-                return false;
-            }
-            else if (DataCenter.TerritoryContentType is TerritoryContentType.Eureka)
-            {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInEureka.Local()));
-                return false;
-            }
-            else if (DataCenter.TerritoryContentType is (TerritoryContentType)29)
-            {
-                Svc.Toasts.ShowError(string.Format(UiString.CantUseInBozja.Local()));
-                return false;
-            }
-
-            if (!Service.Config.IWannaBeSaidHello)
-            {
-                var uiName = Service.Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
-
-                if (DataCenter.IsPvP)
-                {
-                    Svc.Toasts.ShowError(string.Format(UiString.CantUseInPvP.Local(), uiName));
-                    return false;
-                }
-                if (Player.Object.Level >= 90)
-                {
-                    Svc.Toasts.ShowError(string.Format(UiString.CantUseAtTopLevel.Local(), uiName));
-                    return false;
-                }
-            }
+            Svc.Toasts.ShowError(message);
+            return false;
         }
 
         var target = Target;
