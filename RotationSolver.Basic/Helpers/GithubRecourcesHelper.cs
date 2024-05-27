@@ -128,7 +128,7 @@ internal static class GithubRecourcesHelper
 
         bool ModifyRate(ref Dictionary<string, byte>? value, out string commit)
         {
-            commit = $"Modify the rateing to {rate}.";
+            commit = $"Modify the rate to {rate}.";
             value ??= [];
 
             var player = Player.Object;
