@@ -350,7 +350,7 @@ internal partial class Configs : IPluginConfiguration
 
     [JobFilter(PvE = JobFilterType.Healer)]
     [UI("Uses beneficial ground-targeted actions.", Parent = nameof(UseAbility))]
-    public ConditionBoolean UseGroundBeneficialAbility { get; private set; } = new(true, nameof(UseGroundBeneficialAbility));
+    public ConditionBoolean UseGroundBeneficialAbility { get; private set; } = new(false, nameof(UseGroundBeneficialAbility));
 
     [UI("Uses anti-knockback abilities", Parent = nameof(UseAbility))]
     public ConditionBoolean UseKnockback { get; private set; } = new(true, nameof(UseKnockback));

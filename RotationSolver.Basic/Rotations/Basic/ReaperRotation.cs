@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Rotations.Basic;
+﻿using RotationSolver.Basic.Data;
+
+namespace RotationSolver.Basic.Rotations.Basic;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class ReaperRotation
@@ -227,5 +229,12 @@ partial class ReaperRotation
     {
         if (!HasSoulReaver && !HasEnshrouded && ArcaneCrestPvE.CanUse(out act)) return true;
         return base.DefenseSingleAbility(out act);
+    }
+
+    /// <inheritdoc/>
+    protected override bool MoveBackAbility(out IAction? act)
+    {
+        if (HellsEgressPvE.CanUse(out act)) return true;
+        return base.MoveBackAbility(out act);
     }
 }

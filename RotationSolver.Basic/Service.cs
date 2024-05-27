@@ -11,12 +11,54 @@ using RotationSolver.Basic.Record;
 using RotationSolver.Basic.Configuration.Drawing;
 using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Trigger;
+using ECommons.GameHelpers;
+using XIVConfigUI;
 
 namespace RotationSolver.Basic;
 
 internal class Service : IDisposable
 {
     public const string COMMAND = "/rotation";
+
+    public static string InvalidUseString
+    {
+        get
+        {
+            if (DownloadHelper.IsSupporter) return string.Empty;
+
+            if (DataCenter.IsInHighEndDuty)
+            {
+                return UiString.CantUseInHighEnd.Local();
+            }
+            if (DataCenter.TerritoryContentType is TerritoryContentType.DeepDungeons)
+            {
+                return UiString.CantUseInDeepDungeons.Local();
+            }
+            else if (DataCenter.TerritoryContentType is TerritoryContentType.Eureka)
+            {
+                return UiString.CantUseInEureka.Local();
+            }
+            else if (DataCenter.TerritoryContentType is (TerritoryContentType)29)
+            {
+                return UiString.CantUseInBozja.Local();
+            }
+
+            if (Config.IWannaBeSaidHello) return string.Empty;
+
+            var uiName = Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
+
+            if (DataCenter.IsPvP)
+            {
+                return string.Format(UiString.CantUseInPvP.Local(), uiName);
+            }
+            if (Player.Object.Level >= 90)
+            {
+                return string.Format(UiString.CantUseAtTopLevel.Local(), uiName);
+            }
+
+            return string.Empty;
+        }
+    }
 
     // From https://github.com/UnknownX7/Cammy/blob/5c92ef3b1b0f8fdfd8cb690cc0825316721642a1/Game.cs#L31
     [Signature("F3 0F 10 05 ?? ?? ?? ?? 0F 2E C6 0F 8A", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible, Offset = 4)]
