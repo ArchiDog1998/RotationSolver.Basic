@@ -436,7 +436,7 @@ partial class DutyRotation : IDisposable
     /// Any actions from the enemy to us.
     /// </summary>
     /// <param name="data"></param>
-    public virtual void OnActionFromEnemy(in ActionEffectSet data)
+    public virtual void OnActionFromEnemy(in ActionEffectSetData data)
     {
 
     }

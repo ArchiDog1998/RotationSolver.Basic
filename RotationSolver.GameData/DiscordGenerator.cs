@@ -33,6 +33,5 @@ internal static class DiscordGenerator
          """;
 
         File.WriteAllText(dir, code);
-
     }
 }
