@@ -42,6 +42,10 @@ internal class Service : IDisposable
             {
                 return UiString.CantUseInBozja.Local();
             }
+            else if (!OtherConfiguration.RotationSolverRecord.CanPlayInTerritory(Svc.ClientState.TerritoryType))
+            {
+                return string.Format(UiString.CantFarmThisDuty.Local(), DataCenter.ContentFinderName);
+            }
 
             if (Config.IWannaBeSaidHello) return string.Empty;
 
@@ -127,8 +131,14 @@ internal class Service : IDisposable
         }
 
         Svc.ClientState.Login += ClientState_Login;
+        Svc.DutyState.DutyCompleted += DutyState_DutyCompleted;
         ClientState_Login();
         Recorder.Init();
+    }
+
+    private void DutyState_DutyCompleted(object? sender, ushort e)
+    {
+        OtherConfiguration.RotationSolverRecord.AddTerritoryId(Svc.ClientState.TerritoryType);
     }
 
     private void ClientState_Login()
@@ -193,6 +203,7 @@ internal class Service : IDisposable
         _checkerHook?.Dispose();
 
         Svc.ClientState.Login -= ClientState_Login;
+        Svc.DutyState.DutyCompleted -= DutyState_DutyCompleted;
         Recorder.Dispose();
     }
 }

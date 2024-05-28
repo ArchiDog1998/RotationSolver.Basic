@@ -303,6 +303,7 @@ internal class OtherConfiguration
             {
                 var str = File.ReadAllText(path);
 
+                //TODO: No more low versions!
                 try
                 {
                     value = JsonConvert.DeserializeObject<T>(str)!;

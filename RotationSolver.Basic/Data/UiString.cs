@@ -803,6 +803,9 @@ internal enum UiString
     [Description("The condition boolean is available only for supporters!")]
     CantUseConditionBoolean,
 
+    [Description("The duty {0} can only be farmed for supporters! Please do it next day!")]
+    CantFarmThisDuty,
+
     [Description("This feature is available for supporter! You can modify it, but it will not take effect.")]
     SupporterOnlyWarning,
 
