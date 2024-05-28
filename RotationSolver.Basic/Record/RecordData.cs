@@ -1,5 +1,4 @@
-﻿using ECommons.DalamudServices;
-using ECommons.Hooks.ActionEffectTypes;
+﻿using ECommons.Hooks.ActionEffectTypes;
 using RotationSolver.Basic.Configuration.Trigger;
 
 namespace RotationSolver.Basic.Record;
