@@ -385,9 +385,10 @@ partial class DutyRotation : IDisposable
     /// Get the record data
     /// </summary>
     /// <typeparam name="T">the record data type</typeparam>
-    /// <param name="duration">duration x means min, y means max.</param>
+    /// <param name="min">The min time from now</param>
+    /// <param name="max">The max time from now</param>
     /// <returns></returns>
-    public static T[] GetRecordData<T>(Vector2 duration) where T : struct, IRecordData => Recorder.GetData<T>(duration);
+    public static T[] GetRecordData<T>(float min, float max) where T : struct, IRecordData => Recorder.GetData<T>(min, max);
     #endregion
 
     #region Drawing
