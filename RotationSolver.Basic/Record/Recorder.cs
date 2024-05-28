@@ -1,6 +1,5 @@
 ﻿using Dalamud.Game.ClientState.Objects.SubKinds;
 using ECommons.DalamudServices;
-using ECommons.Hooks.ActionEffectTypes;
 using RotationSolver.Basic.Configuration;
 
 namespace RotationSolver.Basic.Record;

@@ -72,7 +72,7 @@ public record struct VfxNewData(GameObject Object, string Path) : IRecordData
 
 public readonly record struct MapEffectData(uint Position, ushort Param1, ushort Param2) : IRecordData
 {
-    public override  string ToString() => ToTriggerData().ToString();
+    public override string ToString() => ToTriggerData().ToString();
 
     public TriggerData ToTriggerData()
     {
@@ -88,6 +88,8 @@ public readonly record struct MapEffectData(uint Position, ushort Param1, ushort
 
 public readonly record struct ActionEffectSetData(ActionEffectSet Set) : IRecordData
 {
+    public uint ObjectId => Set.Source.DataId;
+    public uint ActionId => Set.Action.RowId;
     public override string ToString() => ToTriggerData().ToString();
 
     public TriggerData ToTriggerData()

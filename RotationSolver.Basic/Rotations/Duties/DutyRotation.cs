@@ -380,6 +380,14 @@ partial class DutyRotation : IDisposable
     /// The Raid Time.
     /// </summary>
     public static float RaidTimeRaw => DataCenter.RaidTimeRaw;
+
+    /// <summary>
+    /// Get the record data
+    /// </summary>
+    /// <typeparam name="T">the record data type</typeparam>
+    /// <param name="duration">duration x means min, y means max.</param>
+    /// <returns></returns>
+    public static T[] GetRecordData<T>(Vector2 duration) where T : struct, IRecordData => Recorder.GetData<T>(duration);
     #endregion
 
     #region Drawing
