@@ -5,7 +5,7 @@
 /// </summary>
 internal class RotationSolverRecord
 {
-    private static readonly uint[] SupporterOnlyTerritories = [];
+    private static readonly uint[] SupporterOnlyTerritories = [445, 584];
     private const int DutyCount = 5;
 
     /// <summary>
