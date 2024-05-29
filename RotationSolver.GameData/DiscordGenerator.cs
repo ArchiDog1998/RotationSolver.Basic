@@ -16,7 +16,7 @@ internal static class DiscordGenerator
             dict[item.Name] = item;
         }
 
-        var items = dict.Select(i => $"        (\"{i.Key}\", {i.Value.Image}, {i.Value.Content}),");
+        var items = dict.Select(i => $"        (\"{i.Key}\", {i.Value.Image}, {i.Value.ContentMemberType.Value!.TanksPerParty}, {i.Value.ContentMemberType.Value!.HealersPerParty}, {i.Value.ContentMemberType.Value!.MeleesPerParty + i.Value.ContentMemberType.Value!.RangedPerParty}),");
 
         var code = $$"""
          namespace RotationSolver.DiscordBot;
@@ -25,7 +25,7 @@ internal static class DiscordGenerator
          {
              public const string DefaultDuty = "{{contents.Last().Name.RawString}}";
 
-             public static readonly List<(string, uint, ushort)> DutyAndImage =
+             public static readonly List<(string, uint, byte, byte, byte)> DutyAndImage =
              [
          {{string.Join("\n", items)}}
              ];
