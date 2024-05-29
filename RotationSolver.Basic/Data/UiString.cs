@@ -4,10 +4,10 @@ internal enum UiString
 {
     None,
 
-    [Description("The condition set you chose, click to modify.")]
+    [Description("The condition set you will use, click to modify.")]
     ConfigWindow_ConditionSetDesc,
 
-    [Description("The duty rotation you chose, click to modify.")]
+    [Description("The rotation you will use, click to modify.")]
     ConfigWindow_DutyRotationDesc,
 
     [Description("Remove")]
@@ -37,7 +37,7 @@ internal enum UiString
     [Description("Rotation Solver helped you by clicking actions {0:N0} times.")]
     ConfigWindow_About_ClickingCount,
 
-    [Description("You have greeted other users {0:N0} times!")]
+    [Description("You have said hello to other RS users {0:N0} times!")]
     ConfigWindow_About_SayHelloCount,
 
     [Description("Macro")]
@@ -106,7 +106,7 @@ internal enum UiString
     [Description("Can be used by mistake")]
     ConfigWindow_Actions_IsInMistake,
 
-    [Description("Minimum target time to kill that the ability will be used at.")]
+    [Description("Minimum target time to kill at which the ability will be used.")]
     ConfigWindow_Actions_TTK,
 
     [Description("Minimum time until the target becomes untargetable that the ability will be used at.")]
@@ -445,7 +445,7 @@ internal enum UiString
     [Description("Hostile")]
     ConfigWindow_List_Hostile,
 
-    [Description("You can The logic of hostile target selection to allow flexibility in switching the logic of selecting hostile in battle.")]
+    [Description("The logic of hostile target selection to allow flexibility in switching the logic of selecting hostile in battle.")]
     ConfigWindow_Param_HostileDesc,
 
     [Description("Move Up")]
@@ -469,7 +469,7 @@ internal enum UiString
     [Description("Add Events")]
     ConfigWindow_Events_AddEvent,
 
-    [Description("In this window, you can set what macro will be trigger after using an action.")]
+    [Description("In this window, you can set what macro will be triggered after using an action.")]
     ConfigWindow_Events_Description,
 
     [Description("Duty Start: ")]
@@ -743,13 +743,13 @@ internal enum UiString
     [Description("Basic settings")]
     Item_Basic,
 
-    [Description("Settings about the user interface.")]
+    [Description("User interface settings.")]
     Item_UI,
 
-    [Description("About some general actions usage and conditions.")]
+    [Description("General actions usage and conditions.")]
     Item_Auto,
 
-    [Description("The way to find the targets, hostiles or friends.")]
+    [Description("The targetting for either hostiles or friends.")]
     Item_Target,
 
     [Description("Your custom time line about the specific duty.")]
@@ -758,7 +758,7 @@ internal enum UiString
     [Description("Your custom trigger about the specific duty.")]
     Item_Trigger,
 
-    [Description("Some features that shouldn't be included in RS but help you.")]
+    [Description("Some features that shouldn't be included in RS but will help you.")]
     Item_Extra,
 
     [Description("There are still {0}s left to rate.")]
@@ -770,10 +770,10 @@ internal enum UiString
     [Description("This feature at the top level is available only when your config \"{0}\" is on!")]
     CantUseAtTopLevel,
 
-    [Description("This feature in high-end duties is available only for supporters!")]
+    [Description("This feature for high-end duties is available only for supporters!")]
     CantUseInHighEnd,
 
-    [Description("The territory action feature is supporters-only feature!")]
+    [Description("The territory action feature is a supporters-only feature!")]
     CantUseTerritoryAction,
 
     [Description("Copied your hash to the clipboard!")]
@@ -785,25 +785,25 @@ internal enum UiString
     [Description("Your hash has been removed.")]
     RemovedYourHash,
 
-    [Description("You are not the Supporter, some features are NOT available.")]
+    [Description("You are not a Supporter, some features will NOT be available.")]
     NotSupporterWarning,
 
     [Description("The SequencerAction feature is available only for supporters!")]
     CantUseSequencerAction,
 
-    [Description("This feature in deep dungeons is available only for supporters!")]
+    [Description("This feature for deep dungeons is available only for supporters!")]
     CantUseInDeepDungeons,
 
-    [Description("This feature in Eureka is available only for supporters!")]
+    [Description("This feature for Eureka is available only for supporters!")]
     CantUseInEureka,
 
-    [Description("This feature in Bozja is available only for supporters!")]
+    [Description("This feature for Bozja is available only for supporters!")]
     CantUseInBozja,
 
     [Description("The condition boolean is available only for supporters!")]
     CantUseConditionBoolean,
 
-    [Description("This feature is available for supporter! You can modify it, but it will not take effect.")]
+    [Description("This feature is available only for supporters! You can modify it, but it will not take effect.")]
     SupporterOnlyWarning,
 
     [Description("There are some limits if you turn {0} off!")]
