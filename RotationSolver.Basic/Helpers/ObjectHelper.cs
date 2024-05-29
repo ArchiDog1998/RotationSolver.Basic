@@ -8,7 +8,6 @@ using FFXIVClientStructs.FFXIV.Client.Game.Event;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Common.Component.BGCollision;
 using Lumina.Excel.GeneratedSheets;
-using Octokit;
 using RotationSolver.Basic.Configuration;
 using System.Security.Cryptography;
 using System.Text;

@@ -535,9 +535,6 @@ internal enum UiString
     [Description("Avarice addon was not detected, please install it if you want to get the positional indicators for Rotation Solver!")]
     AvariceWarning,
 
-    [Description("TextToTalk addon was not detected, please install it to make Rotation Solver give audio notifications!")]
-    TextToTalkWarning,
-
     [Description("Use Forced Enable Condition")]
     ForcedEnableCondition,
 
