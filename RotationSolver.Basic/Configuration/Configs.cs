@@ -156,7 +156,7 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Target_Config)]
     public ConditionBoolean ChooseAttackMark { get; private set; } = new(true, nameof(ChooseAttackMark));
 
-    [UI("Allows use of AoE abilities to attack as many targets as possibly.",
+    [UI("Allows use of AoE abilities to attack as many targets as possible.",
         Parent = nameof(ChooseAttackMark))]
     public ConditionBoolean CanAttackMarkAoe { get; private set; } = new(true, nameof(CanAttackMarkAoe));
 
