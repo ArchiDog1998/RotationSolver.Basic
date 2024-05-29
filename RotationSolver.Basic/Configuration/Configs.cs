@@ -53,6 +53,10 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean SayOutStateChanged { get; private set; } = new(true, nameof(SayOutStateChanged));
 
+    [Range(0, 100, ConfigUnitType.None)]
+    [UI("The Audio voice volume", Parent = nameof(SayOutStateChanged))]
+    public int VoiceVolume { get; private set; } = 100;
+
     [UI("Displays plugin status in server info bar.",
         (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean ShowInfoOnDtr { get; private set; } = new(true, nameof(ShowInfoOnDtr));
