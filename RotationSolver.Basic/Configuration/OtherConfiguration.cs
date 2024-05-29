@@ -201,7 +201,7 @@ internal class OtherConfiguration
 
     public static Task SaveRotationSolverRecord()
     {
-        return Task.Run(() => Save(RotationSolverRecord, nameof(RotationSolverRecord)));
+        return Task.Run(() => Save(RotationSolverRecord, nameof(RotationSolverRecord), false));
     }
     public static Task SaveNoProvokeNames()
     {
@@ -269,18 +269,24 @@ internal class OtherConfiguration
         return path;
     }
 
-    private static void Save<T>(T value, string name)
-        => SavePath(value, GetFilePath(name));
+    private static void Save<T>(T value, string name, bool download = true)
+        => SavePath(value, GetFilePath(name), download);
 
-    private static void SavePath<T>(T value, string path)
+    private static void SavePath<T>(T value, string path, bool download = true)
     {
         try
         {
-            File.WriteAllText(path,
-            JsonConvert.SerializeObject(value, Formatting.Indented, new JsonSerializerSettings()
+            var str = JsonConvert.SerializeObject(value, Formatting.Indented, new JsonSerializerSettings()
             {
                 TypeNameHandling = TypeNameHandling.None,
-            }));
+            });
+
+            if (!download)
+            {
+                str = Cryptor.Crypt(str);
+            }
+
+            File.WriteAllText(path, str);
         }
         catch (Exception ex)
         {
@@ -295,7 +301,20 @@ internal class OtherConfiguration
         {
             try
             {
-                value = JsonConvert.DeserializeObject<T>(File.ReadAllText(path))!;
+                var str = File.ReadAllText(path);
+
+                //TODO: No more low versions!
+                try
+                {
+                    value = JsonConvert.DeserializeObject<T>(str)!;
+                }
+                catch
+                {
+                    if (download) throw;
+
+                    str = Cryptor.Decrypt(str);
+                    value = JsonConvert.DeserializeObject<T>(str)!;
+                }
             }
             catch (Exception ex)
             {
