@@ -40,6 +40,9 @@ internal enum UiString
     [Description("You have said hello to other RS users {0:N0} times!")]
     ConfigWindow_About_SayHelloCount,
 
+    [Description("There are {0} RS users among the world!")]
+    ConfigWindow_About_UserCount,
+
     [Description("Macro")]
     ConfigWindow_About_Macros,
 
