@@ -84,21 +84,6 @@ internal partial class Configs : IPluginConfiguration
     [UI("", Action = (uint)ActionID.ImprovisationPvE, Parent = nameof(PoslockCasting))]
     public bool PosImprovisation { get; set; } = false;
 
-    [UI("Replaces the action icon.", (int)UiString.ConfigWindow_Extra_Others)]
-    public ConditionBoolean ReplaceIcon { get; private set; } = new(false, nameof(ReplaceIcon));
-
-    [UI("", Action = (uint)ActionID.LegGrazePvE, Parent = nameof(ReplaceIcon))]
-    public bool ReplaceLegGraze { get; set; } = true;
-
-    [UI("", Action = (uint)ActionID.FootGrazePvE, Parent = nameof(ReplaceIcon))]
-    public bool ReplaceFootGraze { get; set; } = true;
-
-    [UI("", Action = (uint)ActionID.ReposePvE, Parent = nameof(ReplaceIcon))]
-    public bool ReplaceRepose { get; set; } = true;
-
-    [UI("", Action = (uint)ActionID.SleepPvE, Parent = nameof(ReplaceIcon))]
-    public bool ReplaceSleep { get; set; } = true;
-
     [JobFilter(PvE = JobFilterType.Raise, PvP = JobFilterType.NoJob)]
     [UI("Raises players while swiftcast is on cooldown.",
         (int)UiString.ConfigWindow_Auto_ActionUsage, Section = 2)]

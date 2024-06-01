@@ -69,13 +69,6 @@ internal class Service : IDisposable
     static IntPtr forceDisableMovementPtr = IntPtr.Zero;
     private static unsafe ref int ForceDisableMovement => ref *(int*)forceDisableMovementPtr;
 
-    private unsafe delegate uint AdjustedActionId(ActionManager* manager, uint actionID);
-    private static Hook<AdjustedActionId>? _adjustActionIdHook;
-
-    private unsafe delegate ulong OnCheckIsIconReplaceableDelegate(uint actionID);
-    private static Hook<OnCheckIsIconReplaceableDelegate>? _checkerHook;
-
-
     static bool _canMove = true;
     internal static unsafe bool CanMove
     {
@@ -105,15 +98,6 @@ internal class Service : IDisposable
     public Service()
     {
         Svc.Hook.InitializeFromAttributes(this);
-
-        unsafe
-        {
-            _adjustActionIdHook = Svc.Hook.HookFromSignature<AdjustedActionId>("E8 ?? ?? ?? ?? 8B F8 3B DF", GetAdjustedActionIdDetour);
-        }
-        _adjustActionIdHook.Enable();
-
-        _checkerHook = Svc.Hook.HookFromSignature<OnCheckIsIconReplaceableDelegate>("E8 ?? ?? ?? ?? 84 C0 74 4C 8B D3", IsAdjustedActionIdDetour);
-        _checkerHook.Enable();
 
         try
         {
@@ -150,37 +134,11 @@ internal class Service : IDisposable
         }
     }
 
-    private static bool IsReplaced(uint actionID)
-    {
-        if (Config.ReplaceIcon)
-        {
-            switch (actionID)
-            {
-                case (uint)ActionID.SleepPvE when Config.ReplaceSleep:
-                case (uint)ActionID.FootGrazePvE when Config.ReplaceFootGraze:
-                case (uint)ActionID.LegGrazePvE when Config.ReplaceLegGraze:
-                case (uint)ActionID.ReposePvE when Config.ReplaceRepose:
-                    return true;
-            }
-        }
-        return false;
-    }
-
-    private static ulong IsAdjustedActionIdDetour(uint actionID)
-    {
-        return IsReplaced(actionID) ? 1 : _checkerHook!.Original(actionID);
-    }
-
-    private static unsafe uint GetAdjustedActionIdDetour(ActionManager* manager, uint actionID)
-    {
-        return IsReplaced(actionID) ? NextActionID : _adjustActionIdHook!.Original(manager, actionID);
-    }
     public static ActionID GetAdjustedActionId(ActionID id)
         => (ActionID)GetAdjustedActionId((uint)id);
 
     public static unsafe uint GetAdjustedActionId(uint id)
-        => _adjustActionIdHook?.Original(ActionManager.Instance(), id)
-        ?? ActionManager.Instance()->GetAdjustedActionId(id);
+        =>  ActionManager.Instance()->GetAdjustedActionId(id);
 
     public unsafe static IEnumerable<IntPtr> GetAddons<T>() where T : struct
     {
@@ -199,8 +157,6 @@ internal class Service : IDisposable
         {
             ForceDisableMovement--;
         }
-        _adjustActionIdHook?.Dispose();
-        _checkerHook?.Dispose();
 
         Svc.ClientState.Login -= ClientState_Login;
         Svc.DutyState.DutyCompleted -= DutyState_DutyCompleted;
