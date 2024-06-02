@@ -253,7 +253,7 @@ public class BaseAction : IBaseAction
         var message = Service.InvalidUseString;
         if (!string.IsNullOrEmpty(message))
         {
-            Svc.Toasts.ShowError(message);
+            message.ShowToastWarning();
             return false;
         }
 
