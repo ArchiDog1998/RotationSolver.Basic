@@ -59,7 +59,17 @@ internal static class Recorder
     private static BattleChara[] _lastCastingObjs = [];
     private static void UpdateCastingObjectData()
     {
-        var castingObjects = DataCenter.AllHostileTargets.Where(b => b.IsCasting && b.AdjustedTotalCastTime > 2.5f && b.CastActionId != 0);
+        var castingObjects = DataCenter.AllHostileTargets.Where(b =>
+        {
+            try
+            {
+                return b.IsCasting && b.AdjustedTotalCastTime > 2.5f && b.CastActionId != 0;
+            }
+            catch
+            {
+                return false;
+            }
+        });
 
         foreach (var obj in castingObjects.Except(_lastCastingObjs))
         {
