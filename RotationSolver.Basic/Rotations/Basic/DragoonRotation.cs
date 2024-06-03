@@ -141,7 +141,7 @@ partial class DragoonRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool DefenseAreaAbility(out IAction? act)
+    protected override bool DefenseAreaAbility(out IAction? act)
     {
         if (FeintPvE.CanUse(out act)) return true;
         return false;

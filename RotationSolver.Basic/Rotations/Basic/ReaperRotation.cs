@@ -211,14 +211,14 @@ partial class ReaperRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool MoveForwardAbility(out IAction? act)
+    protected override bool MoveForwardAbility(out IAction? act)
     {
         if (HellsIngressPvE.CanUse(out act)) return true;
         return base.MoveForwardAbility(out act);
     }
 
     /// <inheritdoc/>
-    protected sealed override bool DefenseAreaAbility(out IAction? act)
+    protected override bool DefenseAreaAbility(out IAction? act)
     {
         if (!HasSoulReaver && !HasEnshrouded && FeintPvE.CanUse(out act)) return true;
         return base.DefenseAreaAbility(out act);

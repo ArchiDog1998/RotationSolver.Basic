@@ -118,14 +118,14 @@ partial class PaladinRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool MoveForwardAbility(out IAction? act)
+    protected override bool MoveForwardAbility(out IAction? act)
     {
         if (IntervenePvE.CanUse(out act)) return true;
         return base.MoveForwardAbility(out act);
     }
 
     /// <inheritdoc/>
-    protected sealed override bool HealSingleGCD(out IAction? act)
+    protected override bool HealSingleGCD(out IAction? act)
     {
         if (ClemencyPvE.CanUse(out act)) return true;
         return base.HealSingleGCD(out act);

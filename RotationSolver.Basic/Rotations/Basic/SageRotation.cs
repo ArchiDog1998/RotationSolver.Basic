@@ -138,7 +138,7 @@ partial class SageRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool MoveForwardAbility(out IAction? act)
+    protected override bool MoveForwardAbility(out IAction? act)
     {
         if (IcarusPvE.CanUse(out act)) return true;
         return base.MoveForwardAbility(out act);

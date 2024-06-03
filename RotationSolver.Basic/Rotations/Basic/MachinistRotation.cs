@@ -135,7 +135,7 @@ partial class MachinistRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool DefenseAreaAbility(out IAction act)
+    protected override bool DefenseAreaAbility(out IAction act)
     {
         if (TacticianPvE.CanUse(out act, skipAoeCheck: true)) return true;
         if (DismantlePvE.CanUse(out act, skipAoeCheck: true)) return true;

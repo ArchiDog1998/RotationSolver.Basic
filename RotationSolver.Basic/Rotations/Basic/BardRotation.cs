@@ -183,16 +183,23 @@ partial class BardRotation
     }
 
     /// <inheritdoc/>
-    protected sealed override bool HealSingleAbility(out IAction? act)
+    protected override bool HealSingleAbility(out IAction? act)
     {
         if (NaturesMinnePvE.CanUse(out act)) return true;
         return base.HealSingleAbility(out act);
     }
 
     /// <inheritdoc/>
-    protected sealed override bool DefenseAreaAbility(out IAction act)
+    protected override bool DefenseAreaAbility(out IAction act)
     {
         if (TroubadourPvE.CanUse(out act)) return true;
+        return false;
+    }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (FinalFantasiaPvP.CanUse(out act, skipAoeCheck: true)) return true;
         return false;
     }
 }

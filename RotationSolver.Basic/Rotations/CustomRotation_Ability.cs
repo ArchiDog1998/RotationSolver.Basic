@@ -361,7 +361,9 @@ partial class CustomRotation
     /// <returns>Can we use it.</returns>
     protected virtual bool SpeedAbility(out IAction? act)
     {
+        #region PvP
         if (SprintPvP.CanUse(out act)) return true;
+        #endregion
 
         if (PelotonPvE.CanUse(out act, skipAoeCheck: true)) return true;
         if (SprintPvE.CanUse(out act)) return true;

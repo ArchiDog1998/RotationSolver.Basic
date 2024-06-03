@@ -218,12 +218,17 @@ partial class AstrologianRotation
         };
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <inheritdoc/>
     public override void DisplayStatus()
     {
         ImGui.Text($"Card: {DrawnCard} : {GetCardSeal(DrawnCard)}");
         ImGui.Text(string.Join(", ", Seals.Select(i => i.ToString())));
+    }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if(CelestialRiverPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
     }
 }
