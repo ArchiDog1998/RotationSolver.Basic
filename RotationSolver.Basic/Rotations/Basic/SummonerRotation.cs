@@ -264,4 +264,12 @@ partial class SummonerRotation
         if (AddlePvE.CanUse(out act)) return true;
         return base.DefenseAreaAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SummonPhoenixPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (EverlastingFlightPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

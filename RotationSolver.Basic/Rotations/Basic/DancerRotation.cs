@@ -285,4 +285,11 @@ partial class DancerRotation
         if (ShieldSambaPvE.CanUse(out act, usedUp: true)) return true;
         return false;
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (ContradancePvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

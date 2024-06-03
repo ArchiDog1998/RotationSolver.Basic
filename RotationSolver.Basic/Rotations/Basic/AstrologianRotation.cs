@@ -228,7 +228,7 @@ partial class AstrologianRotation
     /// <inheritdoc/>
     protected override bool LimitBreakPvPGCD(out IAction? act)
     {
-        if(CelestialRiverPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (CelestialRiverPvP.CanUse(out act, skipAoeCheck: true)) return true;
         return base.LimitBreakPvPGCD(out act);
     }
 }

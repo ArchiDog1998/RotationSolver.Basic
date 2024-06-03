@@ -199,4 +199,11 @@ partial class SamuraiRotation
         if (ThirdEyePvE.CanUse(out act)) return true;
         return base.DefenseSingleAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (ZantetsukenPvP.CanUse(out act)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

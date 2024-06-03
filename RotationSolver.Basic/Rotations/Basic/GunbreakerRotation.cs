@@ -161,4 +161,13 @@ partial class GunbreakerRotation
         if (RoughDividePvE.CanUse(out act)) return true;
         return false;
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (RelentlessRushPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (TerminalTriggerPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (TerminalTriggerPvP_29469.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

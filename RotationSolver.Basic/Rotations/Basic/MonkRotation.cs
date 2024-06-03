@@ -137,4 +137,11 @@ partial class MonkRotation
         if (RiddleOfEarthPvE.CanUse(out act, usedUp: true)) return true;
         return base.DefenseSingleAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (MeteodrivePvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

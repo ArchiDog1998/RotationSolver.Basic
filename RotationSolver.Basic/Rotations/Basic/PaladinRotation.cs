@@ -130,4 +130,11 @@ partial class PaladinRotation
         if (ClemencyPvE.CanUse(out act)) return true;
         return base.HealSingleGCD(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (PhalanxPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

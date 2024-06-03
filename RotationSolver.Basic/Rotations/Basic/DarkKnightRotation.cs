@@ -171,4 +171,11 @@ partial class DarkKnightRotation
         if (PlungePvE.CanUse(out act)) return true;
         return false;
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (EventidePvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

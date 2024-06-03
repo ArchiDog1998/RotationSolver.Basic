@@ -187,4 +187,12 @@ partial class NinjaRotation
     {
         setting.StatusNeed = [StatusID.RaijuReady];
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SeitonTenchuPvP.CanUse(out act)) return true;
+        if (SeitonTenchuPvP_29516.CanUse(out act)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

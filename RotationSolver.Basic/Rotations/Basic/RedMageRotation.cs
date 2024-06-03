@@ -167,4 +167,12 @@ partial class RedMageRotation
         if (MagickBarrierPvE.CanUse(out act, skipAoeCheck: true)) return true;
         return base.DefenseAreaAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SouthernCrossPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (SouthernCrossPvP_29705.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

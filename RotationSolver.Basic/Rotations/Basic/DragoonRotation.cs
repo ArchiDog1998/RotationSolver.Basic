@@ -153,4 +153,13 @@ partial class DragoonRotation
         if (ElusiveJumpPvE.CanUse(out act, skipClippingCheck: true)) return true;
         return base.MoveBackAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SkyHighPvP.CanUse(out act)) return true;
+        if (SkyShatterPvP.CanUse(out act)) return true;
+        if (SkyShatterPvP_29499.CanUse(out act)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

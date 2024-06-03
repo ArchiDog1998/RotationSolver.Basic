@@ -237,4 +237,11 @@ partial class ReaperRotation
         if (HellsEgressPvE.CanUse(out act)) return true;
         return base.MoveBackAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (TenebraeLemurumPvP.CanUse(out act)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

@@ -141,4 +141,11 @@ partial class MachinistRotation
         if (DismantlePvE.CanUse(out act, skipAoeCheck: true)) return true;
         return false;
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (MarksmansSpitePvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

@@ -269,4 +269,11 @@ partial class BlackMageRotation
         if (AetherialManipulationPvE.CanUse(out act)) return true;
         return base.MoveForwardGCD(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SoulResonancePvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }

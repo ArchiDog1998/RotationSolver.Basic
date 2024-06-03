@@ -149,4 +149,12 @@ partial class ScholarRotation
         if (InCombat && ExpedientPvE.CanUse(out act, usedUp: true)) return true;
         return base.SpeedAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (SummonSeraphPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        if (SeraphFlightPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

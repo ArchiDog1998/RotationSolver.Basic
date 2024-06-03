@@ -143,4 +143,12 @@ partial class SageRotation
         if (IcarusPvE.CanUse(out act)) return true;
         return base.MoveForwardAbility(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (MesotesPvP.CanUse(out act)) return true;
+        if (MesotesPvP_29267.CanUse(out act)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

@@ -116,4 +116,11 @@ partial class WhiteMageRotation
     {
         setting.StatusNeed = [StatusID.CureIiiReady];
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (AfflatusPurgationPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

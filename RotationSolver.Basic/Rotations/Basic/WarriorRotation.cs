@@ -165,4 +165,11 @@ partial class WarriorRotation
         if (PrimalRendPvE.CanUse(out act, skipAoeCheck: true)) return true;
         return base.MoveForwardGCD(out act);
     }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (PrimalScreamPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return false;
+    }
 }
