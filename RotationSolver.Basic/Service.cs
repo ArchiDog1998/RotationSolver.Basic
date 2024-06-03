@@ -1,17 +1,16 @@
-﻿using Dalamud.Hooking;
-using Dalamud.Utility.Signatures;
+﻿using Dalamud.Utility.Signatures;
 using ECommons.DalamudServices;
+using ECommons.GameHelpers;
 using FFXIVClientStructs.Attributes;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
 using RotationSolver.Basic.Configuration;
-using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
-using RotationSolver.Basic.Configuration.Timeline;
-using RotationSolver.Basic.Record;
 using RotationSolver.Basic.Configuration.Drawing;
 using RotationSolver.Basic.Configuration.TerritoryAction;
+using RotationSolver.Basic.Configuration.Timeline;
+using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using RotationSolver.Basic.Configuration.Trigger;
-using ECommons.GameHelpers;
+using RotationSolver.Basic.Record;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic;
