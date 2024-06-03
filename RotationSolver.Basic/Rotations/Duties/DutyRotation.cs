@@ -126,6 +126,12 @@ partial class DutyRotation : IDisposable
         act = null; return false;
     }
 
+    public virtual bool DispelAbility(out IAction? act)
+    {
+        act = null; return false;
+    }
+
+
     #endregion
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 

@@ -111,6 +111,10 @@ partial class CustomRotation
                 && ArmsLengthPvE.CanUse(out act)) return true;
         }
 
+        IBaseAction.TargetOverride = TargetType.Dispel;
+        if (DataCenter.MergedStatus.HasFlag(AutoStatus.Dispel)
+            && DispelAbility(out act)) return true;
+
         IBaseAction.TargetOverride = null;
 
         IBaseAction.AllEmpty = true;
@@ -143,6 +147,18 @@ partial class CustomRotation
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="act"></param>
+    /// <returns></returns>
+    protected virtual bool DispelAbility(out IAction? act)
+    {
+        if (PurifyPvP.CanUse(out act)) return true;
+        if (DataCenter.RightNowDutyRotation?.DispelAbility(out act) ?? false) return true;
+        act = null; return false;
     }
 
     private bool MyInterruptAbility(JobRole role, out IAction? act)
