@@ -814,4 +814,10 @@ internal enum UiString
 
     [Description("There are some limits if you turn {0} off!")]
     IWannaBeSaidHelloWarning,
+
+    [Description("Auto heal on timeline")]
+    AutoHealOnTimeline,
+
+    [Description("Auto defense on timeline")]
+    AutoDefenseOnTimeline,
 }

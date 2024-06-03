@@ -6,6 +6,10 @@ namespace RotationSolver.Basic.Configuration;
 
 internal class TerritoryConfig
 {
+    public bool AutoHeal { get; set; } = true;
+
+    public bool AutoDefense { get; set; } = true;
+
     [JsonProperty]
     private Dictionary<Job, TerritoryConfigItem> _jobConfigs = [];
 

@@ -28,7 +28,6 @@ partial class DancerRotation
     /// 
     /// </summary>
     public static byte CompletedSteps => JobGauge.CompletedSteps;
-
     static partial void ModifyEnAvantPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
