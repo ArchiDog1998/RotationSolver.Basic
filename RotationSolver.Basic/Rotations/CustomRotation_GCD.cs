@@ -118,7 +118,10 @@ partial class CustomRotation
     private bool UseLimitBreak(out IAction? act)
     {
         act = null;
-        if (DataCenter.IsPvP) return false;
+        if (DataCenter.IsPvP)
+        {
+            return LimitBreakPvPGCD(out act);
+        }
 
         return LimitBreakLevel switch
         {
@@ -127,6 +130,16 @@ partial class CustomRotation
             3 => LimitBreak3?.CanUse(out act, skipAoeCheck: true) ?? false,
             _ => false,
         };
+    }
+
+    /// <summary>
+    /// The gcd for lb in PvP!
+    /// </summary>
+    /// <param name="act">the action.</param>
+    /// <returns></returns>
+    protected virtual bool LimitBreakPvPGCD(out IAction? act)
+    {
+        act = null; return false;
     }
 
     private bool RaiseSpell(out IAction? act, bool mustUse)
