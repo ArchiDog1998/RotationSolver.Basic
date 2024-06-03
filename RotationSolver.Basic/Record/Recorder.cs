@@ -39,8 +39,22 @@ internal static class Recorder
 
     private static void Framework_Update(Dalamud.Plugin.Services.IFramework framework)
     {
-        UpdateObjectNewData();
-        UpdateCastingObjectData();
+        try
+        {
+            UpdateObjectNewData();
+        }
+        catch
+        {
+
+        }
+        try
+        {
+            UpdateCastingObjectData();
+        }
+        catch
+        {
+
+        }
     }
 
     private static GameObject[] _lastObjs = [];
