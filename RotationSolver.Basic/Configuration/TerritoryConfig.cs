@@ -10,6 +10,9 @@ internal class TerritoryConfig
 
     public bool AutoDefense { get; set; } = true;
 
+    [JsonIgnore]
+    public bool HasTimeline => Timeline.Any(p => p.Value.Any(i => i is ActionTimelineItem or StateTimelineItem));
+
     [JsonProperty]
     private Dictionary<Job, TerritoryConfigItem> _jobConfigs = [];
 
