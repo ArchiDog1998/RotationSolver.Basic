@@ -4,14 +4,26 @@ partial class CustomRotation
 {
     private bool Ability(IAction nextGCD, out IAction? act)
     {
-        act = DataCenter.CommandNextAction;
+        var pair = DataCenter.CommandNextAction;
 
-        IBaseAction.ForceEnable = true;
-        if (act is IBaseAction a && a != null && !a.Info.IsRealGCD && a.CanUse(out _,
-            usedUp: true, skipAoeCheck: true)) return true;
-        IBaseAction.ForceEnable = false;
+        if (pair != null)
+        {
+            act = pair.Value.Action;
+            if (pair.Value.Type != TargetType.None)
+            {
+                IBaseAction.TargetOverride = pair.Value.Type;
+            }
 
-        if (act is IBaseItem i && i.CanUse(out _, true)) return true;
+            IBaseAction.ForceEnable = true;
+            if (act is IBaseAction a && a != null && !a.Info.IsRealGCD && a.CanUse(out _,
+                usedUp: true, skipAoeCheck: true)) return true;
+            IBaseAction.ForceEnable = false;
+
+            if (act is IBaseItem i && i.CanUse(out _, true)) return true;
+
+            IBaseAction.TargetOverride = null;
+        }
+
 
         if (!Service.Config.UseAbility || Player.TotalCastTime > 0)
         {

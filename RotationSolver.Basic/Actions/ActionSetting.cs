@@ -91,7 +91,7 @@ public class ActionSetting()
     /// </summary>
     public bool IsFriendly { get; set; }
 
-    private TargetType _type = TargetType.FromConfig;
+    private TargetType _type = TargetType.None;
 
     /// <summary>
     /// The strategy to target the target.

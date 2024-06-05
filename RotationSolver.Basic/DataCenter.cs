@@ -11,6 +11,7 @@ using RotationSolver.Basic.Rotations.Duties;
 using XIVConfigUI;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 using CharacterManager = FFXIVClientStructs.FFXIV.Client.Game.Character.CharacterManager;
+using TargetType = RotationSolver.Basic.Actions.TargetType;
 
 namespace RotationSolver.Basic;
 
@@ -130,7 +131,7 @@ internal static class DataCenter
             _actionSequencerAction = value;
         }
     }
-    public static IAction? CommandNextAction
+    public static (IAction Action, TargetType Type)? CommandNextAction
     {
         get
         {
@@ -141,17 +142,19 @@ internal static class DataCenter
                 NextActs.RemoveAt(0);
                 next = NextActs.FirstOrDefault();
             }
-            return next?.Act ?? ActionSequencerAction;
+            var action = next?.Act ?? ActionSequencerAction;
+            if (action == null) return null;
+            return (action, next?.Type ?? TargetType.None);
         }
     }
     public static Job Job { get; set; }
 
     public static JobRole Role => Service.GetSheet<ClassJob>().GetRow((uint)Job)?.GetJobRole() ?? JobRole.None;
 
-    internal static void AddCommandAction(IAction act, double time)
+    internal static void AddCommandAction(IAction act, double time, TargetType type)
     {
         var index = NextActs.FindIndex(i => i.Act.ID == act.ID);
-        var newItem = new NextAct(act, DateTime.Now.AddSeconds(time));
+        var newItem = new NextAct(act, DateTime.Now.AddSeconds(time), type);
         if (index < 0)
         {
             NextActs.Add(newItem);

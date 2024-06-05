@@ -5,17 +5,28 @@ partial class CustomRotation
     private static DateTime _nextTimeToHeal = DateTime.MinValue;
     private IAction? GCD()
     {
-        var act = DataCenter.CommandNextAction;
+        var pair = DataCenter.CommandNextAction;
 
-        IBaseAction.ForceEnable = true;
-        if (act is IBaseAction a && a != null && a.Info.IsRealGCD 
-            && a.CanUse(out _, usedUp: true, skipAoeCheck: true)) return act;
-        IBaseAction.ForceEnable = false;
+        if (pair != null)
+        {
+            var cmdAct = pair.Value.Action;
+            if (pair.Value.Type != TargetType.None)
+            {
+                IBaseAction.TargetOverride = pair.Value.Type;
+            }
+
+            IBaseAction.ForceEnable = true;
+            if (cmdAct is IBaseAction a && a != null && a.Info.IsRealGCD
+                && a.CanUse(out _, usedUp: true, skipAoeCheck: true)) return cmdAct;
+            IBaseAction.ForceEnable = false;
+
+            IBaseAction.TargetOverride = null;
+        }
 
         IBaseAction.ShouldEndSpecial = true;
 
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.LimitBreak)
-            && UseLimitBreak(out act)) return act;
+            && UseLimitBreak(out var act)) return act;
 
         IBaseAction.ShouldEndSpecial = false;
 
