@@ -820,4 +820,10 @@ internal enum UiString
 
     [Description("Auto defense on timeline")]
     AutoDefenseOnTimeline,
+
+    [Description("This rotation's dependency is too LOW, which may cause some errors. Please update this rotations!")]
+    AssemblyLowVersion,
+
+    [Description("This rotation's dependency is too HIGH, which may cause some errors. Please update the Rotation Solver!")]
+    AssemblyHighVersion,
 }
