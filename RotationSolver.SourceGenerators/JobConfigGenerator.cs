@@ -86,6 +86,8 @@ public class JobConfigGenerator : IIncrementalGenerator
                         {
                             get
                             {
+                                if (DataCenter.Job == Job.ADV) return {{variableName}};
+
                                 if ({{variableName}}Dict.TryGetValue(DataCenter.Job, out var value)) return value;
                                 return {{variableName}}Dict[DataCenter.Job] = {{variableName}};
                             }
