@@ -809,6 +809,6 @@ internal enum UiString
     [Description("This rotation's dependency is too HIGH, which may cause some errors. Please update the Rotation Solver!")]
     AssemblyHighVersion,
 
-    [Description("If you wanna delete this plugin, you'd better disable \"{0}\" first.")]
+    [Description("If you wanna delete Rotation Solver, you'd better disable \"{0}\" first.")]
     DeleteWarning,
 }

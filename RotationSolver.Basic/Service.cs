@@ -168,7 +168,7 @@ internal class Service : IDisposable
         {
             var uiName = Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
             var warning = string.Format(UiString.DeleteWarning.Local(), uiName);
-            Notify.Warning(warning);
+            warning.ShowWarning(1);
         }
 
         Svc.ClientState.Login -= ClientState_Login;
