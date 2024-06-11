@@ -1,7 +1,6 @@
 ﻿using Dalamud.Utility.Signatures;
 using ECommons.DalamudServices;
 using ECommons.GameHelpers;
-using ECommons.ImGuiMethods;
 using FFXIVClientStructs.Attributes;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
@@ -136,7 +135,15 @@ internal class Service : IDisposable
         if (count == 0) return false;
 
         var upload = count > 2000 && Config.IWannaBeSaidHello;
-        GithubRecourcesHelper.UploadYourHash(upload);
+
+        try
+        {
+            GithubRecourcesHelper.UploadYourHash(upload);
+        }
+        catch
+        {
+
+        }
         return upload;
     }
 

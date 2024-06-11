@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations;
 
 internal class RotationSearchableConfig : SearchableConfig //TODO : better info.
 {
-    public override bool GeneratDefault => false;
+    public override bool GeneralDefault => false;
 
     public override bool IsPropertyValid(PropertyInfo property)
     {

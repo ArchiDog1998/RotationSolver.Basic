@@ -144,6 +144,11 @@ partial class CustomRotation : ICustomRotation
 
         //Load from config.
         var savedConfigs = Service.Config.RotationConfigurations;
+
+#if DEBUG
+        Svc.Log.Info("Loading " + GetType().FullName);
+#endif
+
         foreach (var item in _configs)
         {
             item._default = item._property.GetValue(this)!;
@@ -178,7 +183,7 @@ partial class CustomRotation : ICustomRotation
     /// <inheritdoc/>
     public void Dispose()
     {
-        GC.SuppressFinalize(this);
         _configs.Dispose();
+        GC.SuppressFinalize(this);
     }
 }
