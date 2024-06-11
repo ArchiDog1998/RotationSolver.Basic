@@ -1,6 +1,7 @@
 ﻿using Dalamud.Utility.Signatures;
 using ECommons.DalamudServices;
 using ECommons.GameHelpers;
+using ECommons.ImGuiMethods;
 using FFXIVClientStructs.Attributes;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
@@ -126,11 +127,19 @@ internal class Service : IDisposable
 
     private void ClientState_Login()
     {
+        UpdateYourHash();
+    }
+
+    public static bool UpdateYourHash()
+    {
         var count = OtherConfiguration.RotationSolverRecord.ClickingCount;
         if (count != 0)
         {
-            GithubRecourcesHelper.UploadYourHash(count > 2000 && Config.IWannaBeSaidHello);
+            var upload = count > 2000 && Config.IWannaBeSaidHello;
+            GithubRecourcesHelper.UploadYourHash(upload);
+            return upload;
         }
+        return false;
     }
 
     public static ActionID GetAdjustedActionId(ActionID id)
@@ -155,6 +164,13 @@ internal class Service : IDisposable
         if (!_canMove && ForceDisableMovement > 0)
         {
             ForceDisableMovement--;
+        }
+
+        if (UpdateYourHash())
+        {
+            var uiName = Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
+            var warning = string.Format(UiString.DeleteWarning.Local(), uiName);
+            Notify.Warning(warning);
         }
 
         Svc.ClientState.Login -= ClientState_Login;

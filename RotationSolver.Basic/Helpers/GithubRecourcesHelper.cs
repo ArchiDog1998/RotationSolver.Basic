@@ -17,7 +17,7 @@ internal static class GithubRecourcesHelper
 
     internal delegate bool ModifyValueDelegate<T>(ref T value, out string commit);
 
-    internal static async Task ModifyFile<T>(string path, ModifyValueDelegate<T?> modifyFile)
+    private static async Task ModifyFile<T>(string path, ModifyValueDelegate<T?> modifyFile)
     {
         bool shouldCreate = true;
         string sha = string.Empty;
