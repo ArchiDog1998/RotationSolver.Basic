@@ -54,7 +54,7 @@ partial class CustomRotation : ICustomRotation
     /// <inheritdoc/>
     public uint IconID { get; }
 
-    private readonly SearchableCollection _configs;
+    private SearchableCollection _configs;
 
     /// <inheritdoc/>
     SearchableCollection ICustomRotation.Configs => _configs;
@@ -139,15 +139,21 @@ partial class CustomRotation : ICustomRotation
     private protected CustomRotation()
     {
         IconID = IconSet.GetJobIcon(this.Job);
-        
-        _configs = new SearchableCollection(this, new RotationSearchableConfig());
 
-        //Load from config.
-        var savedConfigs = Service.Config.RotationConfigurations;
+        _configs = new SearchableCollection(this, new RotationSearchableConfig());
 
 #if DEBUG
         Svc.Log.Info("Loading " + GetType().FullName);
 #endif
+    }
+
+    /// <inheritdoc/>
+    void ICustomRotation.Enable()
+    {
+        _configs = new SearchableCollection(this, new RotationSearchableConfig());
+
+        //Load from config.
+        var savedConfigs = Service.Config.RotationConfigurations;
 
         foreach (var item in _configs)
         {
@@ -157,6 +163,14 @@ partial class CustomRotation : ICustomRotation
                 item.OnCommand(value);
             }
         }
+
+        OnTerritoryChanged();
+    }
+
+    /// <inheritdoc/>
+    void ICustomRotation.Disable()
+    {
+        _configs.Dispose();
     }
 
     /// <inheritdoc/>
@@ -180,10 +194,4 @@ partial class CustomRotation : ICustomRotation
     /// </summary>
     public virtual void OnTerritoryChanged() { }
 
-    /// <inheritdoc/>
-    public void Dispose()
-    {
-        _configs.Dispose();
-        GC.SuppressFinalize(this);
-    }
 }

@@ -1,5 +1,4 @@
 ﻿using ECommons.ExcelServices;
-using Lumina.Excel.GeneratedSheets;
 using RotationSolver.Basic.Traits;
 using XIVConfigUI;
 
@@ -8,7 +7,7 @@ namespace RotationSolver.Basic.Rotations;
 /// <summary>
 /// The custom rotation.
 /// </summary>
-public interface ICustomRotation : ITexture, IDisposable
+public interface ICustomRotation : ITexture
 {
     /// <summary>
     /// The average count of not recommend members using.
@@ -129,4 +128,15 @@ public interface ICustomRotation : ITexture, IDisposable
     /// It occur when territory changed or rotation changed.
     /// </summary>
     void OnTerritoryChanged();
+
+
+    /// <summary>
+    /// Enable
+    /// </summary>
+    internal void Enable();
+
+    /// <summary>
+    /// Disable
+    /// </summary>
+    internal void Disable();
 }
