@@ -133,6 +133,15 @@ internal partial class Configs : IPluginConfiguration
         Description = "Shows the next ability under the target and AoE attacks effect area")]
     public ConditionBoolean ShowTarget { get; private set; } = new(true, nameof(ShowTarget));
 
+    [UI("Show circle drawing.", Parent = nameof(ShowTarget))]
+    public ConditionBoolean ShowCircleTarget { get; private set; } = new(true, nameof(ShowCircleTarget));
+
+    [UI("Show sector drawing.", Parent = nameof(ShowTarget))]
+    public ConditionBoolean ShowSectorTarget { get; private set; } = new(true, nameof(ShowSectorTarget));
+
+    [UI("Show rectangle drawing.", Parent = nameof(ShowTarget))]
+    public ConditionBoolean ShowRectangleTarget { get; private set; } = new(true, nameof(ShowRectangleTarget));
+
     [UI("Shows the target's estimated time to kill.",
         Parent = nameof(ShowTarget))]
     public ConditionBoolean ShowTargetTimeToKill { get; private set; } = new(false, nameof(ShowTargetTimeToKill));

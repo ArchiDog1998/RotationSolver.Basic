@@ -133,13 +133,11 @@ internal class Service : IDisposable
     public static bool UpdateYourHash()
     {
         var count = OtherConfiguration.RotationSolverRecord.ClickingCount;
-        if (count != 0)
-        {
-            var upload = count > 2000 && Config.IWannaBeSaidHello;
-            GithubRecourcesHelper.UploadYourHash(upload);
-            return upload;
-        }
-        return false;
+        if (count == 0) return false;
+
+        var upload = count > 2000 && Config.IWannaBeSaidHello;
+        GithubRecourcesHelper.UploadYourHash(upload);
+        return upload;
     }
 
     public static ActionID GetAdjustedActionId(ActionID id)
