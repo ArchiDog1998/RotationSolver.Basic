@@ -5,7 +5,15 @@ namespace RotationSolver.Basic.Configuration;
 [ListUI(12)]
 internal class TargetingData
 {
-    public string TargetName { get; set; } = string.Empty;
+    [JsonProperty]
+    private string _targetName = string.Empty;
+
+    [JsonIgnore]
+    public string TargetName 
+    { 
+        get => string.IsNullOrEmpty(_targetName) ? TargetingType.ToString() : _targetName;
+        set => _targetName = value;
+    }
     public TargetingType TargetingType { get; set; } = TargetingType.Big;
 
     public BattleChara? FindTarget(IEnumerable<BattleChara> chara)
