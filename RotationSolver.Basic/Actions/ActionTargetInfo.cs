@@ -663,21 +663,7 @@ public struct ActionTargetInfo(IBaseAction action)
                 gameObjects = highPriority;
             }
 
-            return FindHostileRaw();
-        }
-
-        BattleChara? FindHostileRaw()
-        {
-            gameObjects = DataCenter.TargetingType switch
-            {
-                TargetingType.Small => gameObjects.OrderBy(p => p.HitboxRadius),
-                TargetingType.HighHP => gameObjects.OrderByDescending(p => p is BattleChara b ? b.CurrentHp : 0),
-                TargetingType.LowHP => gameObjects.OrderBy(p => p is BattleChara b ? b.CurrentHp : 0),
-                TargetingType.HighMaxHP => gameObjects.OrderByDescending(p => p is BattleChara b ? b.MaxHp : 0),
-                TargetingType.LowMaxHP => gameObjects.OrderBy(p => p is BattleChara b ? b.MaxHp : 0),
-                _ => gameObjects.OrderByDescending(p => p.HitboxRadius),
-            };
-            return gameObjects.FirstOrDefault();
+            return DataCenter.TargetingWay.FindTarget(gameObjects);
         }
 
         BattleChara? FindBeAttackedTarget()

@@ -3,7 +3,7 @@
 /// <summary>
 /// The type of targeting.
 /// </summary>
-public enum TargetingType
+public enum TargetingType : byte
 {
     /// <summary>
     /// Find the target whose hit box is biggest.
@@ -40,4 +40,10 @@ public enum TargetingType
     /// </summary>
     [Description("Low Max HP")]
     LowMaxHP,
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Description("Closest")]
+    Close,
 }

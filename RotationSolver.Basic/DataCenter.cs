@@ -5,6 +5,7 @@ using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Fate;
 using Lumina.Excel.GeneratedSheets;
+using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Configuration.Condition;
 using RotationSolver.Basic.Record;
 using RotationSolver.Basic.Rotations.Duties;
@@ -170,18 +171,18 @@ internal static class DataCenter
 
     public static unsafe ActionID LastComboAction => (ActionID)ActionManager.Instance()->Combo.Action;
     public static unsafe float ComboTime => ActionManager.Instance()->Combo.Timer;
-    public static TargetingType TargetingType
+    public static TargetingData TargetingWay
     {
         get
         {
-            if (Service.Config.TargetingTypes.Count == 0)
+            if (Service.Config.TargetingWays.Count == 0)
             {
-                Service.Config.TargetingTypes.Add(TargetingType.Big);
-                Service.Config.TargetingTypes.Add(TargetingType.Small);
+                Service.Config.TargetingWays.Add(TargetingType.Big);
+                Service.Config.TargetingWays.Add(TargetingType.Small);
                 Service.Config.Save();
             }
 
-            return Service.Config.TargetingTypes[Service.Config.TargetingIndex % Service.Config.TargetingTypes.Count];
+            return Service.Config.TargetingWays[Service.Config.TargetingIndex % Service.Config.TargetingWays.Count];
         }
     }
 

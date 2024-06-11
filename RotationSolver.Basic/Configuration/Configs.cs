@@ -16,7 +16,7 @@ internal partial class Configs : IPluginConfiguration
     public string[] OtherLibs { get; set; } = [];
 
     public string[] GitHubLibs { get; set; } = [];
-    public List<TargetingType> TargetingTypes { get; set; } = [];
+    public List<TargetingData> TargetingWays { get; set; } = [];
 
     public MacroInfo DutyStart { get; set; } = new MacroInfo();
     public MacroInfo DutyEnd { get; set; } = new MacroInfo();

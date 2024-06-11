@@ -10,9 +10,6 @@ internal enum UiString
     [Description("The rotation you will use, click to modify.")]
     ConfigWindow_DutyRotationDesc,
 
-    [Description("Remove")]
-    ConfigWindow_List_Remove,
-
     [Description("Load From folder.")]
     ActionSequencer_Load,
 
@@ -222,12 +219,6 @@ internal enum UiString
 
     [Description("No Casting debuffs List")]
     ConfigWindow_List_NoCastingStatusDesc,
-
-    [Description("Copy to Clipboard")]
-    ConfigWindow_Actions_Copy,
-
-    [Description("From Clipboard")]
-    ActionSequencer_FromClipboard,
 
     [Description("Open the timeline link")]
     Timeline_OpenLink,
@@ -450,15 +441,6 @@ internal enum UiString
 
     [Description("The logic of hostile target selection to allow flexibility in switching the logic of selecting hostile in battle.")]
     ConfigWindow_Param_HostileDesc,
-
-    [Description("Move Up")]
-    ConfigWindow_Actions_MoveUp,
-
-    [Description("Move Down")]
-    ConfigWindow_Actions_MoveDown,
-
-    [Description("Hostile target selection condition")]
-    ConfigWindow_Param_HostileCondition,
 
     [Description("Rotation Solver focuses on the rotation itself. These are side features. If there are some other plugins can do that, these features will be deleted.")]
     ConfigWindow_Extra_Description,
