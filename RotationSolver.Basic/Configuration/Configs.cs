@@ -816,7 +816,7 @@ internal partial class Configs : IPluginConfiguration
 
             if (!dict.TryGetValue(DutyRotationChoice, out var value))
             {
-                value = dict[RotationChoice] = _rotationConfigurations;
+                value = dict[RotationChoice] = [];
             }
 
             return value;

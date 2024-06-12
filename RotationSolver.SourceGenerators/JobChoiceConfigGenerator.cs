@@ -1,10 +1,8 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Text;
 
 namespace RotationSolver.SourceGenerators;
 
@@ -96,7 +94,7 @@ public class JobChoiceConfigGenerator : IIncrementalGenerator
                                 
                                 if (!dict.TryGetValue(RotationChoice, out var value))
                                 {
-                                    value = dict[RotationChoice] = {{variableName}};
+                                    value = dict[RotationChoice] = GeneralHelper.Copy({{variableName}});
                                 }
 
                                 return value;
@@ -116,6 +114,7 @@ public class JobChoiceConfigGenerator : IIncrementalGenerator
             var code = $$"""
              using ECommons.ExcelServices;
              using XIVConfigUI.Attributes;
+             using RotationSolver.Basic.Helpers;
 
              namespace {{nameSpace}}
              {

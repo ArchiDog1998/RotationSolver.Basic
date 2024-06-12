@@ -3,7 +3,7 @@ using System.Text;
 
 namespace RotationSolver.Basic.Helpers;
 
-internal static  class Cryptor
+internal static class Cryptor
 {
     static readonly byte[] key = [3, 1, 4, 5, 6, 2, 4, 9];
     static readonly byte[] iv = [1, 2, 3, 4, 5, 6, 7, 8];
