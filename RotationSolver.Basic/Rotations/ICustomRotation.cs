@@ -7,7 +7,7 @@ namespace RotationSolver.Basic.Rotations;
 /// <summary>
 /// The custom rotation.
 /// </summary>
-public interface ICustomRotation : ITexture
+public interface ICustomRotation : ITexture, IDisposable
 {
     /// <summary>
     /// The average count of not recommend members using.
@@ -128,15 +128,4 @@ public interface ICustomRotation : ITexture
     /// It occur when territory changed or rotation changed.
     /// </summary>
     void OnTerritoryChanged();
-
-
-    /// <summary>
-    /// Enable
-    /// </summary>
-    internal void Enable();
-
-    /// <summary>
-    /// Disable
-    /// </summary>
-    internal void Disable();
 }

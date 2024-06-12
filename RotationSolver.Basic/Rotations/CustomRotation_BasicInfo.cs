@@ -54,7 +54,7 @@ partial class CustomRotation : ICustomRotation
     /// <inheritdoc/>
     public uint IconID { get; }
 
-    private SearchableCollection _configs;
+    private readonly SearchableCollection _configs;
 
     /// <inheritdoc/>
     SearchableCollection ICustomRotation.Configs => _configs;
@@ -138,20 +138,23 @@ partial class CustomRotation : ICustomRotation
 
     private protected CustomRotation()
     {
-        IconID = IconSet.GetJobIcon(this.Job);
+        DataCenter.Job = Job;
+        if (DataCenter.IsPvP)
+        {
+            Service.Config.PvPRotationChoice = GetType().FullName;
+        }
+        else
+        {
+            Service.Config.RotationChoice = GetType().FullName;
+        }
+
+        IconID = IconSet.GetJobIcon(Job);
 
         _configs = new SearchableCollection(this, new RotationSearchableConfig());
 
 #if DEBUG
         Svc.Log.Info("Loading " + GetType().FullName);
 #endif
-    }
-
-    /// <inheritdoc/>
-    void ICustomRotation.Enable()
-    {
-        _configs = new SearchableCollection(this, new RotationSearchableConfig());
-
         //Load from config.
         var savedConfigs = Service.Config.RotationConfigurations;
 
@@ -165,12 +168,6 @@ partial class CustomRotation : ICustomRotation
         }
 
         OnTerritoryChanged();
-    }
-
-    /// <inheritdoc/>
-    void ICustomRotation.Disable()
-    {
-        _configs.Dispose();
     }
 
     /// <inheritdoc/>
@@ -194,4 +191,11 @@ partial class CustomRotation : ICustomRotation
     /// </summary>
     public virtual void OnTerritoryChanged() { }
 
+    /// <inheritdoc/>
+    public void Dispose()
+    {
+        DataCenter.Job = Job.ADV;
+        _configs.Dispose();
+        GC.SuppressFinalize(this);
+    }
 }
