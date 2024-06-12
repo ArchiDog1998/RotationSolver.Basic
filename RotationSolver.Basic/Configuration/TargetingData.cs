@@ -5,10 +5,8 @@ namespace RotationSolver.Basic.Configuration;
 [ListUI(12)]
 internal class TargetingData
 {
-    [JsonProperty]
     private string _targetName = string.Empty;
 
-    [JsonIgnore]
     public string TargetName 
     { 
         get => string.IsNullOrEmpty(_targetName) ? TargetingType.ToString() : _targetName;
