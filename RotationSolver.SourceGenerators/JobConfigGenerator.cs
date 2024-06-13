@@ -86,10 +86,10 @@ public class JobConfigGenerator : IIncrementalGenerator
                         {
                             get
                             {
-                                if (DataCenter.Job == Job.ADV) return GeneralHelper.Copy({{variableName}});
+                                if (DataCenter.Job == Job.ADV) return {{variableName}}.JSONClone();
 
                                 if ({{variableName}}Dict.TryGetValue(DataCenter.Job, out var value)) return value;
-                                return {{variableName}}Dict[DataCenter.Job] = GeneralHelper.Copy({{variableName}});
+                                return {{variableName}}Dict[DataCenter.Job] = {{variableName}}.JSONClone();
                             }
                             set
                             {
@@ -104,9 +104,9 @@ public class JobConfigGenerator : IIncrementalGenerator
             if (propertyCodes.Count == 0) continue;
 
             var code = $$"""
+             using ECommons;
              using ECommons.ExcelServices;
              using XIVConfigUI.Attributes;
-             using RotationSolver.Basic.Helpers;
 
              namespace {{nameSpace}}
              {

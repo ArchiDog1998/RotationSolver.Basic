@@ -94,7 +94,7 @@ public class JobChoiceConfigGenerator : IIncrementalGenerator
                                 
                                 if (!dict.TryGetValue(RotationChoice, out var value))
                                 {
-                                    value = dict[RotationChoice] = GeneralHelper.Copy({{variableName}});
+                                    value = dict[RotationChoice] = {{variableName}}.JSONClone();
                                 }
 
                                 return value;
@@ -112,9 +112,9 @@ public class JobChoiceConfigGenerator : IIncrementalGenerator
             if (propertyCodes.Count == 0) continue;
 
             var code = $$"""
+             using ECommons;
              using ECommons.ExcelServices;
              using XIVConfigUI.Attributes;
-             using RotationSolver.Basic.Helpers;
 
              namespace {{nameSpace}}
              {
