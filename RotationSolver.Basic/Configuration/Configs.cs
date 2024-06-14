@@ -55,7 +55,7 @@ internal partial class Configs : IPluginConfiguration
 
     [Range(0, 100, ConfigUnitType.None, 0.1f)]
     [UI("The Audio voice volume", Parent = nameof(SayOutStateChanged))]
-    public int VoiceVolume { get; private set; } = 80;
+    public int VoiceVolume { get; private set; } = 60;
 
     [UI("Displays plugin status in server info bar.",
         (int)UiString.ConfigWindow_UI_Information)]

@@ -9,7 +9,6 @@ namespace RotationSolver.Basic.Rotations;
 [Command("Rotation")]
 partial class CustomRotation : ICustomRotation
 {
-
     private Job? _job = null;
 
     /// <inheritdoc/>
