@@ -3,15 +3,15 @@
 namespace RotationSolver.Basic.Configuration.Target;
 
 [Description("Condition Set")]
-internal class TargetingConditionSet : ITargetingCondition
+internal class TargetingConditionSet : TargetingConditionBase
 {
     [UI("Conditions")]
-    public List<ITargetingCondition> Conditions { get; set; } = [];
+    public List<TargetingConditionBase> Conditions { get; set; } = [];
 
     [UI("Logical Type")]
     public LogicalType Type { get; set; } = LogicalType.All;
 
-    public bool IsTrue(BattleChara chara)
+    public override bool IsTrue(BattleChara chara)
     {
         if (Conditions.Count == 0) return false;
 

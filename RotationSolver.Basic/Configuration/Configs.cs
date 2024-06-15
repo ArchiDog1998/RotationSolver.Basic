@@ -427,6 +427,9 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Basic_Timer, Section = 2)]
     public ConditionBoolean NoPingCheck { get; private set; } = new(false, nameof(NoPingCheck));
 
+    [UI("Advanced Target System", (int)UiString.ConfigWindow_List_Hostile)]
+    public ConditionBoolean AdvancedTargetSystem { get; set; } = new(false, nameof(AdvancedTargetSystem));
+
     [UI("Uses additional conditions", (int)UiString.ConfigWindow_Basic_Others)]
     public bool UseAdditionalConditions { get; set; } = false;
 

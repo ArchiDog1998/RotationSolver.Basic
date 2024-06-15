@@ -5,11 +5,6 @@ using FFXIVClientStructs.Attributes;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
 using RotationSolver.Basic.Configuration;
-using RotationSolver.Basic.Configuration.Drawing;
-using RotationSolver.Basic.Configuration.TerritoryAction;
-using RotationSolver.Basic.Configuration.Timeline;
-using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
-using RotationSolver.Basic.Configuration.Trigger;
 using RotationSolver.Basic.Record;
 using XIVConfigUI;
 
@@ -29,7 +24,8 @@ internal class Service : IDisposable
             {
                 return UiString.CantUseInHighEnd.Local();
             }
-            if (DataCenter.TerritoryContentType is TerritoryContentType.DeepDungeons)
+            if (DataCenter.TerritoryContentType is TerritoryContentType.DeepDungeons
+                || DataCenter.Territory?.PlaceName?.Row is 2775)
             {
                 return UiString.CantUseInDeepDungeons.Local();
             }

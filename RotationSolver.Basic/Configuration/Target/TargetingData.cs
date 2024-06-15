@@ -6,6 +6,9 @@ namespace RotationSolver.Basic.Configuration.Target;
 [ListUI(61371)]
 internal class TargetingData
 {
+    [JsonIgnore]
+    public static bool IsAdvanced => Service.Config.AdvancedTargetSystem;
+
     [UI("Is In Loop", Description = "Will it loop when you use the command /rotation auto?")]
     public bool IsInLoop { get; set; } = true;
 
@@ -18,7 +21,7 @@ internal class TargetingData
         set => _targetName = value;
     }
 
-    [UI("Target Items")]
+    [UI("Target Items", Parent = nameof(IsAdvanced))]
     public List<TargetingItem> TargetItems { get; set; } = [];
 
     [UI("Targeting Type")]
@@ -26,11 +29,15 @@ internal class TargetingData
 
     public BattleChara? FindTarget(IEnumerable<BattleChara> chara)
     {
-        foreach (var item in TargetItems)
+        if (IsAdvanced)
         {
-            var b = item.FindTarget(chara);
-            if (b != null) return b;
+            foreach (var item in TargetItems)
+            {
+                var b = item.FindTarget(chara);
+                if (b != null) return b;
+            }
         }
+
         return TargetingType.FindTarget(chara);
     }
 

@@ -3,7 +3,7 @@
 namespace RotationSolver.Basic.Configuration.Target;
 
 [Description("Target Condition")]
-internal class TargetingCondition : ITargetingCondition
+internal class TargetingCondition : TargetingConditionBase
 {
     [UI("Value Type")]
     public ValueType Type { get; set; } = ValueType.Distance;
@@ -11,10 +11,11 @@ internal class TargetingCondition : ITargetingCondition
     [UI("Comparison")]
     public Comparison Compare { get; set; } = Comparison.Bigger;
 
+    [Range(0, 0, ConfigUnitType.Yalms)]
     [UI("Value")]
     public float Value { get; set; } = 1;
 
-    bool ITargetingCondition.IsTrue(BattleChara chara)
+    public override bool IsTrue(BattleChara chara)
     {
         var value = Type switch
         {
@@ -37,5 +38,7 @@ internal class TargetingCondition : ITargetingCondition
 internal enum ValueType : byte
 {
     Distance,
+
+    [Description("Hitbox Radius")]
     Hitbox,
 }
