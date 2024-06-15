@@ -171,12 +171,15 @@ internal class Service : IDisposable
             ForceDisableMovement--;
         }
 
+#if DEBUG
+#else
         if (UpdateYourHash())
         {
             var uiName = Config.GetType().GetRuntimeProperty(nameof(Configs.IWannaBeSaidHello))?.LocalUIName() ?? string.Empty;
             var warning = string.Format(UiString.DeleteWarning.Local(), uiName);
             warning.ShowWarning(1);
         }
+#endif
 
         Svc.ClientState.Login -= ClientState_Login;
         Svc.DutyState.DutyCompleted -= DutyState_DutyCompleted;

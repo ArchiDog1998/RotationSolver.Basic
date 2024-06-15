@@ -13,18 +13,9 @@ internal class ConditionSet : DelayCondition
 
         return Type switch
         {
-            LogicalType.And => Conditions.All(c => c.IsTrue(rotation) ?? false),
-            LogicalType.Or => Conditions.Any(c => c.IsTrue(rotation) ?? false),
+            LogicalType.All => Conditions.All(c => c.IsTrue(rotation) ?? false),
+            LogicalType.Any => Conditions.Any(c => c.IsTrue(rotation) ?? false),
             _ => false,
         };
     }
-}
-
-internal enum LogicalType : byte
-{
-    [Description("&&")]
-    And,
-
-    [Description(" | | ")]
-    Or,
 }

@@ -1,6 +1,7 @@
 ﻿using Dalamud.Configuration;
 using ECommons.DalamudServices;
 using ECommons.ExcelServices;
+using RotationSolver.Basic.Configuration.Target;
 using XIVConfigUI;
 using XIVConfigUI.Attributes;
 

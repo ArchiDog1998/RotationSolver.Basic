@@ -47,3 +47,20 @@ public enum TargetingType : byte
     [Description("Closest")]
     Close,
 }
+
+internal static class TargetingTypeExtension
+{
+    public static BattleChara? FindTarget(this TargetingType type, IEnumerable<BattleChara> chara)
+    {
+        return type switch
+        {
+            TargetingType.Close => chara.MinBy(p => p.DistanceToPlayer()),
+            TargetingType.Small => chara.MinBy(p => p.HitboxRadius),
+            TargetingType.HighHP => chara.MaxBy(p => p.CurrentHp),
+            TargetingType.LowHP => chara.MinBy(p => p.CurrentHp),
+            TargetingType.HighMaxHP => chara.MaxBy(p => p.MaxHp),
+            TargetingType.LowMaxHP => chara.MinBy(p => p.MaxHp),
+            _ => chara.MaxBy(p => p.HitboxRadius),
+        };
+    }
+}

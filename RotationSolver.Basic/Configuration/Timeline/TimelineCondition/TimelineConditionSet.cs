@@ -14,8 +14,8 @@ internal class TimelineConditionSet : ITimelineCondition
 
         return Type switch
         {
-            LogicalType.And => Conditions.All(c => c.IsTrue(item)),
-            LogicalType.Or => Conditions.Any(c => c.IsTrue(item)),
+            LogicalType.All => Conditions.All(c => c.IsTrue(item)),
+            LogicalType.Any => Conditions.Any(c => c.IsTrue(item)),
             _ => false,
         };
     }

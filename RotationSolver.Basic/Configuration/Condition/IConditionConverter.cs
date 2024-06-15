@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using ECommons.DalamudServices;
+using Newtonsoft.Json.Linq;
 
 namespace RotationSolver.Basic.Configuration.Condition;
 
