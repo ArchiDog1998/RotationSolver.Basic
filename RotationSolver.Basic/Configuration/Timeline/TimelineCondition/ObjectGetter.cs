@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
+[Obsolete]
 internal class ObjectGetter
 {
     public ObjectType Type { get; set; }

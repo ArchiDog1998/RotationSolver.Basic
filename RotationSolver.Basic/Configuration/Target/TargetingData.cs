@@ -27,18 +27,18 @@ internal class TargetingData
     [UI("Targeting Type")]
     public TargetingType TargetingType { get; set; } = TargetingType.Big;
 
-    public BattleChara? FindTarget(IEnumerable<BattleChara> chara)
+    public BattleChara? FindTarget(IEnumerable<BattleChara> characters)
     {
         if (IsAdvanced)
         {
             foreach (var item in TargetItems)
             {
-                var b = item.FindTarget(chara);
+                var b = item.FindTarget(characters);
                 if (b != null) return b;
             }
         }
 
-        return TargetingType.FindTarget(chara);
+        return TargetingType.FindTarget(characters);
     }
 
     public static implicit operator TargetingData(TargetingType targetType) => new() { TargetingType = targetType };

@@ -14,10 +14,10 @@ internal abstract class TargetingConditionBase : ICondition
         {
             var tar = Svc.Targets.Target;
 
-            if (tar is not BattleChara battle) return null;
-            return IsTrue(battle);
+            if (tar is null) return null;
+            return IsTrue(tar);
         }
     }
 
-    public abstract bool IsTrue(BattleChara chara);
+    public abstract bool IsTrue(GameObject obj);
 }

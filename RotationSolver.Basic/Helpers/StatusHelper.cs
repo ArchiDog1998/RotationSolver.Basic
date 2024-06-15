@@ -2,7 +2,7 @@
 using ECommons.Automation;
 using ECommons.GameHelpers;
 using RotationSolver.Basic.Configuration;
-
+using GStatus = Lumina.Excel.GeneratedSheets.Status;
 namespace RotationSolver.Basic.Helpers;
 
 /// <summary>
@@ -10,6 +10,26 @@ namespace RotationSolver.Basic.Helpers;
 /// </summary>
 public static class StatusHelper
 {
+    private static GStatus[]? _badStatus = null;
+    internal static GStatus[] BadStatus
+        => _badStatus ??= Service.GetSheet<GStatus>()
+                    .Where(s => s.StatusCategory == 2 && s.Icon != 0)
+                    .ToArray();
+
+    private static GStatus[]? _allDispelStatus = null;
+    internal static GStatus[] AllDispelStatus
+        => _allDispelStatus ??= Service.GetSheet<GStatus>()
+                    .Where(s => s.CanDispel)
+                    .ToArray();
+
+
+    private static GStatus[]? _allStatus = null;
+    internal static GStatus[] AllStatus
+        => _allStatus ??= Service.GetSheet<GStatus>()
+                    .Where(s => !s.CanDispel && !s.LockMovement && !s.IsGaze && !s.IsFcBuff
+                        && !string.IsNullOrEmpty(s.Name.ToString()) && s.Icon != 0)
+                    .ToArray();
+
     /// <summary>
     /// 
     /// </summary>

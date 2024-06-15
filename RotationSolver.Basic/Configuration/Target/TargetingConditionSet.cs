@@ -11,16 +11,16 @@ internal class TargetingConditionSet : TargetingConditionBase
     [UI("Logical Type")]
     public LogicalType Type { get; set; } = LogicalType.All;
 
-    public override bool IsTrue(BattleChara chara)
+    public override bool IsTrue(GameObject obj)
     {
         if (Conditions.Count == 0) return false;
 
         return Type switch
         {
-            LogicalType.All => Conditions.All(c => c.IsTrue(chara)),
-            LogicalType.Any => Conditions.Any(c => c.IsTrue(chara)),
-            LogicalType.NotAll => !Conditions.All(c => c.IsTrue(chara)),
-            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue(chara)),
+            LogicalType.All => Conditions.All(c => c.IsTrue(obj)),
+            LogicalType.Any => Conditions.Any(c => c.IsTrue(obj)),
+            LogicalType.NotAll => !Conditions.All(c => c.IsTrue(obj)),
+            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue(obj)),
             _ => false,
         };
     }

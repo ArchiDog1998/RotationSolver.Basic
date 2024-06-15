@@ -2,8 +2,8 @@
 
 namespace RotationSolver.Basic.Configuration.Target;
 
-[Description("Target Condition")]
-internal class TargetingCondition : TargetingConditionBase
+[Description("Space Condition")]
+internal class TargetingSpaceCondition : TargetingConditionBase
 {
     [UI("Value Type")]
     public ValueType Type { get; set; } = ValueType.Distance;
@@ -15,12 +15,12 @@ internal class TargetingCondition : TargetingConditionBase
     [UI("Value")]
     public float Value { get; set; } = 1;
 
-    public override bool IsTrue(BattleChara chara)
+    public override bool IsTrue(GameObject obj)
     {
         var value = Type switch
         {
-            ValueType.Hitbox => chara.HitboxRadius,
-            _ => chara.DistanceToPlayer(),
+            ValueType.Hitbox => obj.HitboxRadius,
+            _ => obj.DistanceToPlayer(),
         };
 
         return Compare switch
