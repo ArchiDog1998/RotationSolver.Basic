@@ -106,9 +106,7 @@ internal class OtherConfiguration
     private static TerritoryConfig FromTxt(string str)
     {
         return JsonConvert.DeserializeObject<TerritoryConfig>(str,
-                    new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
-                    new ITimelineConditionConverter(), new BaseTimelineItemConverter(),
-                    new BaseTriggerItemConverter())!;
+                    GeneralJsonConverter.Instance)!;
     }
 
     private static void DownloadTerritoryPrivate(uint id)

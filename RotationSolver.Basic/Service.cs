@@ -102,9 +102,7 @@ internal class Service : IDisposable
         {
             Config = JsonConvert.DeserializeObject<Configs>(
                 File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName),
-                new TerritoryActionConverter(), new BaseDrawingGetterConverter(), 
-                new ITimelineConditionConverter(), new BaseTimelineItemConverter(),
-                new BaseTriggerItemConverter())
+                GeneralJsonConverter.Instance)
                 ?? new Configs();
         }
         catch (Exception ex)

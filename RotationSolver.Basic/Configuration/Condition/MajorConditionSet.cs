@@ -1,5 +1,6 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.ExcelServices;
+using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration.Condition;
 
@@ -130,7 +131,7 @@ internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
 
             try
             {
-                return JsonConvert.DeserializeObject<MajorConditionSet>(str, new IConditionConverter());
+                return JsonConvert.DeserializeObject<MajorConditionSet>(str, GeneralJsonConverter.Instance);
             }
             catch (Exception ex)
             {

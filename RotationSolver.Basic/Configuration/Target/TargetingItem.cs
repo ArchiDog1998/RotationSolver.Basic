@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Configuration.Target;
 [ListUI(63927)]
 internal class TargetingItem
 {
-    [UI("Condition")]
+    [UI("Target Condition")]
     public TargetingConditionSet ConditionSet { get; set; } = new();
 
     [UI("Targeting Type")]
