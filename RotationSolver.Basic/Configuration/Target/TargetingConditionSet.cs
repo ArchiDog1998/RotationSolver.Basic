@@ -9,7 +9,7 @@ internal class TargetingConditionSet : ITargetingCondition
     public List<ITargetingCondition> Conditions { get; set; } = [];
 
     [UI("Logical Type")]
-    public LogicalType Type;
+    public LogicalType Type { get; set; } = LogicalType.All;
 
     public bool IsTrue(BattleChara chara)
     {
