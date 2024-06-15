@@ -1,15 +1,25 @@
 ﻿using RotationSolver.Basic.Record;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
-[Description("Map Effect")]
-internal class TimelineConditionMapEffect : ITimelineCondition
+[Description("Map Effect Condition")]
+internal class TimelineConditionMapEffect : TimelineConditionBase
 {
+    [Range(0, 0, ConfigUnitType.Seconds)]
+    [UI("Duration")]
     public Vector2 TimeDuration { get; set; } = new(0, 2);
+
+    [UI("Position")]
     public int Position { get; set; }
+
+    [UI("Param1")]
     public int Param1 { get; set; }
+
+    [UI("Param2")]
     public int Param2 { get; set; }
-    public bool IsTrue(TimelineItem item)
+
+    public override bool IsTrue(TimelineItem item)
     {
         return Recorder.GetData<MapEffectData>(TimeDuration).Any(effect =>
         {

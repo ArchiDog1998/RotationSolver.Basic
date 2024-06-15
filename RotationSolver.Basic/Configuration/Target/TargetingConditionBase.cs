@@ -8,6 +8,7 @@ namespace RotationSolver.Basic.Configuration.Target;
 [ListUI(0, Description = "The icon means whether the target meets the condition.")]
 internal abstract class TargetingConditionBase : ICondition
 {
+    [JsonIgnore]
     public bool? State
     {
         get

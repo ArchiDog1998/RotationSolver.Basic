@@ -1,8 +1,10 @@
 ﻿using RotationSolver.Basic.Configuration.Drawing;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class DrawingAction : ITerritoryAction
 {
+    [UI("Drawings")]
     public List<BaseDrawingGetter> DrawingGetters { get; set; } = [];
 
     private IDisposable[] _drawings = [];

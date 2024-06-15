@@ -2,19 +2,49 @@
 using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using XIVConfigUI;
+using XIVConfigUI.Attributes;
+using XIVConfigUI.ConditionConfigs;
 
 namespace RotationSolver.Basic.Configuration.Timeline;
 
-internal abstract class BaseTimelineItem
+internal class TimelineAttribute : ListUIAttribute
 {
-    public TimelineConditionSet Condition { get; set; } = new();
+    public TimelineAttribute() : base(0)
+    {
+        Description = "The icon means if it is in period.\nClick to show the action.";
+    }
 
-    internal abstract ITerritoryAction TerritoryAction { get;}
+    public override void OnClick(object obj)
+    {
+        if (obj is not BaseTimelineItem item) return;
+        Task.Run(async () =>
+        {
+            item.TerritoryAction.Enable();
+            await Task.Delay(3000);
+            item.TerritoryAction.Disable();
+        });
+    }
+}
 
+[Timeline, Description("Timeline Item")]
+internal abstract class BaseTimelineItem : ICondition
+{
+    [Range(0, 0, ConfigUnitType.Seconds)]
+    [UI("Time")]
     public float Time { get; set; } = 3;
+
+    [Range(0, 0, ConfigUnitType.Seconds)]
+    [UI("Duration")]
     public float Duration { get; set; } = 3;
 
+    [UI("Condition")]
+    public TimelineConditionSet Condition { get; set; } = new();
+
+    [UI("Action")]
+    internal abstract ITerritoryAction TerritoryAction { get; }
+
     private bool _enable = false;
+    [JsonIgnore]
     internal bool Enable
     {
         get => _enable;
@@ -38,6 +68,27 @@ internal abstract class BaseTimelineItem
             {
                 TerritoryAction.Disable();
             }
+        }
+    }
+
+    private TimelineItem? _timelineItem;
+    [JsonIgnore]
+    public TimelineItem? TimelineItem 
+    {
+        get => _timelineItem;
+        set
+        {
+            Condition.TimelineItem = _timelineItem = value;
+        }
+    }
+
+    [JsonIgnore]
+    public bool? State
+    {
+        get
+        {
+            if (TimelineItem == null) return null;
+            return InPeriod(TimelineItem);
         }
     }
 

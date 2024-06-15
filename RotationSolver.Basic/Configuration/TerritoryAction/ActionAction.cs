@@ -1,10 +1,14 @@
 ﻿using ECommons.DalamudServices;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
+
 internal class ActionAction : ITerritoryAction
 {
+    [UI("Action ID")]
     public ActionID ID { get; set; } = ActionID.None;
 
+    [UI("Target Type")]
     public TargetType TargetType { get; set; } = TargetType.None;
 
     public void Disable()

@@ -1,9 +1,11 @@
 ﻿using ECommons.DalamudServices;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 
 internal class StateAction : ITerritoryAction
 {
+    [UI("State")]
     public SpecialCommandType State { get; set; } = SpecialCommandType.DefenseArea;
 
     public void Disable()

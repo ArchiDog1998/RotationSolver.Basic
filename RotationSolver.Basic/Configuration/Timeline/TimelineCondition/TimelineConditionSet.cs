@@ -1,12 +1,32 @@
-﻿namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+﻿using XIVConfigUI.Attributes;
+
+namespace RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 
 [Description("Condition Set")]
-internal class TimelineConditionSet : ITimelineCondition
+internal class TimelineConditionSet : TimelineConditionBase
 {
-    public List<ITimelineCondition> Conditions { get; set; } = [];
+    [JsonIgnore]
+    public override TimelineItem? TimelineItem 
+    { 
+        get => base.TimelineItem; 
+        set
+        {
+            base.TimelineItem = value;
+            foreach (var item in Conditions)
+            {
+                if (item == null) continue;
+                item.TimelineItem = value;
+            }
+        }
+    }
 
-    public LogicalType Type;
-    public bool IsTrue(TimelineItem item)
+    [UI("Conditions")]
+    public List<TimelineConditionBase> Conditions { get; set; } = [];
+
+    [UI("Type")]
+    public LogicalType Type { get; set; } = LogicalType.All;
+
+    public override bool IsTrue(TimelineItem item)
     {
         if (Conditions.Count == 0) return true;
 
@@ -14,6 +34,8 @@ internal class TimelineConditionSet : ITimelineCondition
         {
             LogicalType.All => Conditions.All(c => c.IsTrue(item)),
             LogicalType.Any => Conditions.Any(c => c.IsTrue(item)),
+            LogicalType.NotAll => !Conditions.All(c => c.IsTrue(item)),
+            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue(item)),
             _ => false,
         };
     }

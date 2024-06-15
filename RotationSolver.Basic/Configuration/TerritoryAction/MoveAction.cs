@@ -1,8 +1,10 @@
 ﻿using ECommons.DalamudServices;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class MoveAction : ITerritoryAction
 {
+    [UI("Points")]
     public List<Vector3> Points { get; set; } = [];
 
     public void Enable()

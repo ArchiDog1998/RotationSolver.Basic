@@ -1,8 +1,10 @@
 ﻿using ECommons.Automation;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class MacroAction : ITerritoryAction
 {
+    [UI("Macro")]
     public string Macro { get; set; } = "";
 
     public void Enable()
