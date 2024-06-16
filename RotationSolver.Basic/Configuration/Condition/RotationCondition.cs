@@ -1,28 +1,107 @@
-﻿namespace RotationSolver.Basic.Configuration.Condition;
+﻿using XIVConfigUI;
+using XIVConfigUI.Attributes;
+
+namespace RotationSolver.Basic.Configuration.Condition;
+
+internal class MethodChoicesAttribute : ChoicesAttribute
+{
+    protected override Pair[] GetChoices()
+    {
+        return 
+        [
+            new (nameof(CustomRotation.IsLastGCD), nameof(CustomRotation.IsLastGCD)),
+            new (nameof(CustomRotation.IsLastAction), nameof(CustomRotation.IsLastAction)),
+            new (nameof(CustomRotation.IsLastAbility), nameof(CustomRotation.IsLastAbility)),
+        ];
+    }
+}
+
+internal class IntegerChoicesAttribute : ChoicesAttribute
+{
+    protected override bool Lazy => false;
+
+    protected override Pair[] GetChoices()
+    {
+        return [.. DataCenter.RightNowRotation?.AllBytesOrInt.Select(p => new Pair(p.Name, p.Local()))];
+    }
+}
+
+internal class BoolChoicesAttribute : ChoicesAttribute
+{
+    protected override bool Lazy => false;
+
+    protected override Pair[] GetChoices()
+    {
+        return [.. DataCenter.RightNowRotation?.AllBools.Select(p => new Pair(p.Name, p.Local()))];
+    }
+}
+
+internal class FloatChoicesAttribute : ChoicesAttribute
+{
+    protected override bool Lazy => false;
+
+    protected override Pair[] GetChoices()
+    {
+        return [.. DataCenter.RightNowRotation?.AllFloats.Select(p => new Pair(p.Name, p.Local()))];
+    }
+}
+
 
 [Description("Rotation Condition")]
-internal class RotationCondition : DelayCondition
+internal class RotationCondition : DelayConditionBase
 {
-    public ComboConditionType ComboConditionType = ComboConditionType.Float;
+    [UI("Type")]
+    public ComboConditionType ComboConditionType { get; set; } = ComboConditionType.Float;
+
     internal PropertyInfo? _prop;
-    public string PropertyName = "Not Chosen";
+    [JsonProperty]
+    private string _propertyName = "Not Chosen";
+
+    [JsonIgnore, IntegerChoices]
+    [UI("Integer Property", (int) ComboConditionType.Integer, Parent = nameof(ComboConditionType))]
+    public string IntegerName { get => _propertyName; set => _propertyName = value; }
+
+    [JsonIgnore, BoolChoices]
+    [UI("Bool Property", (int)ComboConditionType.Bool, Parent = nameof(ComboConditionType))]
+    public string BoolName { get => _propertyName; set => _propertyName = value; }
+
+    [JsonIgnore, FloatChoices]
+    [UI("Float Property", (int)ComboConditionType.Float, Parent = nameof(ComboConditionType))]
+    public string FloatName { get => _propertyName; set => _propertyName = value; }
 
     MethodInfo? _method;
-    public string MethodName = "Not Chosen";
+    private string _methodName = "Not Chosen";
+    [MethodChoices, UI("Method", (int)ComboConditionType.Last, Parent = nameof(ComboConditionType))]
+    public string MethodName { get => _methodName; set => _methodName = value; }
 
     internal IBaseAction? _action;
+
+    [UI("Action", (int)ComboConditionType.Last, Parent = nameof(ComboConditionType))]
     public ActionID ID { get; set; } = ActionID.None;
 
-    public int Condition;
+    [UI("Comparison", (int)ComboConditionType.Integer,
+        (int)ComboConditionType.Float,
+        Parent = nameof(ComboConditionType))]
+    public Comparison Comparison { get; set; } = Comparison.Bigger;
 
-    public int Param1;
-    public float Param2;
+    [UI("Count", (int)ComboConditionType.Integer,
+        Parent = nameof(ComboConditionType))]
+    public int Count { get; set; }
+
+
+    [UI("Value", (int)ComboConditionType.Float,
+        Parent = nameof(ComboConditionType))]
+    public float Value { get; set; }
+
+    [UI("Adjust", (int)ComboConditionType.Last,
+        Parent = nameof(ComboConditionType))]
+    public bool IsAdjust { get; set; } = false;
 
     public override bool CheckBefore(ICustomRotation rotation)
     {
         CheckBaseAction(rotation, ID, ref _action);
-        CheckMemberInfo(rotation, ref PropertyName, ref _prop);
-        CheckMemberInfo(rotation, ref MethodName, ref _method);
+        CheckMemberInfo(rotation, ref _propertyName, ref _prop);
+        CheckMemberInfo(rotation, ref _methodName, ref _method);
         return base.CheckBefore(rotation);
     }
 
@@ -44,26 +123,42 @@ internal class RotationCondition : DelayCondition
                 var value = _prop.GetValue(rotation);
                 if (value is byte by)
                 {
-                    switch (Condition)
+                    switch (Comparison)
                     {
-                        case 0:
-                            return by > Param1;
-                        case 1:
-                            return by < Param1;
-                        case 2:
-                            return by == Param1;
+                        case Comparison.Bigger:
+                            return by > Count;
+
+                        case Comparison.BiggerOrEqual:
+                            return by >= Count;
+
+                        case Comparison.Smaller:
+                            return by < Count;
+
+                        case Comparison.SmallerOrEqual:
+                            return by <= Count;
+
+                        case Comparison.Equal:
+                            return by == Count;
                     }
                 }
                 else if (value is int i)
                 {
-                    switch (Condition)
+                    switch (Comparison)
                     {
-                        case 0:
-                            return i > Param1;
-                        case 1:
-                            return i < Param1;
-                        case 2:
-                            return i == Param1;
+                        case Comparison.Bigger:
+                            return i > Count;
+
+                        case Comparison.BiggerOrEqual:
+                            return i >= Count;
+
+                        case Comparison.Smaller:
+                            return i < Count;
+
+                        case Comparison.SmallerOrEqual:
+                            return i <= Count;
+
+                        case Comparison.Equal:
+                            return i == Count;
                     }
                 }
                 return false;
@@ -72,14 +167,22 @@ internal class RotationCondition : DelayCondition
                 if (_prop == null) return false;
                 if (_prop.GetValue(rotation) is float fl)
                 {
-                    switch (Condition)
+                    switch (Comparison)
                     {
-                        case 0:
-                            return fl > Param2;
-                        case 1:
-                            return fl < Param2;
-                        case 2:
-                            return fl == Param2;
+                        case Comparison.Bigger:
+                            return fl > Value;
+
+                        case Comparison.BiggerOrEqual:
+                            return fl >= Value;
+
+                        case Comparison.Smaller:
+                            return fl < Value;
+
+                        case Comparison.SmallerOrEqual:
+                            return fl <= Value;
+
+                        case Comparison.Equal:
+                            return fl == Value;
                     }
                 }
                 return false;
@@ -87,7 +190,7 @@ internal class RotationCondition : DelayCondition
             case ComboConditionType.Last:
                 try
                 {
-                    if (_method?.Invoke(rotation, new object[] { Param1 > 0, new IAction?[] { _action } }) is bool boo)
+                    if (_method?.Invoke(rotation, [IsAdjust, new IAction?[] { _action }]) is bool boo)
                     {
                         return boo;
                     }

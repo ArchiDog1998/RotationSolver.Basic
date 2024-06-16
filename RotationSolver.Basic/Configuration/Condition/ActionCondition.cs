@@ -1,17 +1,47 @@
-﻿namespace RotationSolver.Basic.Configuration.Condition;
+﻿using XIVConfigUI.Attributes;
+
+namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Action Condition")]
-internal class ActionCondition : DelayCondition
+internal class ActionCondition : DelayConditionBase
 {
     internal IBaseAction? _action = null;
 
+    [UI("Action Id")]
     public ActionID ID { get; set; } = ActionID.None;
 
-    public ActionConditionType ActionConditionType = ActionConditionType.Elapsed;
+    [UI("Type")]
+    public ActionConditionType ActionConditionType { get; set; } = ActionConditionType.Elapsed;
 
-    public int Param1;
-    public int Param2;
-    public float Time;
+    [Range(0,0, ConfigUnitType.Seconds)]
+    [UI("Time", (int)ActionConditionType.Elapsed,
+        (int)ActionConditionType.Remain,
+        Parent = nameof(ActionConditionType))]
+    public float Time { get; set; }
+
+    [UI("Gcd", (int)ActionConditionType.ElapsedGCD,
+        (int)ActionConditionType.RemainGCD,
+        Parent = nameof(ActionConditionType))]
+    public int Gcd { get; set; }
+
+    [UI("Offset", (int)ActionConditionType.ElapsedGCD,
+        (int)ActionConditionType.RemainGCD,
+        Parent = nameof(ActionConditionType))]
+    public float Offset { get; set; }
+
+    [UI("Can Use", (int)ActionConditionType.CanUse,
+        Parent = nameof(ActionConditionType))]
+    public CanUseOption CanUse { get; set; } = CanUseOption.None;
+
+    [UI("Comparison", (int)ActionConditionType.CurrentCharges,
+        (int)ActionConditionType.MaxCharges,
+        Parent = nameof(ActionConditionType))]
+    public Comparison Comparison { get; set; } = Comparison.Bigger;
+
+    [UI("Count", (int)ActionConditionType.CurrentCharges,
+        (int)ActionConditionType.MaxCharges,
+        Parent = nameof(ActionConditionType))]
+    public int Count { get; set; }
 
     public override bool CheckBefore(ICustomRotation rotation)
     {
@@ -28,16 +58,16 @@ internal class ActionCondition : DelayCondition
                 return _action.CD.ElapsedOneChargeAfter(Time); // Bigger
 
             case ActionConditionType.ElapsedGCD:
-                return _action.CD.ElapsedOneChargeAfterGCD((uint)Param1, Param2); // Bigger
+                return _action.CD.ElapsedOneChargeAfterGCD((uint)Gcd, Offset); // Bigger
 
             case ActionConditionType.Remain:
                 return !_action.CD.WillHaveOneCharge(Time); //Smaller
 
             case ActionConditionType.RemainGCD:
-                return !_action.CD.WillHaveOneChargeGCD((uint)Param1, Param2); // Smaller
+                return !_action.CD.WillHaveOneChargeGCD((uint)Gcd, Offset); // Smaller
 
             case ActionConditionType.CanUse:
-                return _action.CanUse(out _, (CanUseOption)Param1);
+                return _action.CanUse(out _, CanUse);
 
             case ActionConditionType.EnoughLevel:
                 return _action.EnoughLevel;
@@ -46,26 +76,42 @@ internal class ActionCondition : DelayCondition
                 return _action.CD.IsCoolingDown;
 
             case ActionConditionType.CurrentCharges:
-                switch (Param2)
+                switch (Comparison)
                 {
-                    case 0:
-                        return _action.CD.CurrentCharges > Param1;
-                    case 1:
-                        return _action.CD.CurrentCharges < Param1;
-                    case 2:
-                        return _action.CD.CurrentCharges == Param1;
+                    case Comparison.Bigger:
+                        return _action.CD.CurrentCharges > Count;
+
+                    case Comparison.BiggerOrEqual:
+                        return _action.CD.CurrentCharges >= Count;
+
+                    case Comparison.Smaller:
+                        return _action.CD.CurrentCharges < Count;
+
+                    case Comparison.SmallerOrEqual:
+                        return _action.CD.CurrentCharges <= Count;
+
+                    case Comparison.Equal:
+                        return _action.CD.CurrentCharges == Count;
                 }
                 break;
 
             case ActionConditionType.MaxCharges:
-                switch (Param2)
+                switch (Comparison)
                 {
-                    case 0:
-                        return _action.CD.MaxCharges > Param1;
-                    case 1:
-                        return _action.CD.MaxCharges < Param1;
-                    case 2:
-                        return _action.CD.MaxCharges == Param1;
+                    case Comparison.Bigger:
+                        return _action.CD.MaxCharges > Count;
+
+                    case Comparison.BiggerOrEqual:
+                        return _action.CD.MaxCharges >= Count;
+
+                    case Comparison.Smaller:
+                        return _action.CD.MaxCharges < Count;
+
+                    case Comparison.SmallerOrEqual:
+                        return _action.CD.MaxCharges <= Count;
+
+                    case Comparison.Equal:
+                        return _action.CD.MaxCharges == Count;
                 }
                 break;
         }

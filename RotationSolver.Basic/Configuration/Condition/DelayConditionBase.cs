@@ -1,23 +1,32 @@
 ﻿using ECommons.GameHelpers;
+using XIVConfigUI.Attributes;
+using XIVConfigUI.ConditionConfigs;
 
 namespace RotationSolver.Basic.Configuration.Condition;
 
-internal abstract class DelayCondition : ICondition
+[Description("Condition")]
+[ListUI(25)]
+internal abstract class DelayConditionBase : ICondition
 {
-    public float DelayMin = 0;
-    public float DelayMax = 0;
-    public float DelayOffset = 0;
+    [UI("Delay")]
+    public Vector2 Delay { get; set; } = default;
+
+    [UI("Offset")]
+    public float DelayOffset { get; set; } = 0;
 
     RandomDelay _delay = default;
     OffsetDelay _offsetDelay = default;
 
-    public bool Not = false;
-
     [ThreadStatic]
-    private static Stack<ICondition>? _callingStack;
+    private static Stack<DelayConditionBase>? _callingStack;
 
-    public bool? IsTrue(ICustomRotation? rotation)
+    [JsonIgnore]
+    public bool? State => IsTrue();
+
+    public bool? IsTrue()
     {
+        var rotation = DataCenter.RightNowRotation;
+
         if (rotation == null) return false;
 
         _callingStack ??= new(64);
@@ -30,20 +39,17 @@ internal abstract class DelayCondition : ICondition
 
         if (_delay.GetRange == null)
         {
-            _delay = new(() => (DelayMin, DelayMax));
+            _delay = new(() => Delay);
         }
 
-        if(_offsetDelay.GetDelay == null)
+        if (_offsetDelay.GetDelay == null)
         {
             _offsetDelay = new(() => DelayOffset);
         }
 
         _callingStack.Push(this);
         var value = CheckBefore(rotation) && IsTrueInside(rotation);
-        if (Not)
-        {
-            value = !value;
-        }
+
         var result = _delay.Delay(_offsetDelay.Delay(value));
         _callingStack.Pop();
 

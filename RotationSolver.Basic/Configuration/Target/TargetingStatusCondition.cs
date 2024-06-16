@@ -6,13 +6,13 @@ namespace RotationSolver.Basic.Configuration.Target;
 [Description("Status Condition")]
 internal class TargetingStatusCondition : TargetingConditionBase
 {
-    [StatusSource(StatusType.BadStatus)]
+    [StatusSource(StatusType.AllStatus)]
     [UI("Status")]
     public StatusID Status { get; set; } = StatusID.None;
 
     [Range(0, 0, ConfigUnitType.Seconds)]
     [UI("Status Time")]
-    public float StatusTime { get; set; } = 5;
+    public float StatusTime { get; set; } = 0;
 
     public override bool IsTrue(GameObject obj)
     {

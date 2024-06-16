@@ -25,8 +25,8 @@ internal class ConditionBoolean(bool defaultValue, string key)
 
         if (rotation != null)
         {
-            if (condition.Enable && (set.GetEnableCondition(condition.Key).IsTrue(rotation) ?? false)) return true;
-            if (condition.Disable && (set.GetDisableCondition(condition.Key).IsTrue(rotation) ?? false)) return false;
+            if (condition.Enable && (set.GetEnableCondition(condition.Key).IsTrue() ?? false)) return true;
+            if (condition.Disable && (set.GetDisableCondition(condition.Key).IsTrue() ?? false)) return false;
         }
         return condition.Value;
     }

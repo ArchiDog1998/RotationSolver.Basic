@@ -1,11 +1,15 @@
-﻿namespace RotationSolver.Basic.Configuration.Condition;
+﻿using XIVConfigUI.Attributes;
+
+namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Condition Set")]
-internal class ConditionSet : DelayCondition
+internal class ConditionSet : DelayConditionBase
 {
-    public List<ICondition> Conditions { get; set; } = [];
+    [UI("Conditions")]
+    public List<DelayConditionBase> Conditions { get; set; } = [];
 
-    public LogicalType Type;
+    [UI("Type")]
+    public LogicalType Type { get; set; } = LogicalType.All;
 
     protected override bool IsTrueInside(ICustomRotation rotation)
     {
@@ -13,8 +17,10 @@ internal class ConditionSet : DelayCondition
 
         return Type switch
         {
-            LogicalType.All => Conditions.All(c => c.IsTrue(rotation) ?? false),
-            LogicalType.Any => Conditions.Any(c => c.IsTrue(rotation) ?? false),
+            LogicalType.All => Conditions.All(c => c.IsTrue() ?? false),
+            LogicalType.Any => Conditions.Any(c => c.IsTrue() ?? false),
+            LogicalType.NotAll => !Conditions.All(c => c.IsTrue() ?? false),
+            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue() ?? false),
             _ => false,
         };
     }

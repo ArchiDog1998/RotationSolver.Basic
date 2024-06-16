@@ -5,6 +5,9 @@ using XIVConfigUI.Attributes;
 namespace RotationSolver.Basic.Configuration.Drawing;
 internal abstract class ObjectGetterBase : BaseDrawingGetter
 {
+    [UI("Manual Target")]
+    public bool ManualTarget { get; set; } = true;
+
     [UI("Object")]
     public TargetingConditionSet Object { get; set; } = new();
 
@@ -16,9 +19,6 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
 
     [UI("Target Text")]
     public TextDrawing TargetText { get; set; } = new();
-
-    [UI("Manual Target")]
-    public bool ManualTarget { get; set; } = true;
 
     public override IDisposable[] GetDrawing()
     {
