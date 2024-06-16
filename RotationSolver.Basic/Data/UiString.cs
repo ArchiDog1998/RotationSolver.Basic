@@ -475,36 +475,6 @@ internal enum UiString
     [Description("Rotation is null, please login or switch the job!")]
     ConfigWindow_Condition_RotationNullWarning,
 
-    [Description("Delay its turning to true.")]
-    ActionSequencer_Delay_Description,
-
-    [Description("Delay its turning.")]
-    ActionSequencer_Offset_Description,
-
-    [Description("Enough Level")]
-    ActionConditionType_EnoughLevel,
-
-    [Description("Time Offset")]
-    ActionSequencer_TimeOffset,
-
-    [Description("Charges")]
-    ActionSequencer_Charges,
-
-    [Description("Original")]
-    ActionSequencer_Original,
-
-    [Description("Adjusted")]
-    ActionSequencer_Adjusted,
-
-    [Description("{0}'s target")]
-    ActionSequencer_ActionTarget,
-
-    [Description("From All")]
-    ActionSequencer_StatusAll,
-
-    [Description("From Self")]
-    ActionSequencer_StatusSelf,
-
     [Description("You'd better not use it. Because this target isn't the action's target. Try to pick it from action.")]
     ConfigWindow_Condition_TargetWarning,
 
@@ -633,85 +603,6 @@ internal enum UiString
 
     [Description("Raid Time")]
     TimelineRaidTime,
-
-    [Description("Execute")]
-    TimelineExecute,
-
-    [Description("Position")]
-    TimelinePosition,
-
-
-    [Description("Target Count")]
-    TimelineTargetCount,
-
-    [Description("Target Getter")]
-    TimelineTargetGetter,
-
-    [Description("Effect Duration")]
-    TimelineEffectDuration,
-
-    [Description("Scale")]
-    TimelineScale,
-
-    [Description("Showing Text")]
-    TimelineShowText,
-
-    [Description("Ground")]
-    TimelineGround,
-
-    [Description("Actor")]
-    TimelineActor,
-
-    [Description("Rotation")]
-    TimelineRotation,
-
-    [Description("Object Getter")]
-    TimelineObjectGetter,
-
-    [Description("Need a target")]
-    TimelineNeedATarget,
-
-    [Description("Target by target")]
-    TimelineTargetByTarget,
-
-    [Description("Position Offset")]
-    TimelinePositionOffset,
-
-    [Description("Corner")]
-    TimelineCorner,
-
-    [Description("Padding")]
-    TimelinePadding,
-
-    [Description("Color")]
-    TimelineColor,
-
-    [Description("Background Color")]
-    TimelineBackgroundColor,
-
-    [Description("Place On Target")]
-    TimelinePlaceOnTarget,
-
-    [Description("Add a territory action.")]
-    AddTerritoryActionButton,
-
-    [Description("Add a condition item.")]
-    AddTimelineCondition,
-
-    [Description("Add a drawing timeline item.")]
-    AddDrawingTimelineButton,
-
-    [Description("Click to toggle the timeline item condition.")]
-    TimelineItemCondition,
-
-    [Description("The time before this timeline raised.")]
-    TimelineItemTime,
-
-    [Description("The time after this trigger raised.")]
-    TriggerItemTime,
-
-    [Description("The duration of this action.")]
-    TimelineItemDuration,
 
     [Description("The abilities and custom conditions that your selected job has.")]
     Item_Actions,
