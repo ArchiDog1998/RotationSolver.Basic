@@ -4,6 +4,7 @@ using XIVConfigUI.Attributes;
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class MacroAction : ITerritoryAction
 {
+    [UIType(UiType.Multiline)]
     [UI("Macro")]
     public string Macro { get; set; } = "";
 

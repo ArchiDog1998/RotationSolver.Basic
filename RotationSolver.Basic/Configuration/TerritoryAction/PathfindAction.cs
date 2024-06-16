@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class PathfindAction : ITerritoryAction
 {
     [UI("Destination")]
-    public Vector3 Destination { get; set; } = default;
+    public Position Destination { get; set; } = new();
 
     public void Disable()
     {

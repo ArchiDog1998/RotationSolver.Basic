@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Configuration.TerritoryAction;
 internal class MoveAction : ITerritoryAction
 {
     [UI("Points")]
-    public List<Vector3> Points { get; set; } = [];
+    public List<Position> Points { get; set; } = [];
 
     public void Enable()
     {
@@ -18,7 +18,7 @@ internal class MoveAction : ITerritoryAction
             Svc.Log.Error("Can't find the vnavmesh to move.");
             return;
         }
-        ipc.InvokeAction(new(Points), false);
+        ipc.InvokeAction([..Points], false);
     }
 
     public void Disable()
