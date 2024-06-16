@@ -1,26 +1,60 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.GameFunctions;
-using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
+using RotationSolver.Basic.Configuration.Target;
+using XIVConfigUI.Attributes;
 using XIVDrawer;
 using XIVDrawer.Vfx;
 using GAction = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.Basic.Configuration.Drawing;
 
+internal class OmenSelectorAttribute : ChoicesAttribute
+{
+    protected override Pair[] GetChoices()
+    {
+        var omenInfo = typeof(GroundOmenHostile).GetRuntimeFields()
+        .Concat(typeof(GroundOmenNone).GetRuntimeFields())
+        .Concat(typeof(GroundOmenFriendly).GetRuntimeFields());
+
+        return 
+        [
+            .. omenInfo.Select(f => new Pair(((string)f.GetValue(null)!).Omen(), f.Name)),
+        ];
+    }
+}
+
 [Description("Action Drawing")]
 internal class ActionDrawingGetter : BaseDrawingGetter
 {
-    public uint ActionID { get; set; }
+    [JsonIgnore]
+    public TimelineItem? TimelineItem { get; set; }
+
+    [UI("Action")]
+    public ActionID ActionID { get; set; }
+
+    [OmenSelector, UI("Path")]
     public string Path { get; set; } = "";
+
+    [UI("X Scale")]
     public float X { get; set; }
+
+    [UI("Y Scale")]
     public float Y { get; set; }
-    public Vector3 Position { get; set; }
+
+    [Range(0, 0, ConfigUnitType.Yalms)]
+    [UI("Position Or Offset")]
+    public Position Position { get; set; } = new();
+
+    [Range(0,0, ConfigUnitType.Degree)]
+    [UI("Rotation")]
     public float Rotation { get; set; }
-    public ObjectGetter ObjectGetter { get; set; } = new();
+
+    [UI("Target")]
+    public TargetingConditionSet Target { get; set; } = new();
 
     public override IDisposable[] GetDrawing()
     {
-        var objs = Svc.Objects.Where(ObjectGetter.CanGet);
+        var objs = Svc.Objects.Where(Target.IsTrue);
         if (objs.Any())
         {
             return [.. objs.Select(GetActionDrawing).OfType<IDisposable>()];
@@ -34,7 +68,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
     private IDisposable? GetActionDrawing(GameObject? obj)
     {
         if (ActionID == 0) return null;
-        var action = Svc.Data.GetExcelSheet<GAction>()?.GetRow(ActionID);
+        var action = Svc.Data.GetExcelSheet<GAction>()?.GetRow((uint)ActionID);
         if (action == null) return null;
         var omen = action.Omen.Value?.Path?.RawString;
         omen = string.IsNullOrEmpty(omen) ? Path : omen.Omen();

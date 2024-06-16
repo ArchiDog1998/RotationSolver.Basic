@@ -22,7 +22,8 @@ internal class Position
 
     public static implicit operator Position(Vector3 value) => new() { X = value.X, Y = value.Y, Z = value.Z };
     public static implicit operator Vector3(Position value) => new() { X = value.X, Y = value.Y, Z = value.Z };
-
+    public static implicit operator Position(FFXIVClientStructs.FFXIV.Common.Math.Vector3 value) => new() { X = value.X, Y = value.Y, Z = value.Z };
+    public static implicit operator FFXIVClientStructs.FFXIV.Common.Math.Vector3(Position value) => new() { X = value.X, Y = value.Y, Z = value.Z };
     [UI]
     public void Pos()
     {
@@ -44,11 +45,18 @@ internal class Position
         }
         else
         {
-            foreach (var preview in _previewItems)
-            {
-                preview.Dispose();
-            }
-            _previewItems = null;
+            ClearDrawings();
         }
+    }
+
+    public static void ClearDrawings()
+    {
+        if (_previewItems == null) return;
+
+        foreach (var preview in _previewItems)
+        {
+            preview.Dispose();
+        }
+        _previewItems = null;
     }
 }

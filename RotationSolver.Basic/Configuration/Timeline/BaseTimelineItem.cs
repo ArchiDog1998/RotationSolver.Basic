@@ -1,4 +1,5 @@
 ﻿using ECommons.DalamudServices;
+using RotationSolver.Basic.Configuration.Drawing;
 using RotationSolver.Basic.Configuration.TerritoryAction;
 using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
 using XIVConfigUI;
@@ -40,10 +41,10 @@ internal abstract class BaseTimelineItem : ICondition
     [UI("Condition")]
     public TimelineConditionSet Condition { get; set; } = new();
 
-    [UI("Action")]
     internal abstract ITerritoryAction TerritoryAction { get; }
 
     private bool _enable = false;
+
     [JsonIgnore]
     internal bool Enable
     {
@@ -79,6 +80,15 @@ internal abstract class BaseTimelineItem : ICondition
         set
         {
             Condition.TimelineItem = _timelineItem = value;
+
+            if (TerritoryAction is DrawingAction drawingAction)
+            {
+                foreach (var item in drawingAction.DrawingGetters)
+                {
+                    if (item is not ActionDrawingGetter actionDrawer) continue;
+                    actionDrawer.TimelineItem = value;
+                }
+            }
         }
     }
 

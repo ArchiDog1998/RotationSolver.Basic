@@ -1,4 +1,5 @@
 ﻿using RotationSolver.Basic.Configuration.TerritoryAction;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.Trigger;
 
@@ -6,6 +7,8 @@ namespace RotationSolver.Basic.Configuration.Trigger;
 internal class DrawingTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => DrawingAction;
+
+    [UI("Drawing")]
     public DrawingAction DrawingAction { get; set; } = new();
 }
 
@@ -13,6 +16,8 @@ internal class DrawingTriggerItem : BaseTriggerItem
 internal class ActionTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => ActionAction;
+
+    [UI("Action")]
     public ActionAction ActionAction { get; set; } = new();
 }
 
@@ -20,6 +25,8 @@ internal class ActionTriggerItem : BaseTriggerItem
 internal class StateTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => StateAction;
+
+    [UI("State")]
     public StateAction StateAction { get; set; } = new();
 }
 
@@ -27,6 +34,8 @@ internal class StateTriggerItem : BaseTriggerItem
 internal class PathfindTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => PathfindAction;
+
+    [UI("Pathfind")]
     public PathfindAction PathfindAction { get; set; } = new();
 }
 
@@ -34,6 +43,8 @@ internal class PathfindTriggerItem : BaseTriggerItem
 internal class MoveTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => MoveAction;
+
+    [UI("Move")]
     public MoveAction MoveAction { get; set; } = new();
 }
 
@@ -41,5 +52,7 @@ internal class MoveTriggerItem : BaseTriggerItem
 internal class MacroTriggerItem : BaseTriggerItem
 {
     internal override ITerritoryAction TerritoryAction => MacroAction;
+
+    [UI("Macro")]
     public MacroAction MacroAction { get; set; } = new();
 }

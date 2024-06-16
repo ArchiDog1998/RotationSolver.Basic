@@ -1,4 +1,5 @@
 ﻿using RotationSolver.Basic.Configuration.TerritoryAction;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.Timeline;
 
@@ -6,6 +7,8 @@ namespace RotationSolver.Basic.Configuration.Timeline;
 internal class DrawingTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => DrawingAction;
+
+    [UI("Drawing")]
     public DrawingAction DrawingAction { get; set; } = new();
 
     public DrawingTimelineItem()
@@ -18,6 +21,8 @@ internal class DrawingTimelineItem : BaseTimelineItem
 internal class ActionTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => ActionAction;
+
+    [UI("Action")]
     public ActionAction ActionAction { get; set; } = new();
 }
 
@@ -25,6 +30,8 @@ internal class ActionTimelineItem : BaseTimelineItem
 internal class StateTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => StateAction;
+
+    [UI("State")]
     public StateAction StateAction { get; set; } = new();
 }
 
@@ -32,6 +39,8 @@ internal class StateTimelineItem : BaseTimelineItem
 internal class PathfindTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => PathfindAction;
+
+    [UI("Pathfind")]
     public PathfindAction PathfindAction { get; set; } = new();
 }
 
@@ -39,6 +48,8 @@ internal class PathfindTimelineItem : BaseTimelineItem
 internal class MoveTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => MoveAction;
+
+    [UI("Move")]
     public MoveAction MoveAction { get; set; } = new();
 }
 
@@ -46,5 +57,7 @@ internal class MoveTimelineItem : BaseTimelineItem
 internal class MacroTimelineItem : BaseTimelineItem
 {
     internal override ITerritoryAction TerritoryAction => MacroAction;
+
+    [UI("Macro")]
     public MacroAction MacroAction { get; set; } = new();
 }

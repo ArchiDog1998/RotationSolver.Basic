@@ -1,23 +1,30 @@
-﻿using XIVDrawer.Element3D;
+﻿using XIVConfigUI.Attributes;
+using XIVDrawer.Element3D;
 
 namespace RotationSolver.Basic.Configuration.Drawing; 
 
 internal class TextDrawing
 {
+    [UI("Text")]
     public string Text { get; set; } = "";
-    public Vector3 PositionOffset { get; set; }
 
+    [UI("Offset")]
+    public Position PositionOffset { get; set; } = new();
+
+    [UI("Offset"), UIType(UiType.Padding)]
     public Vector2 Padding { get; set; } = Vector2.One * 5;
 
+    [UI("Scale")]
     public float Scale { get; set; } = 1;
 
+    [UI("Bg Color")]
     public Vector4 BackgroundColor { get; set; } = new(0, 0, 0, 0.5f);
 
+    [UI("Color")]
     public Vector4 Color { get; set; } = new(1, 1, 1, 1);
 
-    /// <summary>
-    /// The corner of the background.
-    /// </summary>
+    [Range(0, 0, ConfigUnitType.Pixels)]
+    [UI("Corner")]
     public float Corner { get; set; } = 5;
 
     public Drawing3DText? GetText(Vector3 position)
