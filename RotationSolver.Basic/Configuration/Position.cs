@@ -5,18 +5,19 @@ using XIVDrawer.Vfx;
 
 namespace RotationSolver.Basic.Configuration;
 
-[ListUI(10)]
+[ListUI(60403)]
 [Description("Position")]
 internal class Position
 {
-    private static IDisposable[]? _previewItems = null;
-
+    [Range(0, 0, ConfigUnitType.Yalms)]
     [UI("X")]
     public float X { get; set; }
 
+    [Range(0, 0, ConfigUnitType.Yalms)]
     [UI("Y")]
     public float Y { get; set; }
 
+    [Range(0, 0, ConfigUnitType.Yalms)]
     [UI("Z")]
     public float Z { get; set; }
 
@@ -29,35 +30,16 @@ internal class Position
     public void Pos()
     {
         var tar = Svc.Targets.Target ?? Player.Object;
-        if (tar != null)
-        {
-            X = tar.Position.X;
-            Y = tar.Position.Y; 
-            Z = tar.Position.Z;
-        }
+        if (tar == null) return;
+
+        X = tar.Position.X;
+        Y = tar.Position.Y;
+        Z = tar.Position.Z;
     }
 
     [UI]
     public void Draw()
     {
-        if (_previewItems == null)
-        {
-            _previewItems = [new StaticVfx(GroundOmenFriendly.BasicCircle.Omen(), this, 0, Vector3.One)];
-        }
-        else
-        {
-            ClearDrawings();
-        }
-    }
-
-    public static void ClearDrawings()
-    {
-        if (_previewItems == null) return;
-
-        foreach (var preview in _previewItems)
-        {
-            preview.Dispose();
-        }
-        _previewItems = null;
+        DrawerHelper.Draw(() => [new StaticVfx(GroundOmenFriendly.BasicCircle.Omen(), this, 0, Vector3.One)]);
     }
 }

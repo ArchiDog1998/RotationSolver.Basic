@@ -11,8 +11,13 @@ internal class TextDrawing
     [UI("Offset")]
     public Position PositionOffset { get; set; } = new();
 
-    [UI("Offset"), UIType(UiType.Padding)]
+    [Range(0, 0, ConfigUnitType.Pixels)]
+    [UI("Padding"), UIType(UiType.Padding)]
     public Vector2 Padding { get; set; } = Vector2.One * 5;
+
+    [Range(0, 0, ConfigUnitType.Pixels)]
+    [UI("Corner")]
+    public float Corner { get; set; } = 5;
 
     [UI("Scale")]
     public float Scale { get; set; } = 1;
@@ -22,10 +27,6 @@ internal class TextDrawing
 
     [UI("Color")]
     public Vector4 Color { get; set; } = new(1, 1, 1, 1);
-
-    [Range(0, 0, ConfigUnitType.Pixels)]
-    [UI("Corner")]
-    public float Corner { get; set; } = 5;
 
     public Drawing3DText? GetText(Vector3 position)
     {

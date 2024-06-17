@@ -13,10 +13,10 @@ internal enum UiString
     [Description("Load From folder.")]
     ActionSequencer_Load,
 
-    [Description("Game")]
+    [Description("Game Version")]
     ConfigWindow_Helper_GameVersion,
 
-    [Description("Invalid Rotation! \nPlease update to the latest version or contact to the {0}!")]
+    [Description("Invalid Rotation! Please contact to the {0}!")]
     ConfigWindow_Rotation_InvalidRotation,
 
     [Description("Beta Rotation!")]

@@ -5,7 +5,7 @@ using XIVConfigUI.ConditionConfigs;
 namespace RotationSolver.Basic.Configuration.Condition;
 
 [Description("Condition")]
-[ListUI(25)]
+[ListUI(0)]
 internal abstract class DelayConditionBase : ICondition
 {
     [UI("Delay")]

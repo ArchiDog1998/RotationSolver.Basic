@@ -52,6 +52,8 @@ internal static class TargetingTypeExtension
 {
     public static BattleChara? FindTarget(this TargetingType type, IEnumerable<BattleChara> chara)
     {
+        if (!chara.Any()) return null;
+
         return type switch
         {
             TargetingType.Close => chara.MinBy(p => p.DistanceToPlayer()),

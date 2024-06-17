@@ -1,9 +1,4 @@
 ﻿using ECommons.DalamudServices;
-using RotationSolver.Basic.Configuration.Drawing;
-using RotationSolver.Basic.Configuration.TerritoryAction;
-using RotationSolver.Basic.Configuration.Timeline;
-using RotationSolver.Basic.Configuration.Timeline.TimelineCondition;
-using RotationSolver.Basic.Configuration.Trigger;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Configuration;

@@ -11,6 +11,6 @@ public class ActionEventInfo : MacroInfo
     /// <summary>
     /// Action Name.
     /// </summary>
-    [UI("Action Name")]
+    [UI("Action Name", Description ="You can do it in regex.")]
     public string Name { get; set; } = string.Empty;
 }

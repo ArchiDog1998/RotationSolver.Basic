@@ -2,8 +2,22 @@
 
 namespace RotationSolver.Basic.Configuration.Drawing;
 
-[Description("Drawing Getter")]
-[ListUI(61831, NewlineWhenInheritance = true)]
+internal class DrawingGetterAttribute : ListUIAttribute
+{
+    public DrawingGetterAttribute() : base(61831)
+    {
+        NewlineWhenInheritance = true;
+        Description = "Click to show the preview drawings";
+    }
+
+    public override void OnClick(object obj)
+    {
+        if (obj is not BaseDrawingGetter getter) return;
+        DrawerHelper.Draw(getter.GetDrawing);
+    }
+}
+
+[DrawingGetter, Description("Drawing Item")]
 internal abstract class BaseDrawingGetter
 {
     [UI("Enable")]
