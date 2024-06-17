@@ -1,18 +1,17 @@
 ﻿using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Client.UI.Misc;
+using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration;
 #pragma warning disable CS1591 // Missing XML comment for publicly visible
 public class MacroInfo
 {
-    public int MacroIndex;
-    public bool IsShared;
+    [Range(-1, 99, ConfigUnitType.None)]
+    [UI("Macro No.")]
+    public int MacroIndex { get; set; } = -1;
 
-    public MacroInfo()
-    {
-        MacroIndex = -1;
-        IsShared = false;
-    }
+    [UI("Is Shared")]
+    public bool IsShared { get; set; }
 
     public unsafe bool AddMacro(GameObject? tar = null)
     {
@@ -32,4 +31,3 @@ public class MacroInfo
         }
     }
 }
-#pragma warning restore CS1591 // Missing XML comment for publicly visible

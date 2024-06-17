@@ -118,12 +118,15 @@ internal class OtherConfiguration
 
             _territoryConfigs[id] = FromTxt(str);
         }
+#if DEBUG
         catch (Exception ex)
         {
-            _territoryConfigs[id] = new();
-#if DEBUG
             Svc.Log.Error(ex, $"Failed to download the timeline {id}.");
+#else
+        catch
+        { 
 #endif
+            _territoryConfigs[id] = new();
             return;
         }
         _downloadingList.Remove(id);

@@ -508,15 +508,6 @@ internal enum UiString
     [Description("Right-click to copy the command")]
     ConfigWindow_Helper_CopyCommand,
 
-    [Description("Macro No.")]
-    ConfigWindow_Events_MacroIndex,
-
-    [Description("Is Shared")]
-    ConfigWindow_Events_ShareMacro,
-
-    [Description("Action Name")]
-    ConfigWindow_Events_ActionName,
-
     [Description("Modify {0} to {1}")]
     CommandsChangeSettingsValue,
 
@@ -702,4 +693,7 @@ internal enum UiString
 
     [Description("If you wanna delete Rotation Solver, you'd better disable \"{0}\" first.")]
     DeleteWarning,
+
+    [Description("There are no items!")]
+    ConfigWindow_Condition_NoItemsWarning,
 }

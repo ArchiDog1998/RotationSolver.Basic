@@ -9,9 +9,9 @@ internal class MethodChoicesAttribute : ChoicesAttribute
     {
         return 
         [
-            new (nameof(CustomRotation.IsLastGCD), nameof(CustomRotation.IsLastGCD)),
-            new (nameof(CustomRotation.IsLastAction), nameof(CustomRotation.IsLastAction)),
-            new (nameof(CustomRotation.IsLastAbility), nameof(CustomRotation.IsLastAbility)),
+            nameof(CustomRotation.IsLastGCD),
+            nameof(CustomRotation.IsLastAction),
+            nameof(CustomRotation.IsLastAbility),
         ];
     }
 }

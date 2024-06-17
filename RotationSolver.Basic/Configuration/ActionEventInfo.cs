@@ -1,12 +1,16 @@
-﻿namespace RotationSolver.Basic.Configuration;
+﻿using XIVConfigUI.Attributes;
+
+namespace RotationSolver.Basic.Configuration;
 
 /// <summary>
 /// To save the special actions.
 /// </summary>
+[ListUI(36)]
 public class ActionEventInfo : MacroInfo
 {
     /// <summary>
     /// Action Name.
     /// </summary>
-    public string Name = string.Empty;
+    [UI("Action Name")]
+    public string Name { get; set; } = string.Empty;
 }
