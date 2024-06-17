@@ -96,6 +96,8 @@ internal static class GithubRecourcesHelper
 
             var hash = player.EncryptString();
 
+            if (string.IsNullOrEmpty(hash)) return false;
+
             if (value.Contains(hash)) return false;
 
             Notify.Success(string.Format(UiString.AddedYourHash.Local(), 
@@ -113,6 +115,8 @@ internal static class GithubRecourcesHelper
             if (player == null) return false;
 
             var hash = player.EncryptString();
+
+            if (string.IsNullOrEmpty(hash)) return false;
 
             if (!value.Contains(hash)) return false;
 
