@@ -8,28 +8,28 @@ namespace RotationSolver.Basic.Configuration.Target;
 
 internal class TargetingTypeCondition : TargetingConditionBase
 {
+    internal enum TargetingTypeCon: byte
+    {
+        MySelf,
+        Player,
+        Battle,
+        Hostile,
+        Friendly,
+    }
+
     [UI("Type")]
-    public TargetingType TargetingType { get; set; } = TargetingType.MySelf;
+    public TargetingTypeCon TargetingType { get; set; } = TargetingTypeCon.MySelf;
 
     public override bool IsTrue(GameObject obj)
     {
         return TargetingType switch
         {
-             TargetingType.MySelf => obj.ObjectId == Player.Object.ObjectId,
-             TargetingType.Player => obj is PlayerCharacter,
-             TargetingType.Battle => obj is BattleChara,
-             TargetingType.Hostile => obj is BattleChara battle && battle.IsEnemy(),
-             TargetingType.Fiendly => obj is BattleChara battle && battle.IsAlliance(),
+            TargetingTypeCon.MySelf => obj.ObjectId == Player.Object.ObjectId,
+            TargetingTypeCon.Player => obj is PlayerCharacter,
+            TargetingTypeCon.Battle => obj is BattleChara,
+            TargetingTypeCon.Hostile => obj is BattleChara battle && battle.IsEnemy(),
+            TargetingTypeCon.Friendly => obj is BattleChara battle && battle.IsAlliance(),
             _ => false,
         };
     }
-}
-
-internal enum TargetingType : byte
-{
-    MySelf,
-    Player,
-    Battle,
-    Hostile,
-    Fiendly,
 }
