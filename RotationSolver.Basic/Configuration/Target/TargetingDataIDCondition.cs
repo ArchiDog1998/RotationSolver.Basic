@@ -20,8 +20,7 @@ internal class DataIdAttribute : ListUIAttribute
     }
 }
 
-[DataId]
-[Description("Data ID Condition")]
+[DataId, Description("Data ID Condition")]
 internal class TargetingDataIDCondition : TargetingConditionBase
 {
     [UI("Data ID")]
@@ -29,7 +28,7 @@ internal class TargetingDataIDCondition : TargetingConditionBase
 
     public override bool IsTrue(GameObject obj)
     {
-        if(string.IsNullOrEmpty(DataID)) return false;
+        if (string.IsNullOrEmpty(DataID)) return false;
 
         return new Regex(DataID).IsMatch(obj.DataId.ToString("X"));
     }

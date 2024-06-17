@@ -5,6 +5,14 @@ namespace RotationSolver.Basic.Configuration.Target;
 [Description("Space Condition")]
 internal class TargetingSpaceCondition : TargetingConditionBase
 {
+    internal enum ValueType : byte
+    {
+        Distance,
+
+        [Description("Hitbox Radius")]
+        Hitbox,
+    }
+
     [UI("Value Type")]
     public ValueType Type { get; set; } = ValueType.Distance;
 
@@ -33,12 +41,4 @@ internal class TargetingSpaceCondition : TargetingConditionBase
             _ => false,
         };
     }
-}
-
-internal enum ValueType : byte
-{
-    Distance,
-
-    [Description("Hitbox Radius")]
-    Hitbox,
 }

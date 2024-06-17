@@ -3,6 +3,7 @@ using RotationSolver.Basic.Record;
 using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.Target;
+
 internal class VfxAttribute : ListUIAttribute
 {
     public VfxAttribute() : base(0)
