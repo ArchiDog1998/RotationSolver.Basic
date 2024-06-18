@@ -117,7 +117,7 @@ internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
         }
         var path = Path.Combine(folder, Name + ".json");
 
-        var str = JsonConvert.SerializeObject(this, Formatting.Indented);
+        var str = JsonHelper.SerializeObject(this);
         File.WriteAllText(path, str);
     }
 
@@ -131,7 +131,7 @@ internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
 
             try
             {
-                return JsonConvert.DeserializeObject<MajorConditionSet>(str, GeneralJsonConverter.Instance);
+                return JsonHelper.DeserializeObject<MajorConditionSet>(str);
             }
             catch (Exception ex)
             {

@@ -87,7 +87,7 @@ internal static class DownloadHelper
         try
         {
             var str = await client.GetStringAsync(url);
-            return JsonConvert.DeserializeObject<T>(str);
+            return JsonHelper.DeserializeObject<T>(str);
         }
         catch (Exception ex)
         {

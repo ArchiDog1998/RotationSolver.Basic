@@ -96,9 +96,8 @@ internal class Service : IDisposable
 
         try
         {
-            Config = JsonConvert.DeserializeObject<Configs>(
-                File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName),
-                GeneralJsonConverter.Instance)
+            Config = JsonHelper.DeserializeObject<Configs>(
+                File.ReadAllText(Svc.PluginInterface.ConfigFile.FullName))
                 ?? new Configs();
         }
         catch (Exception ex)

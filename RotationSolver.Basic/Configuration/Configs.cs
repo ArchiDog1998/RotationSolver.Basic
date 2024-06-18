@@ -833,6 +833,6 @@ internal partial class Configs : IPluginConfiguration
         Svc.Log.Information("Saved configurations.");
 #endif
         File.WriteAllText(Svc.PluginInterface.ConfigFile.FullName,
-            JsonConvert.SerializeObject(this, Formatting.Indented));
+            JsonHelper.SerializeObject(this));
     }
 }

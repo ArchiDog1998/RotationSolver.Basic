@@ -100,8 +100,7 @@ internal class OtherConfiguration
 
     private static TerritoryConfig FromTxt(string str)
     {
-        return JsonConvert.DeserializeObject<TerritoryConfig>(str,
-                    GeneralJsonConverter.Instance)!;
+        return JsonHelper.DeserializeObject<TerritoryConfig>(str)!;
     }
 
     private static void DownloadTerritoryPrivate(uint id)
@@ -272,10 +271,7 @@ internal class OtherConfiguration
     {
         try
         {
-            var str = JsonConvert.SerializeObject(value, Formatting.Indented, new JsonSerializerSettings()
-            {
-                TypeNameHandling = TypeNameHandling.None,
-            });
+            var str = JsonHelper.SerializeObject(value);
 
             if (!download)
             {
@@ -302,14 +298,14 @@ internal class OtherConfiguration
                 //TODO: No more low versions!
                 try
                 {
-                    value = JsonConvert.DeserializeObject<T>(str)!;
+                    value = JsonHelper.DeserializeObject<T>(str)!;
                 }
                 catch
                 {
                     if (download) throw;
 
                     str = Cryptor.Decrypt(str);
-                    value = JsonConvert.DeserializeObject<T>(str)!;
+                    value = JsonHelper.DeserializeObject<T>(str)!;
                 }
             }
             catch (Exception ex)
@@ -325,14 +321,7 @@ internal class OtherConfiguration
                 var str = client.GetStringAsync($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/{name}.json").Result;
 
                 File.WriteAllText(path, str);
-                value = JsonConvert.DeserializeObject<T>(str, new JsonSerializerSettings()
-                {
-                    MissingMemberHandling = MissingMemberHandling.Error,
-                    Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
-                    {
-                        args.ErrorContext.Handled = true;
-                    }!
-                })!;
+                value = JsonHelper.DeserializeObject<T>(str)!;
             }
             catch
             {

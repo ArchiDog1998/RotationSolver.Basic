@@ -35,7 +35,7 @@ internal static class GithubRecourcesHelper
                 sha = content[0].Sha;
                 try
                 {
-                    value = JsonConvert.DeserializeObject<T>(content[0].Content);
+                    value = JsonHelper.DeserializeObject<T>(content[0].Content);
                 }
                 catch
                 {
@@ -62,11 +62,11 @@ internal static class GithubRecourcesHelper
         {
             if (shouldCreate)
             {
-                await GitHubClient.Repository.Content.CreateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented)));
+                await GitHubClient.Repository.Content.CreateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonHelper.SerializeObject(value)));
             }
             else
             {
-                await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonConvert.SerializeObject(value, Formatting.Indented), sha));
+                await GitHubClient.Repository.Content.UpdateFile(XIVConfigUIMain.UserName, RepoName, path, new(commit, JsonHelper.SerializeObject(value), sha));
             }
         }
         catch(Exception ex)
