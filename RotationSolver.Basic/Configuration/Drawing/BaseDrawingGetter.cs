@@ -4,7 +4,7 @@ namespace RotationSolver.Basic.Configuration.Drawing;
 
 internal class DrawingGetterAttribute : ListUIAttribute
 {
-    public DrawingGetterAttribute() : base(61831)
+    public DrawingGetterAttribute() : base(60849)
     {
         NewlineWhenInheritance = true;
         Description = "Click to show the preview drawings";

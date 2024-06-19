@@ -3,7 +3,7 @@
 namespace RotationSolver.Basic.Configuration.Target;
 
 [Description("Targeting Item")]
-[ListUI(63927)]
+[ListUI(61512)]
 internal class TargetingItem
 {
     [UI("Target Condition")]

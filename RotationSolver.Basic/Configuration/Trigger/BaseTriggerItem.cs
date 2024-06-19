@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Configuration.Trigger;
 
 internal class TriggerAttribute : ListUIAttribute
 {
-    public TriggerAttribute() : base(12)
+    public TriggerAttribute() : base(80117)
     {
         Description = "Click to show the action.";
     }

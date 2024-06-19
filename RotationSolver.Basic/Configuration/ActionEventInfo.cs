@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Configuration;
 /// <summary>
 /// To save the special actions.
 /// </summary>
-[ListUI(36)]
+[ListUI(60552)]
 public class ActionEventInfo : MacroInfo
 {
     /// <summary>
