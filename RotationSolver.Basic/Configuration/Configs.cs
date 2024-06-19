@@ -398,8 +398,10 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 1)]
     public ConditionBoolean HealWhenNothingTodo { get; private set; } = new(true, nameof(HealWhenNothingTodo));
 
-    [UI("Says hello to other players that use Rotation Solver.", (int)UiString.ConfigWindow_Basic_Others, 
-        Description = "If you want to be greeted by other users, please DM ArchiTed with your Hash!", Section = 1)]
+    [UI("Remind me when I across Rotation Solver users.", (int)UiString.ConfigWindow_Basic_Others, Section = 1)]
+    public ConditionBoolean RemindToAll { get; private set; } = new(true, nameof(RemindToAll));
+
+    [UI("Says hello to other players that use Rotation Solver.", (int)UiString.ConfigWindow_Basic_Others, Section = 1)]
     public ConditionBoolean SayHelloToAll { get; private set; } = new(true, nameof(SayHelloToAll));
 
     [UI("Say hello only once to the same user.",
