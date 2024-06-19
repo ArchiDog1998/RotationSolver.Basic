@@ -478,12 +478,6 @@ internal enum UiString
     [Description("You'd better not use it. Because this target isn't the action's target. Try to pick it from action.")]
     ConfigWindow_Condition_TargetWarning,
 
-    [Description("Territory Name")]
-    ConfigWindow_Condition_TerritoryName,
-
-    [Description("Duty Name")]
-    ConfigWindow_Condition_DutyName,
-
     [Description("Please separately keybind damage reduction / shield cooldowns in case RS fails at a crucial moment in {0}!")]
     HighEndWarning,
 
