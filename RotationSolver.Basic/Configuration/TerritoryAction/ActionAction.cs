@@ -23,7 +23,7 @@ internal class ActionAction : ITerritoryAction
         DataCenter.AddCommandAction(act, Service.Config.SpecialDuration, TargetType);
 
 #if DEBUG
-        Svc.Log.Debug($"Added the action {act} to timeline.");
+        ECommons.DalamudServices.Svc.Log.Debug($"Added the action {act} to timeline.");
 #endif   
     }
 }

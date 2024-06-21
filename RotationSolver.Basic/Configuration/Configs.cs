@@ -148,7 +148,7 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean ShowTargetTimeToKill { get; private set; } = new(false, nameof(ShowTargetTimeToKill));
 
     [UI("Priority attacks targets with attack markers.",
-        (int)UiString.ConfigWindow_Target_Config)]
+        (int)UiString.ConfigWindow_Target_Config, Section = 1)]
     public ConditionBoolean ChooseAttackMark { get; private set; } = new(true, nameof(ChooseAttackMark));
 
     [UI("Allows use of AoE abilities to attack as many targets as possible.",

@@ -295,15 +295,12 @@ internal class OtherConfiguration
             {
                 var str = File.ReadAllText(path);
 
-                //TODO: No more low versions!
-                try
+                if (download)
                 {
                     value = JsonHelper.DeserializeObject<T>(str)!;
                 }
-                catch
+                else
                 {
-                    if (download) throw;
-
                     str = Cryptor.Decrypt(str);
                     value = JsonHelper.DeserializeObject<T>(str)!;
                 }

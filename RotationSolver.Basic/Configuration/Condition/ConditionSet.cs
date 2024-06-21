@@ -17,10 +17,10 @@ internal class ConditionSet : DelayConditionBase
 
         return Type switch
         {
-            LogicalType.All => Conditions.All(c => c.IsTrue() ?? false),
-            LogicalType.Any => Conditions.Any(c => c.IsTrue() ?? false),
-            LogicalType.NotAll => !Conditions.All(c => c.IsTrue() ?? false),
-            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue() ?? false),
+            LogicalType.All => Conditions.All(c => c?.IsTrue() ?? false),
+            LogicalType.Any => Conditions.Any(c => c?.IsTrue() ?? false),
+            LogicalType.NotAll => !Conditions.All(c => c?.IsTrue() ?? false),
+            LogicalType.NotAny => !Conditions.Any(c => c?.IsTrue() ?? false),
             _ => false,
         };
     }

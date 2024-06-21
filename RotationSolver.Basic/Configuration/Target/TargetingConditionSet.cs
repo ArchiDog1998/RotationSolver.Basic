@@ -17,10 +17,10 @@ internal class TargetingConditionSet : TargetingConditionBase
 
         return Type switch
         {
-            LogicalType.All => Conditions.All(c => c.IsTrue(obj)),
-            LogicalType.Any => Conditions.Any(c => c.IsTrue(obj)),
-            LogicalType.NotAll => !Conditions.All(c => c.IsTrue(obj)),
-            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue(obj)),
+            LogicalType.All => Conditions.All(c => c?.IsTrue(obj) ?? false),
+            LogicalType.Any => Conditions.Any(c => c?.IsTrue(obj) ?? false),
+            LogicalType.NotAll => !Conditions.All(c => c?.IsTrue(obj) ?? false),
+            LogicalType.NotAny => !Conditions.Any(c => c?.IsTrue(obj) ?? false),
             _ => false,
         };
     }
