@@ -318,7 +318,7 @@ internal class OtherConfiguration
                 var str = client.GetStringAsync($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/{name}.json").Result;
 
                 File.WriteAllText(path, str);
-                value = JsonHelper.DeserializeObject<T>(str)!;
+                value = JsonHelper.DeserializeObject<T>(str) ?? new();
             }
             catch
             {
