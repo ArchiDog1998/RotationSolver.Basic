@@ -286,7 +286,7 @@ internal class OtherConfiguration
         }
     }
 
-    private static void InitOne<T>(ref T value, string name, bool download = true)
+    private static void InitOne<T>(ref T value, string name, bool download = true) where T : new()
     {
         var path = GetFilePath(name);
         if (File.Exists(path))
@@ -297,12 +297,12 @@ internal class OtherConfiguration
 
                 if (download)
                 {
-                    value = JsonHelper.DeserializeObject<T>(str)!;
+                    value = JsonHelper.DeserializeObject<T>(str) ?? new();
                 }
                 else
                 {
                     str = Cryptor.Decrypt(str);
-                    value = JsonHelper.DeserializeObject<T>(str)!;
+                    value = JsonHelper.DeserializeObject<T>(str) ?? new();
                 }
             }
             catch (Exception ex)

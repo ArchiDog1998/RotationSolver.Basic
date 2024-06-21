@@ -21,22 +21,13 @@ internal class TimelineConditionSet : TimelineConditionBase
     }
 
     [UI("Conditions")]
-    public List<TimelineConditionBase> Conditions { get; set; } = [];
+    public List<TimelineConditionBase?> Conditions { get; set; } = [];
 
     [UI("Type")]
     public LogicalType Type { get; set; } = LogicalType.All;
 
     public override bool IsTrue(TimelineItem item)
     {
-        if (Conditions.Count == 0) return true;
-
-        return Type switch
-        {
-            LogicalType.All => Conditions.All(c => c.IsTrue(item)),
-            LogicalType.Any => Conditions.Any(c => c.IsTrue(item)),
-            LogicalType.NotAll => !Conditions.All(c => c.IsTrue(item)),
-            LogicalType.NotAny => !Conditions.Any(c => c.IsTrue(item)),
-            _ => false,
-        };
+        return Type.IsTrue(Conditions, c => c.IsTrue(item));
     }
 }
