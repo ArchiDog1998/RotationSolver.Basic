@@ -18,6 +18,8 @@ internal partial class Configs : IPluginConfiguration
 
     public string[] GitHubLibs { get; set; } = [];
     public List<TargetingData> TargetingWays { get; set; } = [];
+    public TargetingConditionSet PriorityTargeting { get; set; } = new();
+    public TargetingConditionSet CantTargeting { get; set; } = new();
 
     public MacroInfo DutyStart { get; set; } = new MacroInfo();
     public MacroInfo DutyEnd { get; set; } = new MacroInfo();
@@ -148,7 +150,7 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean ShowTargetTimeToKill { get; private set; } = new(false, nameof(ShowTargetTimeToKill));
 
     [UI("Priority attacks targets with attack markers.",
-        (int)UiString.ConfigWindow_Target_Config, Section = 1)]
+        (int)UiString.ConfigWindow_Target_Priority)]
     public ConditionBoolean ChooseAttackMark { get; private set; } = new(true, nameof(ChooseAttackMark));
 
     [UI("Allows use of AoE abilities to attack as many targets as possible.",
@@ -156,7 +158,7 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean CanAttackMarkAoe { get; private set; } = new(true, nameof(CanAttackMarkAoe));
 
     [UI("Never attacks targets with stop markers.",
-        (int)UiString.ConfigWindow_Target_Config)]
+        (int)UiString.ConfigWindow_Target_Cant)]
     public ConditionBoolean FilterStopMark { get; private set; } = new(true, nameof(FilterStopMark));
 
     [UI ("Shows the hostile targets icon.", Parent = nameof(UseOverlayWindow))]
@@ -291,15 +293,15 @@ internal partial class Configs : IPluginConfiguration
     public ConditionBoolean AutoLoadCustomRotations { get; private set; } = new(false, nameof(AutoLoadCustomRotations));
 
     [UI("Prioritizes fate targets.",
-        (int)UiString.ConfigWindow_Target_Config, Section = 1)]
+        (int)UiString.ConfigWindow_Target_Priority)]
     public ConditionBoolean TargetFatePriority { get; private set; } = new(true, nameof(TargetFatePriority));
 
     [UI("Prioritizes Hunt/Relic/Leve targets.",
-        (int)UiString.ConfigWindow_Target_Config, Section = 1)]
+        (int)UiString.ConfigWindow_Target_Priority)]
     public ConditionBoolean TargetHuntingRelicLevePriority { get; private set; } = new(true, nameof(TargetHuntingRelicLevePriority));
 
     [UI("Prioritizes Quest targets.",
-        (int)UiString.ConfigWindow_Target_Config, Section = 1)]
+        (int)UiString.ConfigWindow_Target_Priority)]
 
     public ConditionBoolean TargetQuestPriority { get; private set; } = new(true, nameof(TargetQuestPriority));
 

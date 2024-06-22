@@ -1,10 +1,15 @@
-﻿namespace RotationSolver.Basic.Actions;
+﻿using RotationSolver.Basic.Configuration.Target;
+
+namespace RotationSolver.Basic.Actions;
 
 /// <summary>
 /// User config.
 /// </summary>
-public class ActionConfig()
+internal class ActionConfig()
 {
+    public TargetingConditionSet PriorityTargeting { get; set; } = new();
+    public TargetingConditionSet CantTargeting { get; set; } = new();
+
     private bool _isEnable = true;
 
     /// <summary>
@@ -55,4 +60,18 @@ public class ActionConfig()
     /// Is this action should be a mistake action.
     /// </summary>
     public bool IsInMistake { get; set; }
+
+    public bool IsTopPriority(GameObject obj)
+    {
+        if (PriorityTargeting.IsTrue(obj)) return true;
+        if (ObjectHelper.IsTopPriority(obj)) return true;
+        return false;
+    }
+
+    public bool CantAttack(GameObject obj)
+    {
+        if (CantTargeting.IsTrue(obj)) return true;
+        if (Service.Config.CantTargeting.IsTrue(obj)) return true;
+        return false;
+    }
 }

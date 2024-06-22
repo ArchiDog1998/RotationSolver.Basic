@@ -128,7 +128,7 @@ public static class ObjectHelper
         //Remove other's target.
         if (battleChara.IsOthersPlayers()) return false;
 
-        if (battleChara.IsTopPriorityHostile()) return true;
+        if (battleChara.IsTopPriority()) return true;
 
         if (Service.CountDownTime > 0 || DataCenter.IsPvP) return true;
 
@@ -235,8 +235,11 @@ public static class ObjectHelper
     /// <returns></returns>
     public static unsafe ObjectKind GetObjectKind(this GameObject obj) => (ObjectKind)obj.Struct()->ObjectKind;
 
-    internal static bool IsTopPriorityHostile(this GameObject obj)
+    internal static bool IsTopPriority(this GameObject obj)
     {
+        if (Service.Config.PriorityTargeting.IsTrue(obj)) return true;
+        if (!obj.IsHostile()) return false;
+
         var fateId = DataCenter.FateId;
         //Fate
         if (Service.Config.TargetFatePriority && fateId != 0 && obj.FateId() == fateId) return true;

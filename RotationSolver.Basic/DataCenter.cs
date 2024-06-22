@@ -126,7 +126,7 @@ internal static class DataCenter
             if (!DownloadHelper.IsSupporter)
             {
                 _actionSequencerAction = null;
-                Svc.Toasts.ShowError(UiString.CantUseSequencerAction.Local());
+                UiString.CantUseSequencerAction.Local().ShowToastWarning();
                 return;
             }
             _actionSequencerAction = value;

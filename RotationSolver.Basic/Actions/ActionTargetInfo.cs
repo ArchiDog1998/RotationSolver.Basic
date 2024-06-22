@@ -396,8 +396,19 @@ public struct ActionTargetInfo(IBaseAction action)
     #region Get Most Target
     private readonly IEnumerable<BattleChara> GetMostCanTargetObjects(IEnumerable<BattleChara> canTargets, IEnumerable<BattleChara> canAffects, int aoeCount)
     {
-        if (IsSingleTarget || EffectRange <= 0) return canTargets;
+        var condition = action.Config.IsTopPriority;
+
+        if (IsSingleTarget || EffectRange <= 0)
+        {
+            var priorityCanTargets = canTargets.Where(condition).OfType<BattleChara>();
+            return priorityCanTargets.Any() ? priorityCanTargets : canTargets;
+        }
+
         if (!action.Setting.IsFriendly && NoAOE) return [];
+
+        var priorityCanAffects = canAffects.Where(condition).OfType<BattleChara>();
+        var hasPriorityAffects = priorityCanAffects.Any();
+        var priorityAffectsCount = 0;
 
         List<BattleChara> objectMax = new(canTargets.Count());
 
@@ -405,15 +416,35 @@ public struct ActionTargetInfo(IBaseAction action)
         {
             int count = CanGetTargetCount(t, canAffects);
 
-            if (count == aoeCount)
+            if (hasPriorityAffects)
             {
-                objectMax.Add(t);
+                if (count < aoeCount) continue;
+
+                count = CanGetTargetCount(t, priorityCanAffects);
+
+                if (count == priorityAffectsCount)
+                {
+                    objectMax.Add(t);
+                }
+                else if(count > priorityAffectsCount)
+                {
+                    aoeCount = count;
+                    objectMax.Clear();
+                    objectMax.Add(t);
+                }
             }
-            else if (count > aoeCount)
+            else
             {
-                aoeCount = count;
-                objectMax.Clear();
-                objectMax.Add(t);
+                if (count == aoeCount)
+                {
+                    objectMax.Add(t);
+                }
+                else if (count > aoeCount)
+                {
+                    aoeCount = count;
+                    objectMax.Clear();
+                    objectMax.Add(t);
+                }
             }
         }
         return objectMax;
@@ -431,6 +462,12 @@ public struct ActionTargetInfo(IBaseAction action)
             {
                 return 0;
             }
+
+            if (action.Config.CantAttack(t))
+            {
+                return 0;
+            }
+
             count++;
         }
 
@@ -655,12 +692,6 @@ public struct ActionTargetInfo(IBaseAction action)
                 var b = gameObjects.FirstOrDefault(b => b.ObjectId == DataCenter.TreasureCharas[0]);
                 if (b != null) return b;
                 gameObjects = gameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.ObjectId));
-            }
-
-            var highPriority = gameObjects.Where(ObjectHelper.IsTopPriorityHostile);
-            if (highPriority.Any())
-            {
-                gameObjects = highPriority;
             }
 
             return DataCenter.TargetingWay.FindTarget(gameObjects);

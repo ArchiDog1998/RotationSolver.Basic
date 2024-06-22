@@ -139,6 +139,18 @@ internal enum UiString
     [Description("Conditions for automatic use of action being disabled.")]
     ConfigWindow_Actions_DisabledConditionSet_Description,
 
+    [Description("Priority Target Conditions")]
+    ConfigWindow_Actions_PriorityTargeting,
+
+    [Description("Conditions for the target that you want to prioritize.")]
+    ConfigWindow_Actions_PriorityTargeting_Description,
+
+    [Description("No Target Conditions")]
+    ConfigWindow_Actions_CantTargeting,
+
+    [Description("Conditions for the target that you don't want to target.")]
+    ConfigWindow_Actions_CantTargeting_Description,
+
     [Description("Download Rotations")]
     ConfigWindow_Rotations_Download,
 
@@ -432,6 +444,12 @@ internal enum UiString
 
     [Description("This will change the way that Rotation Solver uses actions.")]
     ConfigWindow_Auto_ActionCondition_Description,
+
+    [Description("Priority Target")]
+    ConfigWindow_Target_Priority,
+
+    [Description("No Target")]
+    ConfigWindow_Target_Cant,
 
     [Description("Configuration")]
     ConfigWindow_Target_Config,
