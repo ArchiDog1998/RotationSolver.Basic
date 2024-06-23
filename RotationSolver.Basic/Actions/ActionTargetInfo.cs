@@ -69,6 +69,8 @@ public struct ActionTargetInfo(IBaseAction action)
             if (type == TargetType.Heal && obj.GetHealthRatio() == 1) continue;
 
             if (!GeneralCheck(obj, skipStatusProvideCheck)) continue;
+            if (action.Config.CantAttack(obj)) continue;
+
             objs.Add(obj);
         }
 

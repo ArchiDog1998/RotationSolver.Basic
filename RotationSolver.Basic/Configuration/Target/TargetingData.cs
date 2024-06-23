@@ -1,9 +1,28 @@
 ﻿using XIVConfigUI.Attributes;
+using XIVDrawer.Vfx;
 
 namespace RotationSolver.Basic.Configuration.Target;
 
-[Description("Target Data")]
-[ListUI(61371)]
+internal class TargetingDataAttribute : ListUIAttribute
+{
+    public TargetingDataAttribute() : base(61371)
+    {
+        Description = "Click to show the target among all game objects";
+    }
+
+    public override void OnClick(object obj)
+    {
+        if (obj is not TargetingData data) return;
+        DrawerHelper.Draw(() =>
+        {
+            var target = data.FindTarget(DataCenter.AllTargets);
+            if (target == null) return [];
+            return [new StaticVfx(GroundOmenFriendly.BasicCircle.Omen(), target, Vector3.One)];
+        });
+    }
+}
+
+[TargetingData, Description("Target Data")]
 internal class TargetingData
 {
     [JsonIgnore]

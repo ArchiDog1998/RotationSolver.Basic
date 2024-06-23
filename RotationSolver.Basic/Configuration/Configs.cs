@@ -161,12 +161,17 @@ internal partial class Configs : IPluginConfiguration
         (int)UiString.ConfigWindow_Target_Cant)]
     public ConditionBoolean FilterStopMark { get; private set; } = new(true, nameof(FilterStopMark));
 
+    [LinkDescription("https://xivapi.com/i/061000/061480.png", "Priority Target")]
+    [LinkDescription("https://xivapi.com/i/061000/061502.png", "No Target")]
+    [LinkDescription("https://xivapi.com/i/061000/061510.png", "Hostile Target")]
     [UI ("Shows the hostile targets icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowHostilesIcons { get; private set; } = new(true, nameof(ShowHostilesIcons));
 
+    [LinkDescription("https://xivapi.com/i/061000/061515.png")]
     [UI("Shows the alliance icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowAllianceIcons { get; private set; } = new(false, nameof(ShowAllianceIcons));
 
+    [LinkDescription("https://xivapi.com/i/061000/061501.png")]
     [UI("Shows the RS user's icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowUsersIcons { get; private set; } = new(true, nameof(ShowUsersIcons));
 
