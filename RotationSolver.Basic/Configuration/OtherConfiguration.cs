@@ -11,10 +11,6 @@ internal class OtherConfiguration
 
     public static SortedList<uint, float> AnimationLockTime = [];
 
-    public static Dictionary<uint, string[]> NoHostileNames = [];
-    public static Dictionary<uint, string[]> NoProvokeNames = [];
-    public static Dictionary<uint, Vector3[]> BeneficialPositions = [];
-
     public static HashSet<uint> DangerousStatus = [];
     public static HashSet<uint> PriorityStatus = [];
     public static HashSet<uint> InvincibleStatus = [];
@@ -137,12 +133,9 @@ internal class OtherConfiguration
         Task.Run(() => InitOne(ref DangerousStatus, nameof(DangerousStatus)));
         Task.Run(() => InitOne(ref PriorityStatus, nameof(PriorityStatus)));
         Task.Run(() => InitOne(ref InvincibleStatus, nameof(InvincibleStatus)));
-        Task.Run(() => InitOne(ref NoHostileNames, nameof(NoHostileNames)));
-        Task.Run(() => InitOne(ref NoProvokeNames, nameof(NoProvokeNames)));
         Task.Run(() => InitOne(ref AnimationLockTime, nameof(AnimationLockTime)));
         Task.Run(() => InitOne(ref HostileCastingArea, nameof(HostileCastingArea)));
         Task.Run(() => InitOne(ref HostileCastingTank, nameof(HostileCastingTank)));
-        Task.Run(() => InitOne(ref BeneficialPositions, nameof(BeneficialPositions)));
         Task.Run(() => InitOne(ref RotationSolverRecord, nameof(RotationSolverRecord), false));
         Task.Run(() => InitOne(ref NoCastingStatus, nameof(NoCastingStatus)));
         Task.Run(() => InitOne(ref HostileCastingKnockback, nameof(HostileCastingKnockback)));
@@ -155,13 +148,10 @@ internal class OtherConfiguration
             await SavePriorityStatus();
             await SaveDangerousStatus();
             await SaveInvincibleStatus();
-            await SaveNoHostileNames();
             await SaveAnimationLockTime();
             await SaveHostileCastingArea();
             await SaveHostileCastingTank();
-            await SaveBeneficialPositions();
             await SaveRotationSolverRecord();
-            await SaveNoProvokeNames();
             await SaveNoCastingStatus();
             await SaveHostileCastingKnockback();
             await SaveTerritoryConfigs();
@@ -198,15 +188,6 @@ internal class OtherConfiguration
     {
         return Task.Run(() => Save(RotationSolverRecord, nameof(RotationSolverRecord), false));
     }
-    public static Task SaveNoProvokeNames()
-    {
-        return Task.Run(() => Save(NoProvokeNames, nameof(NoProvokeNames)));
-    }
-
-    public static Task SaveBeneficialPositions()
-    {
-        return Task.Run(() => Save(BeneficialPositions, nameof(BeneficialPositions)));
-    }
 
     public static Task SaveHostileCastingArea()
     {
@@ -227,12 +208,6 @@ internal class OtherConfiguration
     {
         return Task.Run(() => Save(InvincibleStatus, nameof(InvincibleStatus)));
     }
-
-    public static Task SaveNoHostileNames()
-    {
-        return Task.Run(() => Save(NoHostileNames, nameof(NoHostileNames)));
-    }
-
     public static Task SaveAnimationLockTime()
     {
         return Task.Run(() => Save(AnimationLockTime, nameof(AnimationLockTime)));

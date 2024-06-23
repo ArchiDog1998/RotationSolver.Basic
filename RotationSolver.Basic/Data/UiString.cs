@@ -109,6 +109,9 @@ internal enum UiString
     [Description("Minimum target time to kill at which the ability will be used.")]
     ConfigWindow_Actions_TTK,
 
+    [Description("Custom Targeting Way")]
+    ConfigWindow_Actions_CustomTargetingData,
+
     [Description("Minimum time until the target becomes untargetable that the ability will be used at.")]
     ConfigWindow_Actions_TTU,
 

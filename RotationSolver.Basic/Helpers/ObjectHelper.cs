@@ -35,9 +35,7 @@ public static class ObjectHelper
     internal static bool CanProvoke(this GameObject target)
     {
         //Removed the listed names.
-        IEnumerable<string> names = [];
-        if (OtherConfiguration.NoProvokeNames.TryGetValue(Svc.ClientState.TerritoryType, out var ns1))
-            names = names.Union(ns1);
+        var names = OtherConfiguration.TerritoryConfig.NoProvokeNames;
 
         if (names.Any(n => !string.IsNullOrEmpty(n) && new Regex(n).Match(target.Name.ToString()).Success)) return false;
 
@@ -231,10 +229,8 @@ public static class ObjectHelper
         if (Service.Config.CantTargeting.IsTrue(obj) ?? false) return true;
 
         //In No Hostiles Names
-        if (OtherConfiguration.NoHostileNames.TryGetValue(Svc.ClientState.TerritoryType, out var names))
-        {
-            if (names.Any(n => !string.IsNullOrEmpty(n) && new Regex(n).Match(obj.Name.TextValue).Success)) return true;
-        }
+        var names = OtherConfiguration.TerritoryConfig.NoHostileNames;
+        if (names.Any(n => !string.IsNullOrEmpty(n) && new Regex(n).Match(obj.Name.TextValue).Success)) return true;
 
         return false;
     }

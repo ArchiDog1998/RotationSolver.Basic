@@ -21,6 +21,10 @@ internal class ActionConfig()
         set => _isEnable = value;
     }
 
+    public bool UseCustomTargetingData { get; set; } = false;
+
+    public string TargetingDataName { get; set; } = string.Empty;
+
     /// <summary>
     /// Should check the status for this action.
     /// </summary>

@@ -6,6 +6,9 @@ namespace RotationSolver.Basic.Configuration;
 
 internal class TerritoryConfig
 {
+    public  List<string> NoHostileNames { get; set; } = [];
+    public List<string> NoProvokeNames { get; set; } = [];
+    public List<Vector3> BeneficialPositions { get; set; } = [];
     public bool AutoHeal { get; set; } = true;
 
     public bool AutoDefense { get; set; } = true;

@@ -6,6 +6,7 @@ using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Scene;
 using RotationSolver.Basic.Configuration;
+using RotationSolver.Basic.Configuration.Target;
 
 namespace RotationSolver.Basic.Actions;
 
@@ -40,6 +41,22 @@ public struct ActionTargetInfo(IBaseAction action)
     /// </summary>
 
     public readonly bool IsTargetArea => action.Action.TargetArea;
+
+    internal readonly TargetingData TargetingWay
+    {
+        get
+        {
+            if (action.Config.UseCustomTargetingData)
+            {
+                foreach (var item in Service.Config.TargetingWays)
+                {
+                    if (item.TargetName != action.Config.TargetingDataName) continue;
+                    return item;
+                }
+            }
+            return DataCenter.TargetingWay;
+        }
+    }
 
     private static bool NoAOE
     {
@@ -223,7 +240,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
         var targets = GetMostCanTargetObjects(canTargets, canAffects,
             skipAoeCheck ? 0 : action.Config.AoeCount);
-        var target = FindTargetByType(targets, type, action.Config.AutoHealRatio, action.Setting.SpecialType);
+        var target = FindTargetByType(targets, type, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);
         if (target == null) return null;
 
         return new(target, [.. GetAffects(target, canAffects)], target.Position);
@@ -285,12 +302,11 @@ public struct ActionTargetInfo(IBaseAction action)
         {
             var availableCharas = DataCenter.AllTargets.Where(b => b.ObjectId != Player.Object.ObjectId);
             var target = FindTargetByType(TargetFilter.GetObjectInRadius(availableCharas, range),
-                TargetType.Move, action.Config.AutoHealRatio, action.Setting.SpecialType);
+                TargetType.Move, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);
             if (target == null) return null;
             return new(target, [], target.Position);
         }
     }
-
 
     private readonly TargetResult? FindTargetAreaFriend(float range, IEnumerable<BattleChara> canAffects, PlayerCharacter player)
     {
@@ -299,11 +315,9 @@ public struct ActionTargetInfo(IBaseAction action)
         {
             case BeneficialAreaStrategy.OnLocations: // Find from list
             case BeneficialAreaStrategy.OnlyOnLocations: // Only the list
-                OtherConfiguration.BeneficialPositions.TryGetValue(Svc.ClientState.TerritoryType, out var pts);
+                var pts  = OtherConfiguration.TerritoryConfig.BeneficialPositions;
 
-                pts ??= [];
-
-                if (pts.Length == 0)
+                if (pts.Count == 0)
                 {
                     if (DataCenter.TerritoryContentType == TerritoryContentType.Trials ||
                         DataCenter.TerritoryContentType == TerritoryContentType.Raids
@@ -313,7 +327,7 @@ public struct ActionTargetInfo(IBaseAction action)
                     }
                 }
 
-                if (pts.Length > 0)
+                if (pts.Count > 0)
                 {
                     var closest = pts.MinBy(p => Vector3.Distance(player.Position, p));
                     var rotation = new Random().NextDouble() * Math.Tau;
@@ -347,7 +361,7 @@ public struct ActionTargetInfo(IBaseAction action)
         {
             var effectRange = EffectRange;
             var attackT = FindTargetByType(DataCenter.AllianceMembers.GetObjectInRadius(range + effectRange),
-                TargetType.BeAttacked, action.Config.AutoHealRatio, action.Setting.SpecialType);
+                TargetType.BeAttacked, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);
 
             if (attackT == null)
             {
@@ -512,7 +526,7 @@ public struct ActionTargetInfo(IBaseAction action)
     #endregion
 
     #region TargetFind
-    private static BattleChara? FindTargetByType(IEnumerable<BattleChara> gameObjects, TargetType type, float healRatio, SpecialActionType actionType)
+    private static BattleChara? FindTargetByType(IEnumerable<BattleChara> gameObjects, TargetType type, float healRatio, SpecialActionType actionType, TargetingData targetingData)
     {
         if (type == TargetType.Self) return Player.Object;
 
@@ -696,7 +710,7 @@ public struct ActionTargetInfo(IBaseAction action)
                 gameObjects = gameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.ObjectId));
             }
 
-            return DataCenter.TargetingWay.FindTarget(gameObjects);
+            return targetingData.FindTarget(gameObjects);
         }
 
         BattleChara? FindBeAttackedTarget()
