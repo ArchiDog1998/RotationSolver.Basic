@@ -127,7 +127,7 @@ internal enum UiString
     [Description("The HP ratio to auto heal")]
     ConfigWindow_Actions_HealRatio,
 
-    [Description("Forced Conditions have a higher priority. If Forced Conditions are met, Disabled Conditions will be ignored.")]
+    [Description("Forced Conditions have a higher priority. If Forced Conditions are met, Disabled Conditions will be ignored.\nNo Target Conditions have a higher priority. If No Target Conditions are met, Priority Target Conditions will be ignored.")]
     ConfigWindow_Actions_ConditionDescription,
 
     [Description("Forced Conditions")]
