@@ -8,11 +8,7 @@ internal class ConditionSetAttribute : ChoicesAttribute
 
     protected override Pair[] GetChoices()
     {
-        foreach (var pair in Service.Config.NamedTargetingConditions)
-        {
-            yield return pair.Name;
-        }
-        //return [.. Service.Config.NamedTargetingConditions.Select(i => i.Name)];
+        return [.. Service.Config.NamedTargetingConditions.Select(i => i.Name)];
     }
 }
 
