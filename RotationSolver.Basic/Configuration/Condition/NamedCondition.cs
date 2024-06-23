@@ -8,7 +8,7 @@ internal class ConditionSetAttribute : ChoicesAttribute
 
     protected override Pair[] GetChoices()
     {
-        return [.. DataCenter.RightSet.NamedConditions.Select(i => new Pair(i.Name, i.Name))];
+        return [.. DataCenter.RightSet.NamedConditions.Select(i => i.Name)];
     }
 }
 
@@ -19,11 +19,11 @@ internal class NamedCondition : DelayConditionBase
     public string ConditionName { get; set; } = "Not Chosen";
     protected override bool IsTrueInside(ICustomRotation rotation)
     {
-        foreach (var (Name, Condition) in DataCenter.RightSet.NamedConditions)
+        foreach (var item in DataCenter.RightSet.NamedConditions)
         {
-            if (Name != ConditionName) continue;
+            if (item.Name != ConditionName) continue;
 
-            return Condition.IsTrue() ?? false;
+            return item.Item.IsTrue() ?? false;
         }
         return false;
     }

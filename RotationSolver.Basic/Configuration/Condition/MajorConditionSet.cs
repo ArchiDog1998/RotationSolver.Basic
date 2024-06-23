@@ -65,8 +65,8 @@ internal class MajorConditionSet(string name = MajorConditionSet.conditionName)
     public ConditionSet SwitchManualConditionSet { get; set; } = new();
     public ConditionSet SwitchCancelConditionSet { get; set; } = new();
 
-    public (string Name, ConditionSet Condition)[] NamedConditions { get; set; }
-        = Array.Empty<(string, ConditionSet)>();
+    public List<NamedItem<ConditionSet>> NamedConditions { get; set; }
+        = [];
 
     public string Name = name;
 

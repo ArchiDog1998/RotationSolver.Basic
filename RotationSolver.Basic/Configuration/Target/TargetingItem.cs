@@ -33,6 +33,6 @@ internal class TargetingItem
 
     public BattleChara? FindTarget(IEnumerable<BattleChara> characters)
     {
-        return TargetingType.FindTarget(characters.Where(ConditionSet.IsTrue));
+        return TargetingType.FindTarget(characters.Where(t => ConditionSet.IsTrue(t) ?? false));
     }
 }

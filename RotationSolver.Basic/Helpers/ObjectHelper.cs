@@ -88,14 +88,6 @@ public static class ObjectHelper
 
         if (Svc.ClientState == null) return false;
 
-        //In No Hostiles Names
-        IEnumerable<string> names = [];
-        if (OtherConfiguration.NoHostileNames.TryGetValue(Svc.ClientState.TerritoryType, out var ns1))
-            names = names.Union(ns1);
-
-        if (names.Any(n => !string.IsNullOrEmpty(n) && new Regex(n).Match(battleChara.Name.TextValue).Success)) return false;
-
-
         if (battleChara is PlayerCharacter p)
         {
             var hash = EncryptString(p);
@@ -141,7 +133,6 @@ public static class ObjectHelper
             _ => true,
         };
     }
-
 
     internal static string EncryptString(this PlayerCharacter player)
     {
@@ -235,9 +226,22 @@ public static class ObjectHelper
     /// <returns></returns>
     public static unsafe ObjectKind GetObjectKind(this GameObject obj) => (ObjectKind)obj.Struct()->ObjectKind;
 
+    internal static bool IsNoTarget(this GameObject obj)
+    {
+        if (Service.Config.CantTargeting.IsTrue(obj) ?? false) return true;
+
+        //In No Hostiles Names
+        if (OtherConfiguration.NoHostileNames.TryGetValue(Svc.ClientState.TerritoryType, out var names))
+        {
+            if (names.Any(n => !string.IsNullOrEmpty(n) && new Regex(n).Match(obj.Name.TextValue).Success)) return true;
+        }
+
+        return false;
+    }
+
     internal static bool IsTopPriority(this GameObject obj)
     {
-        if (Service.Config.PriorityTargeting.IsTrue(obj)) return true;
+        if (Service.Config.PriorityTargeting.IsTrue(obj) ?? false) return true;
         if (!obj.IsHostile()) return false;
 
         var fateId = DataCenter.FateId;

@@ -26,7 +26,7 @@ internal class TargetingDataIDCondition : TargetingConditionBase
     [UI("Data ID")]
     public string DataID { get; set; } = string.Empty;
 
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
         if (string.IsNullOrEmpty(DataID)) return false;
 

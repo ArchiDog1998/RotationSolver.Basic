@@ -11,8 +11,8 @@ internal class TargetingConditionSet : TargetingConditionBase
     [UI("Logical Type")]
     public LogicalType Type { get; set; } = LogicalType.All;
 
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
-        return Type.IsTrue(Conditions, c => c.IsTrue(obj));
+        return Type.IsTrue(Conditions, c => c?.IsTrue(obj) ?? false);
     }
 }

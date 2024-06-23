@@ -244,7 +244,6 @@ internal static class DataCenter
     public static float CastingTotal { get; internal set; }
     #endregion
 
-
     public static uint[] BluSlots { get; internal set; } = new uint[24];
 
     public static uint[] DutyActions { get; internal set; } = new uint[2];

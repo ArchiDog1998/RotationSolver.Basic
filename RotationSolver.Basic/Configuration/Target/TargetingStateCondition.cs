@@ -7,7 +7,7 @@ internal class TargetingStateCondition : TargetingConditionBase
 {
     [UI("State")]
     public TargetingState TargetingState { get; set; } = TargetingState.IsDying;
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
         if (obj is not BattleChara battle) return false;
         return TargetingState switch

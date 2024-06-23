@@ -20,7 +20,7 @@ internal class TargetingTypeCondition : TargetingConditionBase
     [UI("Type")]
     public TargetingTypeCon TargetingType { get; set; } = TargetingTypeCon.MySelf;
 
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
         return TargetingType switch
         {

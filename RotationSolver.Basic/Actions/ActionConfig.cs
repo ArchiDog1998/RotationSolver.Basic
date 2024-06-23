@@ -63,15 +63,15 @@ internal class ActionConfig()
 
     public bool IsTopPriority(GameObject obj)
     {
-        if (PriorityTargeting.IsTrue(obj)) return true;
-        if (ObjectHelper.IsTopPriority(obj)) return true;
+        if (PriorityTargeting.IsTrue(obj) ?? false) return true;
+        if (obj.IsTopPriority()) return true;
         return false;
     }
 
     public bool CantAttack(GameObject obj)
     {
-        if (CantTargeting.IsTrue(obj)) return true;
-        if (Service.Config.CantTargeting.IsTrue(obj)) return true;
+        if (CantTargeting.IsTrue(obj) ?? false) return true;
+        if (obj.IsNoTarget()) return true;
         return false;
     }
 }

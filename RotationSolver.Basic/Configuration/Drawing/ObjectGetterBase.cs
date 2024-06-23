@@ -22,7 +22,7 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
 
     public override IDisposable[] GetDrawing()
     {
-        var objs = Svc.Objects.Where(Object.IsTrue);
+        var objs = Svc.Objects.Where(t => Object.IsTrue(t) ?? false);
         return [..objs.SelectMany(GetTextDrawing),
             ..objs.SelectMany(GetObjectDrawing)];
     }
@@ -31,7 +31,7 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
     {
         if (ManualTarget)
         {
-            return [.. Svc.Objects.Where(Target.IsTrue)];
+            return [.. Svc.Objects.Where(t => Target.IsTrue(t) ?? false)];
         }
         else
         {

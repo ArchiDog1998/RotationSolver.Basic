@@ -36,7 +36,7 @@ internal class TargetCondition : DelayConditionBase
 
         if (tar == null) return false;
 
-        return Condition.IsTrue(tar);
+        return Condition.IsTrue(tar) ?? false;
     }
 }
 

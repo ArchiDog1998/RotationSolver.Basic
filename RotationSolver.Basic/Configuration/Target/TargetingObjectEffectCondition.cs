@@ -42,7 +42,7 @@ internal class TargetingObjectEffectCondition : TargetingConditionBase
     [UI("Time duration")]
     public Vector2 TimeDuration { get; set; } = new(0, 2);
 
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
         return Recorder.GetData<ObjectEffectData>(TimeDuration).Any(effect =>
         {

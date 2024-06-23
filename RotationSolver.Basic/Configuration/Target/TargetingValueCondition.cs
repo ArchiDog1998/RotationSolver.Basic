@@ -21,7 +21,7 @@ internal class TargetingValueCondition : TargetingConditionBase
     [UI("Percent")]
     public float Precent { get; set; }
 
-    public override bool IsTrue(GameObject obj)
+    protected override bool IsTrueInside(GameObject obj)
     {
         if (obj is not BattleChara battle) return false;
 

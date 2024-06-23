@@ -48,12 +48,15 @@ internal abstract class DelayConditionBase : ICondition
         }
 
         _callingStack.Push(this);
-        var value = CheckBefore(rotation) && IsTrueInside(rotation);
-
-        var result = _delay.Delay(_offsetDelay.Delay(value));
-        _callingStack.Pop();
-
-        return result;
+        try
+        {
+            var value = CheckBefore(rotation) && IsTrueInside(rotation);
+            return _delay.Delay(_offsetDelay.Delay(value));
+        }
+        finally
+        {
+            _callingStack.Pop();
+        }
     }
 
     protected abstract bool IsTrueInside(ICustomRotation rotation);

@@ -54,7 +54,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
 
     public override IDisposable[] GetDrawing()
     {
-        var objs = Svc.Objects.Where(Target.IsTrue);
+        var objs = Svc.Objects.Where(t => Target.IsTrue(t) ?? false);
         if (objs.Any())
         {
             return [.. objs.Select(GetActionDrawing).OfType<IDisposable>()];

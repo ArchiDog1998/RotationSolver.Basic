@@ -20,6 +20,7 @@ internal partial class Configs : IPluginConfiguration
     public List<TargetingData> TargetingWays { get; set; } = [];
     public TargetingConditionSet PriorityTargeting { get; set; } = new();
     public TargetingConditionSet CantTargeting { get; set; } = new();
+    public List<NamedItem<TargetingConditionSet>> NamedTargetingConditions { get; set; } = [];
 
     public MacroInfo DutyStart { get; set; } = new MacroInfo();
     public MacroInfo DutyEnd { get; set; } = new MacroInfo();

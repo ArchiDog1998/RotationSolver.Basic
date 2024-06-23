@@ -1,4 +1,6 @@
 ﻿using ECommons.DalamudServices;
+using RotationSolver.Basic.Configuration.Condition;
+using System.Linq;
 using XIVConfigUI.Attributes;
 using XIVConfigUI.ConditionConfigs;
 
@@ -20,5 +22,30 @@ internal abstract class TargetingConditionBase : ICondition
         }
     }
 
-    public abstract bool IsTrue(GameObject obj);
+    [ThreadStatic]
+    private static Stack<TargetingConditionBase>? _callingStack;
+
+    public bool? IsTrue(GameObject obj)
+    {
+        _callingStack ??= new(64);
+
+        if (_callingStack.Contains(this))
+        {
+            //Do something for recursion!
+            return null;
+        }
+
+        _callingStack.Push(this);
+
+        try
+        {
+           return  IsTrueInside(obj);
+        }
+        finally
+        {
+            _callingStack.Pop();
+        }
+    }
+
+    protected abstract bool IsTrueInside(GameObject obj);
 }
