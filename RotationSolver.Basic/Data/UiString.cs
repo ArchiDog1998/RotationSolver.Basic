@@ -112,6 +112,9 @@ internal enum UiString
     [Description("Custom Targeting Way")]
     ConfigWindow_Actions_CustomTargetingData,
 
+    [Description("The list is in Target - Hostile")]
+    ConfigWindow_Actions_CustomTargetingData_Description,
+
     [Description("Minimum time until the target becomes untargetable that the ability will be used at.")]
     ConfigWindow_Actions_TTU,
 
