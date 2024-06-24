@@ -435,7 +435,7 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Skips ping checking. Please use it along with NoClippy",
         (int)UiString.ConfigWindow_Basic_Timer, Section = 2)]
-    public ConditionBoolean NoPingCheck { get; private set; } = new(false, nameof(NoPingCheck));
+    public ConditionBoolean NoPingCheck { get; private set; } = new(true, nameof(NoPingCheck));
 
     [UI("Advanced Target System", (int)UiString.ConfigWindow_List_Hostile)]
     public ConditionBoolean AdvancedTargetSystem { get; set; } = new(false, nameof(AdvancedTargetSystem));
@@ -458,7 +458,7 @@ internal partial class Configs : IPluginConfiguration
     public float SampleLength { get; set; } = 1;
 
     [UI("Uses tasks for making the overlay window faster.", Parent = nameof(UseOverlayWindow))]
-    public ConditionBoolean UseTasksForOverlay { get; private set; } = new(false, nameof(UseTasksForOverlay));
+    public ConditionBoolean UseTasksForOverlay { get; private set; } = new(true, nameof(UseTasksForOverlay));
 
     [UI("The angle of your vision cone.", Parent = nameof(OnlyAttackInVisionCone))]
     [Range(0, 90, ConfigUnitType.Degree, 0.02f)]
@@ -560,15 +560,15 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("The random delay between for the auto anti-knockback.", Parent = nameof(UseKnockback))]
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
-    public Vector2 AntiKnockbackDelay { get; set; } = new(2, 3);
+    public Vector2 AntiKnockbackDelay { get; set; } = new(1, 2);
 
     [UI("The random delay between single target defensive abilities being used.", Parent = nameof(UseDefenseAbility))]
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
-    public Vector2 DefenseSingleDelay { get; set; } = new(2, 3);
+    public Vector2 DefenseSingleDelay { get; set; } = new(1, 2);
 
     [UI("The random delay between AoE defensive abilities being used.", Parent = nameof(UseDefenseAbility))]
     [Range(0, 5, ConfigUnitType.Seconds, 0.002f)]
-    public Vector2 DefenseAreaDelay { get; set; } = new(2, 3);
+    public Vector2 DefenseAreaDelay { get; set; } = new(1, 2);
 
     [JobFilter(PvP = JobFilterType.NoJob)]
     [UI("Remaining countdown duration when abilities will start being used before finishing the countdown.", (int)UiString.ConfigWindow_Basic_Timer, Section = 1)]
@@ -643,19 +643,19 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Hostile icon size.", Parent = nameof(ShowHostilesIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
-    public float HostileIconSize { get; set; } = 0.5f;
+    public float HostileIconSize { get; set; } = 0.3f;
 
     [UI("Allicance icon size.", Parent = nameof(ShowAllianceIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
-    public float AllianceIconSize { get; set; } = 0.5f;
+    public float AllianceIconSize { get; set; } = 0.3f;
 
     [UI("User icon size.", Parent = nameof(ShowUsersIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
-    public float UserIconSize { get; set; } = 0.5f;
+    public float UserIconSize { get; set; } = 0.3f;
 
     [UI("State icon height.", Parent =nameof(ShowStateIcon))]
-    [Range(0, 3, ConfigUnitType.Pixels, 0.002f)]
-    public float StateIconHeight { get; set; } = 1;
+    [Range(0, 3, ConfigUnitType.Yalms, 0.002f)]
+    public float StateIconHeight { get; set; } = 0.5f;
 
     [UI("State icon size.", Parent = nameof(ShowStateIcon))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
@@ -664,7 +664,7 @@ internal partial class Configs : IPluginConfiguration
     [UI("The interval for updating RS information.",
         (int)UiString.ConfigWindow_Basic_Timer)]
     [Range(0, 1, ConfigUnitType.Seconds, 0.002f)]
-    public float MinUpdatingTime { get; set; } = 0.02f;
+    public float MinUpdatingTime { get; set; } = 0;
 
     [JobFilter(PvE = JobFilterType.NoJob)]
     [UI("The HP for using Guard.", 
@@ -718,7 +718,7 @@ internal partial class Configs : IPluginConfiguration
     public int TargetingIndex { get; set; }
 
     [UI("Beneficial AoE strategy", Parent = nameof(UseGroundBeneficialAbility))]
-    public BeneficialAreaStrategy BeneficialAreaStrategy { get; set; } = BeneficialAreaStrategy.OnCalculated;
+    public BeneficialAreaStrategy BeneficialAreaStrategy { get; set; } = BeneficialAreaStrategy.OnLocations;
 
     [JobFilter(PvE = JobFilterType.Tank)]
     [UI("Number of hostiles", Parent = nameof(UseDefenseAbility))]
@@ -759,7 +759,7 @@ internal partial class Configs : IPluginConfiguration
     [JobConfig, Range(0, 1, ConfigUnitType.Percent, 0.02f)]
     [UI("The HP%% for tanks to use their invulnerability ability", 
         (int)UiString.ConfigWindow_Auto_ActionCondition, Section = 3)]
-    private readonly float _healthForDyingTanks = 0.15f;
+    private readonly float _healthForDyingTanks = 0f;
 
     [JobFilter(PvE = JobFilterType.Tank)]
     [JobConfig, Range(0, 1, ConfigUnitType.Percent, 0.02f)]
