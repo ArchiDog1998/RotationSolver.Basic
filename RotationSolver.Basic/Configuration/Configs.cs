@@ -645,7 +645,7 @@ internal partial class Configs : IPluginConfiguration
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float HostileIconSize { get; set; } = 0.3f;
 
-    [UI("Allicance icon size.", Parent = nameof(ShowAllianceIcons))]
+    [UI("Alliance icon size.", Parent = nameof(ShowAllianceIcons))]
     [Range(0.1f, 5, ConfigUnitType.Percent, 0.002f)]
     public float AllianceIconSize { get; set; } = 0.3f;
 
