@@ -289,9 +289,6 @@ internal enum UiString
     [Description("The name of the enemy that you don't want to be provoked")]
     ConfigWindow_List_NoProvokeName,
 
-    [Description("Add beneficial AoE location")]
-    ConfigWindow_List_AddPosition,
-
     [Description("Time")]
     ConfigWindow_Timeline_Time,
 

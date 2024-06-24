@@ -1,4 +1,5 @@
 ﻿using ECommons.ExcelServices;
+using RotationSolver.Basic.Configuration.Target;
 using RotationSolver.Basic.Configuration.Timeline;
 using RotationSolver.Basic.Configuration.Trigger;
 
@@ -8,9 +9,10 @@ internal class TerritoryConfig
 {
     public  List<string> NoHostileNames { get; set; } = [];
     public List<string> NoProvokeNames { get; set; } = [];
-    public List<Vector3> BeneficialPositions { get; set; } = [];
+    public TargetingConditionSet PriorityTargeting { get; set; } = new();
+    public TargetingConditionSet CantTargeting { get; set; } = new();
+    public List<Position> BeneficialPositions { get; set; } = [];
     public bool AutoHeal { get; set; } = true;
-
     public bool AutoDefense { get; set; } = true;
 
     [JsonIgnore]

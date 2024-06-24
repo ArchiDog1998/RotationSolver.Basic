@@ -227,6 +227,7 @@ public static class ObjectHelper
     internal static bool IsNoTarget(this GameObject obj)
     {
         if (Service.Config.CantTargeting.IsTrue(obj) ?? false) return true;
+        if (OtherConfiguration.TerritoryConfig.CantTargeting.IsTrue(obj) ?? false) return true;
 
         //In No Hostiles Names
         var names = OtherConfiguration.TerritoryConfig.NoHostileNames;
@@ -238,6 +239,7 @@ public static class ObjectHelper
     internal static bool IsTopPriority(this GameObject obj)
     {
         if (Service.Config.PriorityTargeting.IsTrue(obj) ?? false) return true;
+        if (OtherConfiguration.TerritoryConfig.PriorityTargeting.IsTrue(obj) ?? false) return true;
         if (!obj.IsHostile()) return false;
 
         var fateId = DataCenter.FateId;
