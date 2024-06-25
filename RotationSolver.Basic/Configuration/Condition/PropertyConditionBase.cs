@@ -88,16 +88,16 @@ internal abstract class PropertyConditionBase : DelayConditionBase
     [UI("Comparison", (int)PropertyConditionType.Integer,
         (int)PropertyConditionType.Float,
         Parent = nameof(PropertyCondition))]
-    public Comparison Comparison { get; set; } = Comparison.Bigger;
+    public virtual Comparison Comparison { get; set; } = Comparison.Bigger;
 
     [EnumChoices, UI("Count", (int)PropertyConditionType.Integer,
         (int)PropertyConditionType.Enum,
     Parent = nameof(PropertyCondition))]
-    public int Count { get; set; }
+    public virtual int Count { get; set; }
 
     [UI("Value", (int)PropertyConditionType.Float,
         Parent = nameof(PropertyCondition))]
-    public float Value { get; set; }
+    public virtual float Value { get; set; }
 
     protected override bool IsTrueInside()
     {

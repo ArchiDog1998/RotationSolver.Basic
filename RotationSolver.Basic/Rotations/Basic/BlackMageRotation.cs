@@ -83,7 +83,7 @@ partial class BlackMageRotation
     /// <summary>
     /// 
     /// </summary>
-    protected static float ElementTime => ElementTimeRaw - DataCenter.WeaponRemain;
+    public static float ElementTime => ElementTimeRaw - DataCenter.WeaponRemain;
 
     /// <summary>
     /// 

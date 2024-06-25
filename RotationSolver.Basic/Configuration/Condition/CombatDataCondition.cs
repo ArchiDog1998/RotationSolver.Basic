@@ -1,4 +1,5 @@
-﻿namespace RotationSolver.Basic.Configuration.Condition;
+﻿
+namespace RotationSolver.Basic.Configuration.Condition;
 
 internal class CombatDataIntegerChoicesAttribute : IntegerChoicesAttribute
 {
@@ -34,6 +35,10 @@ internal class CombatDataCondition : PropertyConditionBase
     [CombatDataEnumerableChoices]
     public override string EnumName { get => base.EnumName; set => base.EnumName = value; }
 
+    public override Comparison Comparison { get => base.Comparison; set => base.Comparison = value; }
+    public override float Value { get => base.Value; set => base.Value = value; }
+    public override int Count { get => base.Count; set => base.Count = value; }
+    public byte CombatData { get; set; }
     public override bool? CheckBefore()
     {
         CheckMemberInfo(typeof(CombatData), ref _propertyName, ref _prop);

@@ -26,7 +26,7 @@ partial class DarkKnightRotation
     /// <summary>
     /// 
     /// </summary>
-    public static float DarkSideTime => DarkSideTimeRemainingRaw - DataCenter.WeaponRemain;
+    public static float DarkSideTime => DarkSideTimeRemainingRaw - WeaponRemain;
 
     /// <summary>
     /// 

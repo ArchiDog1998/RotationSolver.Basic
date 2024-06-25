@@ -14,12 +14,12 @@ partial class AstrologianRotation
     /// <summary>
     /// 
     /// </summary>
-    protected static CardType DrawnCard => JobGauge.DrawnCard;
+    public static CardType DrawnCard => JobGauge.DrawnCard;
 
     /// <summary>
     /// 
     /// </summary>
-    protected static CardType DrawnCrownCard => JobGauge.DrawnCrownCard;
+    public static CardType DrawnCrownCard => JobGauge.DrawnCrownCard;
 
     /// <summary>
     /// 

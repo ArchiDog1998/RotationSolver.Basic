@@ -18,12 +18,12 @@ partial class BardRotation
     /// <summary>
     /// 
     /// </summary>
-    protected static Song Song => JobGauge.Song;
+    public static Song Song => JobGauge.Song;
 
     /// <summary>
     /// 
     /// </summary>
-    protected static Song LastSong => JobGauge.LastSong;
+    public static Song LastSong => JobGauge.LastSong;
 
     /// <summary>
     /// 
