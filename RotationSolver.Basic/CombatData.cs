@@ -262,22 +262,22 @@ public static class CombatData
     /// In in the burst status.
     /// </summary>
     [Description("Is burst")]
-    public static bool IsBurst => MergedStatus.HasFlag(AutoStatus.Burst);
+    public static bool IsBurst => MergedStatusState.HasFlag(AutoStatus.Burst);
 
     /// <summary>
-    /// The merged status, which contains <see cref="AutoState"/> and <see cref="CommandStatus"/>.
+    /// The merged status, which contains <see cref="AutoState"/> and <see cref="CommandStatusState"/>.
     /// </summary>
-    public static AutoStatus MergedStatus => DataCenter.MergedStatus;
+    public static AutoStatus MergedStatusState => DataCenter.MergedStatus;
 
     /// <summary>
     /// The automatic status, which is checked from RS.
     /// </summary>
-    public static AutoStatus AutoStatus => DataCenter.AutoStatus;
+    public static AutoStatus AutoStatusState => DataCenter.AutoStatus;
 
     /// <summary>
     /// The CMD status, which is checked from the player.
     /// </summary>
-    public static AutoStatus CommandStatus => DataCenter.CommandStatus;
+    public static AutoStatus CommandStatusState => DataCenter.CommandStatus;
     #endregion
 
     #region Time
