@@ -59,7 +59,7 @@ internal class Service : IDisposable
         }
     }
 
-    // From https://github.com/UnknownX7/Cammy/blob/5c92ef3b1b0f8fdfd8cb690cc0825316721642a1/Game.cs#L31
+    // From https://github.com/UnknownX7/Cammy/blob/master/Game.cs#L31
     [Signature("F3 0F 10 05 ?? ?? ?? ?? 0F 2E C6 0F 8A", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible)]
     static IntPtr forceDisableMovementPtr = IntPtr.Zero;
     private static unsafe ref int ForceDisableMovement => ref *(int*)(forceDisableMovementPtr + 4);
@@ -74,7 +74,6 @@ internal class Service : IDisposable
             if (_canMove == realCanMove) return;
             _canMove = realCanMove;
 
-            Svc.Log.Error("Can move to " + value);
             if (!realCanMove)
             {
                 ForceDisableMovement++;
