@@ -207,7 +207,7 @@ public readonly struct ActionBasicInfo
 
         if (_action.Action.ActionCategory.Row == 15)
         {
-            if (CustomRotation.LimitBreakLevel <= 1)
+            if (CombatData.LimitBreakLevel <= 1)
             {
                 whyCant = WhyActionCantUse.LimitBreakPvP;
                 return false;

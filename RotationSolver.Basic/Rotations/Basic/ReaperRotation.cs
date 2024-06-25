@@ -1,4 +1,4 @@
-﻿using RotationSolver.Basic.Data;
+﻿using static RotationSolver.Basic.CombatData;
 
 namespace RotationSolver.Basic.Rotations.Basic;
 

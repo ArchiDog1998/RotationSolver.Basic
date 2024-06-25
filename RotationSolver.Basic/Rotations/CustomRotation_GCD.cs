@@ -90,7 +90,7 @@ partial class CustomRotation
 
         if (GeneralGCD(out var action)) return action;
 
-        if (Service.Config.HealWhenNothingTodo && InCombat)
+        if (Service.Config.HealWhenNothingTodo && CombatData.InCombat)
         {
             // Please don't tell me someone's fps is less than 1!!
             if (DateTime.Now - _nextTimeToHeal > TimeSpan.FromSeconds(1))
@@ -103,7 +103,7 @@ partial class CustomRotation
             {
                 _nextTimeToHeal = DateTime.Now;
 
-                if (PartyMembersMinHP < Service.Config.HealWhenNothingTodoBelow)
+                if (CombatData.PartyMembersMinHP < Service.Config.HealWhenNothingTodoBelow)
                 {
                     IBaseAction.TargetOverride =  TargetType.Heal;
 
@@ -134,7 +134,7 @@ partial class CustomRotation
             return LimitBreakPvPGCD(out act);
         }
 
-        return LimitBreakLevel switch
+        return CombatData.LimitBreakLevel switch
         {
             1 => LimitBreak1?.CanUse(out act, skipAoeCheck: true) ?? false,
             2 => LimitBreak2?.CanUse(out act, skipAoeCheck: true) ?? false,
@@ -167,7 +167,7 @@ partial class CustomRotation
 
         if (RaiseAction(out act, true))
         {
-            if (HasSwift)
+            if (CombatData.HasSwift)
             {
                 return true;
             }
@@ -178,14 +178,14 @@ partial class CustomRotation
                 {
                     return true;
                 }
-                else if (!IsMoving)
+                else if (!CombatData.IsMoving)
                 {
                     act = action;
                     return true;
                 }
             }
             else if (Service.Config.RaisePlayerBySwift && !SwiftcastPvE.CD.IsCoolingDown
-                && NextAbilityToNextGCD > DataCenter.MinAnimationLock + Ping)
+                && CombatData.NextAbilityToNextGCD > DataCenter.MinAnimationLock + CombatData.Ping)
             {
                 return true;
             }
@@ -195,7 +195,7 @@ partial class CustomRotation
 
         bool RaiseAction(out IAction act, bool ignoreCastingCheck)
         {
-            if (Player.CurrentMp > Service.Config.LessMPNoRaise && (Raise?.CanUse(out act, skipCastingCheck: ignoreCastingCheck) ?? false)) return true;
+            if (CombatData.Player.CurrentMp > Service.Config.LessMPNoRaise && (Raise?.CanUse(out act, skipCastingCheck: ignoreCastingCheck) ?? false)) return true;
 
             act = null!;
             return false;
@@ -234,7 +234,7 @@ partial class CustomRotation
     {
         #region PvP
         if (GuardPvP.CanUse(out act)
-            && (Player.GetHealthRatio() <= Service.Config.HealthForGuard
+            && (CombatData.Player.GetHealthRatio() <= Service.Config.HealthForGuard
             || DataCenter.CommandStatus.HasFlag(AutoStatus.Raise | AutoStatus.Shirk))) return true;
 
         

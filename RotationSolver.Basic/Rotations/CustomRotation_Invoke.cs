@@ -20,19 +20,19 @@ partial class CustomRotation
             UpdateActions(Role);
             IBaseAction.ActionPreview = false;
 
-            CountingOfLastUsing = CountingOfCombatTimeUsing = 0;
+            CombatData.CountingOfLastUsing = CombatData.CountingOfCombatTimeUsing = 0;
             newAction = Invoke(out gcdAction);
-            if (InCombat || CountOfTracking == 0)
+            if (CombatData.InCombat || CountOfTracking == 0)
             {
                 AverageCountOfLastUsing =
-                    (AverageCountOfLastUsing * CountOfTracking + CountingOfLastUsing)
+                    (AverageCountOfLastUsing * CountOfTracking + CombatData.CountingOfLastUsing)
                     / ++CountOfTracking;
-                MaxCountOfLastUsing = Math.Max(MaxCountOfLastUsing, CountingOfLastUsing);
+                MaxCountOfLastUsing = Math.Max(MaxCountOfLastUsing, CombatData.CountingOfLastUsing);
 
                 AverageCountOfCombatTimeUsing =
-                    (AverageCountOfCombatTimeUsing * (CountOfTracking - 1) + CountingOfCombatTimeUsing)
+                    (AverageCountOfCombatTimeUsing * (CountOfTracking - 1) + CombatData.CountingOfCombatTimeUsing)
                     / CountOfTracking;
-                MaxCountOfCombatTimeUsing = Math.Max(MaxCountOfCombatTimeUsing, CountingOfCombatTimeUsing);
+                MaxCountOfCombatTimeUsing = Math.Max(MaxCountOfCombatTimeUsing, CombatData.CountingOfCombatTimeUsing);
             }
 
             if (!IsValid) IsValid = true;
@@ -115,16 +115,16 @@ partial class CustomRotation
         //TODO: that is too complex! 
         if (movingTarget && act is IBaseAction a)
         {
-            if(a.PreviewTarget.HasValue && a.PreviewTarget.Value.Target != Player
+            if(a.PreviewTarget.HasValue && a.PreviewTarget.Value.Target != CombatData.Player
                 && a.PreviewTarget.Value.Target != null)
             {
-                var dir = Player.Position - a.PreviewTarget.Value.Position;
+                var dir = CombatData.Player.Position - a.PreviewTarget.Value.Position;
                 var length = dir?.Length() ?? 0;
                 if (length != 0 && dir.HasValue)
                 {
                     var d = dir.Value / length;
 
-                    MoveTarget = a.PreviewTarget.Value.Position + d * MathF.Min(length, Player.HitboxRadius + a.PreviewTarget.Value.Target.HitboxRadius);
+                    MoveTarget = a.PreviewTarget.Value.Position + d * MathF.Min(length, CombatData.Player.HitboxRadius + a.PreviewTarget.Value.Target.HitboxRadius);
                 }
                 else
                 {
@@ -135,8 +135,8 @@ partial class CustomRotation
             {
                 if ((ActionID)a.ID == ActionID.EnAvantPvE)
                 {
-                    var dir = new Vector3(MathF.Sin(Player.Rotation), 0, MathF.Cos(Player.Rotation));
-                    MoveTarget = Player.Position + dir * 10;
+                    var dir = new Vector3(MathF.Sin(CombatData.Player.Rotation), 0, MathF.Cos(CombatData.Player.Rotation));
+                    MoveTarget = CombatData.Player.Position + dir * 10;
                 }
                 else
                 {

@@ -25,7 +25,7 @@ partial class CustomRotation
         }
 
 
-        if (!Service.Config.UseAbility || Player.TotalCastTime > 0)
+        if (!Service.Config.UseAbility || CombatData.Player.TotalCastTime > 0)
         {
             act = null!;
             return false;
@@ -97,7 +97,7 @@ partial class CustomRotation
 
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.Provoke))
         {
-            if (!HasTankStance && (TankStance?.CanUse(out act) ?? false)) return true;
+            if (!CombatData.HasTankStance && (TankStance?.CanUse(out act) ?? false)) return true;
 
             IBaseAction.TargetOverride = TargetType.Provoke;
 
@@ -131,8 +131,8 @@ partial class CustomRotation
 
         IBaseAction.AllEmpty = true;
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.MoveForward)
-            && Player != null
-            && !Player.HasStatus(true, StatusID.Bind)
+            && CombatData.Player != null
+            && !CombatData.Player.HasStatus(true, StatusID.Bind)
             && MoveForwardAbility(out act)) return true;
 
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.MoveBack)
@@ -147,7 +147,7 @@ partial class CustomRotation
 
         if (GeneralUsingAbility(role, out act)) return true;
 
-        if (HasHostilesInRange && AttackAbility(out act)) return true;
+        if (CombatData.HasHostilesInRange && AttackAbility(out act)) return true;
         if (GeneralAbility(out act)) return true;
 
         if (UseMpPotion(out act)) return true;
@@ -292,7 +292,7 @@ partial class CustomRotation
 
         #region PvP
         if (GuardPvP.CanUse(out act)
-            && (Player.GetHealthRatio() <= Service.Config.HealthForGuard
+            && (CombatData.Player.GetHealthRatio() <= Service.Config.HealthForGuard
             || DataCenter.CommandStatus.HasFlag(AutoStatus.Raise | AutoStatus.Shirk))) return true;
         #endregion
 

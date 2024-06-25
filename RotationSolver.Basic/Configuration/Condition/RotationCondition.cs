@@ -9,9 +9,9 @@ internal class MethodChoicesAttribute : ChoicesAttribute
     {
         return 
         [
-            nameof(CustomRotation.IsLastGCD),
-            nameof(CustomRotation.IsLastAction),
-            nameof(CustomRotation.IsLastAbility),
+            nameof(CombatData.IsLastGCD),
+            nameof(CombatData.IsLastAction),
+            nameof(CombatData.IsLastAbility),
         ];
     }
 }
@@ -46,7 +46,7 @@ internal class FloatChoicesAttribute : ChoicesAttribute
     }
 }
 
-
+[Obsolete]
 [Description("Rotation Condition")]
 internal class RotationCondition : DelayConditionBase
 {

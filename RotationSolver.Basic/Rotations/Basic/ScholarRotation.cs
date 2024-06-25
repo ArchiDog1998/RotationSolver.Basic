@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Rotations.Basic;
+﻿using static RotationSolver.Basic.CombatData;
+
+namespace RotationSolver.Basic.Rotations.Basic;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class ScholarRotation
@@ -23,7 +25,7 @@ partial class ScholarRotation
     /// <summary>
     /// 
     /// </summary>
-    public static float SeraphTime => SeraphTimeRaw - DataCenter.WeaponRemain;
+    public static float SeraphTime => SeraphTimeRaw - WeaponRemain;
     #endregion
     private sealed protected override IBaseAction Raise => ResurrectionPvE;
 
@@ -81,39 +83,39 @@ partial class ScholarRotation
 
     static partial void ModifySummonSeraphPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => DataCenter.HasPet;
+        setting.ActionCheck = () => CombatData.HasPet;
     }
 
     static partial void ModifySummonEosPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => !DataCenter.HasPet && (!Player.HasStatus(true, StatusID.Dissipation)// || Dissipation.WillHaveOneCharge(30) && Dissipation.EnoughLevel
+        setting.ActionCheck = () => !CombatData.HasPet && (!Player.HasStatus(true, StatusID.Dissipation)// || Dissipation.WillHaveOneCharge(30) && Dissipation.EnoughLevel
         );
     }
 
     static partial void ModifyWhisperingDawnPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => DataCenter.HasPet;
+        setting.ActionCheck = () => CombatData.HasPet;
     }
 
     static partial void ModifyFeyIlluminationPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => DataCenter.HasPet;
+        setting.ActionCheck = () => HasPet;
     }
 
     static partial void ModifyDissipationPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.Dissipation];
-        setting.ActionCheck = () => !HasAetherflow && SeraphTime <= 0 && InCombat && DataCenter.HasPet;
+        setting.ActionCheck = () => !HasAetherflow && SeraphTime <= 0 && InCombat && HasPet;
     }
 
     static partial void ModifyAetherpactPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => FairyGauge >= 10 && DataCenter.HasPet && SeraphTime <= 0;
+        setting.ActionCheck = () => FairyGauge >= 10 && HasPet && SeraphTime <= 0;
     }
 
     static partial void ModifyFeyBlessingPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => SeraphTime <= 0 && DataCenter.HasPet;
+        setting.ActionCheck = () => SeraphTime <= 0 && HasPet;
     }
 
     static partial void ModifyAetherflowPvE(ref ActionSetting setting)

@@ -25,7 +25,7 @@ partial class CustomRotation
     {
         act = null;
 
-        if (!(HostileTarget?.IsDummy() ?? false) && !DataCenter.IsInHighEndDuty) return false;
+        if (!(CombatData.HostileTarget?.IsDummy() ?? false) && !DataCenter.IsInHighEndDuty) return false;
 
         foreach (var medicine in Medicines)
         {
