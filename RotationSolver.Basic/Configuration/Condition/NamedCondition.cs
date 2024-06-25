@@ -18,7 +18,7 @@ internal class NamedCondition : DelayConditionBase
 {
     [ConditionSet, UI("Condition")]
     public string ConditionName { get; set; } = string.Empty;
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
         foreach (var item in DataCenter.RightSet.NamedConditions)
         {

@@ -31,14 +31,6 @@ internal class TargetingSpaceCondition : TargetingConditionBase
             _ => obj.DistanceToPlayer(),
         };
 
-        return Compare switch
-        {
-            Comparison.Bigger => value > Value,
-            Comparison.Smaller => value < Value,
-            Comparison.Equal => value == Value,
-            Comparison.BiggerOrEqual => value >= Value,
-            Comparison.SmallerOrEqual => value <= Value,
-            _ => false,
-        };
+        return Compare.Compare(value, Value);
     }
 }

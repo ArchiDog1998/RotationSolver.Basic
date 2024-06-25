@@ -25,10 +25,6 @@ internal abstract class DelayConditionBase : ICondition
 
     public bool? IsTrue()
     {
-        var rotation = DataCenter.RightNowRotation;
-
-        if (rotation == null) return false;
-
         _callingStack ??= new(64);
 
         if (_callingStack.Contains(this))
@@ -50,7 +46,9 @@ internal abstract class DelayConditionBase : ICondition
         _callingStack.Push(this);
         try
         {
-            var value = CheckBefore(rotation) && IsTrueInside(rotation);
+            var v = CheckBefore();
+            if (v == null) return null;
+            var value = v.Value && IsTrueInside();
             return _delay.Delay(_offsetDelay.Delay(value));
         }
         finally
@@ -59,9 +57,9 @@ internal abstract class DelayConditionBase : ICondition
         }
     }
 
-    protected abstract bool IsTrueInside(ICustomRotation rotation);
+    protected abstract bool IsTrueInside();
 
-    public virtual bool CheckBefore(ICustomRotation rotation)
+    public virtual bool? CheckBefore()
     {
         return Player.Available;
     }

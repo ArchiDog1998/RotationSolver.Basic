@@ -51,7 +51,7 @@ internal class TerritoryCondition : DelayConditionBase
     [TerritoryNameChoices, UI("Territory Name", (int)TerritoryConditionType.TerritoryName, Parent = nameof(TerritoryType))]
     public string TerritoryName { get; set; } = "Not Chosen";
 
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
         bool result = false;
         switch (TerritoryType)

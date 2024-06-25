@@ -11,7 +11,7 @@ internal class ConditionSet : DelayConditionBase
     [UI("Type")]
     public LogicalType Type { get; set; } = LogicalType.All;
 
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
         return Type.IsTrue(Conditions, c => c.IsTrue());
     }

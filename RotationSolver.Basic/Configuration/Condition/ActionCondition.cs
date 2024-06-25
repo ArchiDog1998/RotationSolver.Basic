@@ -43,79 +43,32 @@ internal class ActionCondition : DelayConditionBase
         Parent = nameof(ActionConditionType))]
     public int Count { get; set; }
 
-    public override bool CheckBefore(ICustomRotation rotation)
+    public override bool? CheckBefore()
     {
-        return CheckBaseAction(rotation, ID, ref _action) && base.CheckBefore(rotation);
+        var rotation = DataCenter.RightNowRotation;
+        if (rotation == null) return null;
+        var basic = base.CheckBefore();
+        if (basic == null) return null;
+        return basic.Value && CheckBaseAction(rotation, ID, ref _action);
     }
 
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
         if (_action == null) return false;
 
-        switch (ActionConditionType)
+        return ActionConditionType switch
         {
-            case ActionConditionType.Elapsed:
-                return _action.CD.ElapsedOneChargeAfter(Time); // Bigger
-
-            case ActionConditionType.ElapsedGCD:
-                return _action.CD.ElapsedOneChargeAfterGCD((uint)Gcd, Offset); // Bigger
-
-            case ActionConditionType.Remain:
-                return !_action.CD.WillHaveOneCharge(Time); //Smaller
-
-            case ActionConditionType.RemainGCD:
-                return !_action.CD.WillHaveOneChargeGCD((uint)Gcd, Offset); // Smaller
-
-            case ActionConditionType.CanUse:
-                return _action.CanUse(out _, CanUse);
-
-            case ActionConditionType.EnoughLevel:
-                return _action.EnoughLevel;
-
-            case ActionConditionType.IsCoolDown:
-                return _action.CD.IsCoolingDown;
-
-            case ActionConditionType.CurrentCharges:
-                switch (Comparison)
-                {
-                    case Comparison.Bigger:
-                        return _action.CD.CurrentCharges > Count;
-
-                    case Comparison.BiggerOrEqual:
-                        return _action.CD.CurrentCharges >= Count;
-
-                    case Comparison.Smaller:
-                        return _action.CD.CurrentCharges < Count;
-
-                    case Comparison.SmallerOrEqual:
-                        return _action.CD.CurrentCharges <= Count;
-
-                    case Comparison.Equal:
-                        return _action.CD.CurrentCharges == Count;
-                }
-                break;
-
-            case ActionConditionType.MaxCharges:
-                switch (Comparison)
-                {
-                    case Comparison.Bigger:
-                        return _action.CD.MaxCharges > Count;
-
-                    case Comparison.BiggerOrEqual:
-                        return _action.CD.MaxCharges >= Count;
-
-                    case Comparison.Smaller:
-                        return _action.CD.MaxCharges < Count;
-
-                    case Comparison.SmallerOrEqual:
-                        return _action.CD.MaxCharges <= Count;
-
-                    case Comparison.Equal:
-                        return _action.CD.MaxCharges == Count;
-                }
-                break;
-        }
-        return false;
+            ActionConditionType.Elapsed => _action.CD.ElapsedOneChargeAfter(Time),// Bigger
+            ActionConditionType.ElapsedGCD => _action.CD.ElapsedOneChargeAfterGCD((uint)Gcd, Offset),// Bigger
+            ActionConditionType.Remain => !_action.CD.WillHaveOneCharge(Time),//Smaller
+            ActionConditionType.RemainGCD => !_action.CD.WillHaveOneChargeGCD((uint)Gcd, Offset),// Smaller
+            ActionConditionType.CanUse => _action.CanUse(out _, CanUse),
+            ActionConditionType.EnoughLevel => _action.EnoughLevel,
+            ActionConditionType.IsCoolDown => _action.CD.IsCoolingDown,
+            ActionConditionType.CurrentCharges => Comparison.Compare(_action.CD.CurrentCharges, Count),
+            ActionConditionType.MaxCharges => Comparison.Compare(_action.CD.MaxCharges, Count),
+            _ => false,
+        };
     }
 }
 

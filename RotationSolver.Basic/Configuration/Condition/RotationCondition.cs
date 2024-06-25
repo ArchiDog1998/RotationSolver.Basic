@@ -97,16 +97,20 @@ internal class RotationCondition : DelayConditionBase
         Parent = nameof(ComboConditionType))]
     public bool IsAdjust { get; set; } = false;
 
-    public override bool CheckBefore(ICustomRotation rotation)
+    public override bool? CheckBefore()
     {
+        var rotation = DataCenter.RightNowRotation;
+        if (rotation == null) return null;
         CheckBaseAction(rotation, ID, ref _action);
         CheckMemberInfo(rotation, ref _propertyName, ref _prop);
         CheckMemberInfo(rotation, ref _methodName, ref _method);
-        return base.CheckBefore(rotation);
+        return base.CheckBefore();
     }
 
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
+        var rotation = DataCenter.RightNowRotation;
+        if (rotation == null) return false;
         switch (ComboConditionType)
         {
             case ComboConditionType.Bool:
@@ -123,43 +127,11 @@ internal class RotationCondition : DelayConditionBase
                 var value = _prop.GetValue(rotation);
                 if (value is byte by)
                 {
-                    switch (Comparison)
-                    {
-                        case Comparison.Bigger:
-                            return by > Count;
-
-                        case Comparison.BiggerOrEqual:
-                            return by >= Count;
-
-                        case Comparison.Smaller:
-                            return by < Count;
-
-                        case Comparison.SmallerOrEqual:
-                            return by <= Count;
-
-                        case Comparison.Equal:
-                            return by == Count;
-                    }
+                    return Comparison.Compare(by, Count);
                 }
                 else if (value is int i)
                 {
-                    switch (Comparison)
-                    {
-                        case Comparison.Bigger:
-                            return i > Count;
-
-                        case Comparison.BiggerOrEqual:
-                            return i >= Count;
-
-                        case Comparison.Smaller:
-                            return i < Count;
-
-                        case Comparison.SmallerOrEqual:
-                            return i <= Count;
-
-                        case Comparison.Equal:
-                            return i == Count;
-                    }
+                    return Comparison.Compare(i, Count);
                 }
                 return false;
 
@@ -167,23 +139,7 @@ internal class RotationCondition : DelayConditionBase
                 if (_prop == null) return false;
                 if (_prop.GetValue(rotation) is float fl)
                 {
-                    switch (Comparison)
-                    {
-                        case Comparison.Bigger:
-                            return fl > Value;
-
-                        case Comparison.BiggerOrEqual:
-                            return fl >= Value;
-
-                        case Comparison.Smaller:
-                            return fl < Value;
-
-                        case Comparison.SmallerOrEqual:
-                            return fl <= Value;
-
-                        case Comparison.Equal:
-                            return fl == Value;
-                    }
+                    return Comparison.Compare(fl, Value);
                 }
                 return false;
 

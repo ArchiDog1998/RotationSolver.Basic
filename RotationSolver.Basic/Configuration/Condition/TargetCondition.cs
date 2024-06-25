@@ -19,11 +19,15 @@ internal class TargetCondition : DelayConditionBase
     [UI("Condition")]
     public TargetingConditionSet Condition { get; set; } = new();
 
-    public override bool CheckBefore(ICustomRotation rotation)
+    public override bool? CheckBefore()
     {
-        return CheckBaseAction(rotation, ID, ref _action) && base.CheckBefore(rotation);
+        var rotation = DataCenter.RightNowRotation;
+        if (rotation == null) return null;
+        var basic = base.CheckBefore();
+        if (basic == null) return null;
+        return CheckBaseAction(rotation, ID, ref _action);
     }
-    protected override bool IsTrueInside(ICustomRotation rotation)
+    protected override bool IsTrueInside()
     {
         var tar = TargetType switch
         {

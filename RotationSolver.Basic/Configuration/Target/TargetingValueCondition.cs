@@ -19,7 +19,7 @@ internal class TargetingValueCondition : TargetingConditionBase
 
     [Range(0, 1, ConfigUnitType.Percent)]
     [UI("Percent")]
-    public float Precent { get; set; }
+    public float Percent { get; set; }
 
     protected override bool IsTrueInside(GameObject obj)
     {
@@ -31,14 +31,6 @@ internal class TargetingValueCondition : TargetingConditionBase
              _ => battle.GetHealthRatio(),
         };
 
-        return Compare switch
-        {
-            Comparison.Bigger => value > Precent,
-            Comparison.Smaller => value < Precent,
-            Comparison.Equal => value == Precent,
-            Comparison.BiggerOrEqual => value >= Precent,
-            Comparison.SmallerOrEqual => value <= Precent,
-            _ => false,
-        };
+        return Compare.Compare(value, Percent);
     }
 }

@@ -19,13 +19,6 @@ internal class TimelineConditionTargetCount : TimelineConditionBase
     public override bool IsTrue(TimelineItem item)
     {
         var count = Svc.Objects.Count(t => TargetConditions.IsTrue(t) ?? false);
-        return Comparison switch
-        {
-            Comparison.Bigger => count > Count,
-            Comparison.Smaller => count < Count,
-            Comparison.Equal => count == Count,
-            Comparison.SmallerOrEqual => count <= Count,
-            _ => count >= Count,
-        };
+        return Comparison.Compare(count, Count);
     }
 }
