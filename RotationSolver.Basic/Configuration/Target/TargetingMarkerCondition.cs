@@ -10,6 +10,6 @@ internal class TargetingMarkerCondition : TargetingConditionBase
 
     protected override bool IsTrueInside(GameObject obj)
     {
-        return obj.ObjectId == Marker.GetObjectID();
+        return obj.EntityId == Marker.GetObjectID();
     }
 }

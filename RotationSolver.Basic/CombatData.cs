@@ -181,9 +181,9 @@ public static class CombatData
         get
         {
             var controller = UIState.Instance()->LimitBreakController;
-            var barValue = *(ushort*)&controller.BarValue;
+            var barValue = controller.BarUnits;
             if (barValue == 0) return 0;
-            return (byte)(controller.CurrentValue / barValue);
+            return (byte)(controller.CurrentUnits / barValue);
         }
     }
 

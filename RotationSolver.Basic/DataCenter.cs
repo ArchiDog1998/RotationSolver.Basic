@@ -18,7 +18,7 @@ namespace RotationSolver.Basic;
 
 internal static class DataCenter
 {
-    private static uint _hostileTargetId = GameObject.InvalidGameObjectId;
+    private static uint _hostileTargetId = 0xE000_0000;
 
     internal static BattleChara? HostileTarget
     {
@@ -28,7 +28,7 @@ internal static class DataCenter
         }
         set
         {
-            _hostileTargetId = value?.ObjectId ?? GameObject.InvalidGameObjectId;
+            _hostileTargetId = value?.EntityId ?? 0xE000_0000;
         }
     }
 

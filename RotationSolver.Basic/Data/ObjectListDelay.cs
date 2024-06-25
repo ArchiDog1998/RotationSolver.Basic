@@ -44,13 +44,13 @@ public class ObjectListDelay<T>(Func<(float min, float max)> getRange)
 
         foreach (var item in originData)
         {
-            if (!_revealTime.TryGetValue(item.ObjectId, out var time))
+            if (!_revealTime.TryGetValue(item.EntityId, out var time))
             {
                 var (min, max) = _getRange();
                 var delaySecond = min + (float)_ran.NextDouble() * (max - min);
                 time = now + new TimeSpan(0, 0, 0, 0, (int)(delaySecond * 1000));
             }
-            revealTime[item.ObjectId] = time;
+            revealTime[item.EntityId] = time;
 
             if (now > time)
             {

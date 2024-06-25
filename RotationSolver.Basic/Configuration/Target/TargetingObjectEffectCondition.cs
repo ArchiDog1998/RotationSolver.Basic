@@ -20,7 +20,7 @@ internal class ObjEffectAttribute : ListUIAttribute
         {
             var tar = Svc.Targets.Target;
             if (tar == null) return true;
-            return tar.ObjectId == d.Object.ObjectId;
+            return tar.EntityId == d.Object.EntityId;
         });
         if (data.Object == null) return;
 
@@ -46,7 +46,7 @@ internal class TargetingObjectEffectCondition : TargetingConditionBase
     {
         return Recorder.GetData<ObjectEffectData>(TimeDuration).Any(effect =>
         {
-            if (effect.Object?.ObjectId != obj.ObjectId) return false;
+            if (effect.Object?.EntityId != obj.EntityId) return false;
 
             if (effect.Param1 != Param1) return false;
             if (effect.Param2 != Param2) return false;

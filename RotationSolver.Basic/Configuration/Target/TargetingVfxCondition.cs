@@ -19,7 +19,7 @@ internal class VfxAttribute : ListUIAttribute
         {
             var tar = Svc.Targets.Target;
             if (tar == null) return true;
-            return tar.ObjectId == d.Object.ObjectId;
+            return tar.EntityId == d.Object.EntityId;
         });
         if (string.IsNullOrEmpty(data.Path)) return;
 
@@ -41,7 +41,7 @@ internal class TargetingVfxCondition : TargetingConditionBase
     {
         return Recorder.GetData<VfxNewData>(TimeDuration).Any(effect =>
         {
-            if (effect.Object?.ObjectId != obj.ObjectId) return false;
+            if (effect.Object?.EntityId != obj.EntityId) return false;
             if (effect.Path != VfxPath) return false;
 
             return true;

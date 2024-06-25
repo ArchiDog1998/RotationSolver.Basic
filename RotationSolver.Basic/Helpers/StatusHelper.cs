@@ -156,7 +156,7 @@ public static class StatusHelper
     /// <returns></returns>
     public static bool WillStatusEnd(this GameObject obj, float time, bool isFromSelf = true, params StatusID[] statusIDs)
     {
-        if (DataCenter.HasApplyStatus(obj.ObjectId, statusIDs)) return false;
+        if (DataCenter.HasApplyStatus(obj.EntityId, statusIDs)) return false;
         var remain = obj.StatusTime(isFromSelf, statusIDs);
         if (remain < 0 && obj.HasStatus(isFromSelf, statusIDs)) return false;
         return remain <= time;
@@ -172,7 +172,7 @@ public static class StatusHelper
     {
         try
         {
-            if (DataCenter.HasApplyStatus(obj.ObjectId, statusIDs)) return float.MaxValue;
+            if (DataCenter.HasApplyStatus(obj.EntityId, statusIDs)) return float.MaxValue;
             var times = obj.StatusTimes(isFromSelf, statusIDs);
             if (times == null || !times.Any()) return 0;
             return Math.Max(0, times.Min() - DataCenter.WeaponRemain);
@@ -197,7 +197,7 @@ public static class StatusHelper
     /// <returns></returns>
     public static byte StatusStack(this GameObject obj, bool isFromSelf, params StatusID[] statusIDs)
     {
-        if (DataCenter.HasApplyStatus(obj.ObjectId, statusIDs)) return byte.MaxValue;
+        if (DataCenter.HasApplyStatus(obj.EntityId, statusIDs)) return byte.MaxValue;
         var stacks = obj.StatusStacks(isFromSelf, statusIDs);
         if (stacks == null || !stacks.Any()) return 0;
         return stacks.Min();
@@ -217,7 +217,7 @@ public static class StatusHelper
     /// <returns></returns>
     public static bool HasStatus(this GameObject obj, bool isFromSelf, params StatusID[] statusIDs)
     {
-        if (DataCenter.HasApplyStatus(obj.ObjectId, statusIDs)) return true;
+        if (DataCenter.HasApplyStatus(obj.EntityId, statusIDs)) return true;
         return obj.GetStatus(isFromSelf, statusIDs).Any();
     }
 
@@ -247,8 +247,8 @@ public static class StatusHelper
         if (obj is not BattleChara b) return [];
 
         return b.StatusList.Where(status => !isFromSelf
-                                              || status.SourceId == Player.Object.ObjectId
-                                              || status.SourceObject?.OwnerId == Player.Object.ObjectId);
+                                              || status.SourceId == Player.Object.EntityId
+                                              || status.SourceObject?.OwnerId == Player.Object.EntityId);
     }
 
     /// <summary>

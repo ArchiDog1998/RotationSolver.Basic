@@ -113,7 +113,7 @@ public static class ObjectHelper
 
         //Tar on me
         if (battleChara.TargetObject == Player.Object
-            || battleChara.TargetObject?.OwnerId == Player.Object.ObjectId) return true;
+            || battleChara.TargetObject?.OwnerId == Player.Object.EntityId) return true;
 
         //Remove other's target.
         if (battleChara.IsOthersPlayers()) return false;
@@ -160,13 +160,13 @@ public static class ObjectHelper
         var addon = addons.FirstOrDefault();
         var enemy = (AddonEnemyList*)addon;
 
-        var numArray = FFXIVClientStructs.FFXIV.Client.System.Framework.Framework.Instance()->GetUiModule()->GetRaptureAtkModule()->AtkModule.AtkArrayDataHolder.NumberArrays[19];
+        var numArray = FFXIVClientStructs.FFXIV.Client.System.Framework.Framework.Instance()->UIModule->GetRaptureAtkModule()->AtkModule.AtkArrayDataHolder.NumberArrays[19];
         List<uint> list = new(enemy->EnemyCount);
         for (var i = 0; i < enemy->EnemyCount; i++)
         {
             var id = (uint)numArray->IntArray[8 + i * 6];
 
-            if (battleChara.ObjectId == id) return true;
+            if (battleChara.EntityId == id) return true;
         }
         return false;
     }
@@ -176,14 +176,14 @@ public static class ObjectHelper
     && ActionManager.CanUseActionOnTarget((uint)ActionID.BlizzardPvE, obj.Struct());
 
     internal static unsafe bool IsAlliance(this GameObject obj)
-        => obj != null && obj.ObjectId is not 0 and not GameObject.InvalidGameObjectId
+        => obj != null && obj.EntityId is not 0 and not 0xE000_0000
         && (!(DataCenter.IsPvP) && obj is PlayerCharacter 
         || ActionManager.CanUseActionOnTarget((uint)ActionID.CurePvE, obj.Struct()));
 
     internal static bool IsParty(this GameObject gameObject)
     {
-        if (gameObject.ObjectId == Player.Object.ObjectId) return true;
-        if (Svc.Party.Any(p => p.GameObject?.ObjectId == gameObject.ObjectId)) return true;
+        if (gameObject.EntityId == Player.Object.EntityId) return true;
+        if (Svc.Party.Any(p => p.GameObject?.EntityId == gameObject.EntityId)) return true;
         if (gameObject.SubKind == 9) return true;
         return false;
     }
@@ -205,7 +205,7 @@ public static class ObjectHelper
 
         if (!Service.Config.RaiseBrinkOfDeath && obj.HasStatus(false, StatusID.BrinkOfDeath)) return false;
 
-        if (DataCenter.AllianceMembers.Any(c => c.CastTargetObjectId == obj.ObjectId)) return false;
+        if (DataCenter.AllianceMembers.Any(c => c.CastTargetObjectId == obj.EntityId)) return false;
 
         return true;
     }
@@ -264,13 +264,13 @@ public static class ObjectHelper
 
         if (obj is BattleChara b && b.StatusList.Any(StatusHelper.IsPriority)) return true;
 
-        if (Service.Config.ChooseAttackMark && MarkingHelper.AttackSignTargets.FirstOrDefault(id => id != GameObject.InvalidGameObjectId) == obj.ObjectId) return true;
+        if (Service.Config.ChooseAttackMark && MarkingHelper.AttackSignTargets.FirstOrDefault(id => id != 0xE000_0000) == obj.EntityId) return true;
 
         return false;
     }
 
     internal static unsafe uint GetNamePlateIcon(this GameObject obj) => obj.Struct()->NamePlateIconId;
-    internal static unsafe EventHandlerType GetEventType(this GameObject obj) => obj.Struct()->EventId.Type;
+    internal static unsafe EventHandlerType GetEventType(this GameObject obj) => obj.Struct()->EventId.ContentId;
 
     internal static unsafe BattleNpcSubKind GetBattleNPCSubKind(this GameObject obj) => (BattleNpcSubKind)obj.Struct()->SubKind;
 
@@ -355,7 +355,7 @@ public static class ObjectHelper
         if (b == null) return float.NaN;
         if (b.IsDummy()) return 999.99f;
 
-        var objectId = b.ObjectId;
+        var objectId = b.EntityId;
 
         DateTime startTime = DateTime.MinValue;
         float thatTimeRatio = 0;
@@ -384,7 +384,7 @@ public static class ObjectHelper
     {
         foreach (var (id, time) in DataCenter.AttackedTargets)
         {
-            if (id == b.ObjectId)
+            if (id == b.EntityId)
             {
                 return DateTime.Now - time > TimeSpan.FromSeconds(1);
             }
@@ -414,7 +414,7 @@ public static class ObjectHelper
     public static float GetHealthRatio(this GameObject g)
     {
         if (g is not BattleChara b) return 0;
-        if (DataCenter.RefinedHP.TryGetValue(b.ObjectId, out var hp)) return hp;
+        if (DataCenter.RefinedHP.TryGetValue(b.EntityId, out var hp)) return hp;
         return (float)b.CurrentHp / b.MaxHp;
     }
 

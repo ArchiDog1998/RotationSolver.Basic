@@ -61,7 +61,7 @@ internal class ObjectGetter
         {
             if (!Recorder.GetData<VfxNewData>(TimeDuration).Any(effect =>
             {
-                if (effect.Object?.ObjectId != obj.ObjectId) return false;
+                if (effect.Object?.EntityId != obj.EntityId) return false;
                 if (effect.Path != VfxPath) return false;
 
                 return true;
@@ -72,7 +72,7 @@ internal class ObjectGetter
         {
             if (!Recorder.GetData<ObjectEffectData>(TimeDuration).Any(effect =>
             {
-                if (effect.Object?.ObjectId != obj.ObjectId) return false;
+                if (effect.Object?.EntityId != obj.EntityId) return false;
 
                 if (effect.Param1 != ObjectEffect1) return false;
                 if (effect.Param2 != ObjectEffect2) return false;

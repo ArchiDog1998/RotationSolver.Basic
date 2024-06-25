@@ -31,7 +31,7 @@ public static class TargetFilter
 
             if (!Service.Config.RaiseBrinkOfDeath && item.HasStatus(false, StatusID.BrinkOfDeath)) return false;
 
-            if (DataCenter.AllianceMembers.Any(c => c.CastTargetObjectId == item.ObjectId)) return false;
+            if (DataCenter.AllianceMembers.Any(c => c.CastTargetObjectId == item.EntityId)) return false;
 
             return true;
         });

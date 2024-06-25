@@ -99,7 +99,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
 
         var isAuto = !DataCenter.IsManual || IsTargetFriendly;
-        return targetables.Where(b => isAuto || b.ObjectId == Svc.Targets.Target?.ObjectId || b.ObjectId == Player.Object?.ObjectId)
+        return targetables.Where(b => isAuto || b.EntityId == Svc.Targets.Target?.EntityId || b.EntityId == Player.Object?.EntityId)
             .Where(InViewTarget).Where(action.Setting.CanTarget);
     }
 
@@ -150,8 +150,8 @@ public struct ActionTargetInfo(IBaseAction action)
     private readonly unsafe bool CanUseTo(GameObject tar)
     {
         if (tar == null || !Player.Available) return false;
-        if (tar.ObjectId == GameObject.InvalidGameObjectId) return false;
-        if (tar.ObjectId == 0) return false;
+        if (tar.EntityId == 0xE000_0000) return false;
+        if (tar.EntityId == 0) return false;
 
         var tarAddress = tar.Struct();
         if (tarAddress == null) return false;
@@ -300,7 +300,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
         else
         {
-            var availableCharas = DataCenter.AllTargets.Where(b => b.ObjectId != Player.Object.ObjectId);
+            var availableCharas = DataCenter.AllTargets.Where(b => b.EntityId != Player.Object.EntityId);
             var target = FindTargetByType(TargetFilter.GetObjectInRadius(availableCharas, range),
                 TargetType.Move, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);
             if (target == null) return null;
@@ -581,14 +581,14 @@ public struct ActionTargetInfo(IBaseAction action)
 
         BattleChara? FindProvokeTarget()
         {
-            if (gameObjects.Any(o => o.ObjectId == DataCenter.ProvokeTarget?.ObjectId))
+            if (gameObjects.Any(o => o.EntityId == DataCenter.ProvokeTarget?.EntityId))
                 return DataCenter.ProvokeTarget;
             return null;
         }
 
         BattleChara? FindDeathPeople()
         {
-            if (gameObjects.Any(o => o.ObjectId == DataCenter.DeathTarget?.ObjectId))
+            if (gameObjects.Any(o => o.EntityId == DataCenter.DeathTarget?.EntityId))
                 return DataCenter.DeathTarget;
             return null;
         }
@@ -688,7 +688,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
         BattleChara? FindInterruptTarget()
         {
-            if (gameObjects.Any(o => o.ObjectId == DataCenter.InterruptTarget?.ObjectId))
+            if (gameObjects.Any(o => o.EntityId == DataCenter.InterruptTarget?.EntityId))
                 return DataCenter.InterruptTarget;
             return null;
         }
@@ -705,9 +705,9 @@ public struct ActionTargetInfo(IBaseAction action)
 
             if (DataCenter.TreasureCharas.Length > 0)
             {
-                var b = gameObjects.FirstOrDefault(b => b.ObjectId == DataCenter.TreasureCharas[0]);
+                var b = gameObjects.FirstOrDefault(b => b.EntityId == DataCenter.TreasureCharas[0]);
                 if (b != null) return b;
-                gameObjects = gameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.ObjectId));
+                gameObjects = gameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.EntityId));
             }
 
             return targetingData.FindTarget(gameObjects);
@@ -741,7 +741,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
         BattleChara? FindDispelTarget()
         {
-            if (gameObjects.Any(o => o.ObjectId == DataCenter.DispelTarget?.ObjectId))
+            if (gameObjects.Any(o => o.EntityId == DataCenter.DispelTarget?.EntityId))
                 return DataCenter.DispelTarget;
             return gameObjects.FirstOrDefault(o => o is BattleChara b && b.StatusList.Any(StatusHelper.CanDispel));
         }

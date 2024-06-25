@@ -84,10 +84,10 @@ internal class ActionDrawingGetter : BaseDrawingGetter
             {
                 unsafe
                 {
-                    var info = battle.Struct()->GetCastInfo;
+                    var info = battle.Struct()->GetCastInfo();
                     if (info->IsCasting != 0)
                     {
-                        location = info->CastLocation;
+                        location = info->TargetLocation;
                     }
                 }
             }

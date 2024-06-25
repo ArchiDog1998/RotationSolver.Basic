@@ -24,7 +24,7 @@ internal class TargetingTypeCondition : TargetingConditionBase
     {
         return TargetingType switch
         {
-            TargetingTypeCon.MySelf => obj.ObjectId == Player.Object.ObjectId,
+            TargetingTypeCon.MySelf => obj.EntityId == Player.Object.EntityId,
             TargetingTypeCon.Player => obj is PlayerCharacter,
             TargetingTypeCon.Battle => obj is BattleChara,
             TargetingTypeCon.Hostile => obj is BattleChara battle && battle.IsEnemy(),
