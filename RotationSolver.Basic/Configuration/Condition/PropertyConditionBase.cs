@@ -42,6 +42,24 @@ internal abstract class FloatChoicesAttribute : PropertyChoicesAttribute
     protected abstract Type? FindType();
 }
 
+internal abstract class EnumerableChoicesAttribute : PropertyChoicesAttribute
+{
+    protected override IEnumerable<PropertyInfo> FindProperties()
+    {
+        return FindType().GetStaticProperties<Enum>();
+    }
+    protected abstract Type? FindType();
+}
+
+internal class EnumChoicesAttribute : XIVConfigUI.Attributes.IntegerChoicesAttribute
+{
+    public override Type? GetEnumType(object obj)
+    {
+        if(obj is not PropertyConditionBase condition) return null;
+        return condition._prop?.PropertyType;
+    }
+}
+
 internal abstract class PropertyConditionBase : DelayConditionBase
 {
     [UI("Type")]
@@ -63,12 +81,17 @@ internal abstract class PropertyConditionBase : DelayConditionBase
     [UI("Float Property", (int)PropertyConditionType.Float, Parent = nameof(PropertyCondition))]
     public virtual string FloatName { get => _propertyName; set => _propertyName = value; }
 
+    [JsonIgnore]
+    [UI("Enum Property", (int)PropertyConditionType.Enum, Parent = nameof(PropertyCondition))]
+    public virtual string EnumName { get => _propertyName; set => _propertyName = value; }
+
     [UI("Comparison", (int)PropertyConditionType.Integer,
         (int)PropertyConditionType.Float,
         Parent = nameof(PropertyCondition))]
     public Comparison Comparison { get; set; } = Comparison.Bigger;
 
-    [UI("Count", (int)PropertyConditionType.Integer,
+    [EnumChoices, UI("Count", (int)PropertyConditionType.Integer,
+        (int)PropertyConditionType.Enum,
     Parent = nameof(PropertyCondition))]
     public int Count { get; set; }
 
@@ -107,6 +130,24 @@ internal abstract class PropertyConditionBase : DelayConditionBase
                     return Comparison.Compare(fl, Value);
                 }
                 return false;
+
+            case PropertyConditionType.Enum:
+                if (_prop.GetValue(null) is Enum rawEnum
+                    && _prop.GetCustomAttribute<XIVConfigUI.Attributes.IntegerChoicesAttribute>()
+                    is XIVConfigUI.Attributes.IntegerChoicesAttribute attr && attr.GetEnumType(this) is Type type && type.IsEnum)
+                {
+                    var @enum = type.GetCleanedEnumValues()[Count];
+
+                    if (type.GetCustomAttribute<FlagsAttribute>() != null)
+                    {
+                        return rawEnum.HasFlag(@enum);
+                    }
+                    else
+                    {
+                        return rawEnum == @enum;
+                    }
+                }
+                return false;
         }
         return false;
     }
@@ -120,6 +161,6 @@ internal enum PropertyConditionType : byte
     [Description("Byte")]
     Integer,
 
-    [Description("Float")]
     Float,
+    Enum,
 }

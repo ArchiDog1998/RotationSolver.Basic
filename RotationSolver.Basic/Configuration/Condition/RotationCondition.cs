@@ -30,6 +30,16 @@ internal class RotationFloatChoicesAttribute : FloatChoicesAttribute
     }
 }
 
+internal class RotationEnumerableChoicesAttribute : EnumerableChoicesAttribute
+{
+    protected override Type? FindType()
+    {
+        var rotation = DataCenter.RightNowDutyRotation;
+        if (rotation == null) return null;
+        return rotation.GetType();
+    }
+}
+
 [Description("Rotation Condition")]
 internal class RotationCondition : PropertyConditionBase
 {
@@ -41,6 +51,9 @@ internal class RotationCondition : PropertyConditionBase
 
     [RotationFloatChoices]
     public override string FloatName { get => base.FloatName; set => base.FloatName = value; }
+
+    [RotationEnumerableChoices]
+    public override string EnumName { get => base.EnumName; set => base.EnumName = value; }
 
     public override bool? CheckBefore()
     {

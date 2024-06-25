@@ -14,6 +14,11 @@ internal class CombatDataFloatChoicesAttribute : FloatChoicesAttribute
     protected override Type? FindType() => typeof(CombatData);
 }
 
+internal class CombatDataEnumerableChoicesAttribute : EnumerableChoicesAttribute
+{
+    protected override Type? FindType() => typeof(CombatData);
+}
+
 [Description("Combat Data Condition")]
 internal class CombatDataCondition : PropertyConditionBase
 {
@@ -25,6 +30,9 @@ internal class CombatDataCondition : PropertyConditionBase
 
     [CombatDataFloatChoices]
     public override string FloatName { get => base.FloatName; set => base.FloatName = value; }
+
+    [CombatDataEnumerableChoices]
+    public override string EnumName { get => base.EnumName; set => base.EnumName = value; }
 
     public override bool? CheckBefore()
     {
