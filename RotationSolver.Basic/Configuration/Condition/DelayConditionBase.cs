@@ -74,20 +74,24 @@ internal abstract class DelayConditionBase : ICondition
         return true;
     }
 
-    internal static bool CheckMemberInfo<T>(ICustomRotation? rotation, ref string name, ref T? value) where T : MemberInfo
+    internal static bool CheckMemberInfo<T>(object? obj, ref string name, ref T? value) where T : MemberInfo
     {
-        if (rotation == null) return false;
+        if (obj == null) return false;
+        return CheckMemberInfo(obj.GetType(), ref name, ref value);
+    }
 
+    internal static bool CheckMemberInfo<T>(Type type, ref string name, ref T? value) where T : MemberInfo
+    {
         if (!string.IsNullOrEmpty(name) && (value == null || value.Name != name))
         {
             var memberName = name;
             if (typeof(T).IsAssignableFrom(typeof(PropertyInfo)))
             {
-                value = (T?)GetAllMembers(rotation.GetType(), RuntimeReflectionExtensions.GetRuntimeProperties).FirstOrDefault(m => m.Name == memberName);
+                value = (T?)GetAllMembers(type, RuntimeReflectionExtensions.GetRuntimeProperties).FirstOrDefault(m => m.Name == memberName);
             }
             else if (typeof(T).IsAssignableFrom(typeof(MethodInfo)))
             {
-                value = (T?)GetAllMembers(rotation.GetType(), RuntimeReflectionExtensions.GetRuntimeMethods).FirstOrDefault(m => m.Name == memberName);
+                value = (T?)GetAllMembers(type, RuntimeReflectionExtensions.GetRuntimeMethods).FirstOrDefault(m => m.Name == memberName);
             }
         }
         return true;

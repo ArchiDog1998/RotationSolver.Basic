@@ -137,25 +137,4 @@ partial class CustomRotation
     /// All traits of this action.
     /// </summary>
     public virtual IBaseTrait[] AllTraits { get; } = [];
-
-    PropertyInfo[]? _allBools;
-
-    /// <summary>
-    /// All bools of this rotation.
-    /// </summary>
-    public PropertyInfo[] AllBools => _allBools ??= GetType().GetStaticProperties<bool>();
-
-    PropertyInfo[]? _allBytes;
-
-    /// <summary>
-    /// All bytes or integers of this rotation.
-    /// </summary>
-    public PropertyInfo[] AllBytesOrInt => _allBytes ??= GetType().GetStaticProperties<byte>().Union(GetType().GetStaticProperties<int>()).ToArray();
-
-    PropertyInfo[]? _allFloats;
-
-    /// <summary>
-    /// All floats of this rotation.
-    /// </summary>
-    public PropertyInfo[] AllFloats => _allFloats ??= GetType().GetStaticProperties<float>();
 }

@@ -11,6 +11,7 @@ internal static class ReflectionHelper
                             && prop.GetMethod is MethodInfo info
                             && info.IsPublic && info.IsStatic
                             && info.GetCustomAttribute<ObsoleteAttribute>() == null
+                            && info.GetCustomAttribute<ConditionIgnoreAttribute>() == null
                     select prop;
 
         return props.Union(type.BaseType.GetStaticProperties<T>()).ToArray();

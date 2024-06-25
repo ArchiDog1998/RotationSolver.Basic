@@ -1,6 +1,4 @@
-﻿using ECommons.DalamudServices;
-using ECommons.GameHelpers;
-using Lumina.Excel.GeneratedSheets;
+﻿using Lumina.Excel.GeneratedSheets;
 using RotationSolver.Basic.Configuration.Target;
 using XIVConfigUI.Attributes;
 
@@ -32,9 +30,9 @@ internal class TargetCondition : DelayConditionBase
         var tar = TargetType switch
         {
             TargetType.Action => _action?.TargetInfo.FindTarget(true, false)?.Target,
-            TargetType.Target => Svc.Targets.Target as BattleChara,
-            TargetType.HostileTarget => DataCenter.HostileTarget,
-            TargetType.Player => Player.Object,
+            TargetType.Target => CombatData.CurrentTarget,
+            TargetType.HostileTarget => CombatData.HostileTarget,
+            TargetType.Player => CombatData.Player,
             _ => null,
         };
 

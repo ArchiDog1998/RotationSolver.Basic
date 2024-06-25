@@ -76,22 +76,6 @@ public interface ICustomRotation : ITexture, IDisposable
     /// </summary>
     IBaseTrait[] AllTraits { get; }
 
-    /// <summary>
-    /// All bool properties.
-    /// </summary>
-    PropertyInfo[] AllBools { get; }
-
-    /// <summary>
-    /// All byte properties.
-    /// </summary>
-    PropertyInfo[] AllBytesOrInt { get; }
-
-    /// <summary>
-    /// All time methods.
-    /// </summary>
-    PropertyInfo[] AllFloats { get; }
-
-
     internal IAction? ActionHealAreaGCD { get; }
     internal IAction? ActionHealAreaAbility { get; }
     internal IAction? ActionHealSingleGCD { get; }

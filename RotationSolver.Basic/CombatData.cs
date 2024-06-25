@@ -12,7 +12,10 @@ namespace RotationSolver.Basic;
 /// </summary>
 public static class CombatData
 {
+    [ConditionIgnore]
     internal static int CountingOfLastUsing { get; set; } = 0;
+
+    [ConditionIgnore]
     internal static int CountingOfCombatTimeUsing { get; set; } = 0;
 
     #region Player
@@ -61,7 +64,6 @@ public static class CombatData
     /// Condition.
     /// </summary>
     public static ICondition Condition => Svc.Condition;
-
     #endregion
 
     #region Friends
