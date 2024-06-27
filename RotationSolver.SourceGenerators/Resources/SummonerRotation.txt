@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SMN, global::ECommons.ExcelServices.Job.ACN)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SMN, global::ECommons.ExcelServices.Job.GSM)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/summoner"><strong>Summoner</strong></see>
-/// <br>Number of Actions: 89</br>
-/// <br>Number of Traits: 21</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/summoner"><strong>summoner</strong></see>
+/// <br>Number of Actions: 99</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class SummonerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1611,128 +1611,192 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RevelationPvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction RevelationPvP => _RevelationPvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _NecrotizePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36990, false);
+        var setting = action.Setting;
+        ModifyNecrotizePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50066"><strong>Maim and Mend</strong></see> (ACN SMN SCH) [66]
-/// <para>Increases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%.</para>
+/// Modify <inheritdoc cref="NecrotizePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(66U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyNecrotizePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.NecrotizePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction NecrotizePvE => _NecrotizePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SearingFlashPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36991, false);
+        var setting = action.Setting;
+        ModifySearingFlashPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50069"><strong>Maim and Mend II</strong></see> (ACN SMN SCH) [69]
-/// <para>Increases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%.</para>
+/// Modify <inheritdoc cref="SearingFlashPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(69U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySearingFlashPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SearingFlashPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SearingFlashPvE => _SearingFlashPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SummonSolarBahamutPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36992, false);
+        var setting = action.Setting;
+        ModifySummonSolarBahamutPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50178"><strong>Enhanced Dreadwyrm Trance</strong></see> (SMN) [178]
-/// <para>Upgrades Dreadwyrm Trance to Summon Bahamut.</para>
+/// Modify <inheritdoc cref="SummonSolarBahamutPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDreadwyrmTranceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(178U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySummonSolarBahamutPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SummonSolarBahamutPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SummonSolarBahamutPvE => _SummonSolarBahamutPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LuxwavePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36993, false);
+        var setting = action.Setting;
+        ModifyLuxwavePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50217"><strong>Ruin Mastery</strong></see> (ACN SMN) [217]
-/// <para>Upgrades Ruin to Ruin II.</para>
+/// Modify <inheritdoc cref="LuxwavePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RuinMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(217U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLuxwavePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LuxwavePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction LuxwavePvE => _LuxwavePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _UmbralImpulsePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36994, false);
+        var setting = action.Setting;
+        ModifyUmbralImpulsePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50466"><strong>Enhanced Aethercharge</strong></see> (ACN SMN) [466]
-/// <para>Grants Ruby Arcanum and Topaz Arcanum upon executing Aethercharge.</para>
+/// Modify <inheritdoc cref="UmbralImpulsePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAetherchargeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(466U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyUmbralImpulsePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.UmbralImpulsePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction UmbralImpulsePvE => _UmbralImpulsePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _UmbralFlarePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36995, false);
+        var setting = action.Setting;
+        ModifyUmbralFlarePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50467"><strong>Enhanced Aethercharge II</strong></see> (ACN SMN) [467]
-/// <para>Grants Ruby Arcanum, Topaz Arcanum, and Emerald Arcanum upon executing Aethercharge.</para>
+/// Modify <inheritdoc cref="UmbralFlarePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAetherchargeIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(467U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyUmbralFlarePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.UmbralFlarePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction UmbralFlarePvE => _UmbralFlarePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SunflarePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36996, false);
+        var setting = action.Setting;
+        ModifySunflarePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50468"><strong>Ruby Summoning Mastery</strong></see> (SMN) [468]
-/// <para>Upgrades Summon Ruby to Summon Ifrit.</para>
+/// Modify <inheritdoc cref="SunflarePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RubySummoningMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(468U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySunflarePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SunflarePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SunflarePvE => _SunflarePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LuxSolarisPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36997, false);
+        var setting = action.Setting;
+        ModifyLuxSolarisPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50469"><strong>Topaz Summoning Mastery</strong></see> (SMN) [469]
-/// <para>Upgrades Summon Topaz to Summon Titan.</para>
+/// Modify <inheritdoc cref="LuxSolarisPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TopazSummoningMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(469U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLuxSolarisPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LuxSolarisPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction LuxSolarisPvE => _LuxSolarisPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EnkindleSolarBahamutPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36998, false);
+        var setting = action.Setting;
+        ModifyEnkindleSolarBahamutPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50470"><strong>Emerald Summoning Mastery</strong></see> (SMN) [470]
-/// <para>Upgrades Summon Emerald to Summon Garuda.</para>
+/// Modify <inheritdoc cref="EnkindleSolarBahamutPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EmeraldSummoningMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(470U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEnkindleSolarBahamutPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EnkindleSolarBahamutPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EnkindleSolarBahamutPvE => _EnkindleSolarBahamutPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ExodusPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36999, false);
+        var setting = action.Setting;
+        ModifyExodusPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50471"><strong>Enkindle</strong></see> (SMN) [471]
-/// <para>Enhances the signature attack of summons, upgrading Ifrit-Egi's Burning Strike to Inferno, Titan-Egi's Rock Buster to Earthen Fury, and Garuda-Egi's Aerial Slash to Aerial Blast.</para>
+/// Modify <inheritdoc cref="ExodusPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnkindleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(471U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50473"><strong>Ruin Mastery II</strong></see> (SMN) [473]
-/// <para>Upgrades Ruin II to Ruin III.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RuinMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(473U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50474"><strong>Aethercharge Mastery</strong></see> (SMN) [474]
-/// <para>Upgrades Aethercharge to Dreadwyrm Trance.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AetherchargeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(474U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50475"><strong>Enhanced Energy Siphon</strong></see> (SMN) [475]
-/// <para>Grants Further Ruin upon executing Energy Drain or Energy Siphon.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnergySiphonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(475U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50476"><strong>Ruin Mastery III</strong></see> (SMN) [476]
-/// <para>Enhances Gemshine according to your current elemental attunement.</para>
-/// <para>Fire Attunement Upgrade: Ruby Rite</para>
-/// <para>Earth Attunement Upgrade: Topaz Rite</para>
-/// <para>Wind Attunement Upgrade: Emerald Rite</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RuinMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(476U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50477"><strong>Outburst Mastery</strong></see> (SMN) [477]
-/// <para>Upgrades Outburst to Tri-disaster.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait OutburstMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(477U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50478"><strong>Outburst Mastery II</strong></see> (SMN) [478]
-/// <para>Enhances Precious Brilliance according to your current elemental attunement.</para>
-/// <para>Fire Attunement Upgrade: Ruby Catastrophe</para>
-/// <para>Earth Attunement Upgrade: Topaz Catastrophe</para>
-/// <para>Wind Attunement Upgrade: Emerald Catastrophe</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait OutburstMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(478U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50479"><strong>Ruin Mastery IV</strong></see> (SMN) [479]
-/// <para>Increases the potency of Ruin III to 310, Ruby Rite to 510, Topaz Rite to 330, and Emerald Rite to 230.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RuinMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(479U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50480"><strong>Enhanced Radiant Aegis</strong></see> (SMN) [480]
-/// <para>Allows the accumulation of charges for consecutive uses of Radiant Aegis.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRadiantAegisTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(480U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50481"><strong>Enkindle II</strong></see> (SMN) [481]
-/// <para>Upgrades Summon Ifrit to Summon Ifrit II, Summon Titan to Summon Titan II, and Summon Garuda to Summon Garuda II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnkindleIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(481U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50502"><strong>Enhanced Summon Bahamut</strong></see> (SMN) [502]
-/// <para>Upgrades Summon Bahamut to Summon Phoenix when Demi-Bahamut returns from summoning.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSummonBahamutTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(502U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50503"><strong>Elemental Mastery</strong></see> (SMN) [503]
-/// <para>Grants Ifrit's Favor upon executing Summon Ifrit, Titan's Favor upon executing Topaz Rite or Topaz Catastrophe, and Garuda's Favor upon executing Summon Garuda.</para>
-/// <para>Enhances Astral Flow according to your current elemental favor.</para>
-/// <para>Ifrit's Favor Upgrade: Crimson Cyclone</para>
-/// <para>Titan's Favor Upgrade: Mountain Buster</para>
-/// <para>Garuda's Favor Upgrade: Slipstream</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ElementalMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(503U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyExodusPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ExodusPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ExodusPvE => _ExodusPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, MaimAndMendIiTrait, EnhancedDreadwyrmTranceTrait, RuinMasteryTrait, EnhancedAetherchargeTrait, EnhancedAetherchargeIiTrait, RubySummoningMasteryTrait, TopazSummoningMasteryTrait, EmeraldSummoningMasteryTrait, EnkindleTrait, RuinMasteryIiTrait, AetherchargeMasteryTrait, EnhancedEnergySiphonTrait, RuinMasteryIiiTrait, OutburstMasteryTrait, OutburstMasteryIiTrait, RuinMasteryIvTrait, EnhancedRadiantAegisTrait, EnkindleIiTrait, EnhancedSummonBahamutTrait, ElementalMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge>();
@@ -1757,55 +1821,11 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
 
     /// <inheritdoc cref="SkyshardPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => SkyshardPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StarstormPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)204, false);
-        var setting = action.Setting;
-        ModifyStarstormPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StarstormPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStarstormPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StarstormPvE => _StarstormPvECreator.Value;
-
-    /// <inheritdoc cref="StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StarstormPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TeraflarePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4246, false);
-        var setting = action.Setting;
-        ModifyTeraflarePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TeraflarePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTeraflarePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TeraflarePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction TeraflarePvE => _TeraflarePvECreator.Value;
-
-    /// <inheritdoc cref="TeraflarePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TeraflarePvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SkyshardPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [RuinPvE, RuinIiPvE, ResurrectionPvE, FesterPvE, PainflarePvE, RuinIiiPvE, DreadwyrmTrancePvE, DeathflarePvE, RuinIvPvE, SummonBahamutPvE, WyrmwavePvE, EnkindleBahamutPvE, AkhMornPvE, PhysickPvE, EnergyDrainPvE, EnergySiphonPvE, OutburstPvE, FountainOfFirePvE, BrandOfPurgatoryPvE, EnkindlePhoenixPvE, EverlastingFlightPvE, RevelationPvE, ScarletFlamePvE, SummonCarbunclePvE, RadiantAegisPvE, AetherchargePvE, SearingLightPvE, SummonRubyPvE, SummonTopazPvE, SummonEmeraldPvE, SummonIfritPvE, SummonTitanPvE, SummonGarudaPvE, RubyRuinPvE, TopazRuinPvE, EmeraldRuinPvE, RubyRuinIiPvE, TopazRuinIiPvE, EmeraldRuinIiPvE, RubyOutburstPvE, TopazOutburstPvE, EmeraldOutburstPvE, RubyRuinIiiPvE, TopazRuinIiiPvE, EmeraldRuinIiiPvE, AstralImpulsePvE, AstralFlarePvE, AstralFlowPvE, RubyRitePvE, TopazRitePvE, EmeraldRitePvE, TridisasterPvE, RubyDisasterPvE, TopazDisasterPvE, EmeraldDisasterPvE, RekindlePvE, SummonPhoenixPvE, RubyCatastrophePvE, TopazCatastrophePvE, EmeraldCatastrophePvE, CrimsonCyclonePvE, MountainBusterPvE, SlipstreamPvE, SummonIfritIiPvE, SummonTitanIiPvE, SummonGarudaIiPvE, GemshinePvE, PreciousBrilliancePvE, CrimsonStrikePvE, RuinIiiPvP, AstralImpulsePvP, FountainOfFirePvP, CrimsonCyclonePvP, CrimsonStrikePvP, SlipstreamPvP, RadiantAegisPvP, MountainBusterPvP, FesterPvP, SummonBahamutPvP, EnkindleBahamutPvP, MegaflarePvP, WyrmwavePvP, AkhMornPvP, SummonPhoenixPvP, EnkindlePhoenixPvP, EverlastingFlightPvP, ScarletFlamePvP, RevelationPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [RuinPvE, RuinIiPvE, ResurrectionPvE, FesterPvE, PainflarePvE, RuinIiiPvE, DreadwyrmTrancePvE, DeathflarePvE, RuinIvPvE, SummonBahamutPvE, WyrmwavePvE, EnkindleBahamutPvE, AkhMornPvE, PhysickPvE, EnergyDrainPvE, EnergySiphonPvE, OutburstPvE, FountainOfFirePvE, BrandOfPurgatoryPvE, EnkindlePhoenixPvE, EverlastingFlightPvE, RevelationPvE, ScarletFlamePvE, SummonCarbunclePvE, RadiantAegisPvE, AetherchargePvE, SearingLightPvE, SummonRubyPvE, SummonTopazPvE, SummonEmeraldPvE, SummonIfritPvE, SummonTitanPvE, SummonGarudaPvE, RubyRuinPvE, TopazRuinPvE, EmeraldRuinPvE, RubyRuinIiPvE, TopazRuinIiPvE, EmeraldRuinIiPvE, RubyOutburstPvE, TopazOutburstPvE, EmeraldOutburstPvE, RubyRuinIiiPvE, TopazRuinIiiPvE, EmeraldRuinIiiPvE, AstralImpulsePvE, AstralFlarePvE, AstralFlowPvE, RubyRitePvE, TopazRitePvE, EmeraldRitePvE, TridisasterPvE, RubyDisasterPvE, TopazDisasterPvE, EmeraldDisasterPvE, RekindlePvE, SummonPhoenixPvE, RubyCatastrophePvE, TopazCatastrophePvE, EmeraldCatastrophePvE, CrimsonCyclonePvE, MountainBusterPvE, SlipstreamPvE, SummonIfritIiPvE, SummonTitanIiPvE, SummonGarudaIiPvE, GemshinePvE, PreciousBrilliancePvE, CrimsonStrikePvE, RuinIiiPvP, AstralImpulsePvP, FountainOfFirePvP, CrimsonCyclonePvP, CrimsonStrikePvP, SlipstreamPvP, RadiantAegisPvP, MountainBusterPvP, FesterPvP, SummonBahamutPvP, EnkindleBahamutPvP, MegaflarePvP, WyrmwavePvP, AkhMornPvP, SummonPhoenixPvP, EnkindlePhoenixPvP, EverlastingFlightPvP, ScarletFlamePvP, RevelationPvP, NecrotizePvE, SearingFlashPvE, SummonSolarBahamutPvE, LuxwavePvE, UmbralImpulsePvE, UmbralFlarePvE, SunflarePvE, LuxSolarisPvE, EnkindleSolarBahamutPvE, ExodusPvE, LimitBreak3, ..base.AllBaseActions];
 }

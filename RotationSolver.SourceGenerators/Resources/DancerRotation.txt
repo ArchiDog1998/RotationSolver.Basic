@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DNC)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DNC, global::ECommons.ExcelServices.Job.DRG)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/dancer"><strong>Dancer</strong></see>
-/// <br>Number of Actions: 56</br>
-/// <br>Number of Traits: 11</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/dancer"><strong>dancer</strong></see>
+/// <br>Number of Actions: 59</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class DancerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1017,75 +1017,66 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.HoningOvationPvP_29470"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction HoningOvationPvP_29470 => _HoningOvationPvP_29470Creator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LastDancePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36983, false);
+        var setting = action.Setting;
+        ModifyLastDancePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50251"><strong>Increased Action Damage</strong></see> (DNC) [251]
-/// <para>Increases base action damage by 10%.</para>
+/// Modify <inheritdoc cref="LastDancePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(251U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLastDancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LastDancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction LastDancePvE => _LastDancePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FinishingMovePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36984, false);
+        var setting = action.Setting;
+        ModifyFinishingMovePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50252"><strong>Fourfold Fantasy</strong></see> (DNC) [252]
-/// <para>Grants a Fourfold Feather upon landing certain actions.</para>
-/// <para>Maximum Stacks: 4</para>
+/// Modify <inheritdoc cref="FinishingMovePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait FourfoldFantasyTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(252U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFinishingMovePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FinishingMovePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction FinishingMovePvE => _FinishingMovePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DanceOfTheDawnPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36985, false);
+        var setting = action.Setting;
+        ModifyDanceOfTheDawnPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50253"><strong>Increased Action Damage II</strong></see> (DNC) [253]
-/// <para>Increases base action damage by 20%.</para>
+/// Modify <inheritdoc cref="DanceOfTheDawnPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(253U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50254"><strong>Enhanced En Avant</strong></see> (DNC) [254]
-/// <para>Allows the accumulation of charges for consecutive uses of En Avant.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnAvantTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(254U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50255"><strong>Esprit</strong></see> (DNC) [255]
-/// <para>Grants Esprit to self and nearby party members upon successfully executing Standard Finish or Technical Finish.</para>
-/// <para>Esprit Effect: Increases Esprit Gauge by 5 upon successfully landing Cascade, Reverse Cascade, Fountain, Fountainfall, Windmill, Rising Windmill, Bladeshower, or Bloodshower. When party members successfully land a weaponskill or cast a spell, has a chance of increasing Esprit Gauge by 10.</para>
-/// <para>Chance of triggering party member effect differs according to job.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EspritTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(255U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50256"><strong>Enhanced En Avant II</strong></see> (DNC) [256]
-/// <para>Allows a third charge of En Avant.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnAvantIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(256U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50453"><strong>Enhanced Technical Finish</strong></see> (DNC) [453]
-/// <para>Grants Flourishing Finish after executing Technical Finish.</para>
-/// <para>Duration: 30s</para>
-/// <para>Technical Finish becomes Tillana while under this effect.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTechnicalFinishTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(453U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50454"><strong>Enhanced Esprit</strong></see> (DNC) [454]
-/// <para>Increases Esprit Gauge by 10 upon successfully landing Reverse Cascade, Fountainfall, Rising Windmill, or Bloodshower.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEspritTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(454U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50455"><strong>Enhanced Flourish</strong></see> (DNC) [455]
-/// <para>Grants Fourfold Fan Dance upon executing Flourish.</para>
-/// <para>Duration: 30s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFlourishTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(455U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50456"><strong>Enhanced Shield Samba</strong></see> (DNC) [456]
-/// <para>Reduces Shield Samba recast time to 90 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedShieldSambaTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(456U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50457"><strong>Enhanced Devilment</strong></see> (DNC) [457]
-/// <para>Grants Flourishing Starfall upon executing Devilment.</para>
-/// <para>Duration: 20s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDevilmentTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(457U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDanceOfTheDawnPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DanceOfTheDawnPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction DanceOfTheDawnPvE => _DanceOfTheDawnPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [IncreasedActionDamageTrait, FourfoldFantasyTrait, IncreasedActionDamageIiTrait, EnhancedEnAvantTrait, EspritTrait, EnhancedEnAvantIiTrait, EnhancedTechnicalFinishTrait, EnhancedEspritTrait, EnhancedFlourishTrait, EnhancedShieldSambaTrait, EnhancedDevilmentTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge>();
@@ -1110,55 +1101,11 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
 
     /// <inheritdoc cref="BigShotPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BigShotPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DesperadoPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4239, false);
-        var setting = action.Setting;
-        ModifyDesperadoPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="DesperadoPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyDesperadoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DesperadoPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction DesperadoPvE => _DesperadoPvECreator.Value;
-
-    /// <inheritdoc cref="DesperadoPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => DesperadoPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _CrimsonLotusPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)17106, false);
-        var setting = action.Setting;
-        ModifyCrimsonLotusPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="CrimsonLotusPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyCrimsonLotusPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.CrimsonLotusPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction CrimsonLotusPvE => _CrimsonLotusPvECreator.Value;
-
-    /// <inheritdoc cref="CrimsonLotusPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => CrimsonLotusPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BigShotPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [CascadePvE, FountainPvE, ReverseCascadePvE, FountainfallPvE, WindmillPvE, BladeshowerPvE, RisingWindmillPvE, BloodshowerPvE, StandardStepPvE, TechnicalStepPvE, EmboitePvE, EntrechatPvE, JetePvE, PirouettePvE, StandardFinishPvE, TechnicalFinishPvE, SaberDancePvE, ClosedPositionPvE, FanDancePvE, FanDanceIiPvE, FanDanceIiiPvE, EnAvantPvE, DevilmentPvE, ShieldSambaPvE, FlourishPvE, ImprovisationPvE, CuringWaltzPvE, SingleStandardFinishPvE, DoubleStandardFinishPvE, SingleTechnicalFinishPvE, DoubleTechnicalFinishPvE, TripleTechnicalFinishPvE, QuadrupleTechnicalFinishPvE, EndingPvE, ImprovisedFinishPvE, TillanaPvE, FanDanceIvPvE, StarfallDancePvE, CascadePvP, FountainPvP, ReverseCascadePvP, FountainfallPvP, SaberDancePvP, StarfallDancePvP, HoningDancePvP, HoningOvationPvP, FanDancePvP, CuringWaltzPvP, EnAvantPvP, ClosedPositionPvP, ContradancePvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [CascadePvE, FountainPvE, ReverseCascadePvE, FountainfallPvE, WindmillPvE, BladeshowerPvE, RisingWindmillPvE, BloodshowerPvE, StandardStepPvE, TechnicalStepPvE, EmboitePvE, EntrechatPvE, JetePvE, PirouettePvE, StandardFinishPvE, TechnicalFinishPvE, SaberDancePvE, ClosedPositionPvE, FanDancePvE, FanDanceIiPvE, FanDanceIiiPvE, EnAvantPvE, DevilmentPvE, ShieldSambaPvE, FlourishPvE, ImprovisationPvE, CuringWaltzPvE, SingleStandardFinishPvE, DoubleStandardFinishPvE, SingleTechnicalFinishPvE, DoubleTechnicalFinishPvE, TripleTechnicalFinishPvE, QuadrupleTechnicalFinishPvE, EndingPvE, ImprovisedFinishPvE, TillanaPvE, FanDanceIvPvE, StarfallDancePvE, CascadePvP, FountainPvP, ReverseCascadePvP, FountainfallPvP, SaberDancePvP, StarfallDancePvP, HoningDancePvP, HoningOvationPvP, FanDancePvP, CuringWaltzPvP, EnAvantPvP, ClosedPositionPvP, ContradancePvP, LastDancePvE, FinishingMovePvE, DanceOfTheDawnPvE, LimitBreak3, ..base.AllBaseActions];
 }

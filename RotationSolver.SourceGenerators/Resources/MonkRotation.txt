@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MNK, global::ECommons.ExcelServices.Job.PGL)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MNK, global::ECommons.ExcelServices.Job.LNC)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/monk"><strong>Monk</strong></see>
-/// <br>Number of Actions: 46</br>
-/// <br>Number of Traits: 15</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/monk"><strong>monk</strong></see>
+/// <br>Number of Actions: 55</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -227,24 +227,6 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public global::RotationSolver.Basic.Actions.IBaseAction ElixirFieldPvE => _ElixirFieldPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MeditationPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3546, false);
-        var setting = action.Setting;
-        ModifyMeditationPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="MeditationPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyMeditationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MeditationPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction MeditationPvE => _MeditationPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheForbiddenChakraPvECreator = new(() =>
     {
         global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3547, false);
@@ -369,24 +351,6 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EnlightenmentPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction EnlightenmentPvE => _EnlightenmentPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AnatmanPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16475, false);
-        var setting = action.Setting;
-        ModifyAnatmanPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="AnatmanPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyAnatmanPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AnatmanPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction AnatmanPvE => _AnatmanPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SixsidedStarPvECreator = new(() =>
@@ -837,90 +801,210 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MeteodrivePvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction MeteodrivePvP => _MeteodrivePvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SteeledMeditationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36940, false);
+        var setting = action.Setting;
+        ModifySteeledMeditationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50160"><strong>Deep Meditation</strong></see> (MNK) [160]
-/// <para>Grants an 80% chance that a chakra will open upon dealing critical damage with a weaponskill.</para>
+/// Modify <inheritdoc cref="SteeledMeditationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DeepMeditationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(160U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySteeledMeditationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SteeledMeditationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SteeledMeditationPvE => _SteeledMeditationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _InspiritedMeditationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36941, false);
+        var setting = action.Setting;
+        ModifyInspiritedMeditationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50245"><strong>Deep Meditation II</strong></see> (MNK) [245]
-/// <para>Guarantees that a chakra will open upon dealing critical damage with a weaponskill.</para>
+/// Modify <inheritdoc cref="InspiritedMeditationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DeepMeditationIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(245U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyInspiritedMeditationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.InspiritedMeditationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction InspiritedMeditationPvE => _InspiritedMeditationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ForbiddenMeditationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36942, false);
+        var setting = action.Setting;
+        ModifyForbiddenMeditationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50364"><strong>Greased Lightning</strong></see> (PGL MNK) [364]
-/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 5%.</para>
+/// Modify <inheritdoc cref="ForbiddenMeditationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait GreasedLightningTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(364U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyForbiddenMeditationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ForbiddenMeditationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ForbiddenMeditationPvE => _ForbiddenMeditationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EnlightenedMeditationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36943, false);
+        var setting = action.Setting;
+        ModifyEnlightenedMeditationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50365"><strong>Enhanced Greased Lightning</strong></see> (PGL MNK) [365]
-/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 10%.</para>
+/// Modify <inheritdoc cref="EnlightenedMeditationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(365U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEnlightenedMeditationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EnlightenedMeditationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EnlightenedMeditationPvE => _EnlightenedMeditationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EarthsReplyPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36944, false);
+        var setting = action.Setting;
+        ModifyEarthsReplyPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50366"><strong>Enhanced Greased Lightning II</strong></see> (MNK) [366]
-/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%.</para>
+/// Modify <inheritdoc cref="EarthsReplyPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(366U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEarthsReplyPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EarthsReplyPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EarthsReplyPvE => _EarthsReplyPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LeapingOpoPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36945, false);
+        var setting = action.Setting;
+        ModifyLeapingOpoPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50367"><strong>Enhanced Greased Lightning III</strong></see> (MNK) [367]
-/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 20%. Also improves Disciplined Fist's damage increase to 15%.</para>
+/// Modify <inheritdoc cref="LeapingOpoPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(367U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLeapingOpoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LeapingOpoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction LeapingOpoPvE => _LeapingOpoPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RisingRaptorPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36946, false);
+        var setting = action.Setting;
+        ModifyRisingRaptorPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50428"><strong>Steel Peak Mastery</strong></see> (MNK) [428]
-/// <para>Upgrades Steel Peak to The Forbidden Chakra.</para>
+/// Modify <inheritdoc cref="RisingRaptorPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SteelPeakMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(428U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyRisingRaptorPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RisingRaptorPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction RisingRaptorPvE => _RisingRaptorPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PouncingCoeurlPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36947, false);
+        var setting = action.Setting;
+        ModifyPouncingCoeurlPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50429"><strong>Howling Fist Mastery</strong></see> (MNK) [429]
-/// <para>Upgrades Howling Fist to Enlightenment.</para>
+/// Modify <inheritdoc cref="PouncingCoeurlPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait HowlingFistMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(429U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPouncingCoeurlPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PouncingCoeurlPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PouncingCoeurlPvE => _PouncingCoeurlPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ElixirBurstPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36948, false);
+        var setting = action.Setting;
+        ModifyElixirBurstPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50430"><strong>Arm of the Destroyer Mastery</strong></see> (MNK) [430]
-/// <para>Upgrades Arm of the Destroyer to Shadow of the Destroyer.</para>
+/// Modify <inheritdoc cref="ElixirBurstPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ArmOfTheDestroyerMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(430U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyElixirBurstPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ElixirBurstPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ElixirBurstPvE => _ElixirBurstPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _WindsReplyPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36949, false);
+        var setting = action.Setting;
+        ModifyWindsReplyPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50431"><strong>Enhanced Thunderclap</strong></see> (MNK) [431]
-/// <para>Allows a third charge of Thunderclap.</para>
+/// Modify <inheritdoc cref="WindsReplyPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedThunderclapTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(431U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyWindsReplyPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.WindsReplyPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction WindsReplyPvE => _WindsReplyPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FiresReplyPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36950, false);
+        var setting = action.Setting;
+        ModifyFiresReplyPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50432"><strong>Enhanced Brotherhood</strong></see> (MNK) [432]
-/// <para>Guarantees that a chakra will open when you are under the effect of Meditative Brotherhood and execute a weaponskill or cast a spell.</para>
+/// Modify <inheritdoc cref="FiresReplyPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBrotherhoodTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(432U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50433"><strong>Enhanced Perfect Balance</strong></see> (MNK) [433]
-/// <para>When under the effect of Perfect Balance, grants Beast Chakra in accordance with the form normally required to execute weaponskills.</para>
-/// <para>Weaponskills requiring opo-opo form grant Opo-opo Chakra.</para>
-/// <para>Weaponskills requiring coeurl form grant Coeurl Chakra.</para>
-/// <para>Weaponskills requiring raptor form grant Raptor Chakra.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedPerfectBalanceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(433U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50512"><strong>Flint Strike Mastery</strong></see> (MNK) [512]
-/// <para>Upgrades Flint Strike to Rising Phoenix.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait FlintStrikeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(512U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50513"><strong>Tornado Kick Mastery</strong></see> (MNK) [513]
-/// <para>Upgrades Tornado Kick to Phantom Rush.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TornadoKickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(513U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50518"><strong>Melee Mastery</strong></see> (MNK) [518]
-/// <para>Increases the potency of Bootshine to 210, True Strike to 300, Snap Punch to 250, Twin Snakes to 280, Demolish to 70, Dragon Kick to 320, The Forbidden Chakra to 340, and Six-sided Star to 550.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(518U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFiresReplyPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FiresReplyPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction FiresReplyPvE => _FiresReplyPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [DeepMeditationTrait, DeepMeditationIiTrait, GreasedLightningTrait, EnhancedGreasedLightningTrait, EnhancedGreasedLightningIiTrait, EnhancedGreasedLightningIiiTrait, SteelPeakMasteryTrait, HowlingFistMasteryTrait, ArmOfTheDestroyerMasteryTrait, EnhancedThunderclapTrait, EnhancedBrotherhoodTrait, EnhancedPerfectBalanceTrait, FlintStrikeMasteryTrait, TornadoKickMasteryTrait, MeleeMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge>();
@@ -945,55 +1029,11 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
-        var setting = action.Setting;
-        ModifyBladedancePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BladedancePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
-
-    /// <inheritdoc cref="BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FinalHeavenPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)202, false);
-        var setting = action.Setting;
-        ModifyFinalHeavenPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="FinalHeavenPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyFinalHeavenPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FinalHeavenPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction FinalHeavenPvE => _FinalHeavenPvECreator.Value;
-
-    /// <inheritdoc cref="FinalHeavenPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => FinalHeavenPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BootshinePvE, TrueStrikePvE, SnapPunchPvE, TwinSnakesPvE, ArmOfTheDestroyerPvE, MantraPvE, DemolishPvE, PerfectBalancePvE, RockbreakerPvE, DragonKickPvE, TornadoKickPvE, ElixirFieldPvE, MeditationPvE, TheForbiddenChakraPvE, FormShiftPvE, RiddleOfEarthPvE, RiddleOfFirePvE, BrotherhoodPvE, FourpointFuryPvE, EnlightenmentPvE, AnatmanPvE, SixsidedStarPvE, SteelPeakPvE, ThunderclapPvE, HowlingFistPvE, MasterfulBlitzPvE, CelestialRevolutionPvE, RiddleOfWindPvE, ShadowOfTheDestroyerPvE, RisingPhoenixPvE, PhantomRushPvE, FlintStrikePvE, BootshinePvP, TrueStrikePvP, SnapPunchPvP, DragonKickPvP, TwinSnakesPvP, DemolishPvP, PhantomRushPvP, SixsidedStarPvP, EnlightenmentPvP, RisingPhoenixPvP, RiddleOfEarthPvP, EarthsReplyPvP, ThunderclapPvP, MeteodrivePvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BootshinePvE, TrueStrikePvE, SnapPunchPvE, TwinSnakesPvE, ArmOfTheDestroyerPvE, MantraPvE, DemolishPvE, PerfectBalancePvE, RockbreakerPvE, DragonKickPvE, TornadoKickPvE, ElixirFieldPvE, TheForbiddenChakraPvE, FormShiftPvE, RiddleOfEarthPvE, RiddleOfFirePvE, BrotherhoodPvE, FourpointFuryPvE, EnlightenmentPvE, SixsidedStarPvE, SteelPeakPvE, ThunderclapPvE, HowlingFistPvE, MasterfulBlitzPvE, CelestialRevolutionPvE, RiddleOfWindPvE, ShadowOfTheDestroyerPvE, RisingPhoenixPvE, PhantomRushPvE, FlintStrikePvE, BootshinePvP, TrueStrikePvP, SnapPunchPvP, DragonKickPvP, TwinSnakesPvP, DemolishPvP, PhantomRushPvP, SixsidedStarPvP, EnlightenmentPvP, RisingPhoenixPvP, RiddleOfEarthPvP, EarthsReplyPvP, ThunderclapPvP, MeteodrivePvP, SteeledMeditationPvE, InspiritedMeditationPvE, ForbiddenMeditationPvE, EnlightenedMeditationPvE, EarthsReplyPvE, LeapingOpoPvE, RisingRaptorPvE, PouncingCoeurlPvE, ElixirBurstPvE, WindsReplyPvE, FiresReplyPvE, LimitBreak3, ..base.AllBaseActions];
 }

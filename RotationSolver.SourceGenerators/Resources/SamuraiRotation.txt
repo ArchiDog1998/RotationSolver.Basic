@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SAM)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SAM, global::ECommons.ExcelServices.Job.THM)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>Samurai</strong></see>
-/// <br>Number of Actions: 48</br>
-/// <br>Number of Traits: 10</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>samurai</strong></see>
+/// <br>Number of Actions: 53</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -479,24 +479,6 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseAction TsubamegaeshiPvE => _TsubamegaeshiPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KaeshiHiganbanaPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16484, false);
-        var setting = action.Setting;
-        ModifyKaeshiHiganbanaPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="KaeshiHiganbanaPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyKaeshiHiganbanaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.KaeshiHiganbanaPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction KaeshiHiganbanaPvE => _KaeshiHiganbanaPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KaeshiGokenPvECreator = new(() =>
     {
         global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16485, false);
@@ -549,24 +531,6 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ShohaPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ShohaPvE => _ShohaPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ShohaIiPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25779, false);
-        var setting = action.Setting;
-        ModifyShohaIiPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="ShohaIiPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyShohaIiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ShohaIiPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction ShohaIiPvE => _ShohaIiPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FukoPvECreator = new(() =>
@@ -873,65 +837,138 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ZantetsukenPvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ZantetsukenPvP => _ZantetsukenPvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TengetsuPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36962, false);
+        var setting = action.Setting;
+        ModifyTengetsuPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50208"><strong>Kenki Mastery II</strong></see> (SAM) [208]
-/// <para>Increases Kenki Gauge when landing all weaponskills excluding Iaijutsu.</para>
+/// Modify <inheritdoc cref="TengetsuPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait KenkiMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(208U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTengetsuPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TengetsuPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TengetsuPvE => _TengetsuPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GyofuPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36963, false);
+        var setting = action.Setting;
+        ModifyGyofuPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50215"><strong>Kenki Mastery</strong></see> (SAM) [215]
-/// <para>Increases Kenki Gauge when landing select weaponskills or when taking damage while under the effect of Third Eye.</para>
+/// Modify <inheritdoc cref="GyofuPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait KenkiMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(215U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyGyofuPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GyofuPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction GyofuPvE => _GyofuPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ZanshinPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36964, false);
+        var setting = action.Setting;
+        ModifyZanshinPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50277"><strong>Enhanced Iaijutsu</strong></see> (SAM) [277]
-/// <para>Reduces Iaijutsu cast time to 1.3 seconds.</para>
+/// Modify <inheritdoc cref="ZanshinPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIaijutsuTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(277U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyZanshinPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ZanshinPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ZanshinPvE => _ZanshinPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TendoGokenPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36965, false);
+        var setting = action.Setting;
+        ModifyTendoGokenPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50278"><strong>Enhanced Fugetsu and Fuka</strong></see> (SAM) [278]
-/// <para>Improves Fugetsu's damage increase to 13% and Fuka's reduction to weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay to 13%.</para>
+/// Modify <inheritdoc cref="TendoGokenPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFugetsuAndFukaTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(278U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTendoGokenPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TendoGokenPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TendoGokenPvE => _TendoGokenPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TendoSetsugekkaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36966, false);
+        var setting = action.Setting;
+        ModifyTendoSetsugekkaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50442"><strong>Enhanced Tsubame-gaeshi</strong></see> (SAM) [442]
-/// <para>Allows the accumulation of charges for consecutive uses of Tsubame-gaeshi.</para>
-/// <para>Maximum Charges: 2</para>
+/// Modify <inheritdoc cref="TendoSetsugekkaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTsubamegaeshiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(442U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTendoSetsugekkaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TendoSetsugekkaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TendoSetsugekkaPvE => _TendoSetsugekkaPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TendoKaeshiGokenPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36967, false);
+        var setting = action.Setting;
+        ModifyTendoKaeshiGokenPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50443"><strong>Enhanced Meikyo Shisui</strong></see> (SAM) [443]
-/// <para>Allows the accumulation of charges for consecutive uses of Meikyo Shisui.</para>
-/// <para>Maximum Charges: 2</para>
+/// Modify <inheritdoc cref="TendoKaeshiGokenPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMeikyoShisuiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(443U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTendoKaeshiGokenPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TendoKaeshiGokenPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TendoKaeshiGokenPvE => _TendoKaeshiGokenPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TendoKaeshiSetsugekkaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36968, false);
+        var setting = action.Setting;
+        ModifyTendoKaeshiSetsugekkaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50514"><strong>Enhanced Ikishoten</strong></see> (SAM) [514]
-/// <para>Grants Ogi Namikiri Ready upon execution of Ikishoten.</para>
-/// <para>Duration: 30s</para>
+/// Modify <inheritdoc cref="TendoKaeshiSetsugekkaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIkishotenTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(514U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50519"><strong>Fuga Mastery</strong></see> (SAM) [519]
-/// <para>Upgrades Fuga to Fuko.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait FugaMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(519U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50520"><strong>Way of the Samurai</strong></see> (SAM) [520]
-/// <para>Increases the potency of Hakaze to 200, Jinpu to 120, and Shifu to 120.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(520U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50521"><strong>Way of the Samurai II</strong></see> (SAM) [521]
-/// <para>Increases the potency of Gekko, Kasha, and Yukikaze to 120.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(521U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTendoKaeshiSetsugekkaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TendoKaeshiSetsugekkaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TendoKaeshiSetsugekkaPvE => _TendoKaeshiSetsugekkaPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [KenkiMasteryIiTrait, KenkiMasteryTrait, EnhancedIaijutsuTrait, EnhancedFugetsuAndFukaTrait, EnhancedTsubamegaeshiTrait, EnhancedMeikyoShisuiTrait, EnhancedIkishotenTrait, FugaMasteryTrait, WayOfTheSamuraiTrait, WayOfTheSamuraiIiTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge>();
@@ -956,55 +993,11 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
-        var setting = action.Setting;
-        ModifyBladedancePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BladedancePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
-
-    /// <inheritdoc cref="BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DoomOfTheLivingPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7861, false);
-        var setting = action.Setting;
-        ModifyDoomOfTheLivingPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="DoomOfTheLivingPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyDoomOfTheLivingPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DoomOfTheLivingPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction DoomOfTheLivingPvE => _DoomOfTheLivingPvECreator.Value;
-
-    /// <inheritdoc cref="DoomOfTheLivingPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DoomOfTheLivingPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiHiganbanaPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, ShohaIiPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, TengetsuPvE, GyofuPvE, ZanshinPvE, TendoGokenPvE, TendoSetsugekkaPvE, TendoKaeshiGokenPvE, TendoKaeshiSetsugekkaPvE, LimitBreak3, ..base.AllBaseActions];
 }

@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RDM)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RDM, global::ECommons.ExcelServices.Job.LTW)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/redmage"><strong>Red Mage</strong></see>
-/// <br>Number of Actions: 59</br>
-/// <br>Number of Traits: 13</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/redmage"><strong>red mage</strong></see>
+/// <br>Number of Actions: 65</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1071,82 +1071,120 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SouthernCrossPvP_29705"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction SouthernCrossPvP_29705 => _SouthernCrossPvP_29705Creator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EnchantedMoulinetDeuxPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37002, false);
+        var setting = action.Setting;
+        ModifyEnchantedMoulinetDeuxPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50195"><strong>Enhanced Jolt</strong></see> (RDM) [195]
-/// <para>Upgrades Jolt to Jolt II. Also increases the potency of Verthunder and Veraero to 360, and the potency of Verfire and Verstone to 300.</para>
+/// Modify <inheritdoc cref="EnchantedMoulinetDeuxPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedJoltTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(195U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEnchantedMoulinetDeuxPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EnchantedMoulinetDeuxPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EnchantedMoulinetDeuxPvE => _EnchantedMoulinetDeuxPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EnchantedMoulinetTroisPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37003, false);
+        var setting = action.Setting;
+        ModifyEnchantedMoulinetTroisPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50200"><strong>Maim and Mend</strong></see> (RDM) [200]
-/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// Modify <inheritdoc cref="EnchantedMoulinetTroisPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(200U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEnchantedMoulinetTroisPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EnchantedMoulinetTroisPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EnchantedMoulinetTroisPvE => _EnchantedMoulinetTroisPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _JoltIiiPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37004, false);
+        var setting = action.Setting;
+        ModifyJoltIiiPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50201"><strong>Maim and Mend II</strong></see> (RDM) [201]
-/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// Modify <inheritdoc cref="JoltIiiPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(201U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyJoltIiiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.JoltIiiPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction JoltIiiPvE => _JoltIiiPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ViceOfThornsPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37005, false);
+        var setting = action.Setting;
+        ModifyViceOfThornsPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50216"><strong>Dualcast</strong></see> (RDM) [216]
-/// <para>Grants the effect of Dualcast upon casting any spell with a cast time. While under the effect of Dualcast, your next spell will require no time to cast. Effect is canceled upon execution of any action other than an ability. Auto-attacks do not cancel effect.</para>
-/// <para>Duration: 15s</para>
+/// Modify <inheritdoc cref="ViceOfThornsPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DualcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(216U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyViceOfThornsPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ViceOfThornsPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ViceOfThornsPvE => _ViceOfThornsPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GrandImpactPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37006, false);
+        var setting = action.Setting;
+        ModifyGrandImpactPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50303"><strong>Scatter Mastery</strong></see> (RDM) [303]
-/// <para>Upgrades Scatter to Impact.</para>
+/// Modify <inheritdoc cref="GrandImpactPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ScatterMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(303U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyGrandImpactPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GrandImpactPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction GrandImpactPvE => _GrandImpactPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PrefulgencePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37007, false);
+        var setting = action.Setting;
+        ModifyPrefulgencePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50304"><strong>Enhanced Displacement</strong></see> (RDM) [304]
-/// <para>Increases Displacement and Engagement potency to 180.</para>
+/// Modify <inheritdoc cref="PrefulgencePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDisplacementTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(304U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50305"><strong>Enhanced Manafication</strong></see> (RDM) [305]
-/// <para>Reduces Manafication recast timer to 110 seconds and adds an additional effect that increases magic damage dealt by 5%.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedManaficationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(305U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50306"><strong>Red Magic Mastery</strong></see> (RDM) [306]
-/// <para>Reduces Contre Sixte recast timer to 35 seconds and increases the potency of both Verthunder II and Veraero II to 120.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RedMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(306U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50482"><strong>Mana Stack</strong></see> (RDM) [482]
-/// <para>Adds a Mana Stack to your Balance Gauge upon landing Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, or Enchanted Moulinet, up to a maximum of 3.</para>
-/// <para>Upon gaining 3 Mana Stacks, Verthunder and Verthunder II are upgraded to Verflare.</para>
-/// <para>Upon learning Verholy, gaining 3 Mana Stacks also upgrades Veraero and Veraero II to Verholy.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ManaStackTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(482U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50483"><strong>Red Magic Mastery II</strong></see> (RDM) [483]
-/// <para>Upgrades Verthunder to Verthunder III and Veraero to Veraero III.</para>
-/// <para>Upon gaining 3 Mana Stacks, Verthunder III is upgraded to Verflare and Veraero III is upgraded to Verholy.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RedMagicMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(483U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50484"><strong>Red Magic Mastery III</strong></see> (RDM) [484]
-/// <para>Increases the potency of Enchanted Riposte to 280, Verthunder II to 140, Veraero II to 140, Verfire to 340, Verstone to 340, Enchanted Zwerchhau to 150, Enchanted Redoublement to 130, Jolt II to 320, Impact to 210, and Enchanted Reprise to 340.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RedMagicMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(484U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50485"><strong>Enhanced Acceleration</strong></see> (RDM) [485]
-/// <para>Allows the accumulation of charges for consecutive uses of Acceleration.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAccelerationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(485U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50486"><strong>Enhanced Manafication II</strong></see> (RDM) [486]
-/// <para>Increases maximum stacks of Manafication to 6.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedManaficationIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(486U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPrefulgencePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PrefulgencePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PrefulgencePvE => _PrefulgencePvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [EnhancedJoltTrait, MaimAndMendTrait, MaimAndMendIiTrait, DualcastTrait, ScatterMasteryTrait, EnhancedDisplacementTrait, EnhancedManaficationTrait, RedMagicMasteryTrait, ManaStackTrait, RedMagicMasteryIiTrait, RedMagicMasteryIiiTrait, EnhancedAccelerationTrait, EnhancedManaficationIiTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge>();
@@ -1171,55 +1209,11 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="SkyshardPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => SkyshardPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StarstormPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)204, false);
-        var setting = action.Setting;
-        ModifyStarstormPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StarstormPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStarstormPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StarstormPvE => _StarstormPvECreator.Value;
-
-    /// <inheritdoc cref="StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StarstormPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _VermilionScourgePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7862, false);
-        var setting = action.Setting;
-        ModifyVermilionScourgePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="VermilionScourgePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyVermilionScourgePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.VermilionScourgePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction VermilionScourgePvE => _VermilionScourgePvECreator.Value;
-
-    /// <inheritdoc cref="VermilionScourgePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => VermilionScourgePvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SkyshardPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [JoltPvE, RipostePvE, VerthunderPvE, CorpsacorpsPvE, VeraeroPvE, ScatterPvE, VerfirePvE, VerstonePvE, ZwerchhauPvE, MoulinetPvE, VercurePvE, DisplacementPvE, RedoublementPvE, FlechePvE, AccelerationPvE, ContreSixtePvE, EmboldenPvE, ManaficationPvE, VerraisePvE, JoltIiPvE, VerflarePvE, VerholyPvE, EnchantedRipostePvE, EnchantedZwerchhauPvE, EnchantedRedoublementPvE, EnchantedMoulinetPvE, VerthunderIiPvE, VeraeroIiPvE, ImpactPvE, EngagementPvE, EnchantedReprisePvE, ReprisePvE, ScorchPvE, VerthunderIiiPvE, VeraeroIiiPvE, MagickBarrierPvE, ResolutionPvE, VerstonePvP, VeraeroIiiPvP, VerholyPvP, VerfirePvP, VerthunderIiiPvP, VerflarePvP, EnchantedRipostePvP, EnchantedZwerchhauPvP, EnchantedRedoublementPvP, ResolutionPvP, MagickBarrierPvP, FrazzlePvP, CorpsacorpsPvP, DisplacementPvP, BlackShiftPvP, WhiteShiftPvP, SouthernCrossPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [JoltPvE, RipostePvE, VerthunderPvE, CorpsacorpsPvE, VeraeroPvE, ScatterPvE, VerfirePvE, VerstonePvE, ZwerchhauPvE, MoulinetPvE, VercurePvE, DisplacementPvE, RedoublementPvE, FlechePvE, AccelerationPvE, ContreSixtePvE, EmboldenPvE, ManaficationPvE, VerraisePvE, JoltIiPvE, VerflarePvE, VerholyPvE, EnchantedRipostePvE, EnchantedZwerchhauPvE, EnchantedRedoublementPvE, EnchantedMoulinetPvE, VerthunderIiPvE, VeraeroIiPvE, ImpactPvE, EngagementPvE, EnchantedReprisePvE, ReprisePvE, ScorchPvE, VerthunderIiiPvE, VeraeroIiiPvE, MagickBarrierPvE, ResolutionPvE, VerstonePvP, VeraeroIiiPvP, VerholyPvP, VerfirePvP, VerthunderIiiPvP, VerflarePvP, EnchantedRipostePvP, EnchantedZwerchhauPvP, EnchantedRedoublementPvP, ResolutionPvP, MagickBarrierPvP, FrazzlePvP, CorpsacorpsPvP, DisplacementPvP, BlackShiftPvP, WhiteShiftPvP, SouthernCrossPvP, EnchantedMoulinetDeuxPvE, EnchantedMoulinetTroisPvE, JoltIiiPvE, ViceOfThornsPvE, GrandImpactPvE, PrefulgencePvE, LimitBreak3, ..base.AllBaseActions];
 }

@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WAR, global::ECommons.ExcelServices.Job.MRD)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WAR, global::ECommons.ExcelServices.Job.PGL)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/warrior"><strong>Warrior</strong></see>
-/// <br>Number of Actions: 41</br>
-/// <br>Number of Traits: 15</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/warrior"><strong>warrior</strong></see>
+/// <br>Number of Actions: 44</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -747,95 +747,66 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReleaseDefiancePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ReleaseDefiancePvE => _ReleaseDefiancePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DamnationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36923, false);
+        var setting = action.Setting;
+        ModifyDamnationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50157"><strong>Enhanced Infuriate</strong></see> (WAR) [157]
-/// <para>Reduces Infuriate recast time by 5 seconds upon landing Inner Beast, Steel Cyclone, Fell Cleave, or Decimate on most targets.</para>
+/// Modify <inheritdoc cref="DamnationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedInfuriateTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(157U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDamnationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DamnationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction DamnationPvE => _DamnationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PrimalWrathPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36924, false);
+        var setting = action.Setting;
+        ModifyPrimalWrathPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50218"><strong>Berserk Mastery</strong></see> (WAR) [218]
-/// <para>Upgrades Berserk to Inner Release.</para>
+/// Modify <inheritdoc cref="PrimalWrathPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait BerserkMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(218U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPrimalWrathPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PrimalWrathPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PrimalWrathPvE => _PrimalWrathPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PrimalRuinationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36925, false);
+        var setting = action.Setting;
+        ModifyPrimalRuinationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50249"><strong>The Beast Within</strong></see> (WAR) [249]
-/// <para>Increases Beast Gauge when landing Maim or Storm's Path in a combo.</para>
+/// Modify <inheritdoc cref="PrimalRuinationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TheBeastWithinTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(249U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50265"><strong>Inner Beast Mastery</strong></see> (WAR) [265]
-/// <para>Upgrades Inner Beast to Fell Cleave.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait InnerBeastMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(265U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50266"><strong>Steel Cyclone Mastery</strong></see> (WAR) [266]
-/// <para>Upgrades Steel Cyclone to Decimate.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SteelCycloneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(266U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50267"><strong>Nascent Chaos</strong></see> (WAR) [267]
-/// <para>Infuriate grants the effect of Nascent Chaos, upgrading Decimate to Chaotic Cyclone. Upon reaching level 80, Nascent Chaos will also upgrade Fell Cleave to Inner Chaos. </para>
-/// <para>Duration: 30s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait NascentChaosTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(267U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50268"><strong>Mastering the Beast</strong></see> (WAR) [268]
-/// <para>Increases Beast Gauge when landing Mythril Tempest in a combo.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MasteringTheBeastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(268U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50269"><strong>Enhanced Thrill of Battle</strong></see> (WAR) [269]
-/// <para>Adds an additional effect to Thrill of Battle that increases HP recovery via healing actions by 20%.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedThrillOfBattleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(269U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50318"><strong>Tank Mastery</strong></see> (MRD WAR) [318]
-/// <para>Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TankMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(318U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50417"><strong>Enhanced Shake It Off</strong></see> (WAR) [417]
-/// <para>Adds a healing effect to Shake It Off.</para>
-/// <para>Cure Potency: 300</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedShakeItOffTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(417U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50418"><strong>Raw Intuition Mastery</strong></see> (WAR) [418]
-/// <para>Upgrades Raw Intuition to Bloodwhetting.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RawIntuitionMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(418U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50419"><strong>Enhanced Nascent Flash</strong></see> (WAR) [419]
-/// <para>Extends the duration of Nascent Flash and Nascent Glint to 8 seconds.</para>
-/// <para>Grants Stem the Flow to target, reducing damage taken by 10%.</para>
-/// <para>Duration: 4s</para>
-/// <para>Grants Stem the Tide to target, nullifying damage equivalent to a heal of 400 potency.</para>
-/// <para>Duration: 20s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedNascentFlashTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(419U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50420"><strong>Enhanced Equilibrium</strong></see> (WAR) [420]
-/// <para>Grants healing over time to self.</para>
-/// <para>Cure Potency: 200</para>
-/// <para>Duration: 15s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEquilibriumTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(420U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50421"><strong>Enhanced Onslaught</strong></see> (WAR) [421]
-/// <para>Allows a third charge of Onslaught.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedOnslaughtTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(421U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50505"><strong>Melee Mastery</strong></see> (WAR) [505]
-/// <para>Increases the potency of Heavy Swing to 200, Maim to 150, Storm's Path to 160, and Storm's Eye to 160.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(505U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPrimalRuinationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PrimalRuinationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PrimalRuinationPvE => _PrimalRuinationPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [EnhancedInfuriateTrait, BerserkMasteryTrait, TheBeastWithinTrait, InnerBeastMasteryTrait, SteelCycloneMasteryTrait, NascentChaosTrait, MasteringTheBeastTrait, EnhancedThrillOfBattleTrait, TankMasteryTrait, EnhancedShakeItOffTrait, RawIntuitionMasteryTrait, EnhancedNascentFlashTrait, EnhancedEquilibriumTrait, EnhancedOnslaughtTrait, MeleeMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.WARGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.WARGauge>();
@@ -860,55 +831,11 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="ShieldWallPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => ShieldWallPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StrongholdPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)198, false);
-        var setting = action.Setting;
-        ModifyStrongholdPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StrongholdPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStrongholdPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StrongholdPvE => _StrongholdPvECreator.Value;
-
-    /// <inheritdoc cref="StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StrongholdPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LandWakerPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4240, false);
-        var setting = action.Setting;
-        ModifyLandWakerPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="LandWakerPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyLandWakerPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LandWakerPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction LandWakerPvE => _LandWakerPvECreator.Value;
-
-    /// <inheritdoc cref="LandWakerPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => LandWakerPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ShieldWallPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HeavySwingPvE, MaimPvE, BerserkPvE, ThrillOfBattlePvE, OverpowerPvE, StormsPathPvE, HolmgangPvE, VengeancePvE, StormsEyePvE, TomahawkPvE, DefiancePvE, InnerBeastPvE, SteelCyclonePvE, InfuriatePvE, FellCleavePvE, DecimatePvE, RawIntuitionPvE, EquilibriumPvE, OnslaughtPvE, UpheavalPvE, ShakeItOffPvE, InnerReleasePvE, MythrilTempestPvE, ChaoticCyclonePvE, NascentFlashPvE, InnerChaosPvE, BloodwhettingPvE, OrogenyPvE, PrimalRendPvE, HeavySwingPvP, MaimPvP, StormsPathPvP, FellCleavePvP, OnslaughtPvP, OrogenyPvP, BlotaPvP, BloodwhettingPvP, PrimalScreamPvP, PrimalRendPvP, ChaoticCyclonePvP, ReleaseDefiancePvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HeavySwingPvE, MaimPvE, BerserkPvE, ThrillOfBattlePvE, OverpowerPvE, StormsPathPvE, HolmgangPvE, VengeancePvE, StormsEyePvE, TomahawkPvE, DefiancePvE, InnerBeastPvE, SteelCyclonePvE, InfuriatePvE, FellCleavePvE, DecimatePvE, RawIntuitionPvE, EquilibriumPvE, OnslaughtPvE, UpheavalPvE, ShakeItOffPvE, InnerReleasePvE, MythrilTempestPvE, ChaoticCyclonePvE, NascentFlashPvE, InnerChaosPvE, BloodwhettingPvE, OrogenyPvE, PrimalRendPvE, HeavySwingPvP, MaimPvP, StormsPathPvP, FellCleavePvP, OnslaughtPvP, OrogenyPvP, BlotaPvP, BloodwhettingPvP, PrimalScreamPvP, PrimalRendPvP, ChaoticCyclonePvP, ReleaseDefiancePvE, DamnationPvE, PrimalWrathPvE, PrimalRuinationPvE, LimitBreak3, ..base.AllBaseActions];
 }

@@ -50,7 +50,7 @@ internal class Service : IDisposable
             {
                 return string.Format(UiString.CantUseInPvP.Local(), uiName);
             }
-            if (Player.Object.Level >= 90)
+            if (Player.Object.Level >= 100)
             {
                 return string.Format(UiString.CantUseAtTopLevel.Local(), uiName);
             }

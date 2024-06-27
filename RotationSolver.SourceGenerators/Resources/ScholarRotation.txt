@@ -4,9 +4,9 @@
 namespace RotationSolver.Basic.Rotations.Basic;
 [global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SCH)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/scholar"><strong>Scholar</strong></see>
-/// <br>Number of Actions: 56</br>
-/// <br>Number of Traits: 12</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/scholar"><strong>scholar</strong></see>
+/// <br>Number of Actions: 62</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1017,73 +1017,120 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ConsolationPvP_29241"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ConsolationPvP_29241 => _ConsolationPvP_29241Creator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BanefulImpactionPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37012, false);
+        var setting = action.Setting;
+        ModifyBanefulImpactionPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50066"><strong>Maim and Mend</strong></see> (ACN SMN SCH) [66]
-/// <para>Increases base action damage and HP restoration by 10%. Also increases base damage and HP restoration of your pet by 10%.</para>
+/// Modify <inheritdoc cref="BanefulImpactionPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(66U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBanefulImpactionPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BanefulImpactionPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction BanefulImpactionPvE => _BanefulImpactionPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ConcitationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37013, false);
+        var setting = action.Setting;
+        ModifyConcitationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50069"><strong>Maim and Mend II</strong></see> (ACN SMN SCH) [69]
-/// <para>Increases base action damage and HP restoration by 30%. Also increases base damage and HP restoration of your pet by 30%.</para>
+/// Modify <inheritdoc cref="ConcitationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(69U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyConcitationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ConcitationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ConcitationPvE => _ConcitationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SeraphismPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37014, false);
+        var setting = action.Setting;
+        ModifySeraphismPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50184"><strong>Broil Mastery II</strong></see> (SCH) [184]
-/// <para>Upgrades Broil to Broil II and increases the potency of Ruin II to 180.</para>
+/// Modify <inheritdoc cref="SeraphismPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait BroilMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(184U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySeraphismPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SeraphismPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SeraphismPvE => _SeraphismPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ManifestationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37015, false);
+        var setting = action.Setting;
+        ModifyManifestationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50214"><strong>Broil Mastery</strong></see> (SCH) [214]
-/// <para>Upgrades Ruin to Broil and increases the potency of Ruin II to 160, and Art of War to 165.</para>
+/// Modify <inheritdoc cref="ManifestationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait BroilMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(214U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyManifestationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ManifestationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ManifestationPvE => _ManifestationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AccessionPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37016, false);
+        var setting = action.Setting;
+        ModifyAccessionPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50311"><strong>Corruption Mastery II</strong></see> (SCH) [311]
-/// <para>Upgrades Bio II to Biolysis.</para>
+/// Modify <inheritdoc cref="AccessionPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CorruptionMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(311U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyAccessionPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AccessionPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction AccessionPvE => _AccessionPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EmergencyTacticsPvE_37037Creator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37037, false);
+        var setting = action.Setting;
+        ModifyEmergencyTacticsPvE_37037(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50312"><strong>Broil Mastery III</strong></see> (SCH) [312]
-/// <para>Upgrades Broil II to Broil III and increases the potency of Ruin II to 200.</para>
+/// Modify <inheritdoc cref="EmergencyTacticsPvE_37037"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait BroilMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(312U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50313"><strong>Enhanced Sacred Soil</strong></see> (SCH) [313]
-/// <para>Adds an additional effect to Sacred Soil that grants healing over time.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSacredSoilTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(313U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50324"><strong>Corruption Mastery</strong></see> (SCH) [324]
-/// <para>Upgrades Bio to Bio II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CorruptionMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(324U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50491"><strong>Broil Mastery IV</strong></see> (SCH) [491]
-/// <para>Upgrades Broil III to Broil IV and increases the potency of Ruin II to 220.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait BroilMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(491U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50492"><strong>Art of War Mastery</strong></see> (SCH) [492]
-/// <para>Upgrades Art of War to Art of War II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ArtOfWarMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(492U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50493"><strong>Enhanced Healing Magic</strong></see> (SCH) [493]
-/// <para>Increases the healing potency of Physick to 450, Embrace to 180, and Seraphic Veil to 180.</para>
-/// <para>Increases the barrier potency of Adloquium to 180% the amount healed and Succor to 160% the amount healed.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHealingMagicTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(493U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50494"><strong>Enhanced Deployment Tactics</strong></see> (SCH) [494]
-/// <para>Reduces Deployment Tactics recast time to 90 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDeploymentTacticsTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(494U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEmergencyTacticsPvE_37037(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EmergencyTacticsPvE_37037"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EmergencyTacticsPvE_37037 => _EmergencyTacticsPvE_37037Creator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, MaimAndMendIiTrait, BroilMasteryIiTrait, BroilMasteryTrait, CorruptionMasteryIiTrait, BroilMasteryIiiTrait, EnhancedSacredSoilTrait, CorruptionMasteryTrait, BroilMasteryIvTrait, ArtOfWarMasteryTrait, EnhancedHealingMagicTrait, EnhancedDeploymentTacticsTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge>();
@@ -1108,55 +1155,11 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="HealingWindPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => HealingWindPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
-        var setting = action.Setting;
-        ModifyBreathOfTheEarthPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BreathOfTheEarthPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBreathOfTheEarthPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BreathOfTheEarthPvE => _BreathOfTheEarthPvECreator.Value;
-
-    /// <inheritdoc cref="BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BreathOfTheEarthPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AngelFeathersPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4247, false);
-        var setting = action.Setting;
-        ModifyAngelFeathersPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="AngelFeathersPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyAngelFeathersPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AngelFeathersPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction AngelFeathersPvE => _AngelFeathersPvECreator.Value;
-
-    /// <inheritdoc cref="AngelFeathersPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => AngelFeathersPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => HealingWindPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [AetherflowPvE, EnergyDrainPvE, ResurrectionPvE, AdloquiumPvE, SuccorPvE, SacredSoilPvE, LustratePvE, PhysickPvE, EmbracePvE, WhisperingDawnPvE, FeyIlluminationPvE, IndomitabilityPvE, BroilPvE, DeploymentTacticsPvE, EmergencyTacticsPvE, DissipationPvE, ExcogitationPvE, BroilIiPvE, ChainStratagemPvE, AetherpactPvE, FeyUnionPvE, DissolveUnionPvE, ArtOfWarPvE, BiolysisPvE, BroilIiiPvE, RecitationPvE, FeyBlessingPvE, SummonSeraphPvE, ConsolationPvE, SeraphicVeilPvE, AngelsWhisperPvE, SeraphicIlluminationPvE, SummonEosPvE, BioPvE, BioIiPvE, RuinPvE, RuinIiPvE, BroilIvPvE, ArtOfWarIiPvE, ProtractionPvE, ExpedientPvE, BroilIvPvP, AdloquiumPvP, BiolysisPvP, DeploymentTacticsPvP, MummificationPvP, ExpedientPvP, SummonSeraphPvP, ConsolationPvP, SeraphFlightPvP, SeraphicVeilPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [AetherflowPvE, EnergyDrainPvE, ResurrectionPvE, AdloquiumPvE, SuccorPvE, SacredSoilPvE, LustratePvE, PhysickPvE, EmbracePvE, WhisperingDawnPvE, FeyIlluminationPvE, IndomitabilityPvE, BroilPvE, DeploymentTacticsPvE, EmergencyTacticsPvE, DissipationPvE, ExcogitationPvE, BroilIiPvE, ChainStratagemPvE, AetherpactPvE, FeyUnionPvE, DissolveUnionPvE, ArtOfWarPvE, BiolysisPvE, BroilIiiPvE, RecitationPvE, FeyBlessingPvE, SummonSeraphPvE, ConsolationPvE, SeraphicVeilPvE, AngelsWhisperPvE, SeraphicIlluminationPvE, SummonEosPvE, BioPvE, BioIiPvE, RuinPvE, RuinIiPvE, BroilIvPvE, ArtOfWarIiPvE, ProtractionPvE, ExpedientPvE, BroilIvPvP, AdloquiumPvP, BiolysisPvP, DeploymentTacticsPvP, MummificationPvP, ExpedientPvP, SummonSeraphPvP, ConsolationPvP, SeraphFlightPvP, SeraphicVeilPvP, BanefulImpactionPvE, ConcitationPvE, SeraphismPvE, ManifestationPvE, AccessionPvE, LimitBreak3, ..base.AllBaseActions];
 }

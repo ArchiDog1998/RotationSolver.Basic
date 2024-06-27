@@ -4,9 +4,9 @@
 namespace RotationSolver.Basic.Rotations.Basic;
 [global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.PLD, global::ECommons.ExcelServices.Job.GLA)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/paladin"><strong>Paladin</strong></see>
-/// <br>Number of Actions: 47</br>
-/// <br>Number of Traits: 15</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/paladin"><strong>paladin</strong></see>
+/// <br>Number of Actions: 52</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -855,103 +855,102 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReleaseIronWillPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ReleaseIronWillPvE => _ReleaseIronWillPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SupplicationPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36918, false);
+        var setting = action.Setting;
+        ModifySupplicationPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50207"><strong>Divine Magic Mastery</strong></see> (PLD) [207]
-/// <para>Halves MP cost for all spells while preventing casting interruptions via damage taken. Grants the following effects after successfully completing a combo with Royal Authority:</para>
-/// <para>Combo Bonus: Grants Divine Might</para>
-/// <para>Divine Might Effect: Allows next Holy Spirit or Holy Circle to be cast immediately with increased potency</para>
-/// <para>Duration: 30s</para>
+/// Modify <inheritdoc cref="SupplicationPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DivineMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(207U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySupplicationPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SupplicationPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SupplicationPvE => _SupplicationPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SepulchrePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36919, false);
+        var setting = action.Setting;
+        ModifySepulchrePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50209"><strong>Oath Mastery</strong></see> (PLD) [209]
-/// <para>Increases Oath Gauge by 5 each time an auto-attack lands.</para>
+/// Modify <inheritdoc cref="SepulchrePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait OathMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(209U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySepulchrePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SepulchrePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SepulchrePvE => _SepulchrePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GuardianPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36920, false);
+        var setting = action.Setting;
+        ModifyGuardianPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50246"><strong>Chivalry</strong></see> (PLD) [246]
-/// <para>Restores MP when using Riot Blade or Spirits Within.</para>
+/// Modify <inheritdoc cref="GuardianPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ChivalryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(246U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyGuardianPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GuardianPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction GuardianPvE => _GuardianPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ImperatorPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36921, false);
+        var setting = action.Setting;
+        ModifyImperatorPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50260"><strong>Rage of Halone Mastery</strong></see> (PLD) [260]
-/// <para>Upgrades Rage of Halone to Royal Authority.</para>
+/// Modify <inheritdoc cref="ImperatorPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait RageOfHaloneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(260U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyImperatorPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ImperatorPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ImperatorPvE => _ImperatorPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladeOfHonorPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36922, false);
+        var setting = action.Setting;
+        ModifyBladeOfHonorPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50261"><strong>Enhanced Prominence</strong></see> (PLD) [261]
-/// <para>Grants the following effects after successfully completing a combo with Prominence:</para>
-/// <para>Combo Bonus: Restores MP</para>
-/// <para>Combo Bonus: Grants Divine Might</para>
-/// <para>Divine Might Effect: Allows next Holy Spirit or Holy Circle to be cast immediately with increased potency</para>
-/// <para>Duration: 30s</para>
+/// Modify <inheritdoc cref="BladeOfHonorPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedProminenceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(261U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50262"><strong>Enhanced Sheltron</strong></see> (PLD) [262]
-/// <para>Extends the duration of Sheltron to 6 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSheltronTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(262U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50263"><strong>Enhanced Requiescat</strong></see> (PLD) [263]
-/// <para>Grants the effect of Confiteor Ready upon landing Requiescat.</para>
-/// <para>Duration: 30s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRequiescatTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(263U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50264"><strong>Sword Oath</strong></see> (PLD) [264]
-/// <para>Grants three stacks of Sword Oath after successfully completing a combo with Royal Authority.</para>
-/// <para>Duration: 30s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SwordOathTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(264U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50317"><strong>Tank Mastery</strong></see> (GLA PLD) [317]
-/// <para>Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TankMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(317U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50412"><strong>Sheltron Mastery</strong></see> (PLD) [412]
-/// <para>Upgrades Sheltron to Holy Sheltron.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SheltronMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(412U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50413"><strong>Enhanced Intervention</strong></see> (PLD) [413]
-/// <para>Extends the duration of Intervention to 8 seconds.</para>
-/// <para>Grants Knight's Resolve to target, reducing damage taken by 10%.</para>
-/// <para>Duration: 4s</para>
-/// <para>Grants Knight's Benediction to target, gradually restoring HP over time.</para>
-/// <para>Cure Potency: 250</para>
-/// <para>Duration: 12s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedInterventionTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(413U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50414"><strong>Divine Magic Mastery II</strong></see> (PLD) [414]
-/// <para>Adds a healing effect to Holy Spirit, Holy Circle, and Confiteor.</para>
-/// <para>Cure Potency: 400</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DivineMagicMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(414U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50415"><strong>Spirits Within Mastery</strong></see> (PLD) [415]
-/// <para>Upgrades Spirits Within to Expiacion.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SpiritsWithinMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(415U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50416"><strong>Enhanced Divine Veil</strong></see> (PLD) [416]
-/// <para>Adds a healing effect to Divine Veil.</para>
-/// <para>Cure Potency: 400</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDivineVeilTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(416U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50504"><strong>Melee Mastery</strong></see> (PLD) [504]
-/// <para>Increases the potency of Fast Blade to 200, Riot Blade to 140, Royal Authority to 140, Holy Spirit to 350, and Atonement to 400.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(504U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBladeOfHonorPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladeOfHonorPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction BladeOfHonorPvE => _BladeOfHonorPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [DivineMagicMasteryTrait, OathMasteryTrait, ChivalryTrait, RageOfHaloneMasteryTrait, EnhancedProminenceTrait, EnhancedSheltronTrait, EnhancedRequiescatTrait, SwordOathTrait, TankMasteryTrait, SheltronMasteryTrait, EnhancedInterventionTrait, DivineMagicMasteryIiTrait, SpiritsWithinMasteryTrait, EnhancedDivineVeilTrait, MeleeMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.PLDGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.PLDGauge>();
@@ -976,55 +975,11 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="ShieldWallPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => ShieldWallPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StrongholdPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)198, false);
-        var setting = action.Setting;
-        ModifyStrongholdPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StrongholdPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStrongholdPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StrongholdPvE => _StrongholdPvECreator.Value;
-
-    /// <inheritdoc cref="StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StrongholdPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LastBastionPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)199, false);
-        var setting = action.Setting;
-        ModifyLastBastionPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="LastBastionPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyLastBastionPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LastBastionPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction LastBastionPvE => _LastBastionPvECreator.Value;
-
-    /// <inheritdoc cref="LastBastionPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => LastBastionPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ShieldWallPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [FastBladePvE, RiotBladePvE, ShieldBashPvE, SentinelPvE, FightOrFlightPvE, RageOfHalonePvE, BulwarkPvE, CircleOfScornPvE, ShieldLobPvE, CoverPvE, IronWillPvE, SpiritsWithinPvE, HallowedGroundPvE, GoringBladePvE, RoyalAuthorityPvE, DivineVeilPvE, ClemencyPvE, SheltronPvE, TotalEclipsePvE, InterventionPvE, RequiescatPvE, HolySpiritPvE, PassageOfArmsPvE, ProminencePvE, HolyCirclePvE, ConfiteorPvE, AtonementPvE, IntervenePvE, HolySheltronPvE, ExpiacionPvE, BladeOfFaithPvE, BladeOfTruthPvE, BladeOfValorPvE, FastBladePvP, RiotBladePvP, RoyalAuthorityPvP, AtonementPvP, ShieldBashPvP, IntervenePvP, GuardianPvP, HolySheltronPvP, PhalanxPvP, ConfiteorPvP, BladeOfFaithPvP, BladeOfTruthPvP, BladeOfValorPvP, ReleaseIronWillPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [FastBladePvE, RiotBladePvE, ShieldBashPvE, SentinelPvE, FightOrFlightPvE, RageOfHalonePvE, BulwarkPvE, CircleOfScornPvE, ShieldLobPvE, CoverPvE, IronWillPvE, SpiritsWithinPvE, HallowedGroundPvE, GoringBladePvE, RoyalAuthorityPvE, DivineVeilPvE, ClemencyPvE, SheltronPvE, TotalEclipsePvE, InterventionPvE, RequiescatPvE, HolySpiritPvE, PassageOfArmsPvE, ProminencePvE, HolyCirclePvE, ConfiteorPvE, AtonementPvE, IntervenePvE, HolySheltronPvE, ExpiacionPvE, BladeOfFaithPvE, BladeOfTruthPvE, BladeOfValorPvE, FastBladePvP, RiotBladePvP, RoyalAuthorityPvP, AtonementPvP, ShieldBashPvP, IntervenePvP, GuardianPvP, HolySheltronPvP, PhalanxPvP, ConfiteorPvP, BladeOfFaithPvP, BladeOfTruthPvP, BladeOfValorPvP, ReleaseIronWillPvE, SupplicationPvE, SepulchrePvE, GuardianPvE, ImperatorPvE, BladeOfHonorPvE, LimitBreak3, ..base.AllBaseActions];
 }

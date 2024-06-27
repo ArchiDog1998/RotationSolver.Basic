@@ -4,7 +4,7 @@
 namespace RotationSolver.Basic.Rotations.Duties;
 /// <summary>
 /// The Custom Rotation.
-/// <br>Number of Actions: 395</br>
+/// <br>Number of Actions: 404</br>
 /// </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
 public abstract partial class DutyRotation
@@ -7118,4 +7118,166 @@ public abstract partial class DutyRotation
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RisingFlamesPvE"/>
     [global::RotationSolver.Basic.Attributes.ID(34790U)]
     public global::RotationSolver.Basic.Actions.IBaseAction RisingFlamesPvE => _RisingFlamesPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ClawOfTheBraaxPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37120, true);
+        var setting = action.Setting;
+        ModifyClawOfTheBraaxPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="ClawOfTheBraaxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyClawOfTheBraaxPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ClawOfTheBraaxPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37120U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction ClawOfTheBraaxPvE => _ClawOfTheBraaxPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FangsOfTheBraaxPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37121, true);
+        var setting = action.Setting;
+        ModifyFangsOfTheBraaxPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="FangsOfTheBraaxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFangsOfTheBraaxPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FangsOfTheBraaxPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37121U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction FangsOfTheBraaxPvE => _FangsOfTheBraaxPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TailOfTheBraaxPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37122, true);
+        var setting = action.Setting;
+        ModifyTailOfTheBraaxPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="TailOfTheBraaxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTailOfTheBraaxPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TailOfTheBraaxPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37122U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction TailOfTheBraaxPvE => _TailOfTheBraaxPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RunOfTheRroneekPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37123, true);
+        var setting = action.Setting;
+        ModifyRunOfTheRroneekPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="RunOfTheRroneekPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyRunOfTheRroneekPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RunOfTheRroneekPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37123U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction RunOfTheRroneekPvE => _RunOfTheRroneekPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LuwatenaPulsePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37124, true);
+        var setting = action.Setting;
+        ModifyLuwatenaPulsePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="LuwatenaPulsePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLuwatenaPulsePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LuwatenaPulsePvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37124U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction LuwatenaPulsePvE => _LuwatenaPulsePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BeakOfTheLuwatenaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37125, true);
+        var setting = action.Setting;
+        ModifyBeakOfTheLuwatenaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BeakOfTheLuwatenaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBeakOfTheLuwatenaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BeakOfTheLuwatenaPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37125U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction BeakOfTheLuwatenaPvE => _BeakOfTheLuwatenaPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TuraliJudgmentPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37126, true);
+        var setting = action.Setting;
+        ModifyTuraliJudgmentPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="TuraliJudgmentPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTuraliJudgmentPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TuraliJudgmentPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37126U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction TuraliJudgmentPvE => _TuraliJudgmentPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TrialsOfTuralPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37127, true);
+        var setting = action.Setting;
+        ModifyTrialsOfTuralPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="TrialsOfTuralPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTrialsOfTuralPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TrialsOfTuralPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37127U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction TrialsOfTuralPvE => _TrialsOfTuralPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TuraliFervorPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37128, true);
+        var setting = action.Setting;
+        ModifyTuraliFervorPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="TuraliFervorPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTuraliFervorPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TuraliFervorPvE"/>
+    [global::RotationSolver.Basic.Attributes.ID(37128U)]
+    public global::RotationSolver.Basic.Actions.IBaseAction TuraliFervorPvE => _TuraliFervorPvECreator.Value;
 }

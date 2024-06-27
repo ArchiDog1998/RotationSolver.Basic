@@ -2,50 +2,14 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST, global::ECommons.ExcelServices.Job.CUL)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>Astrologian</strong></see>
-/// <br>Number of Actions: 59</br>
-/// <br>Number of Traits: 16</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>astrologian</strong></see>
+/// <br>Number of Actions: 62</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class AstrologianRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DrawPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3590, false);
-        var setting = action.Setting;
-        ModifyDrawPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="DrawPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyDrawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DrawPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction DrawPvE => _DrawPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RedrawPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3593, false);
-        var setting = action.Setting;
-        ModifyRedrawPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="RedrawPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyRedrawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RedrawPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction RedrawPvE => _RedrawPvECreator.Value;
-
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BeneficPvECreator = new(() =>
     {
@@ -317,114 +281,6 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseAction GravityPvE => _GravityPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheBalancePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4401, false);
-        var setting = action.Setting;
-        ModifyTheBalancePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheBalancePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheBalancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheBalancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheBalancePvE => _TheBalancePvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheArrowPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4402, false);
-        var setting = action.Setting;
-        ModifyTheArrowPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheArrowPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheArrowPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheArrowPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheArrowPvE => _TheArrowPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheSpearPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4403, false);
-        var setting = action.Setting;
-        ModifyTheSpearPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheSpearPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheSpearPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheSpearPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheSpearPvE => _TheSpearPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheBolePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4404, false);
-        var setting = action.Setting;
-        ModifyTheBolePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheBolePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheBolePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheBolePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheBolePvE => _TheBolePvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheEwerPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4405, false);
-        var setting = action.Setting;
-        ModifyTheEwerPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheEwerPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheEwerPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheEwerPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheEwerPvE => _TheEwerPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheSpirePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4406, false);
-        var setting = action.Setting;
-        ModifyTheSpirePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheSpirePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheSpirePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheSpirePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TheSpirePvE => _TheSpirePvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EarthlyStarPvECreator = new(() =>
     {
         global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7439, false);
@@ -459,24 +315,6 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MaleficIiiPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction MaleficIiiPvE => _MaleficIiiPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MinorArcanaPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7443, false);
-        var setting = action.Setting;
-        ModifyMinorArcanaPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="MinorArcanaPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyMinorArcanaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MinorArcanaPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction MinorArcanaPvE => _MinorArcanaPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LordOfCrownsPvECreator = new(() =>
@@ -531,24 +369,6 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StellarDetonationPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction StellarDetonationPvE => _StellarDetonationPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _UndrawPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)9629, false);
-        var setting = action.Setting;
-        ModifyUndrawPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="UndrawPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyUndrawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.UndrawPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction UndrawPvE => _UndrawPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DivinationPvECreator = new(() =>
@@ -693,42 +513,6 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.NeutralSectPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction NeutralSectPvE => _NeutralSectPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PlayPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)17055, false);
-        var setting = action.Setting;
-        ModifyPlayPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="PlayPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyPlayPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PlayPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction PlayPvE => _PlayPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AstrodynePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25870, false);
-        var setting = action.Setting;
-        ModifyAstrodynePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="AstrodynePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyAstrodynePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AstrodynePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction AstrodynePvE => _AstrodynePvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FallMaleficPvECreator = new(() =>
@@ -1071,95 +855,282 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheArrowPvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction TheArrowPvP => _TheArrowPvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AstralDrawPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37017, false);
+        var setting = action.Setting;
+        ModifyAstralDrawPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50122"><strong>Maim and Mend</strong></see> (AST) [122]
-/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// Modify <inheritdoc cref="AstralDrawPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(122U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyAstralDrawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AstralDrawPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction AstralDrawPvE => _AstralDrawPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _UmbralDrawPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37018, false);
+        var setting = action.Setting;
+        ModifyUmbralDrawPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50124"><strong>Enhanced Benefic</strong></see> (AST) [124]
-/// <para>Grants a 15% chance that your next Benefic II will restore critical HP.</para>
-/// <para>Duration: 15s</para>
+/// Modify <inheritdoc cref="UmbralDrawPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBeneficTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(124U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyUmbralDrawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.UmbralDrawPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction UmbralDrawPvE => _UmbralDrawPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PlayIPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37019, false);
+        var setting = action.Setting;
+        ModifyPlayIPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50125"><strong>Maim and Mend II</strong></see> (AST) [125]
-/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// Modify <inheritdoc cref="PlayIPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(125U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPlayIPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PlayIPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PlayIPvE => _PlayIPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PlayIiPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37020, false);
+        var setting = action.Setting;
+        ModifyPlayIiPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50186"><strong>Combust Mastery</strong></see> (AST) [186]
-/// <para>Upgrades Combust to Combust II.</para>
+/// Modify <inheritdoc cref="PlayIiPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CombustMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(186U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPlayIiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PlayIiPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PlayIiPvE => _PlayIiPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PlayIiiPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37021, false);
+        var setting = action.Setting;
+        ModifyPlayIiiPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50187"><strong>Malefic Mastery</strong></see> (AST) [187]
-/// <para>Upgrades Malefic to Malefic II.</para>
+/// Modify <inheritdoc cref="PlayIiiPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(187U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPlayIiiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PlayIiiPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PlayIiiPvE => _PlayIiiPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MinorArcanaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37022, false);
+        var setting = action.Setting;
+        ModifyMinorArcanaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50188"><strong>Malefic Mastery II</strong></see> (AST) [188]
-/// <para>Upgrades Malefic II to Malefic III.</para>
+/// Modify <inheritdoc cref="MinorArcanaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(188U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyMinorArcanaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MinorArcanaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction MinorArcanaPvE => _MinorArcanaPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheBalancePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37023, false);
+        var setting = action.Setting;
+        ModifyTheBalancePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50189"><strong>Hyper Lightspeed</strong></see> (AST) [189]
-/// <para>Reduces Lightspeed recast time to 90 seconds.</para>
+/// Modify <inheritdoc cref="TheBalancePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait HyperLightspeedTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(189U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheBalancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheBalancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheBalancePvE => _TheBalancePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheArrowPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37024, false);
+        var setting = action.Setting;
+        ModifyTheArrowPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50314"><strong>Combust Mastery II</strong></see> (AST) [314]
-/// <para>Upgrades Combust II to Combust III.</para>
+/// Modify <inheritdoc cref="TheArrowPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CombustMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(314U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheArrowPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheArrowPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheArrowPvE => _TheArrowPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheSpirePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37025, false);
+        var setting = action.Setting;
+        ModifyTheSpirePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50315"><strong>Malefic Mastery III</strong></see> (AST) [315]
-/// <para>Upgrades Malefic III to Malefic IV.</para>
+/// Modify <inheritdoc cref="TheSpirePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(315U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheSpirePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheSpirePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheSpirePvE => _TheSpirePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheSpearPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37026, false);
+        var setting = action.Setting;
+        ModifyTheSpearPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50316"><strong>Enhanced Essential Dignity</strong></see> (AST) [316]
-/// <para>Allows the accumulation of charges for consecutive uses of Essential Dignity.</para>
-/// <para>Maximum Charges: 2</para>
+/// Modify <inheritdoc cref="TheSpearPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEssentialDignityTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(316U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheSpearPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheSpearPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheSpearPvE => _TheSpearPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheBolePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37027, false);
+        var setting = action.Setting;
+        ModifyTheBolePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50495"><strong>Enhanced Draw</strong></see> (AST) [495]
-/// <para>Grants Clarifying Draw after executing Draw.</para>
+/// Modify <inheritdoc cref="TheBolePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDrawTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(495U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheBolePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheBolePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheBolePvE => _TheBolePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheEwerPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37028, false);
+        var setting = action.Setting;
+        ModifyTheEwerPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50496"><strong>Enhanced Draw II</strong></see> (AST) [496]
-/// <para>Grants a Solar Sign, Lunar Sign, or Celestial Sign according to your arcanum played in combat.</para>
+/// Modify <inheritdoc cref="TheEwerPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDrawIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(496U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTheEwerPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheEwerPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TheEwerPvE => _TheEwerPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _OraclePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37029, false);
+        var setting = action.Setting;
+        ModifyOraclePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50497"><strong>Malefic Mastery IV</strong></see> (AST) [497]
-/// <para>Upgrades Malefic IV to Fall Malefic.</para>
+/// Modify <inheritdoc cref="OraclePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(497U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyOraclePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.OraclePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction OraclePvE => _OraclePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HeliosConjunctionPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37030, false);
+        var setting = action.Setting;
+        ModifyHeliosConjunctionPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50498"><strong>Gravity Mastery</strong></see> (AST) [498]
-/// <para>Upgrades Gravity to Gravity II.</para>
+/// Modify <inheritdoc cref="HeliosConjunctionPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait GravityMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(498U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyHeliosConjunctionPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.HeliosConjunctionPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction HeliosConjunctionPvE => _HeliosConjunctionPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SunSignPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37031, false);
+        var setting = action.Setting;
+        ModifySunSignPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50499"><strong>Enhanced Healing Magic</strong></see> (AST) [499]
-/// <para>Increases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150.</para>
+/// Modify <inheritdoc cref="SunSignPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHealingMagicTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(499U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50500"><strong>Enhanced Celestial Intersection</strong></see> (AST) [500]
-/// <para>Allows the accumulation of charges for consecutive uses of Celestial Intersection.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedCelestialIntersectionTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(500U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySunSignPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SunSignPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SunSignPvE => _SunSignPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, EnhancedBeneficTrait, MaimAndMendIiTrait, CombustMasteryTrait, MaleficMasteryTrait, MaleficMasteryIiTrait, HyperLightspeedTrait, CombustMasteryIiTrait, MaleficMasteryIiiTrait, EnhancedEssentialDignityTrait, EnhancedDrawTrait, EnhancedDrawIiTrait, MaleficMasteryIvTrait, GravityMasteryTrait, EnhancedHealingMagicTrait, EnhancedCelestialIntersectionTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge>();
@@ -1184,55 +1155,11 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
 
     /// <inheritdoc cref="HealingWindPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => HealingWindPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
-        var setting = action.Setting;
-        ModifyBreathOfTheEarthPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BreathOfTheEarthPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBreathOfTheEarthPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BreathOfTheEarthPvE => _BreathOfTheEarthPvECreator.Value;
-
-    /// <inheritdoc cref="BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BreathOfTheEarthPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AstralStasisPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4248, false);
-        var setting = action.Setting;
-        ModifyAstralStasisPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="AstralStasisPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyAstralStasisPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AstralStasisPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction AstralStasisPvE => _AstralStasisPvECreator.Value;
-
-    /// <inheritdoc cref="AstralStasisPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => AstralStasisPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => HealingWindPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [DrawPvE, RedrawPvE, BeneficPvE, AspectedBeneficPvE, MaleficPvE, MaleficIiPvE, CombustPvE, HeliosPvE, AspectedHeliosPvE, AscendPvE, LightspeedPvE, CombustIiPvE, BeneficIiPvE, SynastryPvE, CollectiveUnconsciousPvE, EssentialDignityPvE, GravityPvE, TheBalancePvE, TheArrowPvE, TheSpearPvE, TheBolePvE, TheEwerPvE, TheSpirePvE, EarthlyStarPvE, MaleficIiiPvE, MinorArcanaPvE, LordOfCrownsPvE, LadyOfCrownsPvE, StellarDetonationPvE, UndrawPvE, DivinationPvE, CelestialOppositionPvE, CombustIiiPvE, MaleficIvPvE, CelestialIntersectionPvE, HoroscopePvE, NeutralSectPvE, PlayPvE, AstrodynePvE, FallMaleficPvE, GravityIiPvE, ExaltationPvE, MacrocosmosPvE, MicrocosmosPvE, FallMaleficPvP, AspectedBeneficPvP, GravityIiPvP, DoubleCastPvP, DrawPvP, TheBalancePvP, MacrocosmosPvP, MicrocosmosPvP, CelestialRiverPvP, TheBolePvP, TheArrowPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BeneficPvE, AspectedBeneficPvE, MaleficPvE, MaleficIiPvE, CombustPvE, HeliosPvE, AspectedHeliosPvE, AscendPvE, LightspeedPvE, CombustIiPvE, BeneficIiPvE, SynastryPvE, CollectiveUnconsciousPvE, EssentialDignityPvE, GravityPvE, EarthlyStarPvE, MaleficIiiPvE, LordOfCrownsPvE, LadyOfCrownsPvE, StellarDetonationPvE, DivinationPvE, CelestialOppositionPvE, CombustIiiPvE, MaleficIvPvE, CelestialIntersectionPvE, HoroscopePvE, NeutralSectPvE, FallMaleficPvE, GravityIiPvE, ExaltationPvE, MacrocosmosPvE, MicrocosmosPvE, FallMaleficPvP, AspectedBeneficPvP, GravityIiPvP, DoubleCastPvP, DrawPvP, TheBalancePvP, MacrocosmosPvP, MicrocosmosPvP, CelestialRiverPvP, TheBolePvP, TheArrowPvP, AstralDrawPvE, UmbralDrawPvE, PlayIPvE, PlayIiPvE, PlayIiiPvE, MinorArcanaPvE, TheBalancePvE, TheArrowPvE, TheSpirePvE, TheSpearPvE, TheBolePvE, TheEwerPvE, OraclePvE, HeliosConjunctionPvE, SunSignPvE, LimitBreak3, ..base.AllBaseActions];
 }

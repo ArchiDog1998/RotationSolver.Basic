@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.GNB)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.GNB, global::ECommons.ExcelServices.Job.WAR)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>Gunbreaker</strong></see>
-/// <br>Number of Actions: 67</br>
-/// <br>Number of Traits: 9</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>gunbreaker</strong></see>
+/// <br>Number of Actions: 72</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -315,24 +315,6 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SonicBreakPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction SonicBreakPvE => _SonicBreakPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RoughDividePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)16154, false);
-        var setting = action.Setting;
-        ModifyRoughDividePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="RoughDividePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyRoughDividePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RoughDividePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction RoughDividePvE => _RoughDividePvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ContinuationPvECreator = new(() =>
@@ -1215,62 +1197,120 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReleaseRoyalGuardPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ReleaseRoyalGuardPvE => _ReleaseRoyalGuardPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TrajectoryPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36934, false);
+        var setting = action.Setting;
+        ModifyTrajectoryPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50257"><strong>Cartridge Charge</strong></see> (GNB) [257]
-/// <para>Stores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.</para>
-/// <para>Maximum Cartridges: 2</para>
+/// Modify <inheritdoc cref="TrajectoryPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CartridgeChargeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(257U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTrajectoryPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TrajectoryPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TrajectoryPvE => _TrajectoryPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GreatNebulaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36935, false);
+        var setting = action.Setting;
+        ModifyGreatNebulaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50258"><strong>Enhanced Brutal Shell</strong></see> (GNB) [258]
-/// <para>Grants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.</para>
-/// <para>Duration: 30s</para>
+/// Modify <inheritdoc cref="GreatNebulaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBrutalShellTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(258U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyGreatNebulaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GreatNebulaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction GreatNebulaPvE => _GreatNebulaPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FatedBrandPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36936, false);
+        var setting = action.Setting;
+        ModifyFatedBrandPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50259"><strong>Danger Zone Mastery</strong></see> (GNB) [259]
-/// <para>Upgrades Danger Zone to Blasting Zone.</para>
+/// Modify <inheritdoc cref="FatedBrandPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DangerZoneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(259U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFatedBrandPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FatedBrandPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction FatedBrandPvE => _FatedBrandPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ReignOfBeastsPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36937, false);
+        var setting = action.Setting;
+        ModifyReignOfBeastsPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50320"><strong>Tank Mastery</strong></see> (GNB) [320]
-/// <para>Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.</para>
+/// Modify <inheritdoc cref="ReignOfBeastsPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TankMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(320U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyReignOfBeastsPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReignOfBeastsPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ReignOfBeastsPvE => _ReignOfBeastsPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _NobleBloodPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36938, false);
+        var setting = action.Setting;
+        ModifyNobleBloodPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50424"><strong>Heart of Stone Mastery</strong></see> (GNB) [424]
-/// <para>Upgrades Heart of Stone to Heart of Corundum.</para>
+/// Modify <inheritdoc cref="NobleBloodPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait HeartOfStoneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(424U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyNobleBloodPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.NobleBloodPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction NobleBloodPvE => _NobleBloodPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _LionHeartPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36939, false);
+        var setting = action.Setting;
+        ModifyLionHeartPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50425"><strong>Enhanced Aurora</strong></see> (GNB) [425]
-/// <para>Allows the accumulation of charges for consecutive uses of Aurora.</para>
-/// <para>Maximum Charges: 2</para>
+/// Modify <inheritdoc cref="LionHeartPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAuroraTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(425U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50426"><strong>Enhanced Continuation</strong></see> (GNB) [426]
-/// <para>Become Ready to Blast after executing Burst Strike.</para>
-/// <para>Duration: 10s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedContinuationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(426U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50427"><strong>Cartridge Charge II</strong></see> (GNB) [427]
-/// <para>Increases Powder Gauge capacity to 3 Cartridges.</para>
-/// <para>Executing Bloodfest stores 3 Cartridges.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait CartridgeChargeIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(427U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50507"><strong>Melee Mastery</strong></see> (GNB) [507]
-/// <para>Increases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(507U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyLionHeartPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LionHeartPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction LionHeartPvE => _LionHeartPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [CartridgeChargeTrait, EnhancedBrutalShellTrait, DangerZoneMasteryTrait, TankMasteryTrait, HeartOfStoneMasteryTrait, EnhancedAuroraTrait, EnhancedContinuationTrait, CartridgeChargeIiTrait, MeleeMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge>();
@@ -1295,55 +1335,11 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
 
     /// <inheritdoc cref="ShieldWallPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => ShieldWallPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StrongholdPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)198, false);
-        var setting = action.Setting;
-        ModifyStrongholdPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StrongholdPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStrongholdPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StrongholdPvE => _StrongholdPvECreator.Value;
-
-    /// <inheritdoc cref="StrongholdPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StrongholdPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GunmetalSoulPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)17105, false);
-        var setting = action.Setting;
-        ModifyGunmetalSoulPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="GunmetalSoulPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyGunmetalSoulPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GunmetalSoulPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction GunmetalSoulPvE => _GunmetalSoulPvECreator.Value;
-
-    /// <inheritdoc cref="GunmetalSoulPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => GunmetalSoulPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ShieldWallPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [KeenEdgePvE, NoMercyPvE, BrutalShellPvE, CamouflagePvE, DemonSlicePvE, RoyalGuardPvE, LightningShotPvE, DangerZonePvE, SolidBarrelPvE, GnashingFangPvE, SavageClawPvE, NebulaPvE, DemonSlaughterPvE, WickedTalonPvE, AuroraPvE, SuperbolidePvE, SonicBreakPvE, RoughDividePvE, ContinuationPvE, JugularRipPvE, AbdomenTearPvE, EyeGougePvE, BowShockPvE, HeartOfLightPvE, HeartOfStonePvE, BurstStrikePvE, FatedCirclePvE, BloodfestPvE, BlastingZonePvE, HeartOfCorundumPvE, HypervelocityPvE, DoubleDownPvE, KeenEdgePvP, BrutalShellPvP, SolidBarrelPvP, BurstStrikePvP, GnashingFangPvP, SavageClawPvP, WickedTalonPvP, DoubleDownPvP, ContinuationPvP, HypervelocityPvP, JugularRipPvP, AbdomenTearPvP, EyeGougePvP, RoughDividePvP, DrawAndJunctionPvP, JunctionedCastPvP, NebulaPvP, BlastingZonePvP, AuroraPvP, RelentlessRushPvP, TerminalTriggerPvP, ReleaseRoyalGuardPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [KeenEdgePvE, NoMercyPvE, BrutalShellPvE, CamouflagePvE, DemonSlicePvE, RoyalGuardPvE, LightningShotPvE, DangerZonePvE, SolidBarrelPvE, GnashingFangPvE, SavageClawPvE, NebulaPvE, DemonSlaughterPvE, WickedTalonPvE, AuroraPvE, SuperbolidePvE, SonicBreakPvE, ContinuationPvE, JugularRipPvE, AbdomenTearPvE, EyeGougePvE, BowShockPvE, HeartOfLightPvE, HeartOfStonePvE, BurstStrikePvE, FatedCirclePvE, BloodfestPvE, BlastingZonePvE, HeartOfCorundumPvE, HypervelocityPvE, DoubleDownPvE, KeenEdgePvP, BrutalShellPvP, SolidBarrelPvP, BurstStrikePvP, GnashingFangPvP, SavageClawPvP, WickedTalonPvP, DoubleDownPvP, ContinuationPvP, HypervelocityPvP, JugularRipPvP, AbdomenTearPvP, EyeGougePvP, RoughDividePvP, DrawAndJunctionPvP, JunctionedCastPvP, NebulaPvP, BlastingZonePvP, AuroraPvP, RelentlessRushPvP, TerminalTriggerPvP, ReleaseRoyalGuardPvE, TrajectoryPvE, GreatNebulaPvE, FatedBrandPvE, ReignOfBeastsPvE, NobleBloodPvE, LionHeartPvE, LimitBreak3, ..base.AllBaseActions];
 }

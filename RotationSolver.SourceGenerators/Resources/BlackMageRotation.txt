@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BLM, global::ECommons.ExcelServices.Job.THM)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BLM, global::ECommons.ExcelServices.Job.ARM)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/blackmage"><strong>Black Mage</strong></see>
-/// <br>Number of Actions: 46</br>
-/// <br>Number of Traits: 21</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/blackmage"><strong>black mage</strong></see>
+/// <br>Number of Actions: 49</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class BlackMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -279,24 +279,6 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LeyLinesPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction LeyLinesPvE => _LeyLinesPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SharpcastPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)3574, false);
-        var setting = action.Setting;
-        ModifySharpcastPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="SharpcastPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifySharpcastPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SharpcastPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction SharpcastPvE => _SharpcastPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BlizzardIvPvECreator = new(() =>
@@ -837,130 +819,84 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ParadoxPvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction ParadoxPvP => _ParadoxPvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HighThunderPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36986, false);
+        var setting = action.Setting;
+        ModifyHighThunderPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50029"><strong>Maim and Mend</strong></see> (THM BLM) [29]
-/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// Modify <inheritdoc cref="HighThunderPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(29U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyHighThunderPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.HighThunderPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction HighThunderPvE => _HighThunderPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HighThunderIiPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36987, false);
+        var setting = action.Setting;
+        ModifyHighThunderIiPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50031"><strong>Maim and Mend II</strong></see> (THM BLM) [31]
-/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// Modify <inheritdoc cref="HighThunderIiPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(31U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyHighThunderIiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.HighThunderIiPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction HighThunderIiPvE => _HighThunderIiPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _RetracePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36988, false);
+        var setting = action.Setting;
+        ModifyRetracePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50032"><strong>Firestarter</strong></see> (THM BLM) [32]
-/// <para>Grants a 40% chance that after casting Fire, your next Fire III will require no MP and have no cast time.</para>
-/// <para>Duration: 30s</para>
+/// Modify <inheritdoc cref="RetracePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait FirestarterTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(32U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyRetracePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RetracePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction RetracePvE => _RetracePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FlareStarPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36989, false);
+        var setting = action.Setting;
+        ModifyFlareStarPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50033"><strong>Thundercloud</strong></see> (THM BLM) [33]
-/// <para>Grants a 10% chance that after each damage over time tick inflicted by Thunder or Thunder III (3% for Thunder II or Thunder IV), the next Thunder, Thunder II, Thunder III, or Thunder IV will add its full damage over time amount to its initial damage, have no cast time, and cost no MP.</para>
-/// <para>Duration: 40s</para>
+/// Modify <inheritdoc cref="FlareStarPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ThundercloudTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(33U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50171"><strong>Thunder Mastery</strong></see> (BLM) [171]
-/// <para>Upgrades Thunder to Thunder III.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ThunderMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(171U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50172"><strong>Thunder Mastery II</strong></see> (BLM) [172]
-/// <para>Upgrades Thunder II to Thunder IV.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ThunderMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(172U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50174"><strong>Enhanced Enochian</strong></see> (BLM) [174]
-/// <para>Grants the effect of Polyglot upon maintaining Enochian for 30 seconds. Also improves Enochian's magic damage increase to 10%.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(174U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50295"><strong>Enhanced Freeze</strong></see> (BLM) [295]
-/// <para>Grants 3 Umbral Hearts upon casting Freeze.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFreezeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(295U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50296"><strong>Aspect Mastery</strong></see> (THM BLM) [296]
-/// <para>Casting of certain fire and ice spells will grant a stack of Astral Fire and Umbral Ice respectively.</para>
-/// <para>Maximum Stacks: 1</para>
-/// <para>Duration: 15s</para>
-/// <para>While under the effect of either Astral Fire or Umbral Ice, casting a spell of the opposite element will consume no MP.</para>
-/// <para>Effect does not apply to Flare.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(296U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50297"><strong>Enhanced Polyglot</strong></see> (BLM) [297]
-/// <para>Allows the stacking of a second Polyglot.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedPolyglotTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(297U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50321"><strong>Enhanced Sharpcast</strong></see> (BLM) [321]
-/// <para>Reduces Sharpcast recast timer to 30 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSharpcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(321U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50322"><strong>Enhanced Enochian II</strong></see> (BLM) [322]
-/// <para>Improves Enochian's magic damage increase to 15%.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(322U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50458"><strong>Aspect Mastery II</strong></see> (THM BLM) [458]
-/// <para>Allows the stacking of a second Astral Fire and Umbral Ice.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(458U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50459"><strong>Aspect Mastery III</strong></see> (THM BLM) [459]
-/// <para>Allows the stacking of a third Astral Fire and Umbral Ice.</para>
-/// <para>Casting Fire II or Blizzard II grants maximum stacks of Astral Fire or Umbral Ice respectively.</para>
-/// <para>When maintaining three stacks of Astral Fire or Umbral Ice, the cast time of spells of the opposite element is halved.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(459U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50460"><strong>Enochian</strong></see> (BLM) [460]
-/// <para>Increases damage dealt by 5% while under the effect of Astral Fire or Umbral Ice.</para>
-/// <para>Upon successfully landing Fire II while under the effect of Astral Fire, grants Enhanced Flare.</para>
-/// <para>Enhanced Flare effect ends if Astral Fire is lost.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnochianTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(460U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50461"><strong>Enhanced Foul</strong></see> (BLM) [461]
-/// <para>Allows for the immediate casting of Foul.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFoulTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(461U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50462"><strong>Aspect Mastery IV</strong></see> (BLM) [462]
-/// <para>Upgrades Fire II and Blizzard II to High Fire II and High Blizzard II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(462U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50463"><strong>Enhanced Manafont</strong></see> (BLM) [463]
-/// <para>Reduces Manafont recast time to 120 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedManafontTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(463U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50464"><strong>Enhanced Sharpcast II</strong></see> (BLM) [464]
-/// <para>Allows the accumulation of charges for consecutive uses of Sharpcast.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSharpcastIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(464U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50465"><strong>Aspect Mastery V</strong></see> (BLM) [465]
-/// <para>Adds a Paradox marker to your Elemental Gauge.</para>
-/// <para>The marker is made active after reaching Astral Fire III then swapping to the opposite element. Conversely, the marker can also be made active after reaching Umbral Ice III and gaining 3 Umbral Hearts then swapping to the opposite element.</para>
-/// <para>Blizzard and Fire become Paradox when the Paradox marker is made active.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryVTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(465U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50509"><strong>Enhanced Enochian III</strong></see> (BLM) [509]
-/// <para>Improves Enochian's magic damage increase to 23%.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(509U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFlareStarPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FlareStarPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction FlareStarPvE => _FlareStarPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, MaimAndMendIiTrait, FirestarterTrait, ThundercloudTrait, ThunderMasteryTrait, ThunderMasteryIiTrait, EnhancedEnochianTrait, EnhancedFreezeTrait, AspectMasteryTrait, EnhancedPolyglotTrait, EnhancedSharpcastTrait, EnhancedEnochianIiTrait, AspectMasteryIiTrait, AspectMasteryIiiTrait, EnochianTrait, EnhancedFoulTrait, AspectMasteryIvTrait, EnhancedManafontTrait, EnhancedSharpcastIiTrait, AspectMasteryVTrait, EnhancedEnochianIiiTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge>();
@@ -985,55 +921,11 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
 
     /// <inheritdoc cref="SkyshardPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => SkyshardPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StarstormPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)204, false);
-        var setting = action.Setting;
-        ModifyStarstormPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="StarstormPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyStarstormPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction StarstormPvE => _StarstormPvECreator.Value;
-
-    /// <inheritdoc cref="StarstormPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StarstormPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _MeteorPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)205, false);
-        var setting = action.Setting;
-        ModifyMeteorPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="MeteorPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyMeteorPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MeteorPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction MeteorPvE => _MeteorPvECreator.Value;
-
-    /// <inheritdoc cref="MeteorPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => MeteorPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SkyshardPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [FirePvE, BlizzardPvE, ThunderPvE, FireIiPvE, TransposePvE, FireIiiPvE, ThunderIiiPvE, BlizzardIiiPvE, AetherialManipulationPvE, ScathePvE, ManawardPvE, ManafontPvE, FreezePvE, FlarePvE, LeyLinesPvE, SharpcastPvE, BlizzardIvPvE, FireIvPvE, BetweenTheLinesPvE, ThunderIvPvE, TriplecastPvE, FoulPvE, ThunderIiPvE, DespairPvE, UmbralSoulPvE, XenoglossyPvE, BlizzardIiPvE, HighFireIiPvE, HighBlizzardIiPvE, AmplifierPvE, ParadoxPvE, FoulPvP, FirePvP, FireIvPvP, FlarePvP, BlizzardPvP, BlizzardIvPvP, FreezePvP, BurstPvP, NightWingPvP, AetherialManipulationPvP, SuperflarePvP, SoulResonancePvP, ParadoxPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [FirePvE, BlizzardPvE, ThunderPvE, FireIiPvE, TransposePvE, FireIiiPvE, ThunderIiiPvE, BlizzardIiiPvE, AetherialManipulationPvE, ScathePvE, ManawardPvE, ManafontPvE, FreezePvE, FlarePvE, LeyLinesPvE, BlizzardIvPvE, FireIvPvE, BetweenTheLinesPvE, ThunderIvPvE, TriplecastPvE, FoulPvE, ThunderIiPvE, DespairPvE, UmbralSoulPvE, XenoglossyPvE, BlizzardIiPvE, HighFireIiPvE, HighBlizzardIiPvE, AmplifierPvE, ParadoxPvE, FoulPvP, FirePvP, FireIvPvP, FlarePvP, BlizzardPvP, BlizzardIvPvP, FreezePvP, BurstPvP, NightWingPvP, AetherialManipulationPvP, SuperflarePvP, SoulResonancePvP, ParadoxPvP, HighThunderPvE, HighThunderIiPvE, RetracePvE, FlareStarPvE, LimitBreak3, ..base.AllBaseActions];
 }

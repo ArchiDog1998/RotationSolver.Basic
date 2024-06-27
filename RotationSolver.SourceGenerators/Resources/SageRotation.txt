@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SGE)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SGE, global::ECommons.ExcelServices.Job.WHM)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/sage"><strong>Sage</strong></see>
-/// <br>Number of Actions: 47</br>
-/// <br>Number of Traits: 12</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/sage"><strong>sage</strong></see>
+/// <br>Number of Actions: 51</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class SageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -855,75 +855,84 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.MesotesPvP_29267"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction MesotesPvP_29267 => _MesotesPvP_29267Creator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianDyskrasiaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37032, false);
+        var setting = action.Setting;
+        ModifyEukrasianDyskrasiaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50368"><strong>Maim and Mend</strong></see> (SGE) [368]
-/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// Modify <inheritdoc cref="EukrasianDyskrasiaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(368U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEukrasianDyskrasiaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EukrasianDyskrasiaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EukrasianDyskrasiaPvE => _EukrasianDyskrasiaPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PsychePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37033, false);
+        var setting = action.Setting;
+        ModifyPsychePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50369"><strong>Maim and Mend II</strong></see> (SGE) [369]
-/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// Modify <inheritdoc cref="PsychePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(369U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPsychePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PsychePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PsychePvE => _PsychePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _EukrasianPrognosisIiPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37034, false);
+        var setting = action.Setting;
+        ModifyEukrasianPrognosisIiPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50370"><strong>Addersgall</strong></see> (SGE) [370]
-/// <para>Grants 1 stack of Addersgall automatically every twenty seconds.</para>
-/// <para>Maximum Stacks: 3</para>
-/// <para>Can be charged outside of combat.</para>
+/// Modify <inheritdoc cref="EukrasianPrognosisIiPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AddersgallTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(370U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyEukrasianPrognosisIiPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.EukrasianPrognosisIiPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction EukrasianPrognosisIiPvE => _EukrasianPrognosisIiPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PhilosophiaPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)37035, false);
+        var setting = action.Setting;
+        ModifyPhilosophiaPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50371"><strong>Somanoutic Oath</strong></see> (SGE) [371]
-/// <para>Increases the potency of Dosis to 250, Phlegma to 330, and Eukrasian Dosis to 35.</para>
+/// Modify <inheritdoc cref="PhilosophiaPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SomanouticOathTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(371U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50372"><strong>Somanoutic Oath II</strong></see> (SGE) [372]
-/// <para>Increases the potency of Dosis to 300, Phlegma to 400, and Eukrasian Dosis to 40.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SomanouticOathIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(372U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50373"><strong>Addersting</strong></see> (SGE) [373]
-/// <para>Grants 1 stack of Addersting when the barrier granted by Eukrasian Diagnosis to any party member or the barrier granted by Eukrasian Prognosis to self is completely absorbed.</para>
-/// <para>Maximum Stacks: 3</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AdderstingTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(373U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50374"><strong>Offensive Magic Mastery</strong></see> (SGE) [374]
-/// <para>Upgrades Dosis to Dosis II, Phlegma to Phlegma II, and Eukrasian Dosis to Eukrasian Dosis II. Also increases the potency of Toxikon to 300.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait OffensiveMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(374U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50375"><strong>Enhanced Kerachole</strong></see> (SGE) [375]
-/// <para>Adds an additional effect to Kerachole that grants healing over time.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedKeracholeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(375U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50376"><strong>Offensive Magic Mastery II</strong></see> (SGE) [376]
-/// <para>Upgrades Dosis II to Dosis III, Phlegma II to Phlegma III, Eukrasian Dosis II to Eukrasian Dosis III, Dyskrasia to Dyskrasia II, and Toxikon to Toxikon II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait OffensiveMagicMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(376U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50377"><strong>Enhanced Healing Magic</strong></see> (SGE) [377]
-/// <para>Increases the healing potency of Diagnosis to 450 and Kardia to 170. Also increases the strength of barriers granted by Eukrasian Diagnosis to 180% the amount of HP restored, and Eukrasian Prognosis to 320% the amount of HP restored.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHealingMagicTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(377U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50378"><strong>Enhanced Zoe</strong></see> (SGE) [378]
-/// <para>Reduces Zoe recast time to 90 seconds.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedZoeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(378U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50510"><strong>Physis Mastery</strong></see> (SGE) [510]
-/// <para>Upgrades Physis to Physis II.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait PhysisMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(510U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPhilosophiaPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PhilosophiaPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PhilosophiaPvE => _PhilosophiaPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, MaimAndMendIiTrait, AddersgallTrait, SomanouticOathTrait, SomanouticOathIiTrait, AdderstingTrait, OffensiveMagicMasteryTrait, EnhancedKeracholeTrait, OffensiveMagicMasteryIiTrait, EnhancedHealingMagicTrait, EnhancedZoeTrait, PhysisMasteryTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge>();
@@ -948,55 +957,11 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
 
     /// <inheritdoc cref="HealingWindPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => HealingWindPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
-        var setting = action.Setting;
-        ModifyBreathOfTheEarthPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BreathOfTheEarthPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBreathOfTheEarthPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BreathOfTheEarthPvE => _BreathOfTheEarthPvECreator.Value;
-
-    /// <inheritdoc cref="BreathOfTheEarthPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BreathOfTheEarthPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TechneMakrePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24859, false);
-        var setting = action.Setting;
-        ModifyTechneMakrePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TechneMakrePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTechneMakrePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TechneMakrePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction TechneMakrePvE => _TechneMakrePvECreator.Value;
-
-    /// <inheritdoc cref="TechneMakrePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TechneMakrePvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => HealingWindPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [DosisPvE, DiagnosisPvE, KardiaPvE, PrognosisPvE, EgeiroPvE, PhysisPvE, PhlegmaPvE, EukrasiaPvE, EukrasianDiagnosisPvE, EukrasianPrognosisPvE, EukrasianDosisPvE, SoteriaPvE, IcarusPvE, DruocholePvE, DyskrasiaPvE, KeracholePvE, IxocholePvE, ZoePvE, PepsisPvE, PhysisIiPvE, TaurocholePvE, ToxikonPvE, HaimaPvE, DosisIiPvE, PhlegmaIiPvE, EukrasianDosisIiPvE, RhizomataPvE, HolosPvE, PanhaimaPvE, DosisIiiPvE, PhlegmaIiiPvE, EukrasianDosisIiiPvE, DyskrasiaIiPvE, ToxikonIiPvE, KrasisPvE, PneumaPvE, DosisIiiPvP, EukrasianDosisIiiPvP, EukrasiaPvP, PhlegmaIiiPvP, PneumaPvP, IcarusPvP, ToxikonPvP, ToxikonIiPvP, KardiaPvP, MesotesPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [DosisPvE, DiagnosisPvE, KardiaPvE, PrognosisPvE, EgeiroPvE, PhysisPvE, PhlegmaPvE, EukrasiaPvE, EukrasianDiagnosisPvE, EukrasianPrognosisPvE, EukrasianDosisPvE, SoteriaPvE, IcarusPvE, DruocholePvE, DyskrasiaPvE, KeracholePvE, IxocholePvE, ZoePvE, PepsisPvE, PhysisIiPvE, TaurocholePvE, ToxikonPvE, HaimaPvE, DosisIiPvE, PhlegmaIiPvE, EukrasianDosisIiPvE, RhizomataPvE, HolosPvE, PanhaimaPvE, DosisIiiPvE, PhlegmaIiiPvE, EukrasianDosisIiiPvE, DyskrasiaIiPvE, ToxikonIiPvE, KrasisPvE, PneumaPvE, DosisIiiPvP, EukrasianDosisIiiPvP, EukrasiaPvP, PhlegmaIiiPvP, PneumaPvP, IcarusPvP, ToxikonPvP, ToxikonIiPvP, KardiaPvP, MesotesPvP, EukrasianDyskrasiaPvE, PsychePvE, EukrasianPrognosisIiPvE, PhilosophiaPvE, LimitBreak3, ..base.AllBaseActions];
 }

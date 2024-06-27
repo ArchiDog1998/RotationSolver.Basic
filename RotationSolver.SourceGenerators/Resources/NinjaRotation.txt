@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.NIN, global::ECommons.ExcelServices.Job.ROG)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.NIN, global::ECommons.ExcelServices.Job.CNJ)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/ninja"><strong>Ninja</strong></see>
-/// <br>Number of Actions: 69</br>
-/// <br>Number of Traits: 14</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/ninja"><strong>ninja</strong></see>
+/// <br>Number of Actions: 73</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -911,24 +911,6 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseAction FleetingRaijuPvE => _FleetingRaijuPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuraijinPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)25876, false);
-        var setting = action.Setting;
-        ModifyHuraijinPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="HuraijinPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyHuraijinPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.HuraijinPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    public global::RotationSolver.Basic.Actions.IBaseAction HuraijinPvE => _HuraijinPvECreator.Value;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SpinningEdgePvPCreator = new(() =>
     {
         global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)29500, false);
@@ -1251,87 +1233,102 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FleetingRaijuPvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction FleetingRaijuPvP => _FleetingRaijuPvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DokumoriPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36957, false);
+        var setting = action.Setting;
+        ModifyDokumoriPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50090"><strong>All Fours</strong></see> (ROG NIN) [90]
-/// <para>Reduces damage taken when falling.</para>
+/// Modify <inheritdoc cref="DokumoriPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AllFoursTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(90U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDokumoriPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DokumoriPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction DokumoriPvE => _DokumoriPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _KunaisBanePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36958, false);
+        var setting = action.Setting;
+        ModifyKunaisBanePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50093"><strong>Fleet of Foot</strong></see> (ROG NIN) [93]
-/// <para>Increases movement speed.</para>
+/// Modify <inheritdoc cref="KunaisBanePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait FleetOfFootTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(93U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyKunaisBanePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.KunaisBanePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction KunaisBanePvE => _KunaisBanePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DeathfrogMediumPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36959, false);
+        var setting = action.Setting;
+        ModifyDeathfrogMediumPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50165"><strong>Shukiho</strong></see> (NIN) [165]
-/// <para>Increases Ninki Gauge by 5 upon successfully landing certain weaponskills or completing certain combos.</para>
+/// Modify <inheritdoc cref="DeathfrogMediumPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ShukihoTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(165U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDeathfrogMediumPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DeathfrogMediumPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction DeathfrogMediumPvE => _DeathfrogMediumPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ZeshoMeppoPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36960, false);
+        var setting = action.Setting;
+        ModifyZeshoMeppoPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50166"><strong>Enhanced Shukuchi</strong></see> (NIN) [166]
-/// <para>Resets the recast timer for Shukuchi upon executing Katon, Raiton, or Hyoton on most targets.</para>
+/// Modify <inheritdoc cref="ZeshoMeppoPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedShukuchiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(166U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyZeshoMeppoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ZeshoMeppoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ZeshoMeppoPvE => _ZeshoMeppoPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TenriJindoPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36961, false);
+        var setting = action.Setting;
+        ModifyTenriJindoPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50167"><strong>Enhanced Mug</strong></see> (NIN) [167]
-/// <para>Increases Ninki Gauge by 40 upon successfully landing Mug.</para>
+/// Modify <inheritdoc cref="TenriJindoPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMugTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(167U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50250"><strong>Enhanced Kassatsu</strong></see> (NIN) [250]
-/// <para>Upgrades Katon and Hyoton to Goka Mekkyaku and Hyosho Ranryu while under the effect of Kassatsu.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedKassatsuTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(250U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50279"><strong>Enhanced Shukuchi II</strong></see> (NIN) [279]
-/// <para>Allows the accumulation of charges for consecutive uses of  Shukuchi.</para>
-/// <para>Maximum Charges: 2</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedShukuchiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(279U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50280"><strong>Shukiho II</strong></see> (NIN) [280]
-/// <para>Increases Ninki Gauge by 10 upon successfully completing a combo with Aeolian Edge or Armor Crush.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ShukihoIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(280U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50439"><strong>Shukiho III</strong></see> (NIN) [439]
-/// <para>Increases Ninki Gauge by 15 upon successfully completing a combo with Aeolian Edge or Armor Crush.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ShukihoIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(439U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50440"><strong>Enhanced Meisui</strong></see> (NIN) [440]
-/// <para>Increases the potency of Bhavacakra to 500 while under the effect of Meisui.</para>
-/// <para>Duration: 30s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMeisuiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(440U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50441"><strong>Enhanced Raiton</strong></see> (NIN) [441]
-/// <para>Grants a stack of Raiju Ready upon executing Raiton.</para>
-/// <para>Maximum Stacks: 3</para>
-/// <para>Duration: 30s</para>
-/// <para>Effect of Raiju Ready ends upon execution of any melee weaponskill.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRaitonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(441U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50515"><strong>Adept Assassination</strong></see> (NIN) [515]
-/// <para>Upgrades Assassinate to Dream Within a Dream.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait AdeptAssassinationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(515U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50516"><strong>Melee Mastery</strong></see> (NIN) [516]
-/// <para>Increases the potency of Gust Slash to 120, Aeolian Edge to 140, and Armor Crush to 140.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(516U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50522"><strong>Melee Mastery II</strong></see> (NIN) [522]
-/// <para>Increases the potency of Spinning Edge to 220 and Gust Slash to 160.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(522U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyTenriJindoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TenriJindoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction TenriJindoPvE => _TenriJindoPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [AllFoursTrait, FleetOfFootTrait, ShukihoTrait, EnhancedShukuchiTrait, EnhancedMugTrait, EnhancedKassatsuTrait, EnhancedShukuchiIiTrait, ShukihoIiTrait, ShukihoIiiTrait, EnhancedMeisuiTrait, EnhancedRaitonTrait, AdeptAssassinationTrait, MeleeMasteryTrait, MeleeMasteryIiTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge>();
@@ -1356,55 +1353,11 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
-        var setting = action.Setting;
-        ModifyBladedancePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BladedancePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
-
-    /// <inheritdoc cref="BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ChimatsuriPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4243, false);
-        var setting = action.Setting;
-        ModifyChimatsuriPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="ChimatsuriPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyChimatsuriPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ChimatsuriPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction ChimatsuriPvE => _ChimatsuriPvECreator.Value;
-
-    /// <inheritdoc cref="ChimatsuriPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ChimatsuriPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SpinningEdgePvE, ShadeShiftPvE, GustSlashPvE, HidePvE, AssassinatePvE, ThrowingDaggerPvE, MugPvE, DeathBlossomPvE, AeolianEdgePvE, TrickAttackPvE, TenPvE, NinjutsuPvE, ChiPvE, ShukuchiPvE, JinPvE, KassatsuPvE, FumaShurikenPvE, KatonPvE, RaitonPvE, HyotonPvE, HutonPvE, DotonPvE, SuitonPvE, RabbitMediumPvE, ArmorCrushPvE, DreamWithinADreamPvE, HellfrogMediumPvE, BhavacakraPvE, TenChiJinPvE, HakkeMujinsatsuPvE, MeisuiPvE, GokaMekkyakuPvE, HyoshoRanryuPvE, BunshinPvE, PhantomKamaitachiPvE, HollowNozuchiPvE, ForkedRaijuPvE, FleetingRaijuPvE, HuraijinPvE, SpinningEdgePvP, GustSlashPvP, AeolianEdgePvP, AssassinatePvP, GokaMekkyakuPvP, FumaShurikenPvP, HyoshoRanryuPvP, ThreeMudraPvP, MeisuiPvP, MugPvP, ForkedRaijuPvP, BunshinPvP, HutonPvP, ShukuchiPvP, DotonPvP, SeitonTenchuPvP, FleetingRaijuPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SpinningEdgePvE, ShadeShiftPvE, GustSlashPvE, HidePvE, AssassinatePvE, ThrowingDaggerPvE, MugPvE, DeathBlossomPvE, AeolianEdgePvE, TrickAttackPvE, TenPvE, NinjutsuPvE, ChiPvE, ShukuchiPvE, JinPvE, KassatsuPvE, FumaShurikenPvE, KatonPvE, RaitonPvE, HyotonPvE, HutonPvE, DotonPvE, SuitonPvE, RabbitMediumPvE, ArmorCrushPvE, DreamWithinADreamPvE, HellfrogMediumPvE, BhavacakraPvE, TenChiJinPvE, HakkeMujinsatsuPvE, MeisuiPvE, GokaMekkyakuPvE, HyoshoRanryuPvE, BunshinPvE, PhantomKamaitachiPvE, HollowNozuchiPvE, ForkedRaijuPvE, FleetingRaijuPvE, SpinningEdgePvP, GustSlashPvP, AeolianEdgePvP, AssassinatePvP, GokaMekkyakuPvP, FumaShurikenPvP, HyoshoRanryuPvP, ThreeMudraPvP, MeisuiPvP, MugPvP, ForkedRaijuPvP, BunshinPvP, HutonPvP, ShukuchiPvP, DotonPvP, SeitonTenchuPvP, FleetingRaijuPvP, DokumoriPvE, KunaisBanePvE, DeathfrogMediumPvE, ZeshoMeppoPvE, TenriJindoPvE, LimitBreak3, ..base.AllBaseActions];
 }

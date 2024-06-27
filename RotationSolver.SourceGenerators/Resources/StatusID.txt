@@ -205,7 +205,7 @@ public enum StatusID : ushort
     SilenceResistance = 40,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/41"><strong>Crafting Facility</strong></see> ↑ (All Classes)
-/// <para>Maximum CP is increased for crafters level 80 or below.</para>
+/// <para>Maximum CP is increased for crafters level 90 or below.</para>
 /// </summary>
     CraftingFacility = 41,
     /// <summary>
@@ -641,7 +641,8 @@ public enum StatusID : ushort
     Diversion = 127,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/128"><strong>Barrage</strong></see> ↑ (All Classes)
-/// <para>Striking multiple times per weaponskill.</para>
+/// <para>Able to execute Refulgent ArrowStraight ShotStraight Shot and ShadowbiteWide VolleyWide Volley.</para>
+/// <para>Refulgent ArrowStraight ShotStraight Shot will strike the selected target three times, while ShadowbiteWide VolleyWide Volley's potency will be increased.</para>
 /// </summary>
     Barrage = 128,
     /// <summary>
@@ -800,7 +801,7 @@ public enum StatusID : ushort
 /// </summary>
     DivineSeal = 159,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/160"><strong>Surecast</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE)
+/// <see href="https://garlandtools.org/db/#status/160"><strong>Surecast</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE PCT)
 /// <para>Spells cannot be interrupted by taking damage.</para>
 /// </summary>
     Surecast = 160,
@@ -835,7 +836,7 @@ public enum StatusID : ushort
 /// </summary>
     Succor = 166,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/167"><strong>Swiftcast</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE)
+/// <see href="https://garlandtools.org/db/#status/167"><strong>Swiftcast</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE PCT)
 /// <para>Next spell will require no time to cast.</para>
 /// </summary>
     Swiftcast = 167,
@@ -850,7 +851,7 @@ public enum StatusID : ushort
 /// </summary>
     Manawall = 169,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/170"><strong>Apocatastasis</strong></see> ↑ (THM ACN BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/170"><strong>Apocatastasis</strong></see> ↑ (THM ACN BLM SMN RDM BLU PCT)
 /// <para>Magic damage taken is reduced.</para>
 /// </summary>
     Apocatastasis = 170,
@@ -2466,7 +2467,7 @@ public enum StatusID : ushort
 /// </summary>
     MagicVulnerabilityUp_494 = 494,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/495"><strong>Goad</strong></see> ↑ (PGL LNC ROG MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/495"><strong>Goad</strong></see> ↑ (PGL LNC ROG MNK DRG NIN SAM RPR VPR)
 /// <para>Gradually regenerating TP.</para>
 /// </summary>
     Goad = 495,
@@ -5752,10 +5753,10 @@ public enum StatusID : ushort
 /// </summary>
     RiddleOfEarth = 1179,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1180"><strong>Earth's Reply</strong></see> ↑ (MNK)
+/// <see href="https://garlandtools.org/db/#status/1180"><strong>Earth's Resolve</strong></see> ↑ (MNK)
 /// <para>Regenerating HP over time.</para>
 /// </summary>
-    EarthsReply = 1180,
+    EarthsResolve = 1180,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1181"><strong>Riddle of Fire</strong></see> ↑ (All Classes)
 /// <para>Damage dealt is increased.</para>
@@ -5808,7 +5809,7 @@ public enum StatusID : ushort
     TroubadoursMinuet = 1190,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1191"><strong>Rampart</strong></see> ↑ (All Classes)
-/// <para>Damage taken is reduced.</para>
+/// <para>Damage taken is reduced and HP recovery via healing actions is increased and HP recovery via healing actions is increased and HP recovery via healing actions is increased and HP recovery via healing actions is increased and HP recovery via healing actions is increased and HP recovery via healing actions is increased.</para>
 /// </summary>
     Rampart_1191 = 1191,
     /// <summary>
@@ -5872,7 +5873,7 @@ public enum StatusID : ushort
 /// </summary>
     Addle = 1203,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1204"><strong>Lucid Dreaming</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE)
+/// <see href="https://garlandtools.org/db/#status/1204"><strong>Lucid Dreaming</strong></see> ↑ (CNJ THM ACN WHM BLM SMN SCH AST RDM BLU SGE PCT)
 /// <para>Restoring MP over time.</para>
 /// </summary>
     LucidDreaming = 1204,
@@ -5948,7 +5949,7 @@ public enum StatusID : ushort
     DivineBenison = 1218,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1219"><strong>Confession</strong></see> ↑ (WHM)
-/// <para>Sins are confessed. Ready for Plenary Indulgence.</para>
+/// <para>Sins are confessed. Additional HP is recovered when receiving the healing effect of certain spells cast by the white mage who granted this effect.</para>
 /// </summary>
     Confession = 1219,
     /// <summary>
@@ -6279,12 +6280,12 @@ public enum StatusID : ushort
     Seized_1287 = 1287,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1288"><strong>Twist of Fate</strong></see> ↑ (All Classes)
-/// <para>Experience earned on FATEs is dramatically increased.</para>
+/// <para>Certain rewards earned from FATEs are dramatically increased.</para>
 /// </summary>
     TwistOfFate = 1288,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1289"><strong>Twist of Fate</strong></see> ↑ (All Classes)
-/// <para>Experience earned on FATEs is dramatically increased.</para>
+/// <para>Certain rewards earned from FATEs are dramatically increased.</para>
 /// </summary>
     TwistOfFate_1289 = 1289,
     /// <summary>
@@ -6396,7 +6397,7 @@ public enum StatusID : ushort
 /// <see href="https://garlandtools.org/db/#status/1311"><strong>Earth's Reply</strong></see> ↑ (All Classes)
 /// <para>Damage dealt is increased while damage taken is reduced.</para>
 /// </summary>
-    EarthsReply_1311 = 1311,
+    EarthsReply = 1311,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1312"><strong>Chaos Thrust</strong></see> ↓ (DRG)
 /// <para>Sustaining damage over time, as well as increased damage from target who executed Chaos Thrust.</para>
@@ -6878,7 +6879,7 @@ public enum StatusID : ushort
 /// </summary>
     Barrage_1407 = 1407,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1408"><strong>Cometeor</strong></see> ↓ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/1408"><strong>Cometeor</strong></see> ↓ (BLM SMN RDM BLU PCT)
 /// <para>Damage taken is increased.</para>
 /// </summary>
     Cometeor = 1408,
@@ -6893,10 +6894,10 @@ public enum StatusID : ushort
 /// </summary>
     Chanchala_1410 = 1410,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1411"><strong>The Road to 80</strong></see> ↑ (All Classes)
-/// <para>Experience earned while below level 80 is dramatically increased.</para>
+/// <see href="https://garlandtools.org/db/#status/1411"><strong>The Road to 90</strong></see> ↑ (All Classes)
+/// <para>Experience earned while below level 90 is dramatically increased.</para>
 /// </summary>
-    TheRoadTo80 = 1411,
+    TheRoadTo90 = 1411,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1412"><strong>Vulnerability Up</strong></see> ↓ (All Classes)
 /// <para>Damage taken is increased.</para>
@@ -7928,10 +7929,10 @@ public enum StatusID : ushort
 /// </summary>
     Looper = 1624,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1625"><strong>Memory Degredation</strong></see> ↓ (All Classes)
+/// <see href="https://garlandtools.org/db/#status/1625"><strong>Memory Degradation</strong></see> ↓ (All Classes)
 /// <para>Gradually forgetting important details. A stack of 6 will result in full memory loss.</para>
 /// </summary>
-    MemoryDegredation = 1625,
+    MemoryDegradation = 1625,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1626"><strong>Memory Loss</strong></see> ↓ (All Classes)
 /// <para>Bereft of sense of self and purpose.</para>
@@ -9179,8 +9180,8 @@ public enum StatusID : ushort
     Recitation = 1896,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1897"><strong>Nascent Chaos</strong></see> ↑ (WAR)
-/// <para>Decimate is upgraded to Chaotic Cyclone.</para>
-/// <para>Nascent Chaos Effect: Fell Cleave is upgraded to Inner Chaos.</para>
+/// <para>Accumulating sufficient wrath in the Beast Gauge will upgrade Decimate to Chaotic Cyclone.</para>
+/// <para>Fell Cleave will be upgraded to Inner Chaos once learned.</para>
 /// </summary>
     NascentChaos = 1897,
     /// <summary>
@@ -9204,10 +9205,10 @@ public enum StatusID : ushort
 /// </summary>
     Enshielded = 1901,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1902"><strong>Sword Oath</strong></see> ↑ (PLD)
+/// <see href="https://garlandtools.org/db/#status/1902"><strong>Atonement Ready</strong></see> ↑ (PLD)
 /// <para>Able to execute Atonement.</para>
 /// </summary>
-    SwordOath_1902 = 1902,
+    AtonementReady = 1902,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1903"><strong>Phantasmal</strong></see> ↑ (All Classes)
 /// <para>Without corporeal form.</para>
@@ -9545,7 +9546,7 @@ public enum StatusID : ushort
     Manafication = 1971,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1972"><strong>Delirium</strong></see> ↑ (DRK)
-/// <para>Blackblood cost for Bloodspiller and Quietus is nullified.</para>
+/// <para>Blackblood cost for Bloodspiller and Quietus is nullified, and restoring MP when landing either weaponskill.</para>
 /// </summary>
     Delirium_1972 = 1972,
     /// <summary>
@@ -9579,17 +9580,17 @@ public enum StatusID : ushort
 /// </summary>
     Rampart_1978 = 1978,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1981"><strong>Blood for Blood</strong></see> ↑ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/1981"><strong>Blood for Blood</strong></see> ↑ (MNK DRG NIN SAM RPR VPR)
 /// <para>Damage dealt and damage taken are increased.</para>
 /// </summary>
     BloodForBlood_1981 = 1981,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1982"><strong>Bloodbath</strong></see> ↑ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/1982"><strong>Bloodbath</strong></see> ↑ (MNK DRG NIN SAM RPR VPR)
 /// <para>Attacks generate HP equal to the amount of physical damage dealt.</para>
 /// </summary>
     Bloodbath_1982 = 1982,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1983"><strong>Fetter Ward</strong></see> ↑ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/1983"><strong>Fetter Ward</strong></see> ↑ (MNK DRG NIN SAM RPR VPR)
 /// <para>All Stun, Sleep, Bind, Heavy, Silence, knockback, and draw-in effects are nullified.</para>
 /// </summary>
     FetterWard = 1983,
@@ -9604,22 +9605,22 @@ public enum StatusID : ushort
 /// </summary>
     Peloton_1985 = 1985,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1986"><strong>Phantom Dart</strong></see> ↓ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/1986"><strong>Phantom Dart</strong></see> ↓ (BLM SMN RDM BLU PCT)
 /// <para>Damage taken is increased.</para>
 /// </summary>
     PhantomDart = 1986,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1987"><strong>Swiftcast</strong></see> ↑ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/1987"><strong>Swiftcast</strong></see> ↑ (BLM SMN RDM BLU PCT)
 /// <para>The next spell will be cast immediately.</para>
 /// </summary>
     Swiftcast_1987 = 1987,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1988"><strong>Addle</strong></see> ↓ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/1988"><strong>Addle</strong></see> ↓ (BLM SMN RDM BLU PCT)
 /// <para>Damage dealt is reduced.</para>
 /// </summary>
     Addle_1988 = 1988,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/1989"><strong>Manaward</strong></see> ↑ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/1989"><strong>Manaward</strong></see> ↑ (BLM SMN RDM BLU PCT)
 /// <para>An aetherial barrier is preventing damage.</para>
 /// </summary>
     Manaward_1989 = 1989,
@@ -10405,7 +10406,7 @@ public enum StatusID : ushort
 /// </summary>
     DarkMissionary_2171 = 2171,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/2172"><strong>Arm's Length</strong></see> ↑ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/2172"><strong>Arm's Length</strong></see> ↑ (MNK DRG NIN SAM RPR VPR)
 /// <para>Weakening enemies when attacked. Damage taken is reduced.</para>
 /// </summary>
     ArmsLength_2172 = 2172,
@@ -10450,7 +10451,7 @@ public enum StatusID : ushort
 /// </summary>
     FastDraw = 2180,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/2181"><strong>Arm's Length</strong></see> ↓ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/2181"><strong>Arm's Length</strong></see> ↓ (MNK DRG NIN SAM RPR VPR)
 /// <para>Damage dealt is reduced.</para>
 /// </summary>
     ArmsLength_2181 = 2181,
@@ -10470,7 +10471,7 @@ public enum StatusID : ushort
 /// </summary>
     Retaliation = 2184,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/2185"><strong>Feint</strong></see> ↓ (MNK DRG NIN SAM RPR)
+/// <see href="https://garlandtools.org/db/#status/2185"><strong>Feint</strong></see> ↓ (MNK DRG NIN SAM RPR VPR)
 /// <para>Sustaining increased damage from target who executed Feint.</para>
 /// </summary>
     Feint_2185 = 2185,
@@ -10480,7 +10481,7 @@ public enum StatusID : ushort
 /// </summary>
     Concentrate = 2186,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/2187"><strong>Aetheric Burst</strong></see> ↓ (BLM SMN RDM BLU)
+/// <see href="https://garlandtools.org/db/#status/2187"><strong>Aetheric Burst</strong></see> ↓ (BLM SMN RDM BLU PCT)
 /// <para>Weaponskill and spell cast time and recast time are increased.</para>
 /// </summary>
     AethericBurst = 2187,
@@ -12294,12 +12295,12 @@ public enum StatusID : ushort
     Hubris = 2603,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/2604"><strong>Kardia</strong></see> ↑ (SGE)
-/// <para>Triggers a healing effect on a player under the effect of Kardion granted by you when casting attack magic.</para>
+/// <para>Triggers a healing effect on a player under the effect of Kardion granted by you upon landing attack magic.</para>
 /// </summary>
     Kardia = 2604,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/2605"><strong>Kardion</strong></see> ↑ (SGE)
-/// <para>Triggers a healing effect when the sage who applied this status casts attack magic.</para>
+/// <para>Triggers a healing effect when the sage who applied this status lands attack magic.</para>
 /// </summary>
     Kardion = 2605,
     /// <summary>
@@ -12704,7 +12705,7 @@ public enum StatusID : ushort
     Overheated = 2688,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/2689"><strong>Meisui</strong></see> ↑ (NIN)
-/// <para>Next Bhavacakra will deal increased damage.</para>
+/// <para>Next Zesho Meppo or Bhavacakra will deal increased damage.</para>
 /// </summary>
     Meisui = 2689,
     /// <summary>
@@ -13419,7 +13420,7 @@ public enum StatusID : ushort
     SomanouticBarrier = 2844,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/2845"><strong>Enhanced Harpe</strong></see> ↑ (RPR)
-/// <para>Next Harpe will require no time to cast.</para>
+/// <para>Next Harpe requires no time to cast and will reduce the recast timer of Hell's Ingress and Hell's Egress.</para>
 /// </summary>
     EnhancedHarpe = 2845,
     /// <summary>
@@ -13582,6 +13583,11 @@ public enum StatusID : ushort
 /// <para>Enmity is increased.</para>
 /// </summary>
     AdamantinonThelema = 2879,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/2880"><strong>Poison</strong></see> ↓ (All Classes)
+/// <para>Toxins are causing damage over time.</para>
+/// </summary>
+    Poison_2880 = 2880,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/2885"><strong>Shackles of Companionship</strong></see> ↓ (All Classes)
 /// <para>Wrapped in chains binding you ever tighter to nearby allies.</para>
@@ -15363,6 +15369,11 @@ public enum StatusID : ushort
 /// </summary>
     DeepFreeze_3287 = 3287,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3288"><strong>Sustained Damage</strong></see> ↓ (All Classes)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    SustainedDamage_3288 = 3288,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3290"><strong>Echo of the Fallen</strong></see> ↓ (All Classes)
 /// <para>The Curse of the Fallen resonates within, causing an explosion when this effect expires.</para>
 /// </summary>
@@ -15467,6 +15478,11 @@ public enum StatusID : ushort
 /// <para>Ensnared by punishing wind magicks that will be unleashed in the surrounding area when this effect expires, and leave a timed sigil in their wake.</para>
 /// </summary>
     HolyPurgation = 3311,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3312"><strong>Overload</strong></see> ↓ (All Classes)
+/// <para>Unleashing power beyond physical limitations and taking damage over time.</para>
+/// </summary>
+    Overload = 3312,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3313"><strong>Aetherial Exchange</strong></see> ↑ (All Classes)
 /// <para>Warping the nature of the next action to be executed.</para>
@@ -16208,6 +16224,21 @@ public enum StatusID : ushort
 /// </summary>
     Penance_3477 = 3477,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3479"><strong>Deep Freeze</strong></see> ↓ (All Classes)
+/// <para>Your body is encased in ice, preventing action and dealing damage over time.</para>
+/// </summary>
+    DeepFreeze_3479 = 3479,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3480"><strong>Deep Freeze</strong></see> ↓ (All Classes)
+/// <para>Your body is encased in ice, preventing action and dealing damage over time.</para>
+/// </summary>
+    DeepFreeze_3480 = 3480,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3481"><strong>Deep Freeze</strong></see> ↓ (All Classes)
+/// <para>Your body is encased in ice, preventing action and dealing damage over time.</para>
+/// </summary>
+    DeepFreeze_3481 = 3481,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3483"><strong>Blooming Welt</strong></see> ↓ (All Classes)
 /// <para>A scathing curse lingers on your skin, resulting in a radiating explosion when this effect expires.</para>
 /// </summary>
@@ -16938,6 +16969,166 @@ public enum StatusID : ushort
 /// </summary>
     Apokalypsis = 3644,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3645"><strong>Flankstung Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Flanksting Strike is increased.</para>
+/// </summary>
+    FlankstungVenom = 3645,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3646"><strong>Flanksbane Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Flanksbane Fang is increased.</para>
+/// </summary>
+    FlanksbaneVenom = 3646,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3647"><strong>Hindstung Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Hindsting Strike is increased.</para>
+/// </summary>
+    HindstungVenom = 3647,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3648"><strong>Hindsbane Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Hindsbane Fang is increased.</para>
+/// </summary>
+    HindsbaneVenom = 3648,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3649"><strong>Grimhunter's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Jagged Maw is increased.</para>
+/// </summary>
+    GrimhuntersVenom = 3649,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3650"><strong>Grimskin's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Bloodied Maw is increased.</para>
+/// </summary>
+    GrimskinsVenom = 3650,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3657"><strong>Hunter's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Twinfang Bite is increased.</para>
+/// </summary>
+    HuntersVenom = 3657,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3658"><strong>Swiftskin's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Twinblood Bite is increased.</para>
+/// </summary>
+    SwiftskinsVenom = 3658,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3659"><strong>Fellhunter's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Twinfang Thresh is increased.</para>
+/// </summary>
+    FellhuntersVenom = 3659,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3660"><strong>Fellskin's Venom</strong></see> ↑ (VPR)
+/// <para>Potency of Twinblood Thresh is increased.</para>
+/// </summary>
+    FellskinsVenom = 3660,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3665"><strong>Poised for Twinfang</strong></see> ↑ (VPR)
+/// <para>Potency of Uncoiled Twinfang is increased.</para>
+/// </summary>
+    PoisedForTwinfang = 3665,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3666"><strong>Poised for Twinblood</strong></see> ↑ (VPR)
+/// <para>Potency of Uncoiled Twinblood is increased.</para>
+/// </summary>
+    PoisedForTwinblood = 3666,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3667"><strong>Noxious Gnash</strong></see> ↓ (VPR)
+/// <para>Damage taken from the viper who applied this effect is increased.</para>
+/// </summary>
+    NoxiousGnash = 3667,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3668"><strong>Hunter's Instinct</strong></see> ↑ (VPR)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    HuntersInstinct = 3668,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3669"><strong>Swiftscaled</strong></see> ↑ (VPR)
+/// <para>Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are reduced.</para>
+/// </summary>
+    Swiftscaled = 3669,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3670"><strong>Reawakened</strong></see> ↑ (VPR)
+/// <para>Tapped into the strength of your hunter forebears.</para>
+/// </summary>
+    Reawakened = 3670,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3671"><strong>Ready to Reawaken</strong></see> ↑ (VPR)
+/// <para>Able to execute Reawaken while ignoring Serpent Offerings Gauge cost.</para>
+/// </summary>
+    ReadyToReawaken = 3671,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3674"><strong>Subtractive Palette</strong></see> ↑ (PCT)
+/// <para>The properties of your pictomancy spells have changed.</para>
+/// </summary>
+    SubtractivePalette = 3674,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3675"><strong>Aetherhues</strong></see> ↑ (PCT)
+/// <para>Able to cast green and yellow magicks.</para>
+/// </summary>
+    Aetherhues = 3675,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3676"><strong>Aetherhues II</strong></see> ↑ (PCT)
+/// <para>Able to cast blue and magenta magicks.</para>
+/// </summary>
+    AetherhuesIi = 3676,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3679"><strong>Rainbow Bright</strong></see> ↑ (PCT)
+/// <para>Next Rainbow Drip will require no time to cast, and will have a reduced recast timer.</para>
+/// </summary>
+    RainbowBright = 3679,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3680"><strong>Hammer Time</strong></see> ↑ (PCT)
+/// <para>Able to execute the hammer combo.</para>
+/// </summary>
+    HammerTime = 3680,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3681"><strong>Starstruck</strong></see> ↑ (PCT)
+/// <para>Able to execute Star Prism.</para>
+/// </summary>
+    Starstruck = 3681,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3683"><strong>Star Prism</strong></see> ↑ (PCT)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    StarPrism = 3683,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3684"><strong>Smudge</strong></see> ↑ (PCT)
+/// <para>Movement speed is increased.</para>
+/// </summary>
+    Smudge = 3684,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3685"><strong>Starry Muse</strong></see> ↑ (PCT)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    StarryMuse = 3685,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3686"><strong>Tempera Coat</strong></see> ↑ (PCT)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    TemperaCoat = 3686,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3687"><strong>Tempera Grassa</strong></see> ↑ (PCT)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    TemperaGrassa = 3687,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3688"><strong>Hyperphantasia</strong></see> ↑ (PCT)
+/// <para>Starry Muse is deployed.</para>
+/// </summary>
+    Hyperphantasia = 3688,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3689"><strong>Inspiration</strong></see> ↑ (PCT)
+/// <para>Inspired by Starry Muse, your spell cast and recast times are reduced.</para>
+/// </summary>
+    Inspiration = 3689,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3690"><strong>Subtractive Spectrum</strong></see> ↑ (PCT)
+/// <para>Able to execute Subtractive Palette.</para>
+/// </summary>
+    SubtractiveSpectrum = 3690,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3691"><strong>Monochrome Tones</strong></see> ↑ (PCT)
+/// <para>One stack of White Paint has been converted to Black Paint.</para>
+/// </summary>
+    MonochromeTones = 3691,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3692"><strong>Concentrated Poison</strong></see> ↓ (All Classes)
 /// <para>Powerful poison is slowly draining HP while reducing HP recovery.</para>
 /// </summary>
@@ -17368,10 +17559,10 @@ public enum StatusID : ushort
 /// </summary>
     BeckoningDark_3794 = 3794,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/3795"><strong>Sustained Damage</strong></see> ↓ (All Classes)
-/// <para>Sustaining damage over time.</para>
+/// <see href="https://garlandtools.org/db/#status/3796"><strong>Trauma</strong></see> ↓ (All Classes)
+/// <para>Suffering injuries from a powerful attack. Increased trauma will result in a Concussion.</para>
 /// </summary>
-    SustainedDamage_3795 = 3795,
+    Trauma = 3796,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3797"><strong>Dropsy</strong></see> ↓ (All Classes)
 /// <para>Sustaining water damage over time.</para>
@@ -17388,10 +17579,560 @@ public enum StatusID : ushort
 /// </summary>
     ForkedLightning_3799 = 3799,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3801"><strong>Sharpened Sights</strong></see> ↑ (All Classes)
+/// <para>Eyes have been infused with aether, enhancing vision. Performing certain actions will trigger Eye of the Fierce.</para>
+/// </summary>
+    SharpenedSights = 3801,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3802"><strong>Acceleration Bomb</strong></see> ↓ (All Classes)
 /// <para>An acceleration-trigger explosive is affixed to the body. Any movement when effect wears off will result in detonation.</para>
 /// </summary>
     AccelerationBomb_3802 = 3802,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3803"><strong>Apex Wings</strong></see> ↑ (All Classes)
+/// <para>Apollyon's wings are enhanced.</para>
+/// </summary>
+    ApexWings = 3803,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3804"><strong>Apex Blades</strong></see> ↑ (All Classes)
+/// <para>Apollyon's blades are enhanced.</para>
+/// </summary>
+    ApexBlades = 3804,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3805"><strong>Fury</strong></see> ↑ (All Classes)
+/// <para>Unbridled rage is increasing damage dealt.</para>
+/// </summary>
+    Fury = 3805,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3806"><strong>Vitalized</strong></see> ↑ (All Classes)
+/// <para>Invigorated by Drowsie's dancing.</para>
+/// </summary>
+    Vitalized = 3806,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3807"><strong>Vitalized</strong></see> ↑ (All Classes)
+/// <para>Invigorated by Drowsie's dancing.</para>
+/// </summary>
+    Vitalized_3807 = 3807,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3809"><strong>Seed Crystals</strong></see> ↓ (All Classes)
+/// <para>Heavy crystals are encasing your lower body. Will bear a Crystal Burden when this effect expires.</para>
+/// </summary>
+    SeedCrystals = 3809,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3810"><strong>Crystal Burden</strong></see> ↓ (All Classes)
+/// <para>Heavy crystals are encasing your body, preventing movement and slowing activity. Will become Crystallized when this effect expires.</para>
+/// </summary>
+    CrystalBurden = 3810,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3811"><strong>Crystallized</strong></see> ↓ (All Classes)
+/// <para>Completely encased in crystal and unable to move or breathe. KO is imminent.</para>
+/// </summary>
+    Crystallized = 3811,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3812"><strong>Expedience</strong></see> ↑ (Disciple of the Hand)
+/// <para>Hasty Touch is upgraded to Daring Touch.</para>
+/// </summary>
+    Expedience_3812 = 3812,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3813"><strong>Trained Perfection</strong></see> ↑ (Disciple of the Hand)
+/// <para>Durability loss of next action is reduced to zero.</para>
+/// </summary>
+    TrainedPerfection = 3813,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3814"><strong>Gravitational Anomaly</strong></see> ↓ (All Classes)
+/// <para>Hovering above the ground due to a disturbance in gravity.</para>
+/// </summary>
+    GravitationalAnomaly = 3814,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3815"><strong>Authority's Gaze</strong></see> ↓ (All Classes)
+/// <para>Under Absolute Authority. Will unleash a petrifying light upon those nearby when this effect expires.</para>
+/// </summary>
+    AuthoritysGaze = 3815,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3817"><strong>Calamity's Flames</strong></see> ↓ (All Classes)
+/// <para>Inundated with fire-aspected aether. Scourge of Fire will be triggered when this effect expires.</para>
+/// </summary>
+    CalamitysFlames = 3817,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3818"><strong>Calamity's Inferno</strong></see> ↓ (All Classes)
+/// <para>Inundated with fire-aspected aether. Scourge of Fire will be triggered in succession when this effect expires.</para>
+/// </summary>
+    CalamitysInferno = 3818,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3819"><strong>Calamity's Embers</strong></see> ↓ (All Classes)
+/// <para>Inundated with fire-aspected aether. Scourge of Fire will be triggered when this effect expires.</para>
+/// </summary>
+    CalamitysEmbers = 3819,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3820"><strong>Calamity's Frost</strong></see> ↓ (All Classes)
+/// <para>Inundated with ice-aspected aether. An ice boulder will spawn on the ground when this effect expires.</para>
+/// </summary>
+    CalamitysFrost = 3820,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3821"><strong>Calamity's Bite</strong></see> ↓ (All Classes)
+/// <para>Inundated with ice-aspected aether. Scourge of Ice will be executed when this effect expires.</para>
+/// </summary>
+    CalamitysBite = 3821,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3822"><strong>Calamity's Chill</strong></see> ↓ (All Classes)
+/// <para>Inundated with ice-aspected aether. Will trigger Freezing Up when this effect expires, resulting in Deep Freeze if not continuously in motion.</para>
+/// </summary>
+    CalamitysChill = 3822,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3823"><strong>Calamity's Bolt</strong></see> ↓ (All Classes)
+/// <para>Inundated with lightning-aspected aether. Scourge of Thunder will be triggered when this effect expires.</para>
+/// </summary>
+    CalamitysBolt = 3823,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3824"><strong>Calamity's Fulgur</strong></see> ↓ (All Classes)
+/// <para>Inundated with lightning-aspected aether. Scourge of Thunder will be triggered when this effect expires.</para>
+/// </summary>
+    CalamitysFulgur = 3824,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3825"><strong>Greatest Curse</strong></see> ↓ (All Classes)
+/// <para>An ancient curse has been placed upon you, resulting in certain death when the counter reaches zero.</para>
+/// </summary>
+    GreatestCurse = 3825,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3826"><strong>Burns</strong></see> ↓ (All Classes)
+/// <para>Sustaining fire damage over time.</para>
+/// </summary>
+    Burns_3826 = 3826,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3827"><strong>Supplication Ready</strong></see> ↑ (PLD)
+/// <para>Able to execute Supplication.</para>
+/// </summary>
+    SupplicationReady = 3827,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3828"><strong>Sepulchre Ready</strong></see> ↑ (PLD)
+/// <para>Able to execute Sepulchre.</para>
+/// </summary>
+    SepulchreReady = 3828,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3829"><strong>Guardian</strong></see> ↑ (PLD)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    Guardian = 3829,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3830"><strong>Guardian's Will</strong></see> ↑ (PLD)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    GuardiansWill = 3830,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3831"><strong>Blade of Honor Ready</strong></see> ↑ (PLD)
+/// <para>Able to execute Blade of Honor.</para>
+/// </summary>
+    BladeOfHonorReady = 3831,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3832"><strong>Damnation</strong></see> ↑ (WAR)
+/// <para>Damage taken is reduced while inflicting a portion of sustained damage back to its source. HP will be restored over time when effect expires.</para>
+/// </summary>
+    Damnation = 3832,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3833"><strong>Burgeoning Fury</strong></see> ↑ (WAR)
+/// <para>Fury is building within you. At 3 stacks, effect changes to Wrathful, allowing you to execute Primal Wrath.</para>
+/// </summary>
+    BurgeoningFury = 3833,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3834"><strong>Primal Ruination Ready</strong></see> ↑ (WAR)
+/// <para>Able to execute Primal Ruination.</para>
+/// </summary>
+    PrimalRuinationReady = 3834,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3835"><strong>Shadowed Vigil</strong></see> ↑ (DRK)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    ShadowedVigil = 3835,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3836"><strong>Delirium</strong></see> ↑ (DRK)
+/// <para>Able to execute Scarlet Delirium and Impalement.</para>
+/// </summary>
+    Delirium_3836 = 3836,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3837"><strong>Scorn</strong></see> ↑ (DRK)
+/// <para>Able to execute Disesteem.</para>
+/// </summary>
+    Scorn = 3837,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3838"><strong>Great Nebula</strong></see> ↑ (GNB)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    GreatNebula = 3838,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3839"><strong>Ready to Raze</strong></see> ↑ (GNB)
+/// <para>Able to execute Fated Brand.</para>
+/// </summary>
+    ReadyToRaze = 3839,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3840"><strong>Ready to Reign</strong></see> ↑ (GNB)
+/// <para>Able to execute Reign of Beasts.</para>
+/// </summary>
+    ReadyToReign = 3840,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3841"><strong>Earth's Rumination</strong></see> ↑ (MNK)
+/// <para>Able to execute Earth's Reply.</para>
+/// </summary>
+    EarthsRumination = 3841,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3842"><strong>Wind's Rumination</strong></see> ↑ (MNK)
+/// <para>Able to execute Wind's Reply.</para>
+/// </summary>
+    WindsRumination = 3842,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3843"><strong>Fire's Rumination</strong></see> ↑ (MNK)
+/// <para>Able to execute Fire's Reply.</para>
+/// </summary>
+    FiresRumination = 3843,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3844"><strong>Nastrond Ready</strong></see> ↑ (DRG)
+/// <para>Able to execute Nastrond.</para>
+/// </summary>
+    NastrondReady = 3844,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3845"><strong>Dragon's Flight</strong></see> ↑ (DRG)
+/// <para>Able to execute Rise of the Dragon.</para>
+/// </summary>
+    DragonsFlight = 3845,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3846"><strong>Starcross Ready</strong></see> ↑ (DRG)
+/// <para>Able to execute Starcross.</para>
+/// </summary>
+    StarcrossReady = 3846,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3847"><strong>Goring Blade Ready</strong></see> ↑ (PLD)
+/// <para>Able to execute Goring Blade.</para>
+/// </summary>
+    GoringBladeReady = 3847,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3848"><strong>Shadow Walker</strong></see> ↑ (NIN)
+/// <para>Able to use actions normally requiring the Hidden status.</para>
+/// </summary>
+    ShadowWalker = 3848,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3849"><strong>Dokumori</strong></see> ↓ (NIN)
+/// <para>Damage taken is increased.</para>
+/// </summary>
+    Dokumori = 3849,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3850"><strong>Higi</strong></see> ↑ (NIN)
+/// <para>Able to make use of advanced ninja arts.</para>
+/// </summary>
+    Higi = 3850,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3851"><strong>Tenri Jindo Ready</strong></see> ↑ (NIN)
+/// <para>Able to execute Tenri Jindo.</para>
+/// </summary>
+    TenriJindoReady = 3851,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3852"><strong>Tsubame-gaeshi Ready</strong></see> ↑ (SAM)
+/// <para>Able to execute Tsubame-gaeshi.</para>
+/// </summary>
+    TsubamegaeshiReady = 3852,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3853"><strong>Tengetsu</strong></see> ↑ (SAM)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    Tengetsu = 3853,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3854"><strong>Tengetsu's Foresight</strong></see> ↑ (SAM)
+/// <para>HP will be restored automatically when effect expires.</para>
+/// </summary>
+    TengetsusForesight = 3854,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3855"><strong>Zanshin Ready</strong></see> ↑ (SAM)
+/// <para>Able to execute Zanshin.</para>
+/// </summary>
+    ZanshinReady = 3855,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3856"><strong>Tendo</strong></see> ↑ (SAM)
+/// <para>Tenka Goken is upgraded to Tendo Goken, and Midare Setsugekka is upgraded to Tendo Setsugekka.</para>
+/// </summary>
+    Tendo = 3856,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3857"><strong>Oblatio</strong></see> ↑ (RPR)
+/// <para>Able to execute Sacrificium.</para>
+/// </summary>
+    Oblatio = 3857,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3858"><strong>Executioner</strong></see> ↑ (RPR)
+/// <para>Able to execute Executioner's Gibbet, Executioner's Gallows, and Executioner's Guillotine.</para>
+/// </summary>
+    Executioner = 3858,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3859"><strong>Perfectio Occulta</strong></see> ↑ (RPR)
+/// <para>Grants Perfectio Parata upon executing Communio.</para>
+/// </summary>
+    PerfectioOcculta = 3859,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3860"><strong>Perfectio Parata</strong></see> ↑ (RPR)
+/// <para>Able to execute Perfectio.</para>
+/// </summary>
+    PerfectioParata = 3860,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3861"><strong>Hawk's Eye</strong></see> ↑ (BRD)
+/// <para>Able to execute Refulgent ArrowStraight ShotStraight Shot and Shadowbite and Wide Volley and Wide Volley and Wide Volley and Wide Volley</para>
+/// </summary>
+    HawksEye_3861 = 3861,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3862"><strong>Resonant Arrow Ready</strong></see> ↑ (BRD)
+/// <para>Able to execute Resonant Arrow.</para>
+/// </summary>
+    ResonantArrowReady = 3862,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3863"><strong>Radiant Encore Ready</strong></see> ↑ (BRD)
+/// <para>Able to execute Radiant Encore.</para>
+/// </summary>
+    RadiantEncoreReady = 3863,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3864"><strong>Hypercharged</strong></see> ↑ (MCH)
+/// <para>Able to execute Hypercharge.</para>
+/// </summary>
+    Hypercharged = 3864,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3865"><strong>Excavator Ready</strong></see> ↑ (MCH)
+/// <para>Able to execute Excavator.</para>
+/// </summary>
+    ExcavatorReady = 3865,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3866"><strong>Full Metal Machinist</strong></see> ↑ (MCH)
+/// <para>Able to execute Full Metal Field.</para>
+/// </summary>
+    FullMetalMachinist = 3866,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3867"><strong>Last Dance Ready</strong></see> ↑ (DNC)
+/// <para>Able to execute Last Dance.</para>
+/// </summary>
+    LastDanceReady = 3867,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3868"><strong>Finishing Move Ready</strong></see> ↑ (DNC)
+/// <para>Able to execute Finishing Move.</para>
+/// </summary>
+    FinishingMoveReady = 3868,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3869"><strong>Dance of the Dawn Ready</strong></see> ↑ (DNC)
+/// <para>Able to execute Dance of the Dawn.</para>
+/// </summary>
+    DanceOfTheDawnReady = 3869,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3870"><strong>Thunderhead</strong></see> ↑ (BLM)
+/// <para>Able to cast Thunder spells.</para>
+/// </summary>
+    Thunderhead = 3870,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3871"><strong>High Thunder</strong></see> ↓ (BLM)
+/// <para>Sustaining lightning damage over time.</para>
+/// </summary>
+    HighThunder = 3871,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3872"><strong>High Thunder</strong></see> ↓ (BLM)
+/// <para>Sustaining lightning damage over time.</para>
+/// </summary>
+    HighThunder_3872 = 3872,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3873"><strong>Ruby's Glimmer</strong></see> ↑ (SMN)
+/// <para>Able to execute Searing Flash.</para>
+/// </summary>
+    RubysGlimmer = 3873,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3874"><strong>Refulgent Lux</strong></see> ↑ (SMN)
+/// <para>Able to execute Lux Solaris.</para>
+/// </summary>
+    RefulgentLux = 3874,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3875"><strong>Magicked Swordplay</strong></see> ↑ (RDM)
+/// <para>Able to execute enchanted sword skills without cost.</para>
+/// </summary>
+    MagickedSwordplay = 3875,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3876"><strong>Thorned Flourish</strong></see> ↑ (RDM)
+/// <para>Able to execute Vice of Thorns.</para>
+/// </summary>
+    ThornedFlourish = 3876,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3877"><strong>Grand Impact Ready</strong></see> ↑ (RDM)
+/// <para>Able to execute Grand Impact.</para>
+/// </summary>
+    GrandImpactReady = 3877,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3878"><strong>Prefulgence Ready</strong></see> ↑ (RDM)
+/// <para>Able to cast Prefulgence.</para>
+/// </summary>
+    PrefulgenceReady = 3878,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3879"><strong>Sacred Sight</strong></see> ↑ (WHM)
+/// <para>Able to execute Glare IV.</para>
+/// </summary>
+    SacredSight = 3879,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3880"><strong>Medica III</strong></see> ↑ (WHM)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    MedicaIii = 3880,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3881"><strong>Divine Grace</strong></see> ↑ (SCH)
+/// <para>Able to execute Divine Caress.</para>
+/// </summary>
+    DivineGrace = 3881,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3882"><strong>Impact Imminent</strong></see> ↑ (SCH)
+/// <para>Able to execute Baneful Impaction.</para>
+/// </summary>
+    ImpactImminent = 3882,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3883"><strong>Baneful Impaction</strong></see> ↓ (SCH)
+/// <para>Sustaining unaspected damage over time.</para>
+/// </summary>
+    BanefulImpaction = 3883,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3884"><strong>Seraphism</strong></see> ↑ (SCH)
+/// <para>Self and nearby party members are regenerating HP over time.</para>
+/// </summary>
+    Seraphism = 3884,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3885"><strong>Seraphism</strong></see> ↑ (SCH)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    Seraphism_3885 = 3885,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3886"><strong>Ready to Break</strong></see> ↑ (GNB)
+/// <para>Able to execute Sonic Break.</para>
+/// </summary>
+    ReadyToBreak = 3886,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3887"><strong>The Balance</strong></see> ↑ (AST)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    TheBalance_3887 = 3887,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3888"><strong>The Arrow</strong></see> ↑ (AST)
+/// <para>HP recovery via healing actions is increased.</para>
+/// </summary>
+    TheArrow_3888 = 3888,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3889"><strong>The Spear</strong></see> ↑ (AST)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    TheSpear_3889 = 3889,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3890"><strong>The Bole</strong></see> ↑ (AST)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    TheBole_3890 = 3890,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3891"><strong>The Ewer</strong></see> ↑ (AST)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    TheEwer_3891 = 3891,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3892"><strong>The Spire</strong></see> ↑ (AST)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    TheSpire_3892 = 3892,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3893"><strong>Divining</strong></see> ↑ (AST)
+/// <para>Able to execute Oracle.</para>
+/// </summary>
+    Divining = 3893,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3894"><strong>Helios Conjunction</strong></see> ↑ (AST)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    HeliosConjunction = 3894,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3895"><strong>Suntouched</strong></see> ↑ (AST)
+/// <para>Able to execute Sun Sign.</para>
+/// </summary>
+    Suntouched = 3895,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3896"><strong>Sun Sign</strong></see> ↑ (AST)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    SunSign = 3896,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3897"><strong>Eukrasian Dyskrasia</strong></see> ↓ (SGE)
+/// <para>Sustaining unaspected damage over time.</para>
+/// </summary>
+    EukrasianDyskrasia = 3897,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3898"><strong>Philosophia</strong></see> ↑ (SGE)
+/// <para>HP restoration via healing magic is increased.</para>
+/// </summary>
+    Philosophia = 3898,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3899"><strong>Eudaimonia</strong></see> ↑ (SGE)
+/// <para>Additional HP is recovered when the sage who granted this effect lands any spell.</para>
+/// </summary>
+    Eudaimonia = 3899,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3900"><strong>Primeval Impulse</strong></see> ↑ (WAR)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    PrimevalImpulse = 3900,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3901"><strong>Wrathful</strong></see> ↑ (WAR)
+/// <para>Able to execute Primal Wrath.</para>
+/// </summary>
+    Wrathful = 3901,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3902"><strong>Vigilant</strong></see> ↑ (DRK)
+/// <para>HP will be restored automatically upon falling below a certain level or expiration of effect duration.</para>
+/// </summary>
+    Vigilant = 3902,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3903"><strong>Divine Caress</strong></see> ↑ (WHM)
+/// <para>A holy barrier is nullifying damage.</para>
+/// </summary>
+    DivineCaress = 3903,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3904"><strong>Divine Aura</strong></see> ↑ (WHM)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    DivineAura = 3904,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3905"><strong>Ideal Host</strong></see> ↑ (RPR)
+/// <para>Able to execute Enshroud.</para>
+/// </summary>
+    IdealHost = 3905,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3906"><strong>Kunai's Bane</strong></see> ↓ (NIN)
+/// <para>Sustaining increased damage from target who executed Kunai's Bane.</para>
+/// </summary>
+    KunaisBane = 3906,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3907"><strong>Big-game Fishing</strong></see> ↑ (All Classes)
+/// <para>Large-sized fish when caught are more likely to be an especially large specimen.</para>
+/// </summary>
+    BiggameFishing = 3907,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3908"><strong>Down for the Count</strong></see> ↓ (All Classes)
+/// <para>Unable to move or execute actions.</para>
+/// </summary>
+    DownForTheCount_3908 = 3908,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3909"><strong>Temporary Misdirection</strong></see> ↓ (All Classes)
+/// <para>Overcome with confusion and can only move in the direction indicated.</para>
+/// </summary>
+    TemporaryMisdirection_3909 = 3909,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3910"><strong>Priming Touch</strong></see> ↑ (All Classes)
+/// <para>Chance your next use of a meticulous action will not affect integrity is doubled.</para>
+/// </summary>
+    PrimingTouch = 3910,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3911"><strong>Collector's High Standard</strong></see> ↑ (All Classes)
+/// <para>Effectiveness of brazen actions are increased. Chance meticulous actions do not affect integrity is also increased.</para>
+/// </summary>
+    CollectorsHighStandard = 3911,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3912"><strong>Roar of Conviction</strong></see> ↑ (All Classes)
+/// <para>Determination fills the heart and damage dealt is increased.</para>
+/// </summary>
+    RoarOfConviction = 3912,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3914"><strong>Riled</strong></see> ↑ (All Classes)
+/// <para>Damage dealt is increased and restoring HP over time.</para>
+/// </summary>
+    Riled_3914 = 3914,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3938"><strong>Times Three</strong></see> ↑ (All Classes)
 /// <para>The angle of effect for the next rotational attack executed will be tripled.</para>
@@ -17401,5 +18142,660 @@ public enum StatusID : ushort
 /// <see href="https://garlandtools.org/db/#status/3939"><strong>Times Five</strong></see> ↑ (All Classes)
 /// <para>The angle of effect for the next rotational attack executed will be quintupled.</para>
 /// </summary>
-    TimesFive_3939 = 3939
+    TimesFive_3939 = 3939,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3940"><strong>Delayed Neurotoxicity</strong></see> ↓ (All Classes)
+/// <para>Poison spreads throughout the body, promising to paralyze after an allotted time has passed.</para>
+/// </summary>
+    DelayedNeurotoxicity = 3940,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3945"><strong>Thunder of the Rroneek</strong></see> ↓ (All Classes)
+/// <para>Damage dealt is reduced.</para>
+/// </summary>
+    ThunderOfTheRroneek = 3945,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3946"><strong>Turali Will</strong></see> ↑ (All Classes)
+/// <para>Impervious to most attacks.</para>
+/// </summary>
+    TuraliWill = 3946,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3948"><strong>Benoggined</strong></see> ↓ (All Classes)
+/// <para>Crowned with a weighty mascot noggin, reducing movement speed and inhibiting the use of actions.</para>
+/// </summary>
+    Benoggined = 3948,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3949"><strong>Ghostly Guise</strong></see> ↑ (All Classes)
+/// <para>An incorporeal form is enabling you to pass through obstacles, but additional damage is taken from certain attacks.</para>
+/// </summary>
+    GhostlyGuise = 3949,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3950"><strong>Nuisance</strong></see> ↓ (All Classes)
+/// <para>Causing trouble to others. Will be compelled to release Feather Ray's special attack when cast.</para>
+/// </summary>
+    Nuisance = 3950,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3951"><strong>Heart of the Rroneek</strong></see> ↑ (All Classes)
+/// <para>A highly effective defensive maneuver is nullifying damage.</para>
+/// </summary>
+    HeartOfTheRroneek = 3951,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3952"><strong>Rroneek's Favor</strong></see> ↑ (All Classes)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    RroneeksFavor = 3952,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3954"><strong>Heart of Tural</strong></see> ↑ (All Classes)
+/// <para>By the strength of immovable conviction, damage taken is reduced.</para>
+/// </summary>
+    HeartOfTural = 3954,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3955"><strong>Tural's Embrace</strong></see> ↑ (All Classes)
+/// <para>By the blessing of the land, damage taken is reduced.</para>
+/// </summary>
+    TuralsEmbrace = 3955,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3956"><strong>Eukrasia</strong></see> ↑ (All Classes)
+/// <para>Certain actions are being augmented.</para>
+/// </summary>
+    Eukrasia_3956 = 3956,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3957"><strong>Vermedica II</strong></see> ↑ (All Classes)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    VermedicaIi = 3957,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3958"><strong>Strengthening Stimulant</strong></see> ↑ (All Classes)
+/// <para>An alchemical tonic is granting preternatural strength. Physical abilities are greatly enhanced.</para>
+/// </summary>
+    StrengtheningStimulant = 3958,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3959"><strong>Concentration Concentrate</strong></see> ↑ (All Classes)
+/// <para>An alchemical tonic is improving concentration. Spells cannot be interrupted by taking damage.</para>
+/// </summary>
+    ConcentrationConcentrate = 3959,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3960"><strong>Mana Medication</strong></see> ↑ (All Classes)
+/// <para>An alchemical tonic is amplifying magical abilities. MP is recovering continuously over time.</para>
+/// </summary>
+    ManaMedication = 3960,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3961"><strong>High Wire</strong></see> ↑ (All Classes)
+/// <para>Heightened excitement is causing actions to become erratic.</para>
+/// </summary>
+    HighWire_3961 = 3961,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3962"><strong>Overmedicated</strong></see> ↓ (All Classes)
+/// <para>Experiencing debilitating side effects caused by tonic overdose.</para>
+/// </summary>
+    Overmedicated = 3962,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3963"><strong>Paralysis</strong></see> ↓ (All Classes)
+/// <para>Deadened nerves are sometimes preventing the execution of actions.</para>
+/// </summary>
+    Paralysis_3963 = 3963,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3964"><strong>Damage Down</strong></see> ↓ (All Classes)
+/// <para>Damage dealt is reduced.</para>
+/// </summary>
+    DamageDown_3964 = 3964,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3965"><strong>Infirmity</strong></see> ↓ (All Classes)
+/// <para>HP recovery via healing magic is reduced.</para>
+/// </summary>
+    Infirmity_3965 = 3965,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3966"><strong>Bleeding</strong></see> ↓ (All Classes)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    Bleeding_3966 = 3966,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3967"><strong>HP Recovery Down</strong></see> ↓ (All Classes)
+/// <para>Rapid decomposition of the flesh is reducing HP recovery.</para>
+/// </summary>
+    HpRecoveryDown_3967 = 3967,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3968"><strong>Delusions</strong></see> ↓ (All Classes)
+/// <para>Exposure to the Heartsting's toxins is causing hallucinations.</para>
+/// </summary>
+    Delusions = 3968,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3969"><strong>Delusions</strong></see> ↓ (All Classes)
+/// <para>Exposure to the Heartsting's toxins is causing hallucinations.</para>
+/// </summary>
+    Delusions_3969 = 3969,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3972"><strong>Ambitious Lure</strong></see> ↑ (All Classes)
+/// <para>Increased chance of landing large-sized fish. Chance increases with additional stacks. Ambitious Lure cannot be used after reaching 3 stacks.</para>
+/// </summary>
+    AmbitiousLure = 3972,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3973"><strong>Modest Lure</strong></see> ↑ (All Classes)
+/// <para>Increased chance of landing small-sized fish. Chance increases with additional stacks. Modest Lure cannot be used after reaching 3 stacks.</para>
+/// </summary>
+    ModestLure = 3973,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3974"><strong>Levitate</strong></see> ↑ (All Classes)
+/// <para>Floating several ilms off the ground, defying the universal laws of gravity.</para>
+/// </summary>
+    Levitate = 3974,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3975"><strong>Damage Up</strong></see> ↑ (All Classes)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    DamageUp_3975 = 3975,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3976"><strong>Eukrasian Dosis III</strong></see> ↓ (All Classes)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    EukrasianDosisIii_3976 = 3976,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3981"><strong>Toxicosis</strong></see> ↓ (All Classes)
+/// <para>Toxins are causing damage over time.</para>
+/// </summary>
+    Toxicosis_3981 = 3981,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3982"><strong>Toxicosis</strong></see> ↓ (All Classes)
+/// <para>Toxins are causing damage over time.</para>
+/// </summary>
+    Toxicosis_3982 = 3982,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3983"><strong>Down for the Count</strong></see> ↓ (All Classes)
+/// <para>Unable to move or execute actions.</para>
+/// </summary>
+    DownForTheCount_3983 = 3983,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3984"><strong>Temperance</strong></see> ↑ (All Classes)
+/// <para>Healing magic potency is increased.</para>
+/// </summary>
+    Temperance_3984 = 3984,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3985"><strong>Temperance</strong></see> ↑ (All Classes)
+/// <para>Damage taken is reduced.</para>
+/// </summary>
+    Temperance_3985 = 3985,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3986"><strong>Medica III</strong></see> ↑ (All Classes)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    MedicaIii_3986 = 3986,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3987"><strong>Medica III of the Seventh Dawn</strong></see> ↑ (All Classes)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    MedicaIiiOfTheSeventhDawn = 3987,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3988"><strong>Neutral Sect</strong></see> ↑ (All Classes)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    NeutralSect_3988 = 3988,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3989"><strong>Macrocosmos</strong></see> ↑ (All Classes)
+/// <para>Restores HP when the astrologian who granted this effect executes Microcosmos.</para>
+/// </summary>
+    Macrocosmos_3989 = 3989,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3996"><strong>On a Roll</strong></see> ↑ (All Classes)
+/// <para>Having a ball on a ball.</para>
+/// </summary>
+    OnARoll = 3996,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4009"><strong>Inverse Operations</strong></see> ↑ (All Classes)
+/// <para>Prepared to systemically work backwards.</para>
+/// </summary>
+    InverseOperations = 4009,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4010"><strong>Wandering Eyes</strong></see> ↑ (All Classes)
+/// <para>Cursing all who look away.</para>
+/// </summary>
+    WanderingEyes = 4010,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4011"><strong>Chance of Wildfires</strong></see> ↑ (All Classes)
+/// <para>All are advised to prepare for fire-aspected damage.</para>
+/// </summary>
+    ChanceOfWildfires = 4011,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4012"><strong>Chance of Hyperelectricity</strong></see> ↑ (All Classes)
+/// <para>All are advised to prepare for lightning-aspected damage.</para>
+/// </summary>
+    ChanceOfHyperelectricity = 4012,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4013"><strong>Chance of Gale-force Winds</strong></see> ↑ (All Classes)
+/// <para>All are advised to prepare for wind-aspected damage.</para>
+/// </summary>
+    ChanceOfGaleforceWinds = 4013,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4014"><strong>Chance of Blizzards</strong></see> ↑ (All Classes)
+/// <para>All are advised to prepare for ice-aspected damage.</para>
+/// </summary>
+    ChanceOfBlizzards = 4014,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4029"><strong>Left Windup</strong></see> ↑ (All Classes)
+/// <para>Ready to unleash a series of blows, starting with a leftward spin.</para>
+/// </summary>
+    LeftWindup = 4029,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4030"><strong>Right Windup</strong></see> ↑ (All Classes)
+/// <para>Ready to unleash a series of blows, starting with a rightward spin.</para>
+/// </summary>
+    RightWindup = 4030,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4031"><strong>Left Windup</strong></see> ↑ (All Classes)
+/// <para>Ready to unleash a series of blows, starting with a leftward spin.</para>
+/// </summary>
+    LeftWindup_4031 = 4031,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4032"><strong>Right Windup</strong></see> ↑ (All Classes)
+/// <para>Ready to unleash a series of blows, starting with a rightward spin.</para>
+/// </summary>
+    RightWindup_4032 = 4032,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4033"><strong>Shining Encouragement</strong></see> ↑ (All Classes)
+/// <para>Spurred on by Ceetol Ja's heartfelt support.</para>
+/// </summary>
+    ShiningEncouragement = 4033,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4034"><strong>Unbroken Mettle</strong></see> ↑ (All Classes)
+/// <para>Protected by the Steelhog's magicked barrier.</para>
+/// </summary>
+    UnbrokenMettle = 4034,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4035"><strong>Fractured Mettle</strong></see> ↑ (All Classes)
+/// <para>Protected by a damaged magicked barrier.</para>
+/// </summary>
+    FracturedMettle = 4035,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4036"><strong>Rightward Fracture</strong></see> ↓ (All Classes)
+/// <para>Magicked barrier is cracking under pressure. Damage dealt from the right is greatly increased.</para>
+/// </summary>
+    RightwardFracture = 4036,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4037"><strong>Leftward Fracture</strong></see> ↓ (All Classes)
+/// <para>Magicked barrier is cracking under pressure. Damage dealt from the left is greatly increased.</para>
+/// </summary>
+    LeftwardFracture = 4037,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4039"><strong>Backward Fracture</strong></see> ↓ (All Classes)
+/// <para>Magicked barrier is cracking under pressure. Damage dealt from the rear is greatly increased.</para>
+/// </summary>
+    BackwardFracture = 4039,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4040"><strong>Intersection</strong></see> ↑ (All Classes)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    Intersection_4040 = 4040,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4041"><strong>Balance Drawn</strong></see> ↑ (All Classes)
+/// <para>The Balance card is drawn.</para>
+/// </summary>
+    BalanceDrawn_4041 = 4041,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4042"><strong>Bole Drawn</strong></see> ↑ (All Classes)
+/// <para>The Bole card is drawn.</para>
+/// </summary>
+    BoleDrawn_4042 = 4042,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4043"><strong>Arrow Drawn</strong></see> ↑ (All Classes)
+/// <para>The Arrow card is drawn.</para>
+/// </summary>
+    ArrowDrawn_4043 = 4043,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4044"><strong>Spear Drawn</strong></see> ↑ (All Classes)
+/// <para>The Spear card is drawn.</para>
+/// </summary>
+    SpearDrawn_4044 = 4044,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4045"><strong>Ewer Drawn</strong></see> ↑ (All Classes)
+/// <para>The Ewer card is drawn.</para>
+/// </summary>
+    EwerDrawn_4045 = 4045,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4046"><strong>Spire Drawn</strong></see> ↑ (All Classes)
+/// <para>The Spire card is drawn.</para>
+/// </summary>
+    SpireDrawn_4046 = 4046,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4047"><strong>Projection</strong></see> ↓ (All Classes)
+/// <para>Zoraal Ja's will is being projected upon you. Contact with specific flows of aether will provoke an attack.</para>
+/// </summary>
+    Projection = 4047,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4065"><strong>The Narwhal's Lullaby</strong></see> ↓ (All Classes)
+/// <para>The sacred treasure is inducing a deep slumber.</para>
+/// </summary>
+    TheNarwhalsLullaby = 4065,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4066"><strong>The Narwhal's Lullaby</strong></see> ↓ (All Classes)
+/// <para>The sacred treasure is inducing a deep slumber.</para>
+/// </summary>
+    TheNarwhalsLullaby_4066 = 4066,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4067"><strong>Wide-eyed</strong></see> ↑ (All Classes)
+/// <para>Tentoawa is driving away the tendrils of sleep.</para>
+/// </summary>
+    Wideeyed = 4067,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4068"><strong>Bleeding</strong></see> ↓ (All Classes)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    Bleeding_4068 = 4068,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4071"><strong>Positive Charge</strong></see> ↓ (All Classes)
+/// <para>Exhibiting a positive magnetic charge.</para>
+/// </summary>
+    PositiveCharge_4071 = 4071,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4072"><strong>Negative Charge</strong></see> ↓ (All Classes)
+/// <para>Exhibiting a negative magnetic charge.</para>
+/// </summary>
+    NegativeCharge_4072 = 4072,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4073"><strong>Revised to Wildfires</strong></see> ↑ (All Classes)
+/// <para>Apologies for the error. All are advised to prepare for fire-aspected damage.</para>
+/// </summary>
+    RevisedToWildfires = 4073,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4074"><strong>Revised to Blizzards</strong></see> ↑ (All Classes)
+/// <para>Apologies for the error. All are advised to prepare for ice-aspected damage.</para>
+/// </summary>
+    RevisedToBlizzards = 4074,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4075"><strong>Revised to Hyperelectricity</strong></see> ↑ (All Classes)
+/// <para>Apologies for the error. All are advised to prepare for lightning-aspected damage.</para>
+/// </summary>
+    RevisedToHyperelectricity = 4075,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4076"><strong>Revised to Gale-force Winds</strong></see> ↑ (All Classes)
+/// <para>Apologies for the error. All are advised to prepare for wind-aspected damage.</para>
+/// </summary>
+    RevisedToGaleforceWinds = 4076,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4094"><strong>Reawakened</strong></see> ↑ (VPR)
+/// <para>Tapped into the strength of your hunter forebears.</para>
+/// </summary>
+    Reawakened_4094 = 4094,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4095"><strong>Slither</strong></see> ↑ (VPR)
+/// <para>Next weaponskill will deal increased damage.</para>
+/// </summary>
+    Slither = 4095,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4096"><strong>Hardened Scales</strong></see> ↑ (VPR)
+/// <para>Though unable to move, damage taken is reduced. All Stun, Heavy, Bind, Silence, Half-asleep, Sleep, Deep Freeze, knockback, and draw-in effects are nullified.</para>
+/// </summary>
+    HardenedScales = 4096,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4097"><strong>Armored Scales</strong></see> ↑ (VPR)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    ArmoredScales = 4097,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4098"><strong>Snake's Bane</strong></see> ↑ (VPR)
+/// <para>Backlash is upgraded to Furious Backlash.</para>
+/// </summary>
+    SnakesBane = 4098,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4099"><strong>Noxious Gnash</strong></see> ↓ (VPR)
+/// <para>Damage taken from the viper who applied this effect is increased.</para>
+/// </summary>
+    NoxiousGnash_4099 = 4099,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4100"><strong>Aetherhues</strong></see> ↑ (PCT)
+/// <para>Able to cast green and yellow magicks.</para>
+/// </summary>
+    Aetherhues_4100 = 4100,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4101"><strong>Aetherhues II</strong></see> ↑ (PCT)
+/// <para>Able to cast blue and magenta magicks.</para>
+/// </summary>
+    AetherhuesIi_4101 = 4101,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4102"><strong>Subtractive Palette</strong></see> ↑ (PCT)
+/// <para>The properties of your pictomancy spells have changed.</para>
+/// </summary>
+    SubtractivePalette_4102 = 4102,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4103"><strong>Moogle Portrait</strong></see> ↑ (PCT)
+/// <para>Able to execute Mog of the Ages.</para>
+/// </summary>
+    MooglePortrait = 4103,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4104"><strong>Madeen Portrait</strong></see> ↑ (PCT)
+/// <para>Able to execute Retribution of the Madeen.</para>
+/// </summary>
+    MadeenPortrait = 4104,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4105"><strong>Pom Motif</strong></see> ↑ (PCT)
+/// <para>Able to execute Pom Muse.</para>
+/// </summary>
+    PomMotif = 4105,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4106"><strong>Wing Motif</strong></see> ↑ (PCT)
+/// <para>Able to execute Winged Muse.</para>
+/// </summary>
+    WingMotif = 4106,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4107"><strong>Claw Motif</strong></see> ↑ (PCT)
+/// <para>Able to execute Clawed Muse.</para>
+/// </summary>
+    ClawMotif = 4107,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4108"><strong>Maw Motif</strong></see> ↑ (PCT)
+/// <para>Able to execute Fanged Muse.</para>
+/// </summary>
+    MawMotif = 4108,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4109"><strong>Pom Muse</strong></see> ↑ (PCT)
+/// <para>Damage dealt and potency of HP restoration actions are increased.</para>
+/// </summary>
+    PomMuse = 4109,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4110"><strong>Winged Muse</strong></see> ↑ (PCT)
+/// <para>Spell cast and recast time are reduced. Movement speed is also increased.</para>
+/// </summary>
+    WingedMuse = 4110,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4111"><strong>Clawed Muse</strong></see> ↓ (PCT)
+/// <para>Damage taken is increased while HP recovered via healing actions is reduced.</para>
+/// </summary>
+    ClawedMuse = 4111,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4112"><strong>Fanged Muse</strong></see> ↓ (PCT)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    FangedMuse = 4112,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4113"><strong>Smudge</strong></see> ↑ (PCT)
+/// <para>Movement speed is increased.</para>
+/// </summary>
+    Smudge_4113 = 4113,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4114"><strong>Tempera Coat</strong></see> ↑ (PCT)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    TemperaCoat_4114 = 4114,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4115"><strong>Tempera Grassa</strong></see> ↑ (PCT)
+/// <para>A magicked barrier is nullifying damage.</para>
+/// </summary>
+    TemperaGrassa_4115 = 4115,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4116"><strong>Advent of Chocobastion</strong></see> ↑ (PCT)
+/// <para>Manifesting an area of protection.</para>
+/// </summary>
+    AdventOfChocobastion = 4116,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4117"><strong>Chocobastion</strong></see> ↑ (PCT)
+/// <para>Damage taken is reduced while HP recovered via healing actions is increased.</para>
+/// </summary>
+    Chocobastion = 4117,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4118"><strong>Starstruck</strong></see> ↑ (PCT)
+/// <para>Able to execute Star Prism.</para>
+/// </summary>
+    Starstruck_4118 = 4118,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4119"><strong>Star Prism</strong></see> ↑ (PCT)
+/// <para>Regenerating HP over time.</para>
+/// </summary>
+    StarPrism_4119 = 4119,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4120"><strong>Hunter's Instinct</strong></see> ↑ (VPR)
+/// <para>Damage dealt is increased.</para>
+/// </summary>
+    HuntersInstinct_4120 = 4120,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4121"><strong>Swiftscaled</strong></see> ↑ (VPR)
+/// <para>Weaponskill recast time is reduced.</para>
+/// </summary>
+    Swiftscaled_4121 = 4121,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4122"><strong>Perpetual Conflagration</strong></see> ↓ (All Classes)
+/// <para>Valigarmanda's flames are slowly consuming you, causing damage over time and increasing damage taken. This effect will not expire until Valigarmanda is defeated.</para>
+/// </summary>
+    PerpetualConflagration = 4122,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4123"><strong>Life Siphon</strong></see> ↑ (All Classes)
+/// <para>Attacks generate HP equal to the amount of damage dealt.</para>
+/// </summary>
+    LifeSiphon = 4123,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4124"><strong>Pom Sketch</strong></see> ↑ (PCT)
+/// <para>Able to execute Pom Motif.</para>
+/// </summary>
+    PomSketch = 4124,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4125"><strong>Wing Sketch</strong></see> ↑ (PCT)
+/// <para>Able to execute Wing Motif.</para>
+/// </summary>
+    WingSketch = 4125,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4126"><strong>Claw Sketch</strong></see> ↑ (PCT)
+/// <para>Able to execute Claw Motif.</para>
+/// </summary>
+    ClawSketch = 4126,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4127"><strong>Maw Sketch</strong></see> ↑ (PCT)
+/// <para>Able to execute Maw Motif.</para>
+/// </summary>
+    MawSketch = 4127,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4128"><strong>Dreamwoven Mimicry</strong></see> ↑ (All Classes)
+/// <para>Mimicking the form of another through the power of the Dreamweave Cocoon.</para>
+/// </summary>
+    DreamwovenMimicry = 4128,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4129"><strong>Dawn's Resolve</strong></see> ↑ (All Classes)
+/// <para>Inspired by Wuk Lamat's unyielding will and defying all mortal limits.</para>
+/// </summary>
+    DawnsResolve = 4129,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4130"><strong>Authority's Hold</strong></see> ↓ (All Classes)
+/// <para>Under Absolute Authority. Any movement when effect wears off will result in detonation.</para>
+/// </summary>
+    AuthoritysHold = 4130,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4132"><strong>Down for the Count</strong></see> ↓ (All Classes)
+/// <para>Unable to move or execute actions.</para>
+/// </summary>
+    DownForTheCount_4132 = 4132,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4133"><strong>Haste</strong></see> ↑ (All Classes)
+/// <para>Weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay are reduced.</para>
+/// </summary>
+    Haste_4133 = 4133,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4134"><strong>Honor's Accord</strong></see> ↑ (All Classes)
+/// <para>Taking an honorable battle stance that will affect the next attack.</para>
+/// </summary>
+    HonorsAccord = 4134,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4136"><strong>Aetherstock</strong></see> ↑ (All Classes)
+/// <para>Storing elemental aether in the body. The aether is released upon attacking.</para>
+/// </summary>
+    Aetherstock = 4136,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4139"><strong>Ghostly Guise</strong></see> ↑ (All Classes)
+/// <para>An incorporeal form is enabling you to pass through obstacles, but additional damage is taken from certain attacks.</para>
+/// </summary>
+    GhostlyGuise_4139 = 4139,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4140"><strong>Boiling</strong></see> ↓ (All Classes)
+/// <para>Body is slowly heating up. Will become Pyretic when this effect expires.</para>
+/// </summary>
+    Boiling_4140 = 4140,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4141"><strong>Heatstroke</strong></see> ↓ (All Classes)
+/// <para>Body heat is being manipulated. Will become Pyretic when this effect expires.</para>
+/// </summary>
+    Heatstroke = 4141,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4142"><strong>Cold Sweats</strong></see> ↓ (All Classes)
+/// <para>Body heat is being manipulated. Will freeze up when this effect expires.</para>
+/// </summary>
+    ColdSweats = 4142,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4144"><strong>Acceleration Bomb</strong></see> ↓ (All Classes)
+/// <para>An acceleration-trigger explosive is affixed to the body. Any movement when effect wears off will result in detonation.</para>
+/// </summary>
+    AccelerationBomb_4144 = 4144,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4147"><strong>Bee Be Gone</strong></see> ↑ (All Classes)
+/// <para>Unbridled rage is increasing damage dealt. Standing too close will provoke an attack.</para>
+/// </summary>
+    BeeBeGone = 4147,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4148"><strong>Bee Be Here</strong></see> ↑ (All Classes)
+/// <para>Unbridled rage is increasing damage dealt. Standing too far away will provoke an attack.</para>
+/// </summary>
+    BeeBeHere = 4148,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4150"><strong>Deep Freeze</strong></see> ↓ (All Classes)
+/// <para>Your body is encased in ice, preventing action and dealing damage over time.</para>
+/// </summary>
+    DeepFreeze_4150 = 4150,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4151"><strong>Leftward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the left.</para>
+/// </summary>
+    LeftwardOmen = 4151,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4152"><strong>Rightward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the right.</para>
+/// </summary>
+    RightwardOmen = 4152,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4153"><strong>Forward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the front.</para>
+/// </summary>
+    ForwardOmen = 4153,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4154"><strong>Rearward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the rear.</para>
+/// </summary>
+    RearwardOmen = 4154,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4155"><strong>Leftward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the left.</para>
+/// </summary>
+    LeftwardOmen_4155 = 4155,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4156"><strong>Rightward Omen</strong></see> ↑ (All Classes)
+/// <para>The next attack will be executed from the right.</para>
+/// </summary>
+    RightwardOmen_4156 = 4156,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4168"><strong>Rampart</strong></see> ↑ (All Classes)
+/// <para>Damage taken is reduced and HP recovery via healing actions is increased.</para>
+/// </summary>
+    Rampart_4168 = 4168,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4169"><strong>Rroneek Pulse</strong></see> ↑ (All Classes)
+/// <para>Damage taken is reduced and HP recovery via healing actions is increased.</para>
+/// </summary>
+    RroneekPulse_4169 = 4169,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4170"><strong>Blood of the Br'aax</strong></see> ↑ (All Classes)
+/// <para>Damage taken is reduced while inflicting a portion of sustained damage back to its source.</para>
+/// </summary>
+    BloodOfTheBraax = 4170
 }

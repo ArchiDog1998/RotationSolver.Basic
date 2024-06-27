@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RPR)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RPR, global::ECommons.ExcelServices.Job.BRD)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/reaper"><strong>Reaper</strong></see>
-/// <br>Number of Actions: 50</br>
-/// <br>Number of Traits: 10</br>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/reaper"><strong>reaper</strong></see>
+/// <br>Number of Actions: 55</br>
+/// <br>Number of Traits: 0</br>
 /// </summary>
 public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -909,74 +909,102 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GuillotinePvP"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction GuillotinePvP => _GuillotinePvPCreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SacrificiumPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36969, false);
+        var setting = action.Setting;
+        ModifySacrificiumPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50379"><strong>Soul Gauge</strong></see> (RPR) [379]
-/// <para>Allows for Soul Gauge accumulation upon the landing of certain actions, or defeating enemies under the effect of Death's Design.</para>
+/// Modify <inheritdoc cref="SacrificiumPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait SoulGaugeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(379U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySacrificiumPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SacrificiumPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction SacrificiumPvE => _SacrificiumPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ExecutionersGibbetPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36970, false);
+        var setting = action.Setting;
+        ModifyExecutionersGibbetPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50380"><strong>Death Scythe Mastery</strong></see> (RPR) [380]
-/// <para>Increases the potency of Slice to 300, Waxing Slice to 140, Shadow of Death to 300, Harpe to 300, Spinning Scythe to 140, Infernal Slice to 140, Whorl of Death to 100, and Nightmare Scythe to 120.</para>
+/// Modify <inheritdoc cref="ExecutionersGibbetPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DeathScytheMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(380U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyExecutionersGibbetPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ExecutionersGibbetPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ExecutionersGibbetPvE => _ExecutionersGibbetPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ExecutionersGallowsPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36971, false);
+        var setting = action.Setting;
+        ModifyExecutionersGallowsPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50381"><strong>Enhanced Avatar</strong></see> (RPR) [381]
-/// <para>Grants the effect of Soul Reaver upon successfully landing Blood Stalk or Grim Swathe.</para>
-/// <para>Duration: 30s</para>
-/// <para>Effect ends upon execution of any weaponskill or magic attack.</para>
+/// Modify <inheritdoc cref="ExecutionersGallowsPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAvatarTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(381U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyExecutionersGallowsPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ExecutionersGallowsPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ExecutionersGallowsPvE => _ExecutionersGallowsPvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ExecutionersGuillotinePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36972, false);
+        var setting = action.Setting;
+        ModifyExecutionersGuillotinePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50382"><strong>Hellsgate</strong></see> (RPR) [382]
-/// <para>Upon executing Hell's Ingress or Hell's Egress, leave behind a Hellsgate and grant Threshold to self.</para>
-/// <para>Duration: 10s</para>
-/// <para>Hell's Ingress changes to Regress after executing Hell's Egress, and vice versa.</para>
+/// Modify <inheritdoc cref="ExecutionersGuillotinePvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait HellsgateTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(382U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyExecutionersGuillotinePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ExecutionersGuillotinePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction ExecutionersGuillotinePvE => _ExecutionersGuillotinePvECreator.Value;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PerfectioPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)36973, false);
+        var setting = action.Setting;
+        ModifyPerfectioPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50383"><strong>Tempered Soul</strong></see> (RPR) [383]
-/// <para>Allows the accumulation of charges for consecutive uses of Soul Slice and Soul Scythe.</para>
-/// <para>Maximum Charges: 2</para>
+/// Modify <inheritdoc cref="PerfectioPvE"/>
 /// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait TemperedSoulTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(383U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50384"><strong>Shroud Gauge</strong></see> (RPR) [384]
-/// <para>Allows for Shroud Gauge accumulation upon the landing of Gibbet, Gallows, or Guillotine.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait ShroudGaugeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(384U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50385"><strong>Enhanced Arcane Crest</strong></see> (RPR) [385]
-/// <para>Grants Crest of Time Returned to self and nearby party members, gradually restoring HP over time. This effect is only granted when the Crest of Time Borrowed barrier is completely absorbed.</para>
-/// <para>Cure Potency: 50</para>
-/// <para>Duration: 15s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedArcaneCrestTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(385U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50386"><strong>Enhanced Shroud</strong></see> (RPR) [386]
-/// <para>Grants Void Shroud upon landing Void Reaping, Cross Reaping, or Grim Reaping.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedShroudTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(386U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50387"><strong>Enhanced Arcane Circle</strong></see> (RPR) [387]
-/// <para>Grants Circle of Sacrifice to you and nearby party members upon executing Arcane Circle.</para>
-/// <para>Duration: 5s</para>
-/// <para>When you or party members under this effect successfully land a weaponskill or cast a spell, you may gain a stack of Immortal Sacrifice, up to a maximum of 8.</para>
-/// <para>Duration: 30s</para>
-/// <para>Also grants Bloodsown Circle to self, allowing you to receive stacks of Immortal Sacrifice from party members under the effect of your Circle of Sacrifice.</para>
-/// <para>Duration: 6s</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedArcaneCircleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(387U);
-    /// <summary>
-/// <see href="https://garlandtools.org/db/#action/50523"><strong>Death Scythe Mastery II</strong></see> (RPR) [523]
-/// <para>Increases the potency of Slice to 320, Waxing Slice to 160, and Infernal Slice to 180.</para>
-/// </summary>
-    public static global::RotationSolver.Basic.Traits.IBaseTrait DeathScytheMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(523U);
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPerfectioPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PerfectioPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    public global::RotationSolver.Basic.Actions.IBaseAction PerfectioPvE => _PerfectioPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [SoulGaugeTrait, DeathScytheMasteryTrait, EnhancedAvatarTrait, HellsgateTrait, TemperedSoulTrait, ShroudGaugeTrait, EnhancedArcaneCrestTrait, EnhancedShroudTrait, EnhancedArcaneCircleTrait, DeathScytheMasteryIiTrait, ..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge>();
@@ -1001,55 +1029,11 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
-        var setting = action.Setting;
-        ModifyBladedancePvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="BladedancePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
-
-    /// <inheritdoc cref="BladedancePvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TheEndPvECreator = new(() =>
-    {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)24858, false);
-        var setting = action.Setting;
-        ModifyTheEndPvE(ref setting);
-        action.Setting = setting;
-        return action;
-    });
-    /// <summary>
-/// Modify <inheritdoc cref="TheEndPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    static partial void ModifyTheEndPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TheEndPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
-    private global::RotationSolver.Basic.Actions.IBaseAction TheEndPvE => _TheEndPvECreator.Value;
-
-    /// <inheritdoc cref="TheEndPvE"/>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TheEndPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SlicePvE, WaxingSlicePvE, InfernalSlicePvE, SpinningScythePvE, NightmareScythePvE, ShadowOfDeathPvE, WhorlOfDeathPvE, SoulSlicePvE, SoulScythePvE, GibbetPvE, GallowsPvE, GuillotinePvE, PlentifulHarvestPvE, HarpePvE, SoulsowPvE, HarvestMoonPvE, BloodStalkPvE, UnveiledGibbetPvE, UnveiledGallowsPvE, GrimSwathePvE, GluttonyPvE, EnshroudPvE, VoidReapingPvE, CrossReapingPvE, GrimReapingPvE, CommunioPvE, LemuresSlicePvE, LemuresScythePvE, HellsIngressPvE, HellsEgressPvE, RegressPvE, ArcaneCrestPvE, ArcaneCirclePvE, SlicePvP, WaxingSlicePvP, InfernalSlicePvP, VoidReapingPvP, CrossReapingPvP, HarvestMoonPvP, PlentifulHarvestPvP, GrimSwathePvP, LemuresSlicePvP, DeathWarrantPvP, HellsIngressPvP, RegressPvP, ArcaneCrestPvP, TenebraeLemurumPvP, CommunioPvP, SoulSlicePvP, GuillotinePvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SlicePvE, WaxingSlicePvE, InfernalSlicePvE, SpinningScythePvE, NightmareScythePvE, ShadowOfDeathPvE, WhorlOfDeathPvE, SoulSlicePvE, SoulScythePvE, GibbetPvE, GallowsPvE, GuillotinePvE, PlentifulHarvestPvE, HarpePvE, SoulsowPvE, HarvestMoonPvE, BloodStalkPvE, UnveiledGibbetPvE, UnveiledGallowsPvE, GrimSwathePvE, GluttonyPvE, EnshroudPvE, VoidReapingPvE, CrossReapingPvE, GrimReapingPvE, CommunioPvE, LemuresSlicePvE, LemuresScythePvE, HellsIngressPvE, HellsEgressPvE, RegressPvE, ArcaneCrestPvE, ArcaneCirclePvE, SlicePvP, WaxingSlicePvP, InfernalSlicePvP, VoidReapingPvP, CrossReapingPvP, HarvestMoonPvP, PlentifulHarvestPvP, GrimSwathePvP, LemuresSlicePvP, DeathWarrantPvP, HellsIngressPvP, RegressPvP, ArcaneCrestPvP, TenebraeLemurumPvP, CommunioPvP, SoulSlicePvP, GuillotinePvP, SacrificiumPvE, ExecutionersGibbetPvE, ExecutionersGallowsPvE, ExecutionersGuillotinePvE, PerfectioPvE, LimitBreak3, ..base.AllBaseActions];
 }
