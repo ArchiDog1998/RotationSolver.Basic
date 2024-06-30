@@ -77,7 +77,7 @@ internal static class Recorder
         {
             try
             {
-                return b.IsCasting && b.AdjustedTotalCastTime > 2.5f && b.CastActionId != 0;
+                return b.IsCasting && b.TotalCastTime > 2.5f && b.CastActionId != 0;
             }
             catch
             {

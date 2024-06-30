@@ -36,10 +36,10 @@ partial class PaladinRotation
     public static byte OathGauge => JobGauge.OathGauge;
     #endregion
 
-    static partial void ModifyAtonementPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.SwordOath_1902];
-    }
+    //static partial void ModifyAtonementPvE(ref ActionSetting setting)
+    //{
+    //    setting.StatusNeed = [StatusID.SwordOath_1902];
+    //}
 
     static partial void ModifyShieldBashPvE(ref ActionSetting setting)
     {

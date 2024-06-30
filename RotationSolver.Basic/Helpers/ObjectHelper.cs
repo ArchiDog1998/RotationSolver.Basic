@@ -183,7 +183,7 @@ public static class ObjectHelper
     internal static bool IsParty(this IGameObject IGameObject)
     {
         if (IGameObject.EntityId == Player.Object.EntityId) return true;
-        if (Svc.Party.Any(p => p.IGameObject?.EntityId == IGameObject.EntityId)) return true;
+        if (Svc.Party.Any(p => p.GameObject?.EntityId == IGameObject.EntityId)) return true;
         if (IGameObject.SubKind == 9) return true;
         return false;
     }
@@ -403,7 +403,7 @@ public static class ObjectHelper
         RaycastHit hit = default;
 
         return !FFXIVClientStructs.FFXIV.Client.System.Framework.Framework.Instance()->BGCollisionModule
-            ->RaycastEx(&hit, point, direction, direction.Length(), 1, unknown);
+            ->RaycastMaterialFilter(&hit, point, direction, direction.Length(), 1, unknown);
     }
 
     /// <summary>

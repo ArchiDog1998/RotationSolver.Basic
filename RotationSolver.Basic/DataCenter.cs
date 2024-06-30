@@ -361,8 +361,8 @@ internal static class DataCenter
 
     public static bool HasPet { get; internal set; }
 
-    public static unsafe bool HasCompanion => (IntPtr)Player.IBattleChara != IntPtr.Zero
-                                           && (IntPtr)CharacterManager.Instance()->LookupBuddyByOwnerObject(Player.IBattleChara) != IntPtr.Zero;
+    public static unsafe bool HasCompanion => (IntPtr)Player.BattleChara != IntPtr.Zero
+                                           && (IntPtr)CharacterManager.Instance()->LookupBuddyByOwnerObject(Player.BattleChara) != IntPtr.Zero;
 
     #region HP
     public static Dictionary<uint, float> RefinedHP { get; internal set; } = [];
