@@ -20,15 +20,15 @@ internal class TargetingTypeCondition : TargetingConditionBase
     [UI("Type")]
     public TargetingTypeCon TargetingType { get; set; } = TargetingTypeCon.MySelf;
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         return TargetingType switch
         {
             TargetingTypeCon.MySelf => obj.EntityId == Player.Object.EntityId,
-            TargetingTypeCon.Player => obj is PlayerCharacter,
-            TargetingTypeCon.Battle => obj is BattleChara,
-            TargetingTypeCon.Hostile => obj is BattleChara battle && battle.IsEnemy(),
-            TargetingTypeCon.Friendly => obj is BattleChara battle && battle.IsAlliance(),
+            TargetingTypeCon.Player => obj is IPlayerCharacter,
+            TargetingTypeCon.Battle => obj is IBattleChara,
+            TargetingTypeCon.Hostile => obj is IBattleChara battle && battle.IsEnemy(),
+            TargetingTypeCon.Friendly => obj is IBattleChara battle && battle.IsAlliance(),
             _ => false,
         };
     }

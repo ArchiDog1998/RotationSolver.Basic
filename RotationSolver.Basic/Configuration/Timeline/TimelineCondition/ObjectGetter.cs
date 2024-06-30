@@ -21,22 +21,22 @@ internal class ObjectGetter
     public string VfxPath { get; set; } = string.Empty;
     public ushort ObjectEffect1 { get; set; } = 0;
     public ushort ObjectEffect2 { get; set; } = 0;
-    public bool CanGet(GameObject obj)
+    public bool CanGet(IGameObject obj)
     {
         switch (Type)
         {
-            case ObjectType.GameObject:
+            case ObjectType.IGameObject:
                 if (!string.IsNullOrEmpty(DataID) && !new Regex(DataID).IsMatch(obj.DataId.ToString("X"))) return false;
                 break;
 
-            case ObjectType.BattleCharactor:
-                if (obj is not BattleChara) return false;
+            case ObjectType.IBattleCharactor:
+                if (obj is not IBattleChara) return false;
                 if (!string.IsNullOrEmpty(DataID) && !new Regex(DataID).IsMatch(obj.DataId.ToString("X"))) return false;
 
                 break;
 
             case ObjectType.PlayerCharactor:
-                if (obj is not PlayerCharacter) return false;
+                if (obj is not IPlayerCharacter) return false;
 
                 if (!Tank && obj.IsJobCategory(JobRole.Tank)) return false;
                 if (!Healer && obj.IsJobCategory(JobRole.Healer)) return false;
@@ -51,7 +51,7 @@ internal class ObjectGetter
 
         if (Status != 0)
         {
-            if (obj is not BattleChara b) return false;
+            if (obj is not IBattleChara b) return false;
             var status = b.StatusList.FirstOrDefault(s => s.StatusId == Status);
             if (status == null) return false;
             if (status.RemainingTime > StatusTime) return false;
@@ -93,12 +93,12 @@ public enum ObjectType : byte
     /// <summary>
     /// 
     /// </summary>
-    GameObject,
+    IGameObject,
 
     /// <summary>
     /// 
     /// </summary>
-    BattleCharactor,
+    IBattleCharactor,
 
     /// <summary>
     /// 

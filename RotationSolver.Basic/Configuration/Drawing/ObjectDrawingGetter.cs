@@ -20,7 +20,7 @@ internal class ObjectDrawingGetter : ObjectGetterBase
     [UI("Scale")]
     public Position Scale { get; set; } = Vector3.One;
 
-    protected override IDisposable[] GetObjectDrawing(GameObject obj)
+    protected override IDisposable[] GetObjectDrawing(IGameObject obj)
     {
         if (string.IsNullOrEmpty(Path)) return [];
 

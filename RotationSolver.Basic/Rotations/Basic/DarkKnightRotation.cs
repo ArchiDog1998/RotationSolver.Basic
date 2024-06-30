@@ -154,10 +154,10 @@ partial class DarkKnightRotation
         };
     }
 
-    static partial void ModifyPlungePvE(ref ActionSetting setting)
-    {
-        setting.SpecialType = SpecialActionType.MovingForward;
-    }
+    //static partial void ModifyPlungePvE(ref ActionSetting setting)
+    //{
+    //    setting.SpecialType = SpecialActionType.MovingForward;
+    //}
 
     /// <inheritdoc/>
     protected override bool EmergencyAbility(IAction nextGCD, out IAction? act)
@@ -167,12 +167,12 @@ partial class DarkKnightRotation
         return base.EmergencyAbility(nextGCD, out act);
     }
 
-    /// <inheritdoc/>
-    protected override bool MoveForwardAbility(out IAction? act)
-    {
-        if (PlungePvE.CanUse(out act)) return true;
-        return false;
-    }
+    ///// <inheritdoc/>
+    //protected override bool MoveForwardAbility(out IAction? act)
+    //{
+    //    if (PlungePvE.CanUse(out act)) return true;
+    //    return false;
+    //}
 
     /// <inheritdoc/>
     protected override bool LimitBreakPvPGCD(out IAction? act)

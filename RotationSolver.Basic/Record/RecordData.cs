@@ -9,7 +9,7 @@ public interface IRecordData
     TriggerData ToTriggerData();
 }
 
-public record struct ObjectBeginCastData(BattleChara Object) : IRecordData
+public record struct ObjectBeginCastData(IBattleChara Object) : IRecordData
 {
     public override readonly string ToString() => ToTriggerData().ToString();
 
@@ -24,7 +24,7 @@ public record struct ObjectBeginCastData(BattleChara Object) : IRecordData
     }
 }
 
-public record struct ObjectNewData(GameObject Object) : IRecordData
+public record struct ObjectNewData(IGameObject Object) : IRecordData
 {
     public override readonly string ToString() => ToTriggerData().ToString();
 
@@ -38,7 +38,7 @@ public record struct ObjectNewData(GameObject Object) : IRecordData
     }
 }
 
-public record struct ObjectEffectData(GameObject Object, ushort Param1, ushort Param2) : IRecordData
+public record struct ObjectEffectData(IGameObject Object, ushort Param1, ushort Param2) : IRecordData
 {
     public override readonly string ToString() => ToTriggerData().ToString();
 
@@ -54,7 +54,7 @@ public record struct ObjectEffectData(GameObject Object, ushort Param1, ushort P
     }
 }
 
-public record struct VfxNewData(GameObject Object, string Path) : IRecordData
+public record struct VfxNewData(IGameObject Object, string Path) : IRecordData
 {
     public override readonly string ToString() => ToTriggerData().ToString();
 

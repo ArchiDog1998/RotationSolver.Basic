@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WHM, global::ECommons.ExcelServices.Job.WVR)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WHM, global::ECommons.ExcelServices.Job.CNJ)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/whitemage"><strong>white mage</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/whitemage"><strong>White Mage</strong></see>
 /// <br>Number of Actions: 45</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -819,12 +819,127 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DivineCaressPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction DivineCaressPvE => _DivineCaressPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50023"><strong>Maim and Mend</strong></see> (CNJ WHM) [23]
+/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(23U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50025"><strong>Freecure</strong></see> (CNJ WHM) [25]
+/// <para>Grants a 15% chance that after casting Cure, the MP cost for your next Cure II will be 0.</para>
+/// <para>Duration: 15s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait FreecureTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(25U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50026"><strong>Maim and Mend II</strong></see> (CNJ WHM) [26]
+/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(26U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50179"><strong>Stone Mastery</strong></see> (CNJ WHM) [179]
+/// <para>Upgrades Stone to Stone II.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait StoneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(179U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50180"><strong>Aero Mastery</strong></see> (CNJ WHM) [180]
+/// <para>Upgrades Aero to Aero II.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait AeroMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(180U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50181"><strong>Stone Mastery II</strong></see> (WHM) [181]
+/// <para>Upgrades Stone II to Stone III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait StoneMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(181U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50182"><strong>Stone Mastery III</strong></see> (WHM) [182]
+/// <para>Upgrades Stone III to Stone IV.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait StoneMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(182U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50196"><strong>Secret of the Lily</strong></see> (WHM) [196]
+/// <para>Adds a Lily to your Healing Gauge for every 20 seconds you are engaged in combat, up to a maximum of 3.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SecretOfTheLilyTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(196U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50307"><strong>Aero Mastery II</strong></see> (WHM) [307]
+/// <para>Upgrades Aero II to Dia.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait AeroMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(307U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50308"><strong>Stone Mastery IV</strong></see> (WHM) [308]
+/// <para>Upgrades Stone IV to Glare.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait StoneMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(308U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50309"><strong>Transcendent Afflatus</strong></see> (WHM) [309]
+/// <para>Adds a Blood Lily to the Healing Gauge that blooms after three uses of Afflatus Solace or Afflatus Rapture.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait TranscendentAfflatusTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(309U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50310"><strong>Enhanced Asylum</strong></see> (WHM) [310]
+/// <para>Adds an additional effect to Asylum that increases HP recovery via healing actions by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAsylumTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(310U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50487"><strong>Glare Mastery</strong></see> (WHM) [487]
+/// <para>Upgrades Glare to Glare III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait GlareMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(487U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50488"><strong>Holy Mastery</strong></see> (WHM) [488]
+/// <para>Upgrades Holy to Holy III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HolyMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(488U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50489"><strong>Enhanced Healing Magic</strong></see> (WHM) [489]
+/// <para>Increases the healing potency of Cure to 500, Medica to 400, Cure II to 800, Regen to 250, Cure III to 600, Medica II to 250, Medica II's Regen effect to 150, Afflatus Solace to 800, and Afflatus Rapture to 400.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHealingMagicTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(489U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50490"><strong>Enhanced Divine Benison</strong></see> (WHM) [490]
+/// <para>Allows the accumulation of charges for consecutive uses of Divine Benison.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDivineBenisonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(490U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50623"><strong>Enhanced Presence of Mind</strong></see> (WHM) [623]
+/// <para>Presence of Mind grants 3 stacks of Sacred Sight upon execution.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedPresenceOfMindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(623U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50624"><strong>Medica Mastery</strong></see> (WHM) [624]
+/// <para>Upgrades Medica II to Medica III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MedicaMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(624U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50625"><strong>Enhanced Tetragrammaton</strong></see> (WHM) [625]
+/// <para>Allows the accumulation of charges for consecutive uses of Tetragrammaton.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTetragrammatonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(625U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50626"><strong>Enhanced Temperance</strong></see> (WHM) [626]
+/// <para>Temperance grants Divine Grace upon execution.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTemperanceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(626U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50644"><strong>Enhanced Swiftcast</strong></see> (CNJ THM WHM BLM ACN SMN SCH AST RDM SGE PCT) [644]
+/// <para>Reduces Swiftcast recast time to 40 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50651"><strong>White Magic Mastery</strong></see> (WHM) [651]
+/// <para>Increases the potency of Dia and its damage over time to 70, Afflatus Misery to 1,320, and Glare III to 330.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait WhiteMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(651U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, FreecureTrait, MaimAndMendIiTrait, StoneMasteryTrait, AeroMasteryTrait, StoneMasteryIiTrait, StoneMasteryIiiTrait, SecretOfTheLilyTrait, AeroMasteryIiTrait, StoneMasteryIvTrait, TranscendentAfflatusTrait, EnhancedAsylumTrait, GlareMasteryTrait, HolyMasteryTrait, EnhancedHealingMagicTrait, EnhancedDivineBenisonTrait, EnhancedPresenceOfMindTrait, MedicaMasteryTrait, EnhancedTetragrammatonTrait, EnhancedTemperanceTrait, EnhancedSwiftcastTrait, WhiteMagicMasteryTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge>();
@@ -849,11 +964,55 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
 
     /// <inheritdoc cref="HealingWindPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => HealingWindPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => HealingWindPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
+        var setting = action.Setting;
+        ModifyBreathOfTheEarthPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BreathOfTheEarthPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBreathOfTheEarthPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction BreathOfTheEarthPvE => _BreathOfTheEarthPvECreator.Value;
+
+    /// <inheritdoc cref="BreathOfTheEarthPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BreathOfTheEarthPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PulseOfLifePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)208, false);
+        var setting = action.Setting;
+        ModifyPulseOfLifePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="PulseOfLifePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyPulseOfLifePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PulseOfLifePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction PulseOfLifePvE => _PulseOfLifePvECreator.Value;
+
+    /// <inheritdoc cref="PulseOfLifePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => PulseOfLifePvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [StonePvE, CurePvE, AeroPvE, MedicaPvE, RaisePvE, StoneIiPvE, CureIiiPvE, AeroIiPvE, MedicaIiPvE, CureIiPvE, PresenceOfMindPvE, RegenPvE, HolyPvE, BenedictionPvE, StoneIiiPvE, AsylumPvE, TetragrammatonPvE, AssizePvE, ThinAirPvE, StoneIvPvE, DivineBenisonPvE, PlenaryIndulgencePvE, AfflatusSolacePvE, DiaPvE, GlarePvE, AfflatusRapturePvE, AfflatusMiseryPvE, TemperancePvE, GlareIiiPvE, HolyIiiPvE, AquaveilPvE, LiturgyOfTheBellPvE, GlareIiiPvP, CureIiPvP, CureIiiPvP, AfflatusMiseryPvP, AquaveilPvP, MiracleOfNaturePvP, SeraphStrikePvP, AfflatusPurgationPvP, AetherialShiftPvE, GlareIvPvE, MedicaIiiPvE, DivineCaressPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [StonePvE, CurePvE, AeroPvE, MedicaPvE, RaisePvE, StoneIiPvE, CureIiiPvE, AeroIiPvE, MedicaIiPvE, CureIiPvE, PresenceOfMindPvE, RegenPvE, HolyPvE, BenedictionPvE, StoneIiiPvE, AsylumPvE, TetragrammatonPvE, AssizePvE, ThinAirPvE, StoneIvPvE, DivineBenisonPvE, PlenaryIndulgencePvE, AfflatusSolacePvE, DiaPvE, GlarePvE, AfflatusRapturePvE, AfflatusMiseryPvE, TemperancePvE, GlareIiiPvE, HolyIiiPvE, AquaveilPvE, LiturgyOfTheBellPvE, GlareIiiPvP, CureIiPvP, CureIiiPvP, AfflatusMiseryPvP, AquaveilPvP, MiracleOfNaturePvP, SeraphStrikePvP, AfflatusPurgationPvP, AetherialShiftPvE, GlareIvPvE, MedicaIiiPvE, DivineCaressPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

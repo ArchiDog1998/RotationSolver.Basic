@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DRK, global::ECommons.ExcelServices.Job.MRD)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DRK)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/darkknight"><strong>dark knight</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/darkknight"><strong>Dark Knight</strong></see>
 /// <br>Number of Actions: 47</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -855,12 +855,90 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DisesteemPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction DisesteemPvE => _DisesteemPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50158"><strong>Blackblood</strong></see> (DRK) [158]
+/// <para>Allows for Blood Gauge accumulation upon the landing of certain actions.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BlackbloodTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(158U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50159"><strong>Enhanced Blackblood</strong></see> (DRK) [159]
+/// <para>Allows for Blood Gauge accumulation upon the landing of any weaponskill or spell while under the effect of Blood Weapon.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBlackbloodTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(159U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50271"><strong>Darkside Mastery</strong></see> (DRK) [271]
+/// <para>Upgrades Flood of Darkness and Edge of Darkness to Flood of Shadow and Edge of Shadow respectively.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait DarksideMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(271U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50319"><strong>Tank Mastery</strong></see> (DRK) [319]
+/// <para>Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait TankMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(319U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50422"><strong>Enhanced Unmend</strong></see> (DRK) [422]
+/// <para>Reduces recast time of Shadowstride by 5 seconds when executing Unmend on most targets.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedUnmendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(422U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50423"><strong>Enhanced Living Shadow II</strong></see> (DRK) [423]
+/// <para>Upgrades Flood of Shadow executed by your simulacrum to Shadowbringer, which delivers an attack to all enemies in a straight line before it with a potency of 570 for the first enemy, and 25% less for all remaining enemies.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedLivingShadowIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(423U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50506"><strong>Melee Mastery</strong></see> (DRK) [506]
+/// <para>Increases the potency of Hard Slash to 180, Syphon Strike to 120, and Souleater to 140.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(506U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50511"><strong>Enhanced Living Shadow</strong></see> (DRK) [511]
+/// <para>Increases the potency of attacks dealt by your simulacrum to 420.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedLivingShadowTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(511U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50570"><strong>Blood Weapon Mastery</strong></see> (DRK) [570]
+/// <para>Upgrades Blood Weapon to Delirium.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BloodWeaponMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(570U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50571"><strong>Shadow Wall Mastery</strong></see> (DRK) [571]
+/// <para>Upgrades Shadow Wall to Shadowed Vigil.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait ShadowWallMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(571U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50572"><strong>Enhanced Delirium</strong></see> (DRK) [572]
+/// <para>Upgrades Bloodspiller and Quietus to Scarlet Delirium and Impalement respectively.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDeliriumTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(572U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50573"><strong>Enhanced Living Shadow III</strong></see> (DRK) [573]
+/// <para>Grants the effect of Scorn after executing Living Shadow.</para>
+/// <para>Duration: 30s</para>
+/// <para></para>
+/// <para>Additionally upgrades Carve and Spit executed by your simulacrum to Disesteem, which delivers an attack to all enemies in a straight line before it with a potency of 620 for the first enemy, and 25% less for all remaining enemies.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedLivingShadowIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(573U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50639"><strong>Enhanced Rampart</strong></see> (GLA MRD PLD WAR DRK GNB) [639]
+/// <para>Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRampartTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(639U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50640"><strong>Enhanced Reprisal</strong></see> (GLA MRD PLD WAR DRK GNB) [640]
+/// <para>Extends the duration of Reprisal to 15 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedReprisalTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(640U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50663"><strong>Melee Mastery II</strong></see> (DRK) [663]
+/// <para>Increases the potency of Hard Slash to 260, Syphon Strike to 220, Souleater to 240, Stalwart Soul to 120, Bloodspiller to 580, and Quietus to 240.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(663U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [BlackbloodTrait, EnhancedBlackbloodTrait, DarksideMasteryTrait, TankMasteryTrait, EnhancedUnmendTrait, EnhancedLivingShadowIiTrait, MeleeMasteryTrait, EnhancedLivingShadowTrait, BloodWeaponMasteryTrait, ShadowWallMasteryTrait, EnhancedDeliriumTrait, EnhancedLivingShadowIiiTrait, EnhancedRampartTrait, EnhancedReprisalTrait, MeleeMasteryIiTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge>();
@@ -885,11 +963,55 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
 
     /// <inheritdoc cref="ShieldWallPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ShieldWallPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => ShieldWallPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StrongholdPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)198, false);
+        var setting = action.Setting;
+        ModifyStrongholdPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="StrongholdPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyStrongholdPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StrongholdPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction StrongholdPvE => _StrongholdPvECreator.Value;
+
+    /// <inheritdoc cref="StrongholdPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StrongholdPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DarkForcePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4241, false);
+        var setting = action.Setting;
+        ModifyDarkForcePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="DarkForcePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDarkForcePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DarkForcePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction DarkForcePvE => _DarkForcePvECreator.Value;
+
+    /// <inheritdoc cref="DarkForcePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DarkForcePvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HardSlashPvE, UnleashPvE, SyphonStrikePvE, UnmendPvE, BloodWeaponPvE, GritPvE, SouleaterPvE, DarkMindPvE, ShadowWallPvE, LivingDeadPvE, SaltedEarthPvE, AbyssalDrainPvE, CarveAndSpitPvE, DeliriumPvE, QuietusPvE, BloodspillerPvE, TheBlackestNightPvE, FloodOfDarknessPvE, EdgeOfDarknessPvE, StalwartSoulPvE, FloodOfShadowPvE, EdgeOfShadowPvE, DarkMissionaryPvE, LivingShadowPvE, OblationPvE, SaltAndDarknessPvE, ShadowbringerPvE, HardSlashPvP, SyphonStrikePvP, SouleaterPvP, BloodspillerPvP, ShadowbringerPvP, PlungePvP, TheBlackestNightPvP, SaltedEarthPvP, SaltAndDarknessPvP, EventidePvP, QuietusPvP, ReleaseGritPvE, ShadowstridePvE, ShadowedVigilPvE, ScarletDeliriumPvE, ComeuppancePvE, TorcleaverPvE, ImpalementPvE, DisesteemPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HardSlashPvE, UnleashPvE, SyphonStrikePvE, UnmendPvE, BloodWeaponPvE, GritPvE, SouleaterPvE, DarkMindPvE, ShadowWallPvE, LivingDeadPvE, SaltedEarthPvE, AbyssalDrainPvE, CarveAndSpitPvE, DeliriumPvE, QuietusPvE, BloodspillerPvE, TheBlackestNightPvE, FloodOfDarknessPvE, EdgeOfDarknessPvE, StalwartSoulPvE, FloodOfShadowPvE, EdgeOfShadowPvE, DarkMissionaryPvE, LivingShadowPvE, OblationPvE, SaltAndDarknessPvE, ShadowbringerPvE, HardSlashPvP, SyphonStrikePvP, SouleaterPvP, BloodspillerPvP, ShadowbringerPvP, PlungePvP, TheBlackestNightPvP, SaltedEarthPvP, SaltAndDarknessPvP, EventidePvP, QuietusPvP, ReleaseGritPvE, ShadowstridePvE, ShadowedVigilPvE, ScarletDeliriumPvE, ComeuppancePvE, TorcleaverPvE, ImpalementPvE, DisesteemPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

@@ -20,11 +20,11 @@ internal static class DataCenter
 {
     private static uint _hostileTargetId = 0xE000_0000;
 
-    internal static BattleChara? HostileTarget
+    internal static IBattleChara? HostileTarget
     {
         get
         {
-            return Svc.Objects.SearchById(_hostileTargetId) as BattleChara;
+            return Svc.Objects.SearchById(_hostileTargetId) as IBattleChara;
         }
         set
         {
@@ -308,17 +308,17 @@ internal static class DataCenter
 
     internal static TimelineItem[] TimelineItems { get; set; } = [];
 
-    public static BattleChara[] PartyMembers { get; internal set; } = [];
-    public static BattleChara[] AllianceMembers { get; internal set; } = [];
-    public static BattleChara[] AllHostileTargets { get; internal set; } = [];
+    public static IBattleChara[] PartyMembers { get; internal set; } = [];
+    public static IBattleChara[] AllianceMembers { get; internal set; } = [];
+    public static IBattleChara[] AllHostileTargets { get; internal set; } = [];
 
-    public static BattleChara? InterruptTarget { get; internal set; }
+    public static IBattleChara? InterruptTarget { get; internal set; }
 
-    public static BattleChara? ProvokeTarget { get; internal set; }
-    public static BattleChara? DeathTarget { get; internal set; }
-    public static BattleChara? DispelTarget { get; internal set; }
+    public static IBattleChara? ProvokeTarget { get; internal set; }
+    public static IBattleChara? DeathTarget { get; internal set; }
+    public static IBattleChara? DispelTarget { get; internal set; }
 
-    public static ObjectListDelay<BattleChara> AllTargets { get; } = new(() => Service.Config.TargetDelay);
+    public static ObjectListDelay<IBattleChara> AllTargets { get; } = new(() => Service.Config.TargetDelay);
 
     public static uint[] TreasureCharas { get; internal set; } = [];
     public static bool HasHostilesInRange => NumberOfHostilesInRange > 0;
@@ -361,8 +361,8 @@ internal static class DataCenter
 
     public static bool HasPet { get; internal set; }
 
-    public static unsafe bool HasCompanion => (IntPtr)Player.BattleChara != IntPtr.Zero
-                                           && (IntPtr)CharacterManager.Instance()->LookupBuddyByOwnerObject(Player.BattleChara) != IntPtr.Zero;
+    public static unsafe bool HasCompanion => (IntPtr)Player.IBattleChara != IntPtr.Zero
+                                           && (IntPtr)CharacterManager.Instance()->LookupBuddyByOwnerObject(Player.IBattleChara) != IntPtr.Zero;
 
     #region HP
     public static Dictionary<uint, float> RefinedHP { get; internal set; } = [];

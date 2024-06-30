@@ -11,7 +11,7 @@ namespace RotationSolver.Basic.Data;
 /// </remarks>
 /// <param name="getRange"></param>
 public class ObjectListDelay<T>(Func<(float min, float max)> getRange) 
-    : IEnumerable<T> where T : GameObject
+    : IEnumerable<T> where T : IGameObject
 {
     IEnumerable<T> _list = [];
     readonly Func<(float min, float max)> _getRange = getRange;

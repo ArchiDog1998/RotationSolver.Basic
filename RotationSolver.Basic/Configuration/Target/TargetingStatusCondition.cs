@@ -14,9 +14,9 @@ internal class TargetingStatusCondition : TargetingConditionBase
     [UI("Status Time")]
     public float StatusTime { get; set; } = 0;
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
-        if (obj is not BattleChara b) return false;
+        if (obj is not IBattleChara b) return false;
         var status = b.StatusList.FirstOrDefault(s => s.StatusId == (uint)Status);
         if (status == null) return false;
         if (status.RemainingTime > StatusTime) return false;

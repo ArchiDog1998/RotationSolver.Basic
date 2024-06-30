@@ -13,7 +13,7 @@ public class MacroInfo
     [UI("Is Shared")]
     public bool IsShared { get; set; }
 
-    public unsafe bool AddMacro(GameObject? tar = null)
+    public unsafe bool AddMacro(IGameObject? tar = null)
     {
         if (MacroIndex < 0 || MacroIndex > 99) return false;
 

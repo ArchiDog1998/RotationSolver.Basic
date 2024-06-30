@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BLU, global::ECommons.ExcelServices.Job.ADV)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BLU)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/bluemage"><strong>blue mage</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/bluemage"><strong>Blue Mage</strong></see>
 /// <br>Number of Actions: 131</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 6</br>
 /// </summary>
 public abstract partial class BlueMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -2367,15 +2367,42 @@ public abstract partial class BlueMageRotation : global::RotationSolver.Basic.Ro
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BeingMortalPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction BeingMortalPvE => _BeingMortalPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50219"><strong>Learning</strong></see> (BLU) [219]
+/// <para>Infrequently grants the ability to discern the secrets of enemy actions wielded in battle and make them your own.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LearningTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(219U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50220"><strong>Maim and Mend</strong></see> (BLU) [220]
+/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(220U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50221"><strong>Maim and Mend II</strong></see> (BLU) [221]
+/// <para>Increases base action damage and HP restoration by 20%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(221U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50222"><strong>Maim and Mend III</strong></see> (BLU) [222]
+/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(222U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50223"><strong>Maim and Mend IV</strong></see> (BLU) [223]
+/// <para>Increases base action damage and HP restoration by 40%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(223U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50224"><strong>Maim and Mend V</strong></see> (BLU) [224]
+/// <para>Increases base action damage and HP restoration by 50%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendVTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(224U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
-
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    static global::Dalamud.Game.ClientState.JobGauge.Types.BLUGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BLUGauge>();
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [LearningTrait, MaimAndMendTrait, MaimAndMendIiTrait, MaimAndMendIiiTrait, MaimAndMendIvTrait, MaimAndMendVTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

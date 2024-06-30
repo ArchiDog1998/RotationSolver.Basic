@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DRG, global::ECommons.ExcelServices.Job.ARC)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.DRG, global::ECommons.ExcelServices.Job.LNC)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/dragoon"><strong>dragoon</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/dragoon"><strong>Dragoon</strong></see>
 /// <br>Number of Actions: 47</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -855,12 +855,103 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StarcrossPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction StarcrossPvE => _StarcrossPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50163"><strong>Life of the Dragon</strong></see> (DRG) [163]
+/// <para>Upgrades Blood of the Dragon to Life of the Dragon.</para>
+/// <para>Life of the Dragon Effect: Increases damage dealt by 15%</para>
+/// <para>Upon successfully landing Geirskogul, grants 3 stacks of Nastrond Ready.</para>
+/// <para>Duration: 20s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LifeOfTheDragonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(163U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50247"><strong>Lance Mastery</strong></see> (DRG) [247]
+/// <para>Increases the potency of True Thrust to 230, Vorpal Thrust to 130, and Disembowel to 140.</para>
+/// <para>Grants Draconian Fire if Drakesbane is executed following Fang and Claw or Wheeling Thrust.</para>
+/// <para>Duration: 30s</para>
+/// <para>Effect of Draconian Fire ends upon execution of any melee weaponskill.</para>
+/// <para>Upgrades True Thrust to Raiden Thrust while under the effect of Draconian Fire.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LanceMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(247U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50275"><strong>Jump Mastery</strong></see> (DRG) [275]
+/// <para>Upgrades Jump to High Jump.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait JumpMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(275U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50434"><strong>Enhanced Jump</strong></see> (DRG) [434]
+/// <para>Increases the potency of Jump to 320.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedJumpTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(434U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50435"><strong>Enhanced Coerthan Torment</strong></see> (DRG) [435]
+/// <para>Grants the effect of Draconian Fire after successfully completing a combo with Coerthan Torment.</para>
+/// <para>Duration: 30s</para>
+/// <para>Effect of Draconian Fire ends upon execution of any melee weaponskill.</para>
+/// <para>Upgrades Doom Spike to Draconian Fury while under the effect of Draconian Fire.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedCoerthanTormentTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(435U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50437"><strong>Lance Mastery II</strong></see> (DRG) [437]
+/// <para>Upgrades Full Thrust to Heavens' Thrust and Chaos Thrust to Chaotic Spring. Also increases the potency of Drakesbane to 400.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LanceMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(437U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50438"><strong>Enhanced Life Surge</strong></see> (DRG) [438]
+/// <para>Allows the accumulation of charges for consecutive uses of Life Surge.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedLifeSurgeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(438U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50508"><strong>Lance Mastery III</strong></see> (DRG) [508]
+/// <para>Increases the potency of Geirskogul to 280 and Nastrond to 360.</para>
+/// <para>Allows for the sharpening of the Firstminds' Focus upon successfully landing Raiden Thrust or Draconian Fury, up to a maximum of 2 units.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LanceMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(508U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50580"><strong>Enhanced Winged Glide</strong></see> (DRG) [580]
+/// <para>Allows the accumulation of charges for consecutive uses of Winged Glide.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedWingedGlideTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(580U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50581"><strong>Enhanced Dragonfire Dive</strong></see> (DRG) [581]
+/// <para>Grants Dragon's Flight upon executing Dragonfire Dive.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDragonfireDiveTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(581U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50582"><strong>Lance Mastery IV</strong></see> (DRG) [582]
+/// <para>Upgrades Vorpal Thrust to Lance Barrage and Disembowel to Spiral Blow.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait LanceMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(582U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50583"><strong>Enhanced Stardiver</strong></see> (DRG) [583]
+/// <para>Grants Starcross Ready upon executing Stardiver.</para>
+/// <para>Duration: 20s</para>
+/// <para>Effect ends when Life of the Dragon expires.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedStardiverTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(583U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50641"><strong>Enhanced Feint</strong></see> (PGL LNC ROG MNK DRG NIN SAM RPR VPR) [641]
+/// <para>Extends the duration of Feint to 15 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFeintTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(641U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50642"><strong>Enhanced Second Wind</strong></see> (PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR) [642]
+/// <para>Increases the healing potency of Second Wind to 800.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50653"><strong>Melee Mastery</strong></see> (DRG) [653]
+/// <para>Increases the potency of Fang and Claw to 140, Wheeling Thrust to 140, Drakesbane to 440, Raiden Thrust to 320, Heavens' Thrust to 140, and Chaotic Spring to 140.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(653U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [LifeOfTheDragonTrait, LanceMasteryTrait, JumpMasteryTrait, EnhancedJumpTrait, EnhancedCoerthanTormentTrait, LanceMasteryIiTrait, EnhancedLifeSurgeTrait, LanceMasteryIiiTrait, EnhancedWingedGlideTrait, EnhancedDragonfireDiveTrait, LanceMasteryIvTrait, EnhancedStardiverTrait, EnhancedFeintTrait, EnhancedSecondWindTrait, MeleeMasteryTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge>();
@@ -885,11 +976,55 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
+        var setting = action.Setting;
+        ModifyBladedancePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BladedancePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
+
+    /// <inheritdoc cref="BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DragonsongDivePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4242, false);
+        var setting = action.Setting;
+        ModifyDragonsongDivePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="DragonsongDivePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDragonsongDivePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DragonsongDivePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction DragonsongDivePvE => _DragonsongDivePvECreator.Value;
+
+    /// <inheritdoc cref="DragonsongDivePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DragonsongDivePvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [TrueThrustPvE, VorpalThrustPvE, LifeSurgePvE, FullThrustPvE, LanceChargePvE, DoomSpikePvE, DisembowelPvE, ChaosThrustPvE, PiercingTalonPvE, JumpPvE, ElusiveJumpPvE, DragonfireDivePvE, FangAndClawPvE, GeirskogulPvE, WheelingThrustPvE, BattleLitanyPvE, SonicThrustPvE, MirageDivePvE, NastrondPvE, CoerthanTormentPvE, HighJumpPvE, RaidenThrustPvE, StardiverPvE, DraconianFuryPvE, HeavensThrustPvE, ChaoticSpringPvE, WyrmwindThrustPvE, RaidenThrustPvP, FangAndClawPvP, WheelingThrustPvP, HeavensThrustPvP, ChaoticSpringPvP, GeirskogulPvP, NastrondPvP, HighJumpPvP, ElusiveJumpPvP, WyrmwindThrustPvP, HorridRoarPvP, SkyHighPvP, SkyShatterPvP, WingedGlidePvE, DrakesbanePvE, RiseOfTheDragonPvE, LanceBarragePvE, SpiralBlowPvE, StarcrossPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [TrueThrustPvE, VorpalThrustPvE, LifeSurgePvE, FullThrustPvE, LanceChargePvE, DoomSpikePvE, DisembowelPvE, ChaosThrustPvE, PiercingTalonPvE, JumpPvE, ElusiveJumpPvE, DragonfireDivePvE, FangAndClawPvE, GeirskogulPvE, WheelingThrustPvE, BattleLitanyPvE, SonicThrustPvE, MirageDivePvE, NastrondPvE, CoerthanTormentPvE, HighJumpPvE, RaidenThrustPvE, StardiverPvE, DraconianFuryPvE, HeavensThrustPvE, ChaoticSpringPvE, WyrmwindThrustPvE, RaidenThrustPvP, FangAndClawPvP, WheelingThrustPvP, HeavensThrustPvP, ChaoticSpringPvP, GeirskogulPvP, NastrondPvP, HighJumpPvP, ElusiveJumpPvP, WyrmwindThrustPvP, HorridRoarPvP, SkyHighPvP, SkyShatterPvP, WingedGlidePvE, DrakesbanePvE, RiseOfTheDragonPvE, LanceBarragePvE, SpiralBlowPvE, StarcrossPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

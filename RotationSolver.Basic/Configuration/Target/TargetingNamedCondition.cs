@@ -20,7 +20,7 @@ internal class TargetingNamedCondition : TargetingConditionBase
     [ConditionSet, UI("Condition")]
     public string ConditionName { get; set; } = string.Empty;
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         foreach (var item in Service.Config.NamedTargetingConditions)
         {

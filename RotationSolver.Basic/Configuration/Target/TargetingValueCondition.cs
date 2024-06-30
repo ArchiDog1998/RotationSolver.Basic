@@ -21,9 +21,9 @@ internal class TargetingValueCondition : TargetingConditionBase
     [UI("Percent")]
     public float Percent { get; set; }
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
-        if (obj is not BattleChara battle) return false;
+        if (obj is not IBattleChara battle) return false;
 
         var value = PercentType switch
         {

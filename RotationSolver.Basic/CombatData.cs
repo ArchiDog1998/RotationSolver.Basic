@@ -1,4 +1,5 @@
 ﻿using Dalamud;
+using Dalamud.Game;
 using Dalamud.Game.ClientState.Conditions;
 using Dalamud.Game.ClientState.Objects.SubKinds;
 using Dalamud.Plugin.Services;
@@ -22,7 +23,7 @@ public static class CombatData
     /// <summary>
     /// This is the player.
     /// </summary>
-    public static PlayerCharacter Player => ECommons.GameHelpers.Player.Object;
+    public static IPlayerCharacter Player => ECommons.GameHelpers.Player.Object;
 
     /// <summary>
     /// Does player have swift cast, dual cast or triple cast.
@@ -76,12 +77,12 @@ public static class CombatData
     /// <summary>
     /// Party member.
     /// </summary>
-    public static IEnumerable<BattleChara> PartyMembers => DataCenter.PartyMembers;
+    public static IEnumerable<IBattleChara> PartyMembers => DataCenter.PartyMembers;
 
     /// <summary>
     /// Alliance members.
     /// </summary>
-    public static IEnumerable<BattleChara> AllianceMembers => DataCenter.AllianceMembers;
+    public static IEnumerable<IBattleChara> AllianceMembers => DataCenter.AllianceMembers;
 
     /// <summary>
     /// Whether the number of party members is 8.
@@ -113,17 +114,17 @@ public static class CombatData
     /// <br>WARNING: You'd better not use it. Because this target isn't the action's target. Try to use <see cref="IBaseAction.Target"/> or <seealso cref="HostileTarget"/> instead after using <seealso cref="IBaseAction.CanUse(out IAction, bool, bool, bool, bool, bool, bool, bool, byte)"/></br>
     /// </summary>
     [Obsolete("You'd better not use it. More information in summary.")]
-    public static BattleChara Target => Svc.Targets.Target is BattleChara b ? b : Player;
+    public static IBattleChara Target => Svc.Targets.Target is IBattleChara b ? b : Player;
 
     /// <summary>
     /// The player's target, or null if no valid target. (null clears the target)
     /// </summary>
-    public static BattleChara? CurrentTarget => Svc.Targets.Target is BattleChara b ? b : null;
+    public static IBattleChara? CurrentTarget => Svc.Targets.Target is IBattleChara b ? b : null;
 
     /// <summary>
     /// The last attacked hostile target.
     /// </summary>
-    public static BattleChara? HostileTarget => DataCenter.HostileTarget;
+    public static IBattleChara? HostileTarget => DataCenter.HostileTarget;
 
     /// <summary>
     /// Is there any hostile target in range? 25 for ranged jobs and healer, 3 for melee and tank.
@@ -164,7 +165,7 @@ public static class CombatData
     /// <summary>
     /// All hostile Targets. This is all can attack.
     /// </summary>
-    public static IEnumerable<BattleChara> AllHostileTargets => DataCenter.AllHostileTargets;
+    public static IEnumerable<IBattleChara> AllHostileTargets => DataCenter.AllHostileTargets;
 
     /// <summary>
     /// Average dead time of hostiles.

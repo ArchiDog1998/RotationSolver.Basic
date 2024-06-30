@@ -25,7 +25,7 @@ internal abstract class TargetingConditionBase : ICondition
     [ThreadStatic]
     private static Stack<TargetingConditionBase>? _callingStack;
 
-    public bool? IsTrue(GameObject obj)
+    public bool? IsTrue(IGameObject obj)
     {
         _callingStack ??= new(64);
 
@@ -47,5 +47,5 @@ internal abstract class TargetingConditionBase : ICondition
         }
     }
 
-    protected abstract bool IsTrueInside(GameObject obj);
+    protected abstract bool IsTrueInside(IGameObject obj);
 }

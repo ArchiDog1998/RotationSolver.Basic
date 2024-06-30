@@ -50,7 +50,7 @@ public enum TargetingType : byte
 
 internal static class TargetingTypeExtension
 {
-    public static BattleChara? FindTarget(this TargetingType type, IEnumerable<BattleChara> chara)
+    public static IBattleChara? FindTarget(this TargetingType type, IEnumerable<IBattleChara> chara)
     {
         if (!chara.Any()) return null;
 

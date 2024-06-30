@@ -37,7 +37,7 @@ internal class TargetingVfxCondition : TargetingConditionBase
     [UI("Time duration")]
     public Vector2 TimeDuration { get; set; } = new(0, 2);
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         return Recorder.GetData<VfxNewData>(TimeDuration).Any(effect =>
         {

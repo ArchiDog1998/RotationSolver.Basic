@@ -27,7 +27,7 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
             ..objs.SelectMany(GetObjectDrawing)];
     }
 
-    protected GameObject[] TargetGet(GameObject obj)
+    protected IGameObject[] TargetGet(IGameObject obj)
     {
         if (ManualTarget)
         {
@@ -40,12 +40,12 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
             return [tar];
         }
     }
-    private IDisposable[] GetTextDrawing(GameObject obj)
+    private IDisposable[] GetTextDrawing(IGameObject obj)
     {
         return [..TargetGet(obj).Select(TargetText.GetText)
             .Append(ObjectText.GetText(obj))
             .OfType<IDisposable>()];
     }
 
-    protected abstract IDisposable[] GetObjectDrawing(GameObject obj);
+    protected abstract IDisposable[] GetObjectDrawing(IGameObject obj);
 }

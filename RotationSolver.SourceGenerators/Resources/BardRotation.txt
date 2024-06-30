@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BRD, global::ECommons.ExcelServices.Job.CRP)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.BRD, global::ECommons.ExcelServices.Job.ARC)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/bard"><strong>bard</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/bard"><strong>Bard</strong></see>
 /// <br>Number of Actions: 45</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 23</br>
 /// </summary>
 public abstract partial class BardRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -819,12 +819,142 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.RadiantEncorePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction RadiantEncorePvE => _RadiantEncorePvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50017"><strong>Heavier Shot</strong></see> (ARC BRD) [17]
+/// <para>Adds to Heavy Shot a 20% chance to grant Hawk's Eye.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HeavierShotTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(17U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50018"><strong>Increased Action Damage</strong></see> (ARC BRD) [18]
+/// <para>Increases base action damage by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(18U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50020"><strong>Increased Action Damage II</strong></see> (ARC BRD) [20]
+/// <para>Increases base action damage by 20%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(20U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50168"><strong>Bite Mastery</strong></see> (BRD) [168]
+/// <para>Upgrades Venomous Bite and Windbite to Caustic Bite and Stormbite respectively.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BiteMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(168U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50169"><strong>Enhanced Empyreal Arrow</strong></see> (BRD) [169]
+/// <para>Guarantees the trigger of the additional effects for current Mage's Ballad, Army's Paeon, and the Wanderer's Minuet when Empyreal Arrow hits a target.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEmpyrealArrowTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(169U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50282"><strong>Straight Shot Mastery</strong></see> (BRD) [282]
+/// <para>Upgrades Straight Shot to Refulgent Arrow.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait StraightShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(282U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50283"><strong>Enhanced Quick Nock</strong></see> (ARC BRD) [283]
+/// <para>Adds to Quick Nock a 35% chance to grant Hawk's Eye.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedQuickNockTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(283U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50284"><strong>Bite Mastery II</strong></see> (BRD) [284]
+/// <para>Adds to Stormbite, Caustic Bite, and Iron Jaws a 35% chance to grant Hawk's Eye.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BiteMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(284U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50285"><strong>Heavy Shot Mastery</strong></see> (BRD) [285]
+/// <para>Upgrades Heavy Shot to Burst Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HeavyShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(285U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50286"><strong>Enhanced Army's Paeon</strong></see> (BRD) [286]
+/// <para>While under the effect of Army's Paeon with at least one stack of Repertoire, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse, reducing weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay.</para>
+/// <para>Duration: 10s</para>
+/// <para>Allowing the effect of Army's Paeon and accumulated stacks of Repertoire to expire without singing Mage's Ballad or the Wanderer's Minuet will grant Army's Ethos. </para>
+/// <para>Duration: 30s</para>
+/// <para>While under the effect of Army's Ethos, singing Mage's Ballad or the Wanderer's Minuet will grant Army's Muse. Both Army's Ethos and Army's Muse require stacks of Repertoire, the number of which will determine the potency of the latter.</para>
+/// <para>1 Repertoire:  1%</para>
+/// <para>2 Repertoire:  2%</para>
+/// <para>3 Repertoire:  4%</para>
+/// <para>4 Repertoire:  12%</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedArmysPaeonTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(286U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50287"><strong>Soul Voice</strong></see> (BRD) [287]
+/// <para>Increases Soul Voice Gauge by 5 each time Repertoire is granted.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SoulVoiceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(287U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50444"><strong>Quick Nock Mastery</strong></see> (BRD) [444]
+/// <para>Upgrades Quick Nock to Ladonsbite.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait QuickNockMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(444U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50445"><strong>Enhanced Bloodletter</strong></see> (BRD) [445]
+/// <para>Allows a third charge of Bloodletter and Rain of Death.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBloodletterTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(445U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50446"><strong>Enhanced Apex Arrow</strong></see> (BRD) [446]
+/// <para>Grants Blast Arrow Ready upon executing Apex Arrow after the Soul Voice Gauge has reached 80 or higher.</para>
+/// <para>Duration: 10s</para>
+/// <para>Apex Arrow becomes Blast Arrow while under this effect.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedApexArrowTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(446U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50447"><strong>Enhanced Troubadour</strong></see> (BRD) [447]
+/// <para>Reduces Troubadour recast time to 90 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTroubadourTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(447U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50448"><strong>Minstrel's Coda</strong></see> (BRD) [448]
+/// <para>Grants Mage's Coda, Army's Coda, or Wanderer's Coda upon singing Mage's Ballad, Army's Paeon, or the Wanderer's Minuet respectively.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MinstrelsCodaTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(448U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50598"><strong>Wide Volley Mastery</strong></see> (BRD) [598]
+/// <para>Upgrades Wide Volley to Shadowbite.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait WideVolleyMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(598U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50599"><strong>Bloodletter Mastery</strong></see> (BRD) [599]
+/// <para>Upgrades Bloodletter to Heartbreak Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BloodletterMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(599U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50600"><strong>Enhanced Barrage</strong></see> (BRD) [600]
+/// <para>Grants Resonant Arrow Ready upon executing Barrage.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBarrageTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(600U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50601"><strong>Enhanced Troubadour II</strong></see> (BRD) [601]
+/// <para>Improves Troubadour's damage reduction effect to 15%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTroubadourIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(601U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50602"><strong>Enhanced Radiant Finale</strong></see> (BRD) [602]
+/// <para>Grants Radiant Encore Ready upon executing Radiant Finale.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRadiantFinaleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(602U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50642"><strong>Enhanced Second Wind</strong></see> (PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR) [642]
+/// <para>Increases the healing potency of Second Wind to 800.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50668"><strong>Ranged Mastery</strong></see> (BRD) [668]
+/// <para>Increases the potency of Empyreal Arrow to 260, Sidewinder to 400, Refulgent Arrow to 280, Burst Shot to 220, and Apex Arrow to 120 up to 600.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait RangedMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(668U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [HeavierShotTrait, IncreasedActionDamageTrait, IncreasedActionDamageIiTrait, BiteMasteryTrait, EnhancedEmpyrealArrowTrait, StraightShotMasteryTrait, EnhancedQuickNockTrait, BiteMasteryIiTrait, HeavyShotMasteryTrait, EnhancedArmysPaeonTrait, SoulVoiceTrait, QuickNockMasteryTrait, EnhancedBloodletterTrait, EnhancedApexArrowTrait, EnhancedTroubadourTrait, MinstrelsCodaTrait, WideVolleyMasteryTrait, BloodletterMasteryTrait, EnhancedBarrageTrait, EnhancedTroubadourIiTrait, EnhancedRadiantFinaleTrait, EnhancedSecondWindTrait, RangedMasteryTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge>();
@@ -849,11 +979,55 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
 
     /// <inheritdoc cref="BigShotPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BigShotPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BigShotPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DesperadoPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4239, false);
+        var setting = action.Setting;
+        ModifyDesperadoPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="DesperadoPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDesperadoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DesperadoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction DesperadoPvE => _DesperadoPvECreator.Value;
+
+    /// <inheritdoc cref="DesperadoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => DesperadoPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SagittariusArrowPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4244, false);
+        var setting = action.Setting;
+        ModifySagittariusArrowPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="SagittariusArrowPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySagittariusArrowPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SagittariusArrowPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction SagittariusArrowPvE => _SagittariusArrowPvECreator.Value;
+
+    /// <inheritdoc cref="SagittariusArrowPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SagittariusArrowPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HeavyShotPvE, StraightShotPvE, VenomousBitePvE, RagingStrikesPvE, QuickNockPvE, BarragePvE, BloodletterPvE, RepellingShotPvE, WindbitePvE, MagesBalladPvE, ArmysPaeonPvE, RainOfDeathPvE, BattleVoicePvE, EmpyrealArrowPvE, TheWanderersMinuetPvE, IronJawsPvE, TheWardensPaeanPvE, SidewinderPvE, PitchPerfectPvE, TroubadourPvE, CausticBitePvE, StormbitePvE, NaturesMinnePvE, RefulgentArrowPvE, ShadowbitePvE, BurstShotPvE, ApexArrowPvE, LadonsbitePvE, BlastArrowPvE, RadiantFinalePvE, PowerfulShotPvP, PitchPerfectPvP, ApexArrowPvP, BlastArrowPvP, SilentNocturnePvP, EmpyrealArrowPvP, RepellingShotPvP, TheWardensPaeanPvP, FinalFantasiaPvP, WideVolleyPvE, HeartbreakShotPvE, ResonantArrowPvE, RadiantEncorePvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HeavyShotPvE, StraightShotPvE, VenomousBitePvE, RagingStrikesPvE, QuickNockPvE, BarragePvE, BloodletterPvE, RepellingShotPvE, WindbitePvE, MagesBalladPvE, ArmysPaeonPvE, RainOfDeathPvE, BattleVoicePvE, EmpyrealArrowPvE, TheWanderersMinuetPvE, IronJawsPvE, TheWardensPaeanPvE, SidewinderPvE, PitchPerfectPvE, TroubadourPvE, CausticBitePvE, StormbitePvE, NaturesMinnePvE, RefulgentArrowPvE, ShadowbitePvE, BurstShotPvE, ApexArrowPvE, LadonsbitePvE, BlastArrowPvE, RadiantFinalePvE, PowerfulShotPvP, PitchPerfectPvP, ApexArrowPvP, BlastArrowPvP, SilentNocturnePvP, EmpyrealArrowPvP, RepellingShotPvP, TheWardensPaeanPvP, FinalFantasiaPvP, WideVolleyPvE, HeartbreakShotPvE, ResonantArrowPvE, RadiantEncorePvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

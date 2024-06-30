@@ -124,15 +124,15 @@ partial class DragoonRotation
         };
     }
 
-    static partial void ModifyDragonSightPvE(ref ActionSetting setting)
-    {
-        setting.TargetType = TargetType.Melee;
-        setting.CanTarget = b => b != Player;
-        setting.CreateConfig = () => new()
-        {
-            TimeToKill = 10,
-        };
-    }
+    //static partial void ModifyDragonSightPvE(ref ActionSetting setting)
+    //{
+    //    setting.TargetType = TargetType.Melee;
+    //    setting.CanTarget = b => b != Player;
+    //    setting.CreateConfig = () => new()
+    //    {
+    //        TimeToKill = 10,
+    //    };
+    //}
 
     static partial void ModifyBattleLitanyPvE(ref ActionSetting setting)
     {

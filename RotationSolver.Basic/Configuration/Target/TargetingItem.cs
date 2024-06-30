@@ -31,7 +31,7 @@ internal class TargetingItem
     [UI("Targeting Type")]
     public TargetingType TargetingType { get; set; } = TargetingType.Big;
 
-    public BattleChara? FindTarget(IEnumerable<BattleChara> characters)
+    public IBattleChara? FindTarget(IEnumerable<IBattleChara> characters)
     {
         return TargetingType.FindTarget(characters.Where(t => ConditionSet.IsTrue(t) ?? false));
     }
