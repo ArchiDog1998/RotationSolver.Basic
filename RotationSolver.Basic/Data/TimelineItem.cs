@@ -1,4 +1,5 @@
-﻿using ECommons.DalamudServices;
+﻿using Dalamud.Game;
+using ECommons.DalamudServices;
 using Newtonsoft.Json.Linq;
 using System.Globalization;
 using System.Text.RegularExpressions;
@@ -100,11 +101,11 @@ public class TimelineItem
         {
             var key = Svc.ClientState.ClientLanguage switch
             {
-                Dalamud.ClientLanguage.Japanese => "ja",
-                Dalamud.ClientLanguage.German => "de",
-                Dalamud.ClientLanguage.French => "fr",
-                (Dalamud.ClientLanguage)4 => "cn", 
-                (Dalamud.ClientLanguage)5 => "ko",
+                ClientLanguage.Japanese => "ja",
+                ClientLanguage.German => "de",
+                ClientLanguage.French => "fr",
+                (ClientLanguage)4 => "cn", 
+                (ClientLanguage)5 => "ko",
                 _ => "",
             };
 

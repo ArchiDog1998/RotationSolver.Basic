@@ -332,6 +332,8 @@ public struct ActionTargetInfo(IBaseAction action)
                     var closest = pts.MinBy(p => Vector3.Distance(player.Position, p));
                     var rotation = new Random().NextDouble() * Math.Tau;
                     var radius = new Random().NextDouble() * 1;
+                    if (closest == null) break;
+
                     closest.X += (float)(Math.Sin(rotation) * radius);
                     closest.Z += (float)(Math.Cos(rotation) * radius);
                     if (Vector3.Distance(player.Position, closest) < player.HitboxRadius + EffectRange)

@@ -144,10 +144,10 @@ partial class GunbreakerRotation
         };
     }
 
-    static partial void ModifyRoughDividePvE(ref ActionSetting setting)
-    {
-        setting.SpecialType = SpecialActionType.MovingForward;
-    }
+    //static partial void ModifyRoughDividePvE(ref ActionSetting setting)
+    //{
+    //    setting.SpecialType = SpecialActionType.MovingForward;
+    //}
 
     /// <inheritdoc/>
     protected override bool EmergencyAbility(IAction nextGCD, out IAction? act)
@@ -157,12 +157,12 @@ partial class GunbreakerRotation
         return base.EmergencyAbility(nextGCD, out act);
     }
 
-    /// <inheritdoc/>
-    protected override bool MoveForwardAbility(out IAction? act)
-    {
-        if (RoughDividePvE.CanUse(out act)) return true;
-        return false;
-    }
+    ///// <inheritdoc/>
+    //protected override bool MoveForwardAbility(out IAction? act)
+    //{
+    //    if (RoughDividePvE.CanUse(out act)) return true;
+    //    return false;
+    //}
 
     /// <inheritdoc/>
     protected override bool LimitBreakPvPGCD(out IAction? act)

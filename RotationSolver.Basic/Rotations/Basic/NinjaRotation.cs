@@ -50,10 +50,10 @@ partial class NinjaRotation
         setting.ActionCheck = () => HutonEndAfter(25) && !HutonEndAfterGCD();
     }
 
-    static partial void ModifyHuraijinPvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => HutonEndAfterGCD();
-    }
+    //static partial void ModifyHuraijinPvE(ref ActionSetting setting)
+    //{
+    //    setting.ActionCheck = () => HutonEndAfterGCD();
+    //}
 
     static partial void ModifyPhantomKamaitachiPvE(ref ActionSetting setting)
     {

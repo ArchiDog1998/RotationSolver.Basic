@@ -213,11 +213,11 @@ partial class BlackMageRotation
         setting.StatusNeed = [StatusID.LeyLines];
     }
 
-    static partial void ModifySharpcastPvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => HasHostilesInRange;
-        setting.StatusProvide = [StatusID.Sharpcast];
-    }
+    //static partial void ModifySharpcastPvE(ref ActionSetting setting)
+    //{
+    //    setting.ActionCheck = () => HasHostilesInRange;
+    //    setting.StatusProvide = [StatusID.Sharpcast];
+    //}
 
     static partial void ModifyTriplecastPvE(ref ActionSetting setting)
     {
