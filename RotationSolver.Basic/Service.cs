@@ -60,9 +60,9 @@ internal class Service : IDisposable
     }
 
     // From https://github.com/UnknownX7/Cammy/blob/master/Game.cs#L31
-    [Signature("F3 0F 10 05 ?? ?? ?? ?? 0F 2E C6 0F 8A", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible)]
+    [Signature("48 8D 0D ?? ?? ?? ?? 66 C7 05 ?? ?? ?? ?? ?? ??", ScanType = ScanType.StaticAddress, Fallibility = Fallibility.Infallible)]
     static IntPtr forceDisableMovementPtr = IntPtr.Zero;
-    private static unsafe ref int ForceDisableMovement => ref *(int*)(forceDisableMovementPtr + 4);
+    private static unsafe ref int ForceDisableMovement => ref *(int*)(forceDisableMovementPtr + 0x54C);
 
     static bool _canMove = true;
     internal static unsafe bool CanMove

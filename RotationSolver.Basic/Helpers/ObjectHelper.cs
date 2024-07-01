@@ -183,7 +183,7 @@ public static class ObjectHelper
     internal static bool IsParty(this IGameObject IGameObject)
     {
         if (IGameObject.EntityId == Player.Object.EntityId) return true;
-        if (Svc.Party.Any(p => p.IGameObject?.EntityId == IGameObject.EntityId)) return true;
+        if (Svc.Party.Any(p => p.GameObject?.EntityId == IGameObject.EntityId)) return true;
         if (IGameObject.SubKind == 9) return true;
         return false;
     }
