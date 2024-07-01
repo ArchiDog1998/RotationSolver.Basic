@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST, global::ECommons.ExcelServices.Job.CUL)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>astrologian</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>Astrologian</strong></see>
 /// <br>Number of Actions: 62</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class AstrologianRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1125,12 +1125,122 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SunSignPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction SunSignPvE => _SunSignPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50122"><strong>Maim and Mend</strong></see> (AST) [122]
+/// <para>Increases base action damage and HP restoration by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(122U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50124"><strong>Enhanced Benefic</strong></see> (AST) [124]
+/// <para>Grants a 15% chance that your next Benefic II will restore critical HP.</para>
+/// <para>Duration: 15s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBeneficTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(124U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50125"><strong>Maim and Mend II</strong></see> (AST) [125]
+/// <para>Increases base action damage and HP restoration by 30%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(125U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50186"><strong>Combust Mastery</strong></see> (AST) [186]
+/// <para>Upgrades Combust to Combust II.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait CombustMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(186U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50187"><strong>Malefic Mastery</strong></see> (AST) [187]
+/// <para>Upgrades Malefic to Malefic II.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(187U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50188"><strong>Malefic Mastery II</strong></see> (AST) [188]
+/// <para>Upgrades Malefic II to Malefic III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(188U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50189"><strong>Hyper Lightspeed</strong></see> (AST) [189]
+/// <para>Reduces Lightspeed recast time to 90 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HyperLightspeedTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(189U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50314"><strong>Combust Mastery II</strong></see> (AST) [314]
+/// <para>Upgrades Combust II to Combust III.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait CombustMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(314U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50315"><strong>Malefic Mastery III</strong></see> (AST) [315]
+/// <para>Upgrades Malefic III to Malefic IV.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(315U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50316"><strong>Enhanced Essential Dignity</strong></see> (AST) [316]
+/// <para>Allows the accumulation of charges for consecutive uses of Essential Dignity.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEssentialDignityTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(316U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50497"><strong>Malefic Mastery IV</strong></see> (AST) [497]
+/// <para>Upgrades Malefic IV to Fall Malefic.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(497U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50498"><strong>Gravity Mastery</strong></see> (AST) [498]
+/// <para>Upgrades Gravity to Gravity II.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait GravityMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(498U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50499"><strong>Enhanced Healing Magic</strong></see> (AST) [499]
+/// <para>Increases the healing potency of Benefic to 500, Helios to 400, Benefic II to 800, Aspected Benefic to 250, Aspected Benefic's Regen effect to 250, Aspected Helios to 250, and Aspected Helios's Regen effect to 150.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHealingMagicTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(499U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50500"><strong>Enhanced Celestial Intersection</strong></see> (AST) [500]
+/// <para>Allows the accumulation of charges for consecutive uses of Celestial Intersection.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedCelestialIntersectionTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(500U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50631"><strong>Minor Arcana Mastery</strong></see> (AST) [631]
+/// <para>Lord of Crowns can be drawn when executing Astral Draw, and Lady of Crowns can be drawn when executing Umbral Draw.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MinorArcanaMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(631U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50632"><strong>Enhanced Divination</strong></see> (AST) [632]
+/// <para>Grants Divining upon executing Divination.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedDivinationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(632U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50633"><strong>Aspected Helios Mastery</strong></see> (AST) [633]
+/// <para>Upgrades Aspected Helios to Helios Conjunction.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait AspectedHeliosMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(633U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50634"><strong>Enhanced Essential Dignity II</strong></see> (AST) [634]
+/// <para>Allows a third charge of Essential Dignity.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEssentialDignityIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(634U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50635"><strong>Enhanced Neutral Sect</strong></see> (AST) [635]
+/// <para>Grants Suntouched upon executing Neutral Sect.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedNeutralSectTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(635U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50644"><strong>Enhanced Swiftcast</strong></see> (CNJ THM WHM BLM ACN SMN SCH AST RDM SGE PCT) [644]
+/// <para>Reduces Swiftcast recast time to 40 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50673"><strong>Magick Mastery</strong></see> (AST) [673]
+/// <para>Increases the potency of Combust III's damage over time to 70 and Fall Malefic to 270.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(673U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [MaimAndMendTrait, EnhancedBeneficTrait, MaimAndMendIiTrait, CombustMasteryTrait, MaleficMasteryTrait, MaleficMasteryIiTrait, HyperLightspeedTrait, CombustMasteryIiTrait, MaleficMasteryIiiTrait, EnhancedEssentialDignityTrait, MaleficMasteryIvTrait, GravityMasteryTrait, EnhancedHealingMagicTrait, EnhancedCelestialIntersectionTrait, MinorArcanaMasteryTrait, EnhancedDivinationTrait, AspectedHeliosMasteryTrait, EnhancedEssentialDignityIiTrait, EnhancedNeutralSectTrait, EnhancedSwiftcastTrait, MagickMasteryTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge>();
@@ -1155,11 +1265,55 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
 
     /// <inheritdoc cref="HealingWindPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => HealingWindPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => HealingWindPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BreathOfTheEarthPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)207, false);
+        var setting = action.Setting;
+        ModifyBreathOfTheEarthPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BreathOfTheEarthPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBreathOfTheEarthPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BreathOfTheEarthPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction BreathOfTheEarthPvE => _BreathOfTheEarthPvECreator.Value;
+
+    /// <inheritdoc cref="BreathOfTheEarthPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BreathOfTheEarthPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _AstralStasisPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4248, false);
+        var setting = action.Setting;
+        ModifyAstralStasisPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="AstralStasisPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyAstralStasisPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.AstralStasisPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction AstralStasisPvE => _AstralStasisPvECreator.Value;
+
+    /// <inheritdoc cref="AstralStasisPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => AstralStasisPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BeneficPvE, AspectedBeneficPvE, MaleficPvE, MaleficIiPvE, CombustPvE, HeliosPvE, AspectedHeliosPvE, AscendPvE, LightspeedPvE, CombustIiPvE, BeneficIiPvE, SynastryPvE, CollectiveUnconsciousPvE, EssentialDignityPvE, GravityPvE, EarthlyStarPvE, MaleficIiiPvE, LordOfCrownsPvE, LadyOfCrownsPvE, StellarDetonationPvE, DivinationPvE, CelestialOppositionPvE, CombustIiiPvE, MaleficIvPvE, CelestialIntersectionPvE, HoroscopePvE, NeutralSectPvE, FallMaleficPvE, GravityIiPvE, ExaltationPvE, MacrocosmosPvE, MicrocosmosPvE, FallMaleficPvP, AspectedBeneficPvP, GravityIiPvP, DoubleCastPvP, DrawPvP, TheBalancePvP, MacrocosmosPvP, MicrocosmosPvP, CelestialRiverPvP, TheBolePvP, TheArrowPvP, AstralDrawPvE, UmbralDrawPvE, PlayIPvE, PlayIiPvE, PlayIiiPvE, MinorArcanaPvE, TheBalancePvE, TheArrowPvE, TheSpirePvE, TheSpearPvE, TheBolePvE, TheEwerPvE, OraclePvE, HeliosConjunctionPvE, SunSignPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BeneficPvE, AspectedBeneficPvE, MaleficPvE, MaleficIiPvE, CombustPvE, HeliosPvE, AspectedHeliosPvE, AscendPvE, LightspeedPvE, CombustIiPvE, BeneficIiPvE, SynastryPvE, CollectiveUnconsciousPvE, EssentialDignityPvE, GravityPvE, EarthlyStarPvE, MaleficIiiPvE, LordOfCrownsPvE, LadyOfCrownsPvE, StellarDetonationPvE, DivinationPvE, CelestialOppositionPvE, CombustIiiPvE, MaleficIvPvE, CelestialIntersectionPvE, HoroscopePvE, NeutralSectPvE, FallMaleficPvE, GravityIiPvE, ExaltationPvE, MacrocosmosPvE, MicrocosmosPvE, FallMaleficPvP, AspectedBeneficPvP, GravityIiPvP, DoubleCastPvP, DrawPvP, TheBalancePvP, MacrocosmosPvP, MicrocosmosPvP, CelestialRiverPvP, TheBolePvP, TheArrowPvP, AstralDrawPvE, UmbralDrawPvE, PlayIPvE, PlayIiPvE, PlayIiiPvE, MinorArcanaPvE, TheBalancePvE, TheArrowPvE, TheSpirePvE, TheSpearPvE, TheBolePvE, TheEwerPvE, OraclePvE, HeliosConjunctionPvE, SunSignPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

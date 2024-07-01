@@ -28,7 +28,7 @@ internal class ObjectLockOnGetter : ObjectGetterBase
     public string Path { get; set; } = LockOnOmen.Share4.LockOn();
 
 
-    protected override IDisposable[] GetObjectDrawing(GameObject obj)
+    protected override IDisposable[] GetObjectDrawing(IGameObject obj)
     {
         if (string.IsNullOrEmpty(Path)) return [];
 

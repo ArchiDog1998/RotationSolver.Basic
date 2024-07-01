@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MNK, global::ECommons.ExcelServices.Job.LNC)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MNK, global::ECommons.ExcelServices.Job.PGL)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/monk"><strong>monk</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/monk"><strong>Monk</strong></see>
 /// <br>Number of Actions: 55</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -999,12 +999,122 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FiresReplyPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction FiresReplyPvE => _FiresReplyPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50160"><strong>Deep Meditation</strong></see> (MNK) [160]
+/// <para>Grants an 80% chance that a chakra will open upon dealing critical damage with a weaponskill.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait DeepMeditationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(160U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50245"><strong>Deep Meditation II</strong></see> (MNK) [245]
+/// <para>Guarantees that a chakra will open upon dealing critical damage with a weaponskill.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait DeepMeditationIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(245U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50364"><strong>Greased Lightning</strong></see> (PGL MNK) [364]
+/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 5%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait GreasedLightningTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(364U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50365"><strong>Enhanced Greased Lightning</strong></see> (PGL MNK) [365]
+/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(365U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50366"><strong>Enhanced Greased Lightning II</strong></see> (MNK) [366]
+/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(366U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50367"><strong>Enhanced Greased Lightning III</strong></see> (MNK) [367]
+/// <para>Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 20%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(367U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50428"><strong>Steel Peak Mastery</strong></see> (MNK) [428]
+/// <para>Upgrades Bootshine to The Forbidden Chakra and Steel Peak to The Forbidden Chakra.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SteelPeakMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(428U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50429"><strong>Howling Fist Mastery</strong></see> (MNK) [429]
+/// <para>Upgrades Inspirited Meditation to Enlightened Meditation and Howling Fist to Enlightenment.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HowlingFistMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(429U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50430"><strong>Arm of the Destroyer Mastery</strong></see> (MNK) [430]
+/// <para>Upgrades Arm of the Destroyer to Shadow of the Destroyer.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait ArmOfTheDestroyerMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(430U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50431"><strong>Enhanced Thunderclap</strong></see> (MNK) [431]
+/// <para>Allows a third charge of Thunderclap.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedThunderclapTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(431U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50432"><strong>Enhanced Brotherhood</strong></see> (MNK) [432]
+/// <para>Guarantees that a chakra will open when you are under the effect of Meditative Brotherhood and execute a weaponskill or cast a spell.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBrotherhoodTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(432U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50433"><strong>Enhanced Perfect Balance</strong></see> (MNK) [433]
+/// <para>When under the effect of Perfect Balance, grants Beast Chakra in accordance with the form granted by the executed weaponskills.</para>
+/// <para>Weaponskills granting opo-opo form will also grant Coeurl Chakra.</para>
+/// <para>Weaponskills granting raptor form will also grant Opo-opo Chakra.</para>
+/// <para>Weaponskills granting coeurl form will also grant Raptor Chakra.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedPerfectBalanceTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(433U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50512"><strong>Flint Strike Mastery</strong></see> (MNK) [512]
+/// <para>Upgrades Flint Strike to Rising Phoenix.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait FlintStrikeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(512U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50513"><strong>Tornado Kick Mastery</strong></see> (MNK) [513]
+/// <para>Upgrades Tornado Kick to Phantom Rush.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait TornadoKickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(513U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50518"><strong>Melee Mastery</strong></see> (MNK) [518]
+/// <para>Increases the potency of Bootshine to 220, True Strike to 290, Snap Punch to 300, Twin Snakes to 340, Demolish to 300, Dragon Kick to 280, and The Forbidden Chakra to 400.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(518U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50577"><strong>Beast Chakra Mastery</strong></see> (MNK) [577]
+/// <para>Upgrades Bootshine to Leaping Opo, True Strike to Rising Raptor, Snap Punch to Pouncing Coeurl, and Elixir Field to Elixir Burst.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait BeastChakraMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(577U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50578"><strong>Enhanced Riddle of Wind</strong></see> (MNK) [578]
+/// <para>Grants Wind's Rumination upon executing Riddle of Wind.</para>
+/// <para>Duration: 15s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRiddleOfWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(578U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50579"><strong>Enhanced Riddle of Fire</strong></see> (MNK) [579]
+/// <para>Grants Fire's Rumination upon executing Riddle of Fire.</para>
+/// <para>Duration: 20s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRiddleOfFireTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(579U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50641"><strong>Enhanced Feint</strong></see> (PGL LNC ROG MNK DRG NIN SAM RPR VPR) [641]
+/// <para>Extends the duration of Feint to 15 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFeintTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(641U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50642"><strong>Enhanced Second Wind</strong></see> (PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR) [642]
+/// <para>Increases the healing potency of Second Wind to 800.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50660"><strong>Melee Mastery II</strong></see> (MNK) [660]
+/// <para>Increases the potency of Twin Snakes to 380, Demolish to 340, Dragon Kick to 320, and Six-sided Star to 780.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [DeepMeditationTrait, DeepMeditationIiTrait, GreasedLightningTrait, EnhancedGreasedLightningTrait, EnhancedGreasedLightningIiTrait, EnhancedGreasedLightningIiiTrait, SteelPeakMasteryTrait, HowlingFistMasteryTrait, ArmOfTheDestroyerMasteryTrait, EnhancedThunderclapTrait, EnhancedBrotherhoodTrait, EnhancedPerfectBalanceTrait, FlintStrikeMasteryTrait, TornadoKickMasteryTrait, MeleeMasteryTrait, BeastChakraMasteryTrait, EnhancedRiddleOfWindTrait, EnhancedRiddleOfFireTrait, EnhancedFeintTrait, EnhancedSecondWindTrait, MeleeMasteryIiTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge>();
@@ -1029,11 +1139,55 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
+        var setting = action.Setting;
+        ModifyBladedancePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BladedancePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
+
+    /// <inheritdoc cref="BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _FinalHeavenPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)202, false);
+        var setting = action.Setting;
+        ModifyFinalHeavenPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="FinalHeavenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyFinalHeavenPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FinalHeavenPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction FinalHeavenPvE => _FinalHeavenPvECreator.Value;
+
+    /// <inheritdoc cref="FinalHeavenPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => FinalHeavenPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BootshinePvE, TrueStrikePvE, SnapPunchPvE, TwinSnakesPvE, ArmOfTheDestroyerPvE, MantraPvE, DemolishPvE, PerfectBalancePvE, RockbreakerPvE, DragonKickPvE, TornadoKickPvE, ElixirFieldPvE, TheForbiddenChakraPvE, FormShiftPvE, RiddleOfEarthPvE, RiddleOfFirePvE, BrotherhoodPvE, FourpointFuryPvE, EnlightenmentPvE, SixsidedStarPvE, SteelPeakPvE, ThunderclapPvE, HowlingFistPvE, MasterfulBlitzPvE, CelestialRevolutionPvE, RiddleOfWindPvE, ShadowOfTheDestroyerPvE, RisingPhoenixPvE, PhantomRushPvE, FlintStrikePvE, BootshinePvP, TrueStrikePvP, SnapPunchPvP, DragonKickPvP, TwinSnakesPvP, DemolishPvP, PhantomRushPvP, SixsidedStarPvP, EnlightenmentPvP, RisingPhoenixPvP, RiddleOfEarthPvP, EarthsReplyPvP, ThunderclapPvP, MeteodrivePvP, SteeledMeditationPvE, InspiritedMeditationPvE, ForbiddenMeditationPvE, EnlightenedMeditationPvE, EarthsReplyPvE, LeapingOpoPvE, RisingRaptorPvE, PouncingCoeurlPvE, ElixirBurstPvE, WindsReplyPvE, FiresReplyPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [BootshinePvE, TrueStrikePvE, SnapPunchPvE, TwinSnakesPvE, ArmOfTheDestroyerPvE, MantraPvE, DemolishPvE, PerfectBalancePvE, RockbreakerPvE, DragonKickPvE, TornadoKickPvE, ElixirFieldPvE, TheForbiddenChakraPvE, FormShiftPvE, RiddleOfEarthPvE, RiddleOfFirePvE, BrotherhoodPvE, FourpointFuryPvE, EnlightenmentPvE, SixsidedStarPvE, SteelPeakPvE, ThunderclapPvE, HowlingFistPvE, MasterfulBlitzPvE, CelestialRevolutionPvE, RiddleOfWindPvE, ShadowOfTheDestroyerPvE, RisingPhoenixPvE, PhantomRushPvE, FlintStrikePvE, BootshinePvP, TrueStrikePvP, SnapPunchPvP, DragonKickPvP, TwinSnakesPvP, DemolishPvP, PhantomRushPvP, SixsidedStarPvP, EnlightenmentPvP, RisingPhoenixPvP, RiddleOfEarthPvP, EarthsReplyPvP, ThunderclapPvP, MeteodrivePvP, SteeledMeditationPvE, InspiritedMeditationPvE, ForbiddenMeditationPvE, EnlightenedMeditationPvE, EarthsReplyPvE, LeapingOpoPvE, RisingRaptorPvE, PouncingCoeurlPvE, ElixirBurstPvE, WindsReplyPvE, FiresReplyPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

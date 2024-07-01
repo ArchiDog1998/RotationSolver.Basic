@@ -57,10 +57,10 @@ internal static class Recorder
         }
     }
 
-    private static GameObject[] _lastObjs = [];
+    private static IGameObject[] _lastObjs = [];
     private static void UpdateObjectNewData()
     {
-        var objs = Svc.Objects.Where(obj => obj is not PlayerCharacter);
+        var objs = Svc.Objects.Where(obj => obj is not IPlayerCharacter);
 
         foreach (var obj in objs.Except(_lastObjs))
         {
@@ -70,7 +70,7 @@ internal static class Recorder
         _lastObjs = [.. objs];
     }
 
-    private static BattleChara[] _lastCastingObjs = [];
+    private static IBattleChara[] _lastCastingObjs = [];
     private static void UpdateCastingObjectData()
     {
         var castingObjects = DataCenter.AllHostileTargets.Where(b =>

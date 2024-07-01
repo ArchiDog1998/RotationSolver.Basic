@@ -41,7 +41,7 @@ internal class TextDrawing
         };
     }
 
-    public Drawing3DText? GetText(GameObject obj)
+    public Drawing3DText? GetText(IGameObject obj)
     {
         var text = GetText(obj.Position);
 

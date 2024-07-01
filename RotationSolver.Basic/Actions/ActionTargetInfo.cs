@@ -76,10 +76,10 @@ public struct ActionTargetInfo(IBaseAction action)
     }
 
     #region Target Finder.
-    private readonly IEnumerable<BattleChara> GetCanTargets(bool skipStatusProvideCheck, TargetType type)
+    private readonly IEnumerable<IBattleChara> GetCanTargets(bool skipStatusProvideCheck, TargetType type)
     {
         var items = TargetFilter.GetObjectInRadius(DataCenter.AllTargets, Range);
-        var objs = new List<BattleChara>(items.Count());
+        var objs = new List<IBattleChara>(items.Count());
 
         foreach (var obj in items)
         {
@@ -103,7 +103,7 @@ public struct ActionTargetInfo(IBaseAction action)
             .Where(InViewTarget).Where(action.Setting.CanTarget);
     }
 
-    private readonly List<BattleChara> GetCanAffects(bool skipStatusProvideCheck, TargetType type)
+    private readonly List<IBattleChara> GetCanAffects(bool skipStatusProvideCheck, TargetType type)
     {
         if (EffectRange == 0) return [];
 
@@ -117,7 +117,7 @@ public struct ActionTargetInfo(IBaseAction action)
             items = items.Where(i => i.GetHealthRatio() < 1);
         }
 
-        var objs = new List<BattleChara>(items.Count());
+        var objs = new List<IBattleChara>(items.Count());
 
         foreach (var obj in items)
         {
@@ -128,15 +128,15 @@ public struct ActionTargetInfo(IBaseAction action)
         return objs;
     }
 
-    private static bool InViewTarget(BattleChara gameObject)
+    private static bool InViewTarget(IBattleChara IGameObject)
     {
         if (Service.Config.OnlyAttackInView)
         {
-            if (!Svc.GameGui.WorldToScreen(gameObject.Position, out _)) return false;
+            if (!Svc.GameGui.WorldToScreen(IGameObject.Position, out _)) return false;
         }
         if (Service.Config.OnlyAttackInVisionCone)
         {
-            Vector3 dir = gameObject.Position - Player.Object.Position;
+            Vector3 dir = IGameObject.Position - Player.Object.Position;
             Vector2 dirVec = new(dir.Z, dir.X);
             double angle = Player.Object.GetFaceVector().AngleTo(dirVec);
             if (angle > Math.PI * Service.Config.AngleOfVisionCone / 360)
@@ -147,7 +147,7 @@ public struct ActionTargetInfo(IBaseAction action)
         return true;
     }
 
-    private readonly unsafe bool CanUseTo(GameObject tar)
+    private readonly unsafe bool CanUseTo(IGameObject tar)
     {
         if (tar == null || !Player.Available) return false;
         if (tar.EntityId == 0xE000_0000) return false;
@@ -162,53 +162,53 @@ public struct ActionTargetInfo(IBaseAction action)
         return tar.CanSee();
     }
 
-    private readonly bool GeneralCheck(BattleChara gameObject, bool skipStatusProvideCheck)
+    private readonly bool GeneralCheck(IBattleChara IGameObject, bool skipStatusProvideCheck)
     {
-        if (!gameObject.IsTargetable) return false;
+        if (!IGameObject.IsTargetable) return false;
 
         if (!Service.Config.TargetAllForFriendly
-            && gameObject.IsAlliance() && !gameObject.IsParty())
+            && IGameObject.IsAlliance() && !IGameObject.IsParty())
         {
             return false;
         }
 
-        if (gameObject.IsEnemy())
+        if (IGameObject.IsEnemy())
         {
             //Can't attack.
-            if (!gameObject.IsAttackable()) return false;
+            if (!IGameObject.IsAttackable()) return false;
         }
 
-        return CheckStatus(gameObject, skipStatusProvideCheck) 
-            && CheckTimeToKill(gameObject);
+        return CheckStatus(IGameObject, skipStatusProvideCheck) 
+            && CheckTimeToKill(IGameObject);
     }
 
-    private readonly bool CheckStatus(GameObject gameObject, bool skipStatusProvideCheck)
+    private readonly bool CheckStatus(IGameObject IGameObject, bool skipStatusProvideCheck)
     {
         if (!action.Config.ShouldCheckStatus) return true;
 
         if (action.Setting.TargetStatusNeed != null)
         {
-            if (gameObject.WillStatusEndGCD(0, 0,
+            if (IGameObject.WillStatusEndGCD(0, 0,
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusNeed)) return false;
         }
 
         if (action.Setting.TargetStatusProvide != null && !skipStatusProvideCheck)
         {
-            if (!gameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
+            if (!IGameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusProvide)) return false;
         }
 
         if (action.Setting.TargetStatusPenalty != null)
         {
-            if (!gameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
+            if (!IGameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusPenalty)) return false;
         }
         return true;
     }
 
-    private readonly bool CheckTimeToKill(GameObject gameObject)
+    private readonly bool CheckTimeToKill(IGameObject IGameObject)
     {
-        if (gameObject is not BattleChara b) return false;
+        if (IGameObject is not IBattleChara b) return false;
         var time = b.GetTimeToKill();
         return float.IsNaN(time) || time >= action.Config.TimeToKill;
     }
@@ -246,8 +246,8 @@ public struct ActionTargetInfo(IBaseAction action)
         return new(target, [.. GetAffects(target, canAffects)], target.Position);
     }
 
-    private readonly TargetResult? FindTargetArea(IEnumerable<BattleChara> canTargets, IEnumerable<BattleChara> canAffects,
-        float range, PlayerCharacter player)
+    private readonly TargetResult? FindTargetArea(IEnumerable<IBattleChara> canTargets, IEnumerable<IBattleChara> canAffects,
+        float range, IPlayerCharacter player)
     {
         if (action.Setting.TargetType is TargetType.Move)
         {
@@ -267,7 +267,7 @@ public struct ActionTargetInfo(IBaseAction action)
     }
 
 
-    private readonly TargetResult? FindTargetAreaHostile(IEnumerable<BattleChara> canTargets, IEnumerable<BattleChara> canAffects, int aoeCount)
+    private readonly TargetResult? FindTargetAreaHostile(IEnumerable<IBattleChara> canTargets, IEnumerable<IBattleChara> canAffects, int aoeCount)
     {
         var target = GetMostCanTargetObjects(canTargets, canAffects, aoeCount)
             .OrderByDescending(ObjectHelper.GetHealthRatio).FirstOrDefault();
@@ -308,7 +308,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
     }
 
-    private readonly TargetResult? FindTargetAreaFriend(float range, IEnumerable<BattleChara> canAffects, PlayerCharacter player)
+    private readonly TargetResult? FindTargetAreaFriend(float range, IEnumerable<IBattleChara> canAffects, IPlayerCharacter player)
     {
         var strategy = Service.Config.BeneficialAreaStrategy;
         switch (strategy)
@@ -321,7 +321,7 @@ public struct ActionTargetInfo(IBaseAction action)
                 {
                     if (DataCenter.TerritoryContentType == TerritoryContentType.Trials ||
                         DataCenter.TerritoryContentType == TerritoryContentType.Raids
-                        && DataCenter.AllianceMembers.Count(p => p is PlayerCharacter) == 8)
+                        && DataCenter.AllianceMembers.Count(p => p is IPlayerCharacter) == 8)
                     {
                         pts = [.. pts, Vector3.Zero, new(100, 0, 100)];
                     }
@@ -346,13 +346,13 @@ public struct ActionTargetInfo(IBaseAction action)
             case BeneficialAreaStrategy.OnTarget: // Target
                 if (Svc.Targets.Target != null && Svc.Targets.Target.DistanceToPlayer() < range)
                 {
-                    var target = Svc.Targets.Target as BattleChara;
+                    var target = Svc.Targets.Target as IBattleChara;
                     return new(target, [.. GetAffects(target?.Position, canAffects)], target?.Position);
                 }
                 break;
         }
 
-        if (Svc.Targets.Target is BattleChara b && b.DistanceToPlayer() < range &&
+        if (Svc.Targets.Target is IBattleChara b && b.DistanceToPlayer() < range &&
             b.IsBossFromIcon() && b.HasPositional() && b.HitboxRadius <= 8)
         {
             return new(b, [.. GetAffects(b.Position, canAffects)], b.Position);
@@ -386,7 +386,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
     }
 
-    private readonly IEnumerable<BattleChara> GetAffects(Vector3? point, IEnumerable<BattleChara> canAffects)
+    private readonly IEnumerable<IBattleChara> GetAffects(Vector3? point, IEnumerable<IBattleChara> canAffects)
     {
         if (point == null) yield break;
         foreach (var t in canAffects)
@@ -398,7 +398,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
     }
 
-    private readonly IEnumerable<BattleChara> GetAffects(BattleChara tar, IEnumerable<BattleChara> canAffects)
+    private readonly IEnumerable<IBattleChara> GetAffects(IBattleChara tar, IEnumerable<IBattleChara> canAffects)
     {
         foreach (var t in canAffects)
         {
@@ -410,23 +410,23 @@ public struct ActionTargetInfo(IBaseAction action)
     }
 
     #region Get Most Target
-    private readonly IEnumerable<BattleChara> GetMostCanTargetObjects(IEnumerable<BattleChara> canTargets, IEnumerable<BattleChara> canAffects, int aoeCount)
+    private readonly IEnumerable<IBattleChara> GetMostCanTargetObjects(IEnumerable<IBattleChara> canTargets, IEnumerable<IBattleChara> canAffects, int aoeCount)
     {
         var condition = action.Config.IsTopPriority;
 
         if (IsSingleTarget || EffectRange <= 0)
         {
-            var priorityCanTargets = canTargets.Where(condition).OfType<BattleChara>();
+            var priorityCanTargets = canTargets.Where(condition).OfType<IBattleChara>();
             return priorityCanTargets.Any() ? priorityCanTargets : canTargets;
         }
 
         if (!action.Setting.IsFriendly && NoAOE) return [];
 
-        var priorityCanAffects = canAffects.Where(condition).OfType<BattleChara>();
+        var priorityCanAffects = canAffects.Where(condition).OfType<IBattleChara>();
         var hasPriorityAffects = priorityCanAffects.Any();
         var priorityAffectsCount = 0;
 
-        List<BattleChara> objectMax = new(canTargets.Count());
+        List<IBattleChara> objectMax = new(canTargets.Count());
 
         foreach (var t in canTargets)
         {
@@ -466,7 +466,7 @@ public struct ActionTargetInfo(IBaseAction action)
         return objectMax;
     }
 
-    private readonly int CanGetTargetCount(GameObject target, IEnumerable<GameObject> canAffects)
+    private readonly int CanGetTargetCount(IGameObject target, IEnumerable<IGameObject> canAffects)
     {
         int count = 0;
         foreach (var t in canAffects)
@@ -491,7 +491,7 @@ public struct ActionTargetInfo(IBaseAction action)
     }
 
     const double _alpha = Math.PI / 3;
-    private readonly bool CanGetTarget(GameObject target, GameObject subTarget)
+    private readonly bool CanGetTarget(IGameObject target, IGameObject subTarget)
     {
         if (target == null) return false;
 
@@ -526,14 +526,14 @@ public struct ActionTargetInfo(IBaseAction action)
     #endregion
 
     #region TargetFind
-    private static BattleChara? FindTargetByType(IEnumerable<BattleChara> gameObjects, TargetType type, float healRatio, SpecialActionType actionType, TargetingData targetingData)
+    private static IBattleChara? FindTargetByType(IEnumerable<IBattleChara> IGameObjects, TargetType type, float healRatio, SpecialActionType actionType, TargetingData targetingData)
     {
         if (type == TargetType.Self) return Player.Object;
 
         switch (actionType)
         {
             case SpecialActionType.MeleeRange:
-                gameObjects = gameObjects.Where(t => t.DistanceToPlayer() >= 3 + Service.Config.MeleeRangeOffset);
+                IGameObjects = IGameObjects.Where(t => t.DistanceToPlayer() >= 3 + Service.Config.MeleeRangeOffset);
                 break;
 
             case SpecialActionType.MovingForward:
@@ -543,7 +543,7 @@ public struct ActionTargetInfo(IBaseAction action)
                 }
                 else
                 {
-                    gameObjects = gameObjects.Where(t => t.DistanceToPlayer() < 1);
+                    IGameObjects = IGameObjects.Where(t => t.DistanceToPlayer() < 1);
                 }
                 break;
         }
@@ -551,14 +551,14 @@ public struct ActionTargetInfo(IBaseAction action)
         switch (type) // Filter the objects.
         {
             case TargetType.Death:
-                gameObjects = gameObjects.Where(ObjectHelper.IsDeathToRaise);
+                IGameObjects = IGameObjects.Where(ObjectHelper.IsDeathToRaise);
                 break;
 
             case TargetType.Move:
                 break;
 
             default:
-                gameObjects = gameObjects.Where(ObjectHelper.IsAlive);
+                IGameObjects = IGameObjects.Where(ObjectHelper.IsAlive);
                 break;
         }
 
@@ -572,28 +572,28 @@ public struct ActionTargetInfo(IBaseAction action)
             TargetType.BeAttacked => FindBeAttackedTarget(),
             TargetType.Interrupt => FindInterruptTarget(),
             TargetType.Tank => FindTankTarget(),
-            TargetType.Melee => RandomMeleeTarget(gameObjects),
-            TargetType.Range => RandomRangeTarget(gameObjects),
-            TargetType.Magical => RandomMagicalTarget(gameObjects),
-            TargetType.Physical => RandomPhysicalTarget(gameObjects),
+            TargetType.Melee => RandomMeleeTarget(IGameObjects),
+            TargetType.Range => RandomRangeTarget(IGameObjects),
+            TargetType.Magical => RandomMagicalTarget(IGameObjects),
+            TargetType.Physical => RandomPhysicalTarget(IGameObjects),
             _ => FindHostile(),
         };
 
-        BattleChara? FindProvokeTarget()
+        IBattleChara? FindProvokeTarget()
         {
-            if (gameObjects.Any(o => o.EntityId == DataCenter.ProvokeTarget?.EntityId))
+            if (IGameObjects.Any(o => o.EntityId == DataCenter.ProvokeTarget?.EntityId))
                 return DataCenter.ProvokeTarget;
             return null;
         }
 
-        BattleChara? FindDeathPeople()
+        IBattleChara? FindDeathPeople()
         {
-            if (gameObjects.Any(o => o.EntityId == DataCenter.DeathTarget?.EntityId))
+            if (IGameObjects.Any(o => o.EntityId == DataCenter.DeathTarget?.EntityId))
                 return DataCenter.DeathTarget;
             return null;
         }
 
-        BattleChara? FindTargetForMoving()
+        IBattleChara? FindTargetForMoving()
         {
             const float DISTANCE_TO_MOVE = 3;
 
@@ -606,12 +606,12 @@ public struct ActionTargetInfo(IBaseAction action)
                 return FindMoveTargetFaceDirection();
             }
 
-            BattleChara? FindMoveTargetScreenCenter()
+            IBattleChara? FindMoveTargetScreenCenter()
             {
                 var pPosition = Player.Object.Position;
                 if (!Svc.GameGui.WorldToScreen(pPosition, out var playerScrPos)) return null;
 
-                var tars = gameObjects.Where(t =>
+                var tars = IGameObjects.Where(t =>
                 {
                     if (t.DistanceToPlayer() < DISTANCE_TO_MOVE) return false;
 
@@ -627,12 +627,12 @@ public struct ActionTargetInfo(IBaseAction action)
                 return tars.FirstOrDefault();
             }
 
-            BattleChara? FindMoveTargetFaceDirection()
+            IBattleChara? FindMoveTargetFaceDirection()
             {
                 Vector3 pPosition = Player.Object.Position;
                 Vector2 faceVec = Player.Object.GetFaceVector();
 
-                var tars = gameObjects.Where(t =>
+                var tars = IGameObjects.Where(t =>
                 {
                     if (t.DistanceToPlayer() < DISTANCE_TO_MOVE) return false;
 
@@ -646,25 +646,25 @@ public struct ActionTargetInfo(IBaseAction action)
             }
         }
 
-        BattleChara? FindHealTarget(float healRatio)
+        IBattleChara? FindHealTarget(float healRatio)
         {
-            if (!gameObjects.Any()) return null;
+            if (!IGameObjects.Any()) return null;
 
             if (IBaseAction.AutoHealCheck)
             {
-                gameObjects = gameObjects.Where(o => o.GetHealthRatio() < healRatio);
+                IGameObjects = IGameObjects.Where(o => o.GetHealthRatio() < healRatio);
             }
 
-            var partyMembers = gameObjects.Where(ObjectHelper.IsParty);
+            var partyMembers = IGameObjects.Where(ObjectHelper.IsParty);
 
             return GeneralHealTarget(partyMembers)
-                ?? GeneralHealTarget(gameObjects)
+                ?? GeneralHealTarget(IGameObjects)
                 ?? partyMembers.FirstOrDefault(t => t.HasStatus(false, StatusHelper.TankStanceStatus))
                 ?? partyMembers.FirstOrDefault()
-                ?? gameObjects.FirstOrDefault(t => t.HasStatus(false, StatusHelper.TankStanceStatus))
-                ?? gameObjects.FirstOrDefault();
+                ?? IGameObjects.FirstOrDefault(t => t.HasStatus(false, StatusHelper.TankStanceStatus))
+                ?? IGameObjects.FirstOrDefault();
 
-            static BattleChara? GeneralHealTarget(IEnumerable<BattleChara> objs)
+            static IBattleChara? GeneralHealTarget(IEnumerable<IBattleChara> objs)
             {
                 objs = objs.Where(StatusHelper.NeedHealing).OrderBy(ObjectHelper.GetHealthRatio);
 
@@ -686,101 +686,101 @@ public struct ActionTargetInfo(IBaseAction action)
             }
         }
 
-        BattleChara? FindInterruptTarget()
+        IBattleChara? FindInterruptTarget()
         {
-            if (gameObjects.Any(o => o.EntityId == DataCenter.InterruptTarget?.EntityId))
+            if (IGameObjects.Any(o => o.EntityId == DataCenter.InterruptTarget?.EntityId))
                 return DataCenter.InterruptTarget;
             return null;
         }
 
-        BattleChara? FindHostile()
+        IBattleChara? FindHostile()
         {
-            if (gameObjects == null || !gameObjects.Any()) return null;
+            if (IGameObjects == null || !IGameObjects.Any()) return null;
 
             if (Service.Config.FilterStopMark)
             {
-                var cs = MarkingHelper.FilterStopCharaes(gameObjects);
-                if (cs?.Any() ?? false) gameObjects = cs;
+                var cs = MarkingHelper.FilterStopCharaes(IGameObjects);
+                if (cs?.Any() ?? false) IGameObjects = cs;
             }
 
             if (DataCenter.TreasureCharas.Length > 0)
             {
-                var b = gameObjects.FirstOrDefault(b => b.EntityId == DataCenter.TreasureCharas[0]);
+                var b = IGameObjects.FirstOrDefault(b => b.EntityId == DataCenter.TreasureCharas[0]);
                 if (b != null) return b;
-                gameObjects = gameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.EntityId));
+                IGameObjects = IGameObjects.Where(b => !DataCenter.TreasureCharas.Contains(b.EntityId));
             }
 
-            return targetingData.FindTarget(gameObjects);
+            return targetingData.FindTarget(IGameObjects);
         }
 
-        BattleChara? FindBeAttackedTarget()
+        IBattleChara? FindBeAttackedTarget()
         {
-            if (!gameObjects.Any()) return null;
-            var attachedT = gameObjects.Where(ObjectHelper.IsTargetOnSelf);
+            if (!IGameObjects.Any()) return null;
+            var attachedT = IGameObjects.Where(ObjectHelper.IsTargetOnSelf);
 
             if (!DataCenter.AutoStatus.HasFlag(AutoStatus.DefenseSingle))
             {
                 if (!attachedT.Any())
                 {
-                    attachedT = gameObjects.Where(tank => tank.HasStatus(false, StatusHelper.TankStanceStatus));
+                    attachedT = IGameObjects.Where(tank => tank.HasStatus(false, StatusHelper.TankStanceStatus));
                 }
 
                 if (!attachedT.Any())
                 {
-                    attachedT = gameObjects.GetJobCategory(JobRole.Tank);
+                    attachedT = IGameObjects.GetJobCategory(JobRole.Tank);
                 }
 
                 if (!attachedT.Any())
                 {
-                    attachedT = gameObjects;
+                    attachedT = IGameObjects;
                 }
             }
 
             return attachedT.OrderBy(ObjectHelper.GetHealthRatio).FirstOrDefault();
         }
 
-        BattleChara? FindDispelTarget()
+        IBattleChara? FindDispelTarget()
         {
-            if (gameObjects.Any(o => o.EntityId == DataCenter.DispelTarget?.EntityId))
+            if (IGameObjects.Any(o => o.EntityId == DataCenter.DispelTarget?.EntityId))
                 return DataCenter.DispelTarget;
-            return gameObjects.FirstOrDefault(o => o is BattleChara b && b.StatusList.Any(StatusHelper.CanDispel));
+            return IGameObjects.FirstOrDefault(o => o is IBattleChara b && b.StatusList.Any(StatusHelper.CanDispel));
         }
 
-        BattleChara? FindTankTarget()
+        IBattleChara? FindTankTarget()
         {
-            return RandomPickByJobs(gameObjects, JobRole.Tank);
+            return RandomPickByJobs(IGameObjects, JobRole.Tank);
         }
     }
 
-    internal static BattleChara? RandomPhysicalTarget(IEnumerable<BattleChara> tars)
+    internal static IBattleChara? RandomPhysicalTarget(IEnumerable<IBattleChara> tars)
     {
         return RandomPickByJobs(tars, Job.WAR, Job.GNB, Job.MNK, Job.SAM, Job.DRG, Job.MCH, Job.DNC)
             ?? RandomPickByJobs(tars, Job.PLD, Job.DRK, Job.NIN, Job.BRD, Job.RDM)
             ?? RandomObject(tars);
     }
 
-    internal static BattleChara? RandomMagicalTarget(IEnumerable<BattleChara> tars)
+    internal static IBattleChara? RandomMagicalTarget(IEnumerable<IBattleChara> tars)
     {
         return RandomPickByJobs(tars, Job.SCH, Job.AST, Job.SGE, Job.BLM, Job.SMN)
             ?? RandomPickByJobs(tars, Job.PLD, Job.DRK, Job.NIN, Job.BRD, Job.RDM)
             ?? RandomObject(tars);
     }
 
-    internal static BattleChara? RandomRangeTarget(IEnumerable<BattleChara> tars)
+    internal static IBattleChara? RandomRangeTarget(IEnumerable<IBattleChara> tars)
     {
         return RandomPickByJobs(tars, JobRole.RangedMagical, JobRole.RangedPhysical, JobRole.Melee)
             ?? RandomPickByJobs(tars, JobRole.Tank, JobRole.Healer)
             ?? RandomObject(tars);
     }
 
-    internal static BattleChara? RandomMeleeTarget(IEnumerable<BattleChara> tars)
+    internal static IBattleChara? RandomMeleeTarget(IEnumerable<IBattleChara> tars)
     {
         return RandomPickByJobs(tars, JobRole.Melee, JobRole.RangedMagical, JobRole.RangedPhysical)
             ?? RandomPickByJobs(tars, JobRole.Tank, JobRole.Healer)
             ?? RandomObject(tars);
     }
 
-    private static BattleChara? RandomPickByJobs(IEnumerable<BattleChara> tars, params JobRole[] roles)
+    private static IBattleChara? RandomPickByJobs(IEnumerable<IBattleChara> tars, params JobRole[] roles)
     {
         foreach (var role in roles)
         {
@@ -790,7 +790,7 @@ public struct ActionTargetInfo(IBaseAction action)
         return null;
     }
 
-    private static BattleChara? RandomPickByJobs(IEnumerable<BattleChara> tars, params Job[] jobs)
+    private static IBattleChara? RandomPickByJobs(IEnumerable<IBattleChara> tars, params Job[] jobs)
     {
         var targets = tars.Where(t => t.IsJobs(jobs));
         if (targets.Any()) return RandomObject(targets);
@@ -798,7 +798,7 @@ public struct ActionTargetInfo(IBaseAction action)
         return null;
     }
 
-    private static BattleChara? RandomObject(IEnumerable<BattleChara> objs)
+    private static IBattleChara? RandomObject(IEnumerable<IBattleChara> objs)
     {
         return objs.FirstOrDefault();
         //Random ran = new(DateTime.Now.Millisecond);
@@ -836,4 +836,4 @@ public enum TargetType : byte
 /// <param name="Target">the target.</param>
 /// <param name="AffectedTargets">the targets that be affected by this action.</param>
 /// <param name="Position">the position to use this action.</param>
-public readonly record struct TargetResult(BattleChara? Target, BattleChara[] AffectedTargets, Vector3? Position);
+public readonly record struct TargetResult(IBattleChara? Target, IBattleChara[] AffectedTargets, Vector3? Position);

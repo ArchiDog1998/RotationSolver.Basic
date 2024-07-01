@@ -65,14 +65,14 @@ internal class ActionConfig()
     /// </summary>
     public bool IsInMistake { get; set; }
 
-    public bool IsTopPriority(GameObject obj)
+    public bool IsTopPriority(IGameObject obj)
     {
         if (PriorityTargeting.IsTrue(obj) ?? false) return true;
         if (obj.IsTopPriority()) return true;
         return false;
     }
 
-    public bool CantAttack(GameObject obj)
+    public bool CantAttack(IGameObject obj)
     {
         if (CantTargeting.IsTrue(obj) ?? false) return true;
         if (obj.IsNoTarget()) return true;

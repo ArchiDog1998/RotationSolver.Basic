@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SAM, global::ECommons.ExcelServices.Job.THM)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.SAM)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>samurai</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>Samurai</strong></see>
 /// <br>Number of Actions: 53</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -963,12 +963,104 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TendoKaeshiSetsugekkaPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction TendoKaeshiSetsugekkaPvE => _TendoKaeshiSetsugekkaPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50208"><strong>Kenki Mastery II</strong></see> (SAM) [208]
+/// <para>Increases Kenki Gauge when landing all weaponskills excluding Iaijutsu.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait KenkiMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(208U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50215"><strong>Kenki Mastery</strong></see> (SAM) [215]
+/// <para>Increases Kenki Gauge when landing select weaponskills or when taking damage while under the effect of Third Eye.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait KenkiMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(215U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50277"><strong>Enhanced Iaijutsu</strong></see> (SAM) [277]
+/// <para>Reduces Iaijutsu cast time to 1.3 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIaijutsuTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(277U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50278"><strong>Enhanced Fugetsu and Fuka</strong></see> (SAM) [278]
+/// <para>Improves Fugetsu's damage increase to 13% and Fuka's reduction to weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay to 13%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFugetsuAndFukaTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(278U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50443"><strong>Enhanced Meikyo Shisui</strong></see> (SAM) [443]
+/// <para>Allows the accumulation of charges for consecutive uses of Meikyo Shisui.</para>
+/// <para>Maximum Charges: 2</para>
+/// <para>Also grants the effect of Tsubame-gaeshi Ready upon executing Meikyo Shisui.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMeikyoShisuiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(443U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50514"><strong>Enhanced Ikishoten</strong></see> (SAM) [514]
+/// <para>Grants Ogi Namikiri Ready upon execution of Ikishoten.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIkishotenTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(514U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50519"><strong>Fuga Mastery</strong></see> (SAM) [519]
+/// <para>Upgrades Fuga to Fuko.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait FugaMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(519U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50520"><strong>Way of the Samurai</strong></see> (SAM) [520]
+/// <para>Increases the potency of Hakaze to 200, Jinpu to 120, and Shifu to 120.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(520U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50521"><strong>Way of the Samurai II</strong></see> (SAM) [521]
+/// <para>Increases the potency of Gekko, Kasha, and Yukikaze to 120.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(521U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50589"><strong>Third Eye Mastery</strong></see> (SAM) [589]
+/// <para>Upgrades Third Eye to Tengetsu.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait ThirdEyeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(589U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50590"><strong>Hakaze Mastery</strong></see> (SAM) [590]
+/// <para>Upgrades Hakaze to Gyofu.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HakazeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(590U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50591"><strong>Enhanced Hissatsu</strong></see> (SAM) [591]
+/// <para>Reduces Hissatsu: Guren and Hissatsu: Senei recast time to 60 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedHissatsuTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(591U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50592"><strong>Enhanced Ikishoten II</strong></see> (SAM) [592]
+/// <para>Grants Zanshin Ready upon executing Ikishoten.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIkishotenIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(592U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50593"><strong>Enhanced Meikyo Shisui II</strong></see> (SAM) [593]
+/// <para>Grants Tendo upon executing Meikyo Shisui.</para>
+/// <para>Duration: 30s</para>
+/// <para>Tenka Goken changes to Tendo Goken and Midare Setsugekka changes to Tendo Setsugekka while under the effect of Tendo.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMeikyoShisuiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(593U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50641"><strong>Enhanced Feint</strong></see> (PGL LNC ROG MNK DRG NIN SAM RPR VPR) [641]
+/// <para>Extends the duration of Feint to 15 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFeintTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(641U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50642"><strong>Enhanced Second Wind</strong></see> (PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR) [642]
+/// <para>Increases the healing potency of Second Wind to 800.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50655"><strong>Way of the Samurai III</strong></see> (SAM) [655]
+/// <para>Increases the potency of Jinpu to 160, Shifu to 160, Enhanced Enpi to 270, Gekko to 180, Higanbana damage over time to 50, Kasha to 180, Yukikaze to 180, Midare Setsugekka to 700, Kaeshi: Setsugekka to 700, Shoha to 640, Ogi Namikiri to 900, and Kaeshi: Namikiri to 900.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(655U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [KenkiMasteryIiTrait, KenkiMasteryTrait, EnhancedIaijutsuTrait, EnhancedFugetsuAndFukaTrait, EnhancedMeikyoShisuiTrait, EnhancedIkishotenTrait, FugaMasteryTrait, WayOfTheSamuraiTrait, WayOfTheSamuraiIiTrait, ThirdEyeMasteryTrait, HakazeMasteryTrait, EnhancedHissatsuTrait, EnhancedIkishotenIiTrait, EnhancedMeikyoShisuiIiTrait, EnhancedFeintTrait, EnhancedSecondWindTrait, WayOfTheSamuraiIiiTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge>();
@@ -993,11 +1085,55 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 
     /// <inheritdoc cref="BraverPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BraverPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BraverPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BladedancePvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)201, false);
+        var setting = action.Setting;
+        ModifyBladedancePvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="BladedancePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyBladedancePvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction BladedancePvE => _BladedancePvECreator.Value;
+
+    /// <inheritdoc cref="BladedancePvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => BladedancePvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DoomOfTheLivingPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)7861, false);
+        var setting = action.Setting;
+        ModifyDoomOfTheLivingPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="DoomOfTheLivingPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDoomOfTheLivingPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DoomOfTheLivingPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction DoomOfTheLivingPvE => _DoomOfTheLivingPvECreator.Value;
+
+    /// <inheritdoc cref="DoomOfTheLivingPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DoomOfTheLivingPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, TengetsuPvE, GyofuPvE, ZanshinPvE, TendoGokenPvE, TendoSetsugekkaPvE, TendoKaeshiGokenPvE, TendoKaeshiSetsugekkaPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, TengetsuPvE, GyofuPvE, ZanshinPvE, TendoGokenPvE, TendoSetsugekkaPvE, TendoKaeshiGokenPvE, TendoKaeshiSetsugekkaPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

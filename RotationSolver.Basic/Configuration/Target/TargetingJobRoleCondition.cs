@@ -9,7 +9,7 @@ internal class TargetingJobRoleCondition : TargetingConditionBase
     [UI("Job Role")]
     public JobRole JobRole { get; set; }
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         return obj.IsJobCategory(JobRole);
     }

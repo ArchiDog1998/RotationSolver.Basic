@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MCH, global::ECommons.ExcelServices.Job.BSM)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.MCH)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/machinist"><strong>machinist</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/machinist"><strong>Machinist</strong></see>
 /// <br>Number of Actions: 51</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class MachinistRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -927,12 +927,127 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.FullMetalFieldPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction FullMetalFieldPvE => _FullMetalFieldPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50117"><strong>Increased Action Damage</strong></see> (MCH) [117]
+/// <para>Increases base action damage and autoturret damage by 10%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(117U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50119"><strong>Increased Action Damage II</strong></see> (MCH) [119]
+/// <para>Increases base action damage and autoturret damage by 20%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait IncreasedActionDamageIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(119U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50288"><strong>Split Shot Mastery</strong></see> (MCH) [288]
+/// <para>Upgrades Split Shot to Heated Split Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SplitShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(288U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50289"><strong>Slug Shot Mastery</strong></see> (MCH) [289]
+/// <para>Upgrades Slug Shot to Heated Slug Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SlugShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(289U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50290"><strong>Clean Shot Mastery</strong></see> (MCH) [290]
+/// <para>Upgrades Clean Shot to Heated Clean Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait CleanShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(290U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50291"><strong>Hot Shot Mastery</strong></see> (MCH) [291]
+/// <para>Upgrades Hot Shot to Air Anchor.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HotShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(291U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50292"><strong>Charged Action Mastery</strong></see> (MCH) [292]
+/// <para>Allows a third charge of Gauss Round and Ricochet.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait ChargedActionMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(292U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50293"><strong>Enhanced Wildfire</strong></see> (MCH) [293]
+/// <para>Improves Wildfire's potency increase for landing weaponskills to 240.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedWildfireTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(293U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50294"><strong>Promotion</strong></see> (MCH) [294]
+/// <para>Upgrades Rook Autoturret and Rook Overdrive to Automaton Queen and Queen Overdrive respectively.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait PromotionTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(294U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50449"><strong>Spread Shot Mastery</strong></see> (MCH) [449]
+/// <para>Upgrades Spread Shot to Scattergun.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait SpreadShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(449U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50450"><strong>Enhanced Reassemble</strong></see> (MCH) [450]
+/// <para>Allows the accumulation of charges for consecutive uses of Reassemble.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedReassembleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(450U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50451"><strong>Queen's Gambit</strong></see> (MCH) [451]
+/// <para>After executing Pile Bunker, the Automaton Queen will also execute Crowned Collider.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait QueensGambitTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(451U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50452"><strong>Enhanced Tactician</strong></see> (MCH) [452]
+/// <para>Reduces Tactician recast time to 90 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTacticianTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(452U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50517"><strong>Marksman's Mastery</strong></see> (MCH) [517]
+/// <para>Increases the potency of Heated Split Shot to 200, Heated Slug Shot to 120, and Heated Clean Shot to 120.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MarksmansMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(517U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50603"><strong>Heat Blast Mastery</strong></see> (MCH) [603]
+/// <para>Upgrades Heat Blast to Blazing Shot.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HeatBlastMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(603U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50604"><strong>Double-barrel Mastery</strong></see> (MCH) [604]
+/// <para>Upgrades Gauss Round to Double Check and Ricochet to Checkmate.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait DoublebarrelMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(604U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50605"><strong>Enhanced Multiweapon</strong></see> (MCH) [605]
+/// <para>Allows the accumulation of charges for consecutive uses of Drill and Bioblaster.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMultiweaponTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(605U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50606"><strong>Enhanced Multiweapon II</strong></see> (MCH) [606]
+/// <para>Grants Excavator Ready upon executing Chain Saw.</para>
+/// <para>Duration: 30s</para>
+/// <para>Chain Saw changes to Excavator while under the effect of Excavator Ready.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMultiweaponIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(606U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50607"><strong>Enhanced Tactician II</strong></see> (MCH) [607]
+/// <para>Improves Tactician's damage reduction effect to 15%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedTacticianIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(607U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50608"><strong>Enhanced Barrel Stabilizer</strong></see> (MCH) [608]
+/// <para>Grants Full Metal Machinist upon executing Barrel Stabilizer.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBarrelStabilizerTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(608U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50642"><strong>Enhanced Second Wind</strong></see> (PGL LNC ARC ROG MNK DRG BRD NIN MCH SAM DNC RPR VPR) [642]
+/// <para>Increases the healing potency of Second Wind to 800.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50658"><strong>Marksman's Mastery II</strong></see> (MCH) [658]
+/// <para>Increases the potency of Auto Crossbow to 160, Heated Split Shot to 220, Heated Slug Shot to 140, Heated Clean Shot to 140, and Scattergun to 160.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MarksmansMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(658U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [IncreasedActionDamageTrait, IncreasedActionDamageIiTrait, SplitShotMasteryTrait, SlugShotMasteryTrait, CleanShotMasteryTrait, HotShotMasteryTrait, ChargedActionMasteryTrait, EnhancedWildfireTrait, PromotionTrait, SpreadShotMasteryTrait, EnhancedReassembleTrait, QueensGambitTrait, EnhancedTacticianTrait, MarksmansMasteryTrait, HeatBlastMasteryTrait, DoublebarrelMasteryTrait, EnhancedMultiweaponTrait, EnhancedMultiweaponIiTrait, EnhancedTacticianIiTrait, EnhancedBarrelStabilizerTrait, EnhancedSecondWindTrait, MarksmansMasteryIiTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge>();
@@ -957,11 +1072,55 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
 
     /// <inheritdoc cref="BigShotPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => BigShotPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => BigShotPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DesperadoPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4239, false);
+        var setting = action.Setting;
+        ModifyDesperadoPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="DesperadoPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyDesperadoPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DesperadoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction DesperadoPvE => _DesperadoPvECreator.Value;
+
+    /// <inheritdoc cref="DesperadoPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => DesperadoPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SatelliteBeamPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)4245, false);
+        var setting = action.Setting;
+        ModifySatelliteBeamPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="SatelliteBeamPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifySatelliteBeamPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.SatelliteBeamPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction SatelliteBeamPvE => _SatelliteBeamPvECreator.Value;
+
+    /// <inheritdoc cref="SatelliteBeamPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SatelliteBeamPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [RookAutoturretPvE, SplitShotPvE, SlugShotPvE, SpreadShotPvE, HotShotPvE, CleanShotPvE, GaussRoundPvE, ReassemblePvE, WildfirePvE, DismantlePvE, RicochetPvE, HeatBlastPvE, HeatedSplitShotPvE, HeatedSlugShotPvE, HeatedCleanShotPvE, BarrelStabilizerPvE, RookOverdrivePvE, RookOverloadPvE, FlamethrowerPvE, AutoCrossbowPvE, DrillPvE, BioblasterPvE, AirAnchorPvE, AutomatonQueenPvE, QueenOverdrivePvE, PileBunkerPvE, ArmPunchPvE, DetonatorPvE, TacticianPvE, RollerDashPvE, HyperchargePvE, ScattergunPvE, CrownedColliderPvE, ChainSawPvE, BlastChargePvP, HeatBlastPvP, ScattergunPvP, DrillPvP, BioblasterPvP, AirAnchorPvP, ChainSawPvP, WildfirePvP, BishopAutoturretPvP, AetherMortarPvP, AnalysisPvP, MarksmansSpitePvP, BlazingShotPvE, DoubleCheckPvE, CheckmatePvE, ExcavatorPvE, FullMetalFieldPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [RookAutoturretPvE, SplitShotPvE, SlugShotPvE, SpreadShotPvE, HotShotPvE, CleanShotPvE, GaussRoundPvE, ReassemblePvE, WildfirePvE, DismantlePvE, RicochetPvE, HeatBlastPvE, HeatedSplitShotPvE, HeatedSlugShotPvE, HeatedCleanShotPvE, BarrelStabilizerPvE, RookOverdrivePvE, RookOverloadPvE, FlamethrowerPvE, AutoCrossbowPvE, DrillPvE, BioblasterPvE, AirAnchorPvE, AutomatonQueenPvE, QueenOverdrivePvE, PileBunkerPvE, ArmPunchPvE, DetonatorPvE, TacticianPvE, RollerDashPvE, HyperchargePvE, ScattergunPvE, CrownedColliderPvE, ChainSawPvE, BlastChargePvP, HeatBlastPvP, ScattergunPvP, DrillPvP, BioblasterPvP, AirAnchorPvP, ChainSawPvP, WildfirePvP, BishopAutoturretPvP, AetherMortarPvP, AnalysisPvP, MarksmansSpitePvP, BlazingShotPvE, DoubleCheckPvE, CheckmatePvE, ExcavatorPvE, FullMetalFieldPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

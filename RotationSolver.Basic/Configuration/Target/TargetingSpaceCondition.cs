@@ -23,7 +23,7 @@ internal class TargetingSpaceCondition : TargetingConditionBase
     [UI("Value")]
     public float Value { get; set; } = 1;
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         var value = Type switch
         {

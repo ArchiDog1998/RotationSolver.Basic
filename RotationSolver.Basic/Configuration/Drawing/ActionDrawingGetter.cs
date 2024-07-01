@@ -65,7 +65,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
         return [item];
     }
 
-    private IDisposable? GetActionDrawing(GameObject? obj)
+    private IDisposable? GetActionDrawing(IGameObject? obj)
     {
         if (ActionID == 0) return null;
         var action = Svc.Data.GetExcelSheet<GAction>()?.GetRow((uint)ActionID);
@@ -80,7 +80,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
         if (action.TargetArea)
         {
             var location = Position;
-            if (obj is BattleChara battle)
+            if (obj is IBattleChara battle)
             {
                 unsafe
                 {

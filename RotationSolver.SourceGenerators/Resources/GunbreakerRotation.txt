@@ -2,11 +2,11 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.GNB, global::ECommons.ExcelServices.Job.WAR)]
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.GNB)]
 /// <summary>
-/// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>gunbreaker</strong></see>
+/// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>Gunbreaker</strong></see>
 /// <br>Number of Actions: 72</br>
-/// <br>Number of Traits: 0</br>
+/// <br>Number of Traits: 16</br>
 /// </summary>
 public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
@@ -1305,12 +1305,102 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.LionHeartPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     public global::RotationSolver.Basic.Actions.IBaseAction LionHeartPvE => _LionHeartPvECreator.Value;
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50257"><strong>Cartridge Charge</strong></see> (GNB) [257]
+/// <para>Stores a Cartridge in your Powder Gauge after successfully completing a combo with Solid Barrel.</para>
+/// <para>Maximum Cartridges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait CartridgeChargeTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(257U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50258"><strong>Enhanced Brutal Shell</strong></see> (GNB) [258]
+/// <para>Grants the effect of Brutal Shell after successfully completing a combo with Brutal Shell.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBrutalShellTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(258U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50259"><strong>Danger Zone Mastery</strong></see> (GNB) [259]
+/// <para>Upgrades Danger Zone to Blasting Zone.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait DangerZoneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(259U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50320"><strong>Tank Mastery</strong></see> (GNB) [320]
+/// <para>Reduces damage taken by 20%. Furthermore, grants a bonus to maximum HP based on your vitality attribute, and a bonus to damage dealt based on your strength attribute.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait TankMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(320U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50424"><strong>Heart of Stone Mastery</strong></see> (GNB) [424]
+/// <para>Upgrades Heart of Stone to Heart of Corundum.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait HeartOfStoneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(424U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50425"><strong>Enhanced Aurora</strong></see> (GNB) [425]
+/// <para>Allows the accumulation of charges for consecutive uses of Aurora.</para>
+/// <para>Maximum Charges: 2</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedAuroraTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(425U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50426"><strong>Enhanced Continuation</strong></see> (GNB) [426]
+/// <para>Become Ready to Blast after executing Burst Strike.</para>
+/// <para>Duration: 10s</para>
+/// <para>Continuation changes to Hypervelocity while under the effect of Ready to Blast.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedContinuationTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(426U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50427"><strong>Cartridge Charge II</strong></see> (GNB) [427]
+/// <para>Increases Powder Gauge capacity to 3 Cartridges.</para>
+/// <para>Executing Bloodfest stores 3 Cartridges.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait CartridgeChargeIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(427U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50507"><strong>Melee Mastery</strong></see> (GNB) [507]
+/// <para>Increases the potency of Keen Edge to 200, Brutal Shell to 160, and Solid Barrel to 140.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(507U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50574"><strong>Nebula Mastery</strong></see> (GNB) [574]
+/// <para>Upgrades Nebula to Great Nebula.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait NebulaMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(574U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50575"><strong>Enhanced Continuation II</strong></see> (GNB) [575]
+/// <para>Become Ready to Raze after executing Fated Circle.</para>
+/// <para>Duration: 10s</para>
+/// <para>Continuation changes to Fated Brand when Ready to Raze.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedContinuationIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(575U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50576"><strong>Enhanced Bloodfest</strong></see> (GNB) [576]
+/// <para>Grants the effect of Ready to Reign after executing Bloodfest.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedBloodfestTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(576U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50639"><strong>Enhanced Rampart</strong></see> (GLA MRD PLD WAR DRK GNB) [639]
+/// <para>Adds an additional effect to Rampart that increases HP recovery via healing actions on self by 15%.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedRampartTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(639U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50640"><strong>Enhanced Reprisal</strong></see> (GLA MRD PLD WAR DRK GNB) [640]
+/// <para>Extends the duration of Reprisal to 15 seconds.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedReprisalTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(640U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50666"><strong>Enhanced No Mercy</strong></see> (GNB) [666]
+/// <para>Become Ready to Break after executing No Mercy.</para>
+/// <para>Duration: 30s</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedNoMercyTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(666U);
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#action/50667"><strong>Melee Mastery II</strong></see> (GNB) [667]
+/// <para>Increases the potency of Keen Edge to 300, Brutal Shell to 240, Solid Barrel to 240, Burst Strike to 460, Gnashing Fang to 500, Savage Claw to 560, Wicked Talon to 620, Jugular Rip to 240, Abdomen Tear to 280, Eye Gouge to 320, Blasting Zone to 800, and Hypervelocity to 220.</para>
+/// </summary>
+    public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(667U);
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [..base.AllTraits];
+    public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [CartridgeChargeTrait, EnhancedBrutalShellTrait, DangerZoneMasteryTrait, TankMasteryTrait, HeartOfStoneMasteryTrait, EnhancedAuroraTrait, EnhancedContinuationTrait, CartridgeChargeIiTrait, MeleeMasteryTrait, NebulaMasteryTrait, EnhancedContinuationIiTrait, EnhancedBloodfestTrait, EnhancedRampartTrait, EnhancedReprisalTrait, EnhancedNoMercyTrait, MeleeMasteryIiTrait, ..base.AllTraits];
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge>();
@@ -1335,11 +1425,55 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
 
     /// <inheritdoc cref="ShieldWallPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
-    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ShieldWallPvE;
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak1 => ShieldWallPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _StrongholdPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)198, false);
+        var setting = action.Setting;
+        ModifyStrongholdPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="StrongholdPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyStrongholdPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.StrongholdPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction StrongholdPvE => _StrongholdPvECreator.Value;
+
+    /// <inheritdoc cref="StrongholdPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak2 => StrongholdPvE;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GunmetalSoulPvECreator = new(() =>
+    {
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID)17105, false);
+        var setting = action.Setting;
+        ModifyGunmetalSoulPvE(ref setting);
+        action.Setting = setting;
+        return action;
+    });
+    /// <summary>
+/// Modify <inheritdoc cref="GunmetalSoulPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    static partial void ModifyGunmetalSoulPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.GunmetalSoulPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
+    private global::RotationSolver.Basic.Actions.IBaseAction GunmetalSoulPvE => _GunmetalSoulPvECreator.Value;
+
+    /// <inheritdoc cref="GunmetalSoulPvE"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => GunmetalSoulPvE;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [KeenEdgePvE, NoMercyPvE, BrutalShellPvE, CamouflagePvE, DemonSlicePvE, RoyalGuardPvE, LightningShotPvE, DangerZonePvE, SolidBarrelPvE, GnashingFangPvE, SavageClawPvE, NebulaPvE, DemonSlaughterPvE, WickedTalonPvE, AuroraPvE, SuperbolidePvE, SonicBreakPvE, ContinuationPvE, JugularRipPvE, AbdomenTearPvE, EyeGougePvE, BowShockPvE, HeartOfLightPvE, HeartOfStonePvE, BurstStrikePvE, FatedCirclePvE, BloodfestPvE, BlastingZonePvE, HeartOfCorundumPvE, HypervelocityPvE, DoubleDownPvE, KeenEdgePvP, BrutalShellPvP, SolidBarrelPvP, BurstStrikePvP, GnashingFangPvP, SavageClawPvP, WickedTalonPvP, DoubleDownPvP, ContinuationPvP, HypervelocityPvP, JugularRipPvP, AbdomenTearPvP, EyeGougePvP, RoughDividePvP, DrawAndJunctionPvP, JunctionedCastPvP, NebulaPvP, BlastingZonePvP, AuroraPvP, RelentlessRushPvP, TerminalTriggerPvP, ReleaseRoyalGuardPvE, TrajectoryPvE, GreatNebulaPvE, FatedBrandPvE, ReignOfBeastsPvE, NobleBloodPvE, LionHeartPvE, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [KeenEdgePvE, NoMercyPvE, BrutalShellPvE, CamouflagePvE, DemonSlicePvE, RoyalGuardPvE, LightningShotPvE, DangerZonePvE, SolidBarrelPvE, GnashingFangPvE, SavageClawPvE, NebulaPvE, DemonSlaughterPvE, WickedTalonPvE, AuroraPvE, SuperbolidePvE, SonicBreakPvE, ContinuationPvE, JugularRipPvE, AbdomenTearPvE, EyeGougePvE, BowShockPvE, HeartOfLightPvE, HeartOfStonePvE, BurstStrikePvE, FatedCirclePvE, BloodfestPvE, BlastingZonePvE, HeartOfCorundumPvE, HypervelocityPvE, DoubleDownPvE, KeenEdgePvP, BrutalShellPvP, SolidBarrelPvP, BurstStrikePvP, GnashingFangPvP, SavageClawPvP, WickedTalonPvP, DoubleDownPvP, ContinuationPvP, HypervelocityPvP, JugularRipPvP, AbdomenTearPvP, EyeGougePvP, RoughDividePvP, DrawAndJunctionPvP, JunctionedCastPvP, NebulaPvP, BlastingZonePvP, AuroraPvP, RelentlessRushPvP, TerminalTriggerPvP, ReleaseRoyalGuardPvE, TrajectoryPvE, GreatNebulaPvE, FatedBrandPvE, ReignOfBeastsPvE, NobleBloodPvE, LionHeartPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

@@ -8,7 +8,7 @@ internal class TargetingMarkerCondition : TargetingConditionBase
     [UI]
     public HeadMarker Marker { get; set; } = HeadMarker.Attack1;
 
-    protected override bool IsTrueInside(GameObject obj)
+    protected override bool IsTrueInside(IGameObject obj)
     {
         return obj.EntityId == Marker.GetObjectID();
     }
