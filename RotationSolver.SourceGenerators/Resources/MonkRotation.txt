@@ -1119,6 +1119,21 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge>();
 
+    /// <inheritdoc cref="MNKGauge.Chakra"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Chakra => JobGauge.Chakra;
+
+    /// <inheritdoc cref="MNKGauge.BeastChakra"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra[] BeastChakra => JobGauge.BeastChakra;
+
+    /// <inheritdoc cref="MNKGauge.Nadi"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.Nadi Nadi => JobGauge.Nadi;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float BlitzTimeRemaining => JobGauge.BlitzTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BraverPvECreator = new(() =>
     {

@@ -943,6 +943,20 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge>();
 
+    /// <inheritdoc cref="DRKGauge.Blood"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Blood => JobGauge.Blood;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float DarksideTimeRemaining => JobGauge.DarksideTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float ShadowTimeRemaining => JobGauge.ShadowTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
+    /// <inheritdoc cref="DRKGauge.HasDarkArts"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean HasDarkArts => JobGauge.HasDarkArts;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ShieldWallPvECreator = new(() =>
     {

@@ -9,41 +9,6 @@ partial class WhiteMageRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Mind;
 
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Lily => JobGauge.Lily;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte BloodLily => JobGauge.BloodLily;
-
-    static float LilyTimeRaw => JobGauge.LilyTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float LilyTime => LilyTimeRaw + WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool LilyAfter(float time) => LilyTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gcdCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool LilyAfterGCD(uint gcdCount = 0, float offset = 0)
-        => LilyAfter(GCDTime(gcdCount, offset));
-    #endregion
-
     private protected sealed override IBaseAction Raise => RaisePvE;
 
     static partial void ModifySeraphStrikePvP(ref ActionSetting setting)

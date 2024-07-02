@@ -24,16 +24,6 @@ partial class GunbreakerRotation
     /// <summary>
     /// 
     /// </summary>
-    public static byte Ammo => JobGauge.Ammo;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte AmmoComboStep => JobGauge.AmmoComboStep;
-
-    /// <summary>
-    /// 
-    /// </summary>
     public static byte MaxAmmo => CartridgeChargeIiTrait.EnoughLevel ? (byte)3 : (byte)2;
     #endregion
 

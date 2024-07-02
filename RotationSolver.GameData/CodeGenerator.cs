@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 using RotationSolver.GameData.Getters;
 using RotationSolver.GameData.Getters.Actions;
 using System.Net;
+using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
 
@@ -82,7 +83,6 @@ internal static class CodeGenerator
         await SaveNode(majorNameSpace, dirInfo, "CustomRotation");
     }
 
-
     private static async Task GetRotations(Lumina.GameData gameData, DirectoryInfo dirInfo)
     {
         foreach (var job in gameData.GetExcelSheet<ClassJob>()!
@@ -90,6 +90,108 @@ internal static class CodeGenerator
         {
             await GetRotation(gameData, job, dirInfo);
         }
+    }
+
+    private static PropertyDeclarationSyntax[] GetJobGauge(ClassJob job)
+    {
+        var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        var gaugeName = $"Dalamud.Game.ClientState.JobGauge.Types.{job.Abbreviation}Gauge";
+        var assembly = Assembly.LoadFrom(path + "\\XIVLauncher\\addon\\Hooks\\dev\\Dalamud.dll");
+
+        var gaugeType = assembly?.GetType(gaugeName);
+        if (gaugeType == null) return [];
+
+        var result = new List<PropertyDeclarationSyntax>() { GetJobGauge(IdentifierName("global::" + gaugeName)) };
+
+        foreach (var prop in gaugeType.GetRuntimeProperties().Where(p => (p.GetMethod?.IsPublic ?? false) && p.DeclaringType == gaugeType))
+        {
+            result.AddRange(GetGaugeItemFromProperty(prop));
+        }
+
+        return [..result];
+    }
+
+    private static PropertyDeclarationSyntax[] GetGaugeItemFromProperty(PropertyInfo prop)
+    {
+        var typeName = prop.PropertyType.FullName ?? prop.PropertyType.Name;
+        var name = prop.Name;
+        if (name.Contains("Time"))
+        {
+            var result = PropertyDeclaration(PredefinedType(Token(SyntaxKind.FloatKeyword)), Identifier(name))
+                .AddAttributeLists(GeneratedCodeAttribute(typeof(CodeGenerator)))
+                .WithXmlComment($"/// <inheritdoc cref=\"{prop.DeclaringType!.Name}.{name}\"/>")
+                .WithModifiers(
+                    TokenList(
+                        [
+                            Token(SyntaxKind.PublicKeyword),
+                            Token(SyntaxKind.StaticKeyword)]))
+                .WithExpressionBody(
+                    ArrowExpressionClause(
+                        BinaryExpression(
+                            SyntaxKind.SubtractExpression,
+                            BinaryExpression(
+                                SyntaxKind.DivideExpression,
+                                MemberAccessExpression(
+                                    SyntaxKind.SimpleMemberAccessExpression,
+                                    IdentifierName("JobGauge"),
+                                    IdentifierName(name)),
+                                LiteralExpression(
+                                    SyntaxKind.NumericLiteralExpression,
+                                    Literal(
+                                        "1000f",
+                                        1000f))),
+                            MemberAccessExpression(
+                                SyntaxKind.SimpleMemberAccessExpression,
+                                IdentifierName("DataCenter"),
+                                IdentifierName("WeaponRemain")))))
+                .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
+            return [result];
+        }
+        else
+        {
+            var result = PropertyDeclaration(IdentifierName(typeName), Identifier(name))
+                .AddAttributeLists(GeneratedCodeAttribute(typeof(CodeGenerator)))
+                .WithXmlComment($"/// <inheritdoc cref=\"{prop.DeclaringType!.Name}.{name}\"/>")
+                .WithModifiers(
+                    TokenList(
+                        [
+                            Token(SyntaxKind.PublicKeyword),
+                                    Token(SyntaxKind.StaticKeyword)]))
+                .WithExpressionBody(
+                    ArrowExpressionClause(
+                        MemberAccessExpression(
+                            SyntaxKind.SimpleMemberAccessExpression,
+                            IdentifierName("JobGauge"),
+                            IdentifierName(name))))
+                .WithSemicolonToken(
+                Token(SyntaxKind.SemicolonToken));
+            return [result];
+        }
+    }
+
+    private static PropertyDeclarationSyntax GetJobGauge(IdentifierNameSyntax jobgaugeName)
+    {
+        return PropertyDeclaration(jobgaugeName, Identifier("JobGauge"))
+                .AddAttributeLists(GeneratedCodeAttribute(typeof(CodeGenerator)))
+                .WithModifiers(
+                    TokenList(
+                        Token(SyntaxKind.StaticKeyword)))
+                .WithExpressionBody(
+                    ArrowExpressionClause(
+                        InvocationExpression(
+                            MemberAccessExpression(
+                                SyntaxKind.SimpleMemberAccessExpression,
+                                MemberAccessExpression(
+                                    SyntaxKind.SimpleMemberAccessExpression,
+                                    IdentifierName("global::ECommons.DalamudServices.Svc"),
+                                    IdentifierName("Gauges")),
+                                GenericName(
+                                    Identifier("Get"))
+                                .WithTypeArgumentList(
+                                    TypeArgumentList(
+                                        SingletonSeparatedList<TypeSyntax>(
+                                            jobgaugeName)))))))
+                .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
     }
 
     private static async Task GetRotation(Lumina.GameData gameData, ClassJob job, DirectoryInfo dirInfo)
@@ -106,29 +208,8 @@ internal static class CodeGenerator
 
         if (!job.IsLimitedJob)
         {
-            var jobgaugeName = IdentifierName($"global::Dalamud.Game.ClientState.JobGauge.Types.{job.Abbreviation}Gauge");
-            var jobgauge = PropertyDeclaration(jobgaugeName, Identifier("JobGauge"))
-                    .AddAttributeLists(GeneratedCodeAttribute(typeof(CodeGenerator)))
-                    .WithModifiers(
-                        TokenList(
-                            Token(SyntaxKind.StaticKeyword)))
-                    .WithExpressionBody(
-                        ArrowExpressionClause(
-                            InvocationExpression(
-                                MemberAccessExpression(
-                                    SyntaxKind.SimpleMemberAccessExpression,
-                                    MemberAccessExpression(
-                                        SyntaxKind.SimpleMemberAccessExpression,
-                                        IdentifierName("global::ECommons.DalamudServices.Svc"),
-                                        IdentifierName("Gauges")),
-                                    GenericName(
-                                        Identifier("Get"))
-                                    .WithTypeArgumentList(
-                                        TypeArgumentList(
-                                            SingletonSeparatedList<TypeSyntax>(
-                                                jobgaugeName)))))))
-                    .WithSemicolonToken(Token(SyntaxKind.SemicolonToken));
-            list.Add(jobgauge);
+            var jobgauge = GetJobGauge(job);
+            list.AddRange(jobgauge);
         }
 
         var rotationNames = rotationsGetter.AddedNames;

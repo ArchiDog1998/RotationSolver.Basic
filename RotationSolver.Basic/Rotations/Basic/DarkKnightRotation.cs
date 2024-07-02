@@ -9,65 +9,6 @@ partial class DarkKnightRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    #region Job Gauge
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Blood => JobGauge.Blood;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasDarkArts => JobGauge.HasDarkArts;
-
-    static float DarkSideTimeRemainingRaw => JobGauge.DarksideTimeRemaining / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float DarkSideTime => DarkSideTimeRemainingRaw - WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool DarkSideEndAfter(float time) => DarkSideTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool DarkSideEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => DarkSideEndAfter(GCDTime(gctCount, offset));
-
-    static float ShadowTimeRemainingRaw => JobGauge.ShadowTimeRemaining / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float ShadowTime => ShadowTimeRemainingRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool ShadowTimeEndAfter(float time) => ShadowTimeRemainingRaw <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool ShadowTimeEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => ShadowTimeEndAfter(GCDTime(gctCount, offset));
-    #endregion
-
     static partial void ModifyPlungePvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
@@ -109,7 +50,7 @@ partial class DarkKnightRotation
 
     static partial void ModifyShadowbringerPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => !DarkSideEndAfterGCD();
+        setting.ActionCheck = () => DarksideTimeRemaining > 0;
     }
 
     private protected sealed override IBaseAction TankStance => GritPvE;

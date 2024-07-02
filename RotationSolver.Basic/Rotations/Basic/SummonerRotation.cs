@@ -24,85 +24,18 @@ partial class SummonerRotation
     private protected sealed override IBaseAction Raise => ResurrectionPvE;
 
     #region JobGauge
-    /// <summary/>
-    public static bool HasAetherflowStacks => JobGauge.HasAetherflowStacks;
-
-    /// <summary/>
-    public static byte Attunement => JobGauge.Attunement;
-
-    /// <summary/>
-    public static bool IsIfritReady => JobGauge.IsIfritReady;
-
-    /// <summary/>
-    public static bool IsTitanReady => JobGauge.IsTitanReady;
-
-    /// <summary/>
-    public static bool IsGarudaReady => JobGauge.IsGarudaReady;
-
-    /// <summary/>
-    public static bool InIfrit => JobGauge.IsIfritAttuned;
-
-    /// <summary/>
-    public static bool InTitan => JobGauge.IsTitanAttuned;
-
-    /// <summary/>
-    public static bool InGaruda => JobGauge.IsGarudaAttuned;
-
-    private static float SummonTimeRaw => JobGauge.SummonTimerRemaining / 1000f;
-
-    /// <summary/>
-    public static float SummonTime => SummonTimeRaw - DataCenter.WeaponRemain;
 
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool SummonTimeEndAfter(float time) => SummonTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gcdCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool SummonTimeEndAfterGCD(uint gcdCount = 0, float offset = 0)
-        => SummonTimeEndAfter(GCDTime(gcdCount, offset));
-
-    private static float AttunmentTimeRaw => JobGauge.AttunmentTimerRemaining / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float AttunmentTime => AttunmentTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool AttunmentTimeEndAfter(float time) => AttunmentTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gcdCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool AttunmentTimeEndAfterGCD(uint gcdCount = 0, float offset = 0)
-        => AttunmentTimeEndAfter(GCDTime(gcdCount, offset));
-
-    /// <summary>
-    /// 
-    /// </summary>
-    private static bool HasSummon => DataCenter.HasPet && SummonTimeEndAfterGCD();
+    private static bool HasSummon => DataCenter.HasPet && SummonTimerRemaining > 0;
     #endregion
 
     /// <inheritdoc/>
     public override void DisplayStatus()
     {
-        ImGui.Text("AttunmentTime: " + AttunmentTimeRaw.ToString());
-        ImGui.Text("SummonTime: " + SummonTimeRaw.ToString());
+        ImGui.Text("AttunmentTime: " + AttunmentTimerRemaining.ToString());
+        ImGui.Text("SummonTime: " + SummonTimerRemaining.ToString());
         ImGui.Text("Pet: " + DataCenter.HasPet.ToString());
     }
 
@@ -131,17 +64,17 @@ partial class SummonerRotation
     static RandomDelay _carbuncleDelay = new (() => (2, 2));
     static partial void ModifySummonCarbunclePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => _carbuncleDelay.Delay(!DataCenter.HasPet && AttunmentTimeRaw == 0 && SummonTimeRaw == 0) && DataCenter.LastGCD is not ActionID.SummonCarbunclePvE;
+        setting.ActionCheck = () => _carbuncleDelay.Delay(!DataCenter.HasPet && AttunmentTimerRemaining < 0 && AttunmentTimerRemaining < 0) && DataCenter.LastGCD is not ActionID.SummonCarbunclePvE;
     }
 
     static partial void ModifyGemshinePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Attunement > 0 && !AttunmentTimeEndAfter(ActionID.GemshinePvE.GetCastTime());
+        setting.ActionCheck = () => Attunement > 0 && AttunmentTimerRemaining > ActionID.GemshinePvE.GetCastTime();
     }
 
     static partial void ModifyPreciousBrilliancePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Attunement > 0 && !AttunmentTimeEndAfter(ActionID.PreciousBrilliancePvE.GetCastTime());
+        setting.ActionCheck = () => Attunement > 0 && AttunmentTimerRemaining > ActionID.PreciousBrilliancePvE.GetCastTime();
     }
 
     static partial void ModifyAetherchargePvE(ref ActionSetting setting)

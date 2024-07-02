@@ -175,15 +175,15 @@ public readonly struct ActionBasicInfo
 
         var player = Player.Object;
 
-        if (_action.Setting.StatusNeed != null)
-        {
-            if (player.WillStatusEndGCD(0, 0,
-                _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
-            {
-                whyCant = WhyActionCantUse.NoStatusNeed;
-                return false;
-            }
-        }
+        //if (_action.Setting.StatusNeed != null)
+        //{
+        //    if (player.WillStatusEndGCD(0, 0,
+        //        _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
+        //    {
+        //        whyCant = WhyActionCantUse.NoStatusNeed;
+        //        return false;
+        //    }
+        //}
 
         if (_action.Setting.StatusPenalty != null)
         {

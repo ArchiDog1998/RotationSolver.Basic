@@ -1179,6 +1179,30 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge>();
 
+    /// <inheritdoc cref="DNCGauge.Feathers"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Feathers => JobGauge.Feathers;
+
+    /// <inheritdoc cref="DNCGauge.Esprit"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Esprit => JobGauge.Esprit;
+
+    /// <inheritdoc cref="DNCGauge.CompletedSteps"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte CompletedSteps => JobGauge.CompletedSteps;
+
+    /// <inheritdoc cref="DNCGauge.Steps"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.UInt32[] Steps => JobGauge.Steps;
+
+    /// <inheritdoc cref="DNCGauge.NextStep"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.UInt32 NextStep => JobGauge.NextStep;
+
+    /// <inheritdoc cref="DNCGauge.IsDancing"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsDancing => JobGauge.IsDancing;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BigShotPvECreator = new(() =>
     {

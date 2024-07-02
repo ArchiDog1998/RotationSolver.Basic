@@ -9,50 +9,6 @@ partial class BardRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
 
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Repertoire => JobGauge.Repertoire;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static Song Song => JobGauge.Song;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static Song LastSong => JobGauge.LastSong;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte SoulVoice => JobGauge.SoulVoice;
-    static float SongTimeRaw => JobGauge.SongTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float SongTime => SongTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool SongEndAfter(float time) => SongTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool SongEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => SongEndAfter(GCDTime(gctCount, offset));
-    #endregion
-
     static partial void ModifyHeavyShotPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.StraightShotReady];

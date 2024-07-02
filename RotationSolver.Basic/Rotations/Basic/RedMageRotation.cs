@@ -13,20 +13,6 @@ partial class RedMageRotation
     public override bool CanHealSingleSpell => DataCenter.PartyMembers.Length == 1 && base.CanHealSingleSpell;
 
     #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte WhiteMana => JobGauge.WhiteMana;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte BlackMana => JobGauge.BlackMana;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte ManaStacks => JobGauge.ManaStacks;
 
     /// <summary>
     /// Is <see cref="WhiteMana"/> larger than <see cref="BlackMana"/>

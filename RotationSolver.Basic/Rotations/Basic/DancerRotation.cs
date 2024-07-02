@@ -6,30 +6,6 @@ namespace RotationSolver.Basic.Rotations.Basic;
 partial class DancerRotation
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    public override MedicineType MedicineType => MedicineType.Dexterity;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool IsDancing => JobGauge.IsDancing;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Esprit => JobGauge.Esprit;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Feathers => JobGauge.Feathers;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte CompletedSteps => JobGauge.CompletedSteps;
     static partial void ModifyEnAvantPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;

@@ -10,12 +10,12 @@ partial class SamuraiRotation
     public override MedicineType MedicineType => MedicineType.Strength;
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.Fugetsu"/>
     /// </summary>
     public static bool HasMoon => Player.HasStatus(true, StatusID.Fugetsu);
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.Fuka"/> 
     /// </summary>
     public static bool HasFlower => Player.HasStatus(true, StatusID.Fuka);
 
@@ -26,36 +26,6 @@ partial class SamuraiRotation
         => Player.StatusTime(true, StatusID.Fugetsu) < Player.StatusTime(true, StatusID.Fuka);
 
     #region JobGauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasSetsu => JobGauge.HasSetsu;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasGetsu => JobGauge.HasGetsu;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasKa => JobGauge.HasKa;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Kenki => JobGauge.Kenki;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte MeditationStacks => JobGauge.MeditationStacks;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static Kaeshi Kaeshi => JobGauge.Kaeshi;
-
     /// <summary>
     /// 
     /// </summary>

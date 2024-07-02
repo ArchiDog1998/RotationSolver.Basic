@@ -12,7 +12,7 @@ partial class PaladinRotation
     /// <summary>
     /// 
     /// </summary>
-    public override bool CanHealSingleSpell => DataCenter.PartyMembers.Count() == 1 && base.CanHealSingleSpell;
+    public override bool CanHealSingleSpell => DataCenter.PartyMembers.Length == 1 && base.CanHealSingleSpell;
 
     /// <summary>
     /// 
@@ -28,13 +28,6 @@ partial class PaladinRotation
     /// 
     /// </summary>
     public static bool HasFightOrFlight => !Player.WillStatusEndGCD(0, 0, true, StatusID.FightOrFlight);
-
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte OathGauge => JobGauge.OathGauge;
-    #endregion
 
     //static partial void ModifyAtonementPvE(ref ActionSetting setting)
     //{

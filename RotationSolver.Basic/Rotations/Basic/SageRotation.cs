@@ -9,45 +9,6 @@ partial class SageRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Mind;
 
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasEukrasia => JobGauge.Eukrasia;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Addersgall => JobGauge.Addersgall;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Addersting => JobGauge.Addersting;
-
-    static float AddersgallTimerRaw => JobGauge.AddersgallTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float AddersgallTime => AddersgallTimerRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool AddersgallEndAfter(float time) => AddersgallTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool AddersgallEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => AddersgallEndAfter(GCDTime(gctCount, offset));
-    #endregion
     private protected sealed override IBaseAction Raise => EgeiroPvE;
 
     static partial void ModifyIcarusPvP(ref ActionSetting setting)
@@ -97,7 +58,7 @@ partial class SageRotation
 
     static partial void ModifyEukrasiaPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => !HasEukrasia;
+        setting.ActionCheck = () => !Eukrasia;
     }
 
     static partial void ModifyKeracholePvE(ref ActionSetting setting)

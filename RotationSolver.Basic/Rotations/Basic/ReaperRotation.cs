@@ -10,36 +10,14 @@ partial class ReaperRotation
     public override MedicineType MedicineType => MedicineType.Strength;
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.Enshrouded"/>
     /// </summary>
     public static bool HasEnshrouded => Player.HasStatus(true, StatusID.Enshrouded);
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.SoulReaver"/>
     /// </summary>
     public static bool HasSoulReaver => Player.HasStatus(true, StatusID.SoulReaver);
-
-    #region JobGauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Soul => JobGauge.Soul;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Shroud => JobGauge.Shroud;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte LemureShroud => JobGauge.LemureShroud;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte VoidShroud => JobGauge.VoidShroud;
-    #endregion
 
     static partial void ModifySlicePvE(ref ActionSetting setting)
     {

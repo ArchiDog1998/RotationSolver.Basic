@@ -54,6 +54,7 @@
 	  </Reference>
 	  <Reference Include="Serilog">
 	    <HintPath>$(DalamudLibPath)Serilog.dll</HintPath>
+		  <Private>true</Private>
 	  </Reference>
 	  
 	  <Using Include="System.ComponentModel" />

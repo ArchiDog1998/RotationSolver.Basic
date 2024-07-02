@@ -1245,6 +1245,18 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge>();
 
+    /// <inheritdoc cref="ASTGauge.DrawnCard"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.CardType DrawnCard => JobGauge.DrawnCard;
+
+    /// <inheritdoc cref="ASTGauge.DrawnCrownCard"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.CardType DrawnCrownCard => JobGauge.DrawnCrownCard;
+
+    /// <inheritdoc cref="ASTGauge.Seals"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.SealType[] Seals => JobGauge.Seals;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HealingWindPvECreator = new(() =>
     {

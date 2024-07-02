@@ -6,25 +6,8 @@ namespace RotationSolver.Basic.Rotations.Basic;
 partial class AstrologianRotation
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Mind;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static CardType DrawnCard => JobGauge.DrawnCard;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static CardType DrawnCrownCard => JobGauge.DrawnCrownCard;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    protected static SealType[] Seals => JobGauge.Seals;
 
     private sealed protected override IBaseAction? Raise => AscendPvE;
 

@@ -9,36 +9,6 @@ partial class NinjaRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
 
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Ninki => JobGauge.Ninki;
-
-    static float HutonTimeRaw => JobGauge.HutonTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float HutonTime => HutonTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool HutonEndAfter(float time) => HutonTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool HutonEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => HutonEndAfter(GCDTime(gctCount, offset));
-    #endregion
-
     static partial void ModifyShukuchiPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
@@ -47,7 +17,7 @@ partial class NinjaRotation
 
     static partial void ModifyArmorCrushPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HutonEndAfter(25) && !HutonEndAfterGCD();
+        setting.ActionCheck = () => HutonTimer is > 0 and < 25;
     }
 
     //static partial void ModifyHuraijinPvE(ref ActionSetting setting)
@@ -107,7 +77,7 @@ partial class NinjaRotation
     static partial void ModifyTenChiJinPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.Kassatsu, StatusID.TenChiJin];
-        setting.ActionCheck = () => !HutonEndAfterGCD(2);
+        setting.ActionCheck = () => HutonTimer > 2;
     }
 
     static partial void ModifyKassatsuPvE(ref ActionSetting setting)
@@ -117,7 +87,7 @@ partial class NinjaRotation
 
     static partial void ModifyHutonPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HutonEndAfterGCD();
+        setting.ActionCheck = () => HutonTimer < 0;
     }
 
     static partial void ModifyDotonPvE(ref ActionSetting setting)

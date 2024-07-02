@@ -13,22 +13,12 @@ partial class MonkRotation
     /// <summary>
     /// 
     /// </summary>
-    protected static BeastChakra[] BeastChakras => JobGauge.BeastChakra;
+    public static bool HasSolar => Nadi.HasFlag(Nadi.SOLAR);
 
     /// <summary>
     /// 
     /// </summary>
-    public static byte Chakra => JobGauge.Chakra;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasSolar => JobGauge.Nadi.HasFlag(Nadi.SOLAR);
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasLunar => JobGauge.Nadi.HasFlag(Nadi.LUNAR);
+    public static bool HasLunar => Nadi.HasFlag(Nadi.LUNAR);
     #endregion
 
     static partial void ModifyDragonKickPvE(ref ActionSetting setting)

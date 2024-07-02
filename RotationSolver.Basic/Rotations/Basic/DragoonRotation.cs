@@ -9,42 +9,6 @@ partial class DragoonRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte EyeCount => JobGauge.EyeCount;
-
-    /// <summary>
-    /// Firstminds Count
-    /// </summary>
-    public static byte FocusCount => JobGauge.FirstmindsFocusCount;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    static float LOTDTimeRaw => JobGauge.LOTDTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float LOTDTime => LOTDTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool LOTDEndAfter(float time) => LOTDTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool LOTDEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => LOTDEndAfter(GCDTime(gctCount, offset));
-
     static partial void ModifyHighJumpPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
@@ -107,7 +71,7 @@ partial class DragoonRotation
 
     static partial void ModifyWyrmwindThrustPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => FocusCount == 2;
+        setting.ActionCheck = () => FirstmindsFocusCount == 2;
     }
 
     static partial void ModifyLifeSurgePvE(ref ActionSetting setting)

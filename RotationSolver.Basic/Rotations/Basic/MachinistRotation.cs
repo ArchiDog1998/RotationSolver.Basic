@@ -9,51 +9,6 @@ partial class MachinistRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
 
-    #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool IsOverheated => JobGauge.IsOverheated;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte LastSummonBatteryPower => JobGauge.LastSummonBatteryPower;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Heat => JobGauge.Heat;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte Battery => JobGauge.Battery;
-
-    static float OverheatTimeRemainingRaw => JobGauge.OverheatTimeRemaining / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float OverheatTime => OverheatTimeRemainingRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool OverheatedEndAfter(float time) => OverheatTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool OverheatedEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => OverheatedEndAfter(GCDTime(gctCount, offset));
-    #endregion
-
     static partial void ModifySlugShotPvE(ref ActionSetting setting)
     {
         setting.ComboIds = [ActionID.HeatedSplitShotPvE];
@@ -66,12 +21,12 @@ partial class MachinistRotation
 
     static partial void ModifyHeatBlastPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => IsOverheated && !OverheatedEndAfterGCD();
+        setting.ActionCheck = () => IsOverheated && OverheatTimeRemaining > 0;
     }
 
     static partial void ModifyAutoCrossbowPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => IsOverheated && !OverheatedEndAfterGCD();
+        setting.ActionCheck = () => IsOverheated && OverheatTimeRemaining > 0;
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,

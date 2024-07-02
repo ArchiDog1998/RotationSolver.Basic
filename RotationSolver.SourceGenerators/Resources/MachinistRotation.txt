@@ -1052,6 +1052,32 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge>();
 
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float OverheatTimeRemaining => JobGauge.OverheatTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float SummonTimeRemaining => JobGauge.SummonTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
+    /// <inheritdoc cref="MCHGauge.Heat"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Heat => JobGauge.Heat;
+
+    /// <inheritdoc cref="MCHGauge.Battery"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Battery => JobGauge.Battery;
+
+    /// <inheritdoc cref="MCHGauge.LastSummonBatteryPower"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte LastSummonBatteryPower => JobGauge.LastSummonBatteryPower;
+
+    /// <inheritdoc cref="MCHGauge.IsOverheated"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsOverheated => JobGauge.IsOverheated;
+
+    /// <inheritdoc cref="MCHGauge.IsRobotActive"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsRobotActive => JobGauge.IsRobotActive;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BigShotPvECreator = new(() =>
     {

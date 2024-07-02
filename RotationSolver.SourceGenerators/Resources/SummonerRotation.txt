@@ -1948,6 +1948,68 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge>();
 
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float SummonTimerRemaining => JobGauge.SummonTimerRemaining / 1000f - DataCenter.WeaponRemain;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float AttunmentTimerRemaining => JobGauge.AttunmentTimerRemaining / 1000f - DataCenter.WeaponRemain;
+
+    /// <inheritdoc cref="SMNGauge.ReturnSummon"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.SummonPet ReturnSummon => JobGauge.ReturnSummon;
+
+    /// <inheritdoc cref="SMNGauge.ReturnSummonGlam"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.PetGlam ReturnSummonGlam => JobGauge.ReturnSummonGlam;
+
+    /// <inheritdoc cref="SMNGauge.Attunement"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Attunement => JobGauge.Attunement;
+
+    /// <inheritdoc cref="SMNGauge.AetherFlags"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static FFXIVClientStructs.FFXIV.Client.Game.Gauge.AetherFlags AetherFlags => JobGauge.AetherFlags;
+
+    /// <inheritdoc cref="SMNGauge.IsBahamutReady"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsBahamutReady => JobGauge.IsBahamutReady;
+
+    /// <inheritdoc cref="SMNGauge.IsPhoenixReady"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsPhoenixReady => JobGauge.IsPhoenixReady;
+
+    /// <inheritdoc cref="SMNGauge.IsIfritReady"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsIfritReady => JobGauge.IsIfritReady;
+
+    /// <inheritdoc cref="SMNGauge.IsTitanReady"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsTitanReady => JobGauge.IsTitanReady;
+
+    /// <inheritdoc cref="SMNGauge.IsGarudaReady"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsGarudaReady => JobGauge.IsGarudaReady;
+
+    /// <inheritdoc cref="SMNGauge.IsIfritAttuned"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsIfritAttuned => JobGauge.IsIfritAttuned;
+
+    /// <inheritdoc cref="SMNGauge.IsTitanAttuned"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsTitanAttuned => JobGauge.IsTitanAttuned;
+
+    /// <inheritdoc cref="SMNGauge.IsGarudaAttuned"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsGarudaAttuned => JobGauge.IsGarudaAttuned;
+
+    /// <inheritdoc cref="SMNGauge.HasAetherflowStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean HasAetherflowStacks => JobGauge.HasAetherflowStacks;
+
+    /// <inheritdoc cref="SMNGauge.AetherflowStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte AetherflowStacks => JobGauge.AetherflowStacks;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SkyshardPvECreator = new(() =>
     {

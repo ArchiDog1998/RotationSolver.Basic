@@ -13,19 +13,7 @@ partial class ScholarRotation
     /// <summary>
     /// 
     /// </summary>
-    public static byte FairyGauge => JobGauge.FairyGauge;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool HasAetherflow => JobGauge.Aetherflow > 0;
-
-    static float SeraphTimeRaw => JobGauge.SeraphTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float SeraphTime => SeraphTimeRaw - WeaponRemain;
+    public static bool HasAetherflow => Aetherflow > 0;
     #endregion
     private sealed protected override IBaseAction Raise => ResurrectionPvE;
 
@@ -68,7 +56,7 @@ partial class ScholarRotation
 
     static partial void ModifyConsolationPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => SeraphTime > 0;
+        setting.ActionCheck = () => SeraphTimer > 0;
     }
 
     static partial void ModifyBioPvE(ref ActionSetting setting)
@@ -105,17 +93,17 @@ partial class ScholarRotation
     static partial void ModifyDissipationPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.Dissipation];
-        setting.ActionCheck = () => !HasAetherflow && SeraphTime <= 0 && InCombat && HasPet;
+        setting.ActionCheck = () => !HasAetherflow && SeraphTimer <= 0 && InCombat && HasPet;
     }
 
     static partial void ModifyAetherpactPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => FairyGauge >= 10 && HasPet && SeraphTime <= 0;
+        setting.ActionCheck = () => FairyGauge >= 10 && HasPet && SeraphTimer <= 0;
     }
 
     static partial void ModifyFeyBlessingPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => SeraphTime <= 0 && HasPet;
+        setting.ActionCheck = () => SeraphTimer <= 0 && HasPet;
     }
 
     static partial void ModifyAetherflowPvE(ref ActionSetting setting)

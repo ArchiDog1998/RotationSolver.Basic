@@ -13,93 +13,7 @@ partial class BlackMageRotation
     /// <summary>
     /// 
     /// </summary>
-    public static byte UmbralIceStacks => JobGauge.UmbralIceStacks;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte AstralFireStacks => JobGauge.AstralFireStacks;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte PolyglotStacks => JobGauge.PolyglotStacks;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static byte UmbralHearts => JobGauge.UmbralHearts;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool IsParadoxActive => JobGauge.IsParadoxActive;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool InUmbralIce => JobGauge.InUmbralIce;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool InAstralFire => JobGauge.InAstralFire;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static bool IsEnochianActive => JobGauge.IsEnochianActive;
-
-    /// <summary>
-    /// 
-    /// </summary>
     public static bool IsPolyglotStacksMaxed => EnhancedPolyglotTrait.EnoughLevel ? PolyglotStacks == 2 : PolyglotStacks == 1;
-
-    static float EnochianTimeRaw => JobGauge.EnochianTimer / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float EnochianTime => EnochianTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool EnchinaEndAfter(float time) => EnochianTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gcdCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool EnchinaEndAfterGCD(uint gcdCount = 0, float offset = 0)
-        => EnchinaEndAfter(GCDTime(gcdCount, offset));
-
-    static float ElementTimeRaw => JobGauge.ElementTimeRemaining / 1000f;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    public static float ElementTime => ElementTimeRaw - DataCenter.WeaponRemain;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="time"></param>
-    /// <returns></returns>
-    protected static bool ElementTimeEndAfter(float time) => ElementTime <= time;
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="gctCount"></param>
-    /// <param name="offset"></param>
-    /// <returns></returns>
-    protected static bool ElementTimeEndAfterGCD(uint gctCount = 0, float offset = 0)
-        => ElementTimeEndAfter(GCDTime(gctCount, offset));
     #endregion
 
     /// <summary>
@@ -145,12 +59,12 @@ partial class BlackMageRotation
 
     static partial void ModifyFireIvPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InAstralFire && !ElementTimeEndAfter(ActionID.FireIvPvE.GetCastTime() - 0.1f);
+        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.FireIvPvE.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyDespairPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InAstralFire && !ElementTimeEndAfter(ActionID.DespairPvE.GetCastTime() - 0.1f);
+        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.DespairPvE.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyBlizzardIiiPvE(ref ActionSetting setting)
@@ -160,7 +74,7 @@ partial class BlackMageRotation
 
     static partial void ModifyBlizzardIvPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InUmbralIce && !ElementTimeEndAfter(ActionID.BlizzardIvPvE.GetCastTime() - 0.1f);
+        setting.ActionCheck = () => InUmbralIce && ElementTimeRemaining > ActionID.BlizzardIvPvE.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyXenoglossyPvE(ref ActionSetting setting)
@@ -175,12 +89,12 @@ partial class BlackMageRotation
 
     static partial void ModifyFlarePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InAstralFire && !ElementTimeEndAfter(ActionID.FlarePvE.GetCastTime() - 0.1f);
+        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.FlarePvE.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyFreezePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InUmbralIce && !ElementTimeEndAfter(ActionID.FreezePvE.GetCastTime() - 0.1f);
+        setting.ActionCheck = () => InUmbralIce && ElementTimeRemaining > ActionID.FreezePvE.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyFoulPvE(ref ActionSetting setting)
@@ -190,7 +104,7 @@ partial class BlackMageRotation
 
     static partial void ModifyAmplifierPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => !EnchinaEndAfter(10) && PolyglotStacks < 2;
+        setting.ActionCheck = () => EnochianTimer > 10 && PolyglotStacks < 2;
     }
 
 
@@ -226,12 +140,12 @@ partial class BlackMageRotation
 
     static partial void ModifyTransposePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => DataCenter.AnimationLocktime <= ElementTimeRaw;
+        setting.ActionCheck = () => DataCenter.AnimationLocktime <= ElementTimeRemaining + DataCenter.WeaponRemain;
     }
 
     static partial void ModifyUmbralSoulPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => JobGauge.InUmbralIce && DataCenter.AnimationLocktime <= ElementTimeRaw;
+        setting.ActionCheck = () => JobGauge.InUmbralIce && DataCenter.AnimationLocktime <= ElementTimeRemaining + DataCenter.WeaponRemain;
     }
 
     /// <summary>

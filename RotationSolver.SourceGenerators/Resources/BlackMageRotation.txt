@@ -1039,6 +1039,44 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge>();
 
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float EnochianTimer => JobGauge.EnochianTimer / 1000f - DataCenter.WeaponRemain;
+
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static float ElementTimeRemaining => JobGauge.ElementTimeRemaining / 1000f - DataCenter.WeaponRemain;
+
+    /// <inheritdoc cref="BLMGauge.PolyglotStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte PolyglotStacks => JobGauge.PolyglotStacks;
+
+    /// <inheritdoc cref="BLMGauge.UmbralHearts"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte UmbralHearts => JobGauge.UmbralHearts;
+
+    /// <inheritdoc cref="BLMGauge.UmbralIceStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte UmbralIceStacks => JobGauge.UmbralIceStacks;
+
+    /// <inheritdoc cref="BLMGauge.AstralFireStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte AstralFireStacks => JobGauge.AstralFireStacks;
+
+    /// <inheritdoc cref="BLMGauge.InUmbralIce"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean InUmbralIce => JobGauge.InUmbralIce;
+
+    /// <inheritdoc cref="BLMGauge.InAstralFire"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean InAstralFire => JobGauge.InAstralFire;
+
+    /// <inheritdoc cref="BLMGauge.IsEnochianActive"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsEnochianActive => JobGauge.IsEnochianActive;
+
+    /// <inheritdoc cref="BLMGauge.IsParadoxActive"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean IsParadoxActive => JobGauge.IsParadoxActive;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _SkyshardPvECreator = new(() =>
     {

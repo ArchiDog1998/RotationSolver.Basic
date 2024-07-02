@@ -1065,6 +1065,34 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge>();
 
+    /// <inheritdoc cref="SAMGauge.Kaeshi"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.Kaeshi Kaeshi => JobGauge.Kaeshi;
+
+    /// <inheritdoc cref="SAMGauge.Kenki"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte Kenki => JobGauge.Kenki;
+
+    /// <inheritdoc cref="SAMGauge.MeditationStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Byte MeditationStacks => JobGauge.MeditationStacks;
+
+    /// <inheritdoc cref="SAMGauge.Sen"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.Sen Sen => JobGauge.Sen;
+
+    /// <inheritdoc cref="SAMGauge.HasSetsu"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean HasSetsu => JobGauge.HasSetsu;
+
+    /// <inheritdoc cref="SAMGauge.HasGetsu"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean HasGetsu => JobGauge.HasGetsu;
+
+    /// <inheritdoc cref="SAMGauge.HasKa"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+    public static System.Boolean HasKa => JobGauge.HasKa;
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.1")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _BraverPvECreator = new(() =>
     {
