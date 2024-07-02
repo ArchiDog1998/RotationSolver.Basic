@@ -9,68 +9,48 @@ partial class SummonerRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Intelligence;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public override bool CanHealSingleSpell => false;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool InBahamut => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.DeathflarePvE;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool InPhoenix => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.RekindlePvE;
+
+    /// <summary/>
+    public static bool InSolarBahamut => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.SunflarePvE;
+
     private protected sealed override IBaseAction Raise => ResurrectionPvE;
 
     #region JobGauge
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool HasAetherflowStacks => JobGauge.HasAetherflowStacks;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static byte Attunement => JobGauge.Attunement;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool IsIfritReady => JobGauge.IsIfritReady;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool IsTitanReady => JobGauge.IsTitanReady;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool IsGarudaReady => JobGauge.IsGarudaReady;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool InIfrit => JobGauge.IsIfritAttuned;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool InTitan => JobGauge.IsTitanAttuned;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static bool InGaruda => JobGauge.IsGarudaAttuned;
 
     private static float SummonTimeRaw => JobGauge.SummonTimerRemaining / 1000f;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static float SummonTime => SummonTimeRaw - DataCenter.WeaponRemain;
 
     /// <summary>
@@ -242,6 +222,31 @@ partial class SummonerRotation
     }
 
     static partial void ModifyPainflarePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasAetherflowStacks;
+    }
+
+    static partial void ModifyEnkindleSolarBahamutPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => InSolarBahamut;
+    }
+
+    static partial void ModifySunflarePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => InSolarBahamut;
+    }
+
+    static partial void ModifySearingFlashPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.RefulgentLux];
+    }
+
+    static partial void ModifyLuxSolarisPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.RefulgentLux];
+    }
+
+    static partial void ModifyNecrotizePvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => HasAetherflowStacks;
     }
