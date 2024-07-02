@@ -132,11 +132,13 @@ public readonly struct ActionCooldownInfo : ICooldown
 
     /// <summary>
     /// Is this action used after several time.
+    /// If the action is ready, this will return <see langword="true"/>.
     /// </summary>
     /// <param name="time"></param>
     /// <returns></returns>
     public bool JustUsedAfter(float time)
     {
+        if (!IsCoolingDown) return true;
         var elapsed = RecastTimeElapsedRaw % RecastTimeOneChargeRaw;
         return elapsed + DataCenter.WeaponRemain < time;
     }

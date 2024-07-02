@@ -9,9 +9,7 @@ partial class WarriorRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public static byte BeastGauge => JobGauge.BeastGauge;
 
     private sealed protected override IBaseAction TankStance => DefiancePvE;
@@ -19,6 +17,12 @@ partial class WarriorRotation
     static partial void ModifyPrimalRendPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
+        setting.StatusProvide = [StatusID.PrimalRuinationReady];
+    }
+
+    static partial void ModifyPrimalRuinationPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.PrimalRuinationReady];
     }
 
     static partial void ModifyOnslaughtPvP(ref ActionSetting setting)
@@ -43,12 +47,6 @@ partial class WarriorRotation
     static partial void ModifyTomahawkPvE(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MeleeRange;
-    }
-
-    static partial void ModifyUpheavalPvE(ref ActionSetting setting)
-    {
-        //TODO: Why is that status? Answer: This is Warrior's 10% damage buff. Don't want to cast Upheaval at the start of combat without the buff.
-        setting.StatusNeed = [StatusID.SurgingTempest];
     }
 
     static partial void ModifySteelCyclonePvE(ref ActionSetting setting)
@@ -144,6 +142,17 @@ partial class WarriorRotation
     {
         setting.StatusProvide = [StatusID.NascentFlash];
         setting.StatusProvide = [StatusID.NascentGlint];
+    }
+
+    static partial void ModifyPrimalWrathPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.Wrathful];
+    }
+
+    static partial void ModifyDamnationPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = StatusHelper.RampartStatus;
+        setting.ActionCheck = Player.IsTargetOnSelf;
     }
 
     /// <inheritdoc/>

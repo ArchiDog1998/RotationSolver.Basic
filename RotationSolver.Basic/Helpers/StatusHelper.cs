@@ -118,6 +118,8 @@ public static class StatusHelper
         StatusID.Sentinel,
         StatusID.ShadowWall,
         StatusID.Nebula,
+
+        StatusID.Damnation,
         .. NoNeedHealingStatus,
     ];
 
