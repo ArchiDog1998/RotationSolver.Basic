@@ -3,7 +3,7 @@
 #nullable enable
 namespace RotationSolver.Basic.Data;
 /// <summary> The id of the status </summary>
-[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.1")]
+[global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
 public enum StatusID : ushort
 {
     /// <summary/>

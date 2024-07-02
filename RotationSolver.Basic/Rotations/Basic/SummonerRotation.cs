@@ -31,14 +31,6 @@ partial class SummonerRotation
     private static bool HasSummon => DataCenter.HasPet && SummonTimerRemaining > 0;
     #endregion
 
-    /// <inheritdoc/>
-    public override void DisplayStatus()
-    {
-        ImGui.Text("AttunmentTime: " + AttunmentTimerRemaining.ToString());
-        ImGui.Text("SummonTime: " + SummonTimerRemaining.ToString());
-        ImGui.Text("Pet: " + DataCenter.HasPet.ToString());
-    }
-
     static partial void ModifyCrimsonCyclonePvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;

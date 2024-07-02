@@ -6,6 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 partial class DancerRotation
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
+    /// <inheritdoc/>
+    public override MedicineType MedicineType => MedicineType.Dexterity;
+
     static partial void ModifyEnAvantPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
