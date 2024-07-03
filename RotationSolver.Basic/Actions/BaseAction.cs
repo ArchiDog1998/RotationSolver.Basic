@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Actions;
 /// <summary>
 /// The base action for all actions.
 /// </summary>
-public class BaseAction : IBaseAction
+public class BaseAction : IBaseAction, IAction
 {
     /// <inheritdoc/>
     public TargetResult Target { get; set; } = new(Player.Object, [], null);

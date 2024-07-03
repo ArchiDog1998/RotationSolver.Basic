@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace RotationSolver.Basic.Data;
 
 /// <summary>
-/// the option for the <see cref="IBaseAction.CanUse(out IAction, CanUseOption, byte)"/>
+/// the option for the <see cref="ICanUse.CanUse(out IAction, CanUseOption, byte)"/>
 /// </summary>
 [Flags]
 public enum CanUseOption : byte

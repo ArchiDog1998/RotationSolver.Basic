@@ -3,8 +3,7 @@
 namespace RotationSolver.Basic.Configuration;
 internal class ActionGroup
 {
-    [JsonIgnore]
-    public static IBaseAction[] AllBaseActions => [.. AllActions.OfType<IBaseAction>()];
+    private static IBaseAction[] AllBaseActions => [.. AllActions.OfType<IBaseAction>()];
 
     [JsonIgnore]
     public static IAction[] AllActions => 
