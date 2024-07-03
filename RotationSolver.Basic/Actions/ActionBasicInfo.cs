@@ -175,25 +175,25 @@ public readonly struct ActionBasicInfo
 
         var player = Player.Object;
 
-        //if (_action.Action.SecondaryCostType == 32)
-        //{
-        //    if (player.WillStatusEndGCD(0, 0,
-        //        _action.Setting.StatusFromSelf, (StatusID)_action.Action.SecondaryCostValue))
-        //    {
-        //        whyCant = WhyActionCantUse.NoStatusNeed;
-        //        return false;
-        //    }
-        //}
+        if (_action.Action.SecondaryCostType == 32)
+        {
+            if (player.WillStatusEndGCD(0, 0,
+                _action.Setting.StatusFromSelf, (StatusID)_action.Action.SecondaryCostValue))
+            {
+                whyCant = WhyActionCantUse.NoStatusNeed;
+                return false;
+            }
+        }
 
-        //if (_action.Setting.StatusNeed != null)
-        //{
-        //    if (player.WillStatusEndGCD(0, 0,
-        //        _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
-        //    {
-        //        whyCant = WhyActionCantUse.NoStatusNeed;
-        //        return false;
-        //    }
-        //}
+        if (_action.Setting.StatusNeed != null)
+        {
+            if (player.WillStatusEndGCD(0, 0,
+                _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
+            {
+                whyCant = WhyActionCantUse.NoStatusNeed;
+                return false;
+            }
+        }
 
         if (_action.Setting.StatusPenalty != null)
         {
@@ -300,7 +300,7 @@ public readonly struct ActionBasicInfo
             }
             if (_action.Setting.Ninjutsu == null)
             {
-                //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
+                //No resources... TODO: Maybe MP LB..., etc..... which can be simplify.
                 if (ActionManager.Instance()->CheckActionResources(ActionType.Action, ID) != 0)
                 {
                     whyCant = WhyActionCantUse.ActionResources;

@@ -555,4 +555,12 @@ public static class CombatData
         return IActionHelper.IsLastAction(ids);
     }
     #endregion
+
+    /// <summary>
+    /// Get the adjusted action id.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public static ActionID GetAdjustedActionId(ActionID id) 
+        => Service.GetAdjustedActionId(id);
 }

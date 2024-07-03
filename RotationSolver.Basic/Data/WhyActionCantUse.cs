@@ -16,7 +16,7 @@ internal enum WhyActionCantUse : byte
     [Description("Not enough MP.")]
     NoMp,
 
-    [Description("There area no statuses that the action need!")]
+    [Description("There are no statuses that the action need!")]
     NoStatusNeed,
 
     [Description("There are the statuses that this action provide!")]

@@ -33,11 +33,6 @@ public class BaseItem : IBaseItem
     public uint ID => _item.RowId;
 
     /// <summary>
-    /// Item Id
-    /// </summary>
-    public uint AdjustedID => ID;
-
-    /// <summary>
     /// The check about this item.
     /// </summary>
     public Func<bool>? ItemCheck { get; set; }

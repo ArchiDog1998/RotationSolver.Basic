@@ -43,9 +43,11 @@ internal class Position(float x, float y, float z)
         int* unknown = stackalloc int[] { 0x4000, 0, 0x4000, 0 };
 
         RaycastHit hit = default;
+        var pt = point + (Vector3.UnitY * 5);
+        var y = -Vector3.UnitY;
 
         point = FFXIVClientStructs.FFXIV.Client.System.Framework.Framework.Instance()->BGCollisionModule
-                ->RaycastMaterialFilter(&hit, point + (Vector3.UnitY * 5), -Vector3.UnitY, 20, 1, unknown) ? hit.Point : point;
+                ->RaycastMaterialFilter(&hit, &pt, &y, 20, 1, unknown) ? hit.Point : point;
 
         X = point.X;
         Y = point.Y;
