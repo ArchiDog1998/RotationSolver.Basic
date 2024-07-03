@@ -10,7 +10,8 @@ internal abstract class ExcelRowGetter<T, TSyntax>(Lumina.GameData gameData)
     public List<string> AddedNames { get; } = [];
 
     protected Lumina.GameData _gameData = gameData;
-    public int Count { get; private set; } = 0;
+    public Dictionary<T, string> Items { get; } = [];
+    public int Count => Items.Count;
 
     protected abstract bool AddToList(T item);
     protected abstract TSyntax[] ToNodes(T item, string name);
@@ -25,7 +26,6 @@ internal abstract class ExcelRowGetter<T, TSyntax>(Lumina.GameData gameData)
         AddedNames.Clear();
 
         var filteredItems = items.Where(AddToList);
-        Count = filteredItems.Count();
 
         return [..filteredItems.SelectMany(item => 
         {
@@ -38,6 +38,7 @@ internal abstract class ExcelRowGetter<T, TSyntax>(Lumina.GameData gameData)
             {
                 AddedNames.Add(name);
             }
+            Items[item] = name;
             return ToNodes(item, name);
         })];
     }

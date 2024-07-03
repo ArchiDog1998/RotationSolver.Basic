@@ -1016,6 +1016,30 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(669U);
 
+    /// <summary
+/// <seealso cref="PhlegmaIiiPvE"/> -> <seealso cref="PhlegmaIiPvE"/> -> <seealso cref="PhlegmaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PhlegmaPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DyskrasiaIiPvE"/> -> <seealso cref="DyskrasiaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DyskrasiaPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ToxikonIiPvE"/> -> <seealso cref="ToxikonPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ToxikonPvESet { get; }
+
+    /// <summary
+/// <seealso cref="PhysisIiPvE"/> -> <seealso cref="PhysisPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PhysisPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1116,6 +1140,16 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="TechneMakrePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TechneMakrePvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected SageRotation()
+    {
+        PhlegmaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhlegmaIiiPvE, PhlegmaIiPvE, PhlegmaPvE]);
+        DyskrasiaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DyskrasiaIiPvE, DyskrasiaPvE]);
+        ToxikonPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ToxikonIiPvE, ToxikonPvE]);
+        PhysisPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhysisIiPvE, PhysisPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

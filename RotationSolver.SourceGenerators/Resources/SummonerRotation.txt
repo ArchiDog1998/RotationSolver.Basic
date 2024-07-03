@@ -1939,6 +1939,36 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait ArcaneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(664U);
 
+    /// <summary
+/// <seealso cref="SummonIfritIiPvE"/> -> <seealso cref="SummonIfritPvE"/> -> <seealso cref="SummonRubyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonRubyPvESet { get; }
+
+    /// <summary
+/// <seealso cref="SummonTitanIiPvE"/> -> <seealso cref="SummonTitanPvE"/> -> <seealso cref="SummonTopazPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonTopazPvESet { get; }
+
+    /// <summary
+/// <seealso cref="SummonGarudaIiPvE"/> -> <seealso cref="SummonGarudaPvE"/> -> <seealso cref="SummonEmeraldPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonEmeraldPvESet { get; }
+
+    /// <summary
+/// <seealso cref="NecrotizePvE"/> -> <seealso cref="FesterPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FesterPvESet { get; }
+
+    /// <summary
+/// <seealso cref="SearingFlashPvE"/> -> <seealso cref="SearingLightPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SearingLightPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -2099,6 +2129,17 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     /// <inheritdoc cref="TeraflarePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TeraflarePvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected SummonerRotation()
+    {
+        SummonRubyPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonIfritIiPvE, SummonIfritPvE, SummonRubyPvE]);
+        SummonTopazPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonTitanIiPvE, SummonTitanPvE, SummonTopazPvE]);
+        SummonEmeraldPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonGarudaIiPvE, SummonGarudaPvE, SummonEmeraldPvE]);
+        FesterPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NecrotizePvE, FesterPvE]);
+        SearingLightPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SearingFlashPvE, SearingLightPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

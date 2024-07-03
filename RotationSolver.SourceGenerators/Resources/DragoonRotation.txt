@@ -947,6 +947,72 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(653U);
 
+    /// <summary
+/// <seealso cref="MirageDivePvE"/> -> <seealso cref="HighJumpPvE"/> -> <seealso cref="JumpPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet JumpPvESet { get; }
+
+    /// <summary
+/// <seealso cref="RaidenThrustPvE"/> -> <seealso cref="TrueThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TrueThrustPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DraconianFuryPvE"/> -> <seealso cref="DoomSpikePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DoomSpikePvESet { get; }
+
+    /// <summary
+/// <seealso cref="HeavensThrustPvE"/> -> <seealso cref="FullThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FullThrustPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ChaoticSpringPvE"/> -> <seealso cref="ChaosThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChaosThrustPvESet { get; }
+
+    /// <summary
+/// <seealso cref="RiseOfTheDragonPvE"/> -> <seealso cref="DragonfireDivePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DragonfireDivePvESet { get; }
+
+    /// <summary
+/// <seealso cref="LanceBarragePvE"/> -> <seealso cref="VorpalThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VorpalThrustPvESet { get; }
+
+    /// <summary
+/// <seealso cref="SpiralBlowPvE"/> -> <seealso cref="DisembowelPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DisembowelPvESet { get; }
+
+    /// <summary
+/// <seealso cref="StarcrossPvE"/> -> <seealso cref="StardiverPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StardiverPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DrakesbanePvE"/> -> <seealso cref="FangAndClawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FangAndClawPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DrakesbanePvE"/> -> <seealso cref="WheelingThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WheelingThrustPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1047,6 +1113,23 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="DragonsongDivePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DragonsongDivePvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected DragoonRotation()
+    {
+        JumpPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MirageDivePvE, HighJumpPvE, JumpPvE]);
+        TrueThrustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE]);
+        DoomSpikePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE]);
+        FullThrustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, FullThrustPvE]);
+        ChaosThrustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, ChaosThrustPvE]);
+        DragonfireDivePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiseOfTheDragonPvE, DragonfireDivePvE]);
+        VorpalThrustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, VorpalThrustPvE]);
+        DisembowelPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, DisembowelPvE]);
+        StardiverPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarcrossPvE, StardiverPvE]);
+        FangAndClawPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE]);
+        WheelingThrustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, WheelingThrustPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

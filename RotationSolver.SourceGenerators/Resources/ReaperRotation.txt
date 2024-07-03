@@ -1100,6 +1100,66 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(657U);
 
+    /// <summary
+/// <seealso cref="HarvestMoonPvE"/> -> <seealso cref="SoulsowPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SoulsowPvESet { get; }
+
+    /// <summary
+/// <seealso cref="LemuresSlicePvE"/> -> <seealso cref="UnveiledGallowsPvE"/> -> <seealso cref="UnveiledGibbetPvE"/> -> <seealso cref="BloodStalkPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodStalkPvESet { get; }
+
+    /// <summary
+/// <seealso cref="LemuresScythePvE"/> -> <seealso cref="GrimSwathePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GrimSwathePvESet { get; }
+
+    /// <summary
+/// <seealso cref="RegressPvE"/> -> <seealso cref="HellsIngressPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HellsIngressPvESet { get; }
+
+    /// <summary
+/// <seealso cref="RegressPvE"/> -> <seealso cref="HellsEgressPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HellsEgressPvESet { get; }
+
+    /// <summary
+/// <seealso cref="VoidReapingPvE"/> -> <seealso cref="ExecutionersGibbetPvE"/> -> <seealso cref="GibbetPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GibbetPvESet { get; }
+
+    /// <summary
+/// <seealso cref="CrossReapingPvE"/> -> <seealso cref="ExecutionersGallowsPvE"/> -> <seealso cref="GallowsPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GallowsPvESet { get; }
+
+    /// <summary
+/// <seealso cref="GrimReapingPvE"/> -> <seealso cref="ExecutionersGuillotinePvE"/> -> <seealso cref="GuillotinePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GuillotinePvESet { get; }
+
+    /// <summary
+/// <seealso cref="SacrificiumPvE"/> -> <seealso cref="GluttonyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GluttonyPvESet { get; }
+
+    /// <summary
+/// <seealso cref="PerfectioPvE"/> -> <seealso cref="CommunioPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CommunioPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1205,6 +1265,22 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     /// <inheritdoc cref="TheEndPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => TheEndPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected ReaperRotation()
+    {
+        SoulsowPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HarvestMoonPvE, SoulsowPvE]);
+        BloodStalkPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresSlicePvE, UnveiledGallowsPvE, UnveiledGibbetPvE, BloodStalkPvE]);
+        GrimSwathePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresScythePvE, GrimSwathePvE]);
+        HellsIngressPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsIngressPvE]);
+        HellsEgressPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsEgressPvE]);
+        GibbetPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VoidReapingPvE, ExecutionersGibbetPvE, GibbetPvE]);
+        GallowsPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrossReapingPvE, ExecutionersGallowsPvE, GallowsPvE]);
+        GuillotinePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GrimReapingPvE, ExecutionersGuillotinePvE, GuillotinePvE]);
+        GluttonyPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SacrificiumPvE, GluttonyPvE]);
+        CommunioPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PerfectioPvE, CommunioPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

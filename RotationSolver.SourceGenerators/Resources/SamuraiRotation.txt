@@ -1056,6 +1056,30 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(655U);
 
+    /// <summary
+/// <seealso cref="FukoPvE"/> -> <seealso cref="FugaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FugaPvESet { get; }
+
+    /// <summary
+/// <seealso cref="TengetsuPvE"/> -> <seealso cref="ThirdEyePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdEyePvESet { get; }
+
+    /// <summary
+/// <seealso cref="GyofuPvE"/> -> <seealso cref="HakazePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HakazePvESet { get; }
+
+    /// <summary
+/// <seealso cref="ZanshinPvE"/> -> <seealso cref="IkishotenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet IkishotenPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1171,6 +1195,16 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="DoomOfTheLivingPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => DoomOfTheLivingPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected SamuraiRotation()
+    {
+        FugaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE]);
+        ThirdEyePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengetsuPvE, ThirdEyePvE]);
+        HakazePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE]);
+        IkishotenPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

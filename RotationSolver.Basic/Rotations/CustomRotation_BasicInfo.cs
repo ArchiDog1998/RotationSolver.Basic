@@ -167,6 +167,7 @@ partial class CustomRotation : ICustomRotation
         }
 
         OnTerritoryChanged();
+        Init();
     }
 
     /// <inheritdoc/>
@@ -189,6 +190,11 @@ partial class CustomRotation : ICustomRotation
     /// The things on territory changed.
     /// </summary>
     public virtual void OnTerritoryChanged() { }
+
+    /// <summary>
+    /// On this class is created.
+    /// </summary>
+    public virtual void Init() { }
 
     /// <inheritdoc/>
     public void Dispose()

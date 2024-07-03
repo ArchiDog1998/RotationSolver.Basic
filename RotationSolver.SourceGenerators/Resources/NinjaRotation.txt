@@ -1437,6 +1437,48 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(661U);
 
+    /// <summary
+/// <seealso cref="DreamWithinADreamPvE"/> -> <seealso cref="AssassinatePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AssassinatePvESet { get; }
+
+    /// <summary
+/// <seealso cref="PhantomKamaitachiPvE"/> -> <seealso cref="BunshinPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BunshinPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DokumoriPvE"/> -> <seealso cref="MugPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MugPvESet { get; }
+
+    /// <summary
+/// <seealso cref="KunaisBanePvE"/> -> <seealso cref="TrickAttackPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TrickAttackPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ZeshoMeppoPvE"/> -> <seealso cref="BhavacakraPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BhavacakraPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DeathfrogMediumPvE"/> -> <seealso cref="HellfrogMediumPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HellfrogMediumPvESet { get; }
+
+    /// <summary
+/// <seealso cref="TenriJindoPvE"/> -> <seealso cref="TenChiJinPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TenChiJinPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1532,6 +1574,19 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     /// <inheritdoc cref="ChimatsuriPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => ChimatsuriPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected NinjaRotation()
+    {
+        AssassinatePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DreamWithinADreamPvE, AssassinatePvE]);
+        BunshinPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomKamaitachiPvE, BunshinPvE]);
+        MugPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DokumoriPvE, MugPvE]);
+        TrickAttackPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KunaisBanePvE, TrickAttackPvE]);
+        BhavacakraPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZeshoMeppoPvE, BhavacakraPvE]);
+        HellfrogMediumPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeathfrogMediumPvE, HellfrogMediumPvE]);
+        TenChiJinPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TenriJindoPvE, TenChiJinPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

@@ -1043,6 +1043,84 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MarksmansMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(658U);
 
+    /// <summary
+/// <seealso cref="HeatedSplitShotPvE"/> -> <seealso cref="SplitShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SplitShotPvESet { get; }
+
+    /// <summary
+/// <seealso cref="HeatedSlugShotPvE"/> -> <seealso cref="SlugShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SlugShotPvESet { get; }
+
+    /// <summary
+/// <seealso cref="HeatedCleanShotPvE"/> -> <seealso cref="CleanShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CleanShotPvESet { get; }
+
+    /// <summary
+/// <seealso cref="AirAnchorPvE"/> -> <seealso cref="HotShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HotShotPvESet { get; }
+
+    /// <summary
+/// <seealso cref="AutomatonQueenPvE"/> -> <seealso cref="RookAutoturretPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RookAutoturretPvESet { get; }
+
+    /// <summary
+/// <seealso cref="QueenOverdrivePvE"/> -> <seealso cref="RookOverdrivePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RookOverdrivePvESet { get; }
+
+    /// <summary
+/// <seealso cref="DetonatorPvE"/> -> <seealso cref="WildfirePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WildfirePvESet { get; }
+
+    /// <summary
+/// <seealso cref="ScattergunPvE"/> -> <seealso cref="SpreadShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SpreadShotPvESet { get; }
+
+    /// <summary
+/// <seealso cref="BlazingShotPvE"/> -> <seealso cref="HeatBlastPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HeatBlastPvESet { get; }
+
+    /// <summary
+/// <seealso cref="DoubleCheckPvE"/> -> <seealso cref="GaussRoundPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GaussRoundPvESet { get; }
+
+    /// <summary
+/// <seealso cref="CheckmatePvE"/> -> <seealso cref="RicochetPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RicochetPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ExcavatorPvE"/> -> <seealso cref="ChainSawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChainSawPvESet { get; }
+
+    /// <summary
+/// <seealso cref="FullMetalFieldPvE"/> -> <seealso cref="BarrelStabilizerPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BarrelStabilizerPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1158,6 +1236,25 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     /// <inheritdoc cref="SatelliteBeamPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => SatelliteBeamPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected MachinistRotation()
+    {
+        SplitShotPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSplitShotPvE, SplitShotPvE]);
+        SlugShotPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSlugShotPvE, SlugShotPvE]);
+        CleanShotPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedCleanShotPvE, CleanShotPvE]);
+        HotShotPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AirAnchorPvE, HotShotPvE]);
+        RookAutoturretPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AutomatonQueenPvE, RookAutoturretPvE]);
+        RookOverdrivePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [QueenOverdrivePvE, RookOverdrivePvE]);
+        WildfirePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DetonatorPvE, WildfirePvE]);
+        SpreadShotPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScattergunPvE, SpreadShotPvE]);
+        HeatBlastPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlazingShotPvE, HeatBlastPvE]);
+        GaussRoundPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleCheckPvE, GaussRoundPvE]);
+        RicochetPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CheckmatePvE, RicochetPvE]);
+        ChainSawPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE]);
+        BarrelStabilizerPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullMetalFieldPvE, BarrelStabilizerPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

@@ -100,10 +100,8 @@ partial class NinjaRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public NinjaRotation()
+    /// <inheritdoc/>
+    public override void Init()
     {
         FumaShurikenPvE.Setting.Ninjutsu = [TenPvE];
         KatonPvE.Setting.Ninjutsu = [ChiPvE, TenPvE];

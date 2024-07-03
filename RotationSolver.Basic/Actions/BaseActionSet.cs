@@ -1,8 +1,8 @@
 ﻿namespace RotationSolver.Basic.Actions;
 
-internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : ICanUse
+internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : IBaseActionSet
 {
-    private IBaseAction? _choosenAction = null;
+    public IBaseAction? ChosenAction { get; private set; }
 
     public bool CanUse(out IAction act, bool skipStatusProvideCheck = false, bool skipComboCheck = false, bool skipCastingCheck = false, bool usedUp = false, bool onLastAbility = false, bool skipClippingCheck = false, bool skipAoeCheck = false, byte gcdCountForAbility = 0)
     {
@@ -10,11 +10,11 @@ internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : ICanUs
         {
             if(action.CanUse(out act,skipStatusProvideCheck, skipComboCheck, skipCastingCheck, usedUp, onLastAbility, skipClippingCheck, skipAoeCheck, gcdCountForAbility))
             {
-                _choosenAction = action;
+                ChosenAction = action;
                 return true;
             }
         }
-        _choosenAction = null;
+        ChosenAction = null;
         act = null!;
         return false;
     }
@@ -32,5 +32,5 @@ internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : ICanUs
             gcdCountForAbility);
     }
 
-    public bool Use() => _choosenAction?.Use() ?? false;
+    public bool Use() => ChosenAction?.Use() ?? false;
 }

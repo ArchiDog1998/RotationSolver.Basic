@@ -1285,6 +1285,48 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnchantedBladeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(652U);
 
+    /// <summary
+/// <seealso cref="EnchantedMoulinetTroisPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/> -> <seealso cref="MoulinetPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MoulinetPvESet { get; }
+
+    /// <summary
+/// <seealso cref="VerflarePvE"/> -> <seealso cref="VerthunderIiiPvE"/> -> <seealso cref="VerthunderPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VerthunderPvESet { get; }
+
+    /// <summary
+/// <seealso cref="VerholyPvE"/> -> <seealso cref="VeraeroIiiPvE"/> -> <seealso cref="VeraeroPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VeraeroPvESet { get; }
+
+    /// <summary
+/// <seealso cref="VerflarePvE"/> -> <seealso cref="VerthunderIiPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VerthunderIiPvESet { get; }
+
+    /// <summary
+/// <seealso cref="VerholyPvE"/> -> <seealso cref="VeraeroIiPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VeraeroIiPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ViceOfThornsPvE"/> -> <seealso cref="EmboldenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmboldenPvESet { get; }
+
+    /// <summary
+/// <seealso cref="PrefulgencePvE"/> -> <seealso cref="ManaficationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ManaficationPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1380,6 +1422,19 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="VermilionScourgePvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => VermilionScourgePvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected RedMageRotation()
+    {
+        MoulinetPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, MoulinetPvE]);
+        VerthunderPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiiPvE, VerthunderPvE]);
+        VeraeroPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE]);
+        VerthunderIiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE]);
+        VeraeroIiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE]);
+        EmboldenPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE]);
+        ManaficationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

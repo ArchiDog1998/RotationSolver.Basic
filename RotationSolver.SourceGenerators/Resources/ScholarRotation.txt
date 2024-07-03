@@ -1213,6 +1213,42 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait TacticiansMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(656U);
 
+    /// <summary
+/// <seealso cref="BiolysisPvE"/> -> <seealso cref="BioIiPvE"/> -> <seealso cref="BioPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BioPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ArtOfWarIiPvE"/> -> <seealso cref="ArtOfWarPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ArtOfWarPvESet { get; }
+
+    /// <summary
+/// <seealso cref="BanefulImpactionPvE"/> -> <seealso cref="ChainStratagemPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChainStratagemPvESet { get; }
+
+    /// <summary
+/// <seealso cref="AccessionPvE"/> -> <seealso cref="ConcitationPvE"/> -> <seealso cref="SuccorPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SuccorPvESet { get; }
+
+    /// <summary
+/// <seealso cref="EmergencyTacticsPvE_37037"/> -> <seealso cref="EmergencyTacticsPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmergencyTacticsPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ManifestationPvE"/> -> <seealso cref="AdloquiumPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AdloquiumPvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1313,6 +1349,18 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     /// <inheritdoc cref="AngelFeathersPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => AngelFeathersPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected ScholarRotation()
+    {
+        BioPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BiolysisPvE, BioIiPvE, BioPvE]);
+        ArtOfWarPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArtOfWarIiPvE, ArtOfWarPvE]);
+        ChainStratagemPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BanefulImpactionPvE, ChainStratagemPvE]);
+        SuccorPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE]);
+        EmergencyTacticsPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
+        AdloquiumPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

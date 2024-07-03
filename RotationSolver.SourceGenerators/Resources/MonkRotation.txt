@@ -1110,6 +1110,72 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 
+    /// <summary
+/// <seealso cref="ForbiddenMeditationPvE"/> -> <seealso cref="SteeledMeditationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SteeledMeditationPvESet { get; }
+
+    /// <summary
+/// <seealso cref="TheForbiddenChakraPvE"/> -> <seealso cref="SteelPeakPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SteelPeakPvESet { get; }
+
+    /// <summary
+/// <seealso cref="EnlightenedMeditationPvE"/> -> <seealso cref="InspiritedMeditationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet InspiritedMeditationPvESet { get; }
+
+    /// <summary
+/// <seealso cref="EnlightenmentPvE"/> -> <seealso cref="HowlingFistPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HowlingFistPvESet { get; }
+
+    /// <summary
+/// <seealso cref="ShadowOfTheDestroyerPvE"/> -> <seealso cref="ArmOfTheDestroyerPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ArmOfTheDestroyerPvESet { get; }
+
+    /// <summary
+/// <seealso cref="EarthsReplyPvE"/> -> <seealso cref="RiddleOfEarthPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfEarthPvESet { get; }
+
+    /// <summary
+/// <seealso cref="LeapingOpoPvE"/> -> <seealso cref="BootshinePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BootshinePvESet { get; }
+
+    /// <summary
+/// <seealso cref="RisingRaptorPvE"/> -> <seealso cref="TrueStrikePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TrueStrikePvESet { get; }
+
+    /// <summary
+/// <seealso cref="PouncingCoeurlPvE"/> -> <seealso cref="SnapPunchPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SnapPunchPvESet { get; }
+
+    /// <summary
+/// <seealso cref="WindsReplyPvE"/> -> <seealso cref="RiddleOfWindPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfWindPvESet { get; }
+
+    /// <summary
+/// <seealso cref="FiresReplyPvE"/> -> <seealso cref="RiddleOfFirePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfFirePvESet { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1210,6 +1276,23 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     /// <inheritdoc cref="FinalHeavenPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     private sealed protected override global::RotationSolver.Basic.Actions.IBaseAction LimitBreak3 => FinalHeavenPvE;
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected MonkRotation()
+    {
+        SteeledMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ForbiddenMeditationPvE, SteeledMeditationPvE]);
+        SteelPeakPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE]);
+        InspiritedMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenedMeditationPvE, InspiritedMeditationPvE]);
+        HowlingFistPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE]);
+        ArmOfTheDestroyerPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowOfTheDestroyerPvE, ArmOfTheDestroyerPvE]);
+        RiddleOfEarthPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EarthsReplyPvE, RiddleOfEarthPvE]);
+        BootshinePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LeapingOpoPvE, BootshinePvE]);
+        TrueStrikePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RisingRaptorPvE, TrueStrikePvE]);
+        SnapPunchPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PouncingCoeurlPvE, SnapPunchPvE]);
+        RiddleOfWindPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WindsReplyPvE, RiddleOfWindPvE]);
+        RiddleOfFirePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FiresReplyPvE, RiddleOfFirePvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

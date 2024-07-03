@@ -1,13 +1,12 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+﻿using Lumina.Excel.GeneratedSheets;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using RotationSolver.GameData.Getters.Actions;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using RotationSolver.GameData.Getters;
+using RotationSolver.GameData.Getters.Actions;
+using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
-using Lumina.Excel.GeneratedSheets;
-using System.Reflection;
-using Microsoft.CodeAnalysis;
-using System.Xml.Linq;
 
 namespace RotationSolver.GameData;
 internal static class BasicRotationGenerator
@@ -19,8 +18,9 @@ internal static class BasicRotationGenerator
 
         var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
         var traitsGetter = new TraitRotationGetter(gameData, job);
+        var actionsGroup = new ReplaceActionGetter(gameData, rotationsGetter);
 
-        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(),
+        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..actionsGroup.GetNodes(),
         .. CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];
 
         if (!job.IsLimitedJob)
@@ -53,6 +53,16 @@ internal static class BasicRotationGenerator
         {
             list.AddRange(GetLBInRotation(c, 3, gameData));
             rotationNames.Add("LimitBreak3");
+        }
+        if (actionsGroup.Count > 0)
+        {
+            var ctor = ConstructorDeclaration(Identifier(className))
+            .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
+            .WithXmlComment("/// <inheritdoc/>")
+            .WithModifiers(
+                TokenList(Token(SyntaxKind.ProtectedKeyword)))
+            .WithBody(Block(actionsGroup.GetInit()));
+            list.Add(ctor);
         }
 
         list.AddRange(CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Actions.IBaseAction", "AllBaseActions", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. rotationNames]));
