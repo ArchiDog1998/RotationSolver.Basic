@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/summoner"><strong>Summoner</strong></see>
 /// <br>Number of Actions: 99</br>
-/// <br>Number of Action Sets: 5</br>
+/// <br>Number of Action Sets: 6</br>
 /// <br>Number of Traits: 27</br>
 /// </summary>
 public abstract partial class SummonerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1940,32 +1940,38 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait ArcaneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(664U);
 
-    /// <summary
-/// <seealso cref="SummonIfritIiPvE"/> -> <seealso cref="SummonIfritPvE"/> -> <seealso cref="SummonRubyPvE"/>
+    /// <summary>
+/// <seealso cref="EnkindleBahamutPvE"/> -> <seealso cref="EnkindlePhoenixPvE"/> -> <seealso cref="EnkindleSolarBahamutPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnkindleBahamutPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="SummonRubyPvE"/> -> <seealso cref="SummonIfritPvE"/> -> <seealso cref="SummonIfritIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonRubyPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SummonTitanIiPvE"/> -> <seealso cref="SummonTitanPvE"/> -> <seealso cref="SummonTopazPvE"/>
+    /// <summary>
+/// <seealso cref="SummonTopazPvE"/> -> <seealso cref="SummonTitanPvE"/> -> <seealso cref="SummonTitanIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonTopazPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SummonGarudaIiPvE"/> -> <seealso cref="SummonGarudaPvE"/> -> <seealso cref="SummonEmeraldPvE"/>
+    /// <summary>
+/// <seealso cref="SummonEmeraldPvE"/> -> <seealso cref="SummonGarudaPvE"/> -> <seealso cref="SummonGarudaIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonEmeraldPvESet { get; }
 
-    /// <summary
-/// <seealso cref="NecrotizePvE"/> -> <seealso cref="FesterPvE"/>
+    /// <summary>
+/// <seealso cref="FesterPvE"/> -> <seealso cref="NecrotizePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FesterPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SearingFlashPvE"/> -> <seealso cref="SearingLightPvE"/>
+    /// <summary>
+/// <seealso cref="SearingLightPvE"/> -> <seealso cref="SearingFlashPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SearingLightPvESet { get; }
@@ -2135,6 +2141,7 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SummonerRotation()
     {
+        EnkindleBahamutPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindleSolarBahamutPvE, EnkindlePhoenixPvE, EnkindleBahamutPvE]);
         SummonRubyPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonIfritIiPvE, SummonIfritPvE, SummonRubyPvE]);
         SummonTopazPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonTitanIiPvE, SummonTitanPvE, SummonTopazPvE]);
         SummonEmeraldPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonGarudaIiPvE, SummonGarudaPvE, SummonEmeraldPvE]);

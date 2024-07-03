@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/blackmage"><strong>Black Mage</strong></see>
 /// <br>Number of Actions: 49</br>
-/// <br>Number of Action Sets: 5</br>
+/// <br>Number of Action Sets: 6</br>
 /// <br>Number of Traits: 25</br>
 /// </summary>
 public abstract partial class BlackMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1031,32 +1031,38 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(659U);
 
-    /// <summary
-/// <seealso cref="HighFireIiPvE"/> -> <seealso cref="FireIiPvE"/>
+    /// <summary>
+/// <seealso cref="FirePvE"/> -> <seealso cref="ParadoxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FirePvESet { get; }
+
+    /// <summary>
+/// <seealso cref="FireIiPvE"/> -> <seealso cref="HighFireIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FireIiPvESet { get; }
 
-    /// <summary
-/// <seealso cref="HighBlizzardIiPvE"/> -> <seealso cref="BlizzardIiPvE"/>
+    /// <summary>
+/// <seealso cref="BlizzardIiPvE"/> -> <seealso cref="HighBlizzardIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BlizzardIiPvESet { get; }
 
-    /// <summary
-/// <seealso cref="HighThunderPvE"/> -> <seealso cref="ThunderIiiPvE"/> -> <seealso cref="ThunderPvE"/>
+    /// <summary>
+/// <seealso cref="ThunderPvE"/> -> <seealso cref="ThunderIiiPvE"/> -> <seealso cref="HighThunderPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThunderPvESet { get; }
 
-    /// <summary
-/// <seealso cref="HighThunderIiPvE"/> -> <seealso cref="ThunderIvPvE"/> -> <seealso cref="ThunderIiPvE"/>
+    /// <summary>
+/// <seealso cref="ThunderIiPvE"/> -> <seealso cref="ThunderIvPvE"/> -> <seealso cref="HighThunderIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThunderIiPvESet { get; }
 
-    /// <summary
-/// <seealso cref="RetracePvE"/> -> <seealso cref="LeyLinesPvE"/>
+    /// <summary>
+/// <seealso cref="LeyLinesPvE"/> -> <seealso cref="RetracePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LeyLinesPvESet { get; }
@@ -1196,6 +1202,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected BlackMageRotation()
     {
+        FirePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, FirePvE]);
         FireIiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighFireIiPvE, FireIiPvE]);
         BlizzardIiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighBlizzardIiPvE, BlizzardIiPvE]);
         ThunderPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderPvE, ThunderIiiPvE, ThunderPvE]);

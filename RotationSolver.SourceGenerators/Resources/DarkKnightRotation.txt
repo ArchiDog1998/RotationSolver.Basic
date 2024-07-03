@@ -935,56 +935,56 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(663U);
 
-    /// <summary
-/// <seealso cref="ReleaseGritPvE"/> -> <seealso cref="GritPvE"/>
+    /// <summary>
+/// <seealso cref="GritPvE"/> -> <seealso cref="ReleaseGritPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GritPvESet { get; }
 
-    /// <summary
-/// <seealso cref="FloodOfShadowPvE"/> -> <seealso cref="FloodOfDarknessPvE"/>
+    /// <summary>
+/// <seealso cref="FloodOfDarknessPvE"/> -> <seealso cref="FloodOfShadowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FloodOfDarknessPvESet { get; }
 
-    /// <summary
-/// <seealso cref="EdgeOfShadowPvE"/> -> <seealso cref="EdgeOfDarknessPvE"/>
+    /// <summary>
+/// <seealso cref="EdgeOfDarknessPvE"/> -> <seealso cref="EdgeOfShadowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EdgeOfDarknessPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SaltAndDarknessPvE"/> -> <seealso cref="SaltedEarthPvE"/>
+    /// <summary>
+/// <seealso cref="SaltedEarthPvE"/> -> <seealso cref="SaltAndDarknessPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SaltedEarthPvESet { get; }
 
-    /// <summary
-/// <seealso cref="DeliriumPvE"/> -> <seealso cref="BloodWeaponPvE"/>
+    /// <summary>
+/// <seealso cref="BloodWeaponPvE"/> -> <seealso cref="DeliriumPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodWeaponPvESet { get; }
 
-    /// <summary
-/// <seealso cref="ShadowedVigilPvE"/> -> <seealso cref="ShadowWallPvE"/>
+    /// <summary>
+/// <seealso cref="ShadowWallPvE"/> -> <seealso cref="ShadowedVigilPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ShadowWallPvESet { get; }
 
-    /// <summary
-/// <seealso cref="TorcleaverPvE"/> -> <seealso cref="ComeuppancePvE"/> -> <seealso cref="ScarletDeliriumPvE"/> -> <seealso cref="BloodspillerPvE"/>
+    /// <summary>
+/// <seealso cref="BloodspillerPvE"/> -> <seealso cref="ScarletDeliriumPvE"/> -> <seealso cref="ComeuppancePvE"/> -> <seealso cref="TorcleaverPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodspillerPvESet { get; }
 
-    /// <summary
-/// <seealso cref="ImpalementPvE"/> -> <seealso cref="QuietusPvE"/>
+    /// <summary>
+/// <seealso cref="QuietusPvE"/> -> <seealso cref="ImpalementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet QuietusPvESet { get; }
 
-    /// <summary
-/// <seealso cref="DisesteemPvE"/> -> <seealso cref="LivingShadowPvE"/>
+    /// <summary>
+/// <seealso cref="LivingShadowPvE"/> -> <seealso cref="DisesteemPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LivingShadowPvESet { get; }

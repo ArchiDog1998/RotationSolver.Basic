@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/paladin"><strong>Paladin</strong></see>
 /// <br>Number of Actions: 52</br>
-/// <br>Number of Action Sets: 8</br>
+/// <br>Number of Action Sets: 9</br>
 /// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1076,50 +1076,56 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFightOrFlightTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(665U);
 
-    /// <summary
-/// <seealso cref="ReleaseIronWillPvE"/> -> <seealso cref="IronWillPvE"/>
+    /// <summary>
+/// <seealso cref="IronWillPvE"/> -> <seealso cref="ReleaseIronWillPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet IronWillPvESet { get; }
 
-    /// <summary
-/// <seealso cref="RoyalAuthorityPvE"/> -> <seealso cref="RageOfHalonePvE"/>
+    /// <summary>
+/// <seealso cref="RageOfHalonePvE"/> -> <seealso cref="RoyalAuthorityPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RageOfHalonePvESet { get; }
 
-    /// <summary
-/// <seealso cref="HolySheltronPvE"/> -> <seealso cref="SheltronPvE"/>
+    /// <summary>
+/// <seealso cref="SheltronPvE"/> -> <seealso cref="HolySheltronPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SheltronPvESet { get; }
 
-    /// <summary
-/// <seealso cref="ExpiacionPvE"/> -> <seealso cref="SpiritsWithinPvE"/>
+    /// <summary>
+/// <seealso cref="SpiritsWithinPvE"/> -> <seealso cref="ExpiacionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SpiritsWithinPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SepulchrePvE"/> -> <seealso cref="SupplicationPvE"/> -> <seealso cref="AtonementPvE"/>
+    /// <summary>
+/// <seealso cref="ConfiteorPvE"/> -> <seealso cref="BladeOfFaithPvE"/> -> <seealso cref="BladeOfTruthPvE"/> -> <seealso cref="BladeOfValorPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ConfiteorPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="AtonementPvE"/> -> <seealso cref="SupplicationPvE"/> -> <seealso cref="SepulchrePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AtonementPvESet { get; }
 
-    /// <summary
-/// <seealso cref="GuardianPvE"/> -> <seealso cref="SentinelPvE"/>
+    /// <summary>
+/// <seealso cref="SentinelPvE"/> -> <seealso cref="GuardianPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SentinelPvESet { get; }
 
-    /// <summary
-/// <seealso cref="BladeOfHonorPvE"/> -> <seealso cref="ImperatorPvE"/> -> <seealso cref="RequiescatPvE"/>
+    /// <summary>
+/// <seealso cref="RequiescatPvE"/> -> <seealso cref="ImperatorPvE"/> -> <seealso cref="BladeOfHonorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RequiescatPvESet { get; }
 
-    /// <summary
-/// <seealso cref="GoringBladePvE"/> -> <seealso cref="FightOrFlightPvE"/>
+    /// <summary>
+/// <seealso cref="FightOrFlightPvE"/> -> <seealso cref="GoringBladePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FightOrFlightPvESet { get; }
@@ -1218,6 +1224,7 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
         RageOfHalonePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvE, RageOfHalonePvE]);
         SheltronPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HolySheltronPvE, SheltronPvE]);
         SpiritsWithinPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExpiacionPvE, SpiritsWithinPvE]);
+        ConfiteorPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvE, BladeOfTruthPvE, BladeOfFaithPvE, ConfiteorPvE]);
         AtonementPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SepulchrePvE, SupplicationPvE, AtonementPvE]);
         SentinelPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GuardianPvE, SentinelPvE]);
         RequiescatPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfHonorPvE, ImperatorPvE, RequiescatPvE]);

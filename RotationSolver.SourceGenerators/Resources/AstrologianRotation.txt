@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>Astrologian</strong></see>
 /// <br>Number of Actions: 62</br>
-/// <br>Number of Action Sets: 6</br>
+/// <br>Number of Action Sets: 13</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class AstrologianRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1237,38 +1237,80 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(673U);
 
-    /// <summary
-/// <seealso cref="CombustIiiPvE"/> -> <seealso cref="CombustIiPvE"/> -> <seealso cref="CombustPvE"/>
+    /// <summary>
+/// <seealso cref="AstralDrawPvE"/> -> <seealso cref="UmbralDrawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AstralDrawPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="PlayIPvE"/> -> <seealso cref="TheBalancePvE"/> -> <seealso cref="TheSpearPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PlayIPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="PlayIiPvE"/> -> <seealso cref="TheArrowPvE"/> -> <seealso cref="TheBolePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PlayIiPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="PlayIiiPvE"/> -> <seealso cref="TheSpirePvE"/> -> <seealso cref="TheEwerPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PlayIiiPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="MinorArcanaPvE"/> -> <seealso cref="LordOfCrownsPvE"/> -> <seealso cref="LadyOfCrownsPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MinorArcanaPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="CombustPvE"/> -> <seealso cref="CombustIiPvE"/> -> <seealso cref="CombustIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet CombustPvESet { get; }
 
-    /// <summary
-/// <seealso cref="GravityIiPvE"/> -> <seealso cref="GravityPvE"/>
+    /// <summary>
+/// <seealso cref="GravityPvE"/> -> <seealso cref="GravityIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GravityPvESet { get; }
 
-    /// <summary
-/// <seealso cref="MicrocosmosPvE"/> -> <seealso cref="MacrocosmosPvE"/>
+    /// <summary>
+/// <seealso cref="EarthlyStarPvE"/> -> <seealso cref="StellarDetonationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EarthlyStarPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="HoroscopePvE"/> -> <seealso cref="HoroscopePvE_16558"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HoroscopePvESet { get; }
+
+    /// <summary>
+/// <seealso cref="MacrocosmosPvE"/> -> <seealso cref="MicrocosmosPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MacrocosmosPvESet { get; }
 
-    /// <summary
-/// <seealso cref="OraclePvE"/> -> <seealso cref="DivinationPvE"/>
+    /// <summary>
+/// <seealso cref="DivinationPvE"/> -> <seealso cref="OraclePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DivinationPvESet { get; }
 
-    /// <summary
-/// <seealso cref="HeliosConjunctionPvE"/> -> <seealso cref="AspectedHeliosPvE"/>
+    /// <summary>
+/// <seealso cref="AspectedHeliosPvE"/> -> <seealso cref="HeliosConjunctionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AspectedHeliosPvESet { get; }
 
-    /// <summary
-/// <seealso cref="SunSignPvE"/> -> <seealso cref="NeutralSectPvE"/>
+    /// <summary>
+/// <seealso cref="NeutralSectPvE"/> -> <seealso cref="SunSignPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet NeutralSectPvESet { get; }
@@ -1373,8 +1415,15 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected AstrologianRotation()
     {
+        AstralDrawPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UmbralDrawPvE, AstralDrawPvE]);
+        PlayIPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheSpearPvE, TheBalancePvE, PlayIPvE]);
+        PlayIiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheBolePvE, TheArrowPvE, PlayIiPvE]);
+        PlayIiiPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheEwerPvE, TheSpirePvE, PlayIiiPvE]);
+        MinorArcanaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LadyOfCrownsPvE, LordOfCrownsPvE, MinorArcanaPvE]);
         CombustPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CombustIiiPvE, CombustIiPvE, CombustPvE]);
         GravityPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GravityIiPvE, GravityPvE]);
+        EarthlyStarPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StellarDetonationPvE, EarthlyStarPvE]);
+        HoroscopePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HoroscopePvE_16558, HoroscopePvE]);
         MacrocosmosPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MicrocosmosPvE, MacrocosmosPvE]);
         DivinationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OraclePvE, DivinationPvE]);
         AspectedHeliosPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeliosConjunctionPvE, AspectedHeliosPvE]);

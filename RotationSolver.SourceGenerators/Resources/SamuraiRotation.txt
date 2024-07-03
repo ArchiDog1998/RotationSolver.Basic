@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>Samurai</strong></see>
 /// <br>Number of Actions: 53</br>
-/// <br>Number of Action Sets: 4</br>
+/// <br>Number of Action Sets: 5</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1057,26 +1057,32 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(655U);
 
-    /// <summary
-/// <seealso cref="FukoPvE"/> -> <seealso cref="FugaPvE"/>
+    /// <summary>
+/// <seealso cref="OgiNamikiriPvE"/> -> <seealso cref="KaeshiNamikiriPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet OgiNamikiriPvESet { get; }
+
+    /// <summary>
+/// <seealso cref="FugaPvE"/> -> <seealso cref="FukoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FugaPvESet { get; }
 
-    /// <summary
-/// <seealso cref="TengetsuPvE"/> -> <seealso cref="ThirdEyePvE"/>
+    /// <summary>
+/// <seealso cref="ThirdEyePvE"/> -> <seealso cref="TengetsuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdEyePvESet { get; }
 
-    /// <summary
-/// <seealso cref="GyofuPvE"/> -> <seealso cref="HakazePvE"/>
+    /// <summary>
+/// <seealso cref="HakazePvE"/> -> <seealso cref="GyofuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HakazePvESet { get; }
 
-    /// <summary
-/// <seealso cref="ZanshinPvE"/> -> <seealso cref="IkishotenPvE"/>
+    /// <summary>
+/// <seealso cref="IkishotenPvE"/> -> <seealso cref="ZanshinPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet IkishotenPvESet { get; }
@@ -1201,6 +1207,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SamuraiRotation()
     {
+        OgiNamikiriPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiNamikiriPvE, OgiNamikiriPvE]);
         FugaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE]);
         ThirdEyePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengetsuPvE, ThirdEyePvE]);
         HakazePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE]);

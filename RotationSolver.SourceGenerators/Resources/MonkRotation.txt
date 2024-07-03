@@ -1111,68 +1111,68 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 
-    /// <summary
-/// <seealso cref="ForbiddenMeditationPvE"/> -> <seealso cref="SteeledMeditationPvE"/>
+    /// <summary>
+/// <seealso cref="SteeledMeditationPvE"/> -> <seealso cref="ForbiddenMeditationPvE"/> -> <seealso cref="SteelPeakPvE"/> -> <seealso cref="TheForbiddenChakraPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SteeledMeditationPvESet { get; }
 
-    /// <summary
-/// <seealso cref="TheForbiddenChakraPvE"/> -> <seealso cref="SteelPeakPvE"/>
+    /// <summary>
+/// <seealso cref="SteelPeakPvE"/> -> <seealso cref="TheForbiddenChakraPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SteelPeakPvESet { get; }
 
-    /// <summary
-/// <seealso cref="EnlightenedMeditationPvE"/> -> <seealso cref="InspiritedMeditationPvE"/>
+    /// <summary>
+/// <seealso cref="InspiritedMeditationPvE"/> -> <seealso cref="EnlightenedMeditationPvE"/> -> <seealso cref="HowlingFistPvE"/> -> <seealso cref="EnlightenmentPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet InspiritedMeditationPvESet { get; }
 
-    /// <summary
-/// <seealso cref="EnlightenmentPvE"/> -> <seealso cref="HowlingFistPvE"/>
+    /// <summary>
+/// <seealso cref="HowlingFistPvE"/> -> <seealso cref="EnlightenmentPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HowlingFistPvESet { get; }
 
-    /// <summary
-/// <seealso cref="ShadowOfTheDestroyerPvE"/> -> <seealso cref="ArmOfTheDestroyerPvE"/>
+    /// <summary>
+/// <seealso cref="ArmOfTheDestroyerPvE"/> -> <seealso cref="ShadowOfTheDestroyerPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ArmOfTheDestroyerPvESet { get; }
 
-    /// <summary
-/// <seealso cref="EarthsReplyPvE"/> -> <seealso cref="RiddleOfEarthPvE"/>
+    /// <summary>
+/// <seealso cref="RiddleOfEarthPvE"/> -> <seealso cref="EarthsReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfEarthPvESet { get; }
 
-    /// <summary
-/// <seealso cref="LeapingOpoPvE"/> -> <seealso cref="BootshinePvE"/>
+    /// <summary>
+/// <seealso cref="BootshinePvE"/> -> <seealso cref="LeapingOpoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BootshinePvESet { get; }
 
-    /// <summary
-/// <seealso cref="RisingRaptorPvE"/> -> <seealso cref="TrueStrikePvE"/>
+    /// <summary>
+/// <seealso cref="TrueStrikePvE"/> -> <seealso cref="RisingRaptorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TrueStrikePvESet { get; }
 
-    /// <summary
-/// <seealso cref="PouncingCoeurlPvE"/> -> <seealso cref="SnapPunchPvE"/>
+    /// <summary>
+/// <seealso cref="SnapPunchPvE"/> -> <seealso cref="PouncingCoeurlPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SnapPunchPvESet { get; }
 
-    /// <summary
-/// <seealso cref="WindsReplyPvE"/> -> <seealso cref="RiddleOfWindPvE"/>
+    /// <summary>
+/// <seealso cref="RiddleOfWindPvE"/> -> <seealso cref="WindsReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfWindPvESet { get; }
 
-    /// <summary
-/// <seealso cref="FiresReplyPvE"/> -> <seealso cref="RiddleOfFirePvE"/>
+    /// <summary>
+/// <seealso cref="RiddleOfFirePvE"/> -> <seealso cref="FiresReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfFirePvESet { get; }
@@ -1282,9 +1282,9 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected MonkRotation()
     {
-        SteeledMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ForbiddenMeditationPvE, SteeledMeditationPvE]);
+        SteeledMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE, ForbiddenMeditationPvE, SteeledMeditationPvE]);
         SteelPeakPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE]);
-        InspiritedMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenedMeditationPvE, InspiritedMeditationPvE]);
+        InspiritedMeditationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE, EnlightenedMeditationPvE, InspiritedMeditationPvE]);
         HowlingFistPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE]);
         ArmOfTheDestroyerPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowOfTheDestroyerPvE, ArmOfTheDestroyerPvE]);
         RiddleOfEarthPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EarthsReplyPvE, RiddleOfEarthPvE]);

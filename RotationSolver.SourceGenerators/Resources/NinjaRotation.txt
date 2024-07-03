@@ -1438,44 +1438,44 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(661U);
 
-    /// <summary
-/// <seealso cref="DreamWithinADreamPvE"/> -> <seealso cref="AssassinatePvE"/>
+    /// <summary>
+/// <seealso cref="AssassinatePvE"/> -> <seealso cref="DreamWithinADreamPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AssassinatePvESet { get; }
 
-    /// <summary
-/// <seealso cref="PhantomKamaitachiPvE"/> -> <seealso cref="BunshinPvE"/>
+    /// <summary>
+/// <seealso cref="BunshinPvE"/> -> <seealso cref="PhantomKamaitachiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BunshinPvESet { get; }
 
-    /// <summary
-/// <seealso cref="DokumoriPvE"/> -> <seealso cref="MugPvE"/>
+    /// <summary>
+/// <seealso cref="MugPvE"/> -> <seealso cref="DokumoriPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MugPvESet { get; }
 
-    /// <summary
-/// <seealso cref="KunaisBanePvE"/> -> <seealso cref="TrickAttackPvE"/>
+    /// <summary>
+/// <seealso cref="TrickAttackPvE"/> -> <seealso cref="KunaisBanePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TrickAttackPvESet { get; }
 
-    /// <summary
-/// <seealso cref="ZeshoMeppoPvE"/> -> <seealso cref="BhavacakraPvE"/>
+    /// <summary>
+/// <seealso cref="BhavacakraPvE"/> -> <seealso cref="ZeshoMeppoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BhavacakraPvESet { get; }
 
-    /// <summary
-/// <seealso cref="DeathfrogMediumPvE"/> -> <seealso cref="HellfrogMediumPvE"/>
+    /// <summary>
+/// <seealso cref="HellfrogMediumPvE"/> -> <seealso cref="DeathfrogMediumPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HellfrogMediumPvESet { get; }
 
-    /// <summary
-/// <seealso cref="TenriJindoPvE"/> -> <seealso cref="TenChiJinPvE"/>
+    /// <summary>
+/// <seealso cref="TenChiJinPvE"/> -> <seealso cref="TenriJindoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TenChiJinPvESet { get; }
