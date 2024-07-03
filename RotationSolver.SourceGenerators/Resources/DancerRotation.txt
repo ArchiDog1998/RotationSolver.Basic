@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/dancer"><strong>Dancer</strong></see>
 /// <br>Number of Actions: 59</br>
+/// <br>Number of Action Sets: 3</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class DancerRotation : global::RotationSolver.Basic.Rotations.CustomRotation

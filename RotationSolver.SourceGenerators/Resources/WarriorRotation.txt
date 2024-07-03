@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/warrior"><strong>Warrior</strong></see>
 /// <br>Number of Actions: 44</br>
+/// <br>Number of Action Sets: 7</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rotations.CustomRotation

@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/dragoon"><strong>Dragoon</strong></see>
 /// <br>Number of Actions: 47</br>
+/// <br>Number of Action Sets: 11</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rotations.CustomRotation

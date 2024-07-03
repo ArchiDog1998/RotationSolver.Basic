@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/redmage"><strong>Red Mage</strong></see>
 /// <br>Number of Actions: 65</br>
+/// <br>Number of Action Sets: 7</br>
 /// <br>Number of Traits: 19</br>
 /// </summary>
 public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation

@@ -80,6 +80,7 @@ internal static class BasicRotationGenerator
             /// <summary>
             /// <see href="https://na.finalfantasyxiv.com/jobguide/{{jobName.Replace(" ", "").ToLower()}}"><strong>{{jobName}}</strong></see>
             /// <br>Number of Actions: {{rotationsGetter.Count}}</br>
+            /// <br>Number of Action Sets: {{actionsGroup.Count}}</br>
             /// <br>Number of Traits: {{traitsGetter.Count}}</br>
             /// </summary>
             """)

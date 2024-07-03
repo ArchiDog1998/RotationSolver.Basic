@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>Gunbreaker</strong></see>
 /// <br>Number of Actions: 72</br>
+/// <br>Number of Action Sets: 6</br>
 /// <br>Number of Traits: 16</br>
 /// </summary>
 public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.Rotations.CustomRotation

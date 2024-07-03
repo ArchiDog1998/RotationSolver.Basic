@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/darkknight"><strong>Dark Knight</strong></see>
 /// <br>Number of Actions: 47</br>
+/// <br>Number of Action Sets: 9</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.Rotations.CustomRotation

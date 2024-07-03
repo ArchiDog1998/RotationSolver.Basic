@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/scholar"><strong>Scholar</strong></see>
 /// <br>Number of Actions: 62</br>
+/// <br>Number of Action Sets: 6</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rotations.CustomRotation

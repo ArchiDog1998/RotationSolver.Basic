@@ -6,6 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/whitemage"><strong>White Mage</strong></see>
 /// <br>Number of Actions: 45</br>
+/// <br>Number of Action Sets: 6</br>
 /// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
