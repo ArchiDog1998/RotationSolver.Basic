@@ -35,9 +35,9 @@ public readonly struct ActionBasicInfo
     public readonly uint IconID => ID == (uint)ActionID.SprintPvE ? 104u : _action.Action.Icon;
 
     /// <summary>
-    /// The adjust id of this action.
+    /// Is the action highlighted.
     /// </summary>
-    public readonly uint AdjustedID => (uint)Service.GetAdjustedActionId((ActionID)ID);
+    public unsafe readonly bool IsHighlighted => ActionManager.Instance()->IsActionHighlighted(ActionType.Action, ID);
 
     /// <summary>
     /// The attack type of this action.
@@ -52,7 +52,7 @@ public readonly struct ActionBasicInfo
     /// <summary>
     /// The animation lock time of this action.
     /// </summary>
-    public readonly float AnimationLockTime => OtherConfiguration.AnimationLockTime?.TryGetValue(AdjustedID, out var time) ?? false ? time : 0.6f;
+    public readonly float AnimationLockTime => OtherConfiguration.AnimationLockTime?.TryGetValue(ID, out var time) ?? false ? time : 0.6f;
 
     /// <summary>
     /// The level of this action.
@@ -72,7 +72,7 @@ public readonly struct ActionBasicInfo
     /// <summary>
     /// Casting time.
     /// </summary>
-    public readonly unsafe float CastTime => ((ActionID)AdjustedID).GetCastTime();
+    public readonly unsafe float CastTime => ((ActionID)ID).GetCastTime();
 
     /// <summary>
     /// How many mp does this action needs.
@@ -84,7 +84,7 @@ public readonly struct ActionBasicInfo
             var mpOver = _action.Setting.MPOverride?.Invoke();
             if (mpOver.HasValue) return mpOver.Value;
 
-            var mp = (uint)ActionManager.GetActionCost(ActionType.Action, AdjustedID, 0, 0, 0, 0);
+            var mp = (uint)ActionManager.GetActionCost(ActionType.Action, ID, 0, 0, 0, 0);
             if (mp < 100) return 0;
             return mp;
         }
@@ -174,6 +174,16 @@ public readonly struct ActionBasicInfo
         }
 
         var player = Player.Object;
+
+        //if (_action.Action.SecondaryCostType == 32)
+        //{
+        //    if (player.WillStatusEndGCD(0, 0,
+        //        _action.Setting.StatusFromSelf, (StatusID)_action.Action.SecondaryCostValue))
+        //    {
+        //        whyCant = WhyActionCantUse.NoStatusNeed;
+        //        return false;
+        //    }
+        //}
 
         //if (_action.Setting.StatusNeed != null)
         //{
@@ -283,7 +293,7 @@ public readonly struct ActionBasicInfo
 
         unsafe
         {
-            if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Action, AdjustedID)))
+            if (ConfigurationHelper.BadStatus.Contains(ActionManager.Instance()->GetActionStatus(ActionType.Action, ID)))
             {
                 whyCant = WhyActionCantUse.BadStatus;
                 return false;
@@ -291,7 +301,7 @@ public readonly struct ActionBasicInfo
             if (_action.Setting.Ninjutsu == null)
             {
                 //No resources... TODO: Maybe MP LB status..., etc..... which can be simplify.
-                if (ActionManager.Instance()->CheckActionResources(ActionType.Action, AdjustedID) != 0)
+                if (ActionManager.Instance()->CheckActionResources(ActionType.Action, ID) != 0)
                 {
                     whyCant = WhyActionCantUse.ActionResources;
                     return false;

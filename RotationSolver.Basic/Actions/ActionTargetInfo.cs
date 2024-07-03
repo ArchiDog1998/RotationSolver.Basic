@@ -157,7 +157,7 @@ public struct ActionTargetInfo(IBaseAction action)
         if (tarAddress == null) return false;
 
         if ((ActionID)action.Info.ID != ActionID.AethericMimicryPvE
-            && !ActionManager.CanUseActionOnTarget(action.Info.AdjustedID, tarAddress)) return false;
+            && !ActionManager.CanUseActionOnTarget(action.Info.ID, tarAddress)) return false;
 
         return tar.CanSee();
     }

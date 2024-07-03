@@ -11,11 +11,6 @@ public interface IAction : ITexture, IEnoughLevel
     uint ID { get; }
 
     /// <summary>
-    /// The adjusted Id of this action.
-    /// </summary>
-    uint AdjustedID { get; }
-
-    /// <summary>
     /// The animation lock time of this action.
     /// </summary>
     float AnimationLockTime { get; }

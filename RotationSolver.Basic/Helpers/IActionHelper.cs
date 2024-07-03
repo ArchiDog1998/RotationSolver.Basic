@@ -68,13 +68,13 @@ public static class IActionHelper
     public static bool IsTheSameTo(this IAction action, params ActionID[] actions)
     {
         if (action == null) return false;
-        return IsActionID((ActionID)action.AdjustedID, actions);
+        return IsActionID((ActionID)action.ID, actions);
     }
 
     private static bool IsActionID(ActionID id, params ActionID[] ids) => ids.Contains(id);
 
     private static ActionID[] GetIDFromActions(bool isAdjust, params IAction[] actions)
     {
-        return actions.Select(a => isAdjust ? (ActionID)a.AdjustedID : (ActionID)a.ID).ToArray();
+        return actions.Select(a => isAdjust ? (ActionID)a.ID : (ActionID)a.ID).ToArray();
     }
 }

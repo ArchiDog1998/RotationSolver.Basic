@@ -44,14 +44,14 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// <summary>
     /// 
     /// </summary>
-    public unsafe ushort CurrentCharges => (ushort)ActionManager.Instance()->GetCurrentCharges(_action.Info.AdjustedID);
+    public unsafe ushort CurrentCharges => (ushort)ActionManager.Instance()->GetCurrentCharges(_action.Info.ID);
 
     /// <summary>
     /// 
     /// </summary>
-    public unsafe ushort MaxCharges => Math.Max(ActionManager.GetMaxCharges(_action.Info.AdjustedID, (uint)Player.Level), (ushort)1);
+    public unsafe ushort MaxCharges => Math.Max(ActionManager.GetMaxCharges(_action.Info.ID, (uint)Player.Level), (ushort)1);
 
-    internal float RecastTimeOneChargeRaw => ActionManager.GetAdjustedRecastTime(ActionType.Action, _action.Info.AdjustedID) / 1000f;
+    internal float RecastTimeOneChargeRaw => ActionManager.GetAdjustedRecastTime(ActionType.Action, _action.Info.ID) / 1000f;
 
     float ICooldown.RecastTimeOneChargeRaw => RecastTimeOneChargeRaw;
 

@@ -34,9 +34,6 @@ public class BaseAction : IBaseAction
     public uint ID => Info.ID;
 
     /// <inheritdoc/>
-    public uint AdjustedID => Info.AdjustedID;
-
-    /// <inheritdoc/>
     public float AnimationLockTime => Info.AnimationLockTime;
 
     /// <inheritdoc/>
@@ -258,15 +255,13 @@ public class BaseAction : IBaseAction
 
         var target = Target;
 
-        var adjustId = AdjustedID;
         if (TargetInfo.IsTargetArea)
         {
-            if (adjustId != ID) return false;
             if (!target.Position.HasValue) return false;
 
             var loc = target.Position.Value;
 
-            return ActionManager.Instance()->UseActionLocation(ActionType.Action, adjustId, Player.Object.EntityId, &loc);
+            return ActionManager.Instance()->UseActionLocation(ActionType.Action, ID, Player.Object.EntityId, &loc);
         }
         else if (Svc.Objects.SearchById(target.Target?.EntityId 
             ?? Player.Object?.EntityId ?? 0xE000_0000) == null)
@@ -275,7 +270,7 @@ public class BaseAction : IBaseAction
         }
         else
         {
-            return ActionManager.Instance()->UseAction(ActionType.Action, adjustId, target.Target?.EntityId ?? 0xE000_0000);
+            return ActionManager.Instance()->UseAction(ActionType.Action, ID, target.Target?.EntityId ?? 0xE000_0000);
         }
     }
 

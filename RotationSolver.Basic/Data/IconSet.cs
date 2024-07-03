@@ -98,7 +98,7 @@ public static class IconSet
     {
         if (isAdjust && action is IBaseAction)
         {
-            return GetTexture((ActionID)(action?.AdjustedID ?? 0), out texture);
+            return GetTexture((ActionID)(action?.ID ?? 0), out texture);
         }
         else
         {
