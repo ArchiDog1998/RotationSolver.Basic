@@ -143,8 +143,7 @@ partial class WarriorRotation
 
     static partial void ModifyNascentFlashPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.NascentFlash];
-        setting.StatusProvide = [StatusID.NascentGlint];
+        setting.StatusProvide = [StatusID.NascentFlash, StatusID.NascentGlint];
     }
 
     static partial void ModifyPrimalWrathPvE(ref ActionSetting setting)

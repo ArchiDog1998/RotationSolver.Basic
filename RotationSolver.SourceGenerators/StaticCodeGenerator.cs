@@ -21,11 +21,6 @@ public class StaticCodeGenerator : IIncrementalGenerator
 
     private static void Execute(SourceProductionContext context)
     {
-        var desc = new DiagnosticDescriptor("Test", "Why", "Hello", "Problem",
-        DiagnosticSeverity.Warning, true);
-
-        context.ReportDiagnostic(Diagnostic.Create(desc, Location.None));
-
         var assembly = typeof(StaticCodeGenerator).Assembly;
         foreach (var resourceName in assembly.GetManifestResourceNames())
         {
