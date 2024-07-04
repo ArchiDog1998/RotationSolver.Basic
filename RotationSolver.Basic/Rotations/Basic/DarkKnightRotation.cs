@@ -53,7 +53,7 @@ partial class DarkKnightRotation
         setting.ActionCheck = () => DarksideTimeRemaining > 0;
     }
 
-    private protected sealed override IBaseAction TankStance => GritPvE;
+    private protected sealed override IBaseActionSet TankStance => GritPvESet;
 
     static partial void ModifyShadowWallPvE(ref ActionSetting setting)
     {

@@ -49,7 +49,6 @@ partial class PaladinRotation
     static partial void ModifyConfiteorPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.ConfiteorReady];
-        setting.StatusProvide = [StatusID.SupplicationReady];
     }
 
     static partial void ModifyBladeOfHonorPvE(ref ActionSetting setting)
@@ -93,7 +92,7 @@ partial class PaladinRotation
         setting.SpecialType = SpecialActionType.MeleeRange;
     }
 
-    private protected sealed override IBaseAction TankStance => IronWillPvE;
+    private protected sealed override IBaseActionSet TankStance => IronWillPvESet;
 
     static partial void ModifyRequiescatPvE(ref ActionSetting setting)
     {

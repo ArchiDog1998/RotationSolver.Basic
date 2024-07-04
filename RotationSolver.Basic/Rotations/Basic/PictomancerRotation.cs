@@ -6,4 +6,6 @@ namespace RotationSolver.Basic.Rotations.Basic;
 partial class PictomancerRotation
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
+    /// <inheritdoc/>
+    public override MedicineType MedicineType => MedicineType.Intelligence;
 }

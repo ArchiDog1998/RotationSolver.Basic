@@ -115,7 +115,7 @@ partial class CustomRotation
 
     #endregion
     private protected virtual IBaseAction? Raise => null;
-    private protected virtual IBaseAction? TankStance => null;
+    private protected virtual IBaseActionSet? TankStance => null;
 
     private protected virtual IBaseAction? LimitBreak1 => null;
     private protected virtual IBaseAction? LimitBreak2 => null;

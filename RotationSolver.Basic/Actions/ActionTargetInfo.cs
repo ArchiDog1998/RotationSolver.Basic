@@ -530,7 +530,7 @@ public struct ActionTargetInfo(IBaseAction action)
     #region TargetFind
     private static IBattleChara? FindTargetByType(IEnumerable<IBattleChara> IGameObjects, TargetType type, float healRatio, SpecialActionType actionType, TargetingData targetingData)
     {
-        if (type == TargetType.Self) return Player.Object;
+        if (type == TargetType.Self && IGameObjects.Contains(Player.Object)) return Player.Object;
 
         switch (actionType)
         {

@@ -141,7 +141,7 @@ partial class ReaperRotation
 
     static partial void ModifyEnshroudPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.Enshrouded];
+        setting.StatusProvide = [StatusID.SoulReaver, StatusID.Executioner];
         setting.ActionCheck = () => !HasEnshrouded && !HasSoulReaver && Soul >= 50;
     }
 

@@ -126,7 +126,7 @@ partial class MonkRotation
     /// <inheritdoc/>
     protected override bool DefenseSingleAbility(out IAction? act)
     {
-        if (RiddleOfEarthPvE.CanUse(out act, usedUp: true)) return true;
+        if (RiddleOfEarthPvESet.CanUse(out act, usedUp: true)) return true;
         return base.DefenseSingleAbility(out act);
     }
 

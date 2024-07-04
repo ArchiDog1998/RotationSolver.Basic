@@ -273,7 +273,7 @@ partial class DancerRotation
     protected override bool HealAreaAbility(out IAction act)
     {
         if (CuringWaltzPvE.CanUse(out act, usedUp: true)) return true;
-        if (ImprovisationPvE.CanUse(out act, usedUp: true)) return true;
+        if (ImprovisationPvESet.CanUse(out act, usedUp: true)) return true;
         return false;
     }
 
