@@ -28,7 +28,7 @@ partial class SummonerRotation
     /// <summary>
     /// 
     /// </summary>
-    private static bool HasSummon => DataCenter.HasPet && SummonTimerRemaining > 0;
+    private static bool HasSummon => DataCenter.HasPet && SummonTimerRemaining <= 0;
     #endregion
 
     static partial void ModifyCrimsonCyclonePvP(ref ActionSetting setting)

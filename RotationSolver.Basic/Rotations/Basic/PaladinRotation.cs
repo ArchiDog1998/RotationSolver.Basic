@@ -29,10 +29,49 @@ partial class PaladinRotation
     /// </summary>
     public static bool HasFightOrFlight => !Player.WillStatusEndGCD(0, 0, true, StatusID.FightOrFlight);
 
-    //static partial void ModifyAtonementPvE(ref ActionSetting setting)
-    //{
-    //    setting.StatusNeed = [StatusID.SwordOath_1902];
-    //}
+    static partial void ModifyAtonementPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.AtonementReady];
+        setting.StatusProvide = [StatusID.SupplicationReady];
+    }
+
+    static partial void ModifySupplicationPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.SupplicationReady];
+        setting.StatusProvide = [StatusID.SepulchreReady];
+    }
+
+    static partial void ModifySepulchrePvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.SepulchreReady];
+    }
+
+    static partial void ModifyConfiteorPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.ConfiteorReady];
+        setting.StatusProvide = [StatusID.SupplicationReady];
+    }
+
+    static partial void ModifyBladeOfHonorPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.BladeOfHonorReady];
+    }
+
+    static partial void ModifyProminencePvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.DivineMight];
+    }
+
+    static partial void ModifyGoringBladePvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.GoringBladeReady];
+    }
+
+    static partial void ModifyRoyalAuthorityPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.DivineMight];
+        setting.StatusProvide = [StatusID.AtonementReady];
+    }
 
     static partial void ModifyShieldBashPvE(ref ActionSetting setting)
     {

@@ -727,7 +727,7 @@ internal partial class Configs : IPluginConfiguration
 
     [Range(32, int.MaxValue, ConfigUnitType.None, 1)]
     [UI("The record count", (int)UiString.Item_Trigger)]
-    public int RecordCount { get; set; } = 64;
+    public int RecordCount { get; set; } = 512;
     #endregion
 
     #region Jobs

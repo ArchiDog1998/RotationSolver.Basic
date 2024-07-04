@@ -1,4 +1,5 @@
-﻿using static RotationSolver.Basic.CombatData;
+﻿using FFXIVClientStructs.FFXIV.Application.Network.WorkDefinitions;
+using static RotationSolver.Basic.CombatData;
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
@@ -18,6 +19,26 @@ partial class ReaperRotation
     /// Has <see cref="StatusID.SoulReaver"/>
     /// </summary>
     public static bool HasSoulReaver => Player.HasStatus(true, StatusID.SoulReaver);
+
+    /// <summary>
+    /// Has <see cref="StatusID.Executioner"/>
+    /// </summary>
+    public static bool HasExecutioner => Player.HasStatus(true, StatusID.Executioner);
+
+    /// <summary>
+    /// Has <see cref="StatusID.IdealHost"/>
+    /// </summary>
+    public static bool HasIdealHost => Player.HasStatus(true, StatusID.IdealHost);
+
+    /// <summary>
+    /// Has <see cref="StatusID.Oblatio"/>
+    /// </summary>
+    public static bool HasOblatio => Player.HasStatus(true, StatusID.Oblatio);
+
+    /// <summary>
+    /// Has <see cref="StatusID.PerfectioParata"/>
+    /// </summary>
+    public static bool HasPerfectioParata => Player.HasStatus(true, StatusID.PerfectioParata);
 
     static partial void ModifySlicePvE(ref ActionSetting setting)
     {
@@ -126,6 +147,7 @@ partial class ReaperRotation
 
     static partial void ModifyCommunioPvE(ref ActionSetting setting)
     {
+        setting.StatusProvide = [StatusID.PerfectioParata];
         setting.StatusNeed = [StatusID.Enshrouded];
         setting.ActionCheck = () => LemureShroud == 1;
     }
@@ -188,6 +210,31 @@ partial class ReaperRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
+    static partial void ModifyExecutionersGibbetPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.Executioner];
+    }
+
+    static partial void ModifyExecutionersGallowsPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.Executioner];
+    }
+
+    static partial void ModifyExecutionersGuillotinePvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.Executioner];
+    }
+
+    static partial void ModifySacrificiumPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasEnshrouded && HasOblatio;
+    }
+
+    static partial void ModifyPerfectioPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasPerfectioParata;
+    }
+
     /// <inheritdoc/>
     protected override bool MoveForwardAbility(out IAction? act)
     {
@@ -198,14 +245,14 @@ partial class ReaperRotation
     /// <inheritdoc/>
     protected override bool DefenseAreaAbility(out IAction? act)
     {
-        if (!HasSoulReaver && !HasEnshrouded && FeintPvE.CanUse(out act)) return true;
+        if (!HasSoulReaver && !HasEnshrouded && !HasExecutioner && FeintPvE.CanUse(out act)) return true;
         return base.DefenseAreaAbility(out act);
     }
 
     /// <inheritdoc/>
     protected override bool DefenseSingleAbility(out IAction? act)
     {
-        if (!HasSoulReaver && !HasEnshrouded && ArcaneCrestPvE.CanUse(out act)) return true;
+        if (!HasSoulReaver && !HasEnshrouded && !HasExecutioner && ArcaneCrestPvE.CanUse(out act)) return true;
         return base.DefenseSingleAbility(out act);
     }
 

@@ -58,6 +58,7 @@ partial class WarriorRotation
     static partial void ModifyPrimalRendPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.PrimalRendReady];
+        setting.StatusProvide = [StatusID.PrimalRuinationReady];
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
@@ -69,6 +70,11 @@ partial class WarriorRotation
         {
             TimeToKill = 5,
         };
+    }
+
+    static partial void ModifyFellCleavePvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.BurgeoningFury];
     }
 
     static partial void ModifyInnerReleasePvE(ref ActionSetting setting)
