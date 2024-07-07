@@ -6,7 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/scholar"><strong>Scholar</strong></see>
 /// <br>Number of Actions: 62</br>
-/// <br>Number of Action Sets: 8</br>
+/// <br>Number of Replace Actions: 8</br>
+/// <br>Number of Action Combos: 0</br>
+/// <br>Number of Action Indirection: 3</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1215,52 +1217,81 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait TacticiansMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(656U);
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BioPvE"/> -> <seealso cref="BioIiPvE"/> -> <seealso cref="BiolysisPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BioPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BioPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="AetherpactPvE"/> -> <seealso cref="DissolveUnionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AetherpactPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AetherpactPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ArtOfWarPvE"/> -> <seealso cref="ArtOfWarIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ArtOfWarPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ArtOfWarPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SummonSeraphPvE"/> -> <seealso cref="ConsolationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonSeraphPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonSeraphPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ChainStratagemPvE"/> -> <seealso cref="BanefulImpactionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ChainStratagemPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChainStratagemPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SuccorPvE"/> -> <seealso cref="ConcitationPvE"/> -> <seealso cref="AccessionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SuccorPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SuccorPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="EmergencyTacticsPvE"/> -> <seealso cref="EmergencyTacticsPvE_37037"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EmergencyTacticsPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmergencyTacticsPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="AdloquiumPvE"/> -> <seealso cref="ManifestationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AdloquiumPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AdloquiumPvEReplace { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="AdloquiumPvE"/> -> <seealso cref="ManifestationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ManifestationPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SuccorPvE"/> -> <seealso cref="AccessionPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AccessionPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="EmergencyTacticsPvE"/> -> <seealso cref="EmergencyTacticsPvE_37037"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmergencyTacticsPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1367,14 +1398,17 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected ScholarRotation()
     {
-        BioPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BiolysisPvE, BioIiPvE, BioPvE]);
-        AetherpactPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DissolveUnionPvE, AetherpactPvE]);
-        ArtOfWarPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArtOfWarIiPvE, ArtOfWarPvE]);
-        SummonSeraphPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConsolationPvE, SummonSeraphPvE]);
-        ChainStratagemPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BanefulImpactionPvE, ChainStratagemPvE]);
-        SuccorPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE]);
-        EmergencyTacticsPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
-        AdloquiumPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
+        BioPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BiolysisPvE, BioIiPvE, BioPvE]);
+        AetherpactPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DissolveUnionPvE, AetherpactPvE]);
+        ArtOfWarPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArtOfWarIiPvE, ArtOfWarPvE]);
+        SummonSeraphPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConsolationPvE, SummonSeraphPvE]);
+        ChainStratagemPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BanefulImpactionPvE, ChainStratagemPvE]);
+        SuccorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE]);
+        EmergencyTacticsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
+        AdloquiumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
+        ManifestationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
+        AccessionPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, SuccorPvE]);
+        EmergencyTacticsPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

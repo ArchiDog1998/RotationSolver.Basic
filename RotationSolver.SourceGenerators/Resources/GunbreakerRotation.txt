@@ -6,7 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>Gunbreaker</strong></see>
 /// <br>Number of Actions: 72</br>
-/// <br>Number of Action Sets: 8</br>
+/// <br>Number of Replace Actions: 8</br>
+/// <br>Number of Action Combos: 1</br>
+/// <br>Number of Action Indirection: 9</br>
 /// <br>Number of Traits: 16</br>
 /// </summary>
 public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1398,52 +1400,138 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(667U);
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RoyalGuardPvE"/> -> <seealso cref="ReleaseRoyalGuardPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RoyalGuardPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RoyalGuardPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="DangerZonePvE"/> -> <seealso cref="BlastingZonePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DangerZonePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DangerZonePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="HeartOfStonePvE"/> -> <seealso cref="HeartOfCorundumPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet HeartOfStonePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HeartOfStonePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="GnashingFangPvE"/> -> <seealso cref="SavageClawPvE"/> -> <seealso cref="WickedTalonPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet GnashingFangPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet GnashingFangPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="NebulaPvE"/> -> <seealso cref="GreatNebulaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet NebulaPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet NebulaPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BloodfestPvE"/> -> <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/> -> <seealso cref="LionHeartPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodfestPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodfestPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/> -> <seealso cref="LionHeartPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ReignOfBeastsPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ReignOfBeastsPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="NoMercyPvE"/> -> <seealso cref="SonicBreakPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet NoMercyPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet NoMercyPvEReplace { get; }
+
+    /// <summary>
+/// <strong>Solid Barrel Combo</strong>
+/// <para>Executes the following weaponskills in succession:</para>
+/// <para>1. Keen Edge</para>
+/// <para>2. Brutal Shell</para>
+/// <para>3. Solid Barrel</para>
+/// <para></para>
+/// <para>If any of the weaponskills are not ready, the combo will start again.</para>
+/// <para></para>
+/// <para>※Action changes to Burst Strike while under the effect of Powder Barrel.</para>
+/// <seealso cref="KeenEdgePvP"/> -> <seealso cref="BrutalShellPvP"/> -> <seealso cref="SolidBarrelPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SolidBarrelComboPvP { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="GnashingFangPvE"/> -> <seealso cref="SavageClawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SavageClawPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="GnashingFangPvE"/> -> <seealso cref="WickedTalonPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WickedTalonPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="JugularRipPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet JugularRipPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="AbdomenTearPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AbdomenTearPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="EyeGougePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EyeGougePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="HypervelocityPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HypervelocityPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="FatedBrandPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FatedBrandPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="BloodfestPvE"/> -> <seealso cref="NobleBloodPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet NobleBloodPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="BloodfestPvE"/> -> <seealso cref="LionHeartPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LionHeartPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1545,14 +1633,24 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected GunbreakerRotation()
     {
-        RoyalGuardPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseRoyalGuardPvE, RoyalGuardPvE]);
-        DangerZonePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlastingZonePvE, DangerZonePvE]);
-        HeartOfStonePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeartOfCorundumPvE, HeartOfStonePvE]);
-        GnashingFangPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WickedTalonPvE, SavageClawPvE, GnashingFangPvE]);
-        NebulaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GreatNebulaPvE, NebulaPvE]);
-        BloodfestPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LionHeartPvE, NobleBloodPvE, ReignOfBeastsPvE, BloodfestPvE]);
-        ReignOfBeastsPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LionHeartPvE, NobleBloodPvE, ReignOfBeastsPvE]);
-        NoMercyPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicBreakPvE, NoMercyPvE]);
+        RoyalGuardPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseRoyalGuardPvE, RoyalGuardPvE]);
+        DangerZonePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlastingZonePvE, DangerZonePvE]);
+        HeartOfStonePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeartOfCorundumPvE, HeartOfStonePvE]);
+        GnashingFangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WickedTalonPvE, SavageClawPvE, GnashingFangPvE]);
+        NebulaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GreatNebulaPvE, NebulaPvE]);
+        BloodfestPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LionHeartPvE, NobleBloodPvE, ReignOfBeastsPvE, BloodfestPvE]);
+        ReignOfBeastsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LionHeartPvE, NobleBloodPvE, ReignOfBeastsPvE]);
+        NoMercyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicBreakPvE, NoMercyPvE]);
+        SolidBarrelComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SolidBarrelPvP, BrutalShellPvP, KeenEdgePvP]);
+        SavageClawPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SavageClawPvE, GnashingFangPvE]);
+        WickedTalonPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WickedTalonPvE, GnashingFangPvE]);
+        JugularRipPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JugularRipPvE, ContinuationPvE]);
+        AbdomenTearPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AbdomenTearPvE, ContinuationPvE]);
+        EyeGougePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EyeGougePvE, ContinuationPvE]);
+        HypervelocityPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HypervelocityPvE, ContinuationPvE]);
+        FatedBrandPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FatedBrandPvE, ContinuationPvE]);
+        NobleBloodPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NobleBloodPvE, BloodfestPvE]);
+        LionHeartPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LionHeartPvE, BloodfestPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

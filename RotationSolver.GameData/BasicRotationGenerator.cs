@@ -4,6 +4,8 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using RotationSolver.GameData.Getters;
 using RotationSolver.GameData.Getters.Actions;
+using RotationSolver.GameData.Getters.ActionSets;
+using System.Linq;
 using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
@@ -18,9 +20,11 @@ internal static class BasicRotationGenerator
 
         var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
         var traitsGetter = new TraitRotationGetter(gameData, job);
-        var actionsGroup = new ReplaceActionGetter(gameData, rotationsGetter);
+        var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);
+        var actionsCombo = new ComboActionGetter(gameData, rotationsGetter);
+        var actionIndirection = new ActionIndirectionGetter(gameData, rotationsGetter);
 
-        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..actionsGroup.GetNodes(),
+        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(),..actionsCombo.GetNodes(), ..actionIndirection.GetNodes(),
         .. CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];
 
         if (!job.IsLimitedJob)
@@ -54,14 +58,14 @@ internal static class BasicRotationGenerator
             list.AddRange(GetLBInRotation(c, 3, gameData));
             rotationNames.Add("LimitBreak3");
         }
-        if (actionsGroup.Count > 0)
+        if (replaceActions.Count + actionsCombo.Count + actionIndirection.Count > 0)
         {
             var ctor = ConstructorDeclaration(Identifier(className))
             .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
             .WithXmlComment("/// <inheritdoc/>")
             .WithModifiers(
                 TokenList(Token(SyntaxKind.ProtectedKeyword)))
-            .WithBody(Block(actionsGroup.GetInit()));
+            .WithBody(Block(replaceActions.GetInit().Union(actionsCombo.GetInit()).Union(actionIndirection.GetInit())));
             list.Add(ctor);
         }
 
@@ -80,7 +84,9 @@ internal static class BasicRotationGenerator
             /// <summary>
             /// <see href="https://na.finalfantasyxiv.com/jobguide/{{jobName.Replace(" ", "").ToLower()}}"><strong>{{jobName}}</strong></see>
             /// <br>Number of Actions: {{rotationsGetter.Count}}</br>
-            /// <br>Number of Action Sets: {{actionsGroup.Count}}</br>
+            /// <br>Number of Replace Actions: {{replaceActions.Count}}</br>
+            /// <br>Number of Action Combos: {{actionsCombo.Count}}</br>
+            /// <br>Number of Action Indirection: {{actionIndirection.Count}}</br>
             /// <br>Number of Traits: {{traitsGetter.Count}}</br>
             /// </summary>
             """)

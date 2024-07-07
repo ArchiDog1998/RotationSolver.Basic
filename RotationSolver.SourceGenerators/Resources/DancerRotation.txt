@@ -6,7 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/dancer"><strong>Dancer</strong></see>
 /// <br>Number of Actions: 59</br>
-/// <br>Number of Action Sets: 11</br>
+/// <br>Number of Replace Actions: 11</br>
+/// <br>Number of Action Combos: 1</br>
+/// <br>Number of Action Indirection: 12</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class DancerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1172,70 +1174,182 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     public static global::RotationSolver.Basic.Traits.IBaseTrait DynamicDancerTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(662U);
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="CascadePvE"/> -> <seealso cref="EmboitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet CascadePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CascadePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="FountainPvE"/> -> <seealso cref="EntrechatPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ReverseCascadePvE"/> -> <seealso cref="JetePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ReverseCascadePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ReverseCascadePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="FountainfallPvE"/> -> <seealso cref="PirouettePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainfallPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainfallPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="WindmillPvE"/> -> <seealso cref="EmboitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet WindmillPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WindmillPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BladeshowerPvE"/> -> <seealso cref="EntrechatPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BladeshowerPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BladeshowerPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RisingWindmillPvE"/> -> <seealso cref="JetePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RisingWindmillPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RisingWindmillPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BloodshowerPvE"/> -> <seealso cref="PirouettePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodshowerPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodshowerPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ClosedPositionPvE"/> -> <seealso cref="EndingPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ClosedPositionPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ClosedPositionPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ImprovisationPvE"/> -> <seealso cref="ImprovisedFinishPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ImprovisationPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ImprovisationPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SaberDancePvE"/> -> <seealso cref="DanceOfTheDawnPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SaberDancePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SaberDancePvEReplace { get; }
+
+    /// <summary>
+/// <strong>Fountain Combo</strong>
+/// <para>Executes the following weaponskills in succession:</para>
+/// <para>1. Cascade</para>
+/// <para>2. Fountain</para>
+/// <para></para>
+/// <para>If any of the weaponskills are not ready, the combo will start again.</para>
+/// <para></para>
+/// <para>※Cascade changes to Reverse Cascade while under the effect of En Avant.</para>
+/// <para>※Fountain changes to Fountainfall while under the effect of En Avant.</para>
+/// <para></para>
+/// <para>※Action changes to Saber Dance while under the effect of Flourishing Saber Dance.</para>
+/// <seealso cref="CascadePvP"/> -> <seealso cref="FountainPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainComboPvP { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="StandardStepPvE"/> -> <seealso cref="StandardFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StandardFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="StandardStepPvE"/> -> <seealso cref="SingleStandardFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SingleStandardFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="StandardStepPvE"/> -> <seealso cref="DoubleStandardFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DoubleStandardFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TechnicalFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TechnicalFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="SingleTechnicalFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SingleTechnicalFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="DoubleTechnicalFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DoubleTechnicalFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TripleTechnicalFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TripleTechnicalFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="QuadrupleTechnicalFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet QuadrupleTechnicalFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ImprovisationPvE"/> -> <seealso cref="ImprovisedFinishPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ImprovisedFinishPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TillanaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TillanaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="StandardStepPvE"/> -> <seealso cref="FinishingMovePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FinishingMovePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SaberDancePvE"/> -> <seealso cref="DanceOfTheDawnPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DanceOfTheDawnPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1352,17 +1466,30 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DancerRotation()
     {
-        CascadePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, CascadePvE]);
-        FountainPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, FountainPvE]);
-        ReverseCascadePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, ReverseCascadePvE]);
-        FountainfallPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, FountainfallPvE]);
-        WindmillPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, WindmillPvE]);
-        BladeshowerPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, BladeshowerPvE]);
-        RisingWindmillPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, RisingWindmillPvE]);
-        BloodshowerPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, BloodshowerPvE]);
-        ClosedPositionPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE]);
-        ImprovisationPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE]);
-        SaberDancePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE]);
+        CascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, CascadePvE]);
+        FountainPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, FountainPvE]);
+        ReverseCascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, ReverseCascadePvE]);
+        FountainfallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, FountainfallPvE]);
+        WindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, WindmillPvE]);
+        BladeshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, BladeshowerPvE]);
+        RisingWindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, RisingWindmillPvE]);
+        BloodshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, BloodshowerPvE]);
+        ClosedPositionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE]);
+        ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE]);
+        SaberDancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE]);
+        FountainComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvP, CascadePvP]);
+        StandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StandardFinishPvE, StandardStepPvE]);
+        SingleStandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SingleStandardFinishPvE, StandardStepPvE]);
+        DoubleStandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleStandardFinishPvE, StandardStepPvE]);
+        TechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TechnicalFinishPvE, TechnicalStepPvE]);
+        SingleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SingleTechnicalFinishPvE, TechnicalStepPvE]);
+        DoubleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleTechnicalFinishPvE, TechnicalStepPvE]);
+        TripleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TripleTechnicalFinishPvE, TechnicalStepPvE]);
+        QuadrupleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [QuadrupleTechnicalFinishPvE, TechnicalStepPvE]);
+        ImprovisedFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE]);
+        TillanaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TillanaPvE, TechnicalStepPvE]);
+        FinishingMovePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FinishingMovePvE, StandardStepPvE]);
+        DanceOfTheDawnPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

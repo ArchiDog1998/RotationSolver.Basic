@@ -6,7 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/warrior"><strong>Warrior</strong></see>
 /// <br>Number of Actions: 44</br>
-/// <br>Number of Action Sets: 7</br>
+/// <br>Number of Replace Actions: 7</br>
+/// <br>Number of Action Combos: 1</br>
+/// <br>Number of Action Indirection: 4</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -921,46 +923,96 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(654U);
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="DefiancePvE"/> -> <seealso cref="ReleaseDefiancePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DefiancePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DefiancePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="InnerBeastPvE"/> -> <seealso cref="FellCleavePvE"/> -> <seealso cref="InnerChaosPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet InnerBeastPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet InnerBeastPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BerserkPvE"/> -> <seealso cref="InnerReleasePvE"/> -> <seealso cref="PrimalWrathPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BerserkPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BerserkPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SteelCyclonePvE"/> -> <seealso cref="DecimatePvE"/> -> <seealso cref="ChaoticCyclonePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SteelCyclonePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SteelCyclonePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RawIntuitionPvE"/> -> <seealso cref="BloodwhettingPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RawIntuitionPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RawIntuitionPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="VengeancePvE"/> -> <seealso cref="DamnationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet VengeancePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VengeancePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="PrimalRendPvE"/> -> <seealso cref="PrimalRuinationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet PrimalRendPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PrimalRendPvEReplace { get; }
+
+    /// <summary>
+/// <strong>Storm's Path Combo</strong>
+/// <para>Executes the following weaponskills in succession:</para>
+/// <para>1. Heavy Swing</para>
+/// <para>2. Maim</para>
+/// <para>3. Storm's Path</para>
+/// <para></para>
+/// <para>If any of the weaponskills are not ready, the combo will start again.</para>
+/// <para></para>
+/// <para>※Action changes to Fell Cleave while under the effect of Inner Release.</para>
+/// <seealso cref="HeavySwingPvP"/> -> <seealso cref="MaimPvP"/> -> <seealso cref="StormsPathPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StormsPathComboPvP { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DecimatePvE"/> -> <seealso cref="ChaoticCyclonePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChaoticCyclonePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="FellCleavePvE"/> -> <seealso cref="InnerChaosPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet InnerChaosPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="InnerReleasePvE"/> -> <seealso cref="PrimalWrathPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PrimalWrathPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="PrimalRendPvE"/> -> <seealso cref="PrimalRuinationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PrimalRuinationPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1052,13 +1104,18 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected WarriorRotation()
     {
-        DefiancePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseDefiancePvE, DefiancePvE]);
-        InnerBeastPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InnerChaosPvE, FellCleavePvE, InnerBeastPvE]);
-        BerserkPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalWrathPvE, InnerReleasePvE, BerserkPvE]);
-        SteelCyclonePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticCyclonePvE, DecimatePvE, SteelCyclonePvE]);
-        RawIntuitionPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodwhettingPvE, RawIntuitionPvE]);
-        VengeancePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DamnationPvE, VengeancePvE]);
-        PrimalRendPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalRuinationPvE, PrimalRendPvE]);
+        DefiancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseDefiancePvE, DefiancePvE]);
+        InnerBeastPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InnerChaosPvE, FellCleavePvE, InnerBeastPvE]);
+        BerserkPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalWrathPvE, InnerReleasePvE, BerserkPvE]);
+        SteelCyclonePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticCyclonePvE, DecimatePvE, SteelCyclonePvE]);
+        RawIntuitionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodwhettingPvE, RawIntuitionPvE]);
+        VengeancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DamnationPvE, VengeancePvE]);
+        PrimalRendPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalRuinationPvE, PrimalRendPvE]);
+        StormsPathComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StormsPathPvP, MaimPvP, HeavySwingPvP]);
+        ChaoticCyclonePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticCyclonePvE, DecimatePvE]);
+        InnerChaosPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InnerChaosPvE, FellCleavePvE]);
+        PrimalWrathPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalWrathPvE, InnerReleasePvE]);
+        PrimalRuinationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrimalRuinationPvE, PrimalRendPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

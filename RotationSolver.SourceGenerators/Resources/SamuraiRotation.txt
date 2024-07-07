@@ -6,7 +6,9 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/samurai"><strong>Samurai</strong></see>
 /// <br>Number of Actions: 53</br>
-/// <br>Number of Action Sets: 5</br>
+/// <br>Number of Replace Actions: 5</br>
+/// <br>Number of Action Combos: 1</br>
+/// <br>Number of Action Indirection: 10</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1058,34 +1060,126 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(655U);
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="OgiNamikiriPvE"/> -> <seealso cref="KaeshiNamikiriPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet OgiNamikiriPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet OgiNamikiriPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="FugaPvE"/> -> <seealso cref="FukoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FugaPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FugaPvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ThirdEyePvE"/> -> <seealso cref="TengetsuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdEyePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdEyePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="HakazePvE"/> -> <seealso cref="GyofuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet HakazePvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HakazePvEReplace { get; }
 
     /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="IkishotenPvE"/> -> <seealso cref="ZanshinPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet IkishotenPvESet { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet IkishotenPvEReplace { get; }
+
+    /// <summary>
+/// <strong>Kasha Combo</strong>
+/// <para>Executes the following weaponskills in succession:</para>
+/// <para>1. Yukikaze</para>
+/// <para>2. Gekko</para>
+/// <para>3. Kasha</para>
+/// <para></para>
+/// <para>If any of the weaponskills are not ready, the combo will start again.</para>
+/// <para></para>
+/// <para>※Yukikaze changes to Hyosetsu while under the effect of Kaiten.</para>
+/// <para>※Gekko changes to Mangetsu while under the effect of Kaiten.</para>
+/// <para>※Kasha changes to Oka while under the effect of Kaiten.</para>
+/// <seealso cref="YukikazePvP"/> -> <seealso cref="GekkoPvP"/> -> <seealso cref="KashaPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet KashaComboPvP { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="IaijutsuPvE"/> -> <seealso cref="HiganbanaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HiganbanaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="IaijutsuPvE"/> -> <seealso cref="TenkaGokenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TenkaGokenPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="IaijutsuPvE"/> -> <seealso cref="MidareSetsugekkaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MidareSetsugekkaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TsubamegaeshiPvE"/> -> <seealso cref="KaeshiGokenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet KaeshiGokenPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TsubamegaeshiPvE"/> -> <seealso cref="KaeshiSetsugekkaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet KaeshiSetsugekkaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TsubamegaeshiPvE"/> -> <seealso cref="KaeshiNamikiriPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet KaeshiNamikiriPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="IaijutsuPvE"/> -> <seealso cref="TendoGokenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TendoGokenPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="IaijutsuPvE"/> -> <seealso cref="TendoSetsugekkaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TendoSetsugekkaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TsubamegaeshiPvE"/> -> <seealso cref="TendoKaeshiGokenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TendoKaeshiGokenPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TsubamegaeshiPvE"/> -> <seealso cref="TendoKaeshiSetsugekkaPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TendoKaeshiSetsugekkaPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1207,11 +1301,22 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SamuraiRotation()
     {
-        OgiNamikiriPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiNamikiriPvE, OgiNamikiriPvE]);
-        FugaPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE]);
-        ThirdEyePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengetsuPvE, ThirdEyePvE]);
-        HakazePvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE]);
-        IkishotenPvESet = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE]);
+        OgiNamikiriPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiNamikiriPvE, OgiNamikiriPvE]);
+        FugaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE]);
+        ThirdEyePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengetsuPvE, ThirdEyePvE]);
+        HakazePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE]);
+        IkishotenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE]);
+        KashaComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KashaPvP, GekkoPvP, YukikazePvP]);
+        HiganbanaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HiganbanaPvE, IaijutsuPvE]);
+        TenkaGokenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TenkaGokenPvE, IaijutsuPvE]);
+        MidareSetsugekkaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MidareSetsugekkaPvE, IaijutsuPvE]);
+        KaeshiGokenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiGokenPvE, TsubamegaeshiPvE]);
+        KaeshiSetsugekkaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiSetsugekkaPvE, TsubamegaeshiPvE]);
+        KaeshiNamikiriPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiNamikiriPvE, TsubamegaeshiPvE]);
+        TendoGokenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TendoGokenPvE, IaijutsuPvE]);
+        TendoSetsugekkaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TendoSetsugekkaPvE, IaijutsuPvE]);
+        TendoKaeshiGokenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TendoKaeshiGokenPvE, TsubamegaeshiPvE]);
+        TendoKaeshiSetsugekkaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TendoKaeshiSetsugekkaPvE, TsubamegaeshiPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
