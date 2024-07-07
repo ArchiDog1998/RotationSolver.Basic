@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 99</br>
 /// <br>Number of Replace Actions: 6</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 23</br>
+/// <br>Number of Action Indirection: 0</br>
 /// <br>Number of Traits: 27</br>
 /// </summary>
 public abstract partial class SummonerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1984,167 +1984,6 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SearingLightPvEReplace { get; }
 
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RuinIiiPvE"/> -> <seealso cref="AstralImpulsePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AstralImpulsePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="OutburstPvE"/> -> <seealso cref="AstralFlarePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AstralFlarePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="DeathflarePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DeathflarePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="EnkindleBahamutPvE"/> -> <seealso cref="AkhMornPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AkhMornPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="GemshinePvE"/> -> <seealso cref="RubyRitePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RubyRitePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="GemshinePvE"/> -> <seealso cref="TopazRitePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TopazRitePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="GemshinePvE"/> -> <seealso cref="EmeraldRitePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EmeraldRitePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RuinIiiPvE"/> -> <seealso cref="FountainOfFirePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FountainOfFirePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="OutburstPvE"/> -> <seealso cref="BrandOfPurgatoryPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet BrandOfPurgatoryPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AetherchargePvE"/> -> <seealso cref="SummonPhoenixPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonPhoenixPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="RekindlePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RekindlePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="EnkindleBahamutPvE"/> -> <seealso cref="EnkindlePhoenixPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnkindlePhoenixPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="PreciousBrilliancePvE"/> -> <seealso cref="RubyCatastrophePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RubyCatastrophePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="PreciousBrilliancePvE"/> -> <seealso cref="TopazCatastrophePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TopazCatastrophePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="PreciousBrilliancePvE"/> -> <seealso cref="EmeraldCatastrophePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EmeraldCatastrophePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="CrimsonCyclonePvE"/> -> <seealso cref="CrimsonStrikePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet CrimsonStrikePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="MountainBusterPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet MountainBusterPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="SlipstreamPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SlipstreamPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RuinIiiPvE"/> -> <seealso cref="UmbralImpulsePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet UmbralImpulsePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="OutburstPvE"/> -> <seealso cref="UmbralFlarePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet UmbralFlarePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AetherchargePvE"/> -> <seealso cref="SummonSolarBahamutPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonSolarBahamutPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AstralFlowPvE"/> -> <seealso cref="SunflarePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SunflarePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="EnkindleBahamutPvE"/> -> <seealso cref="EnkindleSolarBahamutPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnkindleSolarBahamutPvEIndirection { get; }
-
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -2316,29 +2155,6 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
         SummonEmeraldPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonGarudaIiPvE, SummonGarudaPvE, SummonEmeraldPvE]);
         FesterPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NecrotizePvE, FesterPvE]);
         SearingLightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SearingFlashPvE, SearingLightPvE]);
-        AstralImpulsePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AstralImpulsePvE, RuinIiiPvE]);
-        AstralFlarePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AstralFlarePvE, OutburstPvE]);
-        DeathflarePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeathflarePvE, AstralFlowPvE]);
-        AkhMornPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AkhMornPvE, EnkindleBahamutPvE]);
-        RubyRitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RubyRitePvE, GemshinePvE]);
-        TopazRitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TopazRitePvE, GemshinePvE]);
-        EmeraldRitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmeraldRitePvE, GemshinePvE]);
-        FountainOfFirePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainOfFirePvE, RuinIiiPvE]);
-        BrandOfPurgatoryPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BrandOfPurgatoryPvE, OutburstPvE]);
-        SummonPhoenixPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonPhoenixPvE, AetherchargePvE]);
-        RekindlePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RekindlePvE, AstralFlowPvE]);
-        EnkindlePhoenixPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindlePhoenixPvE, EnkindleBahamutPvE]);
-        RubyCatastrophePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RubyCatastrophePvE, PreciousBrilliancePvE]);
-        TopazCatastrophePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TopazCatastrophePvE, PreciousBrilliancePvE]);
-        EmeraldCatastrophePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmeraldCatastrophePvE, PreciousBrilliancePvE]);
-        CrimsonStrikePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvE, CrimsonCyclonePvE, AstralFlowPvE]);
-        MountainBusterPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MountainBusterPvE, AstralFlowPvE]);
-        SlipstreamPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SlipstreamPvE, AstralFlowPvE]);
-        UmbralImpulsePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UmbralImpulsePvE, RuinIiiPvE]);
-        UmbralFlarePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UmbralFlarePvE, OutburstPvE]);
-        SummonSolarBahamutPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonSolarBahamutPvE, AetherchargePvE]);
-        SunflarePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SunflarePvE, AstralFlowPvE]);
-        EnkindleSolarBahamutPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindleSolarBahamutPvE, EnkindleBahamutPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

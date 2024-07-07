@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 59</br>
 /// <br>Number of Replace Actions: 11</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 12</br>
+/// <br>Number of Action Indirection: 0</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class DancerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1267,90 +1267,6 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FountainComboPvP { get; }
 
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="StandardStepPvE"/> -> <seealso cref="StandardFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet StandardFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="StandardStepPvE"/> -> <seealso cref="SingleStandardFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SingleStandardFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="StandardStepPvE"/> -> <seealso cref="DoubleStandardFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DoubleStandardFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TechnicalFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TechnicalFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="SingleTechnicalFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SingleTechnicalFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="DoubleTechnicalFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DoubleTechnicalFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TripleTechnicalFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TripleTechnicalFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="QuadrupleTechnicalFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet QuadrupleTechnicalFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="ImprovisationPvE"/> -> <seealso cref="ImprovisedFinishPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ImprovisedFinishPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TechnicalStepPvE"/> -> <seealso cref="TillanaPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TillanaPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="StandardStepPvE"/> -> <seealso cref="FinishingMovePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FinishingMovePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="SaberDancePvE"/> -> <seealso cref="DanceOfTheDawnPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DanceOfTheDawnPvEIndirection { get; }
-
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1478,18 +1394,6 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
         ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE]);
         SaberDancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE]);
         FountainComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvP, CascadePvP]);
-        StandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StandardFinishPvE, StandardStepPvE]);
-        SingleStandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SingleStandardFinishPvE, StandardStepPvE]);
-        DoubleStandardFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleStandardFinishPvE, StandardStepPvE]);
-        TechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TechnicalFinishPvE, TechnicalStepPvE]);
-        SingleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SingleTechnicalFinishPvE, TechnicalStepPvE]);
-        DoubleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleTechnicalFinishPvE, TechnicalStepPvE]);
-        TripleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TripleTechnicalFinishPvE, TechnicalStepPvE]);
-        QuadrupleTechnicalFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [QuadrupleTechnicalFinishPvE, TechnicalStepPvE]);
-        ImprovisedFinishPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE]);
-        TillanaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TillanaPvE, TechnicalStepPvE]);
-        FinishingMovePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FinishingMovePvE, StandardStepPvE]);
-        DanceOfTheDawnPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

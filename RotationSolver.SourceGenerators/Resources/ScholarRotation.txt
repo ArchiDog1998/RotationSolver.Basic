@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 62</br>
 /// <br>Number of Replace Actions: 8</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 3</br>
+/// <br>Number of Action Indirection: 0</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1272,27 +1272,6 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AdloquiumPvEReplace { get; }
 
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="AdloquiumPvE"/> -> <seealso cref="ManifestationPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ManifestationPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="SuccorPvE"/> -> <seealso cref="AccessionPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet AccessionPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="EmergencyTacticsPvE"/> -> <seealso cref="EmergencyTacticsPvE_37037"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EmergencyTacticsPvEIndirection { get; }
-
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1406,9 +1385,6 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
         SuccorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE]);
         EmergencyTacticsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
         AdloquiumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
-        ManifestationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
-        AccessionPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, SuccorPvE]);
-        EmergencyTacticsPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

@@ -9,6 +9,8 @@ internal class ActionIndirectionGetter(Lumina.GameData gameData, ActionSingleRot
 {
     protected override Action[] GetActions(ActionIndirection item)
     {
+        return [];
+
         var action = item.Name.Value;
         if (action == null || action.RowId == 0) return [];
         var indirections = _gameData.GetExcelSheet<ActionIndirection>();

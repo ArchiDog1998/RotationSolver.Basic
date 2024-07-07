@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 55</br>
 /// <br>Number of Replace Actions: 11</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 7</br>
+/// <br>Number of Action Indirection: 0</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1207,55 +1207,6 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PhantomRushComboPvP { get; }
 
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="ElixirFieldPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ElixirFieldPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="FlintStrikePvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet FlintStrikePvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="CelestialRevolutionPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet CelestialRevolutionPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="TornadoKickPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TornadoKickPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="RisingPhoenixPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RisingPhoenixPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="PhantomRushPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet PhantomRushPvEIndirection { get; }
-
-    /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="ElixirBurstPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ElixirBurstPvEIndirection { get; }
-
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1373,13 +1324,6 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
         RiddleOfWindPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WindsReplyPvE, RiddleOfWindPvE]);
         RiddleOfFirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FiresReplyPvE, RiddleOfFirePvE]);
         PhantomRushComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvP, DemolishPvP, TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
-        ElixirFieldPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ElixirFieldPvE, MasterfulBlitzPvE]);
-        FlintStrikePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlintStrikePvE, MasterfulBlitzPvE]);
-        CelestialRevolutionPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CelestialRevolutionPvE, MasterfulBlitzPvE]);
-        TornadoKickPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TornadoKickPvE, MasterfulBlitzPvE]);
-        RisingPhoenixPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RisingPhoenixPvE, MasterfulBlitzPvE]);
-        PhantomRushPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvE, MasterfulBlitzPvE]);
-        ElixirBurstPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ElixirBurstPvE, MasterfulBlitzPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
