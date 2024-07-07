@@ -1,6 +1,6 @@
 ﻿namespace RotationSolver.Basic.Actions;
 
-internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : IBaseActionSet
+internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions, bool onlyLevel) : IBaseActionSet
 {
     public IBaseAction? ChosenAction { get; private set; }
 
@@ -8,10 +8,14 @@ internal class BaseActionSet(Func<IEnumerable<IBaseAction>> getActions) : IBaseA
     {
         foreach (var action in getActions())
         {
-            if(action.CanUse(out act,skipStatusProvideCheck, skipComboCheck, skipCastingCheck, usedUp, onLastAbility, skipClippingCheck, skipAoeCheck, gcdCountForAbility))
+            if (action.CanUse(out act,skipStatusProvideCheck, skipComboCheck, skipCastingCheck, usedUp, onLastAbility, skipClippingCheck, skipAoeCheck, gcdCountForAbility))
             {
                 ChosenAction = action;
                 return true;
+            }
+            if (onlyLevel && action.EnoughLevel)
+            {
+                break;
             }
         }
         ChosenAction = null;

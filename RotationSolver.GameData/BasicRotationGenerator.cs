@@ -5,7 +5,6 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using RotationSolver.GameData.Getters;
 using RotationSolver.GameData.Getters.Actions;
 using RotationSolver.GameData.Getters.ActionSets;
-using System.Linq;
 using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
@@ -18,6 +17,7 @@ internal static class BasicRotationGenerator
         var className = (job.NameEnglish.RawString + " Rotation").ToPascalCase();
         var jobName = job.NameEnglish.RawString;
 
+        Util.Clear();
         var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
         var traitsGetter = new TraitRotationGetter(gameData, job);
         var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);

@@ -5,7 +5,7 @@ using Action = Lumina.Excel.GeneratedSheets.Action;
 namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter)
+    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter, true)
 {
     protected override string ToName(ReplaceAction item)
     {

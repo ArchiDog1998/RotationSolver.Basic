@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 75</br>
 /// <br>Number of Replace Actions: 11</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 0</br>
+/// <br>Number of Action Indirection: 24</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1543,6 +1543,174 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DualFangComboPvP { get; }
 
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelFangsPvE"/> -> <seealso cref="HuntersStingPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersStingPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadFangsPvE"/> -> <seealso cref="SwiftskinsStingPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsStingPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelFangsPvE"/> -> <seealso cref="FlankstingStrikePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FlankstingStrikePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelFangsPvE"/> -> <seealso cref="FlanksbaneFangPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FlanksbaneFangPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadFangsPvE"/> -> <seealso cref="HindstingStrikePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HindstingStrikePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadFangsPvE"/> -> <seealso cref="HindsbaneFangPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HindsbaneFangPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelMawPvE"/> -> <seealso cref="HuntersBitePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersBitePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadMawPvE"/> -> <seealso cref="SwiftskinsBitePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsBitePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelMawPvE"/> -> <seealso cref="JaggedMawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet JaggedMawPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadMawPvE"/> -> <seealso cref="BloodiedMawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodiedMawPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="DeathRattlePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DeathRattlePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="LastLashPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LastLashPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinfangPvE"/> -> <seealso cref="TwinfangBitePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinfangBitePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinbloodPvE"/> -> <seealso cref="TwinbloodBitePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinbloodBitePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinfangPvE"/> -> <seealso cref="TwinfangThreshPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinfangThreshPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinbloodPvE"/> -> <seealso cref="TwinbloodThreshPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinbloodThreshPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelFangsPvE"/> -> <seealso cref="FirstGenerationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FirstGenerationPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DreadFangsPvE"/> -> <seealso cref="SecondGenerationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SecondGenerationPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinfangPvE"/> -> <seealso cref="UncoiledTwinfangPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet UncoiledTwinfangPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TwinbloodPvE"/> -> <seealso cref="UncoiledTwinbloodPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet UncoiledTwinbloodPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="FirstLegacyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FirstLegacyPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="SecondLegacyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SecondLegacyPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="ThirdLegacyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdLegacyPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="FourthLegacyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FourthLegacyPvEIndirection { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1648,18 +1816,42 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected ViperRotation()
     {
-        SteelMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, JaggedMawPvE, HuntersBitePvE, SteelMawPvE]);
-        DreadMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, DreadMawPvE]);
-        HuntersCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE]);
-        SwiftskinsCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE]);
-        HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE]);
-        SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE]);
-        ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE]);
-        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE]);
-        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE]);
-        HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP]);
-        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP]);
-        DualFangComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RavenousBitePvP, SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP]);
+        SteelMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, JaggedMawPvE, HuntersBitePvE, SteelMawPvE], true);
+        DreadMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, DreadMawPvE], true);
+        HuntersCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE], true);
+        SwiftskinsCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE], true);
+        HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE], true);
+        SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE], true);
+        ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE], true);
+        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE], true);
+        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE], true);
+        HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP], true);
+        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], true);
+        DualFangComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RavenousBitePvP, SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
+        HuntersStingPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE], false);
+        SwiftskinsStingPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvE, DreadFangsPvE], false);
+        FlankstingStrikePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlankstingStrikePvE, SteelFangsPvE], false);
+        FlanksbaneFangPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlanksbaneFangPvE, SteelFangsPvE], false);
+        HindstingStrikePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindstingStrikePvE, DreadFangsPvE], false);
+        HindsbaneFangPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindsbaneFangPvE, DreadFangsPvE], false);
+        HuntersBitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersBitePvE, SteelMawPvE], false);
+        SwiftskinsBitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsBitePvE, DreadMawPvE], false);
+        JaggedMawPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JaggedMawPvE, SteelMawPvE], false);
+        BloodiedMawPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodiedMawPvE, DreadMawPvE], false);
+        DeathRattlePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeathRattlePvE, SerpentsTailPvE], false);
+        LastLashPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LastLashPvE, SerpentsTailPvE], false);
+        TwinfangBitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinfangBitePvE, TwinfangPvE], false);
+        TwinbloodBitePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinbloodBitePvE, TwinbloodPvE], false);
+        TwinfangThreshPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinfangThreshPvE, TwinfangPvE], false);
+        TwinbloodThreshPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinbloodThreshPvE, TwinbloodPvE], false);
+        FirstGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, SteelFangsPvE], false);
+        SecondGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, DreadFangsPvE], false);
+        UncoiledTwinfangPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangPvE], false);
+        UncoiledTwinbloodPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodPvE], false);
+        FirstLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstLegacyPvE, SerpentsTailPvE], false);
+        SecondLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondLegacyPvE, SerpentsTailPvE], false);
+        ThirdLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdLegacyPvE, SerpentsTailPvE], false);
+        FourthLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthLegacyPvE, SerpentsTailPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

@@ -1,16 +1,14 @@
 ﻿using Lumina.Excel;
 using Lumina.Excel.GeneratedSheets;
 using RotationSolver.GameData.Getters.Actions;
-using System.Collections.Generic;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 namespace RotationSolver.GameData.Getters.ActionSets;
+
 internal class ActionIndirectionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ActionIndirection>(gameData, actionGetter)
+    : ActionSetGetterBase<ActionIndirection>(gameData, actionGetter, false)
 {
     protected override Action[] GetActions(ActionIndirection item)
     {
-        return [];
-
         var action = item.Name.Value;
         if (action == null || action.RowId == 0) return [];
         var indirections = _gameData.GetExcelSheet<ActionIndirection>();

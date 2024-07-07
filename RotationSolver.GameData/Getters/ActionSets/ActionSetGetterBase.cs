@@ -8,7 +8,7 @@ using static RotationSolver.GameData.SyntaxHelper;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
-internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
+internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, bool isReplace)
     : ExcelRowGetter<T, PropertyDeclarationSyntax>(gameData) where T : ExcelRow
 {
     protected override bool AddToList(T item)
@@ -23,6 +23,9 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
                 return false;
             }
         }
+
+        if (!Util.Enqueue(actions)) return false;
+
         return true;
     }
 
@@ -57,13 +60,19 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
                                     IdentifierName("global::RotationSolver.Basic.Actions.BaseActionSet"))
                                 .WithArgumentList(
                                     ArgumentList(
-                                        SingletonSeparatedList(
+                                        SeparatedList<ArgumentSyntax>(
+                                            new SyntaxNodeOrToken[]{
                                             Argument(
                                                 ParenthesizedLambdaExpression()
                                                 .WithExpressionBody(
                                                     CollectionExpression(
                                                         SeparatedList<CollectionElementSyntax>(
-                                                                items)))))))));
+                                                                items)))),
+                                             Token(SyntaxKind.CommaToken),
+                                             Argument(
+                                                 LiteralExpression(
+                                                     isReplace ? SyntaxKind.TrueLiteralExpression : SyntaxKind.FalseLiteralExpression))
+                                            })))));
 
         return init;
     }

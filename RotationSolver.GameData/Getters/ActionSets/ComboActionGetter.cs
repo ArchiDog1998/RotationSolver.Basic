@@ -5,7 +5,7 @@ using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
 internal class ComboActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ActionComboRoute>(gameData, actionGetter)
+    : ActionSetGetterBase<ActionComboRoute>(gameData, actionGetter, false)
 {
     protected override Action[] GetActions(ActionComboRoute item)
     {

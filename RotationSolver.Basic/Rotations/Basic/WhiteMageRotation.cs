@@ -57,12 +57,17 @@ partial class WhiteMageRotation
 
     static partial void ModifyAeroPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide =
-        [
-            StatusID.Aero,
-            StatusID.AeroIi,
-            StatusID.Dia,
-        ];
+        setting.TargetStatusProvide = [StatusID.Aero];
+    }
+
+    static partial void ModifyAeroIiPvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.AeroIi];
+    }
+
+    static partial void ModifyDiaPvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.Dia];
     }
 
     static partial void ModifyAfflatusMiseryPvE(ref ActionSetting setting)

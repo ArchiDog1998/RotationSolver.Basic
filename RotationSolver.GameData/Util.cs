@@ -1,9 +1,32 @@
 ﻿using Lumina.Excel.GeneratedSheets;
 using System.Text.RegularExpressions;
+using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData;
 internal static partial class Util
 {
+    private static readonly List<Action[]> _addedActions = [];
+
+    public static void Clear() => _addedActions.Clear();
+
+    public static bool Enqueue(Action[] actions)
+    {
+        if (_addedActions.Any(i =>
+        {
+            if (actions.Length != i.Length) return false;
+            for (int index = 0; index < i.Length; index++)
+            {
+                if (i[index].RowId != actions[index].RowId) return false;
+            }
+            return true;
+        }))
+        {
+            return false;
+        }
+        _addedActions.Add(actions);
+        return true;
+    }
+
     public static bool IsSingleJobForCombat(this ClassJobCategory jobCategory)
     {
         if (jobCategory.RowId == 68) return true; // ACN SMN SCH 
