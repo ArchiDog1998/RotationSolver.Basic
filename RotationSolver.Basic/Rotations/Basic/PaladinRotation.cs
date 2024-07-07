@@ -92,7 +92,7 @@ partial class PaladinRotation
         setting.SpecialType = SpecialActionType.MeleeRange;
     }
 
-    private protected sealed override IBaseActionSet TankStance => IronWillPvESet;
+    private protected sealed override IBaseActionSet TankStance => IronWillPvEReplace;
 
     static partial void ModifyRequiescatPvE(ref ActionSetting setting)
     {

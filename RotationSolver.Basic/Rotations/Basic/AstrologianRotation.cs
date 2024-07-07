@@ -113,7 +113,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
-        setting.ActionCheck = () => DrawnCard == CardType.ARROW;
+        //setting.ActionCheck = () => DrawnCard == CardType.ARROW;
     }
 
     static partial void ModifyTheBalancePvE(ref ActionSetting setting)
@@ -121,7 +121,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
-        setting.ActionCheck = () => DrawnCard == CardType.BALANCE;
+        //setting.ActionCheck = () => DrawnCard == CardType.BALANCE;
     }
     
     static partial void ModifyTheBolePvE(ref ActionSetting setting)
@@ -129,7 +129,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
-        setting.ActionCheck = () => DrawnCard == CardType.BOLE;
+        //setting.ActionCheck = () => DrawnCard == CardType.BOLE;
     }
 
     static partial void ModifyTheEwerPvE(ref ActionSetting setting)
@@ -137,7 +137,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
-        setting.ActionCheck = () => DrawnCard == CardType.EWER;
+        //setting.ActionCheck = () => DrawnCard == CardType.EWER;
     }
 
     static partial void ModifyTheSpearPvE(ref ActionSetting setting)
@@ -145,7 +145,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
-        setting.ActionCheck = () => DrawnCard == CardType.SPEAR;
+        //setting.ActionCheck = () => DrawnCard == CardType.SPEAR;
     }
 
     static partial void ModifyTheSpirePvE(ref ActionSetting setting)
@@ -153,7 +153,7 @@ partial class AstrologianRotation
         setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
-        setting.ActionCheck = () => DrawnCard == CardType.SPIRE;
+        //setting.ActionCheck = () => DrawnCard == CardType.SPIRE;
     }
 
     static partial void ModifyLightspeedPvE(ref ActionSetting setting)
@@ -177,11 +177,9 @@ partial class AstrologianRotation
     /// </summary>
     /// <param name="act"></param>
     /// <returns></returns>
+    [Obsolete]
     protected bool PlayCard(out IAction? act)
     {
-        act = null;
-        if (!Seals.Contains(SealType.NONE)) return false;
-
         if (TheBalancePvE.CanUse(out act)) return true;
         if (TheArrowPvE.CanUse(out act)) return true;
         if (TheSpearPvE.CanUse(out act)) return true;
@@ -192,16 +190,6 @@ partial class AstrologianRotation
         return false;
     }
 
-    static SealType GetCardSeal(CardType card)
-    {
-        return card switch
-        {
-            CardType.BALANCE or CardType.BOLE => SealType.SUN,
-            CardType.ARROW or CardType.EWER => SealType.MOON,
-            CardType.SPEAR or CardType.SPIRE => SealType.CELESTIAL,
-            _ => SealType.NONE,
-        };
-    }
 
     /// <inheritdoc/>
     protected override bool LimitBreakPvPGCD(out IAction? act)

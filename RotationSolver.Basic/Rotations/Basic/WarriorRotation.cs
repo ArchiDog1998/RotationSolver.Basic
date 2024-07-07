@@ -9,7 +9,7 @@ partial class WarriorRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    private sealed protected override IBaseActionSet TankStance => DefiancePvESet;
+    private sealed protected override IBaseActionSet TankStance => DefiancePvEReplace;
 
     static partial void ModifyPrimalRendPvP(ref ActionSetting setting)
     {

@@ -103,7 +103,7 @@ partial class GunbreakerRotation
         setting.ActionCheck = Player.IsTargetOnSelf;
     }
 
-    private protected sealed override IBaseActionSet TankStance => RoyalGuardPvESet;
+    private protected sealed override IBaseActionSet TankStance => RoyalGuardPvEReplace;
 
     static partial void ModifyNoMercyPvE(ref ActionSetting setting)
     {

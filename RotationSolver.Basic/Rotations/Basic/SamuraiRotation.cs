@@ -168,7 +168,7 @@ partial class SamuraiRotation
     /// <inheritdoc/>
     protected override bool DefenseSingleAbility(out IAction? act)
     {
-        if (ThirdEyePvESet.CanUse(out act)) return true;
+        if (ThirdEyePvEReplace.CanUse(out act)) return true;
         return base.DefenseSingleAbility(out act);
     }
 

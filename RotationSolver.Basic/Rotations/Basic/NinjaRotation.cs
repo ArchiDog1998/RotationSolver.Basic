@@ -17,7 +17,7 @@ partial class NinjaRotation
 
     static partial void ModifyArmorCrushPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HutonTimer is > 0 and < 25;
+        //setting.ActionCheck = () => HutonTimer is > 0 and < 25;
     }
 
     //static partial void ModifyHuraijinPvE(ref ActionSetting setting)
@@ -77,7 +77,7 @@ partial class NinjaRotation
     static partial void ModifyTenChiJinPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.Kassatsu, StatusID.TenChiJin];
-        setting.ActionCheck = () => HutonTimer > 2;
+        //setting.ActionCheck = () => HutonTimer > 2;
     }
 
     static partial void ModifyKassatsuPvE(ref ActionSetting setting)
@@ -87,7 +87,7 @@ partial class NinjaRotation
 
     static partial void ModifyHutonPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HutonTimer < 0;
+        //setting.ActionCheck = () => HutonTimer < 0;
     }
 
     static partial void ModifyDotonPvE(ref ActionSetting setting)
