@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 51</br>
 /// <br>Number of Replace Actions: 6</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 4</br>
+/// <br>Number of Action Indirection: 6</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
 public abstract partial class SageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1063,6 +1063,13 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="DiagnosisPvE"/> -> <seealso cref="EukrasianDiagnosisPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EukrasianDiagnosisPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
 /// <seealso cref="DosisPvE"/> -> <seealso cref="EukrasianDosisPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1088,6 +1095,13 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EukrasianDyskrasiaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="PrognosisPvE"/> -> <seealso cref="EukrasianPrognosisPvE"/> -> <seealso cref="EukrasianPrognosisIiPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EukrasianPrognosisIiPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1200,10 +1214,12 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
         DyskrasiaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDyskrasiaPvE, DyskrasiaIiPvE, DyskrasiaPvE], true);
         ToxikonPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ToxikonIiPvE, ToxikonPvE], true);
         PhysisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhysisIiPvE, PhysisPvE], true);
+        EukrasianDiagnosisPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDiagnosisPvE, DiagnosisPvE], false);
         EukrasianDosisPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDosisPvE, DosisPvE], false);
         EukrasianDosisIiPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDosisIiPvE, DosisIiPvE], false);
         EukrasianDosisIiiPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDosisIiiPvE, DosisIiiPvE], false);
         EukrasianDyskrasiaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDyskrasiaPvE, DyskrasiaIiPvE], false);
+        EukrasianPrognosisIiPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianPrognosisIiPvE, EukrasianPrognosisPvE, PrognosisPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

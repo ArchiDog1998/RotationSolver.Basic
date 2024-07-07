@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 55</br>
 /// <br>Number of Replace Actions: 10</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 9</br>
+/// <br>Number of Action Indirection: 14</br>
 /// <br>Number of Traits: 16</br>
 /// </summary>
 public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1206,6 +1206,13 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="HellsIngressPvE"/> -> <seealso cref="RegressPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RegressPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
 /// <seealso cref="GibbetPvE"/> -> <seealso cref="VoidReapingPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1227,10 +1234,31 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SoulsowPvE"/> -> <seealso cref="HarvestMoonPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HarvestMoonPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
 /// <seealso cref="BloodStalkPvE"/> -> <seealso cref="LemuresSlicePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LemuresSlicePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="GrimSwathePvE"/> -> <seealso cref="LemuresScythePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LemuresScythePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="GluttonyPvE"/> -> <seealso cref="SacrificiumPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SacrificiumPvEIndirection { get; }
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
@@ -1252,6 +1280,13 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ExecutionersGuillotinePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="CommunioPvE"/> -> <seealso cref="PerfectioPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet PerfectioPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1376,13 +1411,18 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
         InfernalSliceComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvP, WaxingSlicePvP, SlicePvP], false);
         UnveiledGibbetPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UnveiledGibbetPvE, BloodStalkPvE], false);
         UnveiledGallowsPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UnveiledGallowsPvE, BloodStalkPvE], false);
+        RegressPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsIngressPvE], false);
         VoidReapingPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VoidReapingPvE, GibbetPvE], false);
         CrossReapingPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrossReapingPvE, GallowsPvE], false);
         GrimReapingPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GrimReapingPvE, GuillotinePvE], false);
+        HarvestMoonPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HarvestMoonPvE, SoulsowPvE], false);
         LemuresSlicePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresSlicePvE, BloodStalkPvE], false);
+        LemuresScythePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresScythePvE, GrimSwathePvE], false);
+        SacrificiumPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SacrificiumPvE, GluttonyPvE], false);
         ExecutionersGibbetPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExecutionersGibbetPvE, GibbetPvE], false);
         ExecutionersGallowsPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExecutionersGallowsPvE, GallowsPvE], false);
         ExecutionersGuillotinePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExecutionersGuillotinePvE, GuillotinePvE], false);
+        PerfectioPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PerfectioPvE, CommunioPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

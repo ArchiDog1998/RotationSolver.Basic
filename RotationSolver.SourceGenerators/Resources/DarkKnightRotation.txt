@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 47</br>
 /// <br>Number of Replace Actions: 9</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 3</br>
+/// <br>Number of Action Indirection: 4</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1036,6 +1036,13 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TorcleaverPvEIndirection { get; }
 
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="QuietusPvE"/> -> <seealso cref="ImpalementPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ImpalementPvEIndirection { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1154,6 +1161,7 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
         ScarletDeliriumPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScarletDeliriumPvE, BloodspillerPvE], false);
         ComeuppancePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ComeuppancePvE, BloodspillerPvE], false);
         TorcleaverPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, BloodspillerPvE], false);
+        ImpalementPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImpalementPvE, QuietusPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

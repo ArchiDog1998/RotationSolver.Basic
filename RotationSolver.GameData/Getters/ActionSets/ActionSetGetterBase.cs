@@ -8,9 +8,13 @@ using static RotationSolver.GameData.SyntaxHelper;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
-internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, bool isReplace)
+internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
     : ExcelRowGetter<T, PropertyDeclarationSyntax>(gameData) where T : ExcelRow
 {
+    public virtual bool ReplaceAction => false;
+
+    public bool IsReplace => replace == null;
+
     protected override bool AddToList(T item)
     {
         var actions = GetActions(item);
@@ -24,7 +28,10 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
             }
         }
 
-        if (!Util.Enqueue(actions)) return false;
+        if (!IsReplace)
+        {
+            if (!Util.Enqueue(actions)) return false;
+        }
 
         return true;
     }
@@ -40,7 +47,7 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
     {
         var actions = GetActions(item);
 
-        var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(actionGetter.Items[i])));
+        var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(GetName(i))));
 
         List<SyntaxNodeOrToken> items = [];
         foreach (var element in expElements)
@@ -71,10 +78,25 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
                                              Token(SyntaxKind.CommaToken),
                                              Argument(
                                                  LiteralExpression(
-                                                     isReplace ? SyntaxKind.TrueLiteralExpression : SyntaxKind.FalseLiteralExpression))
+                                                    IsReplace ? SyntaxKind.TrueLiteralExpression : SyntaxKind.FalseLiteralExpression))
                                             })))));
 
         return init;
+    }
+
+    private string GetName(Action i)
+    {
+        if (replace == null || !ReplaceAction) return actionGetter.Items[i];
+
+        foreach ((var key, var value) in replace.Items)
+        {
+            if (replace.GetActions(key).Contains(i))
+            {
+                return value;
+            }
+        }
+
+        return actionGetter.Items[i];
     }
 
     protected abstract string GetXmlComment(T item, Action[] actions);
@@ -105,6 +127,6 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
     }
 
 
-    protected abstract Action[] GetActions(T item);
+    public abstract Action[] GetActions(T item);
 
 }

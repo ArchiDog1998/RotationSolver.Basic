@@ -21,8 +21,8 @@ internal static class BasicRotationGenerator
         var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
         var traitsGetter = new TraitRotationGetter(gameData, job);
         var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);
-        var actionsCombo = new ComboActionGetter(gameData, rotationsGetter);
-        var actionIndirection = new ActionIndirectionGetter(gameData, rotationsGetter);
+        var actionsCombo = new ComboActionGetter(gameData, rotationsGetter, replaceActions);
+        var actionIndirection = new ActionIndirectionGetter(gameData, rotationsGetter, replaceActions);
 
         List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(),..actionsCombo.GetNodes(), ..actionIndirection.GetNodes(),
         .. CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];

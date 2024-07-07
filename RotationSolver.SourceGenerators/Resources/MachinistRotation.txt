@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 51</br>
 /// <br>Number of Replace Actions: 13</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 1</br>
+/// <br>Number of Action Indirection: 3</br>
 /// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class MachinistRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1144,6 +1144,20 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RookOverloadPvEIndirection { get; }
 
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="WildfirePvE"/> -> <seealso cref="DetonatorPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DetonatorPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ChainSawPvE"/> -> <seealso cref="ExcavatorPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ExcavatorPvEIndirection { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1278,6 +1292,8 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
         ChainSawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE], true);
         BarrelStabilizerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullMetalFieldPvE, BarrelStabilizerPvE], true);
         RookOverloadPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RookOverloadPvE, RookOverdrivePvE], false);
+        DetonatorPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DetonatorPvE, WildfirePvE], false);
+        ExcavatorPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

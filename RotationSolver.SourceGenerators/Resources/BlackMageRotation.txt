@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 49</br>
 /// <br>Number of Replace Actions: 6</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 0</br>
+/// <br>Number of Action Indirection: 1</br>
 /// <br>Number of Traits: 25</br>
 /// </summary>
 public abstract partial class BlackMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1075,6 +1075,13 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LeyLinesPvEReplace { get; }
 
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="FirePvE"/> -> <seealso cref="ParadoxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ParadoxPvEIndirection { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1216,6 +1223,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
         ThunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderPvE, ThunderIiiPvE, ThunderPvE], true);
         ThunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderIiPvE, ThunderIvPvE, ThunderIiPvE], true);
         LeyLinesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetracePvE, LeyLinesPvE], true);
+        ParadoxPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, FirePvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 73</br>
 /// <br>Number of Replace Actions: 7</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 10</br>
+/// <br>Number of Action Indirection: 13</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
 public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1576,6 +1576,27 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HyoshoRanryuPvEIndirection { get; }
 
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="BhavacakraPvE"/> -> <seealso cref="ZeshoMeppoPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ZeshoMeppoPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="HellfrogMediumPvE"/> -> <seealso cref="DeathfrogMediumPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DeathfrogMediumPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="TenChiJinPvE"/> -> <seealso cref="TenriJindoPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TenriJindoPvEIndirection { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1684,6 +1705,9 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
         SuitonPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SuitonPvE, NinjutsuPvE], false);
         GokaMekkyakuPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GokaMekkyakuPvE, NinjutsuPvE], false);
         HyoshoRanryuPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HyoshoRanryuPvE, NinjutsuPvE], false);
+        ZeshoMeppoPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZeshoMeppoPvE, BhavacakraPvE], false);
+        DeathfrogMediumPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeathfrogMediumPvE, HellfrogMediumPvE], false);
+        TenriJindoPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TenriJindoPvE, TenChiJinPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

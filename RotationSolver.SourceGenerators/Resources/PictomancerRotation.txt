@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 70</br>
 /// <br>Number of Replace Actions: 16</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 18</br>
+/// <br>Number of Action Indirection: 23</br>
 /// <br>Number of Traits: 18</br>
 /// </summary>
 public abstract partial class PictomancerRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1541,6 +1541,20 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="WeaponMotifPvE"/> -> <seealso cref="HammerMotifPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HammerMotifPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SteelMusePvE"/> -> <seealso cref="StrikingMusePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StrikingMusePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
 /// <seealso cref="BlizzardInCyanPvE"/> -> <seealso cref="StoneInYellowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1566,6 +1580,20 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThunderIiInMagentaPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="LandscapeMotifPvE"/> -> <seealso cref="StarrySkyMotifPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StarrySkyMotifPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ScenicMusePvE"/> -> <seealso cref="StarryMusePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StarryMusePvEIndirection { get; }
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
@@ -1608,6 +1636,13 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FangedMusePvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="MogOfTheAgesPvE"/> -> <seealso cref="RetributionOfTheMadeenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RetributionOfTheMadeenPvEIndirection { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1763,16 +1798,21 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
         WingedMusePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WingedMusePvE, LivingMusePvE], false);
         AeroIiInGreenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AeroIiInGreenPvE, FireIiInRedPvE], false);
         WaterIiInBluePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, FireIiInRedPvE], false);
+        HammerMotifPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], false);
+        StrikingMusePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], false);
         StoneInYellowPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StoneInYellowPvE, BlizzardInCyanPvE], false);
         ThunderInMagentaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, BlizzardInCyanPvE], false);
         StoneIiInYellowPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StoneIiInYellowPvE, BlizzardIiInCyanPvE], false);
         ThunderIiInMagentaPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, BlizzardIiInCyanPvE], false);
+        StarrySkyMotifPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], false);
+        StarryMusePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarryMusePvE, ScenicMusePvE], false);
         HammerBrushPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerBrushPvE, HammerStampPvE], false);
         PolishingHammerPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PolishingHammerPvE, HammerStampPvE], false);
         ClawMotifPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ClawMotifPvE, CreatureMotifPvE], false);
         MawMotifPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MawMotifPvE, CreatureMotifPvE], false);
         ClawedMusePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ClawedMusePvE, LivingMusePvE], false);
         FangedMusePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangedMusePvE, LivingMusePvE], false);
+        RetributionOfTheMadeenPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

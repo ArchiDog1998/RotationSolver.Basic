@@ -8,7 +8,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 75</br>
 /// <br>Number of Replace Actions: 11</br>
 /// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 24</br>
+/// <br>Number of Action Indirection: 27</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1671,6 +1671,20 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="HuntersCoilPvE"/> -> <seealso cref="ThirdGenerationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdGenerationPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="SwiftskinsCoilPvE"/> -> <seealso cref="FourthGenerationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FourthGenerationPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
 /// <seealso cref="TwinfangPvE"/> -> <seealso cref="UncoiledTwinfangPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1682,6 +1696,13 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet UncoiledTwinbloodPvEIndirection { get; }
+
+    /// <summary>
+/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
+/// <seealso cref="ReawakenPvE"/> -> <seealso cref="OuroborosPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet OuroborosPvEIndirection { get; }
 
     /// <summary>
 /// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
@@ -1846,8 +1867,11 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         TwinbloodThreshPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinbloodThreshPvE, TwinbloodPvE], false);
         FirstGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, SteelFangsPvE], false);
         SecondGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, DreadFangsPvE], false);
+        ThirdGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE], false);
+        FourthGenerationPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE], false);
         UncoiledTwinfangPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangPvE], false);
         UncoiledTwinbloodPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodPvE], false);
+        OuroborosPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE], false);
         FirstLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstLegacyPvE, SerpentsTailPvE], false);
         SecondLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondLegacyPvE, SerpentsTailPvE], false);
         ThirdLegacyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdLegacyPvE, SerpentsTailPvE], false);

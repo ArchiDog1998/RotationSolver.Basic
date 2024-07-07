@@ -4,10 +4,10 @@ using RotationSolver.GameData.Getters.Actions;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 namespace RotationSolver.GameData.Getters.ActionSets;
 
-internal class ActionIndirectionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ActionIndirection>(gameData, actionGetter, false)
+internal class ActionIndirectionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, ReplaceActionGetter replace)
+    : ActionSetGetterBase<ActionIndirection>(gameData, actionGetter, replace)
 {
-    protected override Action[] GetActions(ActionIndirection item)
+    public override Action[] GetActions(ActionIndirection item)
     {
         var action = item.Name.Value;
         if (action == null || action.RowId == 0) return [];
