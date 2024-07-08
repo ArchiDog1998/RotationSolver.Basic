@@ -7,8 +7,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/redmage"><strong>Red Mage</strong></see>
 /// <br>Number of Actions: 65</br>
 /// <br>Number of Replace Actions: 11</br>
-/// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 10</br>
+/// <br>Number of Action Combos: 12</br>
 /// <br>Number of Traits: 19</br>
 /// </summary>
 public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1366,74 +1365,76 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet ManaficationPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RipostePvE"/> -> <seealso cref="EnchantedRipostePvE"/>
+/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRipostePvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ZwerchhauPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="ZwerchhauPvE"/> -> <seealso cref="EnchantedZwerchhauPvE"/>
+/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/> -> <seealso cref="RedoublementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedZwerchhauPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RedoublementPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RedoublementPvE"/> -> <seealso cref="EnchantedRedoublementPvE"/>
+/// <seealso cref="RipostePvE"/> -> <seealso cref="EnchantedZwerchhauPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedZwerchhauPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MoulinetPvE"/> -> <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/>
+/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/> -> <seealso cref="EnchantedRedoublementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetDeuxPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="MoulinetPvE"/> -> <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetTroisPvE"/>
+/// <seealso cref="VerflarePvE"/> -> <seealso cref="ScorchPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetTroisPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ScorchPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="VerthunderPvE"/> -> <seealso cref="VerflarePvE"/>
+/// <seealso cref="VerflarePvE"/> -> <seealso cref="ScorchPvE"/> -> <seealso cref="ResolutionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet VerflarePvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ResolutionPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="VeraeroPvE"/> -> <seealso cref="VerholyPvE"/>
+/// <seealso cref="EnchantedRipostePvP"/> -> <seealso cref="EnchantedZwerchhauPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet VerholyPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedZwerchhauPvPCombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="ReprisePvE"/> -> <seealso cref="EnchantedReprisePvE"/>
+/// <seealso cref="EnchantedRipostePvP"/> -> <seealso cref="EnchantedZwerchhauPvP"/> -> <seealso cref="EnchantedRedoublementPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedReprisePvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvPCombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="JoltIiPvE"/> -> <seealso cref="ScorchPvE"/> -> <seealso cref="ResolutionPvE"/>
+/// <seealso cref="EnchantedRipostePvP"/> -> <seealso cref="EnchantedZwerchhauPvP_29693"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ResolutionPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedZwerchhauPvP_29693Combo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="ManaficationPvE"/> -> <seealso cref="PrefulgencePvE"/>
+/// <seealso cref="EnchantedRipostePvP"/> -> <seealso cref="EnchantedZwerchhauPvP"/> -> <seealso cref="EnchantedRedoublementPvP_29694"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet PrefulgencePvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvP_29694Combo { get; }
+
+    /// <summary>
+/// <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetDeuxPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/> -> <seealso cref="EnchantedMoulinetTroisPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetTroisPvECombo { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1535,27 +1536,29 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected RedMageRotation()
     {
-        RipostePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvE, RipostePvE], true);
-        ZwerchhauPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, ZwerchhauPvE], true);
-        RedoublementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, RedoublementPvE], true);
-        MoulinetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE, MoulinetPvE], true);
-        ReprisePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedReprisePvE, ReprisePvE], true);
-        VerthunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiiPvE, VerthunderPvE], true);
-        VeraeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE], true);
-        VerthunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE], true);
-        VeraeroIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE], true);
-        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], true);
-        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], true);
-        EnchantedRipostePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvE, RipostePvE], false);
-        EnchantedZwerchhauPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, ZwerchhauPvE], false);
-        EnchantedRedoublementPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, RedoublementPvE], false);
-        EnchantedMoulinetDeuxPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE, MoulinetPvE], false);
-        EnchantedMoulinetTroisPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetPvE, MoulinetPvE], false);
-        VerflarePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderPvE], false);
-        VerholyPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroPvE], false);
-        EnchantedReprisePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedReprisePvE, ReprisePvE], false);
-        ResolutionPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResolutionPvE, ScorchPvE, JoltIiPvE], false);
-        PrefulgencePvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], false);
+        RipostePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvE, RipostePvE], null);
+        ZwerchhauPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, ZwerchhauPvE], null);
+        RedoublementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, RedoublementPvE], null);
+        MoulinetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE, MoulinetPvE], null);
+        ReprisePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedReprisePvE, ReprisePvE], null);
+        VerthunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiiPvE, VerthunderPvE], null);
+        VeraeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE], null);
+        VerthunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE], null);
+        VeraeroIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE], null);
+        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], null);
+        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], null);
+        ZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvE, RipostePvE], this);
+        RedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RedoublementPvE, ZwerchhauPvE, RipostePvE], this);
+        EnchantedZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, RipostePvE], this);
+        EnchantedRedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, ZwerchhauPvE, RipostePvE], this);
+        ScorchPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScorchPvE, VerflarePvE], this);
+        ResolutionPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResolutionPvE, ScorchPvE, VerflarePvE], this);
+        EnchantedZwerchhauPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
+        EnchantedRedoublementPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP, EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
+        EnchantedZwerchhauPvP_29693Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP_29693, EnchantedRipostePvP], this);
+        EnchantedRedoublementPvP_29694Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP_29694, EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
+        EnchantedMoulinetDeuxPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE], this);
+        EnchantedMoulinetTroisPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE], this);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

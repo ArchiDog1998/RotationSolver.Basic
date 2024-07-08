@@ -21,10 +21,9 @@ internal static class BasicRotationGenerator
         var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
         var traitsGetter = new TraitRotationGetter(gameData, job);
         var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);
-        var actionsCombo = new ComboActionGetter(gameData, rotationsGetter, replaceActions);
-        var actionIndirection = new ActionIndirectionGetter(gameData, rotationsGetter, replaceActions);
+        var actionsCombo = new ActionComboActionGetter(rotationsGetter);
 
-        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(),..actionsCombo.GetNodes(), ..actionIndirection.GetNodes(),
+        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(),..actionsCombo.GetDeclarations(),
         .. CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];
 
         if (!job.IsLimitedJob)
@@ -58,14 +57,14 @@ internal static class BasicRotationGenerator
             list.AddRange(GetLBInRotation(c, 3, gameData));
             rotationNames.Add("LimitBreak3");
         }
-        if (replaceActions.Count + actionsCombo.Count + actionIndirection.Count > 0)
+        if (replaceActions.Count + actionsCombo.Count > 0)
         {
             var ctor = ConstructorDeclaration(Identifier(className))
             .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
             .WithXmlComment("/// <inheritdoc/>")
             .WithModifiers(
                 TokenList(Token(SyntaxKind.ProtectedKeyword)))
-            .WithBody(Block(replaceActions.GetInit().Union(actionsCombo.GetInit()).Union(actionIndirection.GetInit())));
+            .WithBody(Block(replaceActions.GetInit().Union(actionsCombo.GetInits())));
             list.Add(ctor);
         }
 
@@ -86,7 +85,6 @@ internal static class BasicRotationGenerator
             /// <br>Number of Actions: {{rotationsGetter.Count}}</br>
             /// <br>Number of Replace Actions: {{replaceActions.Count}}</br>
             /// <br>Number of Action Combos: {{actionsCombo.Count}}</br>
-            /// <br>Number of Action Indirection: {{actionIndirection.Count}}</br>
             /// <br>Number of Traits: {{traitsGetter.Count}}</br>
             /// </summary>
             """)
@@ -121,7 +119,6 @@ internal static class BasicRotationGenerator
 
         return [.. declarations, property];
     }
-
 
     private static MemberDeclarationSyntax[] GetLBPvE(Lumina.Excel.GeneratedSheets.Action action, out string name, Lumina.GameData gameData)
     {
@@ -306,5 +303,4 @@ internal static class BasicRotationGenerator
                    IdentifierName("global::ECommons.ExcelServices.Job"), IdentifierName(name)));
         }
     }
-
 }

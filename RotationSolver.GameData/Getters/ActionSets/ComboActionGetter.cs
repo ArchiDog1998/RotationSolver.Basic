@@ -4,11 +4,10 @@ using RotationSolver.GameData.Getters.Actions;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
-internal class ComboActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, ReplaceActionGetter replace)
-    : ActionSetGetterBase<ActionComboRoute>(gameData, actionGetter, replace)
-{
-    public override bool ReplaceAction => true;
 
+internal class ComboActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
+    : ActionSetGetterBase<ActionComboRoute>(gameData, actionGetter, false)
+{
     public override Action[] GetActions(ActionComboRoute item)
     {
         var result = new List<Action>();

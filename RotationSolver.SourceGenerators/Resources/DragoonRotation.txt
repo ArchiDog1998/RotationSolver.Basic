@@ -7,8 +7,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/dragoon"><strong>Dragoon</strong></see>
 /// <br>Number of Actions: 47</br>
 /// <br>Number of Replace Actions: 12</br>
-/// <br>Number of Action Combos: 1</br>
-/// <br>Number of Action Indirection: 2</br>
+/// <br>Number of Action Combos: 15</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
 public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1035,33 +1034,94 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet WheelingThrustPvEReplace { get; }
 
     /// <summary>
-/// <strong>Wheeling Thrust Combo</strong>
-/// <para>Executes the following weaponskills in succession:</para>
-/// <para>1. Raiden Thrust</para>
-/// <para>2. Fang and Claw</para>
-/// <para>3. Wheeling Thrust</para>
-/// <para></para>
-/// <para>If any of the weaponskills are not ready, the combo will start again.</para>
-/// <para></para>
-/// <para>※Action changes to Heavens' Thrust while under the effect of Heavensent.</para>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="VorpalThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VorpalThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="VorpalThrustPvE"/> -> <seealso cref="FullThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FullThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="DisembowelPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DisembowelPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="DisembowelPvE"/> -> <seealso cref="ChaosThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChaosThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="VorpalThrustPvE"/> -> <seealso cref="FullThrustPvE"/> -> <seealso cref="FangAndClawPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FangAndClawPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="DisembowelPvE"/> -> <seealso cref="ChaosThrustPvE"/> -> <seealso cref="WheelingThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WheelingThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="DoomSpikePvE"/> -> <seealso cref="SonicThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SonicThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="DoomSpikePvE"/> -> <seealso cref="SonicThrustPvE"/> -> <seealso cref="CoerthanTormentPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CoerthanTormentPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="VorpalThrustPvE"/> -> <seealso cref="HeavensThrustPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HeavensThrustPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="DisembowelPvE"/> -> <seealso cref="ChaoticSpringPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChaoticSpringPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="RaidenThrustPvP"/> -> <seealso cref="FangAndClawPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FangAndClawPvPCombo { get; }
+
+    /// <summary>
 /// <seealso cref="RaidenThrustPvP"/> -> <seealso cref="FangAndClawPvP"/> -> <seealso cref="WheelingThrustPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet WheelingThrustComboPvP { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WheelingThrustPvPCombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="RaidenThrustPvE"/>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="VorpalThrustPvE"/> -> <seealso cref="FullThrustPvE"/> -> <seealso cref="FangAndClawPvE"/> -> <seealso cref="DrakesbanePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RaidenThrustPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DrakesbanePvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="DoomSpikePvE"/> -> <seealso cref="DraconianFuryPvE"/>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="LanceBarragePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DraconianFuryPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LanceBarragePvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="TrueThrustPvE"/> -> <seealso cref="SpiralBlowPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SpiralBlowPvECombo { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1168,21 +1228,33 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DragoonRotation()
     {
-        GeirskogulPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NastrondPvE, GeirskogulPvE], true);
-        JumpPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MirageDivePvE, HighJumpPvE, JumpPvE], true);
-        TrueThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE], true);
-        DoomSpikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE], true);
-        FullThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, FullThrustPvE], true);
-        ChaosThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, ChaosThrustPvE], true);
-        DragonfireDivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiseOfTheDragonPvE, DragonfireDivePvE], true);
-        VorpalThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, VorpalThrustPvE], true);
-        DisembowelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, DisembowelPvE], true);
-        StardiverPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarcrossPvE, StardiverPvE], true);
-        FangAndClawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE], true);
-        WheelingThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, WheelingThrustPvE], true);
-        WheelingThrustComboPvP = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvP, FangAndClawPvP, RaidenThrustPvP], false);
-        RaidenThrustPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE], false);
-        DraconianFuryPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE], false);
+        GeirskogulPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NastrondPvE, GeirskogulPvE], null);
+        JumpPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MirageDivePvE, HighJumpPvE, JumpPvE], null);
+        TrueThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE], null);
+        DoomSpikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE], null);
+        FullThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, FullThrustPvE], null);
+        ChaosThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, ChaosThrustPvE], null);
+        DragonfireDivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiseOfTheDragonPvE, DragonfireDivePvE], null);
+        VorpalThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, VorpalThrustPvE], null);
+        DisembowelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, DisembowelPvE], null);
+        StardiverPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarcrossPvE, StardiverPvE], null);
+        FangAndClawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE], null);
+        WheelingThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, WheelingThrustPvE], null);
+        VorpalThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VorpalThrustPvE, TrueThrustPvE], this);
+        FullThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
+        DisembowelPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisembowelPvE, TrueThrustPvE], this);
+        ChaosThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaosThrustPvE, DisembowelPvE, TrueThrustPvE], this);
+        FangAndClawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvE, FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
+        WheelingThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvE, ChaosThrustPvE, DisembowelPvE, TrueThrustPvE], this);
+        SonicThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicThrustPvE, DoomSpikePvE], this);
+        CoerthanTormentPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CoerthanTormentPvE, SonicThrustPvE, DoomSpikePvE], this);
+        HeavensThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
+        ChaoticSpringPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, DisembowelPvE, TrueThrustPvE], this);
+        FangAndClawPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvP, RaidenThrustPvP], this);
+        WheelingThrustPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvP, FangAndClawPvP, RaidenThrustPvP], this);
+        DrakesbanePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE, FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
+        LanceBarragePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, TrueThrustPvE], this);
+        SpiralBlowPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, TrueThrustPvE], this);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

@@ -5,13 +5,17 @@ using Action = Lumina.Excel.GeneratedSheets.Action;
 namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter, null)
+    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter, true)
 {
+    public override bool ReplaceAction => true;
+
+
     protected override string ToName(ReplaceAction item)
     {
         var actions = GetActions(item);
         return actionGetter.Items[actions[0]] + "Replace";
     }
+
     public override Action[] GetActions(ReplaceAction item)
     {
         List<Action> actionList = [];

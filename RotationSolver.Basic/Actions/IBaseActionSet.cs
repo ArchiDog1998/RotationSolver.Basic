@@ -1,7 +1,6 @@
 ﻿namespace RotationSolver.Basic.Actions;
 
 /// <summary>
-/// The <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// </summary>
 public interface IBaseActionSet : ICanUse
 {
@@ -9,4 +8,14 @@ public interface IBaseActionSet : ICanUse
     /// The chosen Action. Please get it after using <see cref="ICanUse.CanUse(out IAction, CanUseOption, byte)"/>
     /// </summary>
     IBaseAction? ChosenAction { get; }
+
+    /// <summary>
+    /// Is this set a replace action set.
+    /// </summary>
+    bool IsReplace { get; }
+
+    /// <summary>
+    /// The actions.
+    /// </summary>
+    IEnumerable<ICanUse> Actions { get; }
 }

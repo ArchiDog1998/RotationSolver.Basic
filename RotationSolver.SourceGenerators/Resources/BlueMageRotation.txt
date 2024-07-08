@@ -8,7 +8,6 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Actions: 131</br>
 /// <br>Number of Replace Actions: 0</br>
 /// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 0</br>
 /// <br>Number of Traits: 6</br>
 /// </summary>
 public abstract partial class BlueMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation

@@ -7,8 +7,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/machinist"><strong>Machinist</strong></see>
 /// <br>Number of Actions: 51</br>
 /// <br>Number of Replace Actions: 13</br>
-/// <br>Number of Action Combos: 0</br>
-/// <br>Number of Action Indirection: 3</br>
+/// <br>Number of Action Combos: 4</br>
 /// <br>Number of Traits: 22</br>
 /// </summary>
 public abstract partial class MachinistRotation : global::RotationSolver.Basic.Rotations.CustomRotation
@@ -1138,25 +1137,28 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     public global::RotationSolver.Basic.Actions.IBaseActionSet BarrelStabilizerPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="RookOverdrivePvE"/> -> <seealso cref="RookOverloadPvE"/>
+/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet RookOverloadPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SlugShotPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="WildfirePvE"/> -> <seealso cref="DetonatorPvE"/>
+/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/> -> <seealso cref="CleanShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DetonatorPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CleanShotPvECombo { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ActionIndirection"/>
-/// <seealso cref="ChainSawPvE"/> -> <seealso cref="ExcavatorPvE"/>
+/// <seealso cref="SplitShotPvE"/> -> <seealso cref="HeatedSlugShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet ExcavatorPvEIndirection { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HeatedSlugShotPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/> -> <seealso cref="HeatedCleanShotPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HeatedCleanShotPvECombo { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1278,22 +1280,23 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected MachinistRotation()
     {
-        SplitShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSplitShotPvE, SplitShotPvE], true);
-        SlugShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSlugShotPvE, SlugShotPvE], true);
-        CleanShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedCleanShotPvE, CleanShotPvE], true);
-        HotShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AirAnchorPvE, HotShotPvE], true);
-        RookAutoturretPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AutomatonQueenPvE, RookAutoturretPvE], true);
-        RookOverdrivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [QueenOverdrivePvE, RookOverdrivePvE], true);
-        WildfirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DetonatorPvE, WildfirePvE], true);
-        SpreadShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScattergunPvE, SpreadShotPvE], true);
-        HeatBlastPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlazingShotPvE, HeatBlastPvE], true);
-        GaussRoundPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleCheckPvE, GaussRoundPvE], true);
-        RicochetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CheckmatePvE, RicochetPvE], true);
-        ChainSawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE], true);
-        BarrelStabilizerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullMetalFieldPvE, BarrelStabilizerPvE], true);
-        RookOverloadPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RookOverloadPvE, RookOverdrivePvE], false);
-        DetonatorPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DetonatorPvE, WildfirePvE], false);
-        ExcavatorPvEIndirection = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE], false);
+        SplitShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSplitShotPvE, SplitShotPvE], null);
+        SlugShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSlugShotPvE, SlugShotPvE], null);
+        CleanShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedCleanShotPvE, CleanShotPvE], null);
+        HotShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AirAnchorPvE, HotShotPvE], null);
+        RookAutoturretPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AutomatonQueenPvE, RookAutoturretPvE], null);
+        RookOverdrivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [QueenOverdrivePvE, RookOverdrivePvE], null);
+        WildfirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DetonatorPvE, WildfirePvE], null);
+        SpreadShotPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScattergunPvE, SpreadShotPvE], null);
+        HeatBlastPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlazingShotPvE, HeatBlastPvE], null);
+        GaussRoundPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DoubleCheckPvE, GaussRoundPvE], null);
+        RicochetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CheckmatePvE, RicochetPvE], null);
+        ChainSawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExcavatorPvE, ChainSawPvE], null);
+        BarrelStabilizerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullMetalFieldPvE, BarrelStabilizerPvE], null);
+        SlugShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SlugShotPvE, SplitShotPvE], this);
+        CleanShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CleanShotPvE, SlugShotPvE, SplitShotPvE], this);
+        HeatedSlugShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedSlugShotPvE, SplitShotPvE], this);
+        HeatedCleanShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeatedCleanShotPvE, SlugShotPvE, SplitShotPvE], this);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
