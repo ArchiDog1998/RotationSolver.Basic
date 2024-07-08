@@ -14,15 +14,15 @@ partial class DragoonRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
-    static partial void ModifyVorpalThrustPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.RaidenThrustPvE];
-    }
+    //static partial void ModifyVorpalThrustPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.RaidenThrustPvE];
+    //}
 
-    static partial void ModifyDisembowelPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.RaidenThrustPvE];
-    }
+    //static partial void ModifyDisembowelPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.RaidenThrustPvE];
+    //}
 
     static partial void ModifyFangAndClawPvE(ref ActionSetting setting)
     {
@@ -54,10 +54,10 @@ partial class DragoonRotation
         setting.StatusNeed = [StatusID.DiveReady];
     }
 
-    static partial void ModifySonicThrustPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.DraconianFuryPvE];
-    }
+    //static partial void ModifySonicThrustPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.DraconianFuryPvE];
+    //}
 
     static partial void ModifyNastrondPvE(ref ActionSetting setting)
     {

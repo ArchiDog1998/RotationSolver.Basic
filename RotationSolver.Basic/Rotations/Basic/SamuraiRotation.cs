@@ -47,15 +47,15 @@ partial class SamuraiRotation
     //    setting.ActionCheck = () => MeditationStacks == 3;
     //}
 
-    static partial void ModifyMangetsuPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.FugaPvE, ActionID.FukoPvE];
-    }
+    //static partial void ModifyMangetsuPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.FugaPvE, ActionID.FukoPvE];
+    //}
 
-    static partial void ModifyOkaPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.FugaPvE, ActionID.FukoPvE];
-    }
+    //static partial void ModifyOkaPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.FugaPvE, ActionID.FukoPvE];
+    //}
 
     static partial void ModifyOgiNamikiriPvE(ref ActionSetting setting)
     {

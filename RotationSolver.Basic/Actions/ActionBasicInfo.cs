@@ -320,15 +320,9 @@ public readonly struct ActionBasicInfo
             if (_action.Setting.ComboIdsNot.Contains(DataCenter.LastComboAction)) return false;
         }
 
-        var comboActions = (_action.Action.ActionCombo?.Row ?? 0) != 0
-            ? new ActionID[] { (ActionID)_action.Action.ActionCombo!.Row }
-            : [];
-
-        if (_action.Setting.ComboIds != null) comboActions = [.. comboActions, .. _action.Setting.ComboIds];
-
-        if (comboActions.Length > 0)
+        if ((_action.Action.ActionCombo?.Row ?? 0) != 0)
         {
-            if (comboActions.Contains(DataCenter.LastComboAction) || IsHighlighted)
+            if (IsHighlighted)
             {
                 if (DataCenter.ComboTime < DataCenter.WeaponRemain) return false;
             }

@@ -58,12 +58,6 @@ public class ActionSetting()
     public ActionID[]? ComboIdsNot { get; set; }
 
     /// <summary>
-    /// The additional combo ids.
-    /// </summary>
-    [Obsolete]
-    public ActionID[]? ComboIds { get; set; }
-
-    /// <summary>
     /// Status that this action provides.
     /// </summary>
     public StatusID[]? StatusProvide { get; set; } = null;

@@ -9,15 +9,15 @@ partial class MachinistRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
 
-    static partial void ModifySlugShotPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.HeatedSplitShotPvE];
-    }
+    //static partial void ModifySlugShotPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.HeatedSplitShotPvE];
+    //}
 
-    static partial void ModifyCleanShotPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.HeatedSlugShotPvE];
-    }
+    //static partial void ModifyCleanShotPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.HeatedSlugShotPvE];
+    //}
 
     static partial void ModifyHeatBlastPvE(ref ActionSetting setting)
     {

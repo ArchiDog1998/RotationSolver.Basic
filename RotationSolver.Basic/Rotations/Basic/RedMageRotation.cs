@@ -93,10 +93,10 @@ partial class RedMageRotation
         setting.ActionCheck = () => BlackMana >= 20 && WhiteMana >= 20;
     }
 
-    static partial void ModifyScorchPvE(ref ActionSetting setting)
-    {
-        setting.ComboIds = [ActionID.VerholyPvE];
-    }
+    //static partial void ModifyScorchPvE(ref ActionSetting setting)
+    //{
+    //    setting.ComboIds = [ActionID.VerholyPvE];
+    //}
 
     private protected sealed override IBaseAction Raise => VerraisePvE;
 
