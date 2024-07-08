@@ -23,6 +23,7 @@ internal class BaseActionSet(Func<IEnumerable<ICanUse>> getActions, ICustomRotat
 
     public bool CanUse(out IAction act, bool skipStatusProvideCheck = false, bool skipComboCheck = false, bool skipCastingCheck = false, bool usedUp = false, bool onLastAbility = false, bool skipClippingCheck = false, bool skipAoeCheck = false, byte gcdCountForAbility = 0)
     {
+        byte level = byte.MaxValue;
         foreach (var action in Actions)
         {
             if (!_actionReplace.TryGetValue(action, out var replacedAction))
@@ -35,10 +36,11 @@ internal class BaseActionSet(Func<IEnumerable<ICanUse>> getActions, ICustomRotat
                 ChosenAction = baseAction;
                 return true;
             }
-            if (IsReplace && act.EnoughLevel)
+            if (IsReplace && act.EnoughLevel && level < act.Level)
             {
                 break;
             }
+            level = act.Level;
         }
         ChosenAction = null;
         act = null!;
