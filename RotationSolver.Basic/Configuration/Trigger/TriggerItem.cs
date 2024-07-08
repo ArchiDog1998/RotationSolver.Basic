@@ -56,3 +56,13 @@ internal class MacroTriggerItem : BaseTriggerItem
     [UI("Macro")]
     public MacroAction MacroAction { get; set; } = new();
 }
+
+
+[Description("Notice Trigger")]
+internal class NoticeTriggerItem : BaseTriggerItem
+{
+    internal override ITerritoryAction TerritoryAction => NoticeAction;
+
+    [UI("Notice")]
+    public NoticeAction NoticeAction { get; set; } = new();
+}

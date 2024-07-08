@@ -328,7 +328,7 @@ public readonly struct ActionBasicInfo
 
         if (comboActions.Length > 0)
         {
-            if (comboActions.Contains(DataCenter.LastComboAction))
+            if (comboActions.Contains(DataCenter.LastComboAction) || IsHighlighted)
             {
                 if (DataCenter.ComboTime < DataCenter.WeaponRemain) return false;
             }
@@ -340,5 +340,3 @@ public readonly struct ActionBasicInfo
         return true;
     }
 }
-
-

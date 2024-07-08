@@ -207,10 +207,17 @@ public static class CombatData
     #endregion
 
     #region Others
+
     /// <summary>
-    /// Has Pet
+    /// Last Combo Action
     /// </summary>
-    [Description("Has Pet")]
+    [ConditionIgnore]
+    public static ActionID LastComboAction => DataCenter.LastComboAction;
+
+   /// <summary>
+   /// Has Pet
+   /// </summary>
+   [Description("Has Pet")]
     public static bool HasPet => DataCenter.HasPet;
 
     /// <summary>

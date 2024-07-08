@@ -60,6 +60,7 @@ public class ActionSetting()
     /// <summary>
     /// The additional combo ids.
     /// </summary>
+    [Obsolete]
     public ActionID[]? ComboIds { get; set; }
 
     /// <summary>

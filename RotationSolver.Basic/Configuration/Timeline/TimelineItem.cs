@@ -61,3 +61,12 @@ internal class MacroTimelineItem : BaseTimelineItem
     [UI("Macro")]
     public MacroAction MacroAction { get; set; } = new();
 }
+
+[Description("Notice Timeline")]
+internal class NoticeTimelineItem : BaseTimelineItem
+{
+    internal override ITerritoryAction TerritoryAction => NoticeAction;
+
+    [UI("Notice")]
+    public NoticeAction NoticeAction { get; set; } = new();
+}
