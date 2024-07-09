@@ -1228,33 +1228,33 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DragoonRotation()
     {
-        GeirskogulPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NastrondPvE, GeirskogulPvE], null);
-        JumpPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MirageDivePvE, HighJumpPvE, JumpPvE], null);
-        TrueThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE], null);
-        DoomSpikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE], null);
-        FullThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, FullThrustPvE], null);
-        ChaosThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, ChaosThrustPvE], null);
-        DragonfireDivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiseOfTheDragonPvE, DragonfireDivePvE], null);
-        VorpalThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, VorpalThrustPvE], null);
-        DisembowelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, DisembowelPvE], null);
-        StardiverPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarcrossPvE, StardiverPvE], null);
-        FangAndClawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE], null);
-        WheelingThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, WheelingThrustPvE], null);
-        VorpalThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VorpalThrustPvE, TrueThrustPvE], this);
-        FullThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
-        DisembowelPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisembowelPvE, TrueThrustPvE], this);
-        ChaosThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaosThrustPvE, DisembowelPvE, TrueThrustPvE], this);
-        FangAndClawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvE, FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
-        WheelingThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvE, ChaosThrustPvE, DisembowelPvE, TrueThrustPvE], this);
-        SonicThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicThrustPvE, DoomSpikePvE], this);
-        CoerthanTormentPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CoerthanTormentPvE, SonicThrustPvE, DoomSpikePvE], this);
-        HeavensThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
-        ChaoticSpringPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, DisembowelPvE, TrueThrustPvE], this);
-        FangAndClawPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvP, RaidenThrustPvP], this);
-        WheelingThrustPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvP, FangAndClawPvP, RaidenThrustPvP], this);
-        DrakesbanePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE, FullThrustPvE, VorpalThrustPvE, TrueThrustPvE], this);
-        LanceBarragePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, TrueThrustPvE], this);
-        SpiralBlowPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, TrueThrustPvE], this);
+        GeirskogulPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NastrondPvE, GeirskogulPvE], true);
+        JumpPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MirageDivePvE, HighJumpPvE, JumpPvE], true);
+        TrueThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RaidenThrustPvE, TrueThrustPvE], true);
+        DoomSpikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DraconianFuryPvE, DoomSpikePvE], true);
+        FullThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeavensThrustPvE, FullThrustPvE], true);
+        ChaosThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaoticSpringPvE, ChaosThrustPvE], true);
+        DragonfireDivePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiseOfTheDragonPvE, DragonfireDivePvE], true);
+        VorpalThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LanceBarragePvE, VorpalThrustPvE], true);
+        DisembowelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SpiralBlowPvE, DisembowelPvE], true);
+        StardiverPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarcrossPvE, StardiverPvE], true);
+        FangAndClawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, FangAndClawPvE], true);
+        WheelingThrustPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DrakesbanePvE, WheelingThrustPvE], true);
+        VorpalThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        FullThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullThrustPvEReplace, VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        DisembowelPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisembowelPvEReplace, TrueThrustPvEReplace], false);
+        ChaosThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaosThrustPvEReplace, DisembowelPvEReplace, TrueThrustPvEReplace], false);
+        FangAndClawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvEReplace, FullThrustPvEReplace, VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        WheelingThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvEReplace, ChaosThrustPvEReplace, DisembowelPvEReplace, TrueThrustPvEReplace], false);
+        SonicThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicThrustPvE, DoomSpikePvEReplace], false);
+        CoerthanTormentPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CoerthanTormentPvE, SonicThrustPvE, DoomSpikePvEReplace], false);
+        HeavensThrustPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FullThrustPvEReplace, VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        ChaoticSpringPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChaosThrustPvEReplace, DisembowelPvEReplace, TrueThrustPvEReplace], false);
+        FangAndClawPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvP, RaidenThrustPvP], false);
+        WheelingThrustPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WheelingThrustPvP, FangAndClawPvP, RaidenThrustPvP], false);
+        DrakesbanePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangAndClawPvEReplace, FangAndClawPvEReplace, FullThrustPvEReplace, VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        LanceBarragePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VorpalThrustPvEReplace, TrueThrustPvEReplace], false);
+        SpiralBlowPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisembowelPvEReplace, TrueThrustPvEReplace], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

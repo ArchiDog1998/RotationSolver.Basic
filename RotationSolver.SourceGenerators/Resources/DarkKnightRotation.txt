@@ -1146,22 +1146,22 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DarkKnightRotation()
     {
-        GritPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseGritPvE, GritPvE], null);
-        FloodOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FloodOfShadowPvE, FloodOfDarknessPvE], null);
-        EdgeOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EdgeOfShadowPvE, EdgeOfDarknessPvE], null);
-        SaltedEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SaltAndDarknessPvE, SaltedEarthPvE], null);
-        BloodWeaponPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeliriumPvE, BloodWeaponPvE], null);
-        ShadowWallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowedVigilPvE, ShadowWallPvE], null);
-        BloodspillerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, ComeuppancePvE, ScarletDeliriumPvE, BloodspillerPvE], null);
-        QuietusPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImpalementPvE, QuietusPvE], null);
-        LivingShadowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisesteemPvE, LivingShadowPvE], null);
-        SyphonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SyphonStrikePvE, HardSlashPvE], this);
-        SouleaterPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouleaterPvE, SyphonStrikePvE, HardSlashPvE], this);
-        StalwartSoulPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StalwartSoulPvE, UnleashPvE], this);
-        SyphonStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SyphonStrikePvP, HardSlashPvP], this);
-        SouleaterPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouleaterPvP, SyphonStrikePvP, HardSlashPvP], this);
-        ComeuppancePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ComeuppancePvE, ScarletDeliriumPvE], this);
-        TorcleaverPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, ComeuppancePvE, ScarletDeliriumPvE], this);
+        GritPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseGritPvE, GritPvE], true);
+        FloodOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FloodOfShadowPvE, FloodOfDarknessPvE], true);
+        EdgeOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EdgeOfShadowPvE, EdgeOfDarknessPvE], true);
+        SaltedEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SaltAndDarknessPvE, SaltedEarthPvE], true);
+        BloodWeaponPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeliriumPvE, BloodWeaponPvE], true);
+        ShadowWallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowedVigilPvE, ShadowWallPvE], true);
+        BloodspillerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, ComeuppancePvE, ScarletDeliriumPvE, BloodspillerPvE], true);
+        QuietusPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImpalementPvE, QuietusPvE], true);
+        LivingShadowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisesteemPvE, LivingShadowPvE], true);
+        SyphonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SyphonStrikePvE, HardSlashPvE], false);
+        SouleaterPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouleaterPvE, SyphonStrikePvE, HardSlashPvE], false);
+        StalwartSoulPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StalwartSoulPvE, UnleashPvE], false);
+        SyphonStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SyphonStrikePvP, HardSlashPvP], false);
+        SouleaterPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouleaterPvP, SyphonStrikePvP, HardSlashPvP], false);
+        ComeuppancePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodspillerPvEReplace, BloodspillerPvEReplace], false);
+        TorcleaverPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodspillerPvEReplace, BloodspillerPvEReplace, BloodspillerPvEReplace], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

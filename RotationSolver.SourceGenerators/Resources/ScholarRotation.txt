@@ -1376,14 +1376,14 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected ScholarRotation()
     {
-        BioPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BiolysisPvE, BioIiPvE, BioPvE], null);
-        AetherpactPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DissolveUnionPvE, AetherpactPvE], null);
-        ArtOfWarPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArtOfWarIiPvE, ArtOfWarPvE], null);
-        SummonSeraphPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConsolationPvE, SummonSeraphPvE], null);
-        ChainStratagemPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BanefulImpactionPvE, ChainStratagemPvE], null);
-        SuccorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE], null);
-        EmergencyTacticsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE], null);
-        AdloquiumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE], null);
+        BioPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BiolysisPvE, BioIiPvE, BioPvE], true);
+        AetherpactPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DissolveUnionPvE, AetherpactPvE], true);
+        ArtOfWarPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArtOfWarIiPvE, ArtOfWarPvE], true);
+        SummonSeraphPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConsolationPvE, SummonSeraphPvE], true);
+        ChainStratagemPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BanefulImpactionPvE, ChainStratagemPvE], true);
+        SuccorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE], true);
+        EmergencyTacticsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE], true);
+        AdloquiumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE], true);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

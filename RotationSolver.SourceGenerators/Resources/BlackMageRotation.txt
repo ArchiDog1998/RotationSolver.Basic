@@ -1209,12 +1209,12 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected BlackMageRotation()
     {
-        FirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, FirePvE], null);
-        FireIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighFireIiPvE, FireIiPvE], null);
-        BlizzardIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighBlizzardIiPvE, BlizzardIiPvE], null);
-        ThunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderPvE, ThunderIiiPvE, ThunderPvE], null);
-        ThunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderIiPvE, ThunderIvPvE, ThunderIiPvE], null);
-        LeyLinesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetracePvE, LeyLinesPvE], null);
+        FirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, FirePvE], true);
+        FireIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighFireIiPvE, FireIiPvE], true);
+        BlizzardIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighBlizzardIiPvE, BlizzardIiPvE], true);
+        ThunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderPvE, ThunderIiiPvE, ThunderPvE], true);
+        ThunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderIiPvE, ThunderIvPvE, ThunderIiPvE], true);
+        LeyLinesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetracePvE, LeyLinesPvE], true);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

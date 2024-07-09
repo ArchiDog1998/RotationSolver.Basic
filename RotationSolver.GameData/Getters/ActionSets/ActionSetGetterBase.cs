@@ -4,10 +4,10 @@ using RotationSolver.GameData.Getters.Actions;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
-internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter, bool isReplace)
+internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
     : ExcelRowGetter<T, PropertyDeclarationSyntax>(gameData) where T : ExcelRow
 {
-    public virtual bool ReplaceAction => false;
+    public virtual ReplaceActionGetter? ReplaceAction => null;
 
     protected override bool AddToList(T item)
     {
@@ -22,7 +22,7 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
             }
         }
 
-        if (!isReplace)
+        if (ReplaceAction != null)
         {
             if (!Util.Enqueue(actions)) return false;
         }

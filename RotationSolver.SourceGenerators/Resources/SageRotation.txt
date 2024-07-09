@@ -1165,12 +1165,12 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SageRotation()
     {
-        DiagnosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDiagnosisPvE, DiagnosisPvE], null);
-        PrognosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianPrognosisIiPvE, EukrasianPrognosisPvE, PrognosisPvE], null);
-        PhlegmaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhlegmaIiiPvE, PhlegmaIiPvE, PhlegmaPvE], null);
-        DyskrasiaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDyskrasiaPvE, DyskrasiaIiPvE, DyskrasiaPvE], null);
-        ToxikonPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ToxikonIiPvE, ToxikonPvE], null);
-        PhysisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhysisIiPvE, PhysisPvE], null);
+        DiagnosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDiagnosisPvE, DiagnosisPvE], true);
+        PrognosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianPrognosisIiPvE, EukrasianPrognosisPvE, PrognosisPvE], true);
+        PhlegmaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhlegmaIiiPvE, PhlegmaIiPvE, PhlegmaPvE], true);
+        DyskrasiaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDyskrasiaPvE, DyskrasiaIiPvE, DyskrasiaPvE], true);
+        ToxikonPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ToxikonIiPvE, ToxikonPvE], true);
+        PhysisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhysisIiPvE, PhysisPvE], true);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

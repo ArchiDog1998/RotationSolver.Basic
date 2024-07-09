@@ -1312,21 +1312,21 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected ReaperRotation()
     {
-        SoulsowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HarvestMoonPvE, SoulsowPvE], null);
-        BloodStalkPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresSlicePvE, UnveiledGallowsPvE, UnveiledGibbetPvE, BloodStalkPvE], null);
-        GrimSwathePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresScythePvE, GrimSwathePvE], null);
-        HellsIngressPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsIngressPvE], null);
-        HellsEgressPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsEgressPvE], null);
-        GibbetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VoidReapingPvE, ExecutionersGibbetPvE, GibbetPvE], null);
-        GallowsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrossReapingPvE, ExecutionersGallowsPvE, GallowsPvE], null);
-        GuillotinePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GrimReapingPvE, ExecutionersGuillotinePvE, GuillotinePvE], null);
-        GluttonyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SacrificiumPvE, GluttonyPvE], null);
-        CommunioPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PerfectioPvE, CommunioPvE], null);
-        WaxingSlicePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaxingSlicePvE, SlicePvE], this);
-        InfernalSlicePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvE, WaxingSlicePvE, SlicePvE], this);
-        NightmareScythePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NightmareScythePvE, SpinningScythePvE], this);
-        WaxingSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaxingSlicePvP, SlicePvP], this);
-        InfernalSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvP, WaxingSlicePvP, SlicePvP], this);
+        SoulsowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HarvestMoonPvE, SoulsowPvE], true);
+        BloodStalkPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresSlicePvE, UnveiledGallowsPvE, UnveiledGibbetPvE, BloodStalkPvE], true);
+        GrimSwathePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LemuresScythePvE, GrimSwathePvE], true);
+        HellsIngressPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsIngressPvE], true);
+        HellsEgressPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RegressPvE, HellsEgressPvE], true);
+        GibbetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VoidReapingPvE, ExecutionersGibbetPvE, GibbetPvE], true);
+        GallowsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrossReapingPvE, ExecutionersGallowsPvE, GallowsPvE], true);
+        GuillotinePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GrimReapingPvE, ExecutionersGuillotinePvE, GuillotinePvE], true);
+        GluttonyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SacrificiumPvE, GluttonyPvE], true);
+        CommunioPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PerfectioPvE, CommunioPvE], true);
+        WaxingSlicePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaxingSlicePvE, SlicePvE], false);
+        InfernalSlicePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvE, WaxingSlicePvE, SlicePvE], false);
+        NightmareScythePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NightmareScythePvE, SpinningScythePvE], false);
+        WaxingSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaxingSlicePvP, SlicePvP], false);
+        InfernalSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvP, WaxingSlicePvP, SlicePvP], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

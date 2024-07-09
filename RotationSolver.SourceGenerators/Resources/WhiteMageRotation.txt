@@ -1079,12 +1079,12 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected WhiteMageRotation()
     {
-        AeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DiaPvE, AeroIiPvE, AeroPvE], null);
-        HolyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HolyIiiPvE, HolyPvE], null);
-        LiturgyOfTheBellPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LiturgyOfTheBellPvE_28509, LiturgyOfTheBellPvE], null);
-        PresenceOfMindPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GlareIvPvE, PresenceOfMindPvE], null);
-        MedicaIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MedicaIiiPvE, MedicaIiPvE], null);
-        TemperancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DivineCaressPvE, TemperancePvE], null);
+        AeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DiaPvE, AeroIiPvE, AeroPvE], true);
+        HolyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HolyIiiPvE, HolyPvE], true);
+        LiturgyOfTheBellPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LiturgyOfTheBellPvE_28509, LiturgyOfTheBellPvE], true);
+        PresenceOfMindPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GlareIvPvE, PresenceOfMindPvE], true);
+        MedicaIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MedicaIiiPvE, MedicaIiPvE], true);
+        TemperancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DivineCaressPvE, TemperancePvE], true);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

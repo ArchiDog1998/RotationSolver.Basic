@@ -1536,29 +1536,29 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected RedMageRotation()
     {
-        RipostePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvE, RipostePvE], null);
-        ZwerchhauPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, ZwerchhauPvE], null);
-        RedoublementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, RedoublementPvE], null);
-        MoulinetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE, MoulinetPvE], null);
-        ReprisePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedReprisePvE, ReprisePvE], null);
-        VerthunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiiPvE, VerthunderPvE], null);
-        VeraeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE], null);
-        VerthunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE], null);
-        VeraeroIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE], null);
-        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], null);
-        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], null);
-        ZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvE, RipostePvE], this);
-        RedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RedoublementPvE, ZwerchhauPvE, RipostePvE], this);
-        EnchantedZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, RipostePvE], this);
-        EnchantedRedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, ZwerchhauPvE, RipostePvE], this);
-        ScorchPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScorchPvE, VerflarePvE], this);
-        ResolutionPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResolutionPvE, ScorchPvE, VerflarePvE], this);
-        EnchantedZwerchhauPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
-        EnchantedRedoublementPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP, EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
-        EnchantedZwerchhauPvP_29693Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP_29693, EnchantedRipostePvP], this);
-        EnchantedRedoublementPvP_29694Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP_29694, EnchantedZwerchhauPvP, EnchantedRipostePvP], this);
-        EnchantedMoulinetDeuxPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE], this);
-        EnchantedMoulinetTroisPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE], this);
+        RipostePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvE, RipostePvE], true);
+        ZwerchhauPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvE, ZwerchhauPvE], true);
+        RedoublementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvE, RedoublementPvE], true);
+        MoulinetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedMoulinetTroisPvE, EnchantedMoulinetDeuxPvE, EnchantedMoulinetPvE, MoulinetPvE], true);
+        ReprisePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedReprisePvE, ReprisePvE], true);
+        VerthunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiiPvE, VerthunderPvE], true);
+        VeraeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE], true);
+        VerthunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE], true);
+        VeraeroIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE], true);
+        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], true);
+        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], true);
+        ZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvEReplace, RipostePvEReplace], false);
+        RedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RedoublementPvEReplace, ZwerchhauPvEReplace, RipostePvEReplace], false);
+        EnchantedZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvEReplace, RipostePvEReplace], false);
+        EnchantedRedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RedoublementPvEReplace, ZwerchhauPvEReplace, RipostePvEReplace], false);
+        ScorchPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScorchPvE, VerthunderPvEReplace], false);
+        ResolutionPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResolutionPvE, ScorchPvE, VerthunderPvEReplace], false);
+        EnchantedZwerchhauPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP, EnchantedRipostePvP], false);
+        EnchantedRedoublementPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP, EnchantedZwerchhauPvP, EnchantedRipostePvP], false);
+        EnchantedZwerchhauPvP_29693Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP_29693, EnchantedRipostePvP], false);
+        EnchantedRedoublementPvP_29694Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP_29694, EnchantedZwerchhauPvP, EnchantedRipostePvP], false);
+        EnchantedMoulinetDeuxPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MoulinetPvEReplace, MoulinetPvEReplace], false);
+        EnchantedMoulinetTroisPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MoulinetPvEReplace, MoulinetPvEReplace, MoulinetPvEReplace], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

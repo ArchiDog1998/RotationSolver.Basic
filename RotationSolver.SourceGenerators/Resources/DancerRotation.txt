@@ -1388,21 +1388,21 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DancerRotation()
     {
-        CascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, CascadePvE], null);
-        FountainPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, FountainPvE], null);
-        ReverseCascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, ReverseCascadePvE], null);
-        FountainfallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, FountainfallPvE], null);
-        WindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, WindmillPvE], null);
-        BladeshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, BladeshowerPvE], null);
-        RisingWindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, RisingWindmillPvE], null);
-        BloodshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, BloodshowerPvE], null);
-        ClosedPositionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE], null);
-        ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE], null);
-        SaberDancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE], null);
-        FountainPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvE, CascadePvE], this);
-        BladeshowerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeshowerPvE, WindmillPvE], this);
-        FountainPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvP, CascadePvP], this);
-        FountainfallPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainfallPvP, CascadePvP], this);
+        CascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, CascadePvE], true);
+        FountainPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, FountainPvE], true);
+        ReverseCascadePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, ReverseCascadePvE], true);
+        FountainfallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, FountainfallPvE], true);
+        WindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmboitePvE, WindmillPvE], true);
+        BladeshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, BladeshowerPvE], true);
+        RisingWindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, RisingWindmillPvE], true);
+        BloodshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, BloodshowerPvE], true);
+        ClosedPositionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE], true);
+        ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE], true);
+        SaberDancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE], true);
+        FountainPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvEReplace, CascadePvEReplace], false);
+        BladeshowerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeshowerPvEReplace, WindmillPvEReplace], false);
+        FountainPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvP, CascadePvP], false);
+        FountainfallPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainfallPvP, CascadePvP], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

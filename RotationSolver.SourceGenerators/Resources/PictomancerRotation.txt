@@ -1624,24 +1624,24 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected PictomancerRotation()
     {
-        FireInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterInBluePvE, AeroInGreenPvE, FireInRedPvE], null);
-        BlizzardInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, StoneInYellowPvE, BlizzardInCyanPvE], null);
-        FireIiInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, AeroIiInGreenPvE, FireIiInRedPvE], null);
-        BlizzardIiInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, StoneIiInYellowPvE, BlizzardIiInCyanPvE], null);
-        WeaponMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], null);
-        LandscapeMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], null);
-        SteelMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], null);
-        ScenicMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarryMusePvE, ScenicMusePvE], null);
-        MogOfTheAgesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], null);
-        HammerStampPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PolishingHammerPvE, HammerBrushPvE, HammerStampPvE], null);
-        TemperaCoatPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvE, TemperaCoatPvE], null);
-        HolyInWhitePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CometInBlackPvP, HolyInWhitePvP], null);
-        TemperaCoatPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvP, TemperaCoatPvP], null);
-        SubtractivePalettePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseSubtractivePalettePvP, SubtractivePalettePvP], null);
-        AdventOfChocobastionPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarPrismPvP, AdventOfChocobastionPvP], null);
-        MogOfTheAgesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvP, MogOfTheAgesPvP], null);
-        HammerBrushPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerBrushPvE, HammerStampPvE], this);
-        PolishingHammerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PolishingHammerPvE, HammerBrushPvE, HammerStampPvE], this);
+        FireInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterInBluePvE, AeroInGreenPvE, FireInRedPvE], true);
+        BlizzardInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, StoneInYellowPvE, BlizzardInCyanPvE], true);
+        FireIiInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, AeroIiInGreenPvE, FireIiInRedPvE], true);
+        BlizzardIiInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, StoneIiInYellowPvE, BlizzardIiInCyanPvE], true);
+        WeaponMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], true);
+        LandscapeMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], true);
+        SteelMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], true);
+        ScenicMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarryMusePvE, ScenicMusePvE], true);
+        MogOfTheAgesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], true);
+        HammerStampPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PolishingHammerPvE, HammerBrushPvE, HammerStampPvE], true);
+        TemperaCoatPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvE, TemperaCoatPvE], true);
+        HolyInWhitePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CometInBlackPvP, HolyInWhitePvP], true);
+        TemperaCoatPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvP, TemperaCoatPvP], true);
+        SubtractivePalettePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseSubtractivePalettePvP, SubtractivePalettePvP], true);
+        AdventOfChocobastionPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarPrismPvP, AdventOfChocobastionPvP], true);
+        MogOfTheAgesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvP, MogOfTheAgesPvP], true);
+        HammerBrushPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace], false);
+        PolishingHammerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace, HammerStampPvEReplace], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

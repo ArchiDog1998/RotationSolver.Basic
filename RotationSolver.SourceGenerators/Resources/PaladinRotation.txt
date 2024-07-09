@@ -1296,26 +1296,26 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected PaladinRotation()
     {
-        IronWillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseIronWillPvE, IronWillPvE], null);
-        RageOfHalonePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvE, RageOfHalonePvE], null);
-        SheltronPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HolySheltronPvE, SheltronPvE], null);
-        SpiritsWithinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExpiacionPvE, SpiritsWithinPvE], null);
-        ConfiteorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvE, BladeOfTruthPvE, BladeOfFaithPvE, ConfiteorPvE], null);
-        AtonementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SepulchrePvE, SupplicationPvE, AtonementPvE], null);
-        SentinelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GuardianPvE, SentinelPvE], null);
-        RequiescatPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfHonorPvE, ImperatorPvE, RequiescatPvE], null);
-        FightOrFlightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GoringBladePvE, FightOrFlightPvE], null);
-        RiotBladePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiotBladePvE, FastBladePvE], this);
-        RageOfHalonePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RageOfHalonePvE, RiotBladePvE, FastBladePvE], this);
-        RoyalAuthorityPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvE, RiotBladePvE, FastBladePvE], this);
-        ProminencePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ProminencePvE, TotalEclipsePvE], this);
-        BladeOfFaithPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfFaithPvE, ConfiteorPvE], this);
-        BladeOfTruthPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfTruthPvE, BladeOfFaithPvE, ConfiteorPvE], this);
-        BladeOfValorPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvE, BladeOfTruthPvE, BladeOfFaithPvE, ConfiteorPvE], this);
-        RiotBladePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiotBladePvP, FastBladePvP], this);
-        RoyalAuthorityPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvP, RiotBladePvP, FastBladePvP], this);
-        BladeOfTruthPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfTruthPvP, BladeOfFaithPvP], this);
-        BladeOfValorPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvP, BladeOfTruthPvP, BladeOfFaithPvP], this);
+        IronWillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseIronWillPvE, IronWillPvE], true);
+        RageOfHalonePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvE, RageOfHalonePvE], true);
+        SheltronPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HolySheltronPvE, SheltronPvE], true);
+        SpiritsWithinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ExpiacionPvE, SpiritsWithinPvE], true);
+        ConfiteorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvE, BladeOfTruthPvE, BladeOfFaithPvE, ConfiteorPvE], true);
+        AtonementPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SepulchrePvE, SupplicationPvE, AtonementPvE], true);
+        SentinelPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GuardianPvE, SentinelPvE], true);
+        RequiescatPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfHonorPvE, ImperatorPvE, RequiescatPvE], true);
+        FightOrFlightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GoringBladePvE, FightOrFlightPvE], true);
+        RiotBladePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiotBladePvE, FastBladePvE], false);
+        RageOfHalonePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RageOfHalonePvEReplace, RiotBladePvE, FastBladePvE], false);
+        RoyalAuthorityPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RageOfHalonePvEReplace, RiotBladePvE, FastBladePvE], false);
+        ProminencePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ProminencePvE, TotalEclipsePvE], false);
+        BladeOfFaithPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConfiteorPvEReplace, ConfiteorPvEReplace], false);
+        BladeOfTruthPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConfiteorPvEReplace, ConfiteorPvEReplace, ConfiteorPvEReplace], false);
+        BladeOfValorPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ConfiteorPvEReplace, ConfiteorPvEReplace, ConfiteorPvEReplace, ConfiteorPvEReplace], false);
+        RiotBladePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RiotBladePvP, FastBladePvP], false);
+        RoyalAuthorityPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RoyalAuthorityPvP, RiotBladePvP, FastBladePvP], false);
+        BladeOfTruthPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfTruthPvP, BladeOfFaithPvP], false);
+        BladeOfValorPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeOfValorPvP, BladeOfTruthPvP, BladeOfFaithPvP], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

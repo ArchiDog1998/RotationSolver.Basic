@@ -5,11 +5,8 @@ using Action = Lumina.Excel.GeneratedSheets.Action;
 namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
-    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter, true)
+    : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter)
 {
-    public override bool ReplaceAction => true;
-
-
     protected override string ToName(ReplaceAction item)
     {
         var actions = GetActions(item);

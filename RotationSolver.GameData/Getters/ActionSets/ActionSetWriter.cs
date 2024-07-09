@@ -10,9 +10,9 @@ namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ActionSetWriter(string name)
 {
-    public ExpressionStatementSyntax GetInit(Action[] actions, ActionSingleRotationGetter actionGetter, bool isReplace)
+    public ExpressionStatementSyntax GetInit(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
     {
-        var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(actionGetter.Items[i])));
+        var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(GetName(i, actionGetter, replace))));
 
         List<SyntaxNodeOrToken> items = [];
         foreach (var element in expElements)
@@ -41,10 +41,26 @@ internal class ActionSetWriter(string name)
                                                         SeparatedList<CollectionElementSyntax>(
                                                                 items)))),
                                              Token(SyntaxKind.CommaToken),
-                                             isReplace ? Argument(LiteralExpression(SyntaxKind.NullLiteralExpression)): Argument(ThisExpression())
+                                            Argument(LiteralExpression(replace == null ? SyntaxKind.TrueLiteralExpression : SyntaxKind.FalseLiteralExpression))
                                             })))));
 
         return init;
+    }
+
+    private static string GetName(Action action, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
+    {
+        if (replace != null)
+        {
+            foreach ((var key, var value) in replace.Items)
+            {
+                if (replace.GetActions(key).Contains(action))
+                {
+                    return value;
+                }
+            }
+        }
+
+        return actionGetter.Items[action];
     }
 
     public PropertyDeclarationSyntax GetDeclaration(string comment)

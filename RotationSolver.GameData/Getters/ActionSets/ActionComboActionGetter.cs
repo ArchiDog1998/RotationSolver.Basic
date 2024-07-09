@@ -4,7 +4,7 @@ using RotationSolver.GameData.Getters.Actions;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.GameData.Getters.ActionSets;
-internal class ActionComboActionGetter(ActionSingleRotationGetter actionGetter)
+internal class ActionComboActionGetter(ActionSingleRotationGetter actionGetter, ReplaceActionGetter replace)
 {
     public int Count { get; private set; } = 0;
     public IEnumerable<ExpressionStatementSyntax> GetInits()
@@ -16,7 +16,7 @@ internal class ActionComboActionGetter(ActionSingleRotationGetter actionGetter)
 
             var writer = new ActionSetWriter(actionGetter.Items[action] + "Combo");
 
-            yield return writer.GetInit(comboActions, actionGetter, false);
+            yield return writer.GetInit(comboActions, actionGetter, replace);
         }
     }
 
