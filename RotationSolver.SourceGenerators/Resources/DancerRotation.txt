@@ -1173,77 +1173,66 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     public static global::RotationSolver.Basic.Traits.IBaseTrait DynamicDancerTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(662U);
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="CascadePvE"/> -> <seealso cref="EmboitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet CascadePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="FountainPvE"/> -> <seealso cref="EntrechatPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FountainPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ReverseCascadePvE"/> -> <seealso cref="JetePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReverseCascadePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="FountainfallPvE"/> -> <seealso cref="PirouettePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FountainfallPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="WindmillPvE"/> -> <seealso cref="EmboitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet WindmillPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BladeshowerPvE"/> -> <seealso cref="EntrechatPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BladeshowerPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RisingWindmillPvE"/> -> <seealso cref="JetePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RisingWindmillPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BloodshowerPvE"/> -> <seealso cref="PirouettePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodshowerPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ClosedPositionPvE"/> -> <seealso cref="EndingPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ClosedPositionPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ImprovisationPvE"/> -> <seealso cref="ImprovisedFinishPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ImprovisationPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SaberDancePvE"/> -> <seealso cref="DanceOfTheDawnPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

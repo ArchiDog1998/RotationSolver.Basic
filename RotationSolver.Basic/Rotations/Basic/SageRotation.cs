@@ -11,6 +11,16 @@ partial class SageRotation
 
     private protected sealed override IBaseAction Raise => EgeiroPvE;
 
+    /// <summary>
+    /// <see cref="EukrasianDosisPvE"/> -> <see cref="EukrasianDosisIiPvE"/> -><see cref="EukrasianDosisIiiPvE"/>
+    /// </summary>
+    public IBaseActionSet EukrasianDosisPvEReplace { get; private set; }
+    internal override void Init()
+    {
+        EukrasianDosisPvEReplace = new BaseActionSet(() => [EukrasianDosisIiiPvE, EukrasianDosisIiPvE, EukrasianDosisPvE], true);
+        base.Init();
+    }
+
     static partial void ModifyIcarusPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;

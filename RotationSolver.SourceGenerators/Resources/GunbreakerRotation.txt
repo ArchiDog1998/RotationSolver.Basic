@@ -1399,56 +1399,48 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(667U);
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RoyalGuardPvE"/> -> <seealso cref="ReleaseRoyalGuardPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RoyalGuardPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="DangerZonePvE"/> -> <seealso cref="BlastingZonePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DangerZonePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="HeartOfStonePvE"/> -> <seealso cref="HeartOfCorundumPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HeartOfStonePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="GnashingFangPvE"/> -> <seealso cref="SavageClawPvE"/> -> <seealso cref="WickedTalonPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GnashingFangPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="NebulaPvE"/> -> <seealso cref="GreatNebulaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet NebulaPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BloodfestPvE"/> -> <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/> -> <seealso cref="LionHeartPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodfestPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/> -> <seealso cref="LionHeartPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReignOfBeastsPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="NoMercyPvE"/> -> <seealso cref="SonicBreakPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

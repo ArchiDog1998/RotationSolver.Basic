@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/sage"><strong>Sage</strong></see>
 /// <br>Number of Actions: 51</br>
-/// <br>Number of Replace Actions: 6</br>
+/// <br>Number of Replace Actions: 7</br>
 /// <br>Number of Action Combos: 0</br>
 /// <br>Number of Traits: 17</br>
 /// </summary>
@@ -1019,42 +1019,42 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(669U);
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
+/// <seealso cref="DosisPvE"/> -> <seealso cref="DosisIiPvE"/> -> <seealso cref="DosisIiiPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DosisPvEReplace { get; }
+
+    /// <summary>
 /// <seealso cref="DiagnosisPvE"/> -> <seealso cref="EukrasianDiagnosisPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DiagnosisPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="PrognosisPvE"/> -> <seealso cref="EukrasianPrognosisPvE"/> -> <seealso cref="EukrasianPrognosisIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PrognosisPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="PhlegmaPvE"/> -> <seealso cref="PhlegmaIiPvE"/> -> <seealso cref="PhlegmaIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PhlegmaPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="DyskrasiaPvE"/> -> <seealso cref="DyskrasiaIiPvE"/> -> <seealso cref="EukrasianDyskrasiaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DyskrasiaPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ToxikonPvE"/> -> <seealso cref="ToxikonIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ToxikonPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="PhysisPvE"/> -> <seealso cref="PhysisIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1165,6 +1165,7 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SageRotation()
     {
+        DosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DosisIiiPvE, DosisIiPvE, DosisPvE], true);
         DiagnosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianDiagnosisPvE, DiagnosisPvE], true);
         PrognosisPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EukrasianPrognosisIiPvE, EukrasianPrognosisPvE, PrognosisPvE], true);
         PhlegmaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhlegmaIiiPvE, PhlegmaIiPvE, PhlegmaPvE], true);

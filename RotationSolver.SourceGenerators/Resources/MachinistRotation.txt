@@ -1046,91 +1046,78 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait MarksmansMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(658U);
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SplitShotPvE"/> -> <seealso cref="HeatedSplitShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SplitShotPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SlugShotPvE"/> -> <seealso cref="HeatedSlugShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SlugShotPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="CleanShotPvE"/> -> <seealso cref="HeatedCleanShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet CleanShotPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="HotShotPvE"/> -> <seealso cref="AirAnchorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HotShotPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RookAutoturretPvE"/> -> <seealso cref="AutomatonQueenPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RookAutoturretPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RookOverdrivePvE"/> -> <seealso cref="QueenOverdrivePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RookOverdrivePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="WildfirePvE"/> -> <seealso cref="DetonatorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet WildfirePvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="SpreadShotPvE"/> -> <seealso cref="ScattergunPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SpreadShotPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="HeatBlastPvE"/> -> <seealso cref="BlazingShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HeatBlastPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="GaussRoundPvE"/> -> <seealso cref="DoubleCheckPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GaussRoundPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="RicochetPvE"/> -> <seealso cref="CheckmatePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RicochetPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="ChainSawPvE"/> -> <seealso cref="ExcavatorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ChainSawPvEReplace { get; }
 
     /// <summary>
-/// <see cref="Lumina.Excel.GeneratedSheets.ReplaceAction"/>
 /// <seealso cref="BarrelStabilizerPvE"/> -> <seealso cref="FullMetalFieldPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

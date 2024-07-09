@@ -191,10 +191,7 @@ partial class CustomRotation : ICustomRotation
     /// </summary>
     public virtual void OnTerritoryChanged() { }
 
-    /// <summary>
-    /// On this class is created.
-    /// </summary>
-    public virtual void Init() { }
+    internal virtual void Init() { }
 
     /// <inheritdoc/>
     public void Dispose()

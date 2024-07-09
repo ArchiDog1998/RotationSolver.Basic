@@ -101,7 +101,7 @@ partial class NinjaRotation
     }
 
     /// <inheritdoc/>
-    public override void Init()
+    internal override void Init()
     {
         FumaShurikenPvE.Setting.Ninjutsu = [TenPvE];
         KatonPvE.Setting.Ninjutsu = [ChiPvE, TenPvE];

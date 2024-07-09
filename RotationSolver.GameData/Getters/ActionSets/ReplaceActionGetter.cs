@@ -10,7 +10,10 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     private static readonly List<Action> _sayedActions = [];
     private static readonly Dictionary<uint, uint[]> _replaceActions = new()
     {
-        {119, [127, 3568, 7431, 16533, 25859] }, //WHM Stone.
+        { 119, [127, 3568, 7431, 16533, 25859] }, //WHM Stone.
+        { 17869, [3584, 7435, 16541, 25865] }, //SCH Ruin.
+        { 3596, [3598, 7442, 16555, 25871] }, //AST Malefic.
+        { 24283, [24306, 24312] }, //SGE Dosis.
     };
 
     protected override string ToName(ReplaceAction item)
@@ -67,7 +70,6 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     {
         return $$"""
             /// <summary>
-            /// <see cref="{{typeof(ReplaceAction).FullName!}}"/>
             /// {{string.Join(" -> ", actions.Select(GetName))}}
             /// </summary>
             """;
