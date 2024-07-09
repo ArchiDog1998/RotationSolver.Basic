@@ -3,8 +3,8 @@ using System.Reflection;
 
 namespace RotationSolver.GameData.Getters.Actions;
 
-internal class ActionSingleRotationGetter(Lumina.GameData gameData, ClassJob job)
-    : ActionRotationGetterBase(gameData)
+internal class ActionSingleRotationGetter(Lumina.GameData gameData, ClassJob job, ActionIdGetter getter)
+    : ActionRotationGetterBase(gameData, getter)
 {
     public override bool IsDutyAction => false;
 
@@ -22,8 +22,8 @@ internal class ActionSingleRotationGetter(Lumina.GameData gameData, ClassJob job
     }
 }
 
-internal abstract class ActionMultiRotationGetter(Lumina.GameData gameData)
-    : ActionRotationGetterBase(gameData)
+internal abstract class ActionMultiRotationGetter(Lumina.GameData gameData, ActionIdGetter getter)
+    : ActionRotationGetterBase(gameData, getter)
 {
     protected static bool IsADutyAction(Lumina.Excel.GeneratedSheets.Action action)
     {
@@ -45,8 +45,8 @@ internal abstract class ActionMultiRotationGetter(Lumina.GameData gameData)
     }
 }
 
-internal class ActionDutyRotationGetter(Lumina.GameData gameData)
-    : ActionMultiRotationGetter(gameData)
+internal class ActionDutyRotationGetter(Lumina.GameData gameData, ActionIdGetter getter)
+    : ActionMultiRotationGetter(gameData, getter)
 {
     public override bool IsDutyAction => true;
 
@@ -57,8 +57,8 @@ internal class ActionDutyRotationGetter(Lumina.GameData gameData)
     }
 }
 
-internal class ActionRoleRotationGetter(Lumina.GameData gameData)
-    : ActionMultiRotationGetter(gameData)
+internal class ActionRoleRotationGetter(Lumina.GameData gameData, ActionIdGetter getter)
+    : ActionMultiRotationGetter(gameData, getter)
 {
     public override bool IsDutyAction => false;
 

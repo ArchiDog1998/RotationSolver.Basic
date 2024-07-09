@@ -15,19 +15,19 @@ internal static class CodeGenerator
 {
     public static async Task CreateCode(Lumina.GameData gameData, DirectoryInfo dirInfo)
     {
-        await GetDutyRotation(gameData, dirInfo);
-        await GetBaseRotation(gameData, dirInfo);
-        await GetRotations(gameData, dirInfo);
         await GetStatusID(gameData, dirInfo);
-        await GetActionID(gameData, dirInfo);
+        var actionIdData = await GetActionID(gameData, dirInfo);
         await GetContentType(gameData, dirInfo);
         await GetActionCategory(gameData, dirInfo);
+        await GetDutyRotation(gameData, dirInfo, actionIdData);
+        await GetBaseRotation(gameData, dirInfo, actionIdData);
+        await GetRotations(gameData, dirInfo, actionIdData);
         await GetOpCode(dirInfo);
     }
 
-    private static async Task GetDutyRotation(Lumina.GameData gameData, DirectoryInfo dirInfo)
+    private static async Task GetDutyRotation(Lumina.GameData gameData, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
-        var dutyRotationBase = new ActionDutyRotationGetter(gameData);
+        var dutyRotationBase = new ActionDutyRotationGetter(gameData, getter);
         var rotationNodes = dutyRotationBase.GetNodes();
 
 
@@ -52,9 +52,9 @@ internal static class CodeGenerator
         await SaveNode(majorNameSpace, dirInfo, "DutyRotation");
     }
 
-    private static async Task GetBaseRotation(Lumina.GameData gameData, DirectoryInfo dirInfo)
+    private static async Task GetBaseRotation(Lumina.GameData gameData, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
-        var rotationBase = new ActionRoleRotationGetter(gameData);
+        var rotationBase = new ActionRoleRotationGetter(gameData, getter);
         var rotationCodes = rotationBase.GetNodes();
         var rotationItems = new ItemGetter(gameData);
         var rotationItemCodes = rotationItems.GetNodes();
@@ -83,12 +83,12 @@ internal static class CodeGenerator
         await SaveNode(majorNameSpace, dirInfo, "CustomRotation");
     }
 
-    private static async Task GetRotations(Lumina.GameData gameData, DirectoryInfo dirInfo)
+    private static async Task GetRotations(Lumina.GameData gameData, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
         foreach (var job in gameData.GetExcelSheet<ClassJob>()!
             .Where(job => job.JobIndex > 0))
         {
-            await BasicRotationGenerator.GetRotation(gameData, job, dirInfo);
+            await BasicRotationGenerator.GetRotation(gameData, job, dirInfo, getter);
         }
     }
 
@@ -180,9 +180,11 @@ internal static class CodeGenerator
         await GetEnums(gameData, dirInfo, new ActionCategoryGetter(gameData).GetNodes(), "ActionCate", "The ActionCate", SyntaxKind.ByteKeyword);
 
     }
-    private static async Task GetActionID(Lumina.GameData gameData, DirectoryInfo dirInfo)
+    private static async Task<ActionIdGetter> GetActionID(Lumina.GameData gameData, DirectoryInfo dirInfo)
     {
-        await GetEnums(gameData, dirInfo, new ActionIdGetter(gameData).GetNodes(), "ActionID", "The id of the action", SyntaxKind.UIntKeyword);
+        var reuslt = new ActionIdGetter(gameData);
+        await GetEnums(gameData, dirInfo, reuslt.GetNodes(), "ActionID", "The id of the action", SyntaxKind.UIntKeyword);
+        return reuslt;
     }
 
     private static async Task GetStatusID(Lumina.GameData gameData, DirectoryInfo dirInfo)

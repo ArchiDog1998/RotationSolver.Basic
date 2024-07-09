@@ -1,24 +1,20 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using RotationSolver.GameData.Getters.Actions;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 
 namespace RotationSolver.GameData;
 
-public static class SyntaxHelper
+internal static class SyntaxHelper
 {
     public static MemberDeclarationSyntax[] ToNodes(this Lumina.Excel.GeneratedSheets.Action item,
-        string actionName, string actionDescName, string desc, bool isDuty)
+        string actionName, ActionIdGetter getter, bool isDuty)
     {
-        //if (isDuty)
-        //{
-        //    actionDescName += " Duty Action";
-        //}
-
         var field = ParseSyntax<FieldDeclarationSyntax>($$"""
          private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _{{actionName}}Creator = new(() => 
          {
-             global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction((global::RotationSolver.Basic.Data.ActionID){{item.RowId}}, {{isDuty.ToString().ToLower()}});
+             global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.{{getter.Items[item]}}, {{isDuty.ToString().ToLower()}});
          
              var setting = action.Setting;
              Modify{{actionName}}(ref setting);
@@ -64,7 +60,7 @@ public static class SyntaxHelper
                     IdentifierName("Value"))))
         .WithSemicolonToken(Token(SyntaxKind.SemicolonToken))
         .AddAttributeLists(attributes).WithXmlComment($$"""
-            /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.{{actionName}}"/>
+            /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.{{getter.Items[item]}}"/>
             """);
 
         return [field, modifyMethod, property];

@@ -12,13 +12,13 @@ using static RotationSolver.GameData.SyntaxHelper;
 namespace RotationSolver.GameData;
 internal static class BasicRotationGenerator
 {
-    internal static async Task GetRotation(Lumina.GameData gameData, ClassJob job, DirectoryInfo dirInfo)
+    internal static async Task GetRotation(Lumina.GameData gameData, ClassJob job, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
         var className = (job.NameEnglish.RawString + " Rotation").ToPascalCase();
         var jobName = job.NameEnglish.RawString;
 
         Util.Clear();
-        var rotationsGetter = new ActionSingleRotationGetter(gameData, job);
+        var rotationsGetter = new ActionSingleRotationGetter(gameData, job, getter);
         var traitsGetter = new TraitRotationGetter(gameData, job);
         var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);
         var actionsCombo = new ActionComboActionGetter(rotationsGetter, replaceActions);
@@ -42,19 +42,19 @@ internal static class BasicRotationGenerator
         if (job.LimitBreak1.Value is Lumina.Excel.GeneratedSheets.Action a
             && a.RowId != 0)
         {
-            list.AddRange(GetLBInRotation(a, 1, gameData));
+            list.AddRange(GetLBInRotation(a, 1, getter));
             rotationNames.Add("LimitBreak1");
         }
         if (job.LimitBreak2.Value is Lumina.Excel.GeneratedSheets.Action b
             && b.RowId != 0)
         {
-            list.AddRange(GetLBInRotation(b, 2, gameData));
+            list.AddRange(GetLBInRotation(b, 2, getter));
             rotationNames.Add("LimitBreak2");
         }
         if (job.LimitBreak3.Value is Lumina.Excel.GeneratedSheets.Action c
             && c.RowId != 0)
         {
-            list.AddRange(GetLBInRotation(c, 3, gameData));
+            list.AddRange(GetLBInRotation(c, 3, getter));
             rotationNames.Add("LimitBreak3");
         }
         if (replaceActions.Count + actionsCombo.Count > 0)
@@ -96,9 +96,9 @@ internal static class BasicRotationGenerator
         await SaveNode(majorNameSpace, dirInfo, className);
     }
 
-    private static MemberDeclarationSyntax[] GetLBInRotation(Lumina.Excel.GeneratedSheets.Action action, int index, Lumina.GameData gameData)
+    private static MemberDeclarationSyntax[] GetLBInRotation(Lumina.Excel.GeneratedSheets.Action action, int index, ActionIdGetter getter)
     {
-        var declarations = GetLBPvE(action, out var name, gameData);
+        var declarations = GetLBPvE(action, out var name, getter);
 
         var property = PropertyDeclaration(
             IdentifierName("global::RotationSolver.Basic.Actions.IBaseAction"),
@@ -120,12 +120,10 @@ internal static class BasicRotationGenerator
         return [.. declarations, property];
     }
 
-    private static MemberDeclarationSyntax[] GetLBPvE(Lumina.Excel.GeneratedSheets.Action action, out string name, Lumina.GameData gameData)
+    private static MemberDeclarationSyntax[] GetLBPvE(Lumina.Excel.GeneratedSheets.Action action, out string name, ActionIdGetter getter)
     {
         name = action.Name.RawString.ToPascalCase() + $"PvE";
-        var descName = action.GetDescName();
-
-        return action.ToNodes(name, descName, action.GetDesc(gameData), false);
+        return action.ToNodes(name, getter, false);
     }
 
     private static MethodDeclarationSyntax GetDisplayStatus(List<string> names)

@@ -90,7 +90,7 @@ internal static partial class Util
     [GeneratedRegex("(?<=[A-Z])[A-Z]+?((?=[A-Z][a-z])|(?=[0-9]))")]
     private static partial Regex UpperCaseInside();
 
-    public static string GetDescName(this Lumina.Excel.GeneratedSheets.Action action)
+    public static string GetDescName(this Action action)
     {
         var jobs = action.ClassJobCategory.Value?.Name.RawString;
         jobs = string.IsNullOrEmpty(jobs) ? string.Empty : $" ({jobs})";
@@ -100,7 +100,7 @@ internal static partial class Util
         return $"<see href=\"https://garlandtools.org/db/#action/{action.RowId}\"><strong>{action.Name.RawString}</strong></see>{cate}{jobs} [{action.RowId}] [{action.ActionCategory.Value?.Name.RawString ?? string.Empty}]";
     }
 
-    public static  string GetDesc(this Lumina.Excel.GeneratedSheets.Action item, Lumina.GameData gameData)
+    public static  string GetDesc(this Action item, Lumina.GameData gameData)
     {
         var desc = gameData.GetExcelSheet<ActionTransient>()?.GetRow(item.RowId)?.Description.RawString ?? string.Empty;
 
