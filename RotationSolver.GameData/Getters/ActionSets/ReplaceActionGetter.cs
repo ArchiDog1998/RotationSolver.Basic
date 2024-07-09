@@ -17,9 +17,9 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     {
         List<Action> actionList = [];
         if (item.Action.Value is Action act && act.RowId != 0) actionList.Add(act);
-        if (item.ReplaceAction1.Value is Action act1 && act1.RowId != 0/* && item.Type1 is not 8*/) actionList.Add(act1);
-        if (item.ReplaceAction2.Value is Action act2 && act2.RowId != 0/* && item.Type2 is not 8*/) actionList.Add(act2);
-        if (item.ReplaceAction3.Value is Action act3 && act3.RowId != 0/* && item.Type3 is not 8*/) actionList.Add(act3);
+        if (item.ReplaceAction1.Value is Action act1 && act1.RowId != 0/* && item.Type1 is not 4*/) actionList.Add(act1);
+        if (item.ReplaceAction2.Value is Action act2 && act2.RowId != 0/* && item.Type2 is not 4*/) actionList.Add(act2);
+        if (item.ReplaceAction3.Value is Action act3 && act3.RowId != 0/* && item.Type3 is not 4*/) actionList.Add(act3);
         return [.. actionList];
     }
 
