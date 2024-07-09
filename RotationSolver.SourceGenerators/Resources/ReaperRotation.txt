@@ -2,7 +2,6 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RPR)]
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/reaper"><strong>Reaper</strong></see>
 /// <br>Number of Actions: 55</br>
@@ -10,6 +9,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Action Combos: 5</br>
 /// <br>Number of Traits: 16</br>
 /// </summary>
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RPR)]
 public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]

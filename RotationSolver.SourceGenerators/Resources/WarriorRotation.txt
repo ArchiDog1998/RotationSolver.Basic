@@ -2,7 +2,6 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WAR, global::ECommons.ExcelServices.Job.MRD)]
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/warrior"><strong>Warrior</strong></see>
 /// <br>Number of Actions: 44</br>
@@ -10,6 +9,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Action Combos: 6</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WAR, global::ECommons.ExcelServices.Job.MRD)]
 public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]

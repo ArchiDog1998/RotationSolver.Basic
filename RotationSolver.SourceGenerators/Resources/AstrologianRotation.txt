@@ -2,7 +2,6 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST)]
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/astrologian"><strong>Astrologian</strong></see>
 /// <br>Number of Actions: 62</br>
@@ -10,6 +9,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Action Combos: 0</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.AST)]
 public abstract partial class AstrologianRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]

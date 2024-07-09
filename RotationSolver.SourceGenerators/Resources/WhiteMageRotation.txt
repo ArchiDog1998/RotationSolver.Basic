@@ -2,7 +2,6 @@
 #pragma warning disable
 #nullable enable
 namespace RotationSolver.Basic.Rotations.Basic;
-[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WHM, global::ECommons.ExcelServices.Job.CNJ)]
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/whitemage"><strong>White Mage</strong></see>
 /// <br>Number of Actions: 45</br>
@@ -10,6 +9,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <br>Number of Action Combos: 0</br>
 /// <br>Number of Traits: 22</br>
 /// </summary>
+[global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.WHM, global::ECommons.ExcelServices.Job.CNJ)]
 public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.Rotations.CustomRotation
 {
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]

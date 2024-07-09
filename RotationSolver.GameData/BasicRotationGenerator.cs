@@ -79,6 +79,7 @@ internal static class BasicRotationGenerator
             .WithBaseList(
                 BaseList(SingletonSeparatedList<BaseTypeSyntax>(
                     SimpleBaseType(IdentifierName("global::RotationSolver.Basic.Rotations.CustomRotation")))))
+            .WithAttributeLists(SingletonList(JobsAttribute(job)))
             .WithXmlComment($$"""
             /// <summary>
             /// <see href="https://na.finalfantasyxiv.com/jobguide/{{jobName.Replace(" ", "").ToLower()}}"><strong>{{jobName}}</strong></see>
@@ -88,7 +89,6 @@ internal static class BasicRotationGenerator
             /// <br>Number of Traits: {{traitsGetter.Count}}</br>
             /// </summary>
             """)
-            .WithAttributeLists(SingletonList(JobsAttribute(job)))
             .AddMembers([.. list]);
 
         var majorNameSpace = NamespaceDeclaration("RotationSolver.Basic.Rotations.Basic").AddMembers(type);
