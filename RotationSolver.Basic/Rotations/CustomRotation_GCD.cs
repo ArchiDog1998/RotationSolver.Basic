@@ -23,6 +23,8 @@ partial class CustomRotation
             IBaseAction.TargetOverride = null;
         }
 
+        if (Service.Config.OnlyListenToCommand) return null;
+
         IBaseAction.ShouldEndSpecial = true;
 
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.LimitBreak)

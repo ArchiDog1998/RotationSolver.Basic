@@ -24,6 +24,11 @@ partial class CustomRotation
             IBaseAction.TargetOverride = null;
         }
 
+        if (Service.Config.OnlyListenToCommand)
+        {
+            act = null;
+            return false;
+        }
 
         if (!Service.Config.UseAbility || CombatData.Player.TotalCastTime > 0)
         {

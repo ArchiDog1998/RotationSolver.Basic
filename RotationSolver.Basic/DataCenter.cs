@@ -2,6 +2,7 @@
 using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using ECommons.GameHelpers;
+using ECommons.Reflection;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.Fate;
 using Lumina.Excel.GeneratedSheets;
@@ -132,10 +133,62 @@ internal static class DataCenter
             _actionSequencerAction = value;
         }
     }
+
+    private static PropertyInfo? ActionFromAtle = null;
+    private static void UpdateActionFromAtleProp()
+    {
+        if (DalamudReflector.TryGetDalamudPlugin("ActionTimelineEx", out var actionTimeline, true))
+        {
+            var rotationHelperType = actionTimeline.GetType().Assembly.GetTypes().FirstOrDefault(t => t.Name == "RotationHelper");
+            ActionFromAtle = rotationHelperType?.GetRuntimeProperty("ActiveAction");
+        }
+    }
+
+    private static IAction? UpdateActionFromAtle()
+    {
+        var rotation = RightNowRotation;
+        if (rotation == null) return null;
+
+        if (ActionFromAtle == null)
+        {
+            UpdateActionFromAtleProp();
+            return null;
+        }
+
+        try
+        {
+            dynamic? obj = ActionFromAtle.GetValue(null);
+            if (obj == null) return null;
+
+            uint actionId = obj.ActionId;
+            byte type = obj.Type;
+
+            foreach (var action in rotation.AllActions)
+            {
+                if (action is IBaseAction && type == 1
+                    || action is IBaseItem && type == 2)
+                {
+                    if (actionId == action.ID) return action;
+                }
+            }
+        }
+        catch
+        {
+            UpdateActionFromAtleProp();
+        }
+        return null;
+    }
+
+
     public static (IAction Action, TargetType Type)? CommandNextAction
     {
         get
         {
+            if (Service.Config.ListenToActionTimeline && UpdateActionFromAtle() is IAction act)
+            {
+                return (act, TargetType.None);
+            }
+
             var next = NextActs.FirstOrDefault();
 
             while (next != null && NextActs.Count > 0 && (next.DeadTime < DateTime.Now || IActionHelper.IsLastAction(true, next.Act)))

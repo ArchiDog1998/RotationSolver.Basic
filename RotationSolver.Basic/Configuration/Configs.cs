@@ -249,13 +249,17 @@ internal partial class Configs : IPluginConfiguration
     [UI("Auto Updates Rotations.", Parent = nameof(DownloadRotations))]
     public ConditionBoolean AutoUpdateRotations { get; private set; } = new(true, nameof(AutoUpdateRotations));
 
-    [UI("Make /rotation Manual as a toggle command.",
-        (int)UiString.ConfigWindow_Basic_Others)]
+    [UI("Make /rotation Manual as a toggle command.", (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean ToggleManual { get; private set; } = new(false, nameof(ToggleManual));
 
-    [UI("Make /rotation Auto as a toggle command.",
-        (int)UiString.ConfigWindow_Basic_Others)]
+    [UI("Make /rotation Auto as a toggle command.", (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean ToggleAuto { get; private set; } = new(false, nameof(ToggleAuto));
+
+    [UI("Listen to Action Timeline", (int)UiString.ConfigWindow_Basic_Others)]
+    public ConditionBoolean ListenToActionTimeline { get; private set; } = new(false, nameof(ListenToActionTimeline));
+
+    [UI("Only execute actions by command", (int)UiString.ConfigWindow_Basic_Others)]
+    public ConditionBoolean OnlyListenToCommand { get; private set; } = new(false, nameof(OnlyListenToCommand));
 
     [UI("Only shows these windows if there are enemies in or in duty.",
         (int)UiString.ConfigWindow_UI_Windows)]
@@ -393,6 +397,7 @@ internal partial class Configs : IPluginConfiguration
         Parent = nameof(AutoOpenChest))]
     public ConditionBoolean AutoCloseChestWindow { get; private set; } = new(true, nameof(AutoCloseChestWindow));
 
+    [LinkDescription("https://xivapi.com/i/061000/061516.png", "State")]
     [UI("Shows RS state icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowStateIcon { get; private set; } = new(true, nameof(ShowStateIcon));
 
