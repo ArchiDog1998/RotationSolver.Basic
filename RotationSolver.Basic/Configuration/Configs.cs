@@ -255,7 +255,7 @@ internal partial class Configs : IPluginConfiguration
     [UI("Make /rotation Auto as a toggle command.", (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean ToggleAuto { get; private set; } = new(false, nameof(ToggleAuto));
 
-    [UI("Listen to Action Timeline", (int)UiString.ConfigWindow_Basic_Others)]
+    [UI("Listen to Action Timeline Ex", (int)UiString.ConfigWindow_Basic_Others)]
     public ConditionBoolean ListenToActionTimeline { get; private set; } = new(false, nameof(ListenToActionTimeline));
 
     [UI("Only execute actions by command", (int)UiString.ConfigWindow_Basic_Others)]

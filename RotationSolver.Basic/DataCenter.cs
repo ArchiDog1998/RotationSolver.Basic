@@ -161,12 +161,12 @@ internal static class DataCenter
             if (obj == null) return null;
 
             uint actionId = obj.ActionId;
-            byte type = obj.Type;
+            byte type = (byte)obj.Type;
 
             foreach (var action in rotation.AllActions)
             {
-                if (action is IBaseAction && type == 1
-                    || action is IBaseItem && type == 2)
+                if (action is IBaseAction && type == 0
+                    || action is IBaseItem && type == 1)
                 {
                     if (actionId == action.ID) return action;
                 }
