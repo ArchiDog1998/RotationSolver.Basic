@@ -111,7 +111,7 @@ public static class CombatData
     #region Target
     /// <summary>
     /// The player's target.
-    /// <br>WARNING: You'd better not use it. Because this target isn't the action's target. Try to use <see cref="IBaseAction.Target"/> or <seealso cref="HostileTarget"/> instead after using <seealso cref="IBaseAction.CanUse(out IAction, bool, bool, bool, bool, bool, bool, bool, byte)"/></br>
+    /// <br>WARNING: You'd better not use it. Because this target isn't the action's target. Try to use <see cref="IBaseAction.Target"/> or <seealso cref="HostileTarget"/> instead after using <seealso cref="ICanUse.CanUse(out IAction, bool, bool, bool, bool, bool, bool, bool, byte)"/></br>
     /// </summary>
     [Obsolete("You'd better not use it. More information in summary.")]
     public static IBattleChara Target => Svc.Targets.Target is IBattleChara b ? b : Player;
