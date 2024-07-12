@@ -249,7 +249,11 @@ public struct ActionTargetInfo(IBaseAction action)
     private readonly TargetResult? FindTargetArea(IEnumerable<IBattleChara> canTargets, IEnumerable<IBattleChara> canAffects,
         float range, IPlayerCharacter player)
     {
-        if (action.Setting.TargetType is TargetType.Move)
+        if (range == 0)
+        {
+            return new(player, [.. GetAffects(player.Position, canAffects)], player.Position);
+        }
+        else if (action.Setting.TargetType is TargetType.Move)
         {
             return FindTargetAreaMove(range);
         }
