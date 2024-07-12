@@ -2,6 +2,7 @@
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
+using XIVConfigUI;
 
 namespace RotationSolver.Basic.Actions;
 
@@ -32,7 +33,7 @@ public readonly struct ActionBasicInfo
     /// <summary>
     /// The icon of the action.
     /// </summary>
-    public readonly uint IconID => ID == (uint)ActionID.SprintPvE ? 104u : _action.Action.Icon;
+    public readonly uint IconID => _action.Action.GetActionIcon();
 
     /// <summary>
     /// Is the action highlighted.
