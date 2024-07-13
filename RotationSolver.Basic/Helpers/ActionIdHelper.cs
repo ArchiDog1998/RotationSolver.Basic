@@ -16,7 +16,7 @@ public static class ActionIdHelper
     /// <returns></returns>
     public unsafe static bool IsCoolingDown(this ActionID actionID)
     {
-        return IsCoolingDown(actionID.GetAction().GetCoolDownGroup());
+        return actionID.GetAction().GetCoolDownGroup().Any(i => i.IsCoolingDown);
     }
 
     /// <summary>

@@ -16,7 +16,7 @@ partial class CustomRotation
 
             IBaseAction.ForceEnable = true;
             if (act is IBaseAction a && a != null && !a.Info.IsRealGCD && a.CanUse(out _,
-                usedUp: true, skipAoeCheck: true)) return true;
+                CanUseOption.UsedUp | CanUseOption.SkipAoeCheck | pair.Value.Option)) return true;
             IBaseAction.ForceEnable = false;
 
             if (act is IBaseItem i && i.CanUse(out _, true)) return true;

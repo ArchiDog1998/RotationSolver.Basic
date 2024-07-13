@@ -37,7 +37,7 @@ public class BaseAction : IBaseAction, IAction
     public float AnimationLockTime => Info.AnimationLockTime;
 
     /// <inheritdoc/>
-    public uint SortKey => CD.CoolDownGroup;
+    public uint SortKey => CD.CoolDownGroups[0].CdGrp;
 
     /// <inheritdoc/>
     public uint IconID => Info.IconID;

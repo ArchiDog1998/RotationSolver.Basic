@@ -13,54 +13,67 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// <summary>
     /// The cd group.
     /// </summary>
-    public byte CoolDownGroup { get; }
+    public CdInfo[] CoolDownGroups { get; }
 
-    unsafe RecastDetail* CoolDownDetail => ActionIdHelper.GetCoolDownDetail(CoolDownGroup);
+    private unsafe float RecastTime => CoolDownGroups[0].RecastTime;
 
-    private unsafe float RecastTime => CoolDownDetail == null ? 0 : CoolDownDetail->Total;
-
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public float RecastTimeElapsed => RecastTimeElapsedRaw - DataCenter.WeaponElapsed;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    internal unsafe float RecastTimeElapsedRaw => CoolDownDetail == null ? 0 : CoolDownDetail->Elapsed;
+    /// <summary/>
+    internal unsafe float RecastTimeElapsedRaw => CoolDownGroups[0].RecastTimeElapsed;
+
     float ICooldown.RecastTimeElapsedRaw => RecastTimeElapsedRaw;
-    /// <summary>
-    /// 
-    /// </summary>
-    public unsafe bool IsCoolingDown => ActionIdHelper.IsCoolingDown(CoolDownGroup);
 
-    private float RecastTimeRemain => RecastTime - RecastTimeElapsedRaw;
+    /// <summary/>
+    public unsafe bool IsCoolingDown => CoolDownGroups.Any(i => i.IsCoolingDown);
 
-    /// <summary>
-    /// 
-    /// </summary>
-    public bool HasOneCharge => !IsCoolingDown || RecastTimeElapsedRaw >= RecastTimeOneChargeRaw;
+    private float RecastTimeRemainRaw => CoolDownGroups[0].RecastTimeRemain;
+
+    /// <summary/>
+    public bool HasOneCharge
+    {
+        get
+        {
+            if (!IsCoolingDown) return true;
+            
+            var hasMain = RecastTimeElapsedRaw >= RecastTimeOneChargeRaw;
+
+            if (CoolDownGroups.Length > 1)
+            {
+                hasMain &= !CoolDownGroups[1].IsCoolingDown;
+            }
+            return hasMain;
+        }
+    }
 
     /// <summary>
     /// 
     /// </summary>
     public unsafe ushort CurrentCharges => (ushort)ActionManager.Instance()->GetCurrentCharges(_action.Info.ID);
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public unsafe ushort MaxCharges => Math.Max(ActionManager.GetMaxCharges(_action.Info.ID, (uint)Player.Level), (ushort)1);
 
     internal float RecastTimeOneChargeRaw => ActionManager.GetAdjustedRecastTime(ActionType.Action, _action.Info.ID) / 1000f;
 
     float ICooldown.RecastTimeOneChargeRaw => RecastTimeOneChargeRaw;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public float RecastTimeRemainOneCharge => RecastTimeRemainOneChargeRaw - DataCenter.WeaponRemain;
 
-    float RecastTimeRemainOneChargeRaw => RecastTimeRemain % RecastTimeOneChargeRaw;
+    float RecastTimeRemainOneChargeRaw
+    {
+        get
+        {
+            var result = RecastTimeRemainRaw % RecastTimeOneChargeRaw;
+            if (CoolDownGroups.Length > 1)
+            {
+                result = MathF.Max(result,  CoolDownGroups[1].RecastTimeRemain);
+            }
+            return result;
+        }
+    }
 
     /// <summary>
     /// 
@@ -76,7 +89,7 @@ public readonly struct ActionCooldownInfo : ICooldown
     public ActionCooldownInfo(IBaseAction action)
     {
         _action = action;
-        CoolDownGroup = _action.Action.GetCoolDownGroup();
+        CoolDownGroups = _action.Action.GetCoolDownGroup();
     }
 
     /// <summary>
@@ -169,7 +182,7 @@ public readonly struct ActionCooldownInfo : ICooldown
 
             if (!isEmpty)
             {
-                if (RecastTimeRemain > DataCenter.WeaponRemain + DataCenter.WeaponTotal * gcdCountForAbility)
+                if (RecastTimeRemainRaw > DataCenter.WeaponRemain + DataCenter.WeaponTotal * gcdCountForAbility)
                 {
                     whyCant = WhyActionCantUse.NotEmpty;
                     return false;

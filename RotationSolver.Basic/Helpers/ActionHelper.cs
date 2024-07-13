@@ -1,4 +1,5 @@
-﻿using FFXIVClientStructs.FFXIV.Client.Game;
+﻿using ECommons.DalamudServices;
+using FFXIVClientStructs.FFXIV.Client.Game;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 
@@ -14,11 +15,16 @@ internal static class ActionHelper
 
     internal static bool IsRealGCD(this Action action) => action.IsGeneralGCD() || action.AdditionalCooldownGroup == GCDCooldownGroup;
 
-    internal static byte GetCoolDownGroup(this Action action)
+    internal static CdInfo[] GetCoolDownGroup(this Action action)
     {
-        var group = action.IsGeneralGCD() ? GetAdditionalCooldownGroup(action) : GetFirstCooldownGroup(action);
-        if (group < 0) group = GCDCooldownGroup;
-        return group;
+        IEnumerable<byte> result = action.IsGeneralGCD()
+            ? [GetAdditionalCooldownGroup(action)]
+            : [GetFirstCooldownGroup(action), GetAdditionalCooldownGroup(action)];
+
+        result = result.Where(i => i > 0);
+        result = result.Any() ? [..result] : [GCDCooldownGroup];
+
+        return [.. result.Select(i => new CdInfo(i))];
     }
 
     private static unsafe byte GetFirstCooldownGroup(Action action)
