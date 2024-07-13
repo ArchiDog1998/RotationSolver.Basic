@@ -19,7 +19,6 @@ public unsafe readonly record struct CdInfo(byte CdGrp)
     /// <summary/>
     public float RecastTimeRemain => RecastTime - RecastTimeElapsed;
 
-
     /// <summary/>
     public bool IsCoolingDown => CoolDownDetail != null && CoolDownDetail->IsActive != 0;
 }

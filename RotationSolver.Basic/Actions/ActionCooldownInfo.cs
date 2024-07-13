@@ -47,9 +47,7 @@ public readonly struct ActionCooldownInfo : ICooldown
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public unsafe ushort CurrentCharges => (ushort)ActionManager.Instance()->GetCurrentCharges(_action.Info.ID);
 
     /// <summary/>
