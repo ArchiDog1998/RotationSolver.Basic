@@ -112,9 +112,9 @@ internal static class DataCenter
 
     public static HashSet<uint> DisabledActionSequencer { get; set; } = [];
 
-    private static List<NextAct> NextActs = [];
-    private static IAction? _actionSequencerAction;
-    public static IAction? ActionSequencerAction 
+    private static List<NextActTime> NextActs = [];
+    private static NextAct? _actionSequencerAction;
+    public static NextAct? ActionSequencerAction 
     {
         private get => _actionSequencerAction;
         set
@@ -144,7 +144,7 @@ internal static class DataCenter
         }
     }
 
-    private static IAction? UpdateActionFromAtle()
+    private static NextAct? UpdateActionFromAtle()
     {
         var rotation = RightNowRotation;
         if (rotation == null) return null;
@@ -161,14 +161,18 @@ internal static class DataCenter
             if (obj == null) return null;
 
             uint actionId = obj.ActionId;
-            byte type = (byte)obj.Type;
+            var type = (ActionType)(byte)obj.Type;
+            bool isLast = obj.IsLast;
 
             foreach (var action in rotation.AllActions)
             {
-                if (action is IBaseAction && type == 0
-                    || action is IBaseItem && type == 1)
+                if (action is IBaseAction && type is ActionType.Action
+                    || action is IBaseItem && type is ActionType.Item)
                 {
-                    if (actionId == action.ID) return action;
+                    if (actionId == action.ID)
+                    {
+                        return new(action, TargetType.None, isLast ? CanUseOption.OnLastAbility : CanUseOption.None);
+                    }
                 }
             }
         }
@@ -180,35 +184,36 @@ internal static class DataCenter
     }
 
 
-    public static (IAction Action, TargetType Type)? CommandNextAction
+    public static NextAct? CommandNextAction
     {
         get
         {
-            if (Service.Config.ListenToActionTimeline && UpdateActionFromAtle() is IAction act)
+            if (Service.Config.ListenToActionTimeline && UpdateActionFromAtle() is NextAct act)
             {
-                return (act, TargetType.None);
+                return act;
             }
 
-            var next = NextActs.FirstOrDefault();
+            if (NextActs.Count == 0) return ActionSequencerAction;
+            var next = NextActs.First();
 
-            while (next != null && NextActs.Count > 0 && (next.DeadTime < DateTime.Now || IActionHelper.IsLastAction(true, next.Act)))
+            while (NextActs.Count > 0 && (next.DeadTime < DateTime.Now || IActionHelper.IsLastAction(true, next.Action.Act)))
             {
                 NextActs.RemoveAt(0);
-                next = NextActs.FirstOrDefault();
+
+                if (NextActs.Count == 0) return ActionSequencerAction;
+                next = NextActs.First();
             }
-            var action = next?.Act ?? ActionSequencerAction;
-            if (action == null) return null;
-            return (action, next?.Type ?? TargetType.None);
+            return next.Action;
         }
     }
     public static Job Job { get; set; }
 
     public static JobRole Role => Service.GetSheet<ClassJob>().GetRow((uint)Job)?.GetJobRole() ?? JobRole.None;
 
-    internal static void AddCommandAction(IAction act, double time, TargetType type)
+    internal static void AddCommandAction(NextAct act, double time)
     {
-        var index = NextActs.FindIndex(i => i.Act.ID == act.ID);
-        var newItem = new NextAct(act, DateTime.Now.AddSeconds(time), type);
+        var index = NextActs.FindIndex(i => i.Action.Act.ID == act.Act.ID);
+        var newItem = new NextActTime(DateTime.Now.AddSeconds(time), act);
         if (index < 0)
         {
             NextActs.Add(newItem);

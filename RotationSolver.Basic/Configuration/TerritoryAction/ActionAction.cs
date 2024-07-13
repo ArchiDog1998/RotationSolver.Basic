@@ -10,6 +10,9 @@ internal class ActionAction : ITerritoryAction
     [UI("Target Type")]
     public TargetType TargetType { get; set; } = TargetType.None;
 
+    [UI("Can Use Option")]
+    public CanUseOption CanUseOption { get; set; } = CanUseOption.None;
+
     public void Disable()
     {
     }
@@ -20,7 +23,7 @@ internal class ActionAction : ITerritoryAction
 
         if (act == null) return;
 
-        DataCenter.AddCommandAction(act, Service.Config.SpecialDuration, TargetType);
+        DataCenter.AddCommandAction(new(act, TargetType, CanUseOption), Service.Config.SpecialDuration);
 
 #if DEBUG
         ECommons.DalamudServices.Svc.Log.Debug($"Added the action {act} to timeline.");

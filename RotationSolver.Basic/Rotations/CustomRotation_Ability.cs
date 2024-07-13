@@ -8,7 +8,7 @@ partial class CustomRotation
 
         if (pair != null)
         {
-            act = pair.Value.Action;
+            act = pair.Value.Act;
             if (pair.Value.Type != TargetType.None)
             {
                 IBaseAction.TargetOverride = pair.Value.Type;

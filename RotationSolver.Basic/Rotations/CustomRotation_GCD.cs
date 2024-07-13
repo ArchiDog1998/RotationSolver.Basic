@@ -9,7 +9,7 @@ partial class CustomRotation
 
         if (pair != null)
         {
-            var cmdAct = pair.Value.Action;
+            var cmdAct = pair.Value.Act;
             if (pair.Value.Type != TargetType.None)
             {
                 IBaseAction.TargetOverride = pair.Value.Type;
