@@ -142,6 +142,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/41"><strong>Overpower</strong></see>-<i>PvE</i> (MRD WAR) [41] [Weaponskill]
 /// <para>Delivers an attack with a potency of 110 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// </summary>
     OverpowerPvE = 41,
     /// <summary>
@@ -250,16 +251,16 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/61"><strong>Twin Snakes</strong></see>-<i>PvE</i> (PGL MNK) [61] [Weaponskill]
 /// <para>Delivers an attack with a potency of .</para>
 /// <para>Can only be executed when in raptor form.</para>
-/// <para>Additional Effect: Grants 2 stacks of Raptor's Fury</para>
-/// <para>Raptor's Fury Effect: Increases potency of Rising RaptorTrue StrikeTrue Strike by 150</para>
+/// <para>Additional Effect: Grants a stack of Raptor's Fury</para>
+/// <para>Raptor's Fury Effect: Increases potency of Rising RaptorTrue StrikeTrue Strike by 200</para>
 /// <para>Additional Effect: Changes form to coeurl</para>
 /// <para>Duration: 30s</para>
 /// </summary>
     TwinSnakesPvE = 61,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/62"><strong>Arm of the Destroyer</strong></see>-<i>PvE</i> (PGL MNK) [62] [Weaponskill]
-/// <para>Delivers an attack with a potency of 100 to all nearby targets.</para>
-/// <para>Opo-opo Form Potency: 110</para>
+/// <para>Delivers an attack with a potency of 110 to all nearby targets.</para>
+/// <para>Opo-opo Form Potency: 120</para>
 /// <para>Additional Effect: Changes form to raptor</para>
 /// <para>Duration: 30s</para>
 /// </summary>
@@ -275,8 +276,8 @@ public enum ActionID : uint
 /// <para>Delivers an attack with a potency of .</para>
 /// <para> when executed from a target's rear.</para>
 /// <para>Can only be executed when in coeurl form.</para>
-/// <para>Additional Effect: Grants 3 stacks of Coeurl's Fury</para>
-/// <para>Coeurl's Fury Effect: Increases potency of Pouncing CoeurlSnap PunchSnap Punch by 100</para>
+/// <para>Additional Effect: Grants 2 stacks of Coeurl's Fury</para>
+/// <para>Coeurl's Fury Effect: Increases potency of Pouncing CoeurlSnap PunchSnap Punch by 150</para>
 /// <para>Additional Effect: Changes form to opo-opo</para>
 /// <para>Duration: 30s</para>
 /// </summary>
@@ -286,16 +287,16 @@ public enum ActionID : uint
 /// <para>Grants 3 stacks of Perfect Balance, each stack allowing the execution of a weaponskill that requires a certain form, without being in that form.</para>
 /// <para>Duration: 20s</para>
 /// <para>Additional Effect: Grants Opo-opo Chakra, Coeurl Chakra, or Raptor Chakra depending on the form changed to upon executing actions</para>
-/// <para>Changing to Opo-opo Form grants Coeurl Chakra</para>
-/// <para>Changing to Raptor Form grants Opo-opo Chakra</para>
-/// <para>Changing to Coeurl Form grants Raptor Chakra</para>
+/// <para>Changing to Opo-opo Form grants Coeurl Chakra.</para>
+/// <para>Changing to Raptor Form grants Opo-opo Chakra.</para>
+/// <para>Changing to Coeurl Form grants Raptor Chakra.</para>
 /// <para>Maximum Charges: 2</para>
 /// <para>Can only be executed while in combat and when not under the effect of any Beast Chakra.Can only be executed while in combat.Can only be executed while in combat.</para>
 /// </summary>
     PerfectBalancePvE = 69,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/70"><strong>Rockbreaker</strong></see>-<i>PvE</i> (MNK) [70] [Weaponskill]
-/// <para>Delivers an attack with a potency of 130 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 150 to all nearby enemies.</para>
 /// <para>Can only be executed when in coeurl form.</para>
 /// <para>Additional Effect: Changes form to opo-opo</para>
 /// <para>Duration: 30s</para>
@@ -304,7 +305,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/74"><strong>Dragon Kick</strong></see>-<i>PvE</i> (PGL MNK) [74] [Weaponskill]
 /// <para>Delivers an attack with a potency of .</para>
-/// <para>Additional Effect: Grants a stack of Opo-opo's Fury</para>
+/// <para>Opo-opo Form Bonus: Grants a stack of Opo-opo's Fury</para>
 /// <para>Opo-opo's Fury Effect: Increases potency of Leaping OpoBootshineBootshine by 200</para>
 /// <para>Additional Effect: Changes form to raptor</para>
 /// <para>Duration: 30s</para>
@@ -318,7 +319,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/78"><strong>Vorpal Thrust</strong></see>-<i>PvE</i> (LNC DRG) [78] [Weaponskill]
 /// <para>Delivers an attack with a potency of .</para>
-/// <para>Combo Action: True Thrust</para>
+/// <para>Combo Action: True Thrust or Raiden ThrustTrue ThrustTrue Thrust</para>
 /// <para>Combo Potency: </para>
 /// </summary>
     VorpalThrustPvE = 78,
@@ -353,7 +354,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/87"><strong>Disembowel</strong></see>-<i>PvE</i> (LNC DRG) [87] [Weaponskill]
 /// <para>Delivers an attack with a potency of .</para>
-/// <para>Combo Action: True Thrust</para>
+/// <para>Combo Action: True Thrust or Raiden ThrustTrue ThrustTrue Thrust</para>
 /// <para>Combo Potency: </para>
 /// <para>Combo Bonus: Grants Power Surge</para>
 /// <para>Power Surge Effect: Increases damage dealt by 10%</para>
@@ -492,7 +493,7 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/117"><strong>Rain of Death</strong></see>-<i>PvE</i> (BRD) [117] [Ability]
 /// <para>Delivers an attack with a potency of 100 to target and all enemies nearby it.</para>
 /// <para>Maximum Charges: </para>
-/// <para>Shares a recast timer with Bloodletter.</para>
+/// <para>Shares a recast timer with Heartbreak ShotBloodletterBloodletter.</para>
 /// </summary>
     RainOfDeathPvE = 117,
     /// <summary>
@@ -689,7 +690,7 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Thunderhead</para>
 /// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants 3 Umbral Hearts</para>
-/// <para>Umbral Heart Bonus: Nullifies Astral Fire's MP cost increase for Fire spells</para>
+/// <para>Umbral Heart Bonus: Nullifies Astral Fire's MP cost increase for Fire spells and reduces MP cost for Flare by one-third</para>
 /// <para>Additional Effect: Grants Paradox</para>
 /// <para>Can only be executed while under the effect of Astral Fire.</para>
 /// </summary>
@@ -1080,7 +1081,7 @@ public enum ActionID : uint
     HyotonPvE = 2268,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/2269"><strong>Huton</strong></see>-<i>PvE</i> (NIN) [2269] [Ability]
-/// <para>Deals fire damage with a potency of 240 to target and all enemies nearby it.</para>
+/// <para>Deals wind damage with a potency of 240 to target and all enemies nearby it.</para>
 /// <para>Additional Effect: Grants Shadow Walker</para>
 /// <para>Shadow Walker Effect: Allows execution of actions which require the effect of Hidden, without being under that effect</para>
 /// <para>Duration: 20s</para>
@@ -1266,7 +1267,7 @@ public enum ActionID : uint
     SheltronPvE = 3542,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/3543"><strong>Tornado Kick</strong></see>-<i>PvE</i> (MNK) [3543] [Weaponskill]
-/// <para>Delivers an attack to target and all enemies nearby it with a potency of 850 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers an attack to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Formless Fist, allowing the execution of a weaponskill that requires a certain form, without being in that form</para>
 /// <para>Duration: 30s</para>
 /// <para>Any additional effects associated with the executed action will also be applied.</para>
@@ -1590,6 +1591,7 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/3606"><strong>Lightspeed</strong></see>-<i>PvE</i> (AST) [3606] [Ability]
 /// <para>Reduces cast times for spells by 2.5 seconds.</para>
 /// <para>Duration: 15s</para>
+/// <para>Maximum Charges: 2</para>
 /// </summary>
     LightspeedPvE = 3606,
     /// <summary>
@@ -1646,6 +1648,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/3621"><strong>Unleash</strong></see>-<i>PvE</i> (DRK) [3621] [Spell]
 /// <para>Deals unaspected damage with a potency of 120 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// </summary>
     UnleashPvE = 3621,
     /// <summary>
@@ -1828,6 +1831,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/7381"><strong>Total Eclipse</strong></see>-<i>PvE</i> (GLA PLD) [7381] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// </summary>
     TotalEclipsePvE = 7381,
     /// <summary>
@@ -1977,7 +1981,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/7397"><strong>Sonic Thrust</strong></see>-<i>PvE</i> (DRG) [7397] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all enemies in a straight line before you.</para>
-/// <para>Combo Action: Doom Spike</para>
+/// <para>Combo Action: Doom Spike or Draconian FuryDoom SpikeDoom Spike</para>
 /// <para>Combo Potency: 120</para>
 /// <para>Combo Bonus: Grants Power Surge</para>
 /// <para>Power Surge Effect: Increases damage dealt by 10%</para>
@@ -2655,7 +2659,7 @@ public enum ActionID : uint
 /// <para>Duration: 15s</para>
 /// <para>Additional Effect: Grants  stacks of Manafication</para>
 /// <para>Manafication Effect: Increases magic damage dealt by 5%</para>
-/// <para>Duration: 15s</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants Prefulgence Ready upon consuming 6 stacks of Manafication</para>
 /// <para>Duration: 30s</para>
 /// <para>All combos are canceled upon execution of Manafication.</para>
@@ -4136,7 +4140,7 @@ public enum ActionID : uint
     SaberDancePvE = 16005,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16006"><strong>Closed Position</strong></see>-<i>PvE</i> (DNC) [16006] [Ability]
-/// <para>Grants you Closed Position and designates a party member as your Dance Partner, allowing you to share the effects of Standard Finish, Curing Waltz, Devilment, and Tillana with said party member.</para>
+/// <para>Grants you Closed Position and designates a party member as your Dance Partner, allowing you to share the effects of Standard Finish, Curing Waltz, Devilment, and Finishing Moveand Devilmentand DevilmentStandard Finish and Curing WaltzStandard Finish and Curing Waltz with said party member.</para>
 /// <para>Effect ends upon reuse.</para>
 /// </summary>
     ClosedPositionPvE = 16006,
@@ -4243,6 +4247,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16141"><strong>Demon Slice</strong></see>-<i>PvE</i> (GNB) [16141] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// </summary>
     DemonSlicePvE = 16141,
     /// <summary>
@@ -4301,6 +4306,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16149"><strong>Demon Slaughter</strong></see>-<i>PvE</i> (GNB) [16149] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Combo Action: Demon Slice</para>
 /// <para>Combo Potency: 160</para>
 /// <para>Combo Bonus: Adds a Cartridge to your Powder Gauge</para>
@@ -4624,6 +4630,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16457"><strong>Prominence</strong></see>-<i>PvE</i> (PLD) [16457] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Combo Action: Total Eclipse</para>
 /// <para>Combo Potency: 170</para>
 /// <para>Combo Bonus: Restores MP</para>
@@ -4670,6 +4677,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16462"><strong>Mythril Tempest</strong></see>-<i>PvE</i> (WAR) [16462] [Weaponskill]
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Combo Action: Overpower</para>
 /// <para>Combo Potency: 140</para>
 /// <para>Combo Bonus: Grants Surging Tempest, increasing damage dealt by 10%</para>
@@ -4737,6 +4745,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16468"><strong>Stalwart Soul</strong></see>-<i>PvE</i> (DRK) [16468] [Spell]
 /// <para>Deals unaspected damage with a potency of  to all nearby enemies.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Combo Action: Unleash</para>
 /// <para>Combo Potency: </para>
 /// <para>Combo Bonus: Restores MP</para>
@@ -4781,7 +4790,7 @@ public enum ActionID : uint
     LivingShadowPvE = 16472,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16473"><strong>Four-point Fury</strong></see>-<i>PvE</i> (MNK) [16473] [Weaponskill]
-/// <para>Delivers an attack with a potency of 120 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 140 to all nearby enemies.</para>
 /// <para>Can only be executed when in raptor form.</para>
 /// <para>Additional Effect: Changes form to coeurl</para>
 /// <para>Duration: 30s</para>
@@ -4789,7 +4798,7 @@ public enum ActionID : uint
     FourpointFuryPvE = 16473,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16474"><strong>Enlightenment</strong></see>-<i>PvE</i> (MNK) [16474] [Ability]
-/// <para>Delivers an attack with a potency of 170 to all enemies in a straight line before you.</para>
+/// <para>Delivers an attack with a potency of 200 to all enemies in a straight line before you.</para>
 /// <para>Can only be executed while in combat and under the effect of five Chakra. Five chakra close upon execution.</para>
 /// </summary>
     EnlightenmentPvE = 16474,
@@ -5043,6 +5052,8 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/16506"><strong>Umbral Soul</strong></see>-<i>PvE</i> (BLM) [16506] [Spell]
 /// <para>Grants Umbral Ice and 1 Umbral Heart.</para>
 /// <para>Umbral Heart Bonus: Nullifies Astral Fire's MP cost increase for Fire spells and reduces MP cost for Flare by one-third</para>
+/// <para>Grants Umbral Ice.</para>
+/// <para>Grants Umbral Ice.</para>
 /// <para>Additional Effect: Restores an amount of MP commensurate with your stacks of Umbral Ice</para>
 /// <para>Umbral Ice I: 2,500 MP</para>
 /// <para>Umbral Ice II: 5,000 MP</para>
@@ -8122,7 +8133,7 @@ public enum ActionID : uint
 /// <para>Jumps to the target and delivers a critical direct hit to target and all enemies nearby it with a potency of 700 for the first enemy, and 70% less for all remaining enemies.</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate or direct hit rate.</para>
 /// <para>Additional Effect: Grants Primal Ruination Ready</para>
-/// <para>Duration: 30s</para>
+/// <para>Duration: 20s</para>
 /// <para>Can only be executed while under the effect of Primal Rend Ready, granted by Inner Release.</para>
 /// <para>Cannot be executed while bound.</para>
 /// </summary>
@@ -8208,7 +8219,7 @@ public enum ActionID : uint
     MasterfulBlitzPvE = 25764,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25765"><strong>Celestial Revolution</strong></see>-<i>PvE</i> (MNK) [25765] [Weaponskill]
-/// <para>Delivers an attack with a potency of 450.</para>
+/// <para>Delivers an attack with a potency of 600.</para>
 /// <para>Additional Effect: Opens the Lunar Nadi</para>
 /// <para>If the Lunar Nadi is already open, opens the Solar Nadi instead.</para>
 /// <para>Additional Effect: Grants Formless Fist, allowing the execution of a weaponskill that requires a certain form, without being in that form</para>
@@ -8230,7 +8241,7 @@ public enum ActionID : uint
     RiddleOfWindPvE = 25766,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25767"><strong>Shadow of the Destroyer</strong></see>-<i>PvE</i> (MNK) [25767] [Weaponskill]
-/// <para>Delivers an attack with a potency of 110 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 120 to all nearby enemies.</para>
 /// <para>Opo-opo Form Bonus: Guarantees a critical hit</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
 /// <para>Additional Effect: Changes form to raptor</para>
@@ -9018,7 +9029,7 @@ public enum ActionID : uint
     ExaltationPvE = 25873,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25874"><strong>Macrocosmos</strong></see>-<i>PvE</i> (AST) [25874] [Spell]
-/// <para>Deals unaspected damage to all nearby enemies with a potency of 250 for the first enemy, and 40% less for all remaining enemies.</para>
+/// <para>Deals unaspected damage to all nearby enemies with a potency of  for the first enemy, and 40% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Macrocosmos to self and all nearby party members</para>
 /// <para>Duration: 15s</para>
 /// <para>For the effect's duration, 50% of damage taken is compiled.</para>
@@ -9042,7 +9053,7 @@ public enum ActionID : uint
     SleepPvE = 25880,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25882"><strong>Flint Strike</strong></see>-<i>PvE</i> (MNK) [25882] [Weaponskill]
-/// <para>Delivers an attack to all nearby enemies with a potency of 600 for the first enemy, and 70% less for all remaining enemies.</para>
+/// <para>Delivers an attack to all nearby enemies with a potency of 800 for the first enemy, and 70% less for all remaining enemies.</para>
 /// <para>Additional Effect: Opens the Solar Nadi</para>
 /// <para>Additional Effect: Grants Formless Fist, allowing the execution of a weaponskill that requires a certain form, without being in that form</para>
 /// <para>Duration: 30s</para>
@@ -13002,7 +13013,7 @@ public enum ActionID : uint
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
-/// <para>※Dreadfang and Dread Maw change to Second Generation when requirements for execution are met.</para>
+/// <para>※Dread Fangs and Dread Maw change to Second Generation when requirements for execution are met.</para>
 /// </summary>
     SecondGenerationPvE = 34628,
     /// <summary>
@@ -13049,6 +13060,8 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Poised for Twinfang</para>
 /// <para>Poised for Twinfang Effect: Increases the potency of Uncoiled Twinfang by 50</para>
 /// <para>Duration: 60s</para>
+/// <para>Upon successfully landing this action, Twinfang changes to Uncoiled Twinfang, and Twinblood changes to Uncoiled Twinblood.</para>
+/// <para>These actions can be executed a total of two times.</para>
 /// <para>Rattling Coil Cost: 1</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// </summary>
@@ -13122,7 +13135,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34640"><strong>First Legacy</strong></see>-<i>PvE</i> (VPR) [34640] [Ability]
 /// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Can only be executed after First Generation.</para>
+/// <para>Can only be executed after successfully landing First Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Serpent's Tail changes to First Legacy when requirements for execution are met.</para>
@@ -13131,7 +13144,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34641"><strong>Second Legacy</strong></see>-<i>PvE</i> (VPR) [34641] [Ability]
 /// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Can only be executed after Second Generation.</para>
+/// <para>Can only be executed after successfully landing Second Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Serpent's Tail changes to Second Legacy when requirements for execution are met.</para>
@@ -13140,7 +13153,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34642"><strong>Third Legacy</strong></see>-<i>PvE</i> (VPR) [34642] [Ability]
 /// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Can only be executed after Third Generation.</para>
+/// <para>Can only be executed after successfully landing Third Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Serpent's Tail changes to Third Legacy when requirements for execution are met.</para>
@@ -13149,7 +13162,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34643"><strong>Fourth Legacy</strong></see>-<i>PvE</i> (VPR) [34643] [Ability]
 /// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Can only be executed after Fourth Generation.</para>
+/// <para>Can only be executed after successfully landing Fourth Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Serpent's Tail changes to Fourth Legacy when requirements for execution are met.</para>
@@ -13162,7 +13175,7 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Poised for Twinblood</para>
 /// <para>Poised for Twinblood Effect: Increases the potency of Uncoiled Twinblood by 50</para>
 /// <para>Duration: 60s</para>
-/// <para>Can only be executed after Uncoiled Fury.</para>
+/// <para>Can only be executed after landing Uncoiled Fury.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Twinfang changes to Uncoiled Twinfang when requirements for execution are met.</para>
@@ -13172,7 +13185,7 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/34645"><strong>Uncoiled Twinblood</strong></see>-<i>PvE</i> (VPR) [34645] [Ability]
 /// <para>Delivers an attack with a potency of 100 to the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Poised for Twinblood Potency: 150</para>
-/// <para>Can only be executed after Uncoiled Fury.</para>
+/// <para>Can only be executed after landing Uncoiled Fury.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Twinblood changes to Uncoiled Twinblood when requirements for execution are met.</para>
@@ -13198,7 +13211,8 @@ public enum ActionID : uint
 /// <para>Deals fire damage with a potency of .</para>
 /// <para>Additional Effect: Grants Aetherhues</para>
 /// <para>Duration: 30s</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Cannot be executed while under the effect of Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// </summary>
     FireInRedPvE = 34650,
     /// <summary>
@@ -13206,8 +13220,8 @@ public enum ActionID : uint
 /// <para>Deals wind damage with a potency of .</para>
 /// <para>Additional Effect: Grants Aetherhues II</para>
 /// <para>Duration: 30s</para>
-/// <para>Can only be executed while under the effect of Aetherhues. </para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues and not under the effect of Subtractive Palette. </para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Fire in Red changes to Aero in Green when requirements for execution are met.</para>
@@ -13219,8 +13233,8 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Palette Gauge by 25</para>
 /// <para>Additional Effect: Grants White Paint</para>
 /// <para>Maximum Stacks: 5</para>
-/// <para>Can only be executed while under the effect of Aetherhues II.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues II and not under the effect of Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Aero in Green changes to Water in Blue when requirements for execution are met.</para>
@@ -13232,7 +13246,7 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Aetherhues</para>
 /// <para>Duration: 30s</para>
 /// <para>Can only be executed while under the effect of Subtractive Palette.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// </summary>
     BlizzardInCyanPvE = 34653,
@@ -13241,8 +13255,8 @@ public enum ActionID : uint
 /// <para>Deals earth damage with a potency of .</para>
 /// <para>Additional Effect: Grants Aetherhues II</para>
 /// <para>Duration: 30s</para>
-/// <para>Can only be executed while under the effect of Subtractive Palette and Aetherhues.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues and Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13254,8 +13268,8 @@ public enum ActionID : uint
 /// <para>Deals lightning damage with a potency of .</para>
 /// <para>Additional Effect: Grants White Paint</para>
 /// <para>Maximum Stacks: 5</para>
-/// <para>Can only be executed while under the effect of Subtractive Palette and Aetherhues II.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues II and Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13267,7 +13281,8 @@ public enum ActionID : uint
 /// <para>Deals fire damage with a potency of  to target and all enemies nearby it.</para>
 /// <para>Additional Effect: Grants Aetherhues</para>
 /// <para>Duration: 30s</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Cannot be executed while under the effect of Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// </summary>
     FireIiInRedPvE = 34656,
     /// <summary>
@@ -13275,8 +13290,8 @@ public enum ActionID : uint
 /// <para>Deals wind damage with a potency of  to target and all enemies nearby it.</para>
 /// <para>Additional Effect: Grants Aetherhues II</para>
 /// <para>Duration: 30s</para>
-/// <para>Can only be executed while under the effect of Aetherhues. </para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues and not under the effect of Subtractive Palette. </para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Fire II in Red changes to Aero II in Green when requirements for execution are met.</para>
@@ -13288,8 +13303,8 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Palette Gauge by 25</para>
 /// <para>Additional Effect: Grants White Paint</para>
 /// <para>Maximum Stacks: 5</para>
-/// <para>Can only be executed while under the effect of Aetherhues II.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues II and not under the effect of Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Aero II in Green changes to Water II in Blue when requirements for execution are met.</para>
@@ -13301,7 +13316,7 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Aetherhues</para>
 /// <para>Duration: 30s</para>
 /// <para>Can only be executed while under the effect of Subtractive Palette.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// </summary>
     BlizzardIiInCyanPvE = 34659,
@@ -13310,8 +13325,8 @@ public enum ActionID : uint
 /// <para>Deals earth damage with a potency of  to target and all enemies nearby it.</para>
 /// <para>Additional Effect: Grants Aetherhues II</para>
 /// <para>Duration: 30s</para>
-/// <para>Can only be executed while under the effect of Subtractive Palette and Aetherhues.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues and Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13323,8 +13338,8 @@ public enum ActionID : uint
 /// <para>Deals lightning damage with a potency of  to target and all enemies nearby it.</para>
 /// <para>Additional Effect: Grants White Paint</para>
 /// <para>Maximum Stacks: 5</para>
-/// <para>Can only be executed while under the effect of Subtractive Palette and Aetherhues II.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>Can only be executed while under the effect of Aetherhues II and Subtractive Palette.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13337,7 +13352,7 @@ public enum ActionID : uint
 /// <para>Can only be executed while under the effect of White Paint.</para>
 /// <para>Cannot be executed while under the effect of Monochrome Tones.</para>
 /// <para>White Paint Cost: 1</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// </summary>
     HolyInWhitePvE = 34662,
     /// <summary>
@@ -13345,7 +13360,7 @@ public enum ActionID : uint
 /// <para>Deals unaspected damage to target and all enemies nearby it with a potency of  for the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Black Paint and Monochrome Tones.</para>
 /// <para>Black Paint Cost: 1</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// <para>This action does not share a recast timer with any other actions. Upon execution, the recast timer for this action will be applied to all other weaponskills and magic actions.</para>
 /// </summary>
     CometInBlackPvE = 34663,
@@ -13544,7 +13559,7 @@ public enum ActionID : uint
 /// <para>Additional Effect: Restores HP of all party members within 30 yalms of target</para>
 /// <para>Cure Potency: 400</para>
 /// <para>Can only be executed while under the effect of Starstruck.</para>
-/// <para>Consumes a stack of Hyperphantasia if available upon execution.</para>
+/// <para>When standing within the bounds of Starry Muse, consumes a stack of Hyperphantasia if available.</para>
 /// </summary>
     StarPrismPvE = 34681,
     /// <summary>
@@ -13726,7 +13741,7 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/36923"><strong>Damnation</strong></see>-<i>PvE</i> (WAR) [36923] [Ability]
 /// <para>Reduces damage taken by 40% and delivers an attack with a potency of 55 every time you suffer physical damage.</para>
 /// <para>Duration: 15s</para>
-/// <para>Additional Effect: Grants Primeval Impulse when the effect expires</para>
+/// <para>Additional Effect: Grants Primeval Impulse when the effect expires or damage is taken</para>
 /// <para>Primeval Impulse Effect: Healing over time</para>
 /// <para>Cure Potency: 400</para>
 /// <para>Duration: 15s</para>
@@ -13743,7 +13758,7 @@ public enum ActionID : uint
     PrimalWrathPvE = 36924,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36925"><strong>Primal Ruination</strong></see>-<i>PvE</i> (WAR) [36925] [Weaponskill]
-/// <para>Delivers a critical direct hit to target and all enemies nearby it with a potency of 740 for the first enemy, and 70% less for all remaining enemies.</para>
+/// <para>Delivers a critical direct hit to target and all enemies nearby it with a potency of 780 for the first enemy, and 70% less for all remaining enemies.</para>
 /// <para>Increases damage dealt when under an effect that raises critical hit rate or direct hit rate.</para>
 /// <para>Can only be executed while under the effect of Primal Ruination Ready.</para>
 /// <para></para>
@@ -13754,6 +13769,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36926"><strong>Shadowstride</strong></see>-<i>PvE</i> (DRK) [36926] [Ability]
 /// <para>Rush to a targeted enemy's location.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Maximum Charges: 2</para>
 /// <para>Cannot be executed while bound.</para>
 /// </summary>
@@ -13819,6 +13835,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36934"><strong>Trajectory</strong></see>-<i>PvE</i> (GNB) [36934] [Ability]
 /// <para>Rush to a targeted enemy's location.</para>
+/// <para>Additional Effect: Increased enmity</para>
 /// <para>Maximum Charges: 2</para>
 /// <para>Cannot be executed while bound.</para>
 /// </summary>
@@ -13915,8 +13932,8 @@ public enum ActionID : uint
     LeapingOpoPvE = 36945,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36946"><strong>Rising Raptor</strong></see>-<i>PvE</i> (MNK) [36946] [Weaponskill]
-/// <para>Delivers an attack with a potency of 330.</para>
-/// <para>Raptor's Fury Potency: 480</para>
+/// <para>Delivers an attack with a potency of 340.</para>
+/// <para>Raptor's Fury Potency: 540</para>
 /// <para>Can only be executed when in raptor form.</para>
 /// <para>Additional Effect: Changes form to coeurl</para>
 /// <para>Duration: 30s</para>
@@ -13924,10 +13941,10 @@ public enum ActionID : uint
     RisingRaptorPvE = 36946,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36947"><strong>Pouncing Coeurl</strong></see>-<i>PvE</i> (MNK) [36947] [Weaponskill]
-/// <para>Delivers an attack with a potency of 340.</para>
-/// <para>400 when executed from a target's flank.</para>
-/// <para>Coeurl's Fury Potency: 440</para>
-/// <para>Flank Coeurl's Fury Potency: 500</para>
+/// <para>Delivers an attack with a potency of 310.</para>
+/// <para>370 when executed from a target's flank.</para>
+/// <para>Coeurl's Fury Potency: 460</para>
+/// <para>Flank Coeurl's Fury Potency: 520</para>
 /// <para>Can only be executed when in coeurl form.</para>
 /// <para>Additional Effect: Changes form to opo-opo</para>
 /// <para>Duration: 30s</para>
@@ -13989,14 +14006,14 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36954"><strong>Lance Barrage</strong></see>-<i>PvE</i> (DRG) [36954] [Weaponskill]
 /// <para>Delivers an attack with a potency of 130.</para>
-/// <para>Combo Action: True Thrust</para>
+/// <para>Combo Action: True Thrust or Raiden Thrust</para>
 /// <para>Combo Potency: 340</para>
 /// </summary>
     LanceBarragePvE = 36954,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36955"><strong>Spiral Blow</strong></see>-<i>PvE</i> (DRG) [36955] [Weaponskill]
 /// <para>Delivers an attack with a potency of 140.</para>
-/// <para>Combo Action: True Thrust</para>
+/// <para>Combo Action: True Thrust or Raiden Thrust</para>
 /// <para>Combo Potency: 300</para>
 /// <para>Combo Bonus: Grants Power Surge</para>
 /// <para>Power Surge Effect: Increases damage dealt by 10%</para>
@@ -14062,15 +14079,15 @@ public enum ActionID : uint
 /// </summary>
     TenriJindoPvE = 36961,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/36962"><strong>Tengetsu</strong></see>-<i>PvE</i> (SAM) [36962] [Ability]
+/// <see href="https://garlandtools.org/db/#action/36962"><strong>Tengentsu</strong></see>-<i>PvE</i> (SAM) [36962] [Ability]
 /// <para>Reduces the amount of damage taken by the next attack by 10%.</para>
 /// <para>Duration: 4s</para>
-/// <para>Additional Effect: Grants Tengetsu's Foresight and increases Kenki Gauge by 10 when hit</para>
-/// <para>Tengetsu's Foresight Effect: Restores HP when effect expires</para>
+/// <para>Additional Effect: Grants Tengentsu's Foresight and increases Kenki Gauge by 10 when hit</para>
+/// <para>Tengentsu's Foresight Effect: Restores HP when effect expires</para>
 /// <para>Duration: 8s</para>
 /// <para>Cure Potency: 500</para>
 /// </summary>
-    TengetsuPvE = 36962,
+    TengentsuPvE = 36962,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36963"><strong>Gyofu</strong></see>-<i>PvE</i> (SAM) [36963] [Weaponskill]
 /// <para>Delivers an attack with a potency of 240.</para>
@@ -14100,7 +14117,6 @@ public enum ActionID : uint
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
 /// <para>Additional Effect: Grants a stack of Meditation, up to a maximum of 3</para>
 /// <para>Can only be executed while under the effect of Tendo, and after accumulating 3 Sen.</para>
-/// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Iaijutsu changes to Tendo Setsugekka when requirements for execution are met.</para>
@@ -14118,7 +14134,6 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/36968"><strong>Tendo Kaeshi Setsugekka</strong></see>-<i>PvE</i> (SAM) [36968] [Weaponskill]
 /// <para>Delivers a critical hit with a potency of 1,020.</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
-/// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Tsubame-gaeshi changes to Tendo Kaeshi Setsugekka when requirements for execution are met.</para>
@@ -14308,7 +14323,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36988"><strong>Retrace</strong></see>-<i>PvE</i> (BLM) [36988] [Ability]
 /// <para>Weave ley lines anew, setting your circle of power at a new location.</para>
-/// <para>Can only be executed while under the effect of Ley Lines.</para>
+/// <para>Can only be executed while under the effect of Ley Lines, and the effect duration will not be reset.</para>
 /// </summary>
     RetracePvE = 36988,
     /// <summary>

@@ -926,7 +926,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(174U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50295"><strong>Umbral Heart</strong></see> (BLM) [295]
-/// <para>Grants 3 Umbral Hearts upon casting Freeze or executing Manafont.</para>
+/// <para>Grants an Umbral Heart upon casting Freeze, or executing Manafont or Umbral Soul.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait UmbralHeartTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(295U);
     /// <summary>
@@ -934,7 +934,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
 /// <para>Casting of certain fire and ice spells will grant a stack of Astral Fire and Umbral Ice respectively.</para>
 /// <para>Maximum Stacks: 1</para>
 /// <para>Duration: 15s</para>
-/// <para>While under the effect of Astral Fire, the cost of casting Fire spells is doubled, MP recovery is reduced to 0, and the potency of Ice spells is reduced by 10%.</para>
+/// <para>While under the effect of Astral Fire, the potency of Fire spells is increased by 40%, the cost of casting Fire spells is doubled, MP recovery is reduced to 0, and the potency of Ice spells is reduced by 10%.</para>
 /// <para>While under the effect of Umbral Ice, the cost of casting Ice spells is reduced to 0, 2,500 MP is recovered upon landing an Ice spell, and the potency of Fire spells is reduced by 10%.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(296U);
@@ -997,7 +997,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(509U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50613"><strong>Thunder Mastery III</strong></see> (BLM) [613]
-/// <para>Upgrades Thunder to High Thunder and Thunder IV to High Thunder IV.</para>
+/// <para>Upgrades Thunder III to High Thunder and Thunder IV to High Thunder II.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait ThunderMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(613U);
     /// <summary>
@@ -1101,6 +1101,10 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte AstralFireStacks => JobGauge.AstralFireStacks;
 
+    /// <inheritdoc cref="BLMGauge.AstralSoulStacks"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public static System.Int32 AstralSoulStacks => JobGauge.AstralSoulStacks;
+
     /// <inheritdoc cref="BLMGauge.InUmbralIce"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean InUmbralIce => JobGauge.InUmbralIce;
@@ -1126,6 +1130,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
         ImGui.Text("UmbralHearts: " + UmbralHearts.ToString());
         ImGui.Text("UmbralIceStacks: " + UmbralIceStacks.ToString());
         ImGui.Text("AstralFireStacks: " + AstralFireStacks.ToString());
+        ImGui.Text("AstralSoulStacks: " + AstralSoulStacks.ToString());
         ImGui.Text("InUmbralIce: " + InUmbralIce.ToString());
         ImGui.Text("InAstralFire: " + InAstralFire.ToString());
         ImGui.Text("IsEnochianActive: " + IsEnochianActive.ToString());

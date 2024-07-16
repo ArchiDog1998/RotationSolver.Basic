@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/viper"><strong>Viper</strong></see>
 /// <br>Number of Actions: 75</br>
-/// <br>Number of Replace Actions: 11</br>
+/// <br>Number of Replace Actions: 9</br>
 /// <br>Number of Action Combos: 20</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
@@ -1364,13 +1364,13 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50524"><strong>Viper's Fangs</strong></see> (VPR) [524]
 /// <para>Allows the execution of Death Rattle.</para>
-/// <para>Can only be executed after successfully completing a combo with Flanksting Strike, Flanksbane Fang, Hindsting Strike, or Hindsbane Fang.</para>
+/// <para>Can only be executed upon successfully landing Flanksting Strike, Flanksbane Fang, Hindsting Strike, or Hindsbane Fang.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait VipersFangsTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(524U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50525"><strong>Viper's Maw</strong></see> (VPR) [525]
 /// <para>Allows the execution of Last Lash.</para>
-/// <para>Can only be executed after successfully completing a combo with Jagged Maw or Bloodied Maw.</para>
+/// <para>Can only be executed after successfully landing Jagged Maw or Bloodied Maw.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait VipersMawTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(525U);
     /// <summary>
@@ -1420,7 +1420,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSerpentsLineageTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(533U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50534"><strong>Serpent's Legacy</strong></see> (VPR) [534]
-/// <para>Allows the execution of First Legacy after First Generation, Second Legacy after Second Generation, Third Legacy after Third Generation, and Fourth Legacy after Fourth Generation.</para>
+/// <para>Allows the execution of First Legacy after landing First Generation, Second Legacy after landing Second Generation, Third Legacy after landing Third Generation, and Fourth Legacy after landing Fourth Generation.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait SerpentsLegacyTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(534U);
     /// <summary>
@@ -1485,18 +1485,6 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReawakenPvEReplace { get; }
-
-    /// <summary>
-/// <seealso cref="TwinfangPvE"/> -> <seealso cref="TwinfangBitePvE"/> -> <seealso cref="TwinfangThreshPvE"/> -> <seealso cref="UncoiledTwinfangPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinfangPvEReplace { get; }
-
-    /// <summary>
-/// <seealso cref="TwinbloodPvE"/> -> <seealso cref="TwinbloodBitePvE"/> -> <seealso cref="TwinbloodThreshPvE"/> -> <seealso cref="UncoiledTwinbloodPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinbloodPvEReplace { get; }
 
     /// <summary>
 /// <seealso cref="HuntersSnapPvP"/> -> <seealso cref="SwiftskinsCoilPvP"/> -> <seealso cref="OuroborosPvP"/>
@@ -1742,8 +1730,6 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE], true);
         SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE], true);
         ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE], true);
-        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE], true);
-        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE], true);
         HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP], true);
         SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], true);
         HuntersStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE], false);

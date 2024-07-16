@@ -452,6 +452,9 @@ internal partial class Configs : IPluginConfiguration
     [UI("The window padding for icons.", Parent = nameof(UseOverlayWindow))]
     public Vector4 WindowPadding { get; private set; } = Vector4.One * 40;
 
+
+    [UI("Make SoftTarget As Target", (int)UiString.ConfigWindow_Extra_Others)]
+    public ConditionBoolean MakeSoftTargetAsTarget { get; set; } = new(false, nameof(MakeSoftTargetAsTarget));
     #region Float
     [UI("Auto turns off RS when combat is over more for more then...",
         Parent =nameof(AutoOffAfterCombat))]
