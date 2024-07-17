@@ -709,8 +709,11 @@ internal partial class Configs : IPluginConfiguration
 
     public int ActionSequencerIndex { get; set; }
 
-    [UI("The modifier key to unlock movement temporary", Description = "RB is for gamepad player", Parent = nameof(PoslockCasting))]
+    [UI("The modifier keyboard key to unlock movement temporary", Parent = nameof(PoslockCasting))]
     public ConsoleModifiers PoslockModifier { get; set; }
+
+    [UI("The modifier gamepad key to unlock movement temporary", Parent = nameof(PoslockCasting))]
+    public Dalamud.Game.ClientState.GamePad.GamepadButtons PoslockGamepadButton { get; set; } = Dalamud.Game.ClientState.GamePad.GamepadButtons.R1;
 
     [JobFilter(PvE = JobFilterType.Raise)]
     [Range(0, 10000, ConfigUnitType.None, 200)]
