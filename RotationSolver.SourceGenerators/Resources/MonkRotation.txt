@@ -1033,7 +1033,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedGreasedLightningIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(367U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50428"><strong>Steel Peak Mastery</strong></see> (MNK) [428]
-/// <para>Upgrades Bootshine to The Forbidden Chakra and Steel Peak to The Forbidden Chakra.</para>
+/// <para>Upgrades Steel Peak to The Forbidden Chakra and Steeled Meditation to Forbidden Meditation.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait SteelPeakMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(428U);
     /// <summary>
@@ -1076,7 +1076,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait TornadoKickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(513U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50518"><strong>Melee Mastery</strong></see> (MNK) [518]
-/// <para>Increases the potency of Bootshine to 220, True Strike to 290, Snap Punch to 300, Twin Snakes to 340, Demolish to 300, Dragon Kick to 280, and The Forbidden Chakra to 400.</para>
+/// <para>Increases the potency of Bootshine to 220, True Strike to 300, Snap Punch to 270, Twin Snakes to 380, Demolish to 320, Dragon Kick to 280, and The Forbidden Chakra to 400.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(518U);
     /// <summary>
@@ -1108,7 +1108,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50660"><strong>Melee Mastery II</strong></see> (MNK) [660]
-/// <para>Increases the potency of Twin Snakes to 380, Demolish to 340, Dragon Kick to 320, and Six-sided Star to 780.</para>
+/// <para>Increases the potency of Twin Snakes to 420, Demolish to 360, Dragon Kick to 320, and Six-sided Star to 780.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 

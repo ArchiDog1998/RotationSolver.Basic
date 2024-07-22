@@ -17120,7 +17120,7 @@ public enum StatusID : ushort
     Inspiration = 3689,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3690"><strong>Subtractive Spectrum</strong></see> ↑ (PCT)
-/// <para>Able to execute Subtractive Palette.</para>
+/// <para>Able to execute Subtractive Palette without cost.</para>
 /// </summary>
     SubtractiveSpectrum = 3690,
     /// <summary>
@@ -17614,6 +17614,11 @@ public enum StatusID : ushort
 /// </summary>
     Vitalized_3807 = 3807,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3808"><strong>Directional Disregard</strong></see> ↓ (All Classes)
+/// <para>All action direction requirements are nullified.</para>
+/// </summary>
+    DirectionalDisregard = 3808,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3809"><strong>Seed Crystals</strong></see> ↓ (All Classes)
 /// <para>Heavy crystals are encasing your lower body. Will bear a Crystal Burden when this effect expires.</para>
 /// </summary>
@@ -17829,15 +17834,15 @@ public enum StatusID : ushort
 /// </summary>
     TsubamegaeshiReady = 3852,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/3853"><strong>Tengetsu</strong></see> ↑ (SAM)
+/// <see href="https://garlandtools.org/db/#status/3853"><strong>Tengentsu</strong></see> ↑ (SAM)
 /// <para>Damage taken is reduced.</para>
 /// </summary>
-    Tengetsu = 3853,
+    Tengentsu = 3853,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/3854"><strong>Tengetsu's Foresight</strong></see> ↑ (SAM)
+/// <see href="https://garlandtools.org/db/#status/3854"><strong>Tengentsu's Foresight</strong></see> ↑ (SAM)
 /// <para>HP will be restored automatically when effect expires.</para>
 /// </summary>
-    TengetsusForesight = 3854,
+    TengentsusForesight = 3854,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3855"><strong>Zanshin Ready</strong></see> ↑ (SAM)
 /// <para>Able to execute Zanshin.</para>
@@ -17969,7 +17974,7 @@ public enum StatusID : ushort
 /// </summary>
     MedicaIii = 3880,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#status/3881"><strong>Divine Grace</strong></see> ↑ (SCH)
+/// <see href="https://garlandtools.org/db/#status/3881"><strong>Divine Grace</strong></see> ↑ (WHM)
 /// <para>Able to execute Divine Caress.</para>
 /// </summary>
     DivineGrace = 3881,
@@ -18133,6 +18138,36 @@ public enum StatusID : ushort
 /// <para>Damage dealt is increased and restoring HP over time.</para>
 /// </summary>
     Riled_3914 = 3914,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3915"><strong>Lovely Poison</strong></see> ↑ (All Classes)
+/// <para>Weapon has been lovingly coated with venom.</para>
+/// </summary>
+    LovelyPoison = 3915,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3917"><strong>Infatuated</strong></see> ↓ (All Classes)
+/// <para>Suffering minor heart palpitations due to a growing fondness for Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    Infatuated = 3917,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3918"><strong>Head Over Heels</strong></see> ↓ (All Classes)
+/// <para>Suffering heart palpitations due to an attraction to Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    HeadOverHeels = 3918,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3919"><strong>Hopeless Devotion</strong></see> ↓ (All Classes)
+/// <para>Suffering severe heart palpitations due to undying affection for Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    HopelessDevotion = 3919,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3920"><strong>Fatal Attraction</strong></see> ↓ (All Classes)
+/// <para>Honey B. Lovely has taken your heart prisoner.</para>
+/// </summary>
+    FatalAttraction = 3920,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3935"><strong>Poison Resistance Down II</strong></see> ↓ (All Classes)
+/// <para>Poison resistance is significantly reduced.</para>
+/// </summary>
+    PoisonResistanceDownIi = 3935,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3938"><strong>Times Three</strong></see> ↑ (All Classes)
 /// <para>The angle of effect for the next rotational attack executed will be tripled.</para>
@@ -18368,6 +18403,11 @@ public enum StatusID : ushort
 /// <para>All are advised to prepare for ice-aspected damage.</para>
 /// </summary>
     ChanceOfBlizzards = 4014,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4021"><strong>Doped</strong></see> ↑ (All Classes)
+/// <para>A performance-enhancing compound is amplifying physical strength. Damage dealt is increased.</para>
+/// </summary>
+    Doped = 4021,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4029"><strong>Left Windup</strong></see> ↑ (All Classes)
 /// <para>Ready to unleash a series of blows, starting with a leftward spin.</para>
@@ -18733,6 +18773,11 @@ public enum StatusID : ushort
 /// <para>Body heat is being manipulated. Will freeze up when this effect expires.</para>
 /// </summary>
     ColdSweats = 4142,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4143"><strong>Top of the Hive</strong></see> ↑ (All Classes)
+/// <para>Honey B. Lovely is stealing the spotlight.</para>
+/// </summary>
+    TopOfTheHive = 4143,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4144"><strong>Acceleration Bomb</strong></see> ↓ (All Classes)
 /// <para>An acceleration-trigger explosive is affixed to the body. Any movement when effect wears off will result in detonation.</para>
