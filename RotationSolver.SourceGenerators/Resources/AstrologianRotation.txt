@@ -1160,7 +1160,7 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public static global::RotationSolver.Basic.Traits.IBaseTrait MaleficMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(188U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50189"><strong>Hyper Lightspeed</strong></see> (AST) [189]
-/// <para>Reduces Lightspeed recast time to 60 seconds.</para>
+/// <para>Reduces Lightspeed recast time to 90 seconds.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait HyperLightspeedTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(189U);
     /// <summary>
@@ -1234,7 +1234,7 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50673"><strong>Magick Mastery</strong></see> (AST) [673]
-/// <para>Increases the potency of Combust III's damage over time to 70, Fall Malefic to 270, and Macrocosmos to 270.</para>
+/// <para>Increases the potency of Combust III's damage over time to 70 and Fall Malefic to 270.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(673U);
 

@@ -570,6 +570,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
         return type switch //Find the object.
         {
+            TargetType.ProvokeOrOthers => FindProvokeTarget() ?? FindHostile(),
             TargetType.Provoke => FindProvokeTarget(),
             TargetType.Dispel => FindDispelTarget(),
             TargetType.Death => FindDeathPeople(),
@@ -822,6 +823,7 @@ public enum TargetType : byte
     None,
     Interrupt,
     Provoke,
+    ProvokeOrOthers,
     Death,
     Dispel,
     Move,

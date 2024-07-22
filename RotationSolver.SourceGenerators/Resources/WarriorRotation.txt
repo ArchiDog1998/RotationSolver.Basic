@@ -902,7 +902,7 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50569"><strong>Enhanced Primal Rend</strong></see> (WAR) [569]
 /// <para>Grants the effect of Primal Ruination Ready after executing Primal Rend.</para>
-/// <para>Duration: 20s</para>
+/// <para>Duration: 30s</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedPrimalRendTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(569U);
     /// <summary>

@@ -22,6 +22,7 @@ partial class DarkKnightRotation
     static partial void ModifyUnmendPvE(ref ActionSetting setting)
     {
         setting.SpecialType =  SpecialActionType.MeleeRange;
+        setting.TargetType = TargetType.ProvokeOrOthers;
     }
 
     static partial void ModifyLivingShadowPvE(ref ActionSetting setting)

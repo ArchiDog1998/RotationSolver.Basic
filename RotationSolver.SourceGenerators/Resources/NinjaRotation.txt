@@ -1530,10 +1530,15 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Ninki => JobGauge.Ninki;
 
+    /// <inheritdoc cref="NINGauge.Kazematoi"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public static System.Byte Kazematoi => JobGauge.Kazematoi;
+
     public override /// <inheritdoc/>
     void DisplayStatus()
     {
         ImGui.Text("Ninki: " + Ninki.ToString());
+        ImGui.Text("Kazematoi: " + Kazematoi.ToString());
         base.DisplayStatus();
     }
 

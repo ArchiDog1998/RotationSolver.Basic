@@ -841,22 +841,22 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseAction ZantetsukenPvP => _ZantetsukenPvPCreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TengentsuPvECreator = new(() =>
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _TengetsuPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TengentsuPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.TengetsuPvE, false);
         var setting = action.Setting;
-        ModifyTengentsuPvE(ref setting);
+        ModifyTengetsuPvE(ref setting);
         action.Setting = setting;
         return action;
     });
     /// <summary>
-/// Modify <inheritdoc cref="TengentsuPvE"/>
+/// Modify <inheritdoc cref="TengetsuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    static partial void ModifyTengentsuPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TengentsuPvE"/>
+    static partial void ModifyTengetsuPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.TengetsuPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseAction TengentsuPvE => _TengentsuPvECreator.Value;
+    public global::RotationSolver.Basic.Actions.IBaseAction TengetsuPvE => _TengetsuPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _GyofuPvECreator = new(() =>
@@ -1016,7 +1016,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(521U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50589"><strong>Third Eye Mastery</strong></see> (SAM) [589]
-/// <para>Upgrades Third Eye to Tengentsu.</para>
+/// <para>Upgrades Third Eye to Tengetsu.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait ThirdEyeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(589U);
     /// <summary>
@@ -1071,7 +1071,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet FugaPvEReplace { get; }
 
     /// <summary>
-/// <seealso cref="ThirdEyePvE"/> -> <seealso cref="TengentsuPvE"/>
+/// <seealso cref="ThirdEyePvE"/> -> <seealso cref="TengetsuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThirdEyePvEReplace { get; }
@@ -1276,7 +1276,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     {
         OgiNamikiriPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KaeshiNamikiriPvE, OgiNamikiriPvE], true);
         FugaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE], true);
-        ThirdEyePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengentsuPvE, ThirdEyePvE], true);
+        ThirdEyePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengetsuPvE, ThirdEyePvE], true);
         HakazePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE], true);
         IkishotenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE], true);
         JinpuPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JinpuPvE, HakazePvEReplace], false);
@@ -1296,5 +1296,5 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, TengentsuPvE, GyofuPvE, ZanshinPvE, TendoGokenPvE, TendoSetsugekkaPvE, TendoKaeshiGokenPvE, TendoKaeshiSetsugekkaPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [HakazePvE, JinpuPvE, ShifuPvE, YukikazePvE, GekkoPvE, KashaPvE, FugaPvE, MangetsuPvE, OkaPvE, EnpiPvE, MidareSetsugekkaPvE, TenkaGokenPvE, HiganbanaPvE, HissatsuShintenPvE, HissatsuKyutenPvE, HissatsuGyotenPvE, HissatsuYatenPvE, HagakurePvE, HissatsuGurenPvE, MeditatePvE, ThirdEyePvE, MeikyoShisuiPvE, IaijutsuPvE, HissatsuSeneiPvE, IkishotenPvE, TsubamegaeshiPvE, KaeshiGokenPvE, KaeshiSetsugekkaPvE, ShohaPvE, FukoPvE, OgiNamikiriPvE, KaeshiNamikiriPvE, YukikazePvP, GekkoPvP, KashaPvP, HyosetsuPvP, MangetsuPvP, OkaPvP, MidareSetsugekkaPvP, OgiNamikiriPvP, KaeshiNamikiriPvP, HissatsuSotenPvP, HissatsuChitenPvP, MineuchiPvP, MeikyoShisuiPvP, ZantetsukenPvP, TengetsuPvE, GyofuPvE, ZanshinPvE, TendoGokenPvE, TendoSetsugekkaPvE, TendoKaeshiGokenPvE, TendoKaeshiSetsugekkaPvE, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

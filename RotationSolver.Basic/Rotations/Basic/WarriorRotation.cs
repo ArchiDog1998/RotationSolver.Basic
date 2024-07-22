@@ -44,6 +44,7 @@ partial class WarriorRotation
     static partial void ModifyTomahawkPvE(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MeleeRange;
+        setting.TargetType = TargetType.ProvokeOrOthers;
     }
 
     static partial void ModifySteelCyclonePvE(ref ActionSetting setting)
