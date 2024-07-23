@@ -39,7 +39,7 @@ public interface IBaseAction : ICanUse, IAction
     /// The basic information of this action.
     /// </summary>
     ActionBasicInfo Info { get; }
-    internal WhyActionCantUse WhyCant { get; }
+    WhyActionCantUse WhyCant { get; }
 
     /// <summary>
     /// The cd information.

@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Rotations;
+﻿using ECommons.GameHelpers;
+
+namespace RotationSolver.Basic.Rotations;
 
 partial class CustomRotation
 {
@@ -162,8 +164,15 @@ partial class CustomRotation
         var countDown = Service.CountDownTime;
         if (countDown > 0)
         {
-            IBaseAction.TargetOverride = countDown < 1
-                ? TargetType.Move : TargetType.BeAttacked;
+            if (DataCenter.Role is JobRole.Tank)
+            {
+
+            }
+            else
+            {
+                IBaseAction.TargetOverride = countDown < 1
+                    ? TargetType.Move : TargetType.BeAttacked;
+            }
 
             gcdAction = null;
             return CountDownAction(countDown);

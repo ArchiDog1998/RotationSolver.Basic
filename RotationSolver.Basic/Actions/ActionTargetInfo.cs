@@ -538,7 +538,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
         switch (actionType)
         {
-            case SpecialActionType.MeleeRange:
+            case SpecialActionType.MeleeRange when Service.CountDownTime == 0:
                 IGameObjects = IGameObjects.Where(t => t.DistanceToPlayer() >= 3 + Service.Config.MeleeRangeOffset);
                 break;
 

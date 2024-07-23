@@ -37,18 +37,36 @@ partial class PictomancerRotation
         => Combo3(ref setting);
 
     static partial void ModifyFireIiInRedPvE(ref ActionSetting setting)
-        => Combo1(ref setting);
+    {
+        Combo1(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
+    }
 
     static partial void ModifyAeroIiInGreenPvE(ref ActionSetting setting)
-        => Combo2(ref setting);
+    {
+        Combo2(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
+    }
 
     static partial void ModifyWaterIiInBluePvE(ref ActionSetting setting)
-        => Combo3(ref setting);
+    {
+        Combo3(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
+    }
     #endregion
 
     private static void Palatte(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Player.HasStatus(true, StatusID.SubtractivePalette);
+        setting.ActionCheck = () => Player.HasStatus(true, StatusID.SubtractivePalette, StatusID.Hyperphantasia);
     }
 
     #region Palette
@@ -74,18 +92,30 @@ partial class PictomancerRotation
     {
         Palatte(ref setting);
         Combo1(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
     }
 
     static partial void ModifyStoneIiInYellowPvE(ref ActionSetting setting)
     {
         Palatte(ref setting);
         Combo2(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
     }
 
     static partial void ModifyThunderIiInMagentaPvE(ref ActionSetting setting)
     {
         Palatte(ref setting);
         Combo3(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 4,
+        };
     }
     #endregion
 

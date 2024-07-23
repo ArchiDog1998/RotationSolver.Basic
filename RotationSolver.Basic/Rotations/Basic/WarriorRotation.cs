@@ -106,7 +106,7 @@ partial class WarriorRotation
 
     static partial void ModifyInnerReleasePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HasHostilesInRange; //&& !ActionID.InnerReleasePvE.IsCoolingDown();
+        setting.ActionCheck = () => HasHostilesInRange;
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
@@ -115,7 +115,7 @@ partial class WarriorRotation
 
     static partial void ModifyBerserkPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HasHostilesInRange; //&& !ActionID.InnerReleasePvE.IsCoolingDown();
+        setting.ActionCheck = () => HasHostilesInRange;
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,

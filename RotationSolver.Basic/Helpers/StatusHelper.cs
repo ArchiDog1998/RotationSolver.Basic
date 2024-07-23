@@ -1,7 +1,9 @@
 ﻿using Dalamud.Game.ClientState.Statuses;
 using ECommons.Automation;
+using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using RotationSolver.Basic.Configuration;
+using static ECommons.UIHelpers.AddonMasterImplementations.AddonMaster;
 using GStatus = Lumina.Excel.GeneratedSheets.Status;
 namespace RotationSolver.Basic.Helpers;
 
@@ -211,7 +213,7 @@ public static class StatusHelper
 
     internal static IEnumerable<float> StatusTimes(this IGameObject obj, bool isFromSelf, params StatusID[] statusIDs)
     {
-        return obj.GetStatus(isFromSelf, statusIDs).Select(status => status.RemainingTime == 0 ? float.MaxValue : status.RemainingTime);
+        return obj.GetStatus(isFromSelf, statusIDs).Select(status => status.RemainingTime == 0 ? float.MaxValue : Math.Abs(status.RemainingTime));
     }
 
     /// <summary>

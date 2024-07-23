@@ -1,5 +1,6 @@
 ﻿namespace RotationSolver.Basic.Data;
-internal enum WhyActionCantUse : byte
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+public enum WhyActionCantUse : byte
 {
     [Description("It can be used!")]
     None = 0,
