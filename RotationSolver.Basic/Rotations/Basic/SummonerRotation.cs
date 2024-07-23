@@ -13,13 +13,13 @@ partial class SummonerRotation
     public override bool CanHealSingleSpell => false;
 
     /// <summary/>
-    public static bool InBahamut => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.DeathflarePvE;
+    public static bool InBahamut => AdjustId(ActionID.AstralFlowPvE) == ActionID.DeathflarePvE;
 
     /// <summary/>
-    public static bool InPhoenix => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.RekindlePvE;
+    public static bool InPhoenix => AdjustId(ActionID.AstralFlowPvE) == ActionID.RekindlePvE;
 
     /// <summary/>
-    public static bool InSolarBahamut => Service.GetAdjustedActionId(ActionID.AstralFlowPvE) == ActionID.SunflarePvE;
+    public static bool InSolarBahamut => AdjustId(ActionID.AstralFlowPvE) == ActionID.SunflarePvE;
 
     private protected sealed override IBaseAction Raise => ResurrectionPvE;
 

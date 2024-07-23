@@ -53,4 +53,21 @@ public static class ActionIdHelper
     {
         return ActionManager.GetAdjustedCastTime(ActionType.Action, (uint)actionID) / 1000f; ;
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public static ActionID GetAdjustedActionId(this ActionID id)
+        => (ActionID)GetAdjustedActionId((uint)id);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public static unsafe uint GetAdjustedActionId(uint id)
+        => ActionManager.Instance()->GetAdjustedActionId(id);
+
 }

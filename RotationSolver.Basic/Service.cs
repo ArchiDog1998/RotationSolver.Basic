@@ -140,12 +140,6 @@ internal class Service : IDisposable
         return upload;
     }
 
-    public static ActionID GetAdjustedActionId(ActionID id)
-        => (ActionID)GetAdjustedActionId((uint)id);
-
-    public static unsafe uint GetAdjustedActionId(uint id)
-        =>  ActionManager.Instance()->GetAdjustedActionId(id);
-
     public unsafe static IEnumerable<IntPtr> GetAddons<T>() where T : struct
     {
         if (typeof(T).GetCustomAttribute<Addon>() is not Addon on) return [];

@@ -44,32 +44,32 @@ partial class GunbreakerRotation
 
     static partial void ModifySavageClawPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.GnashingFangPvE) == ActionID.SavageClawPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.GnashingFangPvE) == ActionID.SavageClawPvE;
     }
 
     static partial void ModifyWickedTalonPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.GnashingFangPvE) == ActionID.WickedTalonPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.GnashingFangPvE) == ActionID.WickedTalonPvE;
     }
 
     static partial void ModifyJugularRipPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.ContinuationPvE) == ActionID.JugularRipPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.JugularRipPvE;
     }
 
     static partial void ModifyAbdomenTearPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.ContinuationPvE) == ActionID.AbdomenTearPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.AbdomenTearPvE;
     }
 
     static partial void ModifyEyeGougePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.ContinuationPvE) == ActionID.EyeGougePvE;
+        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.EyeGougePvE;
     }
 
     static partial void ModifyHypervelocityPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.ContinuationPvE) == ActionID.HypervelocityPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.HypervelocityPvE;
     }
 
     static partial void ModifyLightningShotPvE(ref ActionSetting setting)

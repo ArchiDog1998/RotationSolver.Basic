@@ -153,14 +153,14 @@ partial class DancerRotation
     {
         setting.StatusNeed = [StatusID.StandardStep];
         setting.StatusProvide = [StatusID.LastDanceReady];
-        setting.ActionCheck = () => IsDancing && CompletedSteps == 2 && Service.GetAdjustedActionId(ActionID.StandardStepPvE) == ActionID.DoubleStandardFinishPvE;
+        setting.ActionCheck = () => IsDancing && CompletedSteps == 2 && AdjustId(ActionID.StandardStepPvE) == ActionID.DoubleStandardFinishPvE;
     }
 
     static partial void ModifyQuadrupleTechnicalFinishPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.TechnicalStep];
         setting.StatusProvide = [StatusID.DanceOfTheDawnReady];
-        setting.ActionCheck = () => IsDancing && CompletedSteps == 4 && Service.GetAdjustedActionId(ActionID.TechnicalStepPvE) == ActionID.QuadrupleTechnicalFinishPvE;
+        setting.ActionCheck = () => IsDancing && CompletedSteps == 4 && AdjustId(ActionID.TechnicalStepPvE) == ActionID.QuadrupleTechnicalFinishPvE;
     }
 
     static partial void ModifyEmboitePvE(ref ActionSetting setting)

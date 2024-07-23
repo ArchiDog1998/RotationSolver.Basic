@@ -1,6 +1,5 @@
 ﻿using Lumina;
 using Lumina.Data;
-using Lumina.Excel.GeneratedSheets2;
 using RotationSolver.GameData;
 
 var gameData = new GameData("C:\\Program Files (x86)\\SquareEnix\\FINAL FANTASY XIV - A Realm Reborn\\game\\sqpack", new LuminaOptions

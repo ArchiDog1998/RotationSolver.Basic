@@ -13,10 +13,12 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     private static readonly List<Action> _sayedActions = [];
     private static readonly Dictionary<uint, uint[]> _replaceActions = new()
     {
-        { 119, [127, 3568, 7431, 16533, 25859] }, //WHM Stone.
-        { 17869, [3584, 7435, 16541, 25865] }, //SCH Ruin.
-        { 3596, [3598, 7442, 16555, 25871] }, //AST Malefic.
-        { 24283, [24306, 24312] }, //SGE Dosis.
+        { 119, [127, 3568, 7431, 16533, 25859] }, //WHM Stone PvE
+        { 17869, [3584, 7435, 16541, 25865] }, //SCH Ruin PvE
+        { 3596, [3598, 7442, 16555, 25871] }, //AST Malefic PvE
+        { 24283, [24306, 24312] }, //SGE Dosis PvE
+        { 34689, [34664, 34665, 34666, 34667] }, //PCT Creature Motif PvE
+        { 35347, [34670, 34671, 34672, 34673] }, //PCT Living Muse PvE
     };
 
     protected override string ToName(ReplaceAction item)

@@ -46,7 +46,7 @@ partial class DarkKnightRotation
 
     static partial void ModifySaltAndDarknessPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Service.GetAdjustedActionId(ActionID.SaltedEarthPvE) == ActionID.SaltAndDarknessPvE;
+        setting.ActionCheck = () => AdjustId(ActionID.SaltedEarthPvE) == ActionID.SaltAndDarknessPvE;
     }
 
     static partial void ModifyShadowbringerPvE(ref ActionSetting setting)

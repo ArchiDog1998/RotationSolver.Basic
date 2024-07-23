@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/pictomancer"><strong>Pictomancer</strong></see>
 /// <br>Number of Actions: 70</br>
-/// <br>Number of Replace Actions: 16</br>
+/// <br>Number of Replace Actions: 18</br>
 /// <br>Number of Action Combos: 2</br>
 /// <br>Number of Traits: 18</br>
 /// </summary>
@@ -1395,6 +1395,12 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseActionSet BlizzardIiInCyanPvEReplace { get; }
 
     /// <summary>
+/// <seealso cref="CreatureMotifPvE"/> -> <seealso cref="PomMotifPvE"/> -> <seealso cref="WingMotifPvE"/> -> <seealso cref="ClawMotifPvE"/> -> <seealso cref="MawMotifPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet CreatureMotifPvEReplace { get; }
+
+    /// <summary>
 /// <seealso cref="WeaponMotifPvE"/> -> <seealso cref="HammerMotifPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1405,6 +1411,12 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LandscapeMotifPvEReplace { get; }
+
+    /// <summary>
+/// <seealso cref="LivingMusePvE"/> -> <seealso cref="PomMusePvE"/> -> <seealso cref="WingedMusePvE"/> -> <seealso cref="ClawedMusePvE"/> -> <seealso cref="FangedMusePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LivingMusePvEReplace { get; }
 
     /// <summary>
 /// <seealso cref="SteelMusePvE"/> -> <seealso cref="StrikingMusePvE"/>
@@ -1612,8 +1624,10 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
         BlizzardInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, StoneInYellowPvE, BlizzardInCyanPvE], false);
         FireIiInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, AeroIiInGreenPvE, FireIiInRedPvE], false);
         BlizzardIiInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, StoneIiInYellowPvE, BlizzardIiInCyanPvE], false);
+        CreatureMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MawMotifPvE, ClawMotifPvE, WingMotifPvE, PomMotifPvE, CreatureMotifPvE], false);
         WeaponMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], true);
         LandscapeMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], true);
+        LivingMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangedMusePvE, ClawedMusePvE, WingedMusePvE, PomMusePvE, LivingMusePvE], true);
         SteelMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], true);
         ScenicMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarryMusePvE, ScenicMusePvE], true);
         MogOfTheAgesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], true);

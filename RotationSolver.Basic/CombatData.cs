@@ -385,14 +385,14 @@ public static class CombatData
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public static uint AdjustId(uint id) => Service.GetAdjustedActionId(id);
+    public static uint AdjustId(uint id) => ActionIdHelper.GetAdjustedActionId(id);
 
     /// <summary>
-    /// 
+    /// Get the adjusted action id.
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public static ActionID AdjustId(ActionID id) => Service.GetAdjustedActionId(id);
+    public static ActionID AdjustId(ActionID id) => id.GetAdjustedActionId();
     #endregion
 
     #region Config
@@ -562,12 +562,4 @@ public static class CombatData
         return IActionHelper.IsLastAction(ids);
     }
     #endregion
-
-    /// <summary>
-    /// Get the adjusted action id.
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
-    public static ActionID GetAdjustedActionId(ActionID id) 
-        => Service.GetAdjustedActionId(id);
 }
