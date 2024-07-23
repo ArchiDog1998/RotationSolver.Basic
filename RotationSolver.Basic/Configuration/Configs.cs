@@ -580,7 +580,7 @@ internal partial class Configs : IPluginConfiguration
 
     [JobFilter(PvP = JobFilterType.NoJob)]
     [UI("Remaining countdown duration when abilities will start being used before finishing the countdown.", (int)UiString.ConfigWindow_Basic_Timer, Section = 1)]
-    [Range(0, 0.7f, ConfigUnitType.Seconds, 0.002f)]
+    [Range(0, 0.8f, ConfigUnitType.Seconds, 0.002f)]
     public float CountDownAhead { get; set; } = 0.4f;
 
     [UI("The angle that targets can be selected as the move ability targets.", (int)UiString.ConfigWindow_Target_Config,

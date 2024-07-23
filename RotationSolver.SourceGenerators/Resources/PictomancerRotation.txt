@@ -1608,10 +1608,10 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected PictomancerRotation()
     {
-        FireInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterInBluePvE, AeroInGreenPvE, FireInRedPvE], true);
-        BlizzardInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, StoneInYellowPvE, BlizzardInCyanPvE], true);
-        FireIiInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, AeroIiInGreenPvE, FireIiInRedPvE], true);
-        BlizzardIiInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, StoneIiInYellowPvE, BlizzardIiInCyanPvE], true);
+        FireInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterInBluePvE, AeroInGreenPvE, FireInRedPvE], false);
+        BlizzardInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderInMagentaPvE, StoneInYellowPvE, BlizzardInCyanPvE], false);
+        FireIiInRedPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaterIiInBluePvE, AeroIiInGreenPvE, FireIiInRedPvE], false);
+        BlizzardIiInCyanPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThunderIiInMagentaPvE, StoneIiInYellowPvE, BlizzardIiInCyanPvE], false);
         WeaponMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], true);
         LandscapeMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], true);
         SteelMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], true);

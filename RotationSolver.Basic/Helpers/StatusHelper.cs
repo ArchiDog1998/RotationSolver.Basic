@@ -65,7 +65,19 @@ public static class StatusHelper
     /// </summary>
     public static StatusID[] AreaHots { get; } =
     [
-        StatusID.AspectedHelios, StatusID.MedicaIi, StatusID.TrueMedicaIi
+        StatusID.AspectedHelios,
+        StatusID.MedicaIi,
+        StatusID.TrueMedicaIi,
+        StatusID.PhysisIi,
+        StatusID.Physis,
+        StatusID.SacredSoil_1944,
+        StatusID.WhisperingDawn,
+        StatusID.AngelsWhisper,
+        StatusID.Seraphism_3885,
+        StatusID.Asylum_1911,
+        StatusID.DivineAura,
+        StatusID.MedicaIii_3986,
+        StatusID.MedicaIii,
     ];
 
     /// <summary>
@@ -73,17 +85,26 @@ public static class StatusHelper
     /// </summary>
     public static StatusID[] SingleHots { get; } =
     [
-        StatusID.AspectedBenefic, StatusID.Regen, StatusID.Regen_897, StatusID.Regen_1330
+        StatusID.AspectedBenefic,
+        StatusID.Regen,
+        StatusID.Regen_897,
+        StatusID.Regen_1330,
+        StatusID.TheEwer_3891,
     ];
 
     internal static StatusID[] TankStanceStatus { get; } =
     [
-        StatusID.Grit, StatusID.RoyalGuard_1833, StatusID.IronWill, StatusID.Defiance, 
+        StatusID.Grit,
+        StatusID.RoyalGuard_1833,
+        StatusID.IronWill,
+        StatusID.Defiance,
     ];
 
     internal static StatusID[] NoNeedHealingStatus { get; } =
     [
-        StatusID.Holmgang_409, StatusID.LivingDead, //StatusID.WalkingDead,
+        StatusID.Holmgang_409,
+        StatusID.LivingDead, 
+        //StatusID.WalkingDead,
         StatusID.Superbolide,
     ];
 
@@ -119,6 +140,9 @@ public static class StatusHelper
         StatusID.ShadowWall,
         StatusID.Nebula,
 
+        StatusID.Guardian,
+        StatusID.ShadowedVigil,
+        StatusID.GreatNebula,
         StatusID.Damnation,
         .. NoNeedHealingStatus,
     ];

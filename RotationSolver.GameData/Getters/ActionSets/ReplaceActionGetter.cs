@@ -7,6 +7,9 @@ namespace RotationSolver.GameData.Getters.ActionSets;
 internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotationGetter actionGetter)
     : ActionSetGetterBase<ReplaceAction>(gameData, actionGetter)
 {
+    private bool _isReplace = true;
+    protected override bool IsReplace => _isReplace;
+
     private static readonly List<Action> _sayedActions = [];
     private static readonly Dictionary<uint, uint[]> _replaceActions = new()
     {
@@ -33,9 +36,21 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
         {
             return [];
         }
-        if (item.ReplaceAction1.Value is Action act1 && act1.RowId != 0/* && item.Type1 is not 4*/) actionList.Add(act1);
-        if (item.ReplaceAction2.Value is Action act2 && act2.RowId != 0/* && item.Type2 is not 4*/) actionList.Add(act2);
-        if (item.ReplaceAction3.Value is Action act3 && act3.RowId != 0/* && item.Type3 is not 4*/) actionList.Add(act3);
+        if (item.ReplaceAction1.Value is Action act1 && act1.RowId != 0/* && item.Type1 is not 4*/)
+        {
+            _isReplace = item.Type1 is not 1;
+            actionList.Add(act1);
+        }
+        if (item.ReplaceAction2.Value is Action act2 && act2.RowId != 0/* && item.Type2 is not 4*/)
+        {
+            _isReplace |= item.Type1 is not 1;
+            actionList.Add(act2);
+        }
+        if (item.ReplaceAction3.Value is Action act3 && act3.RowId != 0/* && item.Type3 is not 4*/)
+        {
+            _isReplace |= item.Type1 is not 1;
+            actionList.Add(act3);
+        }
 
         if (actionList.Count < 2)
         {

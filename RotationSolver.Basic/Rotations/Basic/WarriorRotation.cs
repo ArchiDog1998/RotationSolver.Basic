@@ -36,24 +36,55 @@ partial class WarriorRotation
         setting.StatusProvide = [StatusID.SurgingTempest];
     }
 
-    static partial void ModifyInnerBeastPvE(ref ActionSetting setting)
+    #region BeastGauge
+    private static void BeastGaugeSingle(ref ActionSetting setting)
     {
         setting.ActionCheck = () => BeastGauge >= 50 || Player.HasStatus(true, StatusID.InnerRelease);
     }
+
+    private static void BeastGaugeAoe(ref ActionSetting setting)
+    {
+        BeastGaugeSingle(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    private static void BeastReplaceStatus(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.NascentChaos];
+    }
+
+    static partial void ModifyInnerBeastPvE(ref ActionSetting setting)
+        => BeastGaugeSingle(ref setting);
+
+    static partial void ModifyFellCleavePvE(ref ActionSetting setting)
+        => BeastGaugeSingle(ref setting);
+
+    static partial void ModifyInnerChaosPvE(ref ActionSetting setting)
+    {
+        BeastGaugeSingle(ref setting);
+        BeastReplaceStatus(ref setting);
+    }
+
+    static partial void ModifySteelCyclonePvE(ref ActionSetting setting)
+        => BeastGaugeAoe(ref setting);
+
+    static partial void ModifyDecimatePvE(ref ActionSetting setting)
+        => BeastGaugeAoe(ref setting);
+
+    static partial void ModifyChaoticCyclonePvE(ref ActionSetting setting)
+    {
+        BeastGaugeAoe(ref setting);
+        BeastReplaceStatus(ref setting);
+    }
+    #endregion
 
     static partial void ModifyTomahawkPvE(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MeleeRange;
         setting.TargetType = TargetType.ProvokeOrOthers;
-    }
-
-    static partial void ModifySteelCyclonePvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => BeastGauge >= 50 || Player.HasStatus(true, StatusID.InnerRelease);
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
     }
 
     static partial void ModifyPrimalRendPvE(ref ActionSetting setting)
@@ -73,13 +104,9 @@ partial class WarriorRotation
         };
     }
 
-    static partial void ModifyFellCleavePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.BurgeoningFury];
-    }
-
     static partial void ModifyInnerReleasePvE(ref ActionSetting setting)
     {
+        setting.ActionCheck = () => HasHostilesInRange; //&& !ActionID.InnerReleasePvE.IsCoolingDown();
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
@@ -88,7 +115,7 @@ partial class WarriorRotation
 
     static partial void ModifyBerserkPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => HasHostilesInRange && !ActionID.InnerReleasePvE.IsCoolingDown();
+        setting.ActionCheck = () => HasHostilesInRange; //&& !ActionID.InnerReleasePvE.IsCoolingDown();
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
