@@ -119,6 +119,7 @@ partial class PictomancerRotation
     }
     #endregion
 
+    #region Creature
     #region Creature Motif
     static partial void ModifyCreatureMotifPvE(ref ActionSetting setting)
     {
@@ -151,7 +152,7 @@ partial class PictomancerRotation
     }
     #endregion
 
-    #region Living
+    #region Living Muse
     static partial void ModifyLivingMusePvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => false;
@@ -194,6 +195,113 @@ partial class PictomancerRotation
         setting.ActionCheck = () => MadeenPortraitReady;
     }
     #endregion
+    #endregion
+
+    #region Weapon
+    #region Weapon Motif
+    static partial void ModifyWeaponMotifPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => false;
+    }
+
+    private static void WeaponMotif(ref ActionSetting setting, ActionID actionId)
+    {
+        setting.ActionCheck = () => !WeaponMotifDrawn && ActionID.WeaponMotifPvE.GetAdjustedActionId() == actionId;
+    }
+
+    static partial void ModifyHammerMotifPvE(ref ActionSetting setting)
+    {
+        WeaponMotif(ref setting, ActionID.HammerMotifPvE);
+    }
+    #endregion
+
+    #region Steel Muse
+    static partial void ModifySteelMusePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => false;
+    }
+
+    static void SteelMuse(ref ActionSetting setting, ActionID actionId)
+    {
+        setting.ActionCheck = () => WeaponMotifDrawn && ActionID.SteelMusePvE.GetAdjustedActionId() == actionId;
+    }
+
+    static partial void ModifyStrikingMusePvE(ref ActionSetting setting)
+    {
+        SteelMuse(ref setting, ActionID.StrikingMusePvE);
+    }
+    #endregion
+
+    #region Hammer
+    static void HammerTime(ref ActionSetting setting, ActionID actionId)
+    {
+        setting.StatusNeed = [StatusID.HammerTime];
+        setting.ActionCheck = () => ActionID.HammerStampPvE.GetAdjustedActionId() == actionId;
+    }
+
+    static partial void ModifyHammerStampPvE(ref ActionSetting setting)
+    {
+        HammerTime(ref setting, ActionID.HammerStampPvE);
+    }
+
+    static partial void ModifyHammerBrushPvE(ref ActionSetting setting)
+    {
+        HammerTime(ref setting, ActionID.HammerBrushPvE);
+    }
+
+    static partial void ModifyPolishingHammerPvE(ref ActionSetting setting)
+    {
+        HammerTime(ref setting, ActionID.PolishingHammerPvE);
+    }
+    #endregion
+    #endregion
+
+    #region Landscape
+    #region Landscape Motif
+    static partial void ModifyLandscapeMotifPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => false;
+    }
+
+    private static void LandscapeMotif(ref ActionSetting setting, ActionID actionId)
+    {
+        setting.ActionCheck = () => !LandscapeMotifDrawn && ActionID.LandscapeMotifPvE.GetAdjustedActionId() == actionId;
+    }
+
+    static partial void ModifyStarrySkyMotifPvE(ref ActionSetting setting)
+    {
+        LandscapeMotif(ref setting, ActionID.StarrySkyMotifPvE);
+    }
+    #endregion
+
+    #region Scenic Muse
+    static partial void ModifyScenicMusePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => false;
+    }
+
+    private static void ScenicMuse(ref ActionSetting setting, ActionID actionId)
+    {
+        setting.ActionCheck = () => LandscapeMotifDrawn && ActionID.ScenicMusePvE.GetAdjustedActionId() == actionId;
+    }
+
+    static partial void ModifyStarryMusePvE(ref ActionSetting setting)
+    {
+        ScenicMuse(ref setting, ActionID.StarryMusePvE);
+    }
+    #endregion
+    #endregion
+
+
+    static partial void ModifyHolyInWhitePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => Paint > 0;
+    }
+
+    static partial void ModifyCometInBlackPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.MonochromeTones];
+    }
 
     static partial void ModifyStarPrismPvE(ref ActionSetting setting)
     {
@@ -202,8 +310,13 @@ partial class PictomancerRotation
 
     static partial void ModifySubtractivePalettePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => PalleteGauge >= 50;
-        setting.StatusProvide = [StatusID.SubtractivePalette];
+        setting.ActionCheck = () => PalleteGauge >= 50 || Player.HasStatus(true, StatusID.SubtractiveSpectrum);
+        setting.StatusProvide = [StatusID.SubtractivePalette, StatusID.MonochromeTones];
+    }
+
+    static partial void ModifyTemperaGrassaPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.TemperaCoat];
     }
 
     #region Basic Actions
