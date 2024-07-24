@@ -379,22 +379,6 @@ public static class CombatData
         => DataCenter.GCDTime(gcdCount, offset);
     #endregion
 
-    #region ID
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
-    public static uint AdjustId(uint id) => ActionIdHelper.GetAdjustedActionId(id);
-
-    /// <summary>
-    /// Get the adjusted action id.
-    /// </summary>
-    /// <param name="id"></param>
-    /// <returns></returns>
-    public static ActionID AdjustId(ActionID id) => id.GetAdjustedActionId();
-    #endregion
-
     #region Config
     /// <summary>
     /// The count down ahead.

@@ -85,4 +85,7 @@ public enum WhyActionCantUse : byte
 
     [Description("Can't find the correct Target.")]
     Target,
+
+    [Description("This action isn't highlighted.")]
+    Highlight,
 }

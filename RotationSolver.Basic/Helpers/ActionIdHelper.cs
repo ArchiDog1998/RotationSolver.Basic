@@ -1,6 +1,5 @@
 ﻿using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Client.Game;
-using Lumina.Excel.GeneratedSheets;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.Basic.Helpers;
@@ -59,15 +58,20 @@ public static class ActionIdHelper
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    public static ActionID GetAdjustedActionId(this ActionID id)
+    [Obsolete]
+    public static ActionID AdjustId(this ActionID id)
         => (ActionID)GetAdjustedActionId((uint)id);
+
+    private static unsafe uint GetAdjustedActionId(uint id)
+        => ActionManager.Instance()->GetAdjustedActionId(id);
 
     /// <summary>
     /// 
     /// </summary>
-    /// <param name="id"></param>
+    /// <param name="actionID"></param>
     /// <returns></returns>
-    public static unsafe uint GetAdjustedActionId(uint id)
-        => ActionManager.Instance()->GetAdjustedActionId(id);
-
+    public unsafe static bool IsHighlight(this ActionID actionID)
+    {
+        return ActionManager.Instance()->IsActionHighlighted(ActionType.Action, (uint)actionID);
+    }
 }

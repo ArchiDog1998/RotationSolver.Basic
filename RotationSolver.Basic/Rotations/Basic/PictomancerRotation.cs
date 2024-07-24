@@ -3,9 +3,7 @@ using static RotationSolver.Basic.CombatData;
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class PictomancerRotation
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Intelligence;
@@ -128,7 +126,7 @@ partial class PictomancerRotation
 
     private static void CreatureMotif(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => !CreatureMotifDrawn && ActionID.CreatureMotifPvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => !CreatureMotifDrawn && ActionID.CreatureMotifPvE.AdjustId() == actionId;
     }
 
     static partial void ModifyPomMotifPvE(ref ActionSetting setting)
@@ -160,7 +158,7 @@ partial class PictomancerRotation
 
     private static void LivingMuse(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => CreatureMotifDrawn && ActionID.LivingMusePvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => CreatureMotifDrawn && ActionID.LivingMusePvE.AdjustId() == actionId;
     }
 
     static partial void ModifyPomMusePvE(ref ActionSetting setting)
@@ -206,7 +204,7 @@ partial class PictomancerRotation
 
     private static void WeaponMotif(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => !WeaponMotifDrawn && ActionID.WeaponMotifPvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => !WeaponMotifDrawn && ActionID.WeaponMotifPvE.AdjustId() == actionId;
     }
 
     static partial void ModifyHammerMotifPvE(ref ActionSetting setting)
@@ -223,35 +221,32 @@ partial class PictomancerRotation
 
     static void SteelMuse(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => WeaponMotifDrawn && ActionID.SteelMusePvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => WeaponMotifDrawn && ActionID.SteelMusePvE.AdjustId() == actionId;
     }
 
     static partial void ModifyStrikingMusePvE(ref ActionSetting setting)
     {
         SteelMuse(ref setting, ActionID.StrikingMusePvE);
+        setting.StatusProvide = [StatusID.HammerTime];
     }
     #endregion
 
     #region Hammer
-    static void HammerTime(ref ActionSetting setting, ActionID actionId)
-    {
-        setting.StatusNeed = [StatusID.HammerTime];
-        setting.ActionCheck = () => ActionID.HammerStampPvE.GetAdjustedActionId() == actionId;
-    }
-
     static partial void ModifyHammerStampPvE(ref ActionSetting setting)
     {
-        HammerTime(ref setting, ActionID.HammerStampPvE);
+        setting.StatusNeed = [StatusID.HammerTime];
     }
 
     static partial void ModifyHammerBrushPvE(ref ActionSetting setting)
     {
-        HammerTime(ref setting, ActionID.HammerBrushPvE);
+        setting.StatusNeed = [StatusID.HammerTime];
+        setting.ComboIds = [ActionID.HammerStampPvE];
     }
 
     static partial void ModifyPolishingHammerPvE(ref ActionSetting setting)
     {
-        HammerTime(ref setting, ActionID.PolishingHammerPvE);
+        setting.StatusNeed = [StatusID.HammerTime];
+        setting.ComboIds = [ActionID.PolishingHammerPvE];
     }
     #endregion
     #endregion
@@ -265,7 +260,7 @@ partial class PictomancerRotation
 
     private static void LandscapeMotif(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => !LandscapeMotifDrawn && ActionID.LandscapeMotifPvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => !LandscapeMotifDrawn && ActionID.LandscapeMotifPvE.AdjustId() == actionId;
     }
 
     static partial void ModifyStarrySkyMotifPvE(ref ActionSetting setting)
@@ -282,7 +277,7 @@ partial class PictomancerRotation
 
     private static void ScenicMuse(ref ActionSetting setting, ActionID actionId)
     {
-        setting.ActionCheck = () => LandscapeMotifDrawn && ActionID.ScenicMusePvE.GetAdjustedActionId() == actionId;
+        setting.ActionCheck = () => LandscapeMotifDrawn && ActionID.ScenicMusePvE.AdjustId() == actionId;
     }
 
     static partial void ModifyStarryMusePvE(ref ActionSetting setting)

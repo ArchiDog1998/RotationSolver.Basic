@@ -2,9 +2,7 @@
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class GunbreakerRotation
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
@@ -44,32 +42,32 @@ partial class GunbreakerRotation
 
     static partial void ModifySavageClawPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.GnashingFangPvE) == ActionID.SavageClawPvE;
+        setting.ActionCheck = () => ActionID.GnashingFangPvE.AdjustId() == ActionID.SavageClawPvE;
     }
 
     static partial void ModifyWickedTalonPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.GnashingFangPvE) == ActionID.WickedTalonPvE;
+        setting.ActionCheck = () => ActionID.GnashingFangPvE.AdjustId() == ActionID.WickedTalonPvE;
     }
 
     static partial void ModifyJugularRipPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.JugularRipPvE;
+        setting.ActionCheck = () => ActionID.ContinuationPvE.AdjustId() == ActionID.JugularRipPvE;
     }
 
     static partial void ModifyAbdomenTearPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.AbdomenTearPvE;
+        setting.ActionCheck = () => ActionID.ContinuationPvE.AdjustId() == ActionID.AbdomenTearPvE;
     }
 
     static partial void ModifyEyeGougePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.EyeGougePvE;
+        setting.ActionCheck = () => ActionID.ContinuationPvE.AdjustId() == ActionID.EyeGougePvE;
     }
 
     static partial void ModifyHypervelocityPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => AdjustId(ActionID.ContinuationPvE) == ActionID.HypervelocityPvE;
+        setting.ActionCheck = () => ActionID.ContinuationPvE.AdjustId() == ActionID.HypervelocityPvE;
     }
 
     static partial void ModifyLightningShotPvE(ref ActionSetting setting)

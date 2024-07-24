@@ -2,9 +2,7 @@
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class DancerRotation
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
@@ -153,14 +151,14 @@ partial class DancerRotation
     {
         setting.StatusNeed = [StatusID.StandardStep];
         setting.StatusProvide = [StatusID.LastDanceReady];
-        setting.ActionCheck = () => IsDancing && CompletedSteps == 2 && AdjustId(ActionID.StandardStepPvE) == ActionID.DoubleStandardFinishPvE;
+        setting.ActionCheck = () => IsDancing && CompletedSteps == 2 && ActionID.StandardStepPvE.AdjustId() == ActionID.DoubleStandardFinishPvE;
     }
 
     static partial void ModifyQuadrupleTechnicalFinishPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.TechnicalStep];
         setting.StatusProvide = [StatusID.DanceOfTheDawnReady];
-        setting.ActionCheck = () => IsDancing && CompletedSteps == 4 && AdjustId(ActionID.TechnicalStepPvE) == ActionID.QuadrupleTechnicalFinishPvE;
+        setting.ActionCheck = () => IsDancing && CompletedSteps == 4 && ActionID.TechnicalStepPvE.AdjustId() == ActionID.QuadrupleTechnicalFinishPvE;
     }
 
     static partial void ModifyEmboitePvE(ref ActionSetting setting)

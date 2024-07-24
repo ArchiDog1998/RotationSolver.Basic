@@ -52,6 +52,12 @@ public class ActionSetting()
     /// </summary>
     public Func<IBattleChara, bool> CanTarget { get; set; } = t => true;
 
+
+    /// <summary>
+    /// The additional combo ids.
+    /// </summary>
+    public ActionID[]? ComboIds { get; set; }
+
     /// <summary>
     /// The additional not combo ids.
     /// </summary>
@@ -123,4 +129,9 @@ public class ActionSetting()
     /// Should end the special.
     /// </summary>
     public bool EndSpecial { get; set; }
+
+    /// <summary>
+    /// This action needs highlight, maybe is a combo.
+    /// </summary>
+    public bool NeedsHighlight { get; set; }
 }

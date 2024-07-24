@@ -2,9 +2,7 @@
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 partial class SummonerRotation
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 {
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Intelligence;
@@ -13,13 +11,13 @@ partial class SummonerRotation
     public override bool CanHealSingleSpell => false;
 
     /// <summary/>
-    public static bool InBahamut => AdjustId(ActionID.AstralFlowPvE) == ActionID.DeathflarePvE;
+    public static bool InBahamut => ActionID.AstralFlowPvE.AdjustId() == ActionID.DeathflarePvE;
 
     /// <summary/>
-    public static bool InPhoenix => AdjustId(ActionID.AstralFlowPvE) == ActionID.RekindlePvE;
+    public static bool InPhoenix => ActionID.AstralFlowPvE.AdjustId() == ActionID.RekindlePvE;
 
     /// <summary/>
-    public static bool InSolarBahamut => AdjustId(ActionID.AstralFlowPvE) == ActionID.SunflarePvE;
+    public static bool InSolarBahamut => ActionID.AstralFlowPvE.AdjustId() == ActionID.SunflarePvE;
 
     private protected sealed override IBaseAction Raise => ResurrectionPvE;
 

@@ -3,6 +3,7 @@ using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
 using XIVConfigUI;
+using static Dalamud.Interface.Utility.Raii.ImRaii;
 
 namespace RotationSolver.Basic.Actions;
 
@@ -38,7 +39,7 @@ public readonly struct ActionBasicInfo
     /// <summary>
     /// Is the action highlighted.
     /// </summary>
-    public unsafe readonly bool IsHighlighted => ActionManager.Instance()->IsActionHighlighted(ActionType.Action, ID);
+    public unsafe readonly bool IsHighlighted => ((ActionID)ID).IsHighlight();
 
     /// <summary>
     /// The attack type of this action.
@@ -243,6 +244,12 @@ public readonly struct ActionBasicInfo
             }
         }
 
+        if (_action.Setting.NeedsHighlight && !IsHighlighted)
+        {
+            whyCant = WhyActionCantUse.Highlight;
+            return false;
+        }
+
         //Need casting.
         if (CastTime > 0 && !player.HasStatus(true, 
             [
@@ -321,9 +328,15 @@ public readonly struct ActionBasicInfo
             if (_action.Setting.ComboIdsNot.Contains(DataCenter.LastComboAction)) return false;
         }
 
-        if ((_action.Action.ActionCombo?.Row ?? 0) != 0)
+        var comboActions = (_action.Action.ActionCombo?.Row ?? 0) != 0
+            ? new ActionID[] { (ActionID)_action.Action.ActionCombo!.Row }
+            : [];
+
+        if (_action.Setting.ComboIds != null) comboActions = [.. comboActions, .. _action.Setting.ComboIds];
+
+        if (comboActions.Length > 0)
         {
-            if (IsHighlighted)
+            if (comboActions.Contains(DataCenter.LastComboAction))
             {
                 if (DataCenter.ComboTime < DataCenter.WeaponRemain) return false;
             }
@@ -332,6 +345,7 @@ public readonly struct ActionBasicInfo
                 return false;
             }
         }
+
         return true;
     }
 }
