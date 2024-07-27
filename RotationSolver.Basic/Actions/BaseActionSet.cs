@@ -1,4 +1,7 @@
-﻿namespace RotationSolver.Basic.Actions;
+﻿using ECommons.DalamudServices;
+using XIVConfigUI;
+
+namespace RotationSolver.Basic.Actions;
 
 internal class BaseActionSet(Func<IEnumerable<ICanUse>> getActions, bool isReplace) : IBaseActionSet
 {

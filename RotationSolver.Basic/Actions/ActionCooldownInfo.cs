@@ -15,7 +15,10 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// </summary>
     public CdInfo[] CoolDownGroups { get; }
 
-    private unsafe float RecastTime => CoolDownGroups[0].RecastTime;
+    /// <summary>
+    /// Recast time.
+    /// </summary>
+    public unsafe float RecastTime => CoolDownGroups[0].RecastTime;
 
     /// <summary/>
     public float RecastTimeElapsed => RecastTimeElapsedRaw - DataCenter.WeaponElapsed;

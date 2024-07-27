@@ -3,7 +3,6 @@ using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
 using XIVConfigUI;
-using static Dalamud.Interface.Utility.Raii.ImRaii;
 
 namespace RotationSolver.Basic.Actions;
 
@@ -75,6 +74,11 @@ public readonly struct ActionBasicInfo
     /// Casting time.
     /// </summary>
     public readonly unsafe float CastTime => ((ActionID)ID).GetCastTime();
+
+    /// <summary>
+    /// Recasting time.
+    /// </summary>
+    public readonly unsafe float RecastTime => ((ActionID)ID).GetRecastTime();
 
     /// <summary>
     /// How many mp does this action needs.

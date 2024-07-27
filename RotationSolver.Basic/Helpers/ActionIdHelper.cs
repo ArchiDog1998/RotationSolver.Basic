@@ -37,7 +37,6 @@ public static class ActionIdHelper
     /// <returns></returns>
     public static unsafe RecastDetail* GetCoolDownDetail(byte cdGroup) => ActionManager.Instance()->GetRecastGroupDetail(cdGroup);
 
-
     private static Action GetAction(this ActionID actionID)
     {
         return Svc.Data.GetExcelSheet<Action>()!.GetRow((uint)actionID)!;
@@ -50,7 +49,17 @@ public static class ActionIdHelper
     /// <returns></returns>
     public unsafe static float GetCastTime(this ActionID actionID)
     {
-        return ActionManager.GetAdjustedCastTime(ActionType.Action, (uint)actionID) / 1000f; ;
+        return ActionManager.GetAdjustedCastTime(ActionType.Action, (uint)actionID) / 1000f;
+    }
+
+    /// <summary>
+    /// The recast time.
+    /// </summary>
+    /// <param name="actionID"></param>
+    /// <returns></returns>
+    public unsafe static float GetRecastTime(this ActionID actionID)
+    {
+        return ActionManager.GetAdjustedRecastTime(ActionType.Action, (uint)actionID) / 1000f;
     }
 
     /// <summary>
@@ -58,7 +67,7 @@ public static class ActionIdHelper
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    [Obsolete]
+    [Obsolete("Please use it as less as possible!")]
     public static ActionID AdjustId(this ActionID id)
         => (ActionID)GetAdjustedActionId((uint)id);
 

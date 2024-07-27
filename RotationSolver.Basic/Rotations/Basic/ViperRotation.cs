@@ -7,6 +7,109 @@ partial class ViperRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
+    #region Single
+    #region 1
+    static partial void ModifyDreadFangsPvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.NoxiousGnash];
+        setting.CreateConfig = () => new()
+        {
+            StatusGcdCount = 4,
+        };
+    }
+    #endregion
+
+    #region 2
+    static partial void ModifyHuntersStingPvE(ref ActionSetting setting)
+    {
+        setting.ComboIds = [ActionID.DreadFangsPvE];
+        setting.StatusProvide = [StatusID.HuntersInstinct];
+    }
+
+    static partial void ModifySwiftskinsStingPvE(ref ActionSetting setting)
+    {
+        setting.ComboIds = [ActionID.DreadFangsPvE];
+        setting.StatusProvide = [StatusID.Swiftscaled];
+    }
+
+    #endregion
+
+    #region 3
+    static partial void ModifyFlankstingStrikePvE(ref ActionSetting setting)
+    {
+        setting.NeedsHighlight = true;
+    }
+
+    static partial void ModifyFlanksbaneFangPvE(ref ActionSetting setting)
+    {
+        setting.NeedsHighlight = true;
+    }
+
+    static partial void ModifyHindstingStrikePvE(ref ActionSetting setting)
+    {
+        setting.NeedsHighlight = true;
+    }
+
+    static partial void ModifyHindsbaneFangPvE(ref ActionSetting setting)
+    {
+        setting.NeedsHighlight = true;
+    }
+    #endregion
+    #endregion
+
+    #region AoE
+
+    #region 1
+    static partial void ModifySteelMawPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyDreadMawPvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.NoxiousGnash];
+        setting.CreateConfig = () => new()
+        {
+            StatusGcdCount = 4,
+            AoeCount = 2,
+        };
+    }
+    #endregion
+
+    #region 2
+    static partial void ModifyHuntersBitePvE(ref ActionSetting setting)
+    {
+        setting.ComboIds = [ActionID.DreadMawPvE];
+        setting.StatusProvide = [StatusID.HuntersInstinct];
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifySwiftskinsBitePvE(ref ActionSetting setting)
+    {
+        setting.ComboIds = [ActionID.DreadMawPvE];
+        setting.StatusProvide = [StatusID.Swiftscaled];
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+    #endregion
+
+    static partial void ModifyPitOfDreadPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+    #endregion
+
     static partial void ModifyWrithingSnapPvE(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MeleeRange;
@@ -17,45 +120,6 @@ partial class ViperRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
-    static partial void ModifyHuntersStingPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HuntersInstinct];
-    }
-
-    static partial void ModifySwiftskinsStingPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Swiftscaled];
-    }
-
-    static partial void ModifyFlankstingStrikePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HindstungVenom];
-    }
-
-    static partial void ModifyFlanksbaneFangPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HindsbaneVenom];
-    }
-
-    static partial void ModifyHindstingStrikePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.FlanksbaneVenom];
-    }
-
-    static partial void ModifyHindsbaneFangPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.FlankstungVenom];
-    }
-
-    static partial void ModifyHuntersBitePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HuntersInstinct];
-    }
-
-    static partial void ModifySwiftskinsBitePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Swiftscaled];
-    }
 
     static partial void ModifyJaggedMawPvE(ref ActionSetting setting)
     {
@@ -176,21 +240,5 @@ partial class ViperRotation
     static partial void ModifyFourthLegacyPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.Reawakened];
-    }
-
-    static partial void ModifyDreadMawPvE(ref ActionSetting setting)
-    {
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
-    }
-
-    static partial void ModifyPitOfDreadPvE(ref ActionSetting setting)
-    {
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
     }
 }

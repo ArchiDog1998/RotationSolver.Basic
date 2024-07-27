@@ -290,7 +290,7 @@ partial class CustomRotation
         if (nextGCD is BaseAction action)
         {
             if (Role is JobRole.Healer or JobRole.RangedMagical &&
-            action.Info.CastTime >= 5 && SwiftcastPvE.CanUse(out act)) return true;
+                action.Info.CastTime >= 5 && SwiftcastPvE.CanUse(out act)) return true;
         }
 
         if (DataCenter.RightNowDutyRotation?.EmergencyAbility(nextGCD, out act) ?? false) return true;
