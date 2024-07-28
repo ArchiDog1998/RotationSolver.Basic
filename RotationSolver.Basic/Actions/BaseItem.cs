@@ -151,13 +151,8 @@ public class BaseItem : IBaseItem
         CD = new ItemCooldown(ID);
     }
 
-    /// <summary>
-    /// Can Use this item.
-    /// </summary>
-    /// <param name="item"></param>
-    /// <param name="clippingCheck"></param>
-    /// <returns></returns>
-    public virtual unsafe bool CanUse(out IAction item, bool clippingCheck = true)
+    /// <inheritdoc/>
+    public virtual unsafe bool CanUse(out IAction item, bool clippingCheck = true, bool onLastAbility = true)
     {
         item = this;
         if (_item == null) return false;
@@ -176,7 +171,10 @@ public class BaseItem : IBaseItem
         {
             if (DataCenter.NextAbilityToNextGCD < AnimationLockTime + DataCenter.Ping) return false;
         }
-
+        if (onLastAbility && DataCenter.NextAbilityToNextGCD > AnimationLockTime + DataCenter.Ping + DataCenter.MinAnimationLock)
+        {
+            return false;
+        }
         if (ItemCheck != null && !ItemCheck()) return false;
 
         return HasIt;

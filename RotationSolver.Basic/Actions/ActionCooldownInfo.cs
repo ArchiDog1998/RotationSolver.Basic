@@ -34,21 +34,7 @@ public readonly struct ActionCooldownInfo : ICooldown
     private float RecastTimeRemainRaw => CoolDownGroups[0].RecastTimeRemain;
 
     /// <summary/>
-    public bool HasOneCharge
-    {
-        get
-        {
-            if (!IsCoolingDown) return true;
-            
-            var hasMain = RecastTimeElapsedRaw >= RecastTimeOneChargeRaw;
-
-            if (CoolDownGroups.Length > 1)
-            {
-                hasMain &= !CoolDownGroups[1].IsCoolingDown;
-            }
-            return hasMain;
-        }
-    }
+    public bool HasOneCharge => CurrentCharges > 0;
 
     /// <summary/>
     public unsafe ushort CurrentCharges => (ushort)ActionManager.Instance()->GetCurrentCharges(_action.Info.ID);
@@ -157,7 +143,7 @@ public readonly struct ActionCooldownInfo : ICooldown
         return elapsed + DataCenter.WeaponRemain < time;
     }
 
-    internal bool CooldownCheck(bool isEmpty, bool onLastAbility, bool ignoreClippingCheck, byte gcdCountForAbility, out WhyActionCantUse whyCant)
+    internal bool CooldownCheck(bool useUp, bool onLastAbility, bool ignoreClippingCheck, byte gcdCountForAbility, out WhyActionCantUse whyCant)
     {
         if (!_action.Info.IsGeneralGCD)
         {
@@ -181,7 +167,7 @@ public readonly struct ActionCooldownInfo : ICooldown
                 }
             }
 
-            if (!isEmpty)
+            if (!useUp)
             {
                 if (RecastTimeRemainRaw > DataCenter.WeaponRemain + DataCenter.WeaponTotal * gcdCountForAbility)
                 {

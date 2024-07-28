@@ -8,14 +8,10 @@ partial class MonkRotation
     public override MedicineType MedicineType => MedicineType.Strength;
 
     #region Job Gauge
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <inheritdoc cref="Nadi.SOLAR"/>
     public static bool HasSolar => Nadi.HasFlag(Nadi.SOLAR);
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <inheritdoc cref="Nadi.LUNAR"/>
     public static bool HasLunar => Nadi.HasFlag(Nadi.LUNAR);
     #endregion
 

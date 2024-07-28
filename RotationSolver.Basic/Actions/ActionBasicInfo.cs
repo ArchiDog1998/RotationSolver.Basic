@@ -332,6 +332,8 @@ public readonly struct ActionBasicInfo
             if (_action.Setting.ComboIdsNot.Contains(DataCenter.LastComboAction)) return false;
         }
 
+        if (_action.Setting.SkipComboCheck) return true;
+
         var comboActions = (_action.Action.ActionCombo?.Row ?? 0) != 0
             ? new ActionID[] { (ActionID)_action.Action.ActionCombo!.Row }
             : [];

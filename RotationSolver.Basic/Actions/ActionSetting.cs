@@ -52,7 +52,10 @@ public class ActionSetting()
     /// </summary>
     public Func<IBattleChara, bool> CanTarget { get; set; } = t => true;
 
-
+    /// <summary>
+    /// Skip the combo check
+    /// </summary>
+    public bool SkipComboCheck { get; set; } = false;
     /// <summary>
     /// The additional combo ids.
     /// </summary>

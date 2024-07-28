@@ -18,6 +18,7 @@ public interface IBaseItem : IAction
     /// </summary>
     /// <param name="item"></param>
     /// <param name="clippingCheck"></param>
+    /// <param name="onLastAbility"></param>
     /// <returns></returns>
-    bool CanUse(out IAction item, bool clippingCheck = true);
+    bool CanUse(out IAction item, bool clippingCheck = true, bool onLastAbility = true);
 }

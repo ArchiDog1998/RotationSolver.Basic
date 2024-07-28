@@ -329,4 +329,11 @@ partial class PictomancerRotation
         return base.DefenseSingleAbility(out act);
     }
     #endregion
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (AdventOfChocobastionPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
+    }
 }

@@ -239,7 +239,7 @@ public struct ActionTargetInfo(IBaseAction action)
         }
 
         var targets = GetMostCanTargetObjects(canTargets, canAffects,
-            skipAoeCheck ? 0 : action.Config.AoeCount);
+            skipAoeCheck ? 1 : action.Config.AoeCount);
         var target = FindTargetByType(targets, type, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);
         if (target == null) return null;
 

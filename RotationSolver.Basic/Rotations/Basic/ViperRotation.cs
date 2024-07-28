@@ -14,7 +14,7 @@ partial class ViperRotation
         setting.TargetStatusProvide = [StatusID.NoxiousGnash];
         setting.CreateConfig = () => new()
         {
-            StatusGcdCount = 4,
+            StatusGcdCount = 8,
         };
     }
     #endregion
@@ -54,20 +54,20 @@ partial class ViperRotation
     }
     #endregion
 
-    #region
+    #region Coil
     //static partial void ModifyDreadwinderPvE(ref ActionSetting setting)
     //{
     //    setting.TargetStatusProvide = [StatusID.NoxiousGnash];
     //}
     static partial void ModifyHuntersCoilPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.HuntersVenom];
+        setting.SkipComboCheck = true;
         setting.NeedsHighlight = true;
     }
 
     static partial void ModifySwiftskinsCoilPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.SwiftskinsVenom];
+        setting.SkipComboCheck = true;
         setting.NeedsHighlight = true;
     }
     #endregion
@@ -89,7 +89,7 @@ partial class ViperRotation
         setting.TargetStatusProvide = [StatusID.NoxiousGnash];
         setting.CreateConfig = () => new()
         {
-            StatusGcdCount = 4,
+            StatusGcdCount = 8,
             AoeCount = 2,
         };
     }
@@ -99,7 +99,6 @@ partial class ViperRotation
     static partial void ModifyHuntersBitePvE(ref ActionSetting setting)
     {
         setting.ComboIds = [ActionID.DreadMawPvE];
-        setting.StatusProvide = [StatusID.HuntersInstinct];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -109,7 +108,6 @@ partial class ViperRotation
     static partial void ModifySwiftskinsBitePvE(ref ActionSetting setting)
     {
         setting.ComboIds = [ActionID.DreadMawPvE];
-        setting.StatusProvide = [StatusID.Swiftscaled];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -120,16 +118,18 @@ partial class ViperRotation
     #region 3
     static partial void ModifyJaggedMawPvE(ref ActionSetting setting)
     {
+        setting.ComboIds = [ActionID.SwiftskinsBitePvE];
         setting.StatusProvide = [StatusID.GrimskinsVenom];
     }
 
     static partial void ModifyBloodiedMawPvE(ref ActionSetting setting)
     {
+        setting.ComboIds = [ActionID.SwiftskinsBitePvE];
         setting.StatusProvide = [StatusID.GrimhuntersVenom];
     }
     #endregion
 
-    #region
+    #region Coil
     static partial void ModifyPitOfDreadPvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
@@ -138,14 +138,14 @@ partial class ViperRotation
         };
     }
 
-
     static partial void ModifyHuntersDenPvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
         };
-        setting.StatusProvide = [StatusID.FellhuntersVenom];
+        setting.SkipComboCheck = true;
+        setting.NeedsHighlight = true;
     }
 
     static partial void ModifySwiftskinsDenPvE(ref ActionSetting setting)
@@ -154,7 +154,8 @@ partial class ViperRotation
         {
             AoeCount = 2,
         };
-        setting.StatusProvide = [StatusID.FellskinsVenom];
+        setting.SkipComboCheck = true;
+        setting.NeedsHighlight = true;
     }
     #endregion
     #endregion
@@ -180,6 +181,7 @@ partial class ViperRotation
     {
         SerpentsTail(ref setting, ActionID.LastLashPvE);
     }
+
     static partial void ModifyFirstLegacyPvE(ref ActionSetting setting)
     {
         SerpentsTail(ref setting, ActionID.FirstLegacyPvE);
@@ -218,7 +220,6 @@ partial class ViperRotation
     static partial void ModifyUncoiledTwinfangPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.PoisedForTwinfang];
-        setting.StatusProvide = [StatusID.PoisedForTwinblood];
     }
 
     static partial void ModifyTwinbloodPvE(ref ActionSetting setting)
@@ -252,6 +253,7 @@ partial class ViperRotation
     {
         setting.ActionCheck = () => AnguineTribute > 0;
         setting.StatusNeed = [StatusID.Reawakened];
+        setting.NeedsHighlight = true;
     }
 
     static partial void ModifyFirstGenerationPvE(ref ActionSetting setting)
@@ -297,6 +299,20 @@ partial class ViperRotation
 
     static partial void ModifySerpentsIrePvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.ReadyToReawaken];
+        setting.ActionCheck = () => InCombat;
+    }
+
+    /// <inheritdoc/>
+    protected override bool MoveForwardAbility(out IAction? act)
+    {
+        if (SlitherPvE.CanUse(out act, usedUp: true)) return true;
+        return base.MoveForwardAbility(out act);
+    }
+
+    /// <inheritdoc/>
+    protected override bool LimitBreakPvPGCD(out IAction? act)
+    {
+        if (WorldswallowerPvP.CanUse(out act, skipAoeCheck: true)) return true;
+        return base.LimitBreakPvPGCD(out act);
     }
 }

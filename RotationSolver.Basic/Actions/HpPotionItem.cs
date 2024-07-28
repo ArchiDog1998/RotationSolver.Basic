@@ -26,7 +26,7 @@ internal class HpPotionItem : BaseItem
         _maxHp = data[1];
     }
 
-    public override bool CanUse(out IAction item, bool clippingCheck)
+    public override bool CanUse(out IAction item, bool clippingCheck, bool onLastAbility)
     {
         item = this;
         if (!Player.Available) return false;

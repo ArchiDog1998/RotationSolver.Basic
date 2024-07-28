@@ -46,7 +46,7 @@ partial class CustomRotation
     private static bool UseMpPotion(out IAction? act)
     {
         var acts = from a in MpPotions
-                   where a.CanUse(out _, true)
+                   where a.CanUse(out _, true, false)
                    orderby a.MaxMp
                    select a;
 
@@ -63,7 +63,7 @@ partial class CustomRotation
     private static bool UseHpPotion(out IAction? act)
     {
         var acts = from a in HpPotions
-                   where a.CanUse(out _, true)
+                   where a.CanUse(out _, true, false)
                    orderby a.MaxHp
                    select a;
 
