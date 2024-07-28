@@ -162,7 +162,7 @@ internal static class DataCenter
 
             uint actionId = obj.ActionId;
             var type = (ActionType)(byte)obj.Type;
-            bool isLast = obj.IsLast;
+            bool isLast = obj.Highlight;
 
             foreach (var action in rotation.AllActions)
             {
@@ -178,6 +178,7 @@ internal static class DataCenter
         }
         catch
         {
+            //Svc.Log.Error(ex, "Failed to get the ActiveAction from ActionTimelineEx!");
             UpdateActionFromAtleProp();
         }
         return null;

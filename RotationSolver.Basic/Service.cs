@@ -2,7 +2,6 @@
 using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using FFXIVClientStructs.Attributes;
-using FFXIVClientStructs.FFXIV.Client.Game;
 using Lumina.Excel;
 using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Record;
