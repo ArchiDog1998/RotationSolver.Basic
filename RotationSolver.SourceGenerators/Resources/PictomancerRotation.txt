@@ -1627,7 +1627,7 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
         CreatureMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MawMotifPvE, ClawMotifPvE, WingMotifPvE, PomMotifPvE, CreatureMotifPvE], false);
         WeaponMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerMotifPvE, WeaponMotifPvE], true);
         LandscapeMotifPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarrySkyMotifPvE, LandscapeMotifPvE], true);
-        LivingMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangedMusePvE, ClawedMusePvE, WingedMusePvE, PomMusePvE, LivingMusePvE], true);
+        LivingMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangedMusePvE, ClawedMusePvE, WingedMusePvE, PomMusePvE, LivingMusePvE], false);
         SteelMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StrikingMusePvE, SteelMusePvE], true);
         ScenicMusePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarryMusePvE, ScenicMusePvE], true);
         MogOfTheAgesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], true);

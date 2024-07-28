@@ -11,14 +11,19 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     protected override bool IsReplace => _isReplace;
 
     private static readonly List<Action> _sayedActions = [];
-    private static readonly Dictionary<uint, uint[]> _replaceActions = new()
+    private static readonly Dictionary<uint, (uint[], bool)> _replaceActions = new()
     {
-        { 119, [127, 3568, 7431, 16533, 25859] }, //WHM Stone PvE
-        { 17869, [3584, 7435, 16541, 25865] }, //SCH Ruin PvE
-        { 3596, [3598, 7442, 16555, 25871] }, //AST Malefic PvE
-        { 24283, [24306, 24312] }, //SGE Dosis PvE
-        { 34689, [34664, 34665, 34666, 34667] }, //PCT Creature Motif PvE
-        { 35347, [34670, 34671, 34672, 34673] }, //PCT Living Muse PvE
+        { 119, ([127, 3568, 7431, 16533, 25859], true) }, //WHM Stone PvE
+        { 17869, ([3584, 7435, 16541, 25865], true) }, //SCH Ruin PvE
+        { 3596, ([3598, 7442, 16555, 25871], true) }, //AST Malefic PvE
+        { 24283, ([24306, 24312], true) }, //SGE Dosis PvE
+
+        { 34689, ([34664, 34665, 34666, 34667], false) }, //PCT Creature Motif PvE
+        { 35347, ([34670, 34671, 34672, 34673], false) }, //PCT Living Muse PvE
+
+        { 35920, ([34634, 34635, 34640, 34641, 34642, 34643], false)}, //VPR Serpent's Tail
+        { 35921, ([34636, 34638, 34644], false)}, //VPR Twinfang
+        { 35922, ([34637, 34639, 34645], false)}, //VPR Twinblood
     };
 
     protected override string ToName(ReplaceAction item)
@@ -57,17 +62,18 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
         if (actionList.Count < 2)
         {
             var action = actionList[0];
-            var hasActions = _replaceActions.TryGetValue(action.RowId, out var actions);
+            var hasActions = _replaceActions.TryGetValue(action.RowId, out var actionPair);
             if (hasActions)
             {
                 var data = _gameData.GetExcelSheet<Action>();
-                if(data != null)
+                if (data != null)
                 {
-                    foreach (var actionId in actions!)
+                    foreach (var actionId in actionPair.Item1)
                     {
                         actionList.Add(data.GetRow(actionId)!);
                     }
                 }
+                _isReplace = actionPair.Item2;
             }
 
             if (!_sayedActions.Contains(action))

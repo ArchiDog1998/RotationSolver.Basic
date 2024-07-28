@@ -97,7 +97,7 @@ internal static partial class Util
 
         var cate = action.IsPvP ? "-<i>PvP</i>" : "-<i>PvE</i>";
 
-        return $"<see href=\"https://garlandtools.org/db/#action/{action.RowId}\"><strong>{action.Name.RawString}</strong></see>{cate}{jobs} [{action.RowId}] [{action.ActionCategory.Value?.Name.RawString ?? string.Empty}]";
+        return $"<see href=\"https://garlandtools.org/db/#action/{action.RowId}\"><strong>{action.Name.RawString}</strong></see>{cate}{jobs} [{action.RowId}] [{action.ActionCategory.Value?.Name.RawString ?? string.Empty}] (lvl.{action.ClassJobLevel})";
     }
 
     public static  string GetDesc(this Action item, Lumina.GameData gameData)

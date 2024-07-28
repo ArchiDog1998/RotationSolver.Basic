@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/viper"><strong>Viper</strong></see>
 /// <br>Number of Actions: 75</br>
-/// <br>Number of Replace Actions: 9</br>
+/// <br>Number of Replace Actions: 12</br>
 /// <br>Number of Action Combos: 20</br>
 /// <br>Number of Traits: 15</br>
 /// </summary>
@@ -1487,6 +1487,24 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReawakenPvEReplace { get; }
 
     /// <summary>
+/// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="DeathRattlePvE"/> -> <seealso cref="LastLashPvE"/> -> <seealso cref="FirstLegacyPvE"/> -> <seealso cref="SecondLegacyPvE"/> -> <seealso cref="ThirdLegacyPvE"/> -> <seealso cref="FourthLegacyPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SerpentsTailPvEReplace { get; }
+
+    /// <summary>
+/// <seealso cref="TwinfangPvE"/> -> <seealso cref="TwinfangBitePvE"/> -> <seealso cref="TwinfangThreshPvE"/> -> <seealso cref="UncoiledTwinfangPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinfangPvEReplace { get; }
+
+    /// <summary>
+/// <seealso cref="TwinbloodPvE"/> -> <seealso cref="TwinbloodBitePvE"/> -> <seealso cref="TwinbloodThreshPvE"/> -> <seealso cref="UncoiledTwinbloodPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TwinbloodPvEReplace { get; }
+
+    /// <summary>
 /// <seealso cref="HuntersSnapPvP"/> -> <seealso cref="SwiftskinsCoilPvP"/> -> <seealso cref="OuroborosPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1643,6 +1661,10 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.DreadCombo DreadCombo => JobGauge.DreadCombo;
 
+    /// <inheritdoc cref="VPRGauge.SerpentCombo"/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public static Dalamud.Game.ClientState.JobGauge.Enums.SerpentCombo SerpentCombo => JobGauge.SerpentCombo;
+
     public override /// <inheritdoc/>
     void DisplayStatus()
     {
@@ -1650,6 +1672,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         ImGui.Text("SerpentOffering: " + SerpentOffering.ToString());
         ImGui.Text("AnguineTribute: " + AnguineTribute.ToString());
         ImGui.Text("DreadCombo: " + DreadCombo.ToString());
+        ImGui.Text("SerpentCombo: " + SerpentCombo.ToString());
         base.DisplayStatus();
     }
 
@@ -1730,6 +1753,9 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE], false);
         SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE], false);
         ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE], false);
+        SerpentsTailPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthLegacyPvE, ThirdLegacyPvE, SecondLegacyPvE, FirstLegacyPvE, LastLashPvE, DeathRattlePvE, SerpentsTailPvE], false);
+        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE], false);
+        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE], false);
         HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP], true);
         SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], true);
         HuntersStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE], false);
