@@ -2,6 +2,7 @@
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
+using RotationSolver.Basic.Helpers;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Actions;
@@ -181,20 +182,21 @@ public readonly struct ActionBasicInfo
 
         var player = Player.Object;
 
+        IEnumerable<StatusID> statusNeed = [];
         if (_action.Action.SecondaryCostType == 32)
         {
-            if (player.WillStatusEndGCD(0, 0,
-                _action.Setting.StatusFromSelf, (StatusID)_action.Action.SecondaryCostValue))
-            {
-                whyCant = WhyActionCantUse.NoStatusNeed;
-                return false;
-            }
+            statusNeed = statusNeed.Append((StatusID)_action.Action.SecondaryCostValue);
         }
 
         if (_action.Setting.StatusNeed != null)
         {
+            statusNeed = statusNeed.Union(_action.Setting.StatusNeed);
+        }
+
+        if (statusNeed.Any())
+        {
             if (player.WillStatusEndGCD(0, 0,
-                _action.Setting.StatusFromSelf, _action.Setting.StatusNeed))
+                _action.Setting.StatusFromSelf, statusNeed.ToArray()))
             {
                 whyCant = WhyActionCantUse.NoStatusNeed;
                 return false;

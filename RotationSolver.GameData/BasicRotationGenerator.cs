@@ -5,6 +5,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using RotationSolver.GameData.Getters;
 using RotationSolver.GameData.Getters.Actions;
 using RotationSolver.GameData.Getters.ActionSets;
+using System.Collections;
 using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
@@ -12,6 +13,8 @@ using static RotationSolver.GameData.SyntaxHelper;
 namespace RotationSolver.GameData;
 internal static class BasicRotationGenerator
 {
+    private readonly record struct PropInfo(string name, bool isEnum);
+
     internal static async Task GetRotation(Lumina.GameData gameData, ClassJob job, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
         var className = (job.NameEnglish.RawString + " Rotation").ToPascalCase();
@@ -28,7 +31,7 @@ internal static class BasicRotationGenerator
 
         if (!job.IsLimitedJob)
         {
-            var names = new List<string>();
+            var names = new List<PropInfo>();
             var jobgauge = GetJobGauge(job, ref names);
             list.AddRange(jobgauge);
 
@@ -126,7 +129,7 @@ internal static class BasicRotationGenerator
         return action.ToNodes(name, getter, false);
     }
 
-    private static MethodDeclarationSyntax GetDisplayStatus(List<string> names)
+    private static MethodDeclarationSyntax GetDisplayStatus(List<PropInfo> names)
     {
         var baseCall = ExpressionStatement(
                     InvocationExpression(
@@ -149,8 +152,49 @@ internal static class BasicRotationGenerator
         return method;
     }
 
-    private static ExpressionStatementSyntax GetOneLine(string name)
+    private static ExpressionStatementSyntax GetOneLine(PropInfo prop)
     {
+        var invocation = prop.isEnum 
+            ? InvocationExpression(
+                MemberAccessExpression(
+                                 SyntaxKind.SimpleMemberAccessExpression,
+                                 PredefinedType(
+                                     Token(SyntaxKind.StringKeyword)),
+                                 IdentifierName("Join")))
+                         .WithArgumentList(
+                             ArgumentList(
+                                 SeparatedList<ArgumentSyntax>(
+                                     new SyntaxNodeOrToken[]{
+                                         Argument(
+                                             LiteralExpression(
+                                                 SyntaxKind.StringLiteralExpression,
+                                                 Literal(", "))),
+                                         Token(SyntaxKind.CommaToken),
+                                         Argument(
+                                             InvocationExpression(
+                                                 MemberAccessExpression(
+                                                     SyntaxKind.SimpleMemberAccessExpression,
+                                                     IdentifierName(prop.name),
+                                                     IdentifierName("Select")))
+                                             .WithArgumentList(
+                                                 ArgumentList(
+                                                     SingletonSeparatedList<ArgumentSyntax>(
+                                                         Argument(
+                                                             SimpleLambdaExpression(
+                                                                 Parameter(
+                                                                     Identifier("i")))
+                                                             .WithExpressionBody(
+                                                                 InvocationExpression(
+                                                                     MemberAccessExpression(
+                                                                         SyntaxKind.SimpleMemberAccessExpression,
+                                                                         IdentifierName("i"),
+                                                                         IdentifierName("ToString")))))))))})))
+            : InvocationExpression(
+                  MemberAccessExpression(
+                      SyntaxKind.SimpleMemberAccessExpression,
+                      IdentifierName(prop.name),
+                      IdentifierName("ToString")));
+
         return ExpressionStatement(
                        InvocationExpression(
                            MemberAccessExpression(
@@ -160,20 +204,14 @@ internal static class BasicRotationGenerator
                        .WithArgumentList(
                            ArgumentList(
                                SingletonSeparatedList(
-                                   Argument(
-                                       BinaryExpression(
+                                   Argument(BinaryExpression(
                                            SyntaxKind.AddExpression,
                                            LiteralExpression(
                                                SyntaxKind.StringLiteralExpression,
-                                               Literal(name + ": ")),
-                                           InvocationExpression(
-                                               MemberAccessExpression(
-                                                   SyntaxKind.SimpleMemberAccessExpression,
-                                                   IdentifierName(name),
-                                                   IdentifierName("ToString")))))))));
+                                               Literal(prop.name + ": ")), invocation))))));
     }
 
-    private static PropertyDeclarationSyntax[] GetJobGauge(ClassJob job, ref List<string> names)
+    private static PropertyDeclarationSyntax[] GetJobGauge(ClassJob job, ref List<PropInfo> names)
     {
         var path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         var gaugeName = $"Dalamud.Game.ClientState.JobGauge.Types.{job.Abbreviation}Gauge";
@@ -186,8 +224,9 @@ internal static class BasicRotationGenerator
 
         foreach (var prop in gaugeType.GetRuntimeProperties().Where(p => (p.GetMethod?.IsPublic ?? false) && p.DeclaringType == gaugeType))
         {
+            var isEnum = prop.PropertyType.GetInterfaces().Any(i => i.Name == nameof(IEnumerable));
             result.AddRange(GetGaugeItemFromProperty(prop));
-            names.Add(prop.Name);
+            names.Add(new(prop.Name, isEnum));
         }
 
         return [.. result];

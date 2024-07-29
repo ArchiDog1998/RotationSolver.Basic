@@ -1301,7 +1301,7 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
         ImGui.Text("Feathers: " + Feathers.ToString());
         ImGui.Text("Esprit: " + Esprit.ToString());
         ImGui.Text("CompletedSteps: " + CompletedSteps.ToString());
-        ImGui.Text("Steps: " + Steps.ToString());
+        ImGui.Text("Steps: " + string.Join(", ", Steps.Select(i => i.ToString())));
         ImGui.Text("NextStep: " + NextStep.ToString());
         ImGui.Text("IsDancing: " + IsDancing.ToString());
         base.DisplayStatus();

@@ -1261,7 +1261,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     void DisplayStatus()
     {
         ImGui.Text("Chakra: " + Chakra.ToString());
-        ImGui.Text("BeastChakra: " + BeastChakra.ToString());
+        ImGui.Text("BeastChakra: " + string.Join(", ", BeastChakra.Select(i => i.ToString())));
         ImGui.Text("Nadi: " + Nadi.ToString());
         ImGui.Text("OpoOpoFury: " + OpoOpoFury.ToString());
         ImGui.Text("RaptorFury: " + RaptorFury.ToString());

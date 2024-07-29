@@ -1,9 +1,15 @@
-﻿using static RotationSolver.Basic.CombatData;
+﻿using XIVConfigUI.Attributes;
+using static RotationSolver.Basic.CombatData;
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
 partial class MonkRotation
 {
+    /// <summary/>
+    [UI("Blue Chakra", Description = "I Love blue!")]
+    [RotationConfig(CombatType.PvE)]
+    public bool BlueChakra { get; set; }
+
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
@@ -68,7 +74,7 @@ partial class MonkRotation
     #region Raptor Form
     private static void RaptorForm(ref ActionSetting setting)
     {
-        setting.StatusNeed = [StatusID.RaptorForm, StatusID.PerfectBalance];
+        setting.StatusNeed = [StatusID.RaptorForm, StatusID.PerfectBalance, StatusID.FormlessFist];
     }
 
     static partial void ModifyTrueStrikePvE(ref ActionSetting setting)
@@ -96,7 +102,7 @@ partial class MonkRotation
     #region Coeurl Form
     private static void CoeurlForm(ref ActionSetting setting)
     {
-        setting.StatusNeed = [StatusID.CoeurlForm, StatusID.PerfectBalance];
+        setting.StatusNeed = [StatusID.CoeurlForm, StatusID.PerfectBalance, StatusID.FormlessFist];
     }
 
     static partial void ModifySnapPunchPvE(ref ActionSetting setting)
@@ -127,7 +133,7 @@ partial class MonkRotation
     #region Chakra
     private static void ChakraAction(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InCombat && Chakra == 5;
+        setting.ActionCheck = () => InCombat && Chakra >= 5;
     }
     static partial void ModifySteelPeakPvE(ref ActionSetting setting)
     {
@@ -237,6 +243,62 @@ partial class MonkRotation
     static partial void ModifyWindsReplyPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.WindsRumination];
+    }
+    #endregion
+
+    #region Mediation PvE
+    private static void Mediation(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => Chakra < 5;
+    }
+
+    static partial void ModifyEnlightenedMeditationPvE(ref ActionSetting setting)
+    {
+        Mediation(ref setting);
+    }
+
+    static partial void ModifyInspiritedMeditationPvE(ref ActionSetting setting)
+    {
+        Mediation(ref setting);
+    }
+
+    static partial void ModifyForbiddenMeditationPvE(ref ActionSetting setting)
+    {
+        Mediation(ref setting);
+    }
+
+    static partial void ModifySteeledMeditationPvE(ref ActionSetting setting)
+    {
+        Mediation(ref setting);
+    }
+
+    /// <summary>
+    /// Do the mediation
+    /// </summary>
+    /// <param name="act"></param>
+    /// <returns></returns>
+    public bool DoMediationPvE(out IAction? act)
+    {
+        if (BlueChakra)
+        {
+            if (EnlightenedMeditationPvE.EnoughLevel)
+            {
+                if (EnlightenedMeditationPvE.CanUse(out act)) return true;
+            }
+            else
+            {
+                if (InspiritedMeditationPvE.CanUse(out act)) return true;
+            }
+        }
+        if (ForbiddenMeditationPvE.EnoughLevel)
+        {
+            if (ForbiddenMeditationPvE.CanUse(out act)) return true;
+        }
+        else
+        {
+            if (SteeledMeditationPvE.CanUse(out act)) return true;
+        }
+        return false;
     }
     #endregion
 

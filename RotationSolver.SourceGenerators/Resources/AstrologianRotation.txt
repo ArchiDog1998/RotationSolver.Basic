@@ -1346,7 +1346,7 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public override /// <inheritdoc/>
     void DisplayStatus()
     {
-        ImGui.Text("DrawnCards: " + DrawnCards.ToString());
+        ImGui.Text("DrawnCards: " + string.Join(", ", DrawnCards.Select(i => i.ToString())));
         ImGui.Text("DrawnCrownCard: " + DrawnCrownCard.ToString());
         ImGui.Text("ActiveDraw: " + ActiveDraw.ToString());
         base.DisplayStatus();

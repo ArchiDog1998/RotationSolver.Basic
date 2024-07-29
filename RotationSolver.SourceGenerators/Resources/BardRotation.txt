@@ -1059,7 +1059,7 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
         ImGui.Text("SoulVoice: " + SoulVoice.ToString());
         ImGui.Text("Song: " + Song.ToString());
         ImGui.Text("LastSong: " + LastSong.ToString());
-        ImGui.Text("Coda: " + Coda.ToString());
+        ImGui.Text("Coda: " + string.Join(", ", Coda.Select(i => i.ToString())));
         base.DisplayStatus();
     }
 
