@@ -15,12 +15,12 @@ public class ActionSetting()
     /// <summary>
     /// The Ninjutsu action of this action.
     /// </summary>
-    public IBaseAction[]? Ninjutsu { get; set; } = null;
+    public IBaseAction[]? Ninjutsu { get; internal set; } = null;
 
     /// <summary>
     /// The override of the <see cref="ActionBasicInfo.MPNeed"/>.
     /// </summary>
-    public Func<uint?>? MPOverride { get; set; } = null;
+    public Func<uint?>? MPOverride { get; internal set; } = null;
 
     /// <summary>
     /// Is this action in the melee range.
@@ -30,56 +30,56 @@ public class ActionSetting()
     /// <summary>
     /// Is this status is added by the plyer.
     /// </summary>
-    public bool StatusFromSelf { get; set; } = true;
+    public bool StatusFromSelf { get; internal set; } = true;
     
     /// <summary>
     /// The status that it provides to the target.
     /// </summary>
-    public StatusID[]? TargetStatusProvide { get; set; } = null;
+    public StatusID[]? TargetStatusProvide { get; internal set; } = null;
 
     /// <summary>
     /// You can't use this action when the target has this status.
     /// </summary>
-    public StatusID[]? TargetStatusPenalty { get; set; } = null;
+    public StatusID[]? TargetStatusPenalty { get; internal set; } = null;
 
     /// <summary>
     /// The status that it needs on the target.
     /// </summary>
-    public StatusID[]? TargetStatusNeed { get; set; } = null;
+    public StatusID[]? TargetStatusNeed { get; internal set; } = null;
 
     /// <summary>
     /// Can the target be targeted.
     /// </summary>
-    public Func<IBattleChara, bool> CanTarget { get; set; } = t => true;
+    public Func<IBattleChara, bool> CanTarget { get; internal set; } = t => true;
 
     /// <summary>
     /// Skip the combo check
     /// </summary>
-    public bool SkipComboCheck { get; set; } = false;
+    public bool SkipComboCheck { get; internal set; } = false;
     /// <summary>
     /// The additional combo ids.
     /// </summary>
-    public ActionID[]? ComboIds { get; set; }
+    public ActionID[]? ComboIds { get; internal set; }
 
     /// <summary>
     /// The additional not combo ids.
     /// </summary>
-    public ActionID[]? ComboIdsNot { get; set; }
+    public ActionID[]? ComboIdsNot { get; internal set; }
 
     /// <summary>
     /// Status that this action provides.
     /// </summary>
-    public StatusID[]? StatusProvide { get; set; } = null;
+    public StatusID[]? StatusProvide { get; internal set; } = null;
 
     /// <summary>
     /// You can't use this action when the player has this status.
     /// </summary>
-    public StatusID[]? StatusPenalty { get; set; } = null;
+    public StatusID[]? StatusPenalty { get; internal set; } = null;
 
     /// <summary>
     /// Status that this action needs.
     /// </summary>
-    public StatusID[]? StatusNeed { get; set; } = null;
+    public StatusID[]? StatusNeed { get; internal set; } = null;
 
     /// <summary>
     /// Your custom rotation check for your rotation.
@@ -93,7 +93,7 @@ public class ActionSetting()
     /// <summary>
     /// Is this action friendly.
     /// </summary>
-    public bool IsFriendly { get; set; }
+    public bool IsFriendly { get; internal set; }
 
     private TargetType _type = TargetType.None;
 
@@ -120,21 +120,21 @@ public class ActionSetting()
 
             return type;
         }
-        set => _type = value; 
+        internal set => _type = value; 
     }
 
     /// <summary>
     /// The enemy positional for this action.
     /// </summary>
-    public EnemyPositional EnemyPositional { get; set; } = EnemyPositional.None;
+    public EnemyPositional EnemyPositional { get; internal set; } = EnemyPositional.None;
 
     /// <summary>
     /// Should end the special.
     /// </summary>
-    public bool EndSpecial { get; set; }
+    public bool EndSpecial { get; internal set; }
 
     /// <summary>
     /// This action needs highlight, maybe is a combo.
     /// </summary>
-    public bool NeedsHighlight { get; set; }
+    public bool NeedsHighlight { get; internal set; }
 }

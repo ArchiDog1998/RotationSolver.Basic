@@ -15,6 +15,7 @@ partial class NinjaRotation
 
     static partial void ModifyArmorCrushPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         //setting.ActionCheck = () => HutonTimer is > 0 and < 25;
     }
 
@@ -58,8 +59,14 @@ partial class NinjaRotation
         };
     }
 
+    static partial void ModifyAeolianEdgePvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Rear;
+    }
+
     static partial void ModifyTrickAttackPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.StatusNeed = [StatusID.Suiton, StatusID.Hidden];
         setting.CreateConfig = () => new ActionConfig()
         {

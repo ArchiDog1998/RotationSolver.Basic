@@ -22,13 +22,25 @@ partial class DragoonRotation
     //    setting.ComboIds = [ActionID.RaidenThrustPvE];
     //}
 
+    static partial void ModifyChaoticSpringPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Rear;
+    }
+
+    static partial void ModifyChaosThrustPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Rear;
+    }
+
     static partial void ModifyFangAndClawPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.StatusNeed = [StatusID.FangAndClawBared];
     }
 
     static partial void ModifyWheelingThrustPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.StatusNeed = [StatusID.WheelInMotion];
     }
 

@@ -1271,27 +1271,27 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge>();
 
-    /// <inheritdoc cref="DNCGauge.Feathers"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.Feathers"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Feathers => JobGauge.Feathers;
 
-    /// <inheritdoc cref="DNCGauge.Esprit"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.Esprit"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Esprit => JobGauge.Esprit;
 
-    /// <inheritdoc cref="DNCGauge.CompletedSteps"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.CompletedSteps"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte CompletedSteps => JobGauge.CompletedSteps;
 
-    /// <inheritdoc cref="DNCGauge.Steps"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.Steps"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.UInt32[] Steps => JobGauge.Steps;
 
-    /// <inheritdoc cref="DNCGauge.NextStep"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.NextStep"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.UInt32 NextStep => JobGauge.NextStep;
 
-    /// <inheritdoc cref="DNCGauge.IsDancing"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DNCGauge.IsDancing"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsDancing => JobGauge.IsDancing;
 

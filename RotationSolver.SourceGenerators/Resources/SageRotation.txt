@@ -1069,19 +1069,19 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge>();
 
-    /// <inheritdoc cref="SGEGauge.AddersgallTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge.AddersgallTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float AddersgallTimer => JobGauge.AddersgallTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="SGEGauge.Addersgall"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge.Addersgall"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Addersgall => JobGauge.Addersgall;
 
-    /// <inheritdoc cref="SGEGauge.Addersting"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge.Addersting"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Addersting => JobGauge.Addersting;
 
-    /// <inheritdoc cref="SGEGauge.Eukrasia"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SGEGauge.Eukrasia"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean Eukrasia => JobGauge.Eukrasia;
 

@@ -1278,19 +1278,19 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge>();
 
-    /// <inheritdoc cref="SCHGauge.Aetherflow"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge.Aetherflow"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Aetherflow => JobGauge.Aetherflow;
 
-    /// <inheritdoc cref="SCHGauge.FairyGauge"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge.FairyGauge"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte FairyGauge => JobGauge.FairyGauge;
 
-    /// <inheritdoc cref="SCHGauge.SeraphTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge.SeraphTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float SeraphTimer => JobGauge.SeraphTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="SCHGauge.DismissedFairy"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SCHGauge.DismissedFairy"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.DismissedFairy DismissedFairy => JobGauge.DismissedFairy;
 

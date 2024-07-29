@@ -1499,39 +1499,39 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge>();
 
-    /// <inheritdoc cref="PCTGauge.PalleteGauge"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.PalleteGauge"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte PalleteGauge => JobGauge.PalleteGauge;
 
-    /// <inheritdoc cref="PCTGauge.Paint"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.Paint"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Paint => JobGauge.Paint;
 
-    /// <inheritdoc cref="PCTGauge.CreatureMotifDrawn"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.CreatureMotifDrawn"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean CreatureMotifDrawn => JobGauge.CreatureMotifDrawn;
 
-    /// <inheritdoc cref="PCTGauge.WeaponMotifDrawn"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.WeaponMotifDrawn"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean WeaponMotifDrawn => JobGauge.WeaponMotifDrawn;
 
-    /// <inheritdoc cref="PCTGauge.LandscapeMotifDrawn"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.LandscapeMotifDrawn"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean LandscapeMotifDrawn => JobGauge.LandscapeMotifDrawn;
 
-    /// <inheritdoc cref="PCTGauge.MooglePortraitReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.MooglePortraitReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean MooglePortraitReady => JobGauge.MooglePortraitReady;
 
-    /// <inheritdoc cref="PCTGauge.MadeenPortraitReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.MadeenPortraitReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean MadeenPortraitReady => JobGauge.MadeenPortraitReady;
 
-    /// <inheritdoc cref="PCTGauge.CreatureFlags"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.CreatureFlags"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.CreatureFlags CreatureFlags => JobGauge.CreatureFlags;
 
-    /// <inheritdoc cref="PCTGauge.CanvasFlags"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PCTGauge.CanvasFlags"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.CanvasFlags CanvasFlags => JobGauge.CanvasFlags;
 

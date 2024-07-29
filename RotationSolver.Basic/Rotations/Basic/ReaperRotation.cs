@@ -90,11 +90,13 @@ partial class ReaperRotation
 
     static partial void ModifyGibbetPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.StatusNeed = [StatusID.SoulReaver];
     }
 
     static partial void ModifyGallowsPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.StatusNeed = [StatusID.SoulReaver];
     }
 
@@ -209,11 +211,13 @@ partial class ReaperRotation
 
     static partial void ModifyExecutionersGibbetPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.StatusNeed = [StatusID.Executioner];
     }
 
     static partial void ModifyExecutionersGallowsPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.StatusNeed = [StatusID.Executioner];
     }
 

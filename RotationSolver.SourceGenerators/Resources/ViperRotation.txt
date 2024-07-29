@@ -1645,23 +1645,23 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge>();
 
-    /// <inheritdoc cref="VPRGauge.RattlingCoilStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge.RattlingCoilStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte RattlingCoilStacks => JobGauge.RattlingCoilStacks;
 
-    /// <inheritdoc cref="VPRGauge.SerpentOffering"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge.SerpentOffering"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte SerpentOffering => JobGauge.SerpentOffering;
 
-    /// <inheritdoc cref="VPRGauge.AnguineTribute"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge.AnguineTribute"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte AnguineTribute => JobGauge.AnguineTribute;
 
-    /// <inheritdoc cref="VPRGauge.DreadCombo"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge.DreadCombo"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.DreadCombo DreadCombo => JobGauge.DreadCombo;
 
-    /// <inheritdoc cref="VPRGauge.SerpentCombo"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.VPRGauge.SerpentCombo"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.SerpentCombo SerpentCombo => JobGauge.SerpentCombo;
 

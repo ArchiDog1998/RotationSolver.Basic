@@ -988,15 +988,15 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge>();
 
-    /// <inheritdoc cref="WHMGauge.LilyTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge.LilyTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float LilyTimer => JobGauge.LilyTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="WHMGauge.Lily"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge.Lily"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Lily => JobGauge.Lily;
 
-    /// <inheritdoc cref="WHMGauge.BloodLily"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.WHMGauge.BloodLily"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte BloodLily => JobGauge.BloodLily;
 

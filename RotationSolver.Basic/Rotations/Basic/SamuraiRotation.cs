@@ -30,6 +30,16 @@ partial class SamuraiRotation
     public static byte SenCount => (byte)((HasGetsu ? 1 : 0) + (HasSetsu ? 1 : 0) + (HasKa ? 1 : 0));
     #endregion
 
+    static partial void ModifyGekkoPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Rear;
+    }
+
+    static partial void ModifyKashaPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Flank;
+    }
+
     static partial void ModifyHissatsuSotenPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;

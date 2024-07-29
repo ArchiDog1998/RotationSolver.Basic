@@ -1156,31 +1156,31 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge>();
 
-    /// <inheritdoc cref="MCHGauge.OverheatTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.OverheatTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float OverheatTimeRemaining => JobGauge.OverheatTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="MCHGauge.SummonTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.SummonTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float SummonTimeRemaining => JobGauge.SummonTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="MCHGauge.Heat"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.Heat"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Heat => JobGauge.Heat;
 
-    /// <inheritdoc cref="MCHGauge.Battery"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.Battery"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Battery => JobGauge.Battery;
 
-    /// <inheritdoc cref="MCHGauge.LastSummonBatteryPower"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.LastSummonBatteryPower"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte LastSummonBatteryPower => JobGauge.LastSummonBatteryPower;
 
-    /// <inheritdoc cref="MCHGauge.IsOverheated"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.IsOverheated"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsOverheated => JobGauge.IsOverheated;
 
-    /// <inheritdoc cref="MCHGauge.IsRobotActive"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MCHGauge.IsRobotActive"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsRobotActive => JobGauge.IsRobotActive;
 

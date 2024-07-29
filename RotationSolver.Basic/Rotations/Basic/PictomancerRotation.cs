@@ -1,5 +1,4 @@
-﻿using FFXIVClientStructs.FFXIV.Client.Game;
-using static RotationSolver.Basic.CombatData;
+﻿using static RotationSolver.Basic.CombatData;
 
 namespace RotationSolver.Basic.Rotations.Basic;
 
@@ -318,6 +317,7 @@ partial class PictomancerRotation
     /// <inheritdoc/>
     protected override bool DefenseAreaAbility(out IAction? act)
     {
+        if (AddlePvE.CanUse(out act)) return true;
         if (TemperaGrassaPvE.CanUse(out act)) return true;
         return base.DefenseAreaAbility(out act);
     }

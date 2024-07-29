@@ -1163,31 +1163,31 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge>();
 
-    /// <inheritdoc cref="SAMGauge.Kaeshi"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.Kaeshi"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Kaeshi Kaeshi => JobGauge.Kaeshi;
 
-    /// <inheritdoc cref="SAMGauge.Kenki"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.Kenki"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Kenki => JobGauge.Kenki;
 
-    /// <inheritdoc cref="SAMGauge.MeditationStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.MeditationStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte MeditationStacks => JobGauge.MeditationStacks;
 
-    /// <inheritdoc cref="SAMGauge.Sen"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.Sen"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Sen Sen => JobGauge.Sen;
 
-    /// <inheritdoc cref="SAMGauge.HasSetsu"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.HasSetsu"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean HasSetsu => JobGauge.HasSetsu;
 
-    /// <inheritdoc cref="SAMGauge.HasGetsu"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.HasGetsu"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean HasGetsu => JobGauge.HasGetsu;
 
-    /// <inheritdoc cref="SAMGauge.HasKa"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SAMGauge.HasKa"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean HasKa => JobGauge.HasKa;
 

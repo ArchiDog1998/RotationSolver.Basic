@@ -1998,67 +1998,67 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge>();
 
-    /// <inheritdoc cref="SMNGauge.SummonTimerRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.SummonTimerRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float SummonTimerRemaining => JobGauge.SummonTimerRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="SMNGauge.AttunmentTimerRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.AttunmentTimerRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float AttunmentTimerRemaining => JobGauge.AttunmentTimerRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="SMNGauge.ReturnSummon"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.ReturnSummon"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.SummonPet ReturnSummon => JobGauge.ReturnSummon;
 
-    /// <inheritdoc cref="SMNGauge.ReturnSummonGlam"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.ReturnSummonGlam"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.PetGlam ReturnSummonGlam => JobGauge.ReturnSummonGlam;
 
-    /// <inheritdoc cref="SMNGauge.Attunement"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.Attunement"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Attunement => JobGauge.Attunement;
 
-    /// <inheritdoc cref="SMNGauge.AetherFlags"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.AetherFlags"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static FFXIVClientStructs.FFXIV.Client.Game.Gauge.AetherFlags AetherFlags => JobGauge.AetherFlags;
 
-    /// <inheritdoc cref="SMNGauge.IsBahamutReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsBahamutReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsBahamutReady => JobGauge.IsBahamutReady;
 
-    /// <inheritdoc cref="SMNGauge.IsPhoenixReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsPhoenixReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsPhoenixReady => JobGauge.IsPhoenixReady;
 
-    /// <inheritdoc cref="SMNGauge.IsIfritReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsIfritReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsIfritReady => JobGauge.IsIfritReady;
 
-    /// <inheritdoc cref="SMNGauge.IsTitanReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsTitanReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsTitanReady => JobGauge.IsTitanReady;
 
-    /// <inheritdoc cref="SMNGauge.IsGarudaReady"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsGarudaReady"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsGarudaReady => JobGauge.IsGarudaReady;
 
-    /// <inheritdoc cref="SMNGauge.IsIfritAttuned"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsIfritAttuned"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsIfritAttuned => JobGauge.IsIfritAttuned;
 
-    /// <inheritdoc cref="SMNGauge.IsTitanAttuned"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsTitanAttuned"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsTitanAttuned => JobGauge.IsTitanAttuned;
 
-    /// <inheritdoc cref="SMNGauge.IsGarudaAttuned"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.IsGarudaAttuned"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsGarudaAttuned => JobGauge.IsGarudaAttuned;
 
-    /// <inheritdoc cref="SMNGauge.HasAetherflowStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.HasAetherflowStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean HasAetherflowStacks => JobGauge.HasAetherflowStacks;
 
-    /// <inheritdoc cref="SMNGauge.AetherflowStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.SMNGauge.AetherflowStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte AetherflowStacks => JobGauge.AetherflowStacks;
 

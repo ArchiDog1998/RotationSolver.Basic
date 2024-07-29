@@ -1521,15 +1521,15 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge>();
 
-    /// <inheritdoc cref="GNBGauge.Ammo"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge.Ammo"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Ammo => JobGauge.Ammo;
 
-    /// <inheritdoc cref="GNBGauge.MaxTimerDuration"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge.MaxTimerDuration"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float MaxTimerDuration => JobGauge.MaxTimerDuration / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="GNBGauge.AmmoComboStep"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.GNBGauge.AmmoComboStep"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte AmmoComboStep => JobGauge.AmmoComboStep;
 

@@ -1077,47 +1077,47 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge>();
 
-    /// <inheritdoc cref="BLMGauge.EnochianTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.EnochianTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float EnochianTimer => JobGauge.EnochianTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="BLMGauge.ElementTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.ElementTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float ElementTimeRemaining => JobGauge.ElementTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="BLMGauge.PolyglotStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.PolyglotStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte PolyglotStacks => JobGauge.PolyglotStacks;
 
-    /// <inheritdoc cref="BLMGauge.UmbralHearts"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.UmbralHearts"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte UmbralHearts => JobGauge.UmbralHearts;
 
-    /// <inheritdoc cref="BLMGauge.UmbralIceStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.UmbralIceStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte UmbralIceStacks => JobGauge.UmbralIceStacks;
 
-    /// <inheritdoc cref="BLMGauge.AstralFireStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.AstralFireStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte AstralFireStacks => JobGauge.AstralFireStacks;
 
-    /// <inheritdoc cref="BLMGauge.AstralSoulStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.AstralSoulStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Int32 AstralSoulStacks => JobGauge.AstralSoulStacks;
 
-    /// <inheritdoc cref="BLMGauge.InUmbralIce"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.InUmbralIce"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean InUmbralIce => JobGauge.InUmbralIce;
 
-    /// <inheritdoc cref="BLMGauge.InAstralFire"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.InAstralFire"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean InAstralFire => JobGauge.InAstralFire;
 
-    /// <inheritdoc cref="BLMGauge.IsEnochianActive"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.IsEnochianActive"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsEnochianActive => JobGauge.IsEnochianActive;
 
-    /// <inheritdoc cref="BLMGauge.IsParadoxActive"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BLMGauge.IsParadoxActive"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsParadoxActive => JobGauge.IsParadoxActive;
 

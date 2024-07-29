@@ -1526,11 +1526,11 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge>();
 
-    /// <inheritdoc cref="NINGauge.Ninki"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge.Ninki"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Ninki => JobGauge.Ninki;
 
-    /// <inheritdoc cref="NINGauge.Kazematoi"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.NINGauge.Kazematoi"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Kazematoi => JobGauge.Kazematoi;
 

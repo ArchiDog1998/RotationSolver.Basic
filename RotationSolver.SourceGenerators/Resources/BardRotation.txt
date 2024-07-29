@@ -1027,27 +1027,27 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge>();
 
-    /// <inheritdoc cref="BRDGauge.SongTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.SongTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float SongTimer => JobGauge.SongTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="BRDGauge.Repertoire"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.Repertoire"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Repertoire => JobGauge.Repertoire;
 
-    /// <inheritdoc cref="BRDGauge.SoulVoice"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.SoulVoice"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte SoulVoice => JobGauge.SoulVoice;
 
-    /// <inheritdoc cref="BRDGauge.Song"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.Song"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Song Song => JobGauge.Song;
 
-    /// <inheritdoc cref="BRDGauge.LastSong"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.LastSong"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Song LastSong => JobGauge.LastSong;
 
-    /// <inheritdoc cref="BRDGauge.Coda"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.BRDGauge.Coda"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Song[] Coda => JobGauge.Coda;
 

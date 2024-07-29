@@ -35,38 +35,40 @@ partial class ViperRotation
     #region 3
     static partial void ModifyFlankstingStrikePvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.NeedsHighlight = true;
     }
 
     static partial void ModifyFlanksbaneFangPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.NeedsHighlight = true;
     }
 
     static partial void ModifyHindstingStrikePvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.NeedsHighlight = true;
     }
 
     static partial void ModifyHindsbaneFangPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.NeedsHighlight = true;
     }
     #endregion
 
     #region Coil
-    //static partial void ModifyDreadwinderPvE(ref ActionSetting setting)
-    //{
-    //    setting.TargetStatusProvide = [StatusID.NoxiousGnash];
-    //}
     static partial void ModifyHuntersCoilPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Flank;
         setting.SkipComboCheck = true;
         setting.NeedsHighlight = true;
     }
 
     static partial void ModifySwiftskinsCoilPvE(ref ActionSetting setting)
     {
+        setting.EnemyPositional = EnemyPositional.Rear;
         setting.SkipComboCheck = true;
         setting.NeedsHighlight = true;
     }
@@ -314,5 +316,12 @@ partial class ViperRotation
     {
         if (WorldswallowerPvP.CanUse(out act, skipAoeCheck: true)) return true;
         return base.LimitBreakPvPGCD(out act);
+    }
+
+    /// <inheritdoc/>
+    protected override bool DefenseAreaAbility(out IAction? act)
+    {
+        if (FeintPvE.CanUse(out act)) return true;
+        return base.DefenseAreaAbility(out act);
     }
 }

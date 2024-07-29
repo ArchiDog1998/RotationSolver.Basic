@@ -13,30 +13,241 @@ partial class MonkRotation
 
     /// <inheritdoc cref="Nadi.LUNAR"/>
     public static bool HasLunar => Nadi.HasFlag(Nadi.LUNAR);
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static bool HasThreeBeast => BeastChakra.Count(i => i != Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.NONE) == 3;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static bool HasThreeSameBeast
+    {
+        get
+        {
+            BeastChakra last = Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.NONE;
+            foreach (var beast in BeastChakra)
+            {
+                if (beast == Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.NONE) return false;
+                if (last == Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.NONE)
+                {
+                    last = beast;
+                }
+                else
+                {
+                    if (last != beast) return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static bool HasThreeDistinctBeast
+    {
+        get
+        {
+            if (!BeastChakra.Any(i => i == Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.OPOOPO)) return false;
+            if (!BeastChakra.Any(i => i == Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.RAPTOR)) return false;
+            if (!BeastChakra.Any(i => i == Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra.COEURL)) return false;
+            return true;
+        }
+    }
     #endregion
 
+    #region Opo-opo Form
     static partial void ModifyDragonKickPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.LeadenFist];
+        setting.ActionCheck = () => OpoOpoFury == 0;
+    }
+    #endregion
+
+    #region Raptor Form
+    private static void RaptorForm(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.RaptorForm, StatusID.PerfectBalance];
+    }
+
+    static partial void ModifyTrueStrikePvE(ref ActionSetting setting)
+    {
+        RaptorForm(ref setting);
+    }
+
+    static partial void ModifyTwinSnakesPvE(ref ActionSetting setting)
+    {
+        RaptorForm(ref setting);
+        setting.ActionCheck = () => RaptorFury == 0;
+    }
+
+    static partial void ModifyFourpointFuryPvE(ref ActionSetting setting)
+    {
+        RaptorForm(ref setting);
+    }
+
+    static partial void ModifyRisingRaptorPvE(ref ActionSetting setting)
+    {
+        RaptorForm(ref setting);
+    }
+    #endregion
+
+    #region Coeurl Form
+    private static void CoeurlForm(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.CoeurlForm, StatusID.PerfectBalance];
+    }
+
+    static partial void ModifySnapPunchPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Flank;
+        CoeurlForm(ref setting);
     }
 
     static partial void ModifyDemolishPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.Demolish];
-        setting.CreateConfig = () => new()
-        {
-            StatusGcdCount = 3,
-        };
+        CoeurlForm(ref setting);
+        setting.EnemyPositional = EnemyPositional.Rear;
+        setting.ActionCheck = () => CoeurlFury == 0;
     }
 
-    static partial void ModifySteelPeakPvE(ref ActionSetting setting)
+    static partial void ModifyRockbreakerPvE(ref ActionSetting setting)
+    {
+        CoeurlForm(ref setting);
+    }
+
+    static partial void ModifyPouncingCoeurlPvE(ref ActionSetting setting)
+    {
+        setting.EnemyPositional = EnemyPositional.Flank;
+        CoeurlForm(ref setting);
+    }
+    #endregion
+
+    #region Chakra
+    private static void ChakraAction(ref ActionSetting setting)
     {
         setting.ActionCheck = () => InCombat && Chakra == 5;
+    }
+    static partial void ModifySteelPeakPvE(ref ActionSetting setting)
+    {
+        ChakraAction(ref setting);
     }
 
     static partial void ModifyHowlingFistPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InCombat && Chakra == 5;
+        ChakraAction(ref setting);
+    }
+
+    static partial void ModifyTheForbiddenChakraPvE(ref ActionSetting setting)
+    {
+        ChakraAction(ref setting);
+    }
+
+    static partial void ModifyEnlightenmentPvE(ref ActionSetting setting)
+    {
+        ChakraAction(ref setting);
+    }
+    #endregion
+
+    #region Masterfull Blitz
+    static partial void ModifyMasterfulBlitzPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => false;
+    }
+
+    static partial void ModifyTornadoKickPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () =>
+        {
+            if (!HasSolar || !HasLunar) return false;
+            return HasThreeBeast;
+        };
+    }
+
+    static partial void ModifyPhantomRushPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () =>
+        {
+            if (!HasSolar || !HasLunar) return false;
+            return HasThreeBeast;
+        };
+    }
+
+    static partial void ModifyFlintStrikePvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasThreeDistinctBeast;
+    }
+
+    static partial void ModifyRisingPhoenixPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasThreeDistinctBeast;
+    }
+
+    static partial void ModifyElixirFieldPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasThreeSameBeast;
+    }
+
+    static partial void ModifyElixirBurstPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasThreeSameBeast;
+    }
+
+    static partial void ModifyCelestialRevolutionPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => HasThreeBeast;
+    }
+    #endregion
+
+    #region Riddle And Reply
+    static partial void ModifyRiddleOfEarthPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.RiddleOfEarth, StatusID.EarthsRumination];
+    }
+
+    static partial void ModifyEarthsReplyPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.EarthsRumination];
+    }
+
+    static partial void ModifyRiddleOfFirePvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.RiddleOfFire, StatusID.FiresRumination];
+        setting.CreateConfig = () => new()
+        {
+            TimeToKill = 10,
+        };
+    }
+
+    static partial void ModifyFiresReplyPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.FiresRumination];
+    }
+
+    static partial void ModifyRiddleOfWindPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.RiddleOfWind, StatusID.WindsRumination];
+        setting.CreateConfig = () => new()
+        {
+            TimeToKill = 10,
+        };
+    }
+
+    static partial void ModifyWindsReplyPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.WindsRumination];
+    }
+    #endregion
+
+    static partial void ModifyPerfectBalancePvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.PerfectBalance];
+        setting.ActionCheck = () => InCombat;
+    }
+    static partial void ModifyFormShiftPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.FormlessFist, StatusID.PerfectBalance];
     }
 
     static partial void ModifyMantraPvE(ref ActionSetting setting)
@@ -47,38 +258,7 @@ partial class MonkRotation
         };
     }
 
-    static partial void ModifyRiddleOfEarthPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.RiddleOfEarth];
-    }
-
-    static partial void ModifyRiddleOfWindPvE(ref ActionSetting setting)
-    {
-        setting.CreateConfig = () => new()
-        {
-            TimeToKill = 10,
-        };
-    }
-
-    static partial void ModifyPerfectBalancePvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => InCombat && IsLongerThan(5);
-    }
-
-    static partial void ModifyFormShiftPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.FormlessFist, StatusID.PerfectBalance];
-    }
-
     static partial void ModifyBrotherhoodPvE(ref ActionSetting setting)
-    {
-        setting.CreateConfig = () => new()
-        {
-            TimeToKill = 10,
-        };
-    }
-
-    static partial void ModifyRiddleOfFirePvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
         {
@@ -114,6 +294,7 @@ partial class MonkRotation
     protected override bool HealAreaAbility(out IAction? act)
     {
         if (MantraPvE.CanUse(out act)) return true;
+        if (EarthsReplyPvE.CanUse(out act)) return true;
         return base.HealAreaAbility(out act);
     }
 

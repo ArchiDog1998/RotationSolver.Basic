@@ -1206,7 +1206,7 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.PLDGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.PLDGauge>();
 
-    /// <inheritdoc cref="PLDGauge.OathGauge"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.PLDGauge.OathGauge"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte OathGauge => JobGauge.OathGauge;
 

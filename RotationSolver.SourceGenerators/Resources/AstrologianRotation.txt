@@ -1331,15 +1331,15 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge>();
 
-    /// <inheritdoc cref="ASTGauge.DrawnCards"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge.DrawnCards"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.CardType[] DrawnCards => JobGauge.DrawnCards;
 
-    /// <inheritdoc cref="ASTGauge.DrawnCrownCard"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge.DrawnCrownCard"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.CardType DrawnCrownCard => JobGauge.DrawnCrownCard;
 
-    /// <inheritdoc cref="ASTGauge.ActiveDraw"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.ASTGauge.ActiveDraw"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.DrawType ActiveDraw => JobGauge.ActiveDraw;
 

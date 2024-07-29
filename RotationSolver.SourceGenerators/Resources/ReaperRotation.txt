@@ -1201,23 +1201,23 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge>();
 
-    /// <inheritdoc cref="RPRGauge.Soul"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge.Soul"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Soul => JobGauge.Soul;
 
-    /// <inheritdoc cref="RPRGauge.Shroud"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge.Shroud"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Shroud => JobGauge.Shroud;
 
-    /// <inheritdoc cref="RPRGauge.EnshroudedTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge.EnshroudedTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float EnshroudedTimeRemaining => JobGauge.EnshroudedTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="RPRGauge.LemureShroud"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge.LemureShroud"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte LemureShroud => JobGauge.LemureShroud;
 
-    /// <inheritdoc cref="RPRGauge.VoidShroud"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RPRGauge.VoidShroud"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte VoidShroud => JobGauge.VoidShroud;
 

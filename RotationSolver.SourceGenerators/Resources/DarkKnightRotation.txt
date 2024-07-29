@@ -1041,19 +1041,19 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge>();
 
-    /// <inheritdoc cref="DRKGauge.Blood"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge.Blood"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Blood => JobGauge.Blood;
 
-    /// <inheritdoc cref="DRKGauge.DarksideTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge.DarksideTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float DarksideTimeRemaining => JobGauge.DarksideTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="DRKGauge.ShadowTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge.ShadowTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float ShadowTimeRemaining => JobGauge.ShadowTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="DRKGauge.HasDarkArts"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRKGauge.HasDarkArts"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean HasDarkArts => JobGauge.HasDarkArts;
 

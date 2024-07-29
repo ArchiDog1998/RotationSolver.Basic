@@ -1434,15 +1434,15 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge>();
 
-    /// <inheritdoc cref="RDMGauge.WhiteMana"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge.WhiteMana"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte WhiteMana => JobGauge.WhiteMana;
 
-    /// <inheritdoc cref="RDMGauge.BlackMana"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge.BlackMana"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte BlackMana => JobGauge.BlackMana;
 
-    /// <inheritdoc cref="RDMGauge.ManaStacks"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.RDMGauge.ManaStacks"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte ManaStacks => JobGauge.ManaStacks;
 

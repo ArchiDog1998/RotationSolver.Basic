@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/monk"><strong>Monk</strong></see>
 /// <br>Number of Actions: 55</br>
-/// <br>Number of Replace Actions: 11</br>
+/// <br>Number of Replace Actions: 12</br>
 /// <br>Number of Action Combos: 6</br>
 /// <br>Number of Traits: 21</br>
 /// </summary>
@@ -1137,6 +1137,12 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public global::RotationSolver.Basic.Actions.IBaseActionSet HowlingFistPvEReplace { get; }
 
     /// <summary>
+/// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="CelestialRevolutionPvE"/> -> <seealso cref="ElixirFieldPvE"/> -> <seealso cref="ElixirBurstPvE"/> -> <seealso cref="FlintStrikePvE"/> -> <seealso cref="RisingPhoenixPvE"/> -> <seealso cref="TornadoKickPvE"/> -> <seealso cref="PhantomRushPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MasterfulBlitzPvEReplace { get; }
+
+    /// <summary>
 /// <seealso cref="ArmOfTheDestroyerPvE"/> -> <seealso cref="ShadowOfTheDestroyerPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1223,31 +1229,31 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge>();
 
-    /// <inheritdoc cref="MNKGauge.Chakra"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.Chakra"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte Chakra => JobGauge.Chakra;
 
-    /// <inheritdoc cref="MNKGauge.BeastChakra"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.BeastChakra"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.BeastChakra[] BeastChakra => JobGauge.BeastChakra;
 
-    /// <inheritdoc cref="MNKGauge.Nadi"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.Nadi"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static Dalamud.Game.ClientState.JobGauge.Enums.Nadi Nadi => JobGauge.Nadi;
 
-    /// <inheritdoc cref="MNKGauge.OpoOpoFury"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.OpoOpoFury"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Int32 OpoOpoFury => JobGauge.OpoOpoFury;
 
-    /// <inheritdoc cref="MNKGauge.RaptorFury"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.RaptorFury"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Int32 RaptorFury => JobGauge.RaptorFury;
 
-    /// <inheritdoc cref="MNKGauge.CoeurlFury"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.CoeurlFury"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Int32 CoeurlFury => JobGauge.CoeurlFury;
 
-    /// <inheritdoc cref="MNKGauge.BlitzTimeRemaining"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.MNKGauge.BlitzTimeRemaining"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float BlitzTimeRemaining => JobGauge.BlitzTimeRemaining / 1000f - DataCenter.WeaponRemain;
 
@@ -1338,6 +1344,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
         SteelPeakPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE], true);
         InspiritedMeditationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE, EnlightenedMeditationPvE, InspiritedMeditationPvE], true);
         HowlingFistPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE], true);
+        MasterfulBlitzPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvE, TornadoKickPvE, RisingPhoenixPvE, FlintStrikePvE, ElixirBurstPvE, ElixirFieldPvE, CelestialRevolutionPvE, MasterfulBlitzPvE], false);
         ArmOfTheDestroyerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowOfTheDestroyerPvE, ArmOfTheDestroyerPvE], true);
         RiddleOfEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EarthsReplyPvE, RiddleOfEarthPvE], true);
         BootshinePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LeapingOpoPvE, BootshinePvE], true);

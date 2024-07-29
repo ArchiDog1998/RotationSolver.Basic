@@ -201,7 +201,7 @@ internal static class BasicRotationGenerator
         {
             var result = PropertyDeclaration(PredefinedType(Token(SyntaxKind.FloatKeyword)), Identifier(name))
                 .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
-                .WithXmlComment($"/// <inheritdoc cref=\"{prop.DeclaringType!.Name}.{name}\"/>")
+                .WithXmlComment($"/// <inheritdoc cref=\"global::Dalamud.Game.ClientState.JobGauge.Types.{prop.DeclaringType!.Name}.{name}\"/>")
                 .WithModifiers(
                     TokenList(
                         [
@@ -233,7 +233,7 @@ internal static class BasicRotationGenerator
         {
             var result = PropertyDeclaration(IdentifierName(typeName), Identifier(name))
                 .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
-                .WithXmlComment($"/// <inheritdoc cref=\"{prop.DeclaringType!.Name}.{name}\"/>")
+                .WithXmlComment($"/// <inheritdoc cref=\"global::Dalamud.Game.ClientState.JobGauge.Types.{prop.DeclaringType!.Name}.{name}\"/>")
                 .WithModifiers(
                     TokenList(
                         [

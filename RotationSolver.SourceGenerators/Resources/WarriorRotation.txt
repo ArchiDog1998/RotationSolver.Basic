@@ -1008,7 +1008,7 @@ public abstract partial class WarriorRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.WARGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.WARGauge>();
 
-    /// <inheritdoc cref="WARGauge.BeastGauge"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.WARGauge.BeastGauge"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte BeastGauge => JobGauge.BeastGauge;
 

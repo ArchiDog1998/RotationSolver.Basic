@@ -1120,19 +1120,19 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     static global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge JobGauge => global::ECommons.DalamudServices.Svc.Gauges.Get<global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge>();
 
-    /// <inheritdoc cref="DRGGauge.LOTDTimer"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge.LOTDTimer"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static float LOTDTimer => JobGauge.LOTDTimer / 1000f - DataCenter.WeaponRemain;
 
-    /// <inheritdoc cref="DRGGauge.IsLOTDActive"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge.IsLOTDActive"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Boolean IsLOTDActive => JobGauge.IsLOTDActive;
 
-    /// <inheritdoc cref="DRGGauge.EyeCount"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge.EyeCount"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte EyeCount => JobGauge.EyeCount;
 
-    /// <inheritdoc cref="DRGGauge.FirstmindsFocusCount"/>
+    /// <inheritdoc cref="global::Dalamud.Game.ClientState.JobGauge.Types.DRGGauge.FirstmindsFocusCount"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public static System.Byte FirstmindsFocusCount => JobGauge.FirstmindsFocusCount;
 
