@@ -1168,7 +1168,7 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50662"><strong>Dynamic Dancer</strong></see> (DNC) [662]
-/// <para>Increases the potency of Cascade to 220, Fountain to 120, Reverse Cascade to 280, Fountainfall to 340, Double Standard Finish to 850, Quadruple Technical Finish to 1,300, and Saber Dance to 520.</para>
+/// <para>Increases the potency of Cascade to 220, Fountain to 120, Reverse Cascade to 280, Fountainfall to 340, Double Standard Finish to 850, Quadruple Technical Finish to 1,300, Saber Dance to 520, and Fan Dance IV to 420.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait DynamicDancerTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(662U);
 

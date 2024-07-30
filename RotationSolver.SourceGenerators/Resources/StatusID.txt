@@ -9175,7 +9175,7 @@ public enum StatusID : ushort
     Biolysis = 1895,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/1896"><strong>Recitation</strong></see> ↑ (SCH)
-/// <para>The next Adloquium, Succor, Indomitability, or Excogitation executed will cost no MP or Aetherflow stacks and will restore critical HP.</para>
+/// <para>The next Adloquium, ConcitationSuccorSuccor, Indomitability, or Excogitation executed will cost no MP or Aetherflow stacks and will restore critical HP.</para>
 /// </summary>
     Recitation = 1896,
     /// <summary>
@@ -15374,6 +15374,11 @@ public enum StatusID : ushort
 /// </summary>
     SustainedDamage_3288 = 3288,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3289"><strong>Fusefield</strong></see> ↑ (All Classes)
+/// <para>Deploying an infernal field.</para>
+/// </summary>
+    Fusefield = 3289,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3290"><strong>Echo of the Fallen</strong></see> ↓ (All Classes)
 /// <para>The Curse of the Fallen resonates within, causing an explosion when this effect expires.</para>
 /// </summary>
@@ -15443,6 +15448,11 @@ public enum StatusID : ushort
 /// <para>Damage taken is reduced.</para>
 /// </summary>
     SupernalGuard = 3303,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3304"><strong>Damage Down</strong></see> ↓ (All Classes)
+/// <para>Damage dealt is reduced.</para>
+/// </summary>
+    DamageDown_3304 = 3304,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3305"><strong>Bracing Suds</strong></see> ↑ (All Classes)
 /// <para>Awash in wind-aspected soap suds.</para>
@@ -17054,6 +17064,11 @@ public enum StatusID : ushort
 /// </summary>
     ReadyToReawaken = 3671,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3672"><strong>Honed Steel</strong></see> ↑ (VPR)
+/// <para>Potency of Steel Fangs and Steel Maw is increased.</para>
+/// </summary>
+    HonedSteel = 3672,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3674"><strong>Subtractive Palette</strong></see> ↑ (PCT)
 /// <para>The properties of your pictomancy spells have changed.</para>
 /// </summary>
@@ -17484,6 +17499,11 @@ public enum StatusID : ushort
 /// </summary>
     InfernalShroud = 3771,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3772"><strong>Honed Reavers</strong></see> ↑ (VPR)
+/// <para>Potency of Reaving Fangs and Reaving Maw is increased.</para>
+/// </summary>
+    HonedReavers = 3772,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3776"><strong>Bind</strong></see> ↓ (All Classes)
 /// <para>Unable to move.</para>
 /// </summary>
@@ -17840,7 +17860,7 @@ public enum StatusID : ushort
     Tengentsu = 3853,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3854"><strong>Tengentsu's Foresight</strong></see> ↑ (SAM)
-/// <para>HP will be restored automatically when effect expires.</para>
+/// <para>Damage taken is reduced and regenerating HP over time.</para>
 /// </summary>
     TengentsusForesight = 3854,
     /// <summary>
@@ -18164,10 +18184,55 @@ public enum StatusID : ushort
 /// </summary>
     FatalAttraction = 3920,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3921"><strong>Drone</strong></see> ↓ (All Classes)
+/// <para>Wholly enthralled by Honey B. Lovely's charms and offering up life force as tribute.</para>
+/// </summary>
+    Drone = 3921,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3923"><strong>Infatuated</strong></see> ↓ (All Classes)
+/// <para>Suffering minor heart palpitations due to a growing fondness for Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    Infatuated_3923 = 3923,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3924"><strong>Head Over Heels</strong></see> ↓ (All Classes)
+/// <para>Suffering heart palpitations due to an attraction to Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    HeadOverHeels_3924 = 3924,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3925"><strong>Hopeless Devotion</strong></see> ↓ (All Classes)
+/// <para>Suffering severe heart palpitations due to undying affection for Honey B. Lovely. Taking damage over time.</para>
+/// </summary>
+    HopelessDevotion_3925 = 3925,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3926"><strong>Honey Bee Mine</strong></see> ↓ (All Classes)
+/// <para>Taken in Honey B. Lovely's thrall and suffering from a dangerously high heart rate, causing damage over time.</para>
+/// </summary>
+    HoneyBeeMine = 3926,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3931"><strong>Nine Lives</strong></see> ↑ (All Classes)
+/// <para>Actions performed will be remembered.</para>
+/// </summary>
+    NineLives = 3931,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3934"><strong>Poison 'n' Pop</strong></see> ↓ (All Classes)
+/// <para>Poisoned by Honey B. Lovely. An explosion will be triggered when this effect expires.</para>
+/// </summary>
+    PoisonNPop = 3934,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3935"><strong>Poison Resistance Down II</strong></see> ↓ (All Classes)
 /// <para>Poison resistance is significantly reduced.</para>
 /// </summary>
     PoisonResistanceDownIi = 3935,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3936"><strong>Queen Bee</strong></see> ↑ (All Classes)
+/// <para>Strengthened by a drone's life force.</para>
+/// </summary>
+    QueenBee = 3936,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3937"><strong>Honeyed Charms</strong></see> ↑ (All Classes)
+/// <para>Weapon has been lovingly coated with a pheromone-laced venom.</para>
+/// </summary>
+    HoneyedCharms = 3937,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3938"><strong>Times Three</strong></see> ↑ (All Classes)
 /// <para>The angle of effect for the next rotational attack executed will be tripled.</para>
@@ -18218,6 +18283,11 @@ public enum StatusID : ushort
 /// <para>Regenerating HP over time.</para>
 /// </summary>
     RroneeksFavor = 3952,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3953"><strong>Femme Fatale</strong></see> ↑ (All Classes)
+/// <para>Significantly strengthened by several drones' life force.</para>
+/// </summary>
+    FemmeFatale = 3953,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/3954"><strong>Heart of Tural</strong></see> ↑ (All Classes)
 /// <para>By the strength of immovable conviction, damage taken is reduced.</para>
@@ -18374,6 +18444,61 @@ public enum StatusID : ushort
 /// </summary>
     OnARoll = 3996,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3997"><strong>Concealed</strong></see> ↑ (All Classes)
+/// <para>Unable to be detected from a distance.</para>
+/// </summary>
+    Concealed_3997 = 3997,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/3999"><strong>_rsv_3999_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_3999_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv39991100S74Cfc3B0E74Cfc3B0 = 3999,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4000"><strong>_rsv_4000_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4000_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40001100S74Cfc3B0E74Cfc3B0 = 4000,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4001"><strong>_rsv_4001_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4001_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40011100S74Cfc3B0E74Cfc3B0 = 4001,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4002"><strong>_rsv_4002_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4002_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40021100S74Cfc3B0E74Cfc3B0 = 4002,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4003"><strong>_rsv_4003_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4003_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40031100S74Cfc3B0E74Cfc3B0 = 4003,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4004"><strong>_rsv_4004_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4004_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40041100S74Cfc3B0E74Cfc3B0 = 4004,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4005"><strong>_rsv_4005_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4005_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40051100S74Cfc3B0E74Cfc3B0 = 4005,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4006"><strong>_rsv_4006_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4006_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40061100S74Cfc3B0E74Cfc3B0 = 4006,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4007"><strong>_rsv_4007_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4007_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40071100S74Cfc3B0E74Cfc3B0 = 4007,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4008"><strong>_rsv_4008_-1_1_0_0_S74CFC3B0_E74CFC3B0</strong></see> ↓ (All Classes)
+/// <para>_rsv_4008_-1_1_1_0_S74CFC3B0_E74CFC3B0</para>
+/// </summary>
+    Rsv40081100S74Cfc3B0E74Cfc3B0 = 4008,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4009"><strong>Inverse Operations</strong></see> ↑ (All Classes)
 /// <para>Prepared to systemically work backwards.</para>
 /// </summary>
@@ -18404,10 +18529,30 @@ public enum StatusID : ushort
 /// </summary>
     ChanceOfBlizzards = 4014,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4019"><strong>Chain Deathmatch</strong></see> ↓ (All Classes)
+/// <para>Singled out for a deathmatch. Damage from opponent's first blow will be reduced; however, failing to receive a blow from said opponent before this effect expires will result in KO.</para>
+/// </summary>
+    ChainDeathmatch = 4019,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4020"><strong>Bombarium</strong></see> ↓ (All Classes)
+/// <para>A highly combustible material has been affixed to the body, resulting in a KO when this effect expires. Contact with a sinister spark will trigger an explosion and remove this effect.</para>
+/// </summary>
+    Bombarium = 4020,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4021"><strong>Doped</strong></see> ↑ (All Classes)
 /// <para>A performance-enhancing compound is amplifying physical strength. Damage dealt is increased.</para>
 /// </summary>
     Doped = 4021,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4022"><strong>Dangerously Doped</strong></see> ↑ (All Classes)
+/// <para>A performance-enhancing compound is greatly amplifying physical strength. Damage dealt is increased based on the number of stacks.</para>
+/// </summary>
+    DangerouslyDoped = 4022,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4023"><strong>Doped and Detonative</strong></see> ↑ (All Classes)
+/// <para>A cocktail of performance-enhancing compounds is amplifying physical strength to an explosive degree.</para>
+/// </summary>
+    DopedAndDetonative = 4023,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4029"><strong>Left Windup</strong></see> ↑ (All Classes)
 /// <para>Ready to unleash a series of blows, starting with a leftward spin.</para>
@@ -18498,6 +18643,36 @@ public enum StatusID : ushort
 /// <para>Zoraal Ja's will is being projected upon you. Contact with specific flows of aether will provoke an attack.</para>
 /// </summary>
     Projection = 4047,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4048"><strong>One-two Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive One-two Paw.</para>
+/// </summary>
+    OnetwoMemory = 4048,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4049"><strong>Four-crossed Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive Quadruple Crossing.</para>
+/// </summary>
+    FourcrossedMemory = 4049,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4050"><strong>Rightward Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive movement to the right.</para>
+/// </summary>
+    RightwardMemory = 4050,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4051"><strong>Leftward Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive movement to the left.</para>
+/// </summary>
+    LeftwardMemory = 4051,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4052"><strong>Four-swipe Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive Quadruple Swipe.</para>
+/// </summary>
+    FourswipeMemory = 4052,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4053"><strong>Two-swipe Memory</strong></see> ↑ (All Classes)
+/// <para>Prepared to relive Double Swipe.</para>
+/// </summary>
+    TwoswipeMemory = 4053,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4065"><strong>The Narwhal's Lullaby</strong></see> ↓ (All Classes)
 /// <para>The sacred treasure is inducing a deep slumber.</para>
@@ -18784,6 +18959,11 @@ public enum StatusID : ushort
 /// </summary>
     AccelerationBomb_4144 = 4144,
     /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4145"><strong>Rotten Honey</strong></see> ↑ (All Classes)
+/// <para>Honey B. Lovely is showing her true colors.</para>
+/// </summary>
+    RottenHoney = 4145,
+    /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4147"><strong>Bee Be Gone</strong></see> ↑ (All Classes)
 /// <para>Unbridled rage is increasing damage dealt. Standing too close will provoke an attack.</para>
 /// </summary>
@@ -18793,6 +18973,11 @@ public enum StatusID : ushort
 /// <para>Unbridled rage is increasing damage dealt. Standing too far away will provoke an attack.</para>
 /// </summary>
     BeeBeHere = 4148,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4149"><strong>Sustained Damage</strong></see> ↓ (All Classes)
+/// <para>Sustaining damage over time.</para>
+/// </summary>
+    SustainedDamage_4149 = 4149,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#status/4150"><strong>Deep Freeze</strong></see> ↓ (All Classes)
 /// <para>Your body is encased in ice, preventing action and dealing damage over time.</para>
@@ -18842,5 +19027,20 @@ public enum StatusID : ushort
 /// <see href="https://garlandtools.org/db/#status/4170"><strong>Blood of the Br'aax</strong></see> ↑ (All Classes)
 /// <para>Damage taken is reduced while inflicting a portion of sustained damage back to its source.</para>
 /// </summary>
-    BloodOfTheBraax = 4170
+    BloodOfTheBraax = 4170,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4216"><strong>Tsubame-gaeshi</strong></see> ↑ (SAM)
+/// <para>Able to execute Tsubame-gaeshi.</para>
+/// </summary>
+    Tsubamegaeshi = 4216,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4217"><strong>Tsubame-gaeshi</strong></see> ↑ (SAM)
+/// <para>Able to execute Tsubame-gaeshi.</para>
+/// </summary>
+    Tsubamegaeshi_4217 = 4217,
+    /// <summary>
+/// <see href="https://garlandtools.org/db/#status/4218"><strong>Tsubame-gaeshi</strong></see> ↑ (SAM)
+/// <para>Able to execute Tsubame-gaeshi.</para>
+/// </summary>
+    Tsubamegaeshi_4218 = 4218
 }

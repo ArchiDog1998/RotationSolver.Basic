@@ -933,7 +933,7 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50651"><strong>White Magic Mastery</strong></see> (WHM) [651]
-/// <para>Increases the potency of Dia and its damage over time to 70, Afflatus Misery to 1,320, and Glare III to 330.</para>
+/// <para>Increases the potency of Dia and its damage over time to 75, Afflatus Misery to 1,320, and Glare III to 330.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait WhiteMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(651U);
 

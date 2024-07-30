@@ -618,9 +618,9 @@ public enum ActionID : uint
     BlizzardPvE = 142,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/144"><strong>Thunder</strong></see>-<i>PvE</i> (THM BLM) [144] [Spell] (lvl.6)
-/// <para>Deals lightning damage with a potency of 120.</para>
+/// <para>Deals lightning damage with a potency of 100.</para>
 /// <para>Additional Effect: Lightning damage over time</para>
-/// <para>Potency: 40</para>
+/// <para>Potency: 45</para>
 /// <para>Duration: 24s</para>
 /// <para>Can only be cast while under the effect of Thunderhead, granted when gaining Astral Fire or Umbral Ice from an unaspected state, or changing between their influences.</para>
 /// <para>Thunderhead Duration: 30s</para>
@@ -648,9 +648,9 @@ public enum ActionID : uint
     FireIiiPvE = 152,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/153"><strong>Thunder III</strong></see>-<i>PvE</i> (BLM) [153] [Spell] (lvl.45)
-/// <para>Deals lightning damage with a potency of 160.</para>
+/// <para>Deals lightning damage with a potency of 120.</para>
 /// <para>Additional Effect: Lightning damage over time</para>
-/// <para>Potency: 45</para>
+/// <para>Potency: 50</para>
 /// <para>Duration: 27s</para>
 /// <para>Can only be cast while under the effect of Thunderhead, granted when gaining Astral Fire or Umbral Ice from an unaspected state, or changing between their influences.</para>
 /// <para>Thunderhead Duration: 30s</para>
@@ -705,7 +705,7 @@ public enum ActionID : uint
     FreezePvE = 159,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/162"><strong>Flare</strong></see>-<i>PvE</i> (BLM) [162] [Spell] (lvl.50)
-/// <para>Deals fire damage to target and all enemies nearby it with a potency of 240 for the first enemy, and 40% less for all remaining enemies.</para>
+/// <para>Deals fire damage to target and all enemies nearby it with a potency of 240 for the first enemy, and 30% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Astral Fire III</para>
 /// <para>Duration: 15s</para>
 /// <para>Additional Effect: Grants 3 stacks of Astral Soul</para>
@@ -1454,7 +1454,7 @@ public enum ActionID : uint
     LeyLinesPvE = 3573,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/3576"><strong>Blizzard IV</strong></see>-<i>PvE</i> (BLM) [3576] [Spell] (lvl.58)
-/// <para>Deals ice damage with a potency of 310.</para>
+/// <para>Deals ice damage with a potency of 320.</para>
 /// <para>Additional Effect: Grants 3 Umbral Hearts</para>
 /// <para>Umbral Heart Bonus: Nullifies Astral Fire's MP cost increase for Fire spells and reduces MP cost for Flare by one-third</para>
 /// <para>Can only be executed while under the effect of Umbral Ice.</para>
@@ -1462,7 +1462,7 @@ public enum ActionID : uint
     BlizzardIvPvE = 3576,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/3577"><strong>Fire IV</strong></see>-<i>PvE</i> (BLM) [3577] [Spell] (lvl.60)
-/// <para>Deals fire damage with a potency of 310.</para>
+/// <para>Deals fire damage with a potency of 320.</para>
 /// <para>Additional Effect: Grants Astral Soul</para>
 /// <para>Effect ends when Astral Fire expires.</para>
 /// <para>Can only be executed while under the effect of Astral Fire.</para>
@@ -1731,7 +1731,7 @@ public enum ActionID : uint
     AbyssalDrainPvE = 3641,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/3643"><strong>Carve and Spit</strong></see>-<i>PvE</i> (DRK) [3643] [Ability] (lvl.60)
-/// <para>Delivers a threefold attack with a potency of 510.</para>
+/// <para>Delivers a threefold attack with a potency of .</para>
 /// <para>Additional Effect: Restores MP</para>
 /// <para>Shares a recast timer with Abyssal Drain.</para>
 /// </summary>
@@ -2430,6 +2430,8 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/7487"><strong>Midare Setsugekka</strong></see>-<i>PvE</i> (SAM) [7487] [Weaponskill] (lvl.50)
 /// <para>Delivers a critical hit with a potency of .</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
+/// <para>Additional Effect: Grants Tsubame-gaeshi Ready</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants a stack of Meditation, up to a maximum of 3</para>
 /// <para>Can only be executed after accumulating 3 Sen.</para>
 /// <para></para>
@@ -2440,6 +2442,8 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/7488"><strong>Tenka Goken</strong></see>-<i>PvE</i> (SAM) [7488] [Weaponskill] (lvl.40)
 /// <para>Delivers an attack with a potency of 300 to all nearby enemies.</para>
+/// <para>Additional Effect: Grants Tsubame-gaeshi Ready</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants a stack of Meditation, up to a maximum of 3</para>
 /// <para>Can only be executed after accumulating 2 Sen.</para>
 /// <para></para>
@@ -2524,8 +2528,6 @@ public enum ActionID : uint
 /// <para>Execute up to 3 weaponskill combos without meeting combo prerequisites. Does not affect Iaijutsu or Ogi Namikiri.</para>
 /// <para>Duration: 20s</para>
 /// <para>Additional Effect: Successfully landing Gekko grants Fugetsu, and successfully landing Kasha grants Fuka</para>
-/// <para>Additional Effect: Grants Tsubame-gaeshi Ready</para>
-/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants Tendo</para>
 /// <para>Duration: 30s</para>
 /// <para>Maximum Charges: 2</para>
@@ -2656,7 +2658,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/7521"><strong>Manafication</strong></see>-<i>PvE</i> (RDM) [7521] [Ability] (lvl.60)
 /// <para>Grants 3 stacks of Magicked Swordplay, each stack allowing the use of Enchanted Riposte, Enchanted Zwerchhau, Enchanted Redoublement, Enchanted Moulinet, Enchanted Moulinet Deux, or Enchanted Moulinet Trois without cost.</para>
-/// <para>Duration: 15s</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants  stacks of Manafication</para>
 /// <para>Manafication Effect: Increases magic damage dealt by 5%</para>
 /// <para>Duration: 30s</para>
@@ -4652,7 +4654,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16459"><strong>Confiteor</strong></see>-<i>PvE</i> (PLD) [16459] [Spell] (lvl.80)
 /// <para>Deals unaspected damage to target and all enemies nearby it with a potency of  for the first enemy, and 50% less for all remaining enemies.</para>
-/// <para>Requiescat Potency: </para>
+/// <para>Requiescat Potency: 1,000</para>
 /// <para>Additional Effect: Restores own HP</para>
 /// <para>Cure Potency: 400</para>
 /// <para>Can only be executed while under the effect of Confiteor Ready. Effect fades upon execution.</para>
@@ -4840,7 +4842,7 @@ public enum ActionID : uint
     RaidenThrustPvE = 16479,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16480"><strong>Stardiver</strong></see>-<i>PvE</i> (DRG) [16480] [Ability] (lvl.80)
-/// <para>Delivers a jumping fire-based attack to target and all enemies nearby it with a potency of 620 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers a jumping fire-based attack to target and all enemies nearby it with a potency of  for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Starcross Ready</para>
 /// <para>Duration: 20s</para>
 /// <para>Effect ends when Life of the Dragon expires.</para>
@@ -4850,7 +4852,7 @@ public enum ActionID : uint
     StardiverPvE = 16480,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16481"><strong>Hissatsu: Senei</strong></see>-<i>PvE</i> (SAM) [16481] [Ability] (lvl.72)
-/// <para>Delivers an attack with a potency of 860.</para>
+/// <para>Delivers an attack with a potency of 800.</para>
 /// <para>Kenki Gauge Cost: 25</para>
 /// <para>Shares a recast timer with Hissatsu: Guren.</para>
 /// </summary>
@@ -4866,14 +4868,14 @@ public enum ActionID : uint
 /// </summary>
     IkishotenPvE = 16482,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/16483"><strong>Tsubame-gaeshi</strong></see>-<i>PvE</i> (SAM) [16483] [Weaponskill] (lvl.76)
+/// <see href="https://garlandtools.org/db/#action/16483"><strong>Tsubame-gaeshi</strong></see>-<i>PvE</i> (SAM) [16483] [Weaponskill] (lvl.74)
 /// <para>Repeats the previously executed iaijutsu.</para>
 /// <para>Cannot be used to repeat Higanbana.</para>
-/// <para>Can only be executed immediately following Iaijutsu while under the effect of Tsubame-gaeshi Ready.</para>
+/// <para>Can only be executed while under the effect of Tsubame-gaeshi Ready.</para>
 /// </summary>
     TsubamegaeshiPvE = 16483,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/16485"><strong>Kaeshi: Goken</strong></see>-<i>PvE</i> (SAM) [16485] [Weaponskill] (lvl.76)
+/// <see href="https://garlandtools.org/db/#action/16485"><strong>Kaeshi: Goken</strong></see>-<i>PvE</i> (SAM) [16485] [Weaponskill] (lvl.74)
 /// <para>Delivers an attack with a potency of 300 to all nearby enemies.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -4881,7 +4883,7 @@ public enum ActionID : uint
 /// </summary>
     KaeshiGokenPvE = 16485,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/16486"><strong>Kaeshi: Setsugekka</strong></see>-<i>PvE</i> (SAM) [16486] [Weaponskill] (lvl.76)
+/// <see href="https://garlandtools.org/db/#action/16486"><strong>Kaeshi: Setsugekka</strong></see>-<i>PvE</i> (SAM) [16486] [Weaponskill] (lvl.74)
 /// <para>Delivers a critical hit with a potency of .</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
 /// <para></para>
@@ -4909,7 +4911,7 @@ public enum ActionID : uint
 /// <para>Dispels Shadow Walker, increasing the Ninki Gauge by 50.</para>
 /// <para>Additional Effect: Grants Meisui</para>
 /// <para>Duration: 30s</para>
-/// <para>Meisui Effect: Increases the potency of Zesho Meppo to 700 and Bhavacakra to 530Increases the potency of Bhavacakra to Increases the potency of Bhavacakra to </para>
+/// <para>Meisui Effect: Increases the potency of Zesho Meppo to 850 and Bhavacakra to 530Increases the potency of Bhavacakra to Increases the potency of Bhavacakra to </para>
 /// <para>Can only be executed while in combat and under the effect of Shadow Walker.</para>
 /// </summary>
     MeisuiPvE = 16489,
@@ -5042,7 +5044,7 @@ public enum ActionID : uint
     ArmPunchPvE = 16504,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16505"><strong>Despair</strong></see>-<i>PvE</i> (BLM) [16505] [Spell] (lvl.72)
-/// <para>Deals fire damage with a potency of 340.</para>
+/// <para>Deals fire damage with a potency of 350.</para>
 /// <para>Additional Effect: Grants Astral Fire III</para>
 /// <para>Duration: 15s</para>
 /// <para>Can only be executed while under the effect of Astral Fire.</para>
@@ -5051,13 +5053,19 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/16506"><strong>Umbral Soul</strong></see>-<i>PvE</i> (BLM) [16506] [Spell] (lvl.35)
 /// <para>Grants Umbral Ice and 1 Umbral Heart.</para>
+/// <para>Additional Effect: Halts the expiration of Umbral Ice</para>
 /// <para>Umbral Heart Bonus: Nullifies Astral Fire's MP cost increase for Fire spells and reduces MP cost for Flare by one-third</para>
 /// <para>Grants Umbral Ice.</para>
+/// <para>Additional Effect: Halts the expiration of Umbral Ice</para>
 /// <para>Grants Umbral Ice.</para>
+/// <para>Additional Effect: Halts the expiration of Umbral Ice</para>
 /// <para>Additional Effect: Restores an amount of MP commensurate with your stacks of Umbral Ice</para>
 /// <para>Umbral Ice I: 2,500 MP</para>
 /// <para>Umbral Ice II: 5,000 MP</para>
 /// <para>Umbral Ice III: 10,000 MP</para>
+/// <para>Grants Umbral Ice III and 3 Umbral Hearts, and also restores 10,000 MP when used while outside of combat.</para>
+/// <para>Grants Umbral Ice III and restores 10,000 MP when used while outside of combat.</para>
+/// <para>Grants Umbral Ice III and restores 10,000 MP when used while outside of combat.</para>
 /// <para>Can only be executed while under the effect of Umbral Ice.</para>
 /// </summary>
     UmbralSoulPvE = 16506,
@@ -7704,7 +7712,7 @@ public enum ActionID : uint
     WhorlOfDeathPvE = 24379,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/24380"><strong>Soul Slice</strong></see>-<i>PvE</i> (RPR) [24380] [Weaponskill] (lvl.60)
-/// <para>Delivers an attack with a potency of 460.</para>
+/// <para>Delivers an attack with a potency of .</para>
 /// <para>Additional Effect: Increases Soul Gauge by 50</para>
 /// <para>Maximum Charges: 2</para>
 /// <para>Shares a recast timer with Soul Scythe.</para>
@@ -8096,7 +8104,7 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25750"><strong>Blade of Valor</strong></see>-<i>PvE</i> (PLD) [25750] [Spell] (lvl.90)
 /// <para>Deals unaspected damage to target and all enemies nearby it with a potency of  for the first enemy, and 50% less for all remaining enemies.</para>
-/// <para>Requiescat Potency: </para>
+/// <para>Requiescat Potency: 1,000</para>
 /// <para>Combo Action: Blade of Truth</para>
 /// <para>Additional Effect: Restores own HP</para>
 /// <para>Cure Potency: 400</para>
@@ -8263,7 +8271,7 @@ public enum ActionID : uint
     RisingPhoenixPvE = 25768,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25769"><strong>Phantom Rush</strong></see>-<i>PvE</i> (MNK) [25769] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack to target and all enemies nearby it with a potency of 1,400 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers an attack to target and all enemies nearby it with a potency of 1,5001,4001,400 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Formless Fist, allowing the execution of a weaponskill that requires a certain form, without being in that form</para>
 /// <para>Duration: 30s</para>
 /// <para>Any additional effects associated with the executed action will also be applied.</para>
@@ -8442,7 +8450,7 @@ public enum ActionID : uint
     TillanaPvE = 25790,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25791"><strong>Fan Dance IV</strong></see>-<i>PvE</i> (DNC) [25791] [Ability] (lvl.86)
-/// <para>Delivers an attack to all enemies in a cone before you with a potency of 300 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers an attack to all enemies in a cone before you with a potency of  for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Fourfold Fan Dance.</para>
 /// </summary>
     FanDanceIvPvE = 25791,
@@ -8483,15 +8491,17 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/25797"><strong>Paradox</strong></see>-<i>PvE</i> (BLM) [25797] [Spell] (lvl.90)
 /// <para>Deals unaspected damage with a potency of 500.</para>
-/// <para>Additional Effect: Grants Astral Fire</para>
+/// <para>Astral Fire Bonus: Grants Astral Fire</para>
 /// <para>Duration: 15s</para>
-/// <para>Additional Effect: Grants Firestarter</para>
+/// <para>Astral Fire Bonus: Grants Firestarter</para>
 /// <para>Firestarter Effect: Next Fire III will require no time to cast and cost no MP</para>
 /// <para>Duration: 30s</para>
+/// <para>Umbral Ice Bonus: Requires no MP to cast and grants Umbral Ice</para>
+/// <para>Duration: 15s</para>
 /// <para>Can only be executed while under the effect of Paradox.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
-/// <para>※Fire changes to Paradox when requirements for execution are met.</para>
+/// <para>※Fire and Blizzard change to Paradox when requirements for execution are met.</para>
 /// </summary>
     ParadoxPvE = 25797,
     /// <summary>
@@ -12729,24 +12739,30 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34606"><strong>Steel Fangs</strong></see>-<i>PvE</i> (VPR) [34606] [Weaponskill] (lvl.1)
 /// <para>Delivers an attack with a potency of .</para>
+/// <para>Honed Steel Potency: </para>
+/// <para>Additional Effect: Grants Honed Reavers</para>
+/// <para>Honed Reavers Effect: Increases potency of Reaving Fangs by 100 and Reaving Maw by 20</para>
+/// <para>Duration: 60s</para>
+/// <para>Effect cannot be stacked with Honed Steel.</para>
 /// </summary>
     SteelFangsPvE = 34606,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/34607"><strong>Dread Fangs</strong></see>-<i>PvE</i> (VPR) [34607] [Weaponskill] (lvl.10)
+/// <see href="https://garlandtools.org/db/#action/34607"><strong>Reaving Fangs</strong></see>-<i>PvE</i> (VPR) [34607] [Weaponskill] (lvl.10)
 /// <para>Delivers an attack with a potency of .</para>
-/// <para>Additional Effect: Afflicts target with Noxious Gnash</para>
-/// <para>Noxious Gnash Effect: Increases damage you deal target by 10%</para>
-/// <para>Duration: 20s</para>
-/// <para>Extends Noxious Gnash duration by 20s to a maximum of 40s.</para>
+/// <para>Honed Reavers Potency: </para>
+/// <para>Additional Effect: Grants Honed Steel</para>
+/// <para>Honed Steel Effect: Increases potency of Steel Fangs by 100 and Steel Maw by 20</para>
+/// <para>Duration: 60s</para>
+/// <para>Effect cannot be stacked with Honed Reavers.</para>
 /// </summary>
-    DreadFangsPvE = 34607,
+    ReavingFangsPvE = 34607,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34608"><strong>Hunter's Sting</strong></see>-<i>PvE</i> (VPR) [34608] [Weaponskill] (lvl.5)
 /// <para>Delivers an attack with a potency of .</para>
 /// <para>Additional Effect: Grants Hunter's Instinct</para>
 /// <para>Hunter's Instinct Effect: Increases damage dealt by 10%</para>
 /// <para>Duration: 40s</para>
-/// <para>Can only be executed after successfully landing Steel Fangs or Dread Fangs.</para>
+/// <para>Can only be executed after successfully landing Steel Fangs or Reaving Fangs.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Steel Fangs changes to Hunter's Sting when requirements for execution are met.</para>
@@ -12758,10 +12774,10 @@ public enum ActionID : uint
 /// <para>Additional Effect: Grants Swiftscaled</para>
 /// <para>Swiftscaled Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%</para>
 /// <para>Duration: 40s</para>
-/// <para>Can only be executed after successfully landing Steel Fangs or Dread Fangs.</para>
+/// <para>Can only be executed after successfully landing Steel Fangs or Reaving Fangs.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
-/// <para>※Dread Fangs changes to Swiftskin's Sting when requirements for execution are met.</para>
+/// <para>※Reaving Fangs changes to Swiftskin's Sting when requirements for execution are met.</para>
 /// </summary>
     SwiftskinsStingPvE = 34609,
     /// <summary>
@@ -12771,7 +12787,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 100 while under the effect of Flankstung Venom.</para>
 /// <para>Additional Effect: Grants Hindstung Venom</para>
 /// <para>Hindstung Venom Effect: Increases potency of Hindsting Strike by 100</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Hunter's Sting.</para>
@@ -12787,7 +12803,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 100 while under the effect of Flanksbane Venom.</para>
 /// <para>Additional Effect: Grants Hindsbane Venom</para>
 /// <para>Hindsbane Venom Effect: Increases potency of Hindsbane Fang by 100</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Hunter's Sting.</para>
@@ -12803,7 +12819,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 100 while under the effect of Hindstung Venom.</para>
 /// <para>Additional Effect: Grants Flanksbane Venom</para>
 /// <para>Flanksbane Venom Effect: Increases potency of Flanksbane Fang by 100</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Swiftskin's Sting.</para>
@@ -12819,7 +12835,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 100 while under the effect of Hindsbane Venom.</para>
 /// <para>Additional Effect: Grants Flankstung Venom</para>
 /// <para>Flankstung Venom Effect: Increases potency of Flanksting Strike by 100</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Swiftskin's Sting.</para>
@@ -12831,24 +12847,30 @@ public enum ActionID : uint
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34614"><strong>Steel Maw</strong></see>-<i>PvE</i> (VPR) [34614] [Weaponskill] (lvl.25)
 /// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Honed Steel Potency: 120</para>
+/// <para>Additional Effect: Grants Honed Reavers</para>
+/// <para>Honed Reavers Effect: Increases potency of Reaving Fangs by 100 and Reaving Maw by 20</para>
+/// <para>Duration: 60s</para>
+/// <para>Effect cannot be stacked with Honed Steel.</para>
 /// </summary>
     SteelMawPvE = 34614,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/34615"><strong>Dread Maw</strong></see>-<i>PvE</i> (VPR) [34615] [Weaponskill] (lvl.35)
-/// <para>Delivers an attack with a potency of 80 to all nearby enemies.</para>
-/// <para>Additional Effect: Afflicts target with Noxious Gnash</para>
-/// <para>Noxious Gnash Effect: Increases damage you deal target by 10%</para>
-/// <para>Duration: 20s</para>
-/// <para>Extends Noxious Gnash duration by 20s to a maximum of 40s.</para>
+/// <see href="https://garlandtools.org/db/#action/34615"><strong>Reaving Maw</strong></see>-<i>PvE</i> (VPR) [34615] [Weaponskill] (lvl.35)
+/// <para>Delivers an attack with a potency of 100 to all nearby enemies.</para>
+/// <para>Honed Reavers Potency: 120</para>
+/// <para>Additional Effect: Grants Honed Steel</para>
+/// <para>Honed Steel Effect: Increases potency of Steel Fangs by 100 and Steel Maw by 20</para>
+/// <para>Duration: 60s</para>
+/// <para>Effect cannot be stacked with Honed Reavers.</para>
 /// </summary>
-    DreadMawPvE = 34615,
+    ReavingMawPvE = 34615,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34616"><strong>Hunter's Bite</strong></see>-<i>PvE</i> (VPR) [34616] [Weaponskill] (lvl.40)
-/// <para>Delivers an attack with a potency of 120 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 130 to all nearby enemies.</para>
 /// <para>Additional Effect: Grants Hunter's Instinct</para>
 /// <para>Hunter's Instinct Effect: Increases damage dealt by 10%</para>
 /// <para>Duration: 40s</para>
-/// <para>Can only be executed after successfully landing Steel Maw or Dread Maw.</para>
+/// <para>Can only be executed after successfully landing Steel Maw or Reaving Maw.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Steel Maw changes to Hunter's Bite when requirements for execution are met.</para>
@@ -12856,14 +12878,14 @@ public enum ActionID : uint
     HuntersBitePvE = 34616,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34617"><strong>Swiftskin's Bite</strong></see>-<i>PvE</i> (VPR) [34617] [Weaponskill] (lvl.45)
-/// <para>Delivers an attack with a potency of 120 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 130 to all nearby enemies.</para>
 /// <para>Additional Effect: Grants Swiftscaled</para>
 /// <para>Swiftscaled Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%</para>
 /// <para>Duration: 40s</para>
-/// <para>Can only be executed after successfully landing Steel Maw or Dread Maw.</para>
+/// <para>Can only be executed after successfully landing Steel Maw or Reaving Maw.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
-/// <para>※Dread Maw changes to Swiftskin's Bite when requirements for execution are met.</para>
+/// <para>※Reaving Maw changes to Swiftskin's Bite when requirements for execution are met.</para>
 /// </summary>
     SwiftskinsBitePvE = 34617,
     /// <summary>
@@ -12872,7 +12894,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 20 while under the effect of Grimhunter's Venom.</para>
 /// <para>Additional Effect: Grants Grimskin's Venom</para>
 /// <para>Grimskin's Venom Effect: Increases potency of Bloodied Maw by 20</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Hunter's Bite or Swiftskin's Bite.</para>
@@ -12887,7 +12909,7 @@ public enum ActionID : uint
 /// <para>Potencies are increased by 20 while under the effect of Grimskin's Venom.</para>
 /// <para>Additional Effect: Grants Grimhunter's Venom</para>
 /// <para>Grimhunter's Venom Effect: Increases potency of Jagged Maw by 20</para>
-/// <para>Duration: 40s</para>
+/// <para>Duration: 60s</para>
 /// <para>Effect cannot be stacked with other viper venom effects.</para>
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 10</para>
 /// <para>Can only be executed after successfully landing Hunter's Bite or Swiftskin's Bite.</para>
@@ -12897,21 +12919,17 @@ public enum ActionID : uint
 /// </summary>
     BloodiedMawPvE = 34619,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/34620"><strong>Dreadwinder</strong></see>-<i>PvE</i> (VPR) [34620] [Weaponskill] (lvl.65)
-/// <para>Delivers an attack with a potency of 450.</para>
-/// <para>Additional Effect: Afflicts target with Noxious Gnash</para>
-/// <para>Noxious Gnash Effect: Increases damage you deal target by 10%</para>
-/// <para>Duration: 20s</para>
-/// <para>Extends Noxious Gnash duration by 20s to a maximum of 40s.</para>
+/// <see href="https://garlandtools.org/db/#action/34620"><strong>Vicewinder</strong></see>-<i>PvE</i> (VPR) [34620] [Weaponskill] (lvl.65)
+/// <para>Delivers an attack with a potency of 500.</para>
 /// <para>Additional Effect: Grants a Rattling Coil, up to a maximum of 3, up to a maximum of 2, up to a maximum of 2</para>
 /// <para>Maximum Charges: 2</para>
-/// <para>Shares a recast timer with Pit of Dread.</para>
+/// <para>Shares a recast timer with Vicepit.</para>
 /// </summary>
-    DreadwinderPvE = 34620,
+    VicewinderPvE = 34620,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34621"><strong>Hunter's Coil</strong></see>-<i>PvE</i> (VPR) [34621] [Weaponskill] (lvl.65)
-/// <para>Delivers an attack with a potency of 500.</para>
-/// <para>550 when executed from a target's flank.</para>
+/// <para>Delivers an attack with a potency of 570.</para>
+/// <para>620 when executed from a target's flank.</para>
 /// <para>Additional Effect: Grants Hunter's Instinct</para>
 /// <para>Hunter's Instinct Effect: Increases damage dealt by 10%</para>
 /// <para>Duration: 40s</para>
@@ -12921,14 +12939,14 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 5</para>
 /// <para>Upon successfully landing this action, Twinfang changes to Twinfang Bite, and Twinblood changes to Twinblood Bite.</para>
 /// <para>These actions can be executed a total of two times following Hunter's Coil.</para>
-/// <para>Can only be executed after landing Dreadwinder or Swiftskin's Coil.</para>
+/// <para>Can only be executed after successfully landing Vicewinder or Swiftskin's Coil.</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// </summary>
     HuntersCoilPvE = 34621,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34622"><strong>Swiftskin's Coil</strong></see>-<i>PvE</i> (VPR) [34622] [Weaponskill] (lvl.65)
-/// <para>Delivers an attack with a potency of 500.</para>
-/// <para>550 when executed from a target's rear.</para>
+/// <para>Delivers an attack with a potency of 570.</para>
+/// <para>620 when executed from a target's rear.</para>
 /// <para>Additional Effect: Grants Swiftscaled</para>
 /// <para>Swiftscaled Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%</para>
 /// <para>Duration: 40s</para>
@@ -12938,25 +12956,21 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 5</para>
 /// <para>Upon successfully landing this action, Twinfang changes to Twinfang Bite, and Twinblood changes to Twinblood Bite.</para>
 /// <para>These actions can be executed a total of two times following Swiftskin's Coil.</para>
-/// <para>Can only be executed after landing Dreadwinder or Hunter's Coil.</para>
+/// <para>Can only be executed after successfully landing Vicewinder or Hunter's Coil.</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// </summary>
     SwiftskinsCoilPvE = 34622,
     /// <summary>
-/// <see href="https://garlandtools.org/db/#action/34623"><strong>Pit of Dread</strong></see>-<i>PvE</i> (VPR) [34623] [Weaponskill] (lvl.70)
-/// <para>Delivers an attack with a potency of 200 to all nearby enemies.</para>
-/// <para>Additional Effect: Afflicts target with Noxious Gnash</para>
-/// <para>Noxious Gnash Effect: Increases damage you deal target by 10%</para>
-/// <para>Duration: 20s</para>
-/// <para>Extends Noxious Gnash duration by 20s to a maximum of 40s.</para>
+/// <see href="https://garlandtools.org/db/#action/34623"><strong>Vicepit</strong></see>-<i>PvE</i> (VPR) [34623] [Weaponskill] (lvl.70)
+/// <para>Delivers an attack with a potency of 220 to all nearby enemies.</para>
 /// <para>Additional Effect: Grants a Rattling Coil, up to a maximum of 3, up to a maximum of 2, up to a maximum of 2</para>
 /// <para>Maximum Charges: 2</para>
-/// <para>Shares a recast timer with Dreadwinder.</para>
+/// <para>Shares a recast timer with Vicewinder.</para>
 /// </summary>
-    PitOfDreadPvE = 34623,
+    VicepitPvE = 34623,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34624"><strong>Hunter's Den</strong></see>-<i>PvE</i> (VPR) [34624] [Weaponskill] (lvl.70)
-/// <para>Delivers an attack with a potency of 250 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to all nearby enemies.</para>
 /// <para>Additional Effect: Grants Hunter's Instinct</para>
 /// <para>Hunter's Instinct Effect: Increases damage dealt by 10%</para>
 /// <para>Duration: 40s</para>
@@ -12966,13 +12980,13 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 5</para>
 /// <para>Upon successfully landing this action, Twinfang changes to Twinfang Thresh, and Twinblood changes to Twinblood Thresh.</para>
 /// <para>These actions can be executed a total of two times following Hunter's Den.</para>
-/// <para>Can only be executed after Pit of Dread or Swiftskin's Den.</para>
+/// <para>Can only be executed after Vicepit or Swiftskin's Den.</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// </summary>
     HuntersDenPvE = 34624,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34625"><strong>Swiftskin's Den</strong></see>-<i>PvE</i> (VPR) [34625] [Weaponskill] (lvl.70)
-/// <para>Delivers an attack with a potency of 250 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to all nearby enemies.</para>
 /// <para>Additional Effect: Grants Swiftscaled</para>
 /// <para>Swiftscaled Effect: Reduces weaponskill cast time and recast time, spell cast time and recast time, and auto-attack delay by 15%</para>
 /// <para>Duration: 40s</para>
@@ -12982,13 +12996,13 @@ public enum ActionID : uint
 /// <para>Additional Effect: Increases Serpent Offerings Gauge by 5</para>
 /// <para>Upon successfully landing this action, Twinfang changes to Twinfang Thresh, and Twinblood changes to Twinblood Thresh.</para>
 /// <para>These actions can be executed a total of two times following Swiftskin's Den.</para>
-/// <para>Can only be executed after Pit of Dread or Hunter's Den.</para>
+/// <para>Can only be executed after Vicepit or Hunter's Den.</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// </summary>
     SwiftskinsDenPvE = 34625,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34626"><strong>Reawaken</strong></see>-<i>PvE</i> (VPR) [34626] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack with a potency of 700 for the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 750 for the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants  stacks of Anguine Tribute</para>
 /// <para>Duration: 30s</para>
 /// <para>Serpent Offerings Gauge Cost: 50</para>
@@ -12996,8 +13010,8 @@ public enum ActionID : uint
     ReawakenPvE = 34626,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34627"><strong>First Generation</strong></see>-<i>PvE</i> (VPR) [34627] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack with a potency of 400 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Potency is increased to 600 when executed after Reawaken.</para>
+/// <para>Delivers an attack with a potency of 480 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Potency is increased to 680 when executed after Reawaken.</para>
 /// <para>Anguine Tribute Cost: 1</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
@@ -13007,19 +13021,19 @@ public enum ActionID : uint
     FirstGenerationPvE = 34627,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34628"><strong>Second Generation</strong></see>-<i>PvE</i> (VPR) [34628] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack with a potency of 400 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Potency is increased to 600 when executed after First Generation.</para>
+/// <para>Delivers an attack with a potency of 480 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Potency is increased to 680 when executed after First Generation.</para>
 /// <para>Anguine Tribute Cost: 1</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
-/// <para>※Dread Fangs and Dread Maw change to Second Generation when requirements for execution are met.</para>
+/// <para>※Reaving Fangs and Reaving Maw change to Second Generation when requirements for execution are met.</para>
 /// </summary>
     SecondGenerationPvE = 34628,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34629"><strong>Third Generation</strong></see>-<i>PvE</i> (VPR) [34629] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack with a potency of 400 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Potency is increased to 600 when executed after Second Generation.</para>
+/// <para>Delivers an attack with a potency of 480 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Potency is increased to 680 when executed after Second Generation.</para>
 /// <para>Anguine Tribute Cost: 1</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
@@ -13029,8 +13043,8 @@ public enum ActionID : uint
     ThirdGenerationPvE = 34629,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34630"><strong>Fourth Generation</strong></see>-<i>PvE</i> (VPR) [34630] [Weaponskill] (lvl.90)
-/// <para>Delivers an attack with a potency of 400 to the first enemy, and 60% less for all remaining enemies.</para>
-/// <para>Potency is increased to 600 when executed after Third Generation.</para>
+/// <para>Delivers an attack with a potency of 480 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Potency is increased to 680 when executed after Third Generation.</para>
 /// <para>Anguine Tribute Cost: 1</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
 /// <para></para>
@@ -13040,7 +13054,7 @@ public enum ActionID : uint
     FourthGenerationPvE = 34630,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34631"><strong>Ouroboros</strong></see>-<i>PvE</i> (VPR) [34631] [Weaponskill] (lvl.96)
-/// <para>Delivers an attack with a potency of 1,050 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 1,150 to the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Reawakened effect expires upon execution.</para>
 /// <para>Requires at least one stack of Anguine Tribute.</para>
 /// <para>This weaponskill does not share a recast timer with any other actions.</para>
@@ -13056,7 +13070,7 @@ public enum ActionID : uint
     WrithingSnapPvE = 34632,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34633"><strong>Uncoiled Fury</strong></see>-<i>PvE</i> (VPR) [34633] [Weaponskill] (lvl.82)
-/// <para>Delivers an attack with a potency of 600 to the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 680 to the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Poised for Twinfang</para>
 /// <para>Poised for Twinfang Effect: Increases the potency of Uncoiled Twinfang by 50</para>
 /// <para>Duration: 60s</para>
@@ -13068,7 +13082,7 @@ public enum ActionID : uint
     UncoiledFuryPvE = 34633,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34634"><strong>Death Rattle</strong></see>-<i>PvE</i> (VPR) [34634] [Ability] (lvl.55)
-/// <para>Delivers an attack with a potency of 250.</para>
+/// <para>Delivers an attack with a potency of 280.</para>
 /// <para>Can only be executed after successfully landing Flanksting Strike, Flanksbane Fang, Hindsting Strike, or Hindsbane Fang.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13086,8 +13100,8 @@ public enum ActionID : uint
     LastLashPvE = 34635,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34636"><strong>Twinfang Bite</strong></see>-<i>PvE</i> (VPR) [34636] [Ability] (lvl.75)
-/// <para>Delivers an attack with a potency of 100.</para>
-/// <para>Hunter's Venom Potency: 150</para>
+/// <para>Delivers an attack with a potency of 120.</para>
+/// <para>Hunter's Venom Potency: 170</para>
 /// <para>Additional Effect: Grants Swiftskin's Venom when executed after Hunter's Coil</para>
 /// <para>Duration: 30s</para>
 /// <para>Can only be executed after successfully landing Hunter's Coil or Swiftskin's Coil.</para>
@@ -13098,8 +13112,8 @@ public enum ActionID : uint
     TwinfangBitePvE = 34636,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34637"><strong>Twinblood Bite</strong></see>-<i>PvE</i> (VPR) [34637] [Ability] (lvl.75)
-/// <para>Delivers an attack with a potency of 100.</para>
-/// <para>Swiftskin's Venom Potency: 150</para>
+/// <para>Delivers an attack with a potency of 120.</para>
+/// <para>Swiftskin's Venom Potency: 170</para>
 /// <para>Additional Effect: Grants Hunter's Venom when executed after Swiftskin's Coil</para>
 /// <para>Duration: 30s</para>
 /// <para>Can only be executed after successfully landing Hunter's Coil or Swiftskin's Coil.</para>
@@ -13134,7 +13148,7 @@ public enum ActionID : uint
     TwinbloodThreshPvE = 34639,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34640"><strong>First Legacy</strong></see>-<i>PvE</i> (VPR) [34640] [Ability] (lvl.100)
-/// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed after successfully landing First Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13143,7 +13157,7 @@ public enum ActionID : uint
     FirstLegacyPvE = 34640,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34641"><strong>Second Legacy</strong></see>-<i>PvE</i> (VPR) [34641] [Ability] (lvl.100)
-/// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed after successfully landing Second Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13152,7 +13166,7 @@ public enum ActionID : uint
     SecondLegacyPvE = 34641,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34642"><strong>Third Legacy</strong></see>-<i>PvE</i> (VPR) [34642] [Ability] (lvl.100)
-/// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed after successfully landing Third Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13161,7 +13175,7 @@ public enum ActionID : uint
     ThirdLegacyPvE = 34642,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34643"><strong>Fourth Legacy</strong></see>-<i>PvE</i> (VPR) [34643] [Ability] (lvl.100)
-/// <para>Delivers an attack with a potency of 250 to the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack with a potency of 280 to the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed after successfully landing Fourth Generation.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -13170,12 +13184,12 @@ public enum ActionID : uint
     FourthLegacyPvE = 34643,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34644"><strong>Uncoiled Twinfang</strong></see>-<i>PvE</i> (VPR) [34644] [Ability] (lvl.92)
-/// <para>Delivers an attack with a potency of 100 to the first enemy, and 50% less for all remaining enemies.</para>
-/// <para>Poised for Twinfang Potency: 150</para>
+/// <para>Delivers an attack with a potency of 120 to the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Poised for Twinfang Potency: 170</para>
 /// <para>Additional Effect: Grants Poised for Twinblood</para>
 /// <para>Poised for Twinblood Effect: Increases the potency of Uncoiled Twinblood by 50</para>
 /// <para>Duration: 60s</para>
-/// <para>Can only be executed after landing Uncoiled Fury.</para>
+/// <para>Can only be executed after successfully landing Uncoiled Fury.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Twinfang changes to Uncoiled Twinfang when requirements for execution are met.</para>
@@ -13183,9 +13197,9 @@ public enum ActionID : uint
     UncoiledTwinfangPvE = 34644,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/34645"><strong>Uncoiled Twinblood</strong></see>-<i>PvE</i> (VPR) [34645] [Ability] (lvl.92)
-/// <para>Delivers an attack with a potency of 100 to the first enemy, and 50% less for all remaining enemies.</para>
-/// <para>Poised for Twinblood Potency: 150</para>
-/// <para>Can only be executed after landing Uncoiled Fury.</para>
+/// <para>Delivers an attack with a potency of 120 to the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Poised for Twinblood Potency: 170</para>
+/// <para>Can only be executed after successfully landing Uncoiled Fury.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Twinblood changes to Uncoiled Twinblood when requirements for execution are met.</para>
@@ -13828,7 +13842,7 @@ public enum ActionID : uint
     ImpalementPvE = 36931,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36932"><strong>Disesteem</strong></see>-<i>PvE</i> (DRK) [36932] [Weaponskill] (lvl.100)
-/// <para>Deals physical damage to all enemies in a straight line before you with a potency of 800 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Deals physical damage to all enemies in a straight line before you with a potency of 1,000 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Can only be executed while Scorn is active.</para>
 /// </summary>
     DisesteemPvE = 36932,
@@ -13965,13 +13979,13 @@ public enum ActionID : uint
     ElixirBurstPvE = 36948,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36949"><strong>Wind's Reply</strong></see>-<i>PvE</i> (MNK) [36949] [Weaponskill] (lvl.96)
-/// <para>Delivers an attack to all enemies in a straight line before you with a potency of 800 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers an attack to all enemies in a straight line before you with a potency of 900 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Wind's Rumination.</para>
 /// </summary>
     WindsReplyPvE = 36949,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36950"><strong>Fire's Reply</strong></see>-<i>PvE</i> (MNK) [36950] [Weaponskill] (lvl.100)
-/// <para>Deals damage to all nearby enemies with a potency of 1,100 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Deals damage to all nearby enemies with a potency of 1,200 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Additional Effect: Grants Formless Fist, allowing the execution of a weaponskill that requires a certain form, without being in that form</para>
 /// <para>Duration: 30s</para>
 /// <para>Any additional effects associated with the executed action will also be applied.</para>
@@ -14022,7 +14036,7 @@ public enum ActionID : uint
     SpiralBlowPvE = 36955,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36956"><strong>Starcross</strong></see>-<i>PvE</i> (DRG) [36956] [Ability] (lvl.100)
-/// <para>Deals physical damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Deals physical damage to target and all enemies nearby it with a potency of 900 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Starcross Ready.</para>
 /// </summary>
     StarcrossPvE = 36956,
@@ -14059,8 +14073,8 @@ public enum ActionID : uint
     DeathfrogMediumPvE = 36959,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36960"><strong>Zesho Meppo</strong></see>-<i>PvE</i> (NIN) [36960] [Ability] (lvl.96)
-/// <para>Deals unaspected damage with a potency of 550.</para>
-/// <para>Meisui Bonus: Potency is increased to 700</para>
+/// <para>Deals unaspected damage with a potency of 700.</para>
+/// <para>Meisui Bonus: Potency is increased to 850</para>
 /// <para>Ninki Gauge Cost: 50</para>
 /// <para>Can only be executed while under the effect of Higi.</para>
 /// <para>Shares a recast timer with Hellfrog Medium.</para>
@@ -14071,7 +14085,7 @@ public enum ActionID : uint
     ZeshoMeppoPvE = 36960,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36961"><strong>Tenri Jindo</strong></see>-<i>PvE</i> (NIN) [36961] [Ability] (lvl.100)
-/// <para>Deals unaspected damage to target and all enemies nearby it with a potency of 1,000 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Deals unaspected damage to target and all enemies nearby it with a potency of 1,100 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Tenri Jindo Ready.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -14083,27 +14097,29 @@ public enum ActionID : uint
 /// <para>Reduces the amount of damage taken by the next attack by 10%.</para>
 /// <para>Duration: 4s</para>
 /// <para>Additional Effect: Grants Tengentsu's Foresight and increases Kenki Gauge by 10 when hit</para>
-/// <para>Tengentsu's Foresight Effect: Restores HP when effect expires</para>
-/// <para>Duration: 8s</para>
-/// <para>Cure Potency: 500</para>
+/// <para>Tengentsu's Foresight Effect: Gradually restores your HP and reduces damage taken by 10%</para>
+/// <para>Duration: 9s</para>
+/// <para>Cure Potency: 200</para>
 /// </summary>
     TengentsuPvE = 36962,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36963"><strong>Gyofu</strong></see>-<i>PvE</i> (SAM) [36963] [Weaponskill] (lvl.92)
-/// <para>Delivers an attack with a potency of 240.</para>
+/// <para>Delivers an attack with a potency of 230.</para>
 /// <para>Additional Effect: Increases Kenki Gauge by 5</para>
 /// </summary>
     GyofuPvE = 36963,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36964"><strong>Zanshin</strong></see>-<i>PvE</i> (SAM) [36964] [Ability] (lvl.96)
-/// <para>Delivers an attack to all enemies in a cone before you with a potency of 900 for the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack to all enemies in a cone before you with a potency of 820 for the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Kenki Gauge Cost: 50</para>
 /// <para>Can only be executed while under the effect of Zanshin Ready.</para>
 /// </summary>
     ZanshinPvE = 36964,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36965"><strong>Tendo Goken</strong></see>-<i>PvE</i> (SAM) [36965] [Weaponskill] (lvl.100)
-/// <para>Delivers an attack with a potency of 420 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 410 to all nearby enemies.</para>
+/// <para>Additional Effect: Grants Tsubame-gaeshi Ready</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants a stack of Meditation, up to a maximum of 3</para>
 /// <para>Can only be executed while under the effect of Tendo, and after accumulating 2 Sen.</para>
 /// <para></para>
@@ -14115,6 +14131,8 @@ public enum ActionID : uint
 /// <see href="https://garlandtools.org/db/#action/36966"><strong>Tendo Setsugekka</strong></see>-<i>PvE</i> (SAM) [36966] [Weaponskill] (lvl.100)
 /// <para>Delivers a critical hit with a potency of 1,020.</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate.</para>
+/// <para>Additional Effect: Grants Tsubame-gaeshi Ready</para>
+/// <para>Duration: 30s</para>
 /// <para>Additional Effect: Grants a stack of Meditation, up to a maximum of 3</para>
 /// <para>Can only be executed while under the effect of Tendo, and after accumulating 3 Sen.</para>
 /// <para></para>
@@ -14124,7 +14142,7 @@ public enum ActionID : uint
     TendoSetsugekkaPvE = 36966,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36967"><strong>Tendo Kaeshi Goken</strong></see>-<i>PvE</i> (SAM) [36967] [Weaponskill] (lvl.100)
-/// <para>Delivers an attack with a potency of 420 to all nearby enemies.</para>
+/// <para>Delivers an attack with a potency of 410 to all nearby enemies.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
 /// <para>※Tsubame-gaeshi changes to Tendo Kaeshi Goken when requirements for execution are met.</para>
@@ -14192,7 +14210,7 @@ public enum ActionID : uint
     ExecutionersGuillotinePvE = 36972,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36973"><strong>Perfectio</strong></see>-<i>PvE</i> (RPR) [36973] [Weaponskill] (lvl.100)
-/// <para>Delivers an attack to target and all enemies nearby it with a potency of 1,200 for the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Delivers an attack to target and all enemies nearby it with a potency of 1,300 for the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed while under the effect of Perfectio Parata.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -14261,7 +14279,7 @@ public enum ActionID : uint
     ExcavatorPvE = 36981,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36982"><strong>Full Metal Field</strong></see>-<i>PvE</i> (MCH) [36982] [Weaponskill] (lvl.100)
-/// <para>Delivers a critical direct hit to target and all enemies nearby it with a potency of 700 for the first enemy, and 50% less for all remaining enemies.</para>
+/// <para>Delivers a critical direct hit to target and all enemies nearby it with a potency of 900 for the first enemy, and 50% less for all remaining enemies.</para>
 /// <para>Damage dealt is increased when under an effect that raises critical hit rate or direct hit rate.</para>
 /// <para>This action is not affected by Reassemble.</para>
 /// <para>Can only be executed while under the effect of Full Metal Machinist.</para>
@@ -14300,9 +14318,9 @@ public enum ActionID : uint
     DanceOfTheDawnPvE = 36985,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36986"><strong>High Thunder</strong></see>-<i>PvE</i> (BLM) [36986] [Spell] (lvl.92)
-/// <para>Deals lightning damage with a potency of 200.</para>
+/// <para>Deals lightning damage with a potency of 150.</para>
 /// <para>Additional Effect: Lightning damage over time</para>
-/// <para>Potency: 55</para>
+/// <para>Potency: 60</para>
 /// <para>Duration: 30s</para>
 /// <para>Can only be cast while under the effect of Thunderhead, granted when gaining Astral Fire or Umbral Ice from an unaspected state, or changing between their influences.</para>
 /// <para>Thunderhead Duration: 30s</para>
@@ -14334,7 +14352,7 @@ public enum ActionID : uint
     FlareStarPvE = 36989,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36990"><strong>Necrotize</strong></see>-<i>PvE</i> (SMN) [36990] [Ability] (lvl.92)
-/// <para>Deals unaspected damage with a potency of 420.</para>
+/// <para>Deals unaspected damage with a potency of 440.</para>
 /// <para>Aetherflow Gauge Cost: 1</para>
 /// </summary>
     NecrotizePvE = 36990,
@@ -14371,7 +14389,7 @@ public enum ActionID : uint
     LuxwavePvE = 36993,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36994"><strong>Umbral Impulse</strong></see>-<i>PvE</i> (SMN) [36994] [Spell] (lvl.100)
-/// <para>Deals unaspected damage with a potency of 600.</para>
+/// <para>Deals unaspected damage with a potency of 620.</para>
 /// <para>Can only be executed while in Lightwyrm Trance.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -14389,7 +14407,7 @@ public enum ActionID : uint
     UmbralFlarePvE = 36995,
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/36996"><strong>Sunflare</strong></see>-<i>PvE</i> (SMN) [36996] [Ability] (lvl.100)
-/// <para>Deals unaspected damage to target and all enemies nearby it with a potency of 600 for the first enemy, and 60% less for all remaining enemies.</para>
+/// <para>Deals unaspected damage to target and all enemies nearby it with a potency of 700 for the first enemy, and 60% less for all remaining enemies.</para>
 /// <para>Can only be executed while in Lightwyrm Trance.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>
@@ -14692,7 +14710,7 @@ public enum ActionID : uint
 /// <para>Duration: 30s</para>
 /// <para>Effect cannot be stacked with Eukrasian Dosis III.</para>
 /// <para>Additional Effect: Restores HP to targets under the effect of Kardion granted by you</para>
-/// <para>Cure Potency: 170</para>
+/// <para>Cure Potency: </para>
 /// <para>Can only be executed while under the effect of Eukrasia.</para>
 /// <para></para>
 /// <para>※This action cannot be assigned to a hotbar.</para>

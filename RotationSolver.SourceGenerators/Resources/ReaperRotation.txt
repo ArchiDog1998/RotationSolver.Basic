@@ -1098,7 +1098,7 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50657"><strong>Melee Mastery III</strong></see> (RPR) [657]
-/// <para>Increases the potency of Slice to 420, Waxing Slice to 260, Spinning Scythe to 160, Infernal Slice to 280, Nightmare Scythe to 140, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 500, Cross Reaping to 500, Harvest Moon to 800, and Lemure's Slice to 280.</para>
+/// <para>Increases the potency of Slice to 420, Waxing Slice to 260, Spinning Scythe to 160, Infernal Slice to 280, Nightmare Scythe to 140, Soul Slice to 520, Gibbet to 500, Gallows to 500, Unveiled Gibbet to 440, Unveiled Gallows to 440, Void Reaping to 500, Cross Reaping to 500, Harvest Moon to 800, and Lemure's Slice to 280.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(657U);
 

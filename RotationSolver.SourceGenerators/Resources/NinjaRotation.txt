@@ -1435,7 +1435,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50661"><strong>Melee Mastery III</strong></see> (NIN) [661]
-/// <para>Increases the potency of Spinning Edge to 300, Gust Slash to 220, Aeolian Edge to 200, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 220, Bhavacakra to 380, Bhavacakra while under the effect of Meisui to 530, Forked Raiju to 640, and Fleeting Raiju to 640.</para>
+/// <para>Increases the potency of Spinning Edge to 300, Gust Slash to 240, Aeolian Edge to 200, Fuma Shuriken to 500, Raiton to 740, Suiton to 580, Armor Crush to 220, Bhavacakra to 380, Bhavacakra while under the effect of Meisui to 530, Forked Raiju to 700, and Fleeting Raiju to 700.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(661U);
 

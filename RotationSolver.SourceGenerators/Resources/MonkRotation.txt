@@ -1108,7 +1108,7 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50660"><strong>Melee Mastery II</strong></see> (MNK) [660]
-/// <para>Increases the potency of Twin Snakes to 420, Demolish to 360, Dragon Kick to 320, and Six-sided Star to 780.</para>
+/// <para>Increases the potency of Twin Snakes to 420, Demolish to 360, Dragon Kick to 320, Six-sided Star to 780, and Phantom Rush to 1,500.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 

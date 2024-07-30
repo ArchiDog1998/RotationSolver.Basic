@@ -11,19 +11,20 @@ internal class BaseActionSet(Func<IEnumerable<ICanUse>> getActions, bool isRepla
 
     public bool CanUse(out IAction act, bool skipStatusProvideCheck = false, bool skipComboCheck = false, bool skipCastingCheck = false, bool usedUp = false, bool onLastAbility = false, bool skipClippingCheck = false, bool skipAoeCheck = false, byte gcdCountForAbility = 0)
     {
-        byte level = byte.MaxValue;
+        byte level = 0;
         foreach (var action in Actions)
         {
             if (action.CanUse(out act,skipStatusProvideCheck, skipComboCheck, skipCastingCheck, usedUp, onLastAbility, skipClippingCheck, skipAoeCheck, gcdCountForAbility)
                 && act is IBaseAction baseAction)
             {
+                if (IsReplace && act.EnoughLevel && level > act.Level)
+                {
+                    break;
+                }
                 ChosenAction = baseAction;
                 return true;
             }
-            if (IsReplace && act.EnoughLevel && level < act.Level)
-            {
-                break;
-            }
+
             level = act.Level;
         }
         ChosenAction = null;

@@ -81,7 +81,7 @@ partial class BardRotation
     #region Bite
     static partial void ModifyVenomousBitePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.VenomousBite];
+        setting.TargetStatusProvide = [StatusID.VenomousBite, StatusID.CausticBite];
     }
 
     static partial void ModifyCausticBitePvE(ref ActionSetting setting)
@@ -91,7 +91,7 @@ partial class BardRotation
 
     static partial void ModifyWindbitePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.Windbite];
+        setting.TargetStatusProvide = [StatusID.Windbite, StatusID.Stormbite];
     }
 
     static partial void ModifyStormbitePvE(ref ActionSetting setting)

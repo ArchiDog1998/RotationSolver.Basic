@@ -978,6 +978,8 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50277"><strong>Enhanced Iaijutsu</strong></see> (SAM) [277]
 /// <para>Reduces Iaijutsu cast time to 1.3 seconds.</para>
+/// <para>Also grants Tsubame-gaeshi Ready after excecuting iaijutsu excluding Higanbana.</para>
+/// <para>Duration: 30s</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedIaijutsuTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(277U);
     /// <summary>
@@ -989,8 +991,6 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 /// <see href="https://garlandtools.org/db/#action/50443"><strong>Enhanced Meikyo Shisui</strong></see> (SAM) [443]
 /// <para>Allows the accumulation of charges for consecutive uses of Meikyo Shisui.</para>
 /// <para>Maximum Charges: 2</para>
-/// <para>Also grants the effect of Tsubame-gaeshi Ready upon executing Meikyo Shisui.</para>
-/// <para>Duration: 30s</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedMeikyoShisuiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(443U);
     /// <summary>
@@ -1011,7 +1011,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(520U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50521"><strong>Way of the Samurai II</strong></see> (SAM) [521]
-/// <para>Increases the potency of Gekko, Kasha, and Yukikaze to 120.</para>
+/// <para>Increases the potency of Gekko, Kasha, and Yukikaze to 110.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(521U);
     /// <summary>
@@ -1054,7 +1054,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50655"><strong>Way of the Samurai III</strong></see> (SAM) [655]
-/// <para>Increases the potency of Jinpu to 160, Shifu to 160, Enhanced Enpi to 270, Gekko to 180, Higanbana damage over time to 50, Kasha to 180, Yukikaze to 180, Midare Setsugekka to 700, Kaeshi: Setsugekka to 700, Shoha to 640, Ogi Namikiri to 900, and Kaeshi: Namikiri to 900.</para>
+/// <para>Increases the potency of Jinpu to 140, Shifu to 140, Enhanced Enpi to 270, Gekko to 160, Higanbana damage over time to 50, Kasha to 160, Yukikaze to 160, Midare Setsugekka to 640, Kaeshi: Setsugekka to 640, Shoha to 640, Ogi Namikiri to 900, and Kaeshi: Namikiri to 900.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait WayOfTheSamuraiIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(655U);
 

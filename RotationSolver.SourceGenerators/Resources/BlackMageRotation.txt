@@ -5,7 +5,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <summary>
 /// <see href="https://na.finalfantasyxiv.com/jobguide/blackmage"><strong>Black Mage</strong></see>
 /// <br>Number of Actions: 49</br>
-/// <br>Number of Replace Actions: 6</br>
+/// <br>Number of Replace Actions: 7</br>
 /// <br>Number of Action Combos: 0</br>
 /// <br>Number of Traits: 25</br>
 /// </summary>
@@ -986,13 +986,13 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50465"><strong>Aspect Mastery V</strong></see> (BLM) [465]
 /// <para>Adds a Paradox marker to your Elemental Gauge.</para>
-/// <para>The marker is made active after reaching Umbral Ice III and gaining 3 Umbral Hearts then swapping to the opposite element. The marker is made inactive when the effect of Astral Fire expires.</para>
-/// <para>Fire becomes Paradox when the Paradox marker is made active.</para>
+/// <para>The marker is made active after reaching Astral Fire III then swapping to the opposite element. Conversely, the marker can also be made active after reaching Umbral Ice III and gaining 3 Umbral Hearts then swapping to the opposite element. The marker is made inactive when the effect of Astral Fire or Umbral Ice expires.</para>
+/// <para>Fire and Blizzard become Paradox when the Paradox marker is made active.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait AspectMasteryVTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(465U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50509"><strong>Enhanced Enochian III</strong></see> (BLM) [509]
-/// <para>Improves Enochian's magic damage increase to 23%.</para>
+/// <para>Improves Enochian's magic damage increase to 25%.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIiiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(509U);
     /// <summary>
@@ -1028,7 +1028,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50659"><strong>Enhanced Enochian IV</strong></see> (BLM) [659]
-/// <para>Improves Enochian's magic damage increase to 30%.</para>
+/// <para>Improves Enochian's magic damage increase to 33%.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(659U);
 
@@ -1038,6 +1038,13 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FirePvEReplace { get; }
+
+    /// <summary>
+/// [Replaced] 
+/// <seealso cref="BlizzardPvE"/> -> <seealso cref="ParadoxPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BlizzardPvEReplace { get; }
 
     /// <summary>
 /// [Replaced] 
@@ -1215,6 +1222,7 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     protected BlackMageRotation()
     {
         FirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, FirePvE], true);
+        BlizzardPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ParadoxPvE, BlizzardPvE], true);
         FireIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighFireIiPvE, FireIiPvE], true);
         BlizzardIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighBlizzardIiPvE, BlizzardIiPvE], true);
         ThunderPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HighThunderPvE, ThunderIiiPvE, ThunderPvE], true);

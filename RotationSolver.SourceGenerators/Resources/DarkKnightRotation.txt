@@ -932,7 +932,7 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedReprisalTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(640U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50663"><strong>Melee Mastery II</strong></see> (DRK) [663]
-/// <para>Increases the potency of Hard Slash to 260, Syphon Strike to 220, Souleater to 240, Stalwart Soul to 120, Bloodspiller to 580, and Quietus to 240.</para>
+/// <para>Increases the potency of Hard Slash to 300, Syphon Strike to 240, Souleater to 260, Stalwart Soul to 120, Carve and Spit to 540, Bloodspiller to 580, and Quietus to 240.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(663U);
 

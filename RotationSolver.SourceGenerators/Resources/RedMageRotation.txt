@@ -1283,7 +1283,7 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSwiftcastTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(644U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50652"><strong>Enchanted Blade Mastery</strong></see> (RDM) [652]
-/// <para>Increases the potency of Enchanted Riposte to 300, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 170, Fleche to 480, Enchanted Redoublement to 170, Contre Sixte to 400, Verflare to 620, Verholy to 620, Enchanted Reprise to 380, Scorch to 700, Veraero III to 420, Verthunder III to 420, and Resolution to 800.</para>
+/// <para>Increases the potency of Enchanted Riposte to 300, Verfire to 380, Verstone to 380, Enchanted Zwerchhau to 170, Fleche to 480, Enchanted Redoublement to 170, Contre Sixte to 420, Verflare to 620, Verholy to 620, Enchanted Reprise to 420, Scorch to 700, Veraero III to 440, Verthunder III to 440, and Resolution to 800.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnchantedBladeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(652U);
 

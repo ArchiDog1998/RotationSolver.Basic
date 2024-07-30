@@ -31,22 +31,22 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseAction SteelFangsPvE => _SteelFangsPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DreadFangsPvECreator = new(() =>
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ReavingFangsPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DreadFangsPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ReavingFangsPvE, false);
         var setting = action.Setting;
-        ModifyDreadFangsPvE(ref setting);
+        ModifyReavingFangsPvE(ref setting);
         action.Setting = setting;
         return action;
     });
     /// <summary>
-/// Modify <inheritdoc cref="DreadFangsPvE"/>
+/// Modify <inheritdoc cref="ReavingFangsPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    static partial void ModifyDreadFangsPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DreadFangsPvE"/>
+    static partial void ModifyReavingFangsPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReavingFangsPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseAction DreadFangsPvE => _DreadFangsPvECreator.Value;
+    public global::RotationSolver.Basic.Actions.IBaseAction ReavingFangsPvE => _ReavingFangsPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuntersStingPvECreator = new(() =>
@@ -175,22 +175,22 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseAction SteelMawPvE => _SteelMawPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DreadMawPvECreator = new(() =>
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _ReavingMawPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DreadMawPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.ReavingMawPvE, false);
         var setting = action.Setting;
-        ModifyDreadMawPvE(ref setting);
+        ModifyReavingMawPvE(ref setting);
         action.Setting = setting;
         return action;
     });
     /// <summary>
-/// Modify <inheritdoc cref="DreadMawPvE"/>
+/// Modify <inheritdoc cref="ReavingMawPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    static partial void ModifyDreadMawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DreadMawPvE"/>
+    static partial void ModifyReavingMawPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.ReavingMawPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseAction DreadMawPvE => _DreadMawPvECreator.Value;
+    public global::RotationSolver.Basic.Actions.IBaseAction ReavingMawPvE => _ReavingMawPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuntersBitePvECreator = new(() =>
@@ -265,22 +265,22 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseAction BloodiedMawPvE => _BloodiedMawPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _DreadwinderPvECreator = new(() =>
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _VicewinderPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.DreadwinderPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.VicewinderPvE, false);
         var setting = action.Setting;
-        ModifyDreadwinderPvE(ref setting);
+        ModifyVicewinderPvE(ref setting);
         action.Setting = setting;
         return action;
     });
     /// <summary>
-/// Modify <inheritdoc cref="DreadwinderPvE"/>
+/// Modify <inheritdoc cref="VicewinderPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    static partial void ModifyDreadwinderPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.DreadwinderPvE"/>
+    static partial void ModifyVicewinderPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.VicewinderPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseAction DreadwinderPvE => _DreadwinderPvECreator.Value;
+    public global::RotationSolver.Basic.Actions.IBaseAction VicewinderPvE => _VicewinderPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuntersCoilPvECreator = new(() =>
@@ -319,22 +319,22 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseAction SwiftskinsCoilPvE => _SwiftskinsCoilPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _PitOfDreadPvECreator = new(() =>
+    private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _VicepitPvECreator = new(() =>
     {
-        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.PitOfDreadPvE, false);
+        global::RotationSolver.Basic.Actions.IBaseAction action = new global::RotationSolver.Basic.Actions.BaseAction(global::RotationSolver.Basic.Data.ActionID.VicepitPvE, false);
         var setting = action.Setting;
-        ModifyPitOfDreadPvE(ref setting);
+        ModifyVicepitPvE(ref setting);
         action.Setting = setting;
         return action;
     });
     /// <summary>
-/// Modify <inheritdoc cref="PitOfDreadPvE"/>
+/// Modify <inheritdoc cref="VicepitPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    static partial void ModifyPitOfDreadPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
-    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.PitOfDreadPvE"/>
+    static partial void ModifyVicepitPvE(ref global::RotationSolver.Basic.Actions.ActionSetting setting);
+    /// <inheritdoc cref="global::RotationSolver.Basic.Data.ActionID.VicepitPvE"/>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseAction PitOfDreadPvE => _PitOfDreadPvECreator.Value;
+    public global::RotationSolver.Basic.Actions.IBaseAction VicepitPvE => _VicepitPvECreator.Value;
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.SyntaxHelper", "1.0.0.2")]
     private readonly global::System.Lazy<global::RotationSolver.Basic.Actions.IBaseAction> _HuntersDenPvECreator = new(() =>
@@ -1387,7 +1387,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public static global::RotationSolver.Basic.Traits.IBaseTrait VipersThreshTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(527U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50528"><strong>Viper's Rattle</strong></see> (VPR) [528]
-/// <para>Grants 1 stack of Rattling Coil upon successfully landing Dreadwinder or Pit of Dread.</para>
+/// <para>Grants 1 stack of Rattling Coil upon successfully landing Vicewinder or Vicepit.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait VipersRattleTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(528U);
     /// <summary>
@@ -1435,12 +1435,12 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50674"><strong>Melee Mastery</strong></see> (VPR) [674]
-/// <para>Increases the potency of Steel Fangs to 200, Dread Fangs to 140, Hunter's Sting to 260, and Swiftskin's Sting to 260.</para>
+/// <para>Increases the potency of Steel Fangs to 200, Reaving Fangs to 200, Hunter's Sting to 300, and Swiftskin's Sting to 300.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(674U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50675"><strong>Melee Mastery II</strong></see> (VPR) [675]
-/// <para>Increases the potency of Flanksting Strike to 300, Flanksbane Fang to 300, Hindsting Strike to 300, and Hindsbane Fang to 300.</para>
+/// <para>Increases the potency of Flanksting Strike, Flanksbane Fang, Hindsting Strike, and Hindsbane Fang to 340.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(675U);
 
@@ -1453,10 +1453,10 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
 
     /// <summary>
 /// 
-/// <seealso cref="DreadMawPvE"/> -> <seealso cref="SwiftskinsBitePvE"/> -> <seealso cref="BloodiedMawPvE"/> -> <seealso cref="SecondGenerationPvE"/>
+/// <seealso cref="ReavingMawPvE"/> -> <seealso cref="SwiftskinsBitePvE"/> -> <seealso cref="BloodiedMawPvE"/> -> <seealso cref="SecondGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet DreadMawPvEReplace { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ReavingMawPvEReplace { get; }
 
     /// <summary>
 /// 
@@ -1589,25 +1589,25 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodiedMawPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="DreadwinderPvE"/> -> <seealso cref="HuntersCoilPvE"/>
+/// <seealso cref="VicewinderPvE"/> -> <seealso cref="HuntersCoilPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersCoilPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="DreadwinderPvE"/> -> <seealso cref="SwiftskinsCoilPvE"/>
+/// <seealso cref="VicewinderPvE"/> -> <seealso cref="SwiftskinsCoilPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsCoilPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="PitOfDreadPvE"/> -> <seealso cref="HuntersDenPvE"/>
+/// <seealso cref="VicepitPvE"/> -> <seealso cref="HuntersDenPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersDenPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="PitOfDreadPvE"/> -> <seealso cref="SwiftskinsDenPvE"/>
+/// <seealso cref="VicepitPvE"/> -> <seealso cref="SwiftskinsDenPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsDenPvECombo { get; }
@@ -1759,7 +1759,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     protected ViperRotation()
     {
         SteelMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, JaggedMawPvE, HuntersBitePvE, SteelMawPvE], false);
-        DreadMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, DreadMawPvE], false);
+        ReavingMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, ReavingMawPvE], false);
         HuntersCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE], false);
         SwiftskinsCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE], false);
         HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE], false);
@@ -1777,13 +1777,13 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         HindstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindstingStrikePvE, SwiftskinsStingPvE, SteelFangsPvE], false);
         HindsbaneFangPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindsbaneFangPvE, SwiftskinsStingPvE, SteelFangsPvE], false);
         HuntersBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace], false);
-        SwiftskinsBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DreadMawPvEReplace, SteelMawPvEReplace], false);
+        SwiftskinsBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace], false);
         JaggedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace], false);
-        BloodiedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DreadMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace], false);
-        HuntersCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersCoilPvEReplace, DreadwinderPvE], false);
-        SwiftskinsCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsCoilPvEReplace, DreadwinderPvE], false);
-        HuntersDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersDenPvEReplace, PitOfDreadPvE], false);
-        SwiftskinsDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsDenPvEReplace, PitOfDreadPvE], false);
+        BloodiedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace], false);
+        HuntersCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersCoilPvEReplace, VicewinderPvE], false);
+        SwiftskinsCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsCoilPvEReplace, VicewinderPvE], false);
+        HuntersDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersDenPvEReplace, VicepitPvE], false);
+        SwiftskinsDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsDenPvEReplace, VicepitPvE], false);
         PiercingFangsPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
         HuntersStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvP, SteelFangsPvP], false);
         SwiftskinsStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
@@ -1796,5 +1796,5 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     /// <inheritdoc/>
-    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SteelFangsPvE, DreadFangsPvE, HuntersStingPvE, SwiftskinsStingPvE, FlankstingStrikePvE, FlanksbaneFangPvE, HindstingStrikePvE, HindsbaneFangPvE, SteelMawPvE, DreadMawPvE, HuntersBitePvE, SwiftskinsBitePvE, JaggedMawPvE, BloodiedMawPvE, DreadwinderPvE, HuntersCoilPvE, SwiftskinsCoilPvE, PitOfDreadPvE, HuntersDenPvE, SwiftskinsDenPvE, ReawakenPvE, FirstGenerationPvE, SecondGenerationPvE, ThirdGenerationPvE, FourthGenerationPvE, OuroborosPvE, WrithingSnapPvE, UncoiledFuryPvE, DeathRattlePvE, LastLashPvE, TwinfangBitePvE, TwinbloodBitePvE, TwinfangThreshPvE, TwinbloodThreshPvE, FirstLegacyPvE, SecondLegacyPvE, ThirdLegacyPvE, FourthLegacyPvE, UncoiledTwinfangPvE, UncoiledTwinbloodPvE, SlitherPvE, SerpentsIrePvE, SerpentsTailPvE, TwinfangPvE, TwinbloodPvE, SteelFangsPvP, PiercingFangsPvP, HuntersStingPvP, SwiftskinsStingPvP, BarbarousBitePvP, RavenousBitePvP, HuntersSnapPvP, SwiftskinsCoilPvP, UncoiledFuryPvP, FirstGenerationPvP, SecondGenerationPvP, ThirdGenerationPvP, FourthGenerationPvP, OuroborosPvP, DeathRattlePvP, TwinfangBitePvP, TwinbloodBitePvP, UncoiledTwinfangPvP, FirstLegacyPvP, SecondLegacyPvP, ThirdLegacyPvP, FourthLegacyPvP, SerpentsTailPvP, SlitherPvP, SnakeScalesPvP, BacklashPvP, FuriousBacklashPvP, RattlingCoilPvP, WorldswallowerPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
+    public override global::RotationSolver.Basic.Actions.IBaseAction[] AllBaseActions => _AllBaseActions ??= [SteelFangsPvE, ReavingFangsPvE, HuntersStingPvE, SwiftskinsStingPvE, FlankstingStrikePvE, FlanksbaneFangPvE, HindstingStrikePvE, HindsbaneFangPvE, SteelMawPvE, ReavingMawPvE, HuntersBitePvE, SwiftskinsBitePvE, JaggedMawPvE, BloodiedMawPvE, VicewinderPvE, HuntersCoilPvE, SwiftskinsCoilPvE, VicepitPvE, HuntersDenPvE, SwiftskinsDenPvE, ReawakenPvE, FirstGenerationPvE, SecondGenerationPvE, ThirdGenerationPvE, FourthGenerationPvE, OuroborosPvE, WrithingSnapPvE, UncoiledFuryPvE, DeathRattlePvE, LastLashPvE, TwinfangBitePvE, TwinbloodBitePvE, TwinfangThreshPvE, TwinbloodThreshPvE, FirstLegacyPvE, SecondLegacyPvE, ThirdLegacyPvE, FourthLegacyPvE, UncoiledTwinfangPvE, UncoiledTwinbloodPvE, SlitherPvE, SerpentsIrePvE, SerpentsTailPvE, TwinfangPvE, TwinbloodPvE, SteelFangsPvP, PiercingFangsPvP, HuntersStingPvP, SwiftskinsStingPvP, BarbarousBitePvP, RavenousBitePvP, HuntersSnapPvP, SwiftskinsCoilPvP, UncoiledFuryPvP, FirstGenerationPvP, SecondGenerationPvP, ThirdGenerationPvP, FourthGenerationPvP, OuroborosPvP, DeathRattlePvP, TwinfangBitePvP, TwinbloodBitePvP, UncoiledTwinfangPvP, FirstLegacyPvP, SecondLegacyPvP, ThirdLegacyPvP, FourthLegacyPvP, SerpentsTailPvP, SlitherPvP, SnakeScalesPvP, BacklashPvP, FuriousBacklashPvP, RattlingCoilPvP, WorldswallowerPvP, LimitBreak1, LimitBreak2, LimitBreak3, ..base.AllBaseActions];
 }

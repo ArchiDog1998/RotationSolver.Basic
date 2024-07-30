@@ -945,7 +945,7 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedSecondWindTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(642U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50653"><strong>Melee Mastery</strong></see> (DRG) [653]
-/// <para>Increases the potency of Fang and Claw to 140, Wheeling Thrust to 140, Drakesbane to 440, Raiden Thrust to 320, Heavens' Thrust to 140, and Chaotic Spring to 140.</para>
+/// <para>Increases the potency of Fang and Claw to 140, Wheeling Thrust to 140, Drakesbane to 440, Raiden Thrust to 320, Stardiver to 720, Heavens' Thrust to 140, and Chaotic Spring to 140.</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(653U);
 

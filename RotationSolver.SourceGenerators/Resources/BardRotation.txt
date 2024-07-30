@@ -854,7 +854,7 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait StraightShotMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(282U);
     /// <summary>
 /// <see href="https://garlandtools.org/db/#action/50283"><strong>Enhanced Quick Nock</strong></see> (ARC BRD) [283]
-/// <para>Adds to Quick Nock a 35% chance to grant Hawk's Eye.</para>
+/// <para>Adds to Quick Nock a 20% chance to grant Hawk's Eye.</para>
 /// <para>Duration: 30s</para>
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedQuickNockTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(283U);

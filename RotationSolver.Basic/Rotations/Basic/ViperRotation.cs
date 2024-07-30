@@ -9,25 +9,26 @@ partial class ViperRotation
 
     #region Single
     #region 1
-    static partial void ModifyDreadFangsPvE(ref ActionSetting setting)
+    static partial void ModifyReavingFangsPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.NoxiousGnash];
-        setting.CreateConfig = () => new()
-        {
-            StatusGcdCount = 8,
-        };
+        setting.StatusProvide = [StatusID.HonedSteel];
+    }
+
+    static partial void ModifySteelFangsPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.HonedReavers];
     }
     #endregion
 
     #region 2
     static partial void ModifyHuntersStingPvE(ref ActionSetting setting)
     {
-        setting.ComboIds = [ActionID.DreadFangsPvE];
+        setting.ComboIds = [ActionID.ReavingFangsPvE];
     }
 
     static partial void ModifySwiftskinsStingPvE(ref ActionSetting setting)
     {
-        setting.ComboIds = [ActionID.DreadFangsPvE];
+        setting.ComboIds = [ActionID.ReavingFangsPvE];
     }
 
     #endregion
@@ -80,18 +81,18 @@ partial class ViperRotation
     #region 1
     static partial void ModifySteelMawPvE(ref ActionSetting setting)
     {
+        setting.StatusProvide = [StatusID.HonedReavers];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
         };
     }
 
-    static partial void ModifyDreadMawPvE(ref ActionSetting setting)
+    static partial void ModifyReavingMawPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.NoxiousGnash];
+        setting.StatusProvide = [StatusID.HonedSteel];
         setting.CreateConfig = () => new()
         {
-            StatusGcdCount = 8,
             AoeCount = 2,
         };
     }
@@ -100,7 +101,7 @@ partial class ViperRotation
     #region 2
     static partial void ModifyHuntersBitePvE(ref ActionSetting setting)
     {
-        setting.ComboIds = [ActionID.DreadMawPvE];
+        setting.ComboIds = [ActionID.ReavingMawPvE];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -109,7 +110,7 @@ partial class ViperRotation
 
     static partial void ModifySwiftskinsBitePvE(ref ActionSetting setting)
     {
-        setting.ComboIds = [ActionID.DreadMawPvE];
+        setting.ComboIds = [ActionID.ReavingMawPvE];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -132,7 +133,7 @@ partial class ViperRotation
     #endregion
 
     #region Coil
-    static partial void ModifyPitOfDreadPvE(ref ActionSetting setting)
+    static partial void ModifyVicepitPvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
         {
