@@ -47,17 +47,17 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
         }
         if (item.ReplaceAction1.Value is Action act1 && act1.RowId != 0/* && item.Type1 is not 4*/)
         {
-            _isReplace = item.Type1 is not 1;
+            _isReplace = item.Type1 is not 1 and not 2;
             actionList.Add(act1);
         }
         if (item.ReplaceAction2.Value is Action act2 && act2.RowId != 0/* && item.Type2 is not 4*/)
         {
-            _isReplace |= item.Type1 is not 1;
+            _isReplace |= item.Type1 is not 1 and not 2;
             actionList.Add(act2);
         }
         if (item.ReplaceAction3.Value is Action act3 && act3.RowId != 0/* && item.Type3 is not 4*/)
         {
-            _isReplace |= item.Type1 is not 1;
+            _isReplace |= item.Type1 is not 1 and not 2;
             actionList.Add(act3);
         }
 

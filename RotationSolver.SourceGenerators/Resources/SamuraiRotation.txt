@@ -1087,7 +1087,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet HakazePvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="IkishotenPvE"/> -> <seealso cref="ZanshinPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1283,7 +1283,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
         FugaPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FukoPvE, FugaPvE], true);
         ThirdEyePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TengentsuPvE, ThirdEyePvE], true);
         HakazePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GyofuPvE, HakazePvE], true);
-        IkishotenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE], true);
+        IkishotenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZanshinPvE, IkishotenPvE], false);
         JinpuPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JinpuPvE, HakazePvEReplace], false);
         ShifuPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShifuPvE, HakazePvEReplace], false);
         YukikazePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [YukikazePvE, HakazePvEReplace], false);

@@ -1522,7 +1522,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersSnapPvPReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="SnakeScalesPvP"/> -> <seealso cref="BacklashPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1769,7 +1769,7 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
         TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE], false);
         TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE], false);
         HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP], true);
-        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], true);
+        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], false);
         HuntersStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE], false);
         SwiftskinsStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvE, SteelFangsPvE], false);
         FlankstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlankstingStrikePvE, HuntersStingPvE, SteelFangsPvE], false);

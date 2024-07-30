@@ -937,7 +937,7 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(663U);
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="GritPvE"/> -> <seealso cref="ReleaseGritPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -979,21 +979,21 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     public global::RotationSolver.Basic.Actions.IBaseActionSet ShadowWallPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="BloodspillerPvE"/> -> <seealso cref="ScarletDeliriumPvE"/> -> <seealso cref="ComeuppancePvE"/> -> <seealso cref="TorcleaverPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodspillerPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="QuietusPvE"/> -> <seealso cref="ImpalementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet QuietusPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="LivingShadowPvE"/> -> <seealso cref="DisesteemPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1146,15 +1146,15 @@ public abstract partial class DarkKnightRotation : global::RotationSolver.Basic.
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected DarkKnightRotation()
     {
-        GritPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseGritPvE, GritPvE], true);
+        GritPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseGritPvE, GritPvE], false);
         FloodOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FloodOfShadowPvE, FloodOfDarknessPvE], true);
         EdgeOfDarknessPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EdgeOfShadowPvE, EdgeOfDarknessPvE], true);
         SaltedEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SaltAndDarknessPvE, SaltedEarthPvE], true);
         BloodWeaponPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeliriumPvE, BloodWeaponPvE], true);
         ShadowWallPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowedVigilPvE, ShadowWallPvE], true);
-        BloodspillerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, ComeuppancePvE, ScarletDeliriumPvE, BloodspillerPvE], true);
-        QuietusPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImpalementPvE, QuietusPvE], true);
-        LivingShadowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisesteemPvE, LivingShadowPvE], true);
+        BloodspillerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TorcleaverPvE, ComeuppancePvE, ScarletDeliriumPvE, BloodspillerPvE], false);
+        QuietusPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImpalementPvE, QuietusPvE], false);
+        LivingShadowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DisesteemPvE, LivingShadowPvE], false);
         SyphonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SyphonStrikePvE, HardSlashPvE], false);
         SouleaterPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouleaterPvE, SyphonStrikePvE, HardSlashPvE], false);
         StalwartSoulPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StalwartSoulPvE, UnleashPvE], false);

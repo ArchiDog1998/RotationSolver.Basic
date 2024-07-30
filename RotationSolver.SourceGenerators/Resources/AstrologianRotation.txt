@@ -1316,7 +1316,7 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseActionSet MacrocosmosPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="DivinationPvE"/> -> <seealso cref="OraclePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1330,7 +1330,7 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseActionSet AspectedHeliosPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="NeutralSectPvE"/> -> <seealso cref="SunSignPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1447,9 +1447,9 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
         EarthlyStarPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StellarDetonationPvE, EarthlyStarPvE], true);
         HoroscopePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HoroscopePvE_16558, HoroscopePvE], true);
         MacrocosmosPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MicrocosmosPvE, MacrocosmosPvE], true);
-        DivinationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OraclePvE, DivinationPvE], true);
+        DivinationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OraclePvE, DivinationPvE], false);
         AspectedHeliosPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeliosConjunctionPvE, AspectedHeliosPvE], true);
-        NeutralSectPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SunSignPvE, NeutralSectPvE], true);
+        NeutralSectPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SunSignPvE, NeutralSectPvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

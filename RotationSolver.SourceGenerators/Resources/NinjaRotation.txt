@@ -1447,7 +1447,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseActionSet AssassinatePvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="BunshinPvE"/> -> <seealso cref="PhantomKamaitachiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1482,7 +1482,7 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     public global::RotationSolver.Basic.Actions.IBaseActionSet HellfrogMediumPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="TenChiJinPvE"/> -> <seealso cref="TenriJindoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1620,12 +1620,12 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     protected NinjaRotation()
     {
         AssassinatePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DreamWithinADreamPvE, AssassinatePvE], true);
-        BunshinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomKamaitachiPvE, BunshinPvE], true);
+        BunshinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomKamaitachiPvE, BunshinPvE], false);
         MugPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DokumoriPvE, MugPvE], true);
         TrickAttackPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KunaisBanePvE, TrickAttackPvE], true);
         BhavacakraPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZeshoMeppoPvE, BhavacakraPvE], true);
         HellfrogMediumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DeathfrogMediumPvE, HellfrogMediumPvE], true);
-        TenChiJinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TenriJindoPvE, TenChiJinPvE], true);
+        TenChiJinPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TenriJindoPvE, TenChiJinPvE], false);
         GustSlashPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GustSlashPvE, SpinningEdgePvE], false);
         AeolianEdgePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AeolianEdgePvE, GustSlashPvE, SpinningEdgePvE], false);
         ArmorCrushPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ArmorCrushPvE, GustSlashPvE, SpinningEdgePvE], false);

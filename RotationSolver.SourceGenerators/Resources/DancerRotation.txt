@@ -1229,14 +1229,14 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodshowerPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="ClosedPositionPvE"/> -> <seealso cref="EndingPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ClosedPositionPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="ImprovisationPvE"/> -> <seealso cref="ImprovisedFinishPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1396,8 +1396,8 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
         BladeshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EntrechatPvE, BladeshowerPvE], true);
         RisingWindmillPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JetePvE, RisingWindmillPvE], true);
         BloodshowerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PirouettePvE, BloodshowerPvE], true);
-        ClosedPositionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE], true);
-        ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE], true);
+        ClosedPositionPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EndingPvE, ClosedPositionPvE], false);
+        ImprovisationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ImprovisedFinishPvE, ImprovisationPvE], false);
         SaberDancePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DanceOfTheDawnPvE, SaberDancePvE], true);
         FountainPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvEReplace, CascadePvEReplace], false);
         BladeshowerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeshowerPvEReplace, WindmillPvEReplace], false);

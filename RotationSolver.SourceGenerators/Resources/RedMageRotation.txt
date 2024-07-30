@@ -1351,14 +1351,14 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet VeraeroIiPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="EmboldenPvE"/> -> <seealso cref="ViceOfThornsPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EmboldenPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="ManaficationPvE"/> -> <seealso cref="PrefulgencePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1545,8 +1545,8 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
         VeraeroPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiiPvE, VeraeroPvE], true);
         VerthunderIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerflarePvE, VerthunderIiPvE], true);
         VeraeroIiPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [VerholyPvE, VeraeroIiPvE], true);
-        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], true);
-        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], true);
+        EmboldenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ViceOfThornsPvE, EmboldenPvE], false);
+        ManaficationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PrefulgencePvE, ManaficationPvE], false);
         ZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvEReplace, RipostePvEReplace], false);
         RedoublementPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RedoublementPvEReplace, ZwerchhauPvEReplace, RipostePvEReplace], false);
         EnchantedZwerchhauPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ZwerchhauPvEReplace, RipostePvEReplace], false);

@@ -1462,35 +1462,35 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseActionSet TemperaCoatPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="HolyInWhitePvP"/> -> <seealso cref="CometInBlackPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HolyInWhitePvPReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="TemperaCoatPvP"/> -> <seealso cref="TemperaGrassaPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TemperaCoatPvPReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="SubtractivePalettePvP"/> -> <seealso cref="ReleaseSubtractivePalettePvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SubtractivePalettePvPReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="AdventOfChocobastionPvP"/> -> <seealso cref="StarPrismPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AdventOfChocobastionPvPReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="MogOfTheAgesPvP"/> -> <seealso cref="RetributionOfTheMadeenPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1651,11 +1651,11 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
         MogOfTheAgesPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvE, MogOfTheAgesPvE], true);
         HammerStampPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PolishingHammerPvE, HammerBrushPvE, HammerStampPvE], true);
         TemperaCoatPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvE, TemperaCoatPvE], true);
-        HolyInWhitePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CometInBlackPvP, HolyInWhitePvP], true);
-        TemperaCoatPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvP, TemperaCoatPvP], true);
-        SubtractivePalettePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseSubtractivePalettePvP, SubtractivePalettePvP], true);
-        AdventOfChocobastionPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarPrismPvP, AdventOfChocobastionPvP], true);
-        MogOfTheAgesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvP, MogOfTheAgesPvP], true);
+        HolyInWhitePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CometInBlackPvP, HolyInWhitePvP], false);
+        TemperaCoatPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TemperaGrassaPvP, TemperaCoatPvP], false);
+        SubtractivePalettePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseSubtractivePalettePvP, SubtractivePalettePvP], false);
+        AdventOfChocobastionPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarPrismPvP, AdventOfChocobastionPvP], false);
+        MogOfTheAgesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvP, MogOfTheAgesPvP], false);
         HammerBrushPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace], false);
         PolishingHammerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace, HammerStampPvEReplace], false);
     }

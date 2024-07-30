@@ -988,7 +988,7 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     public global::RotationSolver.Basic.Actions.IBaseActionSet QuickNockPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="ApexArrowPvE"/> -> <seealso cref="BlastArrowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1016,14 +1016,14 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodletterPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="BarragePvE"/> -> <seealso cref="ResonantArrowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BarragePvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
+/// 
 /// <seealso cref="RadiantFinalePvE"/> -> <seealso cref="RadiantEncorePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1149,12 +1149,12 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
         VenomousBitePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CausticBitePvE, VenomousBitePvE], true);
         WindbitePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StormbitePvE, WindbitePvE], true);
         QuickNockPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LadonsbitePvE, QuickNockPvE], true);
-        ApexArrowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlastArrowPvE, ApexArrowPvE], true);
+        ApexArrowPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BlastArrowPvE, ApexArrowPvE], false);
         TheWanderersMinuetPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PitchPerfectPvE, TheWanderersMinuetPvE], true);
         WideVolleyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowbitePvE, WideVolleyPvE], true);
         BloodletterPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeartbreakShotPvE, BloodletterPvE], true);
-        BarragePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResonantArrowPvE, BarragePvE], true);
-        RadiantFinalePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RadiantEncorePvE, RadiantFinalePvE], true);
+        BarragePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResonantArrowPvE, BarragePvE], false);
+        RadiantFinalePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RadiantEncorePvE, RadiantFinalePvE], false);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
