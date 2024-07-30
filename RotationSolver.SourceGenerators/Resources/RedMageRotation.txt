@@ -1288,66 +1288,77 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnchantedBladeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(652U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="RipostePvE"/> -> <seealso cref="EnchantedRipostePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RipostePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ZwerchhauPvE"/> -> <seealso cref="EnchantedZwerchhauPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ZwerchhauPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="RedoublementPvE"/> -> <seealso cref="EnchantedRedoublementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RedoublementPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="MoulinetPvE"/> -> <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/> -> <seealso cref="EnchantedMoulinetTroisPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MoulinetPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ReprisePvE"/> -> <seealso cref="EnchantedReprisePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReprisePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VerthunderPvE"/> -> <seealso cref="VerthunderIiiPvE"/> -> <seealso cref="VerflarePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VerthunderPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VeraeroPvE"/> -> <seealso cref="VeraeroIiiPvE"/> -> <seealso cref="VerholyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VeraeroPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VerthunderIiPvE"/> -> <seealso cref="VerflarePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VerthunderIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VeraeroIiPvE"/> -> <seealso cref="VerholyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VeraeroIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="EmboldenPvE"/> -> <seealso cref="ViceOfThornsPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EmboldenPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ManaficationPvE"/> -> <seealso cref="PrefulgencePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

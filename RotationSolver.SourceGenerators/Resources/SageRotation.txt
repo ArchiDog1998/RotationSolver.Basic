@@ -1019,42 +1019,49 @@ public abstract partial class SageRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait MagickMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(669U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DosisPvE"/> -> <seealso cref="DosisIiPvE"/> -> <seealso cref="DosisIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DosisPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DiagnosisPvE"/> -> <seealso cref="EukrasianDiagnosisPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DiagnosisPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="PrognosisPvE"/> -> <seealso cref="EukrasianPrognosisPvE"/> -> <seealso cref="EukrasianPrognosisIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PrognosisPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="PhlegmaPvE"/> -> <seealso cref="PhlegmaIiPvE"/> -> <seealso cref="PhlegmaIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PhlegmaPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DyskrasiaPvE"/> -> <seealso cref="DyskrasiaIiPvE"/> -> <seealso cref="EukrasianDyskrasiaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DyskrasiaPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ToxikonPvE"/> -> <seealso cref="ToxikonIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ToxikonPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="PhysisPvE"/> -> <seealso cref="PhysisIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

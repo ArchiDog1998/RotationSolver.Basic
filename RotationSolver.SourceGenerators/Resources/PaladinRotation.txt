@@ -1078,54 +1078,63 @@ public abstract partial class PaladinRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedFightOrFlightTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(665U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="IronWillPvE"/> -> <seealso cref="ReleaseIronWillPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet IronWillPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="RageOfHalonePvE"/> -> <seealso cref="RoyalAuthorityPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RageOfHalonePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="SheltronPvE"/> -> <seealso cref="HolySheltronPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SheltronPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="SpiritsWithinPvE"/> -> <seealso cref="ExpiacionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SpiritsWithinPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ConfiteorPvE"/> -> <seealso cref="BladeOfFaithPvE"/> -> <seealso cref="BladeOfTruthPvE"/> -> <seealso cref="BladeOfValorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ConfiteorPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="AtonementPvE"/> -> <seealso cref="SupplicationPvE"/> -> <seealso cref="SepulchrePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AtonementPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="SentinelPvE"/> -> <seealso cref="GuardianPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SentinelPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="RequiescatPvE"/> -> <seealso cref="ImperatorPvE"/> -> <seealso cref="BladeOfHonorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RequiescatPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="FightOrFlightPvE"/> -> <seealso cref="GoringBladePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

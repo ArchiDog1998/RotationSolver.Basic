@@ -166,7 +166,7 @@ partial class MonkRotation
     {
         setting.ActionCheck = () =>
         {
-            if (!HasSolar || !HasLunar) return false;
+            if (Nadi != (Nadi.LUNAR | Nadi.SOLAR)) return false;
             return HasThreeBeast;
         };
     }
@@ -175,7 +175,7 @@ partial class MonkRotation
     {
         setting.ActionCheck = () =>
         {
-            if (!HasSolar || !HasLunar) return false;
+            if (Nadi != (Nadi.LUNAR | Nadi.SOLAR)) return false;
             return HasThreeBeast;
         };
     }

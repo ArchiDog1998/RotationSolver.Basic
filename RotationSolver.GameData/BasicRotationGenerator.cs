@@ -13,7 +13,7 @@ using static RotationSolver.GameData.SyntaxHelper;
 namespace RotationSolver.GameData;
 internal static class BasicRotationGenerator
 {
-    private readonly record struct PropInfo(string name, bool isEnum);
+    private readonly record struct PropInfo(string Name, bool IsEnum);
 
     internal static async Task GetRotation(Lumina.GameData gameData, ClassJob job, DirectoryInfo dirInfo, ActionIdGetter getter)
     {
@@ -154,7 +154,7 @@ internal static class BasicRotationGenerator
 
     private static ExpressionStatementSyntax GetOneLine(PropInfo prop)
     {
-        var invocation = prop.isEnum 
+        var invocation = prop.IsEnum 
             ? InvocationExpression(
                 MemberAccessExpression(
                                  SyntaxKind.SimpleMemberAccessExpression,
@@ -174,11 +174,11 @@ internal static class BasicRotationGenerator
                                              InvocationExpression(
                                                  MemberAccessExpression(
                                                      SyntaxKind.SimpleMemberAccessExpression,
-                                                     IdentifierName(prop.name),
+                                                     IdentifierName(prop.Name),
                                                      IdentifierName("Select")))
                                              .WithArgumentList(
                                                  ArgumentList(
-                                                     SingletonSeparatedList<ArgumentSyntax>(
+                                                     SingletonSeparatedList(
                                                          Argument(
                                                              SimpleLambdaExpression(
                                                                  Parameter(
@@ -192,7 +192,7 @@ internal static class BasicRotationGenerator
             : InvocationExpression(
                   MemberAccessExpression(
                       SyntaxKind.SimpleMemberAccessExpression,
-                      IdentifierName(prop.name),
+                      IdentifierName(prop.Name),
                       IdentifierName("ToString")));
 
         return ExpressionStatement(
@@ -208,7 +208,7 @@ internal static class BasicRotationGenerator
                                            SyntaxKind.AddExpression,
                                            LiteralExpression(
                                                SyntaxKind.StringLiteralExpression,
-                                               Literal(prop.name + ": ")), invocation))))));
+                                               Literal(prop.Name + ": ")), invocation))))));
     }
 
     private static PropertyDeclarationSyntax[] GetJobGauge(ClassJob job, ref List<PropInfo> names)
@@ -224,7 +224,7 @@ internal static class BasicRotationGenerator
 
         foreach (var prop in gaugeType.GetRuntimeProperties().Where(p => (p.GetMethod?.IsPublic ?? false) && p.DeclaringType == gaugeType))
         {
-            var isEnum = prop.PropertyType.GetInterfaces().Any(i => i.Name == nameof(IEnumerable));
+            var isEnum = prop.PropertyType.GetInterface("System.Collections.IEnumerable") != null;
             result.AddRange(GetGaugeItemFromProperty(prop));
             names.Add(new(prop.Name, isEnum));
         }

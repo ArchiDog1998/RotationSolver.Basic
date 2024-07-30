@@ -950,72 +950,84 @@ public abstract partial class DragoonRotation : global::RotationSolver.Basic.Rot
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(653U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="GeirskogulPvE"/> -> <seealso cref="NastrondPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GeirskogulPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="JumpPvE"/> -> <seealso cref="HighJumpPvE"/> -> <seealso cref="MirageDivePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet JumpPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="TrueThrustPvE"/> -> <seealso cref="RaidenThrustPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TrueThrustPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DoomSpikePvE"/> -> <seealso cref="DraconianFuryPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DoomSpikePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="FullThrustPvE"/> -> <seealso cref="HeavensThrustPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FullThrustPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ChaosThrustPvE"/> -> <seealso cref="ChaoticSpringPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ChaosThrustPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DragonfireDivePvE"/> -> <seealso cref="RiseOfTheDragonPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DragonfireDivePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VorpalThrustPvE"/> -> <seealso cref="LanceBarragePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VorpalThrustPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="DisembowelPvE"/> -> <seealso cref="SpiralBlowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DisembowelPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="StardiverPvE"/> -> <seealso cref="StarcrossPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet StardiverPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="FangAndClawPvE"/> -> <seealso cref="DrakesbanePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FangAndClawPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="WheelingThrustPvE"/> -> <seealso cref="DrakesbanePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

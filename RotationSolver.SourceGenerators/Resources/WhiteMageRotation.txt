@@ -938,42 +938,49 @@ public abstract partial class WhiteMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait WhiteMagicMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(651U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="StonePvE"/> -> <seealso cref="StoneIiPvE"/> -> <seealso cref="StoneIiiPvE"/> -> <seealso cref="StoneIvPvE"/> -> <seealso cref="GlarePvE"/> -> <seealso cref="GlareIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet StonePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="AeroPvE"/> -> <seealso cref="AeroIiPvE"/> -> <seealso cref="DiaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AeroPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="HolyPvE"/> -> <seealso cref="HolyIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HolyPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="LiturgyOfTheBellPvE"/> -> <seealso cref="LiturgyOfTheBellPvE_28509"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet LiturgyOfTheBellPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="PresenceOfMindPvE"/> -> <seealso cref="GlareIvPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet PresenceOfMindPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="MedicaIiPvE"/> -> <seealso cref="MedicaIiiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MedicaIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="TemperancePvE"/> -> <seealso cref="DivineCaressPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

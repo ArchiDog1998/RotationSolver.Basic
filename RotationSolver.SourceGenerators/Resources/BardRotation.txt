@@ -953,66 +953,77 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait RangedMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(668U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="StraightShotPvE"/> -> <seealso cref="RefulgentArrowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet StraightShotPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="HeavyShotPvE"/> -> <seealso cref="BurstShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HeavyShotPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="VenomousBitePvE"/> -> <seealso cref="CausticBitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet VenomousBitePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="WindbitePvE"/> -> <seealso cref="StormbitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet WindbitePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="QuickNockPvE"/> -> <seealso cref="LadonsbitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet QuickNockPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ApexArrowPvE"/> -> <seealso cref="BlastArrowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ApexArrowPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="TheWanderersMinuetPvE"/> -> <seealso cref="PitchPerfectPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TheWanderersMinuetPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="WideVolleyPvE"/> -> <seealso cref="ShadowbitePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet WideVolleyPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="BloodletterPvE"/> -> <seealso cref="HeartbreakShotPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BloodletterPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="BarragePvE"/> -> <seealso cref="ResonantArrowPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BarragePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="RadiantFinalePvE"/> -> <seealso cref="RadiantEncorePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

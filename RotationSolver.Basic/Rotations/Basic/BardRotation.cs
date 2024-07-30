@@ -7,24 +7,96 @@ partial class BardRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Dexterity;
 
-    static partial void ModifyHeavyShotPvE(ref ActionSetting setting)
+    #region Shot
+    private static void HawksEye(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.StraightShotReady];
+        setting.StatusNeed = [StatusID.HawksEye_3861, StatusID.Barrage];
     }
 
+    #region Single
     static partial void ModifyStraightShotPvE(ref ActionSetting setting)
     {
-        setting.StatusNeed = [StatusID.StraightShotReady];
+        HawksEye(ref setting);
     }
 
+    static partial void ModifyRefulgentArrowPvE(ref ActionSetting setting)
+    {
+        HawksEye(ref setting);
+    }
+    #endregion
+
+    #region AoE
+    static partial void ModifyQuickNockPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyLadonsbitePvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyWideVolleyPvE(ref ActionSetting setting)
+    {
+        HawksEye(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyShadowbitePvE(ref ActionSetting setting)
+    {
+        HawksEye(ref setting);
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyRainOfDeathPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+
+    static partial void ModifyHeartbreakShotPvE(ref ActionSetting setting)
+    {
+        setting.CreateConfig = () => new()
+        {
+            AoeCount = 2,
+        };
+    }
+    #endregion
+    #endregion
+
+    #region Bite
     static partial void ModifyVenomousBitePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.VenomousBite, StatusID.CausticBite];
+        setting.TargetStatusProvide = [StatusID.VenomousBite];
+    }
+
+    static partial void ModifyCausticBitePvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.CausticBite];
     }
 
     static partial void ModifyWindbitePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.Windbite, StatusID.Stormbite];
+        setting.TargetStatusProvide = [StatusID.Windbite];
+    }
+
+    static partial void ModifyStormbitePvE(ref ActionSetting setting)
+    {
+        setting.TargetStatusProvide = [StatusID.Stormbite];
     }
 
     static partial void ModifyIronJawsPvE(ref ActionSetting setting)
@@ -38,48 +110,30 @@ partial class BardRotation
         };
     }
 
-    static partial void ModifyPitchPerfectPvP(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.Repertoire];
-    }
+    #endregion
 
-    static partial void ModifySilentNocturnePvP(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Repertoire];
-    }
-
-    static partial void ModifyTheWardensPaeanPvP(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Repertoire];
-    }
-
-    static partial void ModifyBlastArrowPvP(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.BlastArrowReady_3142];
-    }
-
+    #region Song
     static partial void ModifyPitchPerfectPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Song == Song.WANDERER && Repertoire > 0;
     }
 
-    static partial void ModifyQuickNockPvE(ref ActionSetting setting)
+    static partial void ModifyMagesBalladPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.ShadowbiteReady];
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
+        setting.ActionCheck = () => InCombat;
     }
 
-    static partial void ModifyShadowbitePvE(ref ActionSetting setting)
+    static partial void ModifyArmysPaeonPvE(ref ActionSetting setting)
     {
-        setting.StatusNeed = [StatusID.ShadowbiteReady];
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
+        setting.ActionCheck = () => InCombat;
     }
+
+    static partial void ModifyTheWanderersMinuetPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => InCombat;
+    }
+    #endregion
+
 
     static partial void ModifyApexArrowPvE(ref ActionSetting setting)
     {
@@ -92,12 +146,14 @@ partial class BardRotation
         setting.StatusNeed = [StatusID.BlastArrowReady];
     }
 
-    static partial void ModifyRainOfDeathPvE(ref ActionSetting setting)
+    static partial void ModifyResonantArrowPvE(ref ActionSetting setting)
     {
-        setting.CreateConfig = () => new()
-        {
-            AoeCount = 2,
-        };
+        setting.StatusNeed = [StatusID.ResonantArrowReady];
+    }
+
+    static partial void ModifyRadiantEncorePvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.RadiantEncoreReady];
     }
 
     static partial void ModifyRadiantFinalePvE(ref ActionSetting setting)
@@ -129,6 +185,27 @@ partial class BardRotation
         {
             TimeToKill = 10,
         };
+    }
+
+
+    static partial void ModifyPitchPerfectPvP(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.Repertoire];
+    }
+
+    static partial void ModifySilentNocturnePvP(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.Repertoire];
+    }
+
+    static partial void ModifyTheWardensPaeanPvP(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.Repertoire];
+    }
+
+    static partial void ModifyBlastArrowPvP(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.BlastArrowReady_3142];
     }
 
     /// <inheritdoc/>

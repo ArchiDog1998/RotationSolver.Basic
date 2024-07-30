@@ -66,7 +66,7 @@ public static class ObjectHelper
         if (type == EventHandlerType.QuestBattleDirector) //Others' quest actions.
         {
             var eventId = obj.Struct()->EventId;
-            var playerEventId = Player.IGameObject->EventId.Id;
+            var playerEventId = Player.GameObject->EventId.Id;
             if (eventId.Id != 0 && eventId.Id != playerEventId) return true;
         }
         //SpecialType but no NamePlateIcon
@@ -394,7 +394,7 @@ public static class ObjectHelper
 
     internal static unsafe bool CanSee(this IGameObject b)
     {
-        var point = Player.Object.Position + Vector3.UnitY * Player.IGameObject->Height;
+        var point = Player.Object.Position + Vector3.UnitY * Player.GameObject->Height;
         var tarPt = b.Position + Vector3.UnitY * b.Struct()->Height;
         var direction = tarPt - point;
 

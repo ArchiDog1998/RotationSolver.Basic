@@ -133,6 +133,13 @@ internal partial class Configs : IPluginConfiguration
     [UI("Shows the target of the movement actions.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowMoveTarget { get; private set; } = new(true, nameof(ShowMoveTarget));
 
+    [UI("Shows Positional.", Parent = nameof(UseOverlayWindow))]
+    public ConditionBoolean ShowPositional { get; private set; } = new(true, nameof(ShowPositional));
+
+    [Range(0.001f, 1, ConfigUnitType.Yalms)]
+    [UI("Positional Line width", Parent = nameof(ShowPositional))]
+    public float PositionalLineWidth { get; private set; } = 0.1f;
+
     [UI("Shows target related drawing.", Parent = nameof(UseOverlayWindow),
         Description = "Shows the next ability under the target and AoE attacks effect area")]
     public ConditionBoolean ShowTarget { get; private set; } = new(true, nameof(ShowTarget));

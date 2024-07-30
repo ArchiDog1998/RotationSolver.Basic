@@ -1033,36 +1033,42 @@ public abstract partial class BlackMageRotation : global::RotationSolver.Basic.R
     public static global::RotationSolver.Basic.Traits.IBaseTrait EnhancedEnochianIvTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(659U);
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="FirePvE"/> -> <seealso cref="ParadoxPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FirePvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="FireIiPvE"/> -> <seealso cref="HighFireIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FireIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="BlizzardIiPvE"/> -> <seealso cref="HighBlizzardIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BlizzardIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ThunderPvE"/> -> <seealso cref="ThunderIiiPvE"/> -> <seealso cref="HighThunderPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThunderPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="ThunderIiPvE"/> -> <seealso cref="ThunderIvPvE"/> -> <seealso cref="HighThunderIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ThunderIiPvEReplace { get; }
 
     /// <summary>
+/// [Replaced] 
 /// <seealso cref="LeyLinesPvE"/> -> <seealso cref="RetracePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]

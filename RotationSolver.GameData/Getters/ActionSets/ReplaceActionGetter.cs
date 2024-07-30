@@ -85,7 +85,6 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
                 Console.WriteLine($"Replace Action: {action.Name}({action.RowId})");
                 Console.ResetColor();
             }
-
         }
 
         return [.. actionList];
@@ -95,6 +94,7 @@ internal class ReplaceActionGetter(Lumina.GameData gameData, ActionSingleRotatio
     {
         return $$"""
             /// <summary>
+            /// {{(_isReplace ? "[Replaced] " : string.Empty)}}
             /// {{string.Join(" -> ", actions.Select(GetName))}}
             /// </summary>
             """;
