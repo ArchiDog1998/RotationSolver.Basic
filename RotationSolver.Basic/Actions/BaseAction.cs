@@ -101,6 +101,8 @@ public class BaseAction : IBaseAction, IAction
     WhyActionCantUse IBaseAction.WhyCant => _whyCant;
     private WhyActionCantUse _whyCant = WhyActionCantUse.None;
 
+    private byte _maxLevel = byte.MaxValue;
+
     /// <summary>
     /// The default constructor
     /// </summary>
@@ -117,6 +119,7 @@ public class BaseAction : IBaseAction, IAction
 
         IsFriendly();
         Penalty();
+        MaxLevel();
 
         void IsFriendly()
         {
@@ -159,6 +162,18 @@ public class BaseAction : IBaseAction, IAction
                 ];
             }
         }
+
+        void MaxLevel()
+        {
+            if (Action.SecondaryCostType is not 63 and not 126) return;
+            var trait = Svc.Data.GetExcelSheet<Lumina.Excel.GeneratedSheets.Trait>()?.GetRow(Action.SecondaryCostValue);
+            if (trait == null) return;
+            if (trait.Quest.Row != 0 && !QuestManager.IsQuestComplete(trait.Quest.Row)) return;
+            _maxLevel = trait.Level;
+#if DEBUG
+            Svc.Log.Warning($"{Action.Name.RawString} Max Level: {_maxLevel}");
+#endif
+        }
     }
 
     /// <inheritdoc/>
@@ -184,6 +199,11 @@ public class BaseAction : IBaseAction, IAction
             skipClippingCheck = true;
         }
 
+        if (Player.Object.Level >= _maxLevel)
+        {
+            _whyCant = WhyActionCantUse.MaxLevel;
+            return false;
+        }
         if (!Info.BasicCheck(skipStatusProvideCheck, skipComboCheck, skipCastingCheck, out var whyCant))
         {
             _whyCant = whyCant;

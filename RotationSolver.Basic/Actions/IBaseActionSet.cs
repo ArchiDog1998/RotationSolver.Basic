@@ -10,11 +10,6 @@ public interface IBaseActionSet : ICanUse
     IBaseAction? ChosenAction { get; }
 
     /// <summary>
-    /// Is this set a replace action set.
-    /// </summary>
-    bool IsReplace { get; }
-
-    /// <summary>
     /// The actions.
     /// </summary>
     IEnumerable<ICanUse> Actions { get; }

@@ -3,6 +3,7 @@ using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Helpers;
+using RotationSolver.Basic.Traits;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Actions;
@@ -174,6 +175,7 @@ public readonly struct ActionBasicInfo
             whyCant = WhyActionCantUse.NotEnoughLevel;
             return false;
         }
+
         if (DataCenter.CurrentMp < MPNeed)
         {
             whyCant = WhyActionCantUse.NoMp;

@@ -1445,84 +1445,72 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(675U);
 
     /// <summary>
-/// 
 /// <seealso cref="SteelMawPvE"/> -> <seealso cref="HuntersBitePvE"/> -> <seealso cref="JaggedMawPvE"/> -> <seealso cref="FirstGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SteelMawPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="ReavingMawPvE"/> -> <seealso cref="SwiftskinsBitePvE"/> -> <seealso cref="BloodiedMawPvE"/> -> <seealso cref="SecondGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReavingMawPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="HuntersCoilPvE"/> -> <seealso cref="ThirdGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersCoilPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="SwiftskinsCoilPvE"/> -> <seealso cref="FourthGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsCoilPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="HuntersDenPvE"/> -> <seealso cref="ThirdGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersDenPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="SwiftskinsDenPvE"/> -> <seealso cref="FourthGenerationPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SwiftskinsDenPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="ReawakenPvE"/> -> <seealso cref="OuroborosPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ReawakenPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="SerpentsTailPvE"/> -> <seealso cref="DeathRattlePvE"/> -> <seealso cref="LastLashPvE"/> -> <seealso cref="FirstLegacyPvE"/> -> <seealso cref="SecondLegacyPvE"/> -> <seealso cref="ThirdLegacyPvE"/> -> <seealso cref="FourthLegacyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SerpentsTailPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="TwinfangPvE"/> -> <seealso cref="TwinfangBitePvE"/> -> <seealso cref="TwinfangThreshPvE"/> -> <seealso cref="UncoiledTwinfangPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TwinfangPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="TwinbloodPvE"/> -> <seealso cref="TwinbloodBitePvE"/> -> <seealso cref="TwinbloodThreshPvE"/> -> <seealso cref="UncoiledTwinbloodPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TwinbloodPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="HuntersSnapPvP"/> -> <seealso cref="SwiftskinsCoilPvP"/> -> <seealso cref="OuroborosPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HuntersSnapPvPReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="SnakeScalesPvP"/> -> <seealso cref="BacklashPvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1758,38 +1746,38 @@ public abstract partial class ViperRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected ViperRotation()
     {
-        SteelMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, JaggedMawPvE, HuntersBitePvE, SteelMawPvE], false);
-        ReavingMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, ReavingMawPvE], false);
-        HuntersCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE], false);
-        SwiftskinsCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE], false);
-        HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE], false);
-        SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE], false);
-        ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE], false);
-        SerpentsTailPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthLegacyPvE, ThirdLegacyPvE, SecondLegacyPvE, FirstLegacyPvE, LastLashPvE, DeathRattlePvE, SerpentsTailPvE], false);
-        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE], false);
-        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE], false);
-        HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP], true);
-        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP], false);
-        HuntersStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE], false);
-        SwiftskinsStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvE, SteelFangsPvE], false);
-        FlankstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlankstingStrikePvE, HuntersStingPvE, SteelFangsPvE], false);
-        FlanksbaneFangPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlanksbaneFangPvE, HuntersStingPvE, SteelFangsPvE], false);
-        HindstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindstingStrikePvE, SwiftskinsStingPvE, SteelFangsPvE], false);
-        HindsbaneFangPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindsbaneFangPvE, SwiftskinsStingPvE, SteelFangsPvE], false);
-        HuntersBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace], false);
-        SwiftskinsBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace], false);
-        JaggedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace], false);
-        BloodiedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace], false);
-        HuntersCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersCoilPvEReplace, VicewinderPvE], false);
-        SwiftskinsCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsCoilPvEReplace, VicewinderPvE], false);
-        HuntersDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersDenPvEReplace, VicepitPvE], false);
-        SwiftskinsDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsDenPvEReplace, VicepitPvE], false);
-        PiercingFangsPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
-        HuntersStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvP, SteelFangsPvP], false);
-        SwiftskinsStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
-        BarbarousBitePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
-        RavenousBitePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RavenousBitePvP, SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP], false);
-        SwiftskinsCoilPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersSnapPvPReplace, HuntersSnapPvPReplace], false);
+        SteelMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FirstGenerationPvE, JaggedMawPvE, HuntersBitePvE, SteelMawPvE]);
+        ReavingMawPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SecondGenerationPvE, BloodiedMawPvE, SwiftskinsBitePvE, ReavingMawPvE]);
+        HuntersCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersCoilPvE]);
+        SwiftskinsCoilPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsCoilPvE]);
+        HuntersDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ThirdGenerationPvE, HuntersDenPvE]);
+        SwiftskinsDenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthGenerationPvE, SwiftskinsDenPvE]);
+        ReawakenPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvE, ReawakenPvE]);
+        SerpentsTailPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FourthLegacyPvE, ThirdLegacyPvE, SecondLegacyPvE, FirstLegacyPvE, LastLashPvE, DeathRattlePvE, SerpentsTailPvE]);
+        TwinfangPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinfangPvE, TwinfangThreshPvE, TwinfangBitePvE, TwinfangPvE]);
+        TwinbloodPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UncoiledTwinbloodPvE, TwinbloodThreshPvE, TwinbloodBitePvE, TwinbloodPvE]);
+        HuntersSnapPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OuroborosPvP, SwiftskinsCoilPvP, HuntersSnapPvP]);
+        SnakeScalesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BacklashPvP, SnakeScalesPvP]);
+        HuntersStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvE, SteelFangsPvE]);
+        SwiftskinsStingPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvE, SteelFangsPvE]);
+        FlankstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlankstingStrikePvE, HuntersStingPvE, SteelFangsPvE]);
+        FlanksbaneFangPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FlanksbaneFangPvE, HuntersStingPvE, SteelFangsPvE]);
+        HindstingStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindstingStrikePvE, SwiftskinsStingPvE, SteelFangsPvE]);
+        HindsbaneFangPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HindsbaneFangPvE, SwiftskinsStingPvE, SteelFangsPvE]);
+        HuntersBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace]);
+        SwiftskinsBitePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace]);
+        JaggedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SteelMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace]);
+        BloodiedMawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReavingMawPvEReplace, SteelMawPvEReplace, SteelMawPvEReplace]);
+        HuntersCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersCoilPvEReplace, VicewinderPvE]);
+        SwiftskinsCoilPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsCoilPvEReplace, VicewinderPvE]);
+        HuntersDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersDenPvEReplace, VicepitPvE]);
+        SwiftskinsDenPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsDenPvEReplace, VicepitPvE]);
+        PiercingFangsPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP]);
+        HuntersStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersStingPvP, SteelFangsPvP]);
+        SwiftskinsStingPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP]);
+        BarbarousBitePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP]);
+        RavenousBitePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RavenousBitePvP, SwiftskinsStingPvP, PiercingFangsPvP, BarbarousBitePvP, HuntersStingPvP, SteelFangsPvP]);
+        SwiftskinsCoilPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HuntersSnapPvPReplace, HuntersSnapPvPReplace]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

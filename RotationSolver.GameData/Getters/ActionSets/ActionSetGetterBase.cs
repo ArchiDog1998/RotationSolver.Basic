@@ -9,8 +9,6 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
 {
     public virtual ReplaceActionGetter? ReplaceAction => null;
 
-    protected virtual bool IsReplace => ReplaceAction != null;
-
     protected override bool AddToList(T item)
     {
         var actions = GetActions(item);
@@ -37,7 +35,7 @@ internal abstract class ActionSetGetterBase<T>(Lumina.GameData gameData, ActionS
         foreach (var pair in Items)
         {
             var writer = new ActionSetWriter(pair.Value);
-            yield return writer.GetInit(GetActions(pair.Key), actionGetter, ReplaceAction, IsReplace);
+            yield return writer.GetInit(GetActions(pair.Key), actionGetter, ReplaceAction);
         }
     }
     protected abstract string GetXmlComment(T item, Action[] actions);

@@ -10,7 +10,7 @@ namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ActionSetWriter(string name)
 {
-    public ExpressionStatementSyntax GetInit(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace, bool isReplace)
+    public ExpressionStatementSyntax GetInit(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
     {
         var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(GetName(i, actionGetter, replace))));
 
@@ -39,10 +39,7 @@ internal class ActionSetWriter(string name)
                                                 .WithExpressionBody(
                                                     CollectionExpression(
                                                         SeparatedList<CollectionElementSyntax>(
-                                                                items)))),
-                                             Token(SyntaxKind.CommaToken),
-                                            Argument(LiteralExpression(isReplace ? SyntaxKind.TrueLiteralExpression : SyntaxKind.FalseLiteralExpression))
-                                            })))));
+                                                                items))))})))));
 
         return init;
     }

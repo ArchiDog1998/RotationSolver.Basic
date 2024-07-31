@@ -1113,84 +1113,72 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     public static global::RotationSolver.Basic.Traits.IBaseTrait MeleeMasteryIiTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(660U);
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SteeledMeditationPvE"/> -> <seealso cref="ForbiddenMeditationPvE"/> -> <seealso cref="SteelPeakPvE"/> -> <seealso cref="TheForbiddenChakraPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SteeledMeditationPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SteelPeakPvE"/> -> <seealso cref="TheForbiddenChakraPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SteelPeakPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="InspiritedMeditationPvE"/> -> <seealso cref="EnlightenedMeditationPvE"/> -> <seealso cref="HowlingFistPvE"/> -> <seealso cref="EnlightenmentPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet InspiritedMeditationPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="HowlingFistPvE"/> -> <seealso cref="EnlightenmentPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HowlingFistPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="MasterfulBlitzPvE"/> -> <seealso cref="CelestialRevolutionPvE"/> -> <seealso cref="ElixirFieldPvE"/> -> <seealso cref="ElixirBurstPvE"/> -> <seealso cref="FlintStrikePvE"/> -> <seealso cref="RisingPhoenixPvE"/> -> <seealso cref="TornadoKickPvE"/> -> <seealso cref="PhantomRushPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MasterfulBlitzPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="ArmOfTheDestroyerPvE"/> -> <seealso cref="ShadowOfTheDestroyerPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ArmOfTheDestroyerPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="RiddleOfEarthPvE"/> -> <seealso cref="EarthsReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfEarthPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="BootshinePvE"/> -> <seealso cref="LeapingOpoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BootshinePvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="TrueStrikePvE"/> -> <seealso cref="RisingRaptorPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet TrueStrikePvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SnapPunchPvE"/> -> <seealso cref="PouncingCoeurlPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SnapPunchPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="RiddleOfWindPvE"/> -> <seealso cref="WindsReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RiddleOfWindPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="RiddleOfFirePvE"/> -> <seealso cref="FiresReplyPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -1352,24 +1340,24 @@ public abstract partial class MonkRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected MonkRotation()
     {
-        SteeledMeditationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE, ForbiddenMeditationPvE, SteeledMeditationPvE], true);
-        SteelPeakPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE], true);
-        InspiritedMeditationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE, EnlightenedMeditationPvE, InspiritedMeditationPvE], true);
-        HowlingFistPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE], true);
-        MasterfulBlitzPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvE, TornadoKickPvE, RisingPhoenixPvE, FlintStrikePvE, ElixirBurstPvE, ElixirFieldPvE, CelestialRevolutionPvE, MasterfulBlitzPvE], false);
-        ArmOfTheDestroyerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowOfTheDestroyerPvE, ArmOfTheDestroyerPvE], true);
-        RiddleOfEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EarthsReplyPvE, RiddleOfEarthPvE], false);
-        BootshinePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LeapingOpoPvE, BootshinePvE], true);
-        TrueStrikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RisingRaptorPvE, TrueStrikePvE], true);
-        SnapPunchPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PouncingCoeurlPvE, SnapPunchPvE], true);
-        RiddleOfWindPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WindsReplyPvE, RiddleOfWindPvE], false);
-        RiddleOfFirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FiresReplyPvE, RiddleOfFirePvE], false);
-        TrueStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TrueStrikePvP, BootshinePvP], false);
-        SnapPunchPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SnapPunchPvP, TrueStrikePvP, BootshinePvP], false);
-        DragonKickPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP], false);
-        TwinSnakesPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP], false);
-        DemolishPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DemolishPvP, TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP], false);
-        PhantomRushPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvP, DemolishPvP, TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP], false);
+        SteeledMeditationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE, ForbiddenMeditationPvE, SteeledMeditationPvE]);
+        SteelPeakPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheForbiddenChakraPvE, SteelPeakPvE]);
+        InspiritedMeditationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE, EnlightenedMeditationPvE, InspiritedMeditationPvE]);
+        HowlingFistPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnlightenmentPvE, HowlingFistPvE]);
+        MasterfulBlitzPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvE, TornadoKickPvE, RisingPhoenixPvE, FlintStrikePvE, ElixirBurstPvE, ElixirFieldPvE, CelestialRevolutionPvE, MasterfulBlitzPvE]);
+        ArmOfTheDestroyerPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ShadowOfTheDestroyerPvE, ArmOfTheDestroyerPvE]);
+        RiddleOfEarthPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EarthsReplyPvE, RiddleOfEarthPvE]);
+        BootshinePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [LeapingOpoPvE, BootshinePvE]);
+        TrueStrikePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RisingRaptorPvE, TrueStrikePvE]);
+        SnapPunchPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PouncingCoeurlPvE, SnapPunchPvE]);
+        RiddleOfWindPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WindsReplyPvE, RiddleOfWindPvE]);
+        RiddleOfFirePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FiresReplyPvE, RiddleOfFirePvE]);
+        TrueStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TrueStrikePvP, BootshinePvP]);
+        SnapPunchPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
+        DragonKickPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
+        TwinSnakesPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
+        DemolishPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DemolishPvP, TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
+        PhantomRushPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PhantomRushPvP, DemolishPvP, TwinSnakesPvP, DragonKickPvP, SnapPunchPvP, TrueStrikePvP, BootshinePvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

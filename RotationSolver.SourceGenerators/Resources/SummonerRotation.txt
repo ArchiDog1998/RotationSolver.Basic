@@ -1942,42 +1942,36 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     public static global::RotationSolver.Basic.Traits.IBaseTrait ArcaneMasteryTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(664U);
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="EnkindleBahamutPvE"/> -> <seealso cref="EnkindlePhoenixPvE"/> -> <seealso cref="EnkindleSolarBahamutPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EnkindleBahamutPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SummonRubyPvE"/> -> <seealso cref="SummonIfritPvE"/> -> <seealso cref="SummonIfritIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonRubyPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SummonTopazPvE"/> -> <seealso cref="SummonTitanPvE"/> -> <seealso cref="SummonTitanIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonTopazPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="SummonEmeraldPvE"/> -> <seealso cref="SummonGarudaPvE"/> -> <seealso cref="SummonGarudaIiPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SummonEmeraldPvEReplace { get; }
 
     /// <summary>
-/// [Replaced] 
 /// <seealso cref="FesterPvE"/> -> <seealso cref="NecrotizePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FesterPvEReplace { get; }
 
     /// <summary>
-/// 
 /// <seealso cref="SearingLightPvE"/> -> <seealso cref="SearingFlashPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
@@ -2160,14 +2154,14 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     protected SummonerRotation()
     {
-        EnkindleBahamutPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindleSolarBahamutPvE, EnkindlePhoenixPvE, EnkindleBahamutPvE], true);
-        SummonRubyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonIfritIiPvE, SummonIfritPvE, SummonRubyPvE], true);
-        SummonTopazPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonTitanIiPvE, SummonTitanPvE, SummonTopazPvE], true);
-        SummonEmeraldPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonGarudaIiPvE, SummonGarudaPvE, SummonEmeraldPvE], true);
-        FesterPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NecrotizePvE, FesterPvE], true);
-        SearingLightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SearingFlashPvE, SearingLightPvE], false);
-        CrimsonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvE, CrimsonCyclonePvE], false);
-        CrimsonStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvP, CrimsonCyclonePvP], false);
+        EnkindleBahamutPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindleSolarBahamutPvE, EnkindlePhoenixPvE, EnkindleBahamutPvE]);
+        SummonRubyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonIfritIiPvE, SummonIfritPvE, SummonRubyPvE]);
+        SummonTopazPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonTitanIiPvE, SummonTitanPvE, SummonTopazPvE]);
+        SummonEmeraldPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonGarudaIiPvE, SummonGarudaPvE, SummonEmeraldPvE]);
+        FesterPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NecrotizePvE, FesterPvE]);
+        SearingLightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SearingFlashPvE, SearingLightPvE]);
+        CrimsonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvE, CrimsonCyclonePvE]);
+        CrimsonStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvP, CrimsonCyclonePvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

@@ -88,4 +88,7 @@ public enum WhyActionCantUse : byte
 
     [Description("This action isn't highlighted.")]
     Highlight,
+
+    [Description("It is changed to another action!")]
+    MaxLevel,
 }

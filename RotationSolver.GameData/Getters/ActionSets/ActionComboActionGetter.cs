@@ -16,7 +16,7 @@ internal class ActionComboActionGetter(ActionSingleRotationGetter actionGetter, 
 
             var writer = new ActionSetWriter(actionGetter.Items[action] + "Combo");
 
-            yield return writer.GetInit(comboActions, actionGetter, replace, false);
+            yield return writer.GetInit(comboActions, actionGetter, replace);
         }
     }
 
