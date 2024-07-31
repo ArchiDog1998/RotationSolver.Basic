@@ -207,10 +207,6 @@ partial class MonkRotation
     #endregion
 
     #region Riddle And Reply
-    static partial void ModifyRiddleOfEarthPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.RiddleOfEarth, StatusID.EarthsRumination];
-    }
 
     static partial void ModifyEarthsReplyPvE(ref ActionSetting setting)
     {
@@ -219,7 +215,6 @@ partial class MonkRotation
 
     static partial void ModifyRiddleOfFirePvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.RiddleOfFire, StatusID.FiresRumination];
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
@@ -233,7 +228,6 @@ partial class MonkRotation
 
     static partial void ModifyRiddleOfWindPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.RiddleOfWind, StatusID.WindsRumination];
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
@@ -304,7 +298,6 @@ partial class MonkRotation
 
     static partial void ModifyPerfectBalancePvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.PerfectBalance];
         setting.ActionCheck = () => InCombat;
     }
     static partial void ModifyFormShiftPvE(ref ActionSetting setting)

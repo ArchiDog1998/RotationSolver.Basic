@@ -113,7 +113,6 @@ partial class BlackMageRotation
 
     static partial void ModifyLeyLinesPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.LeyLines];
         setting.CreateConfig = () => new()
         {
             TimeToKill = 15,

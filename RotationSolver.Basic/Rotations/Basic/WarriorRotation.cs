@@ -12,7 +12,6 @@ partial class WarriorRotation
     static partial void ModifyPrimalRendPvP(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
-        setting.StatusProvide = [StatusID.PrimalRuinationReady];
     }
 
     static partial void ModifyPrimalRuinationPvE(ref ActionSetting setting)
@@ -31,7 +30,6 @@ partial class WarriorRotation
         {
             StatusGcdCount = 9,
         };
-        setting.StatusProvide = [StatusID.SurgingTempest];
     }
 
     #region BeastGauge
@@ -88,13 +86,11 @@ partial class WarriorRotation
     static partial void ModifyPrimalRendPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.PrimalRendReady];
-        setting.StatusProvide = [StatusID.PrimalRuinationReady];
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
     static partial void ModifyInfuriatePvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.NascentChaos];
         setting.ActionCheck = () => HasHostilesInRange && BeastGauge <= 50 && InCombat;
         setting.CreateConfig = () => new()
         {
@@ -165,11 +161,6 @@ partial class WarriorRotation
     static partial void ModifyOnslaughtPvE(ref ActionSetting setting)
     {
         setting.SpecialType = SpecialActionType.MovingForward;
-    }
-
-    static partial void ModifyNascentFlashPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.NascentFlash, StatusID.NascentGlint];
     }
 
     static partial void ModifyPrimalWrathPvE(ref ActionSetting setting)

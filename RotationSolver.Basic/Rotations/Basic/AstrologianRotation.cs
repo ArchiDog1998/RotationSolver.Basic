@@ -9,44 +9,6 @@ partial class AstrologianRotation
 
     private sealed protected override IBaseAction? Raise => AscendPvE;
 
-    private static readonly StatusID[] CombustStatus = 
-    [
-        StatusID.Combust,
-        StatusID.CombustIi,
-        StatusID.CombustIii,
-        StatusID.CombustIii_2041,
-    ];
-
-    static partial void ModifyCombustPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = CombustStatus;
-    }
-
-    static partial void ModifyCombustIiPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = CombustStatus;
-    }
-
-    static partial void ModifyCombustIiiPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = CombustStatus;
-    }
-
-    static partial void ModifyCelestialIntersectionPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Intersection];
-    }
-
-    static partial void ModifyExaltationPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Exaltation];
-    }
-
-    static partial void ModifyCollectiveUnconsciousPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.CollectiveUnconscious];
-    }
-
     //static partial void ModifyAstrodynePvE(ref ActionSetting setting)
     //{
     //    setting.ActionCheck = () => !Seals.Contains(SealType.NONE);
@@ -70,16 +32,6 @@ partial class AstrologianRotation
     static partial void ModifyMinorArcanaPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => InCombat;
-    }
-
-    static partial void ModifyAspectedHeliosPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.AspectedHelios];
-    }
-
-    static partial void ModifyAspectedBeneficPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.AspectedBenefic];
     }
 
     static partial void ModifyDivinationPvE(ref ActionSetting setting)
@@ -108,7 +60,6 @@ partial class AstrologianRotation
 
     static partial void ModifyTheArrowPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
         //setting.ActionCheck = () => DrawnCard == CardType.ARROW;
@@ -116,7 +67,6 @@ partial class AstrologianRotation
 
     static partial void ModifyTheBalancePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
         //setting.ActionCheck = () => DrawnCard == CardType.BALANCE;
@@ -124,7 +74,6 @@ partial class AstrologianRotation
     
     static partial void ModifyTheBolePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
         //setting.ActionCheck = () => DrawnCard == CardType.BOLE;
@@ -132,7 +81,6 @@ partial class AstrologianRotation
 
     static partial void ModifyTheEwerPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
         //setting.ActionCheck = () => DrawnCard == CardType.EWER;
@@ -140,7 +88,6 @@ partial class AstrologianRotation
 
     static partial void ModifyTheSpearPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Melee;
         //setting.ActionCheck = () => DrawnCard == CardType.SPEAR;
@@ -148,7 +95,6 @@ partial class AstrologianRotation
 
     static partial void ModifyTheSpirePvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = StatusHelper.AstCardStatus;
         setting.StatusFromSelf = false;
         setting.TargetType = TargetType.Range;
         //setting.ActionCheck = () => DrawnCard == CardType.SPIRE;

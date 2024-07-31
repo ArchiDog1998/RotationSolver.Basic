@@ -192,10 +192,16 @@ public struct ActionTargetInfo(IBaseAction action)
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusNeed)) return false;
         }
 
-        if (action.Setting.TargetStatusProvide != null && !skipStatusProvideCheck)
+        if (!OtherConfiguration.TargetStatusProvide.TryGetValue(action.Info.ID, out var targetStatusProvide)) targetStatusProvide = [];
+        if (action.Setting.TargetStatusProvide != null)
+        {
+            targetStatusProvide = [..targetStatusProvide, ..action.Setting.TargetStatusProvide];
+        }
+
+        if (targetStatusProvide.Length > 0 && !skipStatusProvideCheck)
         {
             if (!IGameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
-                action.Setting.StatusFromSelf, action.Setting.TargetStatusProvide)) return false;
+                action.Setting.StatusFromSelf, targetStatusProvide)) return false;
         }
 
         if (action.Setting.TargetStatusPenalty != null)

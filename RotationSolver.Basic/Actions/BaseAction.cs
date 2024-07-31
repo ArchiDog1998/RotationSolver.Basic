@@ -1,6 +1,7 @@
 ﻿using ECommons.DalamudServices;
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
+using RotationSolver.Basic.Configuration;
 using Action = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.Basic.Actions;
@@ -89,7 +90,8 @@ public class BaseAction : IBaseAction, IAction
                 {
                     value.TimeToUntargetable = value.TimeToKill;
                 }
-                if (Setting.TargetStatusProvide != null)
+                if (OtherConfiguration.TargetStatusProvide.TryGetValue(ID, out var targetStatusProvide)
+                    && targetStatusProvide.Length > 0)
                 {
                     value.TimeToKill = 10;
                 }

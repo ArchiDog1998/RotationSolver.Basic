@@ -2,8 +2,6 @@
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using RotationSolver.Basic.Configuration;
-using RotationSolver.Basic.Helpers;
-using RotationSolver.Basic.Traits;
 using XIVConfigUI;
 
 namespace RotationSolver.Basic.Actions;
@@ -215,10 +213,16 @@ public readonly struct ActionBasicInfo
             }
         }
 
-        if (_action.Setting.StatusProvide != null && !skipStatusProvideCheck)
+        if (!OtherConfiguration.StatusProvide.TryGetValue(ID, out var statusProvide)) statusProvide = [];
+        if (_action.Setting.StatusProvide != null)
+        {
+            statusProvide = [..statusProvide, .._action.Setting.StatusProvide];
+        }
+
+        if (statusProvide.Length > 0 && !skipStatusProvideCheck)
         {
             if (!player.WillStatusEndGCD(_action.Config.StatusGcdCount, 0,
-                _action.Setting.StatusFromSelf, _action.Setting.StatusProvide))
+                _action.Setting.StatusFromSelf, [..statusProvide]))
             {
                 whyCant = WhyActionCantUse.HasTheStatus;
                 return false;
@@ -286,13 +290,6 @@ public readonly struct ActionBasicInfo
                 whyCant = WhyActionCantUse.Moving;
                 return false;
             }
-        }
-
-        if (IsGeneralGCD && _action.Setting.StatusProvide?.Length > 0 && _action.Setting.IsFriendly
-            && IActionHelper.IsLastGCD(true, _action))
-        {
-            whyCant = WhyActionCantUse.JustAddedTheStatus;
-            return false;
         }
 
         if (!(_action.Setting.ActionCheck?.Invoke() ?? true))

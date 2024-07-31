@@ -49,16 +49,6 @@ partial class DragoonRotation
         setting.SpecialType = SpecialActionType.MeleeRange;
     }
 
-    static partial void ModifyJumpPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.DiveReady];
-    }
-
-    static partial void ModifyHighJumpPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.DiveReady];
-    }
-
     static partial void ModifyMirageDivePvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.DiveReady];
@@ -86,7 +76,6 @@ partial class DragoonRotation
 
     static partial void ModifyLifeSurgePvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.LifeSurge];
         setting.ActionCheck = () => !IsLastAbility(ActionID.LifeSurgePvE);
     }
 

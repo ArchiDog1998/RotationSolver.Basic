@@ -79,29 +79,8 @@ partial class BardRotation
     #endregion
 
     #region Bite
-    static partial void ModifyVenomousBitePvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.VenomousBite, StatusID.CausticBite];
-    }
-
-    static partial void ModifyCausticBitePvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.CausticBite];
-    }
-
-    static partial void ModifyWindbitePvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Windbite, StatusID.Stormbite];
-    }
-
-    static partial void ModifyStormbitePvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Stormbite];
-    }
-
     static partial void ModifyIronJawsPvE(ref ActionSetting setting)
     {
-        setting.TargetStatusProvide = [StatusID.VenomousBite, StatusID.CausticBite, StatusID.Windbite, StatusID.Stormbite];
         setting.CanTarget = t =>
         {
             if (t.WillStatusEndGCD(0, 0, true, StatusID.VenomousBite, StatusID.CausticBite)) return false;
@@ -137,7 +116,6 @@ partial class BardRotation
 
     static partial void ModifyApexArrowPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.BlastArrowReady];
         setting.ActionCheck = () => SoulVoice >= 20;
     }
 
@@ -191,16 +169,6 @@ partial class BardRotation
     static partial void ModifyPitchPerfectPvP(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.Repertoire];
-    }
-
-    static partial void ModifySilentNocturnePvP(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Repertoire];
-    }
-
-    static partial void ModifyTheWardensPaeanPvP(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.Repertoire];
     }
 
     static partial void ModifyBlastArrowPvP(ref ActionSetting setting)

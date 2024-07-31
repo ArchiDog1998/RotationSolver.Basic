@@ -12,16 +12,6 @@ partial class DancerRotation
         setting.SpecialType = SpecialActionType.MovingForward;
     }
 
-    static partial void ModifyCascadePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.SilkenSymmetry];
-    }
-
-    static partial void ModifyFountainPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.SilkenFlow];
-    }
-
     static partial void ModifyReverseCascadePvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.SilkenSymmetry, StatusID.FlourishingSymmetry];
@@ -35,17 +25,10 @@ partial class DancerRotation
     static partial void ModifyFanDancePvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Feathers > 0;
-        setting.StatusProvide = [StatusID.ThreefoldFanDance];
-    }
-
-    static partial void ModifyWindmillPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.SilkenSymmetry];
     }
 
     static partial void ModifyBladeshowerPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.SilkenFlow];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -69,7 +52,6 @@ partial class DancerRotation
     static partial void ModifyFanDanceIiPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Feathers > 0;
-        setting.StatusProvide = [StatusID.ThreefoldFanDance];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -150,14 +132,12 @@ partial class DancerRotation
     static partial void ModifyDoubleStandardFinishPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.StandardStep];
-        setting.StatusProvide = [StatusID.LastDanceReady];
         setting.ActionCheck = () => IsDancing && CompletedSteps == 2 && ActionID.StandardStepPvE.AdjustId() == ActionID.DoubleStandardFinishPvE;
     }
 
     static partial void ModifyQuadrupleTechnicalFinishPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.TechnicalStep];
-        setting.StatusProvide = [StatusID.DanceOfTheDawnReady];
         setting.ActionCheck = () => IsDancing && CompletedSteps == 4 && ActionID.TechnicalStepPvE.AdjustId() == ActionID.QuadrupleTechnicalFinishPvE;
     }
 
@@ -184,7 +164,6 @@ partial class DancerRotation
     static partial void ModifyFinishingMovePvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.FinishingMoveReady];
-        setting.StatusProvide = [StatusID.LastDanceReady];
     }
 
     static partial void ModifyLastDancePvE(ref ActionSetting setting)

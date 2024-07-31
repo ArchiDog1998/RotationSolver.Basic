@@ -9,13 +9,11 @@ partial class PictomancerRotation
 
     private static void Combo1(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.Aetherhues];
     }
 
     private static void Combo2(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.Aetherhues];
-        setting.StatusProvide = [StatusID.AetherhuesIi];
     }
 
     private static void Combo3(ref ActionSetting setting)
@@ -305,7 +303,6 @@ partial class PictomancerRotation
     static partial void ModifySubtractivePalettePvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => PalleteGauge >= 50 || Player.HasStatus(true, StatusID.SubtractiveSpectrum);
-        setting.StatusProvide = [StatusID.SubtractivePalette, StatusID.MonochromeTones];
     }
 
     static partial void ModifyTemperaGrassaPvE(ref ActionSetting setting)

@@ -18,6 +18,9 @@ internal class OtherConfiguration
 
     public static RotationSolverRecord RotationSolverRecord = new();
 
+    public static Dictionary<uint, StatusID[]> StatusProvide = [];
+    public static Dictionary<uint, StatusID[]> TargetStatusProvide = [];
+
     #region Territory Config
     private static readonly Dictionary<uint, TerritoryConfig> _territoryConfigs = [];
     private static readonly List<uint> _downloadingList = [];
@@ -130,6 +133,8 @@ internal class OtherConfiguration
             Directory.CreateDirectory(Svc.PluginInterface.ConfigDirectory.FullName);
         }
 
+        Task.Run(() => InitOne(ref StatusProvide, nameof(StatusProvide)));
+        Task.Run(() => InitOne(ref TargetStatusProvide, nameof(TargetStatusProvide)));
         Task.Run(() => InitOne(ref DangerousStatus, nameof(DangerousStatus)));
         Task.Run(() => InitOne(ref PriorityStatus, nameof(PriorityStatus)));
         Task.Run(() => InitOne(ref InvincibleStatus, nameof(InvincibleStatus)));
@@ -155,7 +160,19 @@ internal class OtherConfiguration
             await SaveNoCastingStatus();
             await SaveHostileCastingKnockback();
             await SaveTerritoryConfigs();
+            await SaveStatusProvide();
+            await SaveTargetStatusProvide();
         });
+    }
+
+    private static Task SaveStatusProvide()
+    {
+        return Task.Run(() => Save(StatusProvide, nameof(StatusProvide)));
+    }
+
+    private static Task SaveTargetStatusProvide()
+    {
+        return Task.Run(() => Save(TargetStatusProvide, nameof(TargetStatusProvide)));
     }
 
     public static Task SaveTerritoryConfigs()

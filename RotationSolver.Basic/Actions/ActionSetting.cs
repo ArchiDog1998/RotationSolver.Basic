@@ -35,11 +35,6 @@ public class ActionSetting()
     public bool StatusFromSelf { get; internal set; } = true;
     
     /// <summary>
-    /// The status that it provides to the target.
-    /// </summary>
-    public StatusID[]? TargetStatusProvide { get; internal set; } = null;
-
-    /// <summary>
     /// You can't use this action when the target has this status.
     /// </summary>
     public StatusID[]? TargetStatusPenalty { get; internal set; } = null;
@@ -67,11 +62,6 @@ public class ActionSetting()
     /// The additional not combo ids.
     /// </summary>
     public ActionID[]? ComboIdsNot { get; internal set; }
-
-    /// <summary>
-    /// Status that this action provides.
-    /// </summary>
-    public StatusID[]? StatusProvide { get; internal set; } = null;
 
     /// <summary>
     /// You can't use this action when the player has this status.
@@ -139,4 +129,16 @@ public class ActionSetting()
     /// This action needs highlight, maybe is a combo.
     /// </summary>
     public bool NeedsHighlight { get; internal set; }
+
+    /// <summary>
+    /// Status that this action provides.
+    /// </summary>
+    [Obsolete("For the most case, you don't need it")]
+    public StatusID[]? StatusProvide { get; internal set; } = null;
+
+    /// <summary>
+    /// The status that it provides to the target.
+    /// </summary>
+    [Obsolete("For the most case, you don't need it")]
+    public StatusID[]? TargetStatusProvide { get; internal set; } = null;
 }

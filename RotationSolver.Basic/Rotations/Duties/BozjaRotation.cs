@@ -54,7 +54,6 @@ partial class DutyRotation
     static partial void ModifyLostProtectIiPvE(ref ActionSetting setting)
     {
         setting.StatusFromSelf = false;
-        setting.TargetStatusProvide = [StatusID.LostProtectIi];
     }
 
     static partial void ModifyLostShellPvE(ref ActionSetting setting)
@@ -66,32 +65,10 @@ partial class DutyRotation
     static partial void ModifyLostShellIiPvE(ref ActionSetting setting)
     {
         setting.StatusFromSelf = false;
-        setting.TargetStatusProvide = [StatusID.LostShellIi];
     }
 
     static partial void ModifyLostBubblePvE(ref ActionSetting setting)
     {
         setting.StatusFromSelf = false;
-        setting.TargetStatusProvide = [StatusID.LostBubble];
-    }
-
-    static partial void ModifyLostStoneskinPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Stoneskin];
-    }
-
-    static partial void ModifyLostStoneskinIiPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.Stoneskin];
-    }
-
-    static partial void ModifyLostFlareStarPvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.LostFlareStar];
-    }
-
-    static partial void ModifyLostSeraphStrikePvE(ref ActionSetting setting)
-    {
-        setting.TargetStatusProvide = [StatusID.ClericStance_2484];
     }
 }

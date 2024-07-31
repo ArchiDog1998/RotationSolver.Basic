@@ -9,15 +9,6 @@ partial class ViperRotation
 
     #region Single
     #region 1
-    static partial void ModifyReavingFangsPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HonedSteel];
-    }
-
-    static partial void ModifySteelFangsPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.HonedReavers];
-    }
     #endregion
 
     #region 2
@@ -81,7 +72,6 @@ partial class ViperRotation
     #region 1
     static partial void ModifySteelMawPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.HonedReavers];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
@@ -90,7 +80,6 @@ partial class ViperRotation
 
     static partial void ModifyReavingMawPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.HonedSteel];
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,

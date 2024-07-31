@@ -44,9 +44,6 @@ public enum WhyActionCantUse : byte
     [Description("The player is moving, can't cast.")]
     Moving,
 
-    [Description("Just used the status action, do not double status!")]
-    JustAddedTheStatus,
-
     [Description("The Action Check doesn't allow this to be used.")]
     ActionCheck,
 
