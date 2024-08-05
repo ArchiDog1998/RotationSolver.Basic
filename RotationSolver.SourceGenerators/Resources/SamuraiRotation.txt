@@ -1089,43 +1089,43 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet IkishotenPvEReplace { get; }
 
     /// <summary>
-/// <seealso cref="HakazePvE"/> -> <seealso cref="JinpuPvE"/>
+/// <seealso cref="HakazePvEReplace"/> -> <seealso cref="JinpuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet JinpuPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="HakazePvE"/> -> <seealso cref="ShifuPvE"/>
+/// <seealso cref="HakazePvEReplace"/> -> <seealso cref="ShifuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ShifuPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="HakazePvE"/> -> <seealso cref="YukikazePvE"/>
+/// <seealso cref="HakazePvEReplace"/> -> <seealso cref="YukikazePvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet YukikazePvECombo { get; }
 
     /// <summary>
-/// <seealso cref="HakazePvE"/> -> <seealso cref="JinpuPvE"/> -> <seealso cref="GekkoPvE"/>
+/// <seealso cref="HakazePvEReplace"/> -> <seealso cref="JinpuPvE"/> -> <seealso cref="GekkoPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet GekkoPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="HakazePvE"/> -> <seealso cref="ShifuPvE"/> -> <seealso cref="KashaPvE"/>
+/// <seealso cref="HakazePvEReplace"/> -> <seealso cref="ShifuPvE"/> -> <seealso cref="KashaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet KashaPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="FugaPvE"/> -> <seealso cref="MangetsuPvE"/>
+/// <seealso cref="FugaPvEReplace"/> -> <seealso cref="MangetsuPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet MangetsuPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="FugaPvE"/> -> <seealso cref="OkaPvE"/>
+/// <seealso cref="FugaPvEReplace"/> -> <seealso cref="OkaPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet OkaPvECombo { get; }
@@ -1153,6 +1153,12 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet OkaPvPCombo { get; }
+
+    /// <summary>
+/// <seealso cref="HissatsuSeneiPvE"/> -> <seealso cref="HissatsuGurenPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HissatsuSeneiPvECdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1290,6 +1296,7 @@ public abstract partial class SamuraiRotation : global::RotationSolver.Basic.Rot
         KashaPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [KashaPvP, GekkoPvP, YukikazePvP]);
         MangetsuPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MangetsuPvP, YukikazePvP]);
         OkaPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OkaPvP, GekkoPvP, YukikazePvP]);
+        HissatsuSeneiPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HissatsuGurenPvE, HissatsuSeneiPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

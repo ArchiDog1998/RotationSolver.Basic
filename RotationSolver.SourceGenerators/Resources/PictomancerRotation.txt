@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/pictomancer"><strong>Pictomancer</strong></see>
 /// <br>Number of Actions: 70</br>
 /// <br>Number of Replace Actions: 18</br>
-/// <br>Number of Action Combos: 2</br>
+/// <br>Number of Action Combos: 0</br>
 /// <br>Number of Traits: 18</br>
 /// </summary>
 [global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.PCT)]
@@ -1479,16 +1479,10 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
     public global::RotationSolver.Basic.Actions.IBaseActionSet MogOfTheAgesPvPReplace { get; }
 
     /// <summary>
-/// <seealso cref="HammerStampPvE"/> -> <seealso cref="HammerBrushPvE"/>
+/// <seealso cref="LivingMusePvP"/> -> <seealso cref="PomMusePvP"/> -> <seealso cref="WingedMusePvP"/> -> <seealso cref="ClawedMusePvP"/> -> <seealso cref="FangedMusePvP"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet HammerBrushPvECombo { get; }
-
-    /// <summary>
-/// <seealso cref="HammerStampPvE"/> -> <seealso cref="HammerBrushPvE"/> -> <seealso cref="PolishingHammerPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet PolishingHammerPvECombo { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet LivingMusePvPCdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1638,8 +1632,7 @@ public abstract partial class PictomancerRotation : global::RotationSolver.Basic
         SubtractivePalettePvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ReleaseSubtractivePalettePvP, SubtractivePalettePvP]);
         AdventOfChocobastionPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [StarPrismPvP, AdventOfChocobastionPvP]);
         MogOfTheAgesPvPReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RetributionOfTheMadeenPvP, MogOfTheAgesPvP]);
-        HammerBrushPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace]);
-        PolishingHammerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HammerStampPvEReplace, HammerStampPvEReplace, HammerStampPvEReplace]);
+        LivingMusePvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FangedMusePvP, ClawedMusePvP, WingedMusePvP, PomMusePvP, LivingMusePvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

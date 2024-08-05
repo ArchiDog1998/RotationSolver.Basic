@@ -6,6 +6,7 @@ using RotationSolver.GameData.Getters;
 using RotationSolver.GameData.Getters.Actions;
 using RotationSolver.GameData.Getters.ActionSets;
 using System.Collections;
+using System.Linq;
 using System.Reflection;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxFactory;
 using static RotationSolver.GameData.SyntaxHelper;
@@ -25,9 +26,11 @@ internal static class BasicRotationGenerator
         var traitsGetter = new TraitRotationGetter(gameData, job);
         var replaceActions = new ReplaceActionGetter(gameData, rotationsGetter);
         var actionsCombo = new ActionComboActionGetter(rotationsGetter, replaceActions);
+        var actionGrp = new ActionCdGrpGetter(rotationsGetter, replaceActions);
 
-        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(),..actionsCombo.GetDeclarations(),
-        .. CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];
+        List<MemberDeclarationSyntax> list = [.. rotationsGetter.GetNodes(), .. traitsGetter.GetNodes(), ..replaceActions.GetNodes(), 
+            ..actionsCombo.GetDeclarations(), ..actionGrp.GetDeclarations(),
+            ..CodeGenerator.GetArrayProperty("global::RotationSolver.Basic.Traits.IBaseTrait", "AllTraits", [SyntaxKind.PublicKeyword, SyntaxKind.OverrideKeyword], [.. traitsGetter.AddedNames])];
 
         if (!job.IsLimitedJob)
         {
@@ -60,14 +63,14 @@ internal static class BasicRotationGenerator
             list.AddRange(GetLBInRotation(c, 3, getter));
             rotationNames.Add("LimitBreak3");
         }
-        if (replaceActions.Count + actionsCombo.Count > 0)
+        if (replaceActions.Count + actionsCombo.Count + actionGrp.Count > 0)
         {
             var ctor = ConstructorDeclaration(Identifier(className))
             .AddAttributeLists(GeneratedCodeAttribute(typeof(BasicRotationGenerator)))
             .WithXmlComment("/// <inheritdoc/>")
             .WithModifiers(
                 TokenList(Token(SyntaxKind.ProtectedKeyword)))
-            .WithBody(Block(replaceActions.GetInit().Union(actionsCombo.GetInits())));
+            .WithBody(Block(replaceActions.GetInit().Union(actionsCombo.GetInits()).Union(actionGrp.GetInits())));
             list.Add(ctor);
         }
 

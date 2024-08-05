@@ -1269,6 +1269,12 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AdloquiumPvEReplace { get; }
 
+    /// <summary>
+/// <seealso cref="EmbracePvE"/> -> <seealso cref="SeraphicVeilPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmbracePvECdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1383,6 +1389,7 @@ public abstract partial class ScholarRotation : global::RotationSolver.Basic.Rot
         SuccorPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AccessionPvE, ConcitationPvE, SuccorPvE]);
         EmergencyTacticsPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmergencyTacticsPvE_37037, EmergencyTacticsPvE]);
         AdloquiumPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ManifestationPvE, AdloquiumPvE]);
+        EmbracePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SeraphicVeilPvE, EmbracePvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

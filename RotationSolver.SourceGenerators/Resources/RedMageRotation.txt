@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/redmage"><strong>Red Mage</strong></see>
 /// <br>Number of Actions: 65</br>
 /// <br>Number of Replace Actions: 11</br>
-/// <br>Number of Action Combos: 12</br>
+/// <br>Number of Action Combos: 10</br>
 /// <br>Number of Traits: 19</br>
 /// </summary>
 [global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.RDM)]
@@ -1354,37 +1354,37 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet ManaficationPvEReplace { get; }
 
     /// <summary>
-/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/>
+/// <seealso cref="RipostePvEReplace"/> -> <seealso cref="ZwerchhauPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ZwerchhauPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/> -> <seealso cref="RedoublementPvE"/>
+/// <seealso cref="RipostePvEReplace"/> -> <seealso cref="ZwerchhauPvEReplace"/> -> <seealso cref="RedoublementPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RedoublementPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="RipostePvE"/> -> <seealso cref="EnchantedZwerchhauPvE"/>
+/// <seealso cref="RipostePvEReplace"/> -> <seealso cref="ZwerchhauPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedZwerchhauPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="RipostePvE"/> -> <seealso cref="ZwerchhauPvE"/> -> <seealso cref="EnchantedRedoublementPvE"/>
+/// <seealso cref="RipostePvEReplace"/> -> <seealso cref="ZwerchhauPvEReplace"/> -> <seealso cref="RedoublementPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="VerflarePvE"/> -> <seealso cref="ScorchPvE"/>
+/// <seealso cref="VerthunderPvEReplace"/> -> <seealso cref="ScorchPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ScorchPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="VerflarePvE"/> -> <seealso cref="ScorchPvE"/> -> <seealso cref="ResolutionPvE"/>
+/// <seealso cref="VerthunderPvEReplace"/> -> <seealso cref="ScorchPvE"/> -> <seealso cref="ResolutionPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet ResolutionPvECombo { get; }
@@ -1414,16 +1414,40 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
     public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRedoublementPvP_29694Combo { get; }
 
     /// <summary>
-/// <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/>
+/// <seealso cref="DisplacementPvE"/> -> <seealso cref="EngagementPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetDeuxPvECombo { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DisplacementPvECdGrp { get; }
 
     /// <summary>
-/// <seealso cref="EnchantedMoulinetPvE"/> -> <seealso cref="EnchantedMoulinetDeuxPvE"/> -> <seealso cref="EnchantedMoulinetTroisPvE"/>
+/// <seealso cref="EnchantedRipostePvP"/> -> <seealso cref="EnchantedRipostePvP_29692"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedMoulinetTroisPvECombo { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnchantedRipostePvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="ResolutionPvP"/> -> <seealso cref="ResolutionPvP_29696"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ResolutionPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="MagickBarrierPvP"/> -> <seealso cref="FrazzlePvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MagickBarrierPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="BlackShiftPvP"/> -> <seealso cref="WhiteShiftPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BlackShiftPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="SouthernCrossPvP"/> -> <seealso cref="SouthernCrossPvP_29705"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SouthernCrossPvPCdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1546,8 +1570,12 @@ public abstract partial class RedMageRotation : global::RotationSolver.Basic.Rot
         EnchantedRedoublementPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP, EnchantedZwerchhauPvP, EnchantedRipostePvP]);
         EnchantedZwerchhauPvP_29693Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedZwerchhauPvP_29693, EnchantedRipostePvP]);
         EnchantedRedoublementPvP_29694Combo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRedoublementPvP_29694, EnchantedZwerchhauPvP, EnchantedRipostePvP]);
-        EnchantedMoulinetDeuxPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MoulinetPvEReplace, MoulinetPvEReplace]);
-        EnchantedMoulinetTroisPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MoulinetPvEReplace, MoulinetPvEReplace, MoulinetPvEReplace]);
+        DisplacementPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EngagementPvE, DisplacementPvE]);
+        EnchantedRipostePvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnchantedRipostePvP_29692, EnchantedRipostePvP]);
+        ResolutionPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResolutionPvP_29696, ResolutionPvP]);
+        MagickBarrierPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FrazzlePvP, MagickBarrierPvP]);
+        BlackShiftPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WhiteShiftPvP, BlackShiftPvP]);
+        SouthernCrossPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SouthernCrossPvP_29705, SouthernCrossPvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

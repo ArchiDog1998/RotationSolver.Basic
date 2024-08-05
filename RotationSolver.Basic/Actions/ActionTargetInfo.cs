@@ -276,7 +276,6 @@ public struct ActionTargetInfo(IBaseAction action)
         }
     }
 
-
     private readonly TargetResult? FindTargetAreaHostile(IEnumerable<IBattleChara> canTargets, IEnumerable<IBattleChara> canAffects, int aoeCount)
     {
         var target = GetMostCanTargetObjects(canTargets, canAffects, aoeCount)

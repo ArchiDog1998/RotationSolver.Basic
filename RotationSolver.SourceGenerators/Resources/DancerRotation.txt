@@ -1239,13 +1239,13 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
     public global::RotationSolver.Basic.Actions.IBaseActionSet SaberDancePvEReplace { get; }
 
     /// <summary>
-/// <seealso cref="CascadePvE"/> -> <seealso cref="FountainPvE"/>
+/// <seealso cref="CascadePvEReplace"/> -> <seealso cref="FountainPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FountainPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="WindmillPvE"/> -> <seealso cref="BladeshowerPvE"/>
+/// <seealso cref="WindmillPvEReplace"/> -> <seealso cref="BladeshowerPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet BladeshowerPvECombo { get; }
@@ -1261,6 +1261,12 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet FountainfallPvPCombo { get; }
+
+    /// <summary>
+/// <seealso cref="StandardStepPvE"/> -> <seealso cref="FinishingMovePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet StandardStepPvECdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1392,6 +1398,7 @@ public abstract partial class DancerRotation : global::RotationSolver.Basic.Rota
         BladeshowerPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BladeshowerPvEReplace, WindmillPvEReplace]);
         FountainPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainPvP, CascadePvP]);
         FountainfallPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FountainfallPvP, CascadePvP]);
+        StandardStepPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FinishingMovePvE, StandardStepPvE]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

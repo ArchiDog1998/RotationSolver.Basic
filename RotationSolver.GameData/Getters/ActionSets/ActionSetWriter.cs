@@ -10,9 +10,15 @@ namespace RotationSolver.GameData.Getters.ActionSets;
 
 internal class ActionSetWriter(string name)
 {
+    public static bool IsValid(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
+    {
+        return actions.Select(a => GetName(a, actionGetter, replace)).ToHashSet().Count > 1;
+    }
+
     public ExpressionStatementSyntax GetInit(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
     {
-        var expElements = actions.Reverse().Select(i => ExpressionElement(IdentifierName(GetName(i, actionGetter, replace))));
+        var expElements = actions.Reverse().Select(i => GetName(i, actionGetter, replace)).ToHashSet()
+            .Select(i => ExpressionElement(IdentifierName(i)));
 
         List<SyntaxNodeOrToken> items = [];
         foreach (var element in expElements)
@@ -42,6 +48,11 @@ internal class ActionSetWriter(string name)
                                                                 items))))})))));
 
         return init;
+    }
+
+    public static string GetDescription(Action[] actions, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)
+    {
+        return string.Join(" -> ", actions.Select(a => $"<seealso cref=\"{GetName(a, actionGetter, replace)}\"/>").ToHashSet());
     }
 
     private static string GetName(Action action, ActionSingleRotationGetter actionGetter, ReplaceActionGetter? replace)

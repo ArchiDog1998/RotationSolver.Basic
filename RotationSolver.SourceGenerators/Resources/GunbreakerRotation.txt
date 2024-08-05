@@ -6,7 +6,7 @@ namespace RotationSolver.Basic.Rotations.Basic;
 /// <see href="https://na.finalfantasyxiv.com/jobguide/gunbreaker"><strong>Gunbreaker</strong></see>
 /// <br>Number of Actions: 72</br>
 /// <br>Number of Replace Actions: 8</br>
-/// <br>Number of Action Combos: 11</br>
+/// <br>Number of Action Combos: 7</br>
 /// <br>Number of Traits: 16</br>
 /// </summary>
 [global::RotationSolver.Basic.Attributes.Jobs(global::ECommons.ExcelServices.Job.GNB)]
@@ -1459,22 +1459,10 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     public global::RotationSolver.Basic.Actions.IBaseActionSet SolidBarrelPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="GnashingFangPvE"/> -> <seealso cref="SavageClawPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet SavageClawPvECombo { get; }
-
-    /// <summary>
 /// <seealso cref="DemonSlicePvE"/> -> <seealso cref="DemonSlaughterPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet DemonSlaughterPvECombo { get; }
-
-    /// <summary>
-/// <seealso cref="GnashingFangPvE"/> -> <seealso cref="SavageClawPvE"/> -> <seealso cref="WickedTalonPvE"/>
-/// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet WickedTalonPvECombo { get; }
 
     /// <summary>
 /// <seealso cref="KeenEdgePvP"/> -> <seealso cref="BrutalShellPvP"/>
@@ -1501,16 +1489,22 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
     public global::RotationSolver.Basic.Actions.IBaseActionSet WickedTalonPvPCombo { get; }
 
     /// <summary>
-/// <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/>
+/// <seealso cref="ContinuationPvE"/> -> <seealso cref="JugularRipPvE"/> -> <seealso cref="AbdomenTearPvE"/> -> <seealso cref="EyeGougePvE"/> -> <seealso cref="HypervelocityPvE"/> -> <seealso cref="FatedBrandPvE"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet NobleBloodPvECombo { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ContinuationPvECdGrp { get; }
 
     /// <summary>
-/// <seealso cref="ReignOfBeastsPvE"/> -> <seealso cref="NobleBloodPvE"/> -> <seealso cref="LionHeartPvE"/>
+/// <seealso cref="ContinuationPvP"/> -> <seealso cref="HypervelocityPvP"/> -> <seealso cref="JugularRipPvP"/> -> <seealso cref="AbdomenTearPvP"/> -> <seealso cref="EyeGougePvP"/> -> <seealso cref="HypervelocityPvP_29111"/> -> <seealso cref="JugularRipPvP_29112"/> -> <seealso cref="AbdomenTearPvP_29113"/> -> <seealso cref="EyeGougePvP_29114"/> -> <seealso cref="HypervelocityPvP_29115"/> -> <seealso cref="JugularRipPvP_29116"/> -> <seealso cref="AbdomenTearPvP_29117"/> -> <seealso cref="EyeGougePvP_29118"/> -> <seealso cref="HypervelocityPvP_29119"/> -> <seealso cref="JugularRipPvP_29120"/> -> <seealso cref="AbdomenTearPvP_29121"/> -> <seealso cref="EyeGougePvP_29122"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
-    public global::RotationSolver.Basic.Actions.IBaseActionSet LionHeartPvECombo { get; }
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ContinuationPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="JunctionedCastPvP"/> -> <seealso cref="NebulaPvP"/> -> <seealso cref="BlastingZonePvP"/> -> <seealso cref="AuroraPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet JunctionedCastPvPCdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1622,15 +1616,14 @@ public abstract partial class GunbreakerRotation : global::RotationSolver.Basic.
         NoMercyPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SonicBreakPvE, NoMercyPvE]);
         BrutalShellPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BrutalShellPvE, KeenEdgePvE]);
         SolidBarrelPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SolidBarrelPvE, BrutalShellPvE, KeenEdgePvE]);
-        SavageClawPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GnashingFangPvEReplace, GnashingFangPvEReplace]);
         DemonSlaughterPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [DemonSlaughterPvE, DemonSlicePvE]);
-        WickedTalonPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GnashingFangPvEReplace, GnashingFangPvEReplace, GnashingFangPvEReplace]);
         BrutalShellPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BrutalShellPvP, KeenEdgePvP]);
         SolidBarrelPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SolidBarrelPvP, BrutalShellPvP, KeenEdgePvP]);
         SavageClawPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SavageClawPvP, GnashingFangPvP]);
         WickedTalonPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WickedTalonPvP, SavageClawPvP, GnashingFangPvP]);
-        NobleBloodPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodfestPvEReplace, BloodfestPvEReplace]);
-        LionHeartPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BloodfestPvEReplace, BloodfestPvEReplace, BloodfestPvEReplace]);
+        ContinuationPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [FatedBrandPvE, HypervelocityPvE, EyeGougePvE, AbdomenTearPvE, JugularRipPvE, ContinuationPvE]);
+        ContinuationPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EyeGougePvP_29122, AbdomenTearPvP_29121, JugularRipPvP_29120, HypervelocityPvP_29119, EyeGougePvP_29118, AbdomenTearPvP_29117, JugularRipPvP_29116, HypervelocityPvP_29115, EyeGougePvP_29114, AbdomenTearPvP_29113, JugularRipPvP_29112, HypervelocityPvP_29111, EyeGougePvP, AbdomenTearPvP, JugularRipPvP, HypervelocityPvP, ContinuationPvP]);
+        JunctionedCastPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AuroraPvP, BlastingZonePvP, NebulaPvP, JunctionedCastPvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

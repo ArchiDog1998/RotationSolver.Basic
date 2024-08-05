@@ -1018,6 +1018,18 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet RadiantFinalePvEReplace { get; }
 
+    /// <summary>
+/// <seealso cref="BloodletterPvEReplace"/> -> <seealso cref="RainOfDeathPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodletterPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="EmpyrealArrowPvP"/> -> <seealso cref="EmpyrealArrowPvP_29397"/> -> <seealso cref="EmpyrealArrowPvP_29398"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EmpyrealArrowPvPCdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1144,6 +1156,8 @@ public abstract partial class BardRotation : global::RotationSolver.Basic.Rotati
         BloodletterPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeartbreakShotPvE, BloodletterPvE]);
         BarragePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ResonantArrowPvE, BarragePvE]);
         RadiantFinalePvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RadiantEncorePvE, RadiantFinalePvE]);
+        BloodletterPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RainOfDeathPvE, BloodletterPvEReplace]);
+        EmpyrealArrowPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EmpyrealArrowPvP_29398, EmpyrealArrowPvP_29397, EmpyrealArrowPvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

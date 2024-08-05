@@ -2400,11 +2400,94 @@ public abstract partial class BlueMageRotation : global::RotationSolver.Basic.Ro
 /// </summary>
     public static global::RotationSolver.Basic.Traits.IBaseTrait MaimAndMendVTrait { get; } = new global::RotationSolver.Basic.Traits.BaseTrait(224U);
 
+    /// <summary>
+/// <seealso cref="OffguardPvE"/> -> <seealso cref="PeculiarLightPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet OffguardPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="FeatherRainPvE"/> -> <seealso cref="EruptionPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet FeatherRainPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="ShockStrikePvE"/> -> <seealso cref="MountainBusterPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ShockStrikePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="VeilOfTheWhorlPvE"/> -> <seealso cref="GlassDancePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet VeilOfTheWhorlPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="MagicHammerPvE"/> -> <seealso cref="CandyCanePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MagicHammerPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="Level5DeathPvE"/> -> <seealso cref="UltravibrationPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet Level5DeathPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="QuasarPvE"/> -> <seealso cref="JKickPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet QuasarPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="ChelonianGatePvE"/> -> <seealso cref="TheRoseOfDestructionPvE"/> -> <seealso cref="RubyDynamicsPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ChelonianGatePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="DragonForcePvE"/> -> <seealso cref="MatraMagicPvE"/> -> <seealso cref="AngelsSnackPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DragonForcePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="BothEndsPvE"/> -> <seealso cref="NightbloomPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BothEndsPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="ApokalypsisPvE"/> -> <seealso cref="BeingMortalPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet ApokalypsisPvECdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     /// <inheritdoc/>
     public override global::RotationSolver.Basic.Traits.IBaseTrait[] AllTraits => _AllTraits ??= [LearningTrait, MaimAndMendTrait, MaimAndMendIiTrait, MaimAndMendIiiTrait, MaimAndMendIvTrait, MaimAndMendVTrait, ..base.AllTraits];
+
+    /// <inheritdoc/>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    protected BlueMageRotation()
+    {
+        OffguardPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [PeculiarLightPvE, OffguardPvE]);
+        FeatherRainPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EruptionPvE, FeatherRainPvE]);
+        ShockStrikePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [MountainBusterPvE, ShockStrikePvE]);
+        VeilOfTheWhorlPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GlassDancePvE, VeilOfTheWhorlPvE]);
+        MagicHammerPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CandyCanePvE, MagicHammerPvE]);
+        Level5DeathPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [UltravibrationPvE, Level5DeathPvE]);
+        QuasarPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JKickPvE, QuasarPvE]);
+        ChelonianGatePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RubyDynamicsPvE, TheRoseOfDestructionPvE, ChelonianGatePvE]);
+        DragonForcePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AngelsSnackPvE, MatraMagicPvE, DragonForcePvE]);
+        BothEndsPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NightbloomPvE, BothEndsPvE]);
+        ApokalypsisPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BeingMortalPvE, ApokalypsisPvE]);
+    }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Actions.IBaseAction[]? _AllBaseActions = null;

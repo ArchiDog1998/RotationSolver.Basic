@@ -1517,6 +1517,18 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet AeolianEdgePvPCombo { get; }
 
+    /// <summary>
+/// <seealso cref="TenPvE"/> -> <seealso cref="ChiPvE"/> -> <seealso cref="JinPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TenPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="BhavacakraPvEReplace"/> -> <seealso cref="HellfrogMediumPvEReplace"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BhavacakraPvECdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1625,6 +1637,8 @@ public abstract partial class NinjaRotation : global::RotationSolver.Basic.Rotat
         HakkeMujinsatsuPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HakkeMujinsatsuPvE, DeathBlossomPvE]);
         GustSlashPvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GustSlashPvP, SpinningEdgePvP]);
         AeolianEdgePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [AeolianEdgePvP, GustSlashPvP, SpinningEdgePvP]);
+        TenPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [JinPvE, ChiPvE, TenPvE]);
+        BhavacakraPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HellfrogMediumPvEReplace, BhavacakraPvEReplace]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

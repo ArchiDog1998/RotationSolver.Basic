@@ -1124,28 +1124,40 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
     public global::RotationSolver.Basic.Actions.IBaseActionSet BarrelStabilizerPvEReplace { get; }
 
     /// <summary>
-/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/>
+/// <seealso cref="SplitShotPvEReplace"/> -> <seealso cref="SlugShotPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet SlugShotPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/> -> <seealso cref="CleanShotPvE"/>
+/// <seealso cref="SplitShotPvEReplace"/> -> <seealso cref="SlugShotPvEReplace"/> -> <seealso cref="CleanShotPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet CleanShotPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="SplitShotPvE"/> -> <seealso cref="HeatedSlugShotPvE"/>
+/// <seealso cref="SplitShotPvEReplace"/> -> <seealso cref="SlugShotPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HeatedSlugShotPvECombo { get; }
 
     /// <summary>
-/// <seealso cref="SplitShotPvE"/> -> <seealso cref="SlugShotPvE"/> -> <seealso cref="HeatedCleanShotPvE"/>
+/// <seealso cref="SplitShotPvEReplace"/> -> <seealso cref="SlugShotPvEReplace"/> -> <seealso cref="CleanShotPvEReplace"/>
 /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet HeatedCleanShotPvECombo { get; }
+
+    /// <summary>
+/// <seealso cref="DrillPvE"/> -> <seealso cref="BioblasterPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DrillPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="DrillPvP"/> -> <seealso cref="AirAnchorPvP"/> -> <seealso cref="BioblasterPvP"/> -> <seealso cref="ChainSawPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DrillPvPCdGrp { get; }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
@@ -1284,6 +1296,8 @@ public abstract partial class MachinistRotation : global::RotationSolver.Basic.R
         CleanShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CleanShotPvEReplace, SlugShotPvEReplace, SplitShotPvEReplace]);
         HeatedSlugShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SlugShotPvEReplace, SplitShotPvEReplace]);
         HeatedCleanShotPvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CleanShotPvEReplace, SlugShotPvEReplace, SplitShotPvEReplace]);
+        DrillPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [BioblasterPvE, DrillPvE]);
+        DrillPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ChainSawPvP, BioblasterPvP, AirAnchorPvP, DrillPvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

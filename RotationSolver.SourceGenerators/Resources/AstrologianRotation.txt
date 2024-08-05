@@ -1322,6 +1322,18 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet NeutralSectPvEReplace { get; }
 
+    /// <summary>
+/// <seealso cref="DoubleCastPvP"/> -> <seealso cref="FallMaleficPvP_29246"/> -> <seealso cref="AspectedBeneficPvP_29247"/> -> <seealso cref="GravityIiPvP_29248"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet DoubleCastPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="TheBalancePvP"/> -> <seealso cref="TheBolePvP"/> -> <seealso cref="TheArrowPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet TheBalancePvPCdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1436,6 +1448,8 @@ public abstract partial class AstrologianRotation : global::RotationSolver.Basic
         DivinationPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [OraclePvE, DivinationPvE]);
         AspectedHeliosPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HeliosConjunctionPvE, AspectedHeliosPvE]);
         NeutralSectPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SunSignPvE, NeutralSectPvE]);
+        DoubleCastPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GravityIiPvP_29248, AspectedBeneficPvP_29247, FallMaleficPvP_29246, DoubleCastPvP]);
+        TheBalancePvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [TheArrowPvP, TheBolePvP, TheBalancePvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

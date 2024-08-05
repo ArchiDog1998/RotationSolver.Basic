@@ -1989,6 +1989,54 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet CrimsonStrikePvPCombo { get; }
 
+    /// <summary>
+/// <seealso cref="EnergyDrainPvE"/> -> <seealso cref="EnergySiphonPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnergyDrainPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="AetherchargePvE"/> -> <seealso cref="DreadwyrmTrancePvE"/> -> <seealso cref="SummonBahamutPvE"/> -> <seealso cref="SummonPhoenixPvE"/> -> <seealso cref="SummonSolarBahamutPvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AetherchargePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="RekindlePvE"/> -> <seealso cref="DeathflarePvE"/> -> <seealso cref="SunflarePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet RekindlePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="SummonBahamutPvP"/> -> <seealso cref="SummonPhoenixPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SummonBahamutPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="EnkindleBahamutPvP"/> -> <seealso cref="EnkindlePhoenixPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet EnkindleBahamutPvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="MegaflarePvP"/> -> <seealso cref="EverlastingFlightPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet MegaflarePvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="WyrmwavePvP"/> -> <seealso cref="ScarletFlamePvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet WyrmwavePvPCdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="AkhMornPvP"/> -> <seealso cref="RevelationPvP"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet AkhMornPvPCdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -2162,6 +2210,14 @@ public abstract partial class SummonerRotation : global::RotationSolver.Basic.Ro
         SearingLightPvEReplace = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SearingFlashPvE, SearingLightPvE]);
         CrimsonStrikePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvE, CrimsonCyclonePvE]);
         CrimsonStrikePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [CrimsonStrikePvP, CrimsonCyclonePvP]);
+        EnergyDrainPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnergySiphonPvE, EnergyDrainPvE]);
+        AetherchargePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonSolarBahamutPvE, SummonPhoenixPvE, SummonBahamutPvE, DreadwyrmTrancePvE, AetherchargePvE]);
+        RekindlePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SunflarePvE, DeathflarePvE, RekindlePvE]);
+        SummonBahamutPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SummonPhoenixPvP, SummonBahamutPvP]);
+        EnkindleBahamutPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EnkindlePhoenixPvP, EnkindleBahamutPvP]);
+        MegaflarePvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [EverlastingFlightPvP, MegaflarePvP]);
+        WyrmwavePvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [ScarletFlamePvP, WyrmwavePvP]);
+        AkhMornPvPCdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [RevelationPvP, AkhMornPvP]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]

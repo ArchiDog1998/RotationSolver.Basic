@@ -1192,6 +1192,24 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
     public global::RotationSolver.Basic.Actions.IBaseActionSet InfernalSlicePvPCombo { get; }
 
+    /// <summary>
+/// <seealso cref="SoulSlicePvE"/> -> <seealso cref="SoulScythePvE"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet SoulSlicePvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="BloodStalkPvEReplace"/> -> <seealso cref="GrimSwathePvEReplace"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet BloodStalkPvECdGrp { get; }
+
+    /// <summary>
+/// <seealso cref="HellsIngressPvEReplace"/> -> <seealso cref="HellsEgressPvEReplace"/>
+/// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.BasicRotationGenerator", "1.0.0.2")]
+    public global::RotationSolver.Basic.Actions.IBaseActionSet HellsIngressPvECdGrp { get; }
+
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
     private global::RotationSolver.Basic.Traits.IBaseTrait[]? _AllTraits = null;
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
@@ -1317,6 +1335,9 @@ public abstract partial class ReaperRotation : global::RotationSolver.Basic.Rota
         NightmareScythePvECombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [NightmareScythePvE, SpinningScythePvE]);
         WaxingSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [WaxingSlicePvP, SlicePvP]);
         InfernalSlicePvPCombo = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [InfernalSlicePvP, WaxingSlicePvP, SlicePvP]);
+        SoulSlicePvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [SoulScythePvE, SoulSlicePvE]);
+        BloodStalkPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [GrimSwathePvEReplace, BloodStalkPvEReplace]);
+        HellsIngressPvECdGrp = new global::RotationSolver.Basic.Actions.BaseActionSet(() => [HellsEgressPvEReplace, HellsIngressPvEReplace]);
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("RotationSolver.GameData.CodeGenerator", "1.0.0.2")]
