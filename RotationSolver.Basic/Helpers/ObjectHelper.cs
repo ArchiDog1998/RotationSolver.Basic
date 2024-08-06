@@ -172,13 +172,40 @@ public static class ObjectHelper
     }
 
     internal static unsafe bool IsEnemy(this IGameObject obj)
-    => obj != null
-    && ActionManager.CanUseActionOnTarget((uint)ActionID.BlizzardPvE, obj.Struct());
+    {
+        if (obj == null) return false;
+        if (obj.EntityId is 0 or 0xE000_0000) return false;
+        if (obj is ICharacter cha)
+        {
+            return ActionManager.ClassifyTarget((FFXIVClientStructs.FFXIV.Client.Game.Character.Character*)cha.Address) is ActionManager.TargetCategory.Enemy;
+        }
+        else
+        {
+            return ActionManager.CanUseActionOnTarget((uint)ActionID.BlizzardPvE, obj.Struct());
+        }
+    }
 
     internal static unsafe bool IsAlliance(this IGameObject obj)
-        => obj != null && obj.EntityId is not 0 and not 0xE000_0000
-        && (!(DataCenter.IsPvP) && obj is IPlayerCharacter 
-        || ActionManager.CanUseActionOnTarget((uint)ActionID.CurePvE, obj.Struct()));
+    {
+        if (obj == null) return false;
+        if (obj.EntityId is 0 or 0xE000_0000) return false;
+        if (obj is ICharacter cha)
+        {
+            return ActionManager.ClassifyTarget((FFXIVClientStructs.FFXIV.Client.Game.Character.Character*)cha.Address) 
+                is ActionManager.TargetCategory.Party 
+                or ActionManager.TargetCategory.Friendly
+                or ActionManager.TargetCategory.Self
+                or ActionManager.TargetCategory.Alliance;
+        }
+        else if(DataCenter.IsPvP)
+        {
+            return obj is IPlayerCharacter;
+        }
+        else
+        {
+            return ActionManager.CanUseActionOnTarget((uint)ActionID.CurePvE, obj.Struct());
+        }
+    }
 
     internal static bool IsParty(this IGameObject IGameObject)
     {
