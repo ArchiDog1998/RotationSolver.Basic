@@ -203,4 +203,11 @@ partial class BardRotation
         if (FinalFantasiaPvP.CanUse(out act, skipAoeCheck: true)) return true;
         return false;
     }
+
+    /// <inheritdoc/>
+    protected override bool MoveBackAbility(out IAction? act)
+    {
+        if (RepellingShotPvE.CanUse(out act)) return true;
+        return base.MoveBackAbility(out act);
+    }
 }
