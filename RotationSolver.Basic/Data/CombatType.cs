@@ -27,7 +27,7 @@ public enum CombatType : byte
     Both = PvP | PvE,
 }
 
-internal static class ConbatTypeExtension
+internal static class CombatTypeExtension
 {
     public static uint GetIcon(this CombatType type) => type switch
     {

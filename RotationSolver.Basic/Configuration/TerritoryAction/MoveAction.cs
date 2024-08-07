@@ -2,6 +2,7 @@
 using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
+
 internal class MoveAction : ITerritoryAction
 {
     [UI("Points")]

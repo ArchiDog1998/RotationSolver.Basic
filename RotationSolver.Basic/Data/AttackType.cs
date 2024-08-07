@@ -5,43 +5,27 @@
 /// </summary>
 public enum AttackType : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Unknown = 0,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Slashing = 1,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Piercing = 2,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Blunt = 3,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Magic = 5,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Darkness = 6,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Physical = 7,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     LimitBreak = 8,
 }

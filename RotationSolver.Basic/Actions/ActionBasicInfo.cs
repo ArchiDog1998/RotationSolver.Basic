@@ -157,14 +157,14 @@ public readonly struct ActionBasicInfo
     {
         if (!_action.Config.IsEnabled || !IsOnSlot)
         {
-            whyCant = WhyActionCantUse.Diabled;
+            whyCant = WhyActionCantUse.Disabled;
             return false;
         }
 
         //Disabled.
         if (DataCenter.DisabledActionSequencer?.Contains(ID) ?? false)
         {
-            whyCant = WhyActionCantUse.DiabledSequencer;
+            whyCant = WhyActionCantUse.DisabledSequencer;
             return false;
         }
 

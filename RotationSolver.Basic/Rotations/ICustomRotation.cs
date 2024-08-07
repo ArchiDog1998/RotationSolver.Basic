@@ -50,7 +50,7 @@ public interface ICustomRotation : ITexture, IDisposable
     Job Job { get; }
 
     /// <summary>
-    /// 
+    /// Role
     /// </summary>
     JobRole Role { get; }
 

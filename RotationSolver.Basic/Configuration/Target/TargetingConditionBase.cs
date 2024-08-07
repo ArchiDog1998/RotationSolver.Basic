@@ -1,6 +1,4 @@
 ﻿using ECommons.DalamudServices;
-using RotationSolver.Basic.Configuration.Condition;
-using System.Linq;
 using XIVConfigUI.Attributes;
 using XIVConfigUI.ConditionConfigs;
 

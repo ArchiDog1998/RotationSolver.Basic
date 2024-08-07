@@ -1,4 +1,5 @@
 ﻿namespace RotationSolver.Basic.Helpers;
+
 internal static class DrawerHelper
 {
     private static IDisposable[]? _previewItems = null;

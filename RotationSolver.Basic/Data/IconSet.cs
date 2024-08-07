@@ -11,64 +11,40 @@ namespace RotationSolver.Basic.Data;
 /// </summary>
 public enum IconType : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Gold,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Framed,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Glowing,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Grey,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Black,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Yellow,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Orange,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Red,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Purple,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Blue,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Green,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Role,
 }
 

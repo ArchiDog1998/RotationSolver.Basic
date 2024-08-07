@@ -5,87 +5,59 @@
 /// </summary>
 public enum SpecialCommandType : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("To end this special duration before the set time.")]
     EndSpecial,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use AoE heal.")]
     HealArea,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use single heal.")]
     HealSingle,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use AoE defense.")]
     DefenseArea,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use single defense.")]
     DefenseSingle,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use Esuna, tank stance actions or True North.")]
     DispelStancePositional,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use Raise or Shirk.")]
     RaiseShirk,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to move forward.")]
     MoveForward,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to move back.")]
     MoveBack,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use knockback immunity actions.")]
     AntiKnockback,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to burst.")]
     Burst,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to speed up.")]
     Speed,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to use limit break.")]
     LimitBreak,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Open a window to do not use the casting action.")]
     NoCasting,
 }

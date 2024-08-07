@@ -8,49 +8,31 @@ namespace RotationSolver.Basic.Data;
 /// </summary>
 public enum JobRole : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     None = 0,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Tank = 1,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Melee = 2,
 
-    ///// <summary>
-    ///// 
-    ///// </summary>
+    ///// <summary/>
     //Ranged = 3,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Healer = 4,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     RangedPhysical = 5,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     RangedMagical = 6,
 
-    ///// <summary>
-    ///// 
-    ///// </summary>
+    ///// <summary/>
     //DiscipleOfTheLand = 7,
 
-    ///// <summary>
-    ///// 
-    ///// </summary>
+    ///// <summary/>
     //DiscipleOfTheHand = 8,
 }
 

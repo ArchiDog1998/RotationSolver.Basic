@@ -73,6 +73,7 @@ public class BaseAction : IBaseAction, IAction
     public ActionSetting Setting { get; set; }
 
     ActionConfig IBaseAction.Config => Config;
+
     /// <inheritdoc/>
     internal ActionConfig Config
     {
@@ -84,7 +85,7 @@ public class BaseAction : IBaseAction, IAction
                     = Setting.CreateConfig?.Invoke() ?? new();
                 if (Action.ClassJob.Value?.GetJobRole() == JobRole.Tank)
                 {
-                    value.AoeCount = 2;
+                    value.AoeCount = Math.Min(value.AoeCount, (byte)2);
                 }
                 if (value.TimeToUntargetable == 0)
                 {
@@ -93,7 +94,7 @@ public class BaseAction : IBaseAction, IAction
                 if (OtherConfiguration.TargetStatusProvide.TryGetValue(ID, out var targetStatusProvide)
                     && targetStatusProvide.Length > 0)
                 {
-                    value.TimeToKill = 10;
+                    value.TimeToKill = MathF.Max(value.TimeToKill, 10);
                 }
             }
             return value;

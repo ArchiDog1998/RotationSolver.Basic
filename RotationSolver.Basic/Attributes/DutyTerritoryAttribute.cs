@@ -8,8 +8,7 @@
 public class DutyTerritoryAttribute(params uint[] territoryIds) : Attribute
 {
     /// <summary>
-    /// The terriotry ids.
+    /// The territory ids.
     /// </summary>
     public uint[] TerritoryIds => territoryIds;
 }
-

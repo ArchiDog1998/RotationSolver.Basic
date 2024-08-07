@@ -1,6 +1,4 @@
-﻿using ECommons.DalamudServices;
-using RotationSolver.Basic.Configuration.Target;
-using XIVConfigUI.Attributes;
+﻿using XIVConfigUI.Attributes;
 using XIVDrawer.Vfx;
 
 namespace RotationSolver.Basic.Configuration.Drawing;

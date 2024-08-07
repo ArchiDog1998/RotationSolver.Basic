@@ -2,47 +2,40 @@
 partial class CustomRotation
 {
     /// <summary>
-    /// 
+    /// Can heal area ability
     /// </summary>
     [Description("Can heal area ability")]
     public virtual bool CanHealAreaAbility => true;
 
     /// <summary>
-    /// 
+    /// Can heal area spell
     /// </summary>
     [Description("Can heal area spell")]
     public virtual bool CanHealAreaSpell => true;
 
     /// <summary>
-    /// 
+    /// Can heal single ability
     /// </summary>
     [Description("Can heal single ability")]
     public virtual bool CanHealSingleAbility => true;
 
     /// <summary>
-    /// 
+    /// Can heal single area
     /// </summary>
     [Description("Can heal single area")]
     public virtual bool CanHealSingleSpell => true;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public double AverageCountOfLastUsing { get; internal set; } = 0;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public int MaxCountOfLastUsing { get; internal set; } = 0;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public double AverageCountOfCombatTimeUsing { get; internal set; } = 0;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public int MaxCountOfCombatTimeUsing { get; internal set; } = 0;
+
     internal long CountOfTracking { get; set; } = 0;
 }

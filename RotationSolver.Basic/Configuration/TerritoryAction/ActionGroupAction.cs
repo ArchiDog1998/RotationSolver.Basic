@@ -4,7 +4,7 @@ namespace RotationSolver.Basic.Configuration.TerritoryAction;
 
 internal class ActionGroupAction : ITerritoryAction
 {
-    private class ActouGroupChoicesAttribute : ChoicesAttribute
+    private class ActionGroupChoicesAttribute : ChoicesAttribute
     {
         protected override Pair[] GetChoices()
         {
@@ -12,7 +12,7 @@ internal class ActionGroupAction : ITerritoryAction
         }
     }
 
-    [ActouGroupChoices, UI("Action Group Name")]
+    [ActionGroupChoices, UI("Action Group Name")]
     public string ActionGroupName { get; set; } = Service.Config.ActionGroups.FirstOrDefault()?.Name ?? string.Empty;
 
     [UI("Is On")]

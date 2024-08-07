@@ -711,7 +711,7 @@ public struct ActionTargetInfo(IBaseAction action)
 
             if (Service.Config.FilterStopMark)
             {
-                var cs = MarkingHelper.FilterStopCharaes(IGameObjects);
+                var cs = MarkingHelper.FilterStopBattles(IGameObjects);
                 if (cs?.Any() ?? false) IGameObjects = cs;
             }
 

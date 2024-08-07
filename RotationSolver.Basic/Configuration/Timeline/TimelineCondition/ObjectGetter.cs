@@ -21,6 +21,7 @@ internal class ObjectGetter
     public string VfxPath { get; set; } = string.Empty;
     public ushort ObjectEffect1 { get; set; } = 0;
     public ushort ObjectEffect2 { get; set; } = 0;
+
     public bool CanGet(IGameObject obj)
     {
         switch (Type)

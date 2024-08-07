@@ -42,7 +42,7 @@ public enum TargetingType : byte
     LowMaxHP,
 
     /// <summary>
-    /// 
+    /// The closest target.
     /// </summary>
     [Description("Closest")]
     Close,

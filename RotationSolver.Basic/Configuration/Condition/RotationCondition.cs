@@ -1,6 +1,4 @@
-﻿using ECommons.DalamudServices;
-
-namespace RotationSolver.Basic.Configuration.Condition;
+﻿namespace RotationSolver.Basic.Configuration.Condition;
 
 internal class RotationIntegerChoicesAttribute : IntegerChoicesAttribute
 {

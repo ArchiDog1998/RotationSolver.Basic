@@ -8,6 +8,7 @@ partial class CustomRotation
     public bool TryInvoke(out IAction? newAction, out IAction? gcdAction)
     {
         newAction = gcdAction = null;
+
         if (!IsEnabled)
         {
             return false;

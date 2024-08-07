@@ -3,6 +3,7 @@ using RotationSolver.Helpers;
 using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
+
 internal class NoticeAction : ITerritoryAction
 {
     [UI("Notice")]

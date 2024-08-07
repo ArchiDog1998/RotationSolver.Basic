@@ -40,6 +40,7 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
             return [tar];
         }
     }
+    
     private IDisposable[] GetTextDrawing(IGameObject obj)
     {
         return [..TargetGet(obj).Select(TargetText.GetText)

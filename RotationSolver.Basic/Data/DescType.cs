@@ -5,86 +5,58 @@
 /// </summary>
 public enum DescType : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     None,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Burst Actions")]
     BurstActions,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Heal Area GCD")]
     HealAreaGCD,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Heal Area Ability")]
     HealAreaAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Heal Single GCD")]
     HealSingleGCD,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Heal Single Ability")]
     HealSingleAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Defense Area GCD")]
     DefenseAreaGCD,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Defense Area Ability")]
     DefenseAreaAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Defense Single GCD")]
     DefenseSingleGCD,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Defense Single Ability")]
     DefenseSingleAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Move Forward GCD")]
     MoveForwardGCD,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Move Forward Ability")]
     MoveForwardAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Move Back Ability")]
     MoveBackAbility,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     [Description("Speed Ability")]
     SpeedAbility,
 }

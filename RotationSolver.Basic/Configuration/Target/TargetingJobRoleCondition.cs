@@ -1,5 +1,4 @@
-﻿
-using XIVConfigUI.Attributes;
+﻿using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.Target;
 

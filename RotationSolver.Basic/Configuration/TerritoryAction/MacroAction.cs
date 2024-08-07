@@ -2,6 +2,7 @@
 using XIVConfigUI.Attributes;
 
 namespace RotationSolver.Basic.Configuration.TerritoryAction;
+
 internal class MacroAction : ITerritoryAction
 {
     [UIType(UiType.Multiline)]

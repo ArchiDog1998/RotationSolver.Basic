@@ -5,23 +5,15 @@
 /// </summary>
 public enum EnemyPositional : byte
 {
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     None,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Rear,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Flank,
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     Front,
 }

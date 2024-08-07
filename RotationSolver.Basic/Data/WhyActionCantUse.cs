@@ -6,10 +6,10 @@ public enum WhyActionCantUse : byte
     None = 0,
 
     [Description("This action was disabled by the user or not on the slot.")]
-    Diabled,
+    Disabled,
 
-    [Description("This action was diabled by the action sequencer!")]
-    DiabledSequencer,
+    [Description("This action was disabled by the action sequencer!")]
+    DisabledSequencer,
 
     [Description("The level is not enough!")]
     NotEnoughLevel,
@@ -23,7 +23,7 @@ public enum WhyActionCantUse : byte
     [Description("There are the statuses that this action provide!")]
     HasTheStatus,
 
-    [Description("There are the pernalty statuses of this action!")]
+    [Description("There are the penalty statuses of this action!")]
     HasThePenaltyStatus,
 
     [Description("Not enough Enough Limit Level!")]

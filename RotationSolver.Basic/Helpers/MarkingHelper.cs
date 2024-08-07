@@ -47,9 +47,9 @@ internal static class MarkingHelper
         GetObjectID(HeadMarker.Stop2),
     ];
 
-    internal unsafe static IEnumerable<IBattleChara> FilterStopCharaes(IEnumerable<IBattleChara> charas)
+    internal unsafe static IEnumerable<IBattleChara> FilterStopBattles(IEnumerable<IBattleChara> battles)
     {
         var ids = StopTargets.Where(id => id != 0xE000_0000);
-        return charas.Where(b => !ids.Contains(b.EntityId));
+        return battles.Where(b => !ids.Contains(b.EntityId));
     }
 }
