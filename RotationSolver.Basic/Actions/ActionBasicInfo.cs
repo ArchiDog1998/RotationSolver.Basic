@@ -81,6 +81,39 @@ public readonly struct ActionBasicInfo
     public readonly unsafe float RecastTime => ((ActionID)ID).GetRecastTime();
 
     /// <summary>
+    /// Status that this action provides.
+    /// </summary>
+
+    public StatusID[] StatusProvide
+    {
+        get
+        {
+            if (!OtherConfiguration.StatusProvide.TryGetValue(ID, out var statusProvide)) statusProvide = [];
+            if (_action.Setting.StatusProvide != null)
+            {
+                statusProvide = [.. statusProvide, .. _action.Setting.StatusProvide];
+            }
+            return statusProvide;
+        }
+    }
+
+    /// <summary>
+    /// The status that it provides to the target.
+    /// </summary>
+    public StatusID[] TargetStatusProvide
+    {
+        get
+        {
+            if (!OtherConfiguration.TargetStatusProvide.TryGetValue(ID, out var targetStatusProvide)) targetStatusProvide = [];
+            if (_action.Setting.TargetStatusProvide != null)
+            {
+                targetStatusProvide = [.. targetStatusProvide, .. _action.Setting.TargetStatusProvide];
+            }
+            return targetStatusProvide;
+        }
+    }
+
+    /// <summary>
     /// How many mp does this action needs.
     /// </summary>
     public readonly unsafe uint MPNeed
@@ -213,16 +246,10 @@ public readonly struct ActionBasicInfo
             }
         }
 
-        if (!OtherConfiguration.StatusProvide.TryGetValue(ID, out var statusProvide)) statusProvide = [];
-        if (_action.Setting.StatusProvide != null)
-        {
-            statusProvide = [..statusProvide, .._action.Setting.StatusProvide];
-        }
-
-        if (statusProvide.Length > 0 && !skipStatusProvideCheck)
+        if (StatusProvide.Length > 0 && !skipStatusProvideCheck)
         {
             if (!player.WillStatusEndGCD(_action.Config.StatusGcdCount, 0,
-                _action.Setting.StatusFromSelf, [..statusProvide]))
+                _action.Setting.StatusFromSelf, StatusProvide))
             {
                 whyCant = WhyActionCantUse.HasTheStatus;
                 return false;

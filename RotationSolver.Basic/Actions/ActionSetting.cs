@@ -130,15 +130,10 @@ public class ActionSetting()
     /// </summary>
     public bool NeedsHighlight { get; internal set; }
 
-    /// <summary>
-    /// Status that this action provides.
-    /// </summary>
     [Obsolete("For the most case, you don't need it")]
-    public StatusID[]? StatusProvide { get; internal set; } = null;
+    internal StatusID[]? StatusProvide { get; set; } = null;
 
-    /// <summary>
-    /// The status that it provides to the target.
-    /// </summary>
+
     [Obsolete("For the most case, you don't need it")]
-    public StatusID[]? TargetStatusProvide { get; internal set; } = null;
+    internal StatusID[]? TargetStatusProvide { get; set; } = null;
 }
