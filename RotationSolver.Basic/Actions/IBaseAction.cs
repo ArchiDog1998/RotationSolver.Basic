@@ -16,6 +16,11 @@ public interface IBaseAction : ICanUse, IAction
     internal static bool ShouldEndSpecial { get; set; } = false;
 
     /// <summary>
+    /// The Ninjutsu action of this action.
+    /// </summary>
+    IBaseAction[]? Ninjutsu { get; internal set; }
+
+    /// <summary>
     /// Your custom rotation check for your rotation.
     /// </summary>
     Func<bool>? RotationCheck { get; set; }

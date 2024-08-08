@@ -15,11 +15,6 @@ internal enum SpecialActionType : byte
 public class ActionSetting()
 {
     /// <summary>
-    /// The Ninjutsu action of this action.
-    /// </summary>
-    public IBaseAction[]? Ninjutsu { get; internal set; } = null;
-
-    /// <summary>
     /// The override of the <see cref="ActionBasicInfo.MPNeed"/>.
     /// </summary>
     public Func<uint?>? MPOverride { get; internal set; } = null;

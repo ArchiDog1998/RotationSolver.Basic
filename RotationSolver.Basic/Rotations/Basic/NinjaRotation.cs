@@ -108,15 +108,15 @@ partial class NinjaRotation
     /// <inheritdoc/>
     internal override void Init()
     {
-        FumaShurikenPvE.Setting.Ninjutsu = [TenPvE];
-        KatonPvE.Setting.Ninjutsu = [ChiPvE, TenPvE];
-        RaitonPvE.Setting.Ninjutsu = [TenPvE, ChiPvE];
-        HyotonPvE.Setting.Ninjutsu = [TenPvE, JinPvE];
-        HutonPvE.Setting.Ninjutsu = [JinPvE, ChiPvE, TenPvE];
-        DotonPvE.Setting.Ninjutsu = [JinPvE, TenPvE, ChiPvE];
-        SuitonPvE.Setting.Ninjutsu = [TenPvE, ChiPvE, JinPvE];
-        GokaMekkyakuPvE.Setting.Ninjutsu = [ChiPvE, TenPvE];
-        HyoshoRanryuPvE.Setting.Ninjutsu = [TenPvE, JinPvE];
+        FumaShurikenPvE.Ninjutsu = [TenPvE];
+        KatonPvE.Ninjutsu = [ChiPvE, TenPvE];
+        RaitonPvE.Ninjutsu = [TenPvE, ChiPvE];
+        HyotonPvE.Ninjutsu = [TenPvE, JinPvE];
+        HutonPvE.Ninjutsu = [JinPvE, ChiPvE, TenPvE];
+        DotonPvE.Ninjutsu = [JinPvE, TenPvE, ChiPvE];
+        SuitonPvE.Ninjutsu = [TenPvE, ChiPvE, JinPvE];
+        GokaMekkyakuPvE.Ninjutsu = [ChiPvE, TenPvE];
+        HyoshoRanryuPvE.Ninjutsu = [TenPvE, JinPvE];
     }
 
     static partial void ModifyKatonPvE(ref ActionSetting setting)

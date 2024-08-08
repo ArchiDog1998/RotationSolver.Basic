@@ -12,6 +12,10 @@ namespace RotationSolver.Basic.Actions;
 public class BaseAction : IBaseAction, IAction
 {
     /// <inheritdoc/>
+    [Obsolete("Maybe we will get a better way to fix it.")]
+    public IBaseAction[]? Ninjutsu { get; set; } = null;
+
+    /// <inheritdoc/>
     public TargetResult Target { get; set; } = new(Player.Object, [], null);
 
     /// <inheritdoc/>

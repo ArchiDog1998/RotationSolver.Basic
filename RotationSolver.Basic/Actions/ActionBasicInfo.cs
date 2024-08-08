@@ -338,7 +338,7 @@ public readonly struct ActionBasicInfo
                 whyCant = WhyActionCantUse.BadStatus;
                 return false;
             }
-            if (_action.Setting.Ninjutsu == null)
+            if (_action.Ninjutsu == null)
             {
                 //No resources... TODO: Maybe MP LB..., etc..... which can be simplify.
                 if (ActionManager.Instance()->CheckActionResources(ActionType.Action, ID) != 0)
