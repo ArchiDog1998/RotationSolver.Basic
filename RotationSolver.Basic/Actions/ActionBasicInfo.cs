@@ -325,7 +325,7 @@ public readonly struct ActionBasicInfo
             return false;
         }
 
-        if (!IBaseAction.ForceEnable && !(_action.Setting.RotationCheck?.Invoke() ?? true))
+        if (!IBaseAction.ForceEnable && !(_action.RotationCheck?.Invoke() ?? true))
         {
             whyCant = WhyActionCantUse.RotationCheck;
             return false;

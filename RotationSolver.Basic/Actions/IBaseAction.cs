@@ -16,6 +16,11 @@ public interface IBaseAction : ICanUse, IAction
     internal static bool ShouldEndSpecial { get; set; } = false;
 
     /// <summary>
+    /// Your custom rotation check for your rotation.
+    /// </summary>
+    Func<bool>? RotationCheck { get; set; }
+
+    /// <summary>
     /// The action itself.
     /// </summary>
     Action Action { get; }
@@ -39,6 +44,10 @@ public interface IBaseAction : ICanUse, IAction
     /// The basic information of this action.
     /// </summary>
     ActionBasicInfo Info { get; }
+
+    /// <summary>
+    /// Why you can't use this action.
+    /// </summary>
     WhyActionCantUse WhyCant { get; }
 
     /// <summary>
@@ -46,9 +55,7 @@ public interface IBaseAction : ICanUse, IAction
     /// </summary>
     new ActionCooldownInfo CD { get; }
 
-    /// <summary>
-    /// The setting to use this action.
-    /// </summary>
-    ActionSetting Setting { get; set; }
+    internal ActionSetting Setting { get; set; }
+
     internal ActionConfig Config { get; }
 }

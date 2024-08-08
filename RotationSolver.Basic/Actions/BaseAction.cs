@@ -70,7 +70,11 @@ public class BaseAction : IBaseAction, IAction
     public bool EnoughLevel => Info.EnoughLevel;
 
     /// <inheritdoc/>
-    public ActionSetting Setting { get; set; }
+    public Func<bool>? RotationCheck { get; set; } = null;
+
+    /// <inheritdoc/>
+    internal ActionSetting Setting { get; set; }
+    ActionSetting IBaseAction.Setting {  get => Setting; set => Setting = value; }
 
     ActionConfig IBaseAction.Config => Config;
 

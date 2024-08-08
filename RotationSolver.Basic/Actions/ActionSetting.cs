@@ -73,11 +73,6 @@ public class ActionSetting()
     /// </summary>
     public StatusID[]? StatusNeed { get; internal set; } = null;
 
-    /// <summary>
-    /// Your custom rotation check for your rotation.
-    /// </summary>
-    public Func<bool>? RotationCheck { get; set; } = null;
-
     internal Func<bool>? ActionCheck { get; set; } = null;
 
     internal Func<ActionConfig>? CreateConfig { get; set; } = null;
