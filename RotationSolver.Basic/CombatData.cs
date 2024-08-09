@@ -214,10 +214,10 @@ public static class CombatData
     [ConditionIgnore]
     public static ActionID LastComboAction => DataCenter.LastComboAction;
 
-   /// <summary>
-   /// Has Pet
-   /// </summary>
-   [Description("Has Pet")]
+    /// <summary>
+    /// Has Pet
+    /// </summary>
+    [Description("Has Pet")]
     public static bool HasPet => DataCenter.HasPet;
 
     /// <summary>

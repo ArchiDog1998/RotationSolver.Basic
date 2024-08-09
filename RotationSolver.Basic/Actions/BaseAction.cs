@@ -77,8 +77,7 @@ public class BaseAction : IBaseAction, IAction
     public Func<bool>? RotationCheck { get; set; } = null;
 
     /// <inheritdoc/>
-    internal ActionSetting Setting { get; set; }
-    ActionSetting IBaseAction.Setting {  get => Setting; set => Setting = value; }
+    public ActionSetting Setting { get; set; }
 
     ActionConfig IBaseAction.Config => Config;
 

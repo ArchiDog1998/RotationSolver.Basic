@@ -60,7 +60,10 @@ public interface IBaseAction : ICanUse, IAction
     /// </summary>
     new ActionCooldownInfo CD { get; }
 
-    internal ActionSetting Setting { get; set; }
+    /// <summary>
+    /// The action setting.
+    /// </summary>
+    ActionSetting Setting { get; internal set; }
 
     internal ActionConfig Config { get; }
 }

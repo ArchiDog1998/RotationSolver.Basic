@@ -30,7 +30,7 @@ partial class CustomRotation
 
     static partial void ModifyLucidDreamingPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => Player.CurrentMp < 6000 && InCombat;
+        setting.ActionCheck = () => Player.CurrentMp < 8000 && InCombat;
     }
 
     static partial void ModifySecondWindPvE(ref ActionSetting setting)

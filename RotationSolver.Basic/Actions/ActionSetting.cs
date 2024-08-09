@@ -1,6 +1,4 @@
-﻿using RotationSolver.Basic.Traits;
-
-namespace RotationSolver.Basic.Actions;
+﻿namespace RotationSolver.Basic.Actions;
 
 internal enum SpecialActionType : byte
 {
