@@ -82,6 +82,11 @@ partial class WhiteMageRotation
         };
     }
 
+    static partial void ModifyAetherialShiftPvE(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
     static partial void ModifyCureIiiPvP(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.CureIiiReady];
@@ -92,5 +97,12 @@ partial class WhiteMageRotation
     {
         if (AfflatusPurgationPvP.CanUse(out act, skipAoeCheck: true)) return true;
         return base.LimitBreakPvPGCD(out act);
+    }
+
+    /// <inheritdoc/>
+    protected override bool MoveForwardAbility(out IAction? act)
+    {
+        if(AetherialShiftPvE.CanUse(out act)) return true; ;
+        return base.MoveForwardAbility(out act);
     }
 }

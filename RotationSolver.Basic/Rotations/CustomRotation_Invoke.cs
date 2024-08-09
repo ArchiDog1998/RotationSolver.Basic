@@ -136,10 +136,16 @@ partial class CustomRotation
             }
             else
             {
-                if ((ActionID)a.ID == ActionID.EnAvantPvE)
+                float distance = (ActionID)a.ID switch
+                {
+                    ActionID.EnAvantPvE => 10,
+                    ActionID.AetherialShiftPvE => 15,
+                    _ => (float)0,
+                };
+                if (distance > 0)
                 {
                     var dir = new Vector3(MathF.Sin(CombatData.Player.Rotation), 0, MathF.Cos(CombatData.Player.Rotation));
-                    MoveTarget = CombatData.Player.Position + dir * 10;
+                    MoveTarget = CombatData.Player.Position + dir * distance;
                 }
                 else
                 {
