@@ -7,31 +7,6 @@ partial class ReaperRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    /// <summary>
-    /// Has <see cref="StatusID.Enshrouded"/>
-    /// </summary>
-    public static bool HasEnshrouded => Player.HasStatus(true, StatusID.Enshrouded);
-
-    /// <summary>
-    /// Has <see cref="StatusID.SoulReaver"/>
-    /// </summary>
-    public static bool HasSoulReaver => Player.HasStatus(true, StatusID.SoulReaver);
-
-    /// <summary>
-    /// Has <see cref="StatusID.Executioner"/>
-    /// </summary>
-    public static bool HasExecutioner => Player.HasStatus(true, StatusID.Executioner);
-
-    /// <summary>
-    /// Has <see cref="StatusID.IdealHost"/>
-    /// </summary>
-    public static bool HasIdealHost => Player.HasStatus(true, StatusID.IdealHost);
-
-    /// <summary>
-    /// Has <see cref="StatusID.Oblatio"/>
-    /// </summary>
-    public static bool HasOblatio => Player.HasStatus(true, StatusID.Oblatio);
-
     #region Death
     static partial void ModifyShadowOfDeathPvE(ref ActionSetting setting)
     {
@@ -52,11 +27,12 @@ partial class ReaperRotation
     /// <see cref="WhorlOfDeathPvE"/>, <see cref="ShadowOfDeathPvE"/>,
     /// </summary>
     /// <param name="act"></param>
+    /// <param name="skipStatusProvideCheck"></param>
     /// <returns></returns>
-    public bool UseDeathActions(out IAction? act)
+    public bool UseDeathActions(out IAction? act, bool skipStatusProvideCheck)
     {
-        if (WhorlOfDeathPvE.CanUse(out act)) return true;
-        if (ShadowOfDeathPvE.CanUse(out act)) return true;
+        if (WhorlOfDeathPvE.CanUse(out act, skipStatusProvideCheck: skipStatusProvideCheck)) return true;
+        if (ShadowOfDeathPvE.CanUse(out act, skipStatusProvideCheck: skipStatusProvideCheck)) return true;
         return false;
     }
     #endregion
@@ -126,7 +102,6 @@ partial class ReaperRotation
     }
     #endregion
 
-
     #region Soul Getter
     static partial void ModifySoulSlicePvE(ref ActionSetting setting)
     {
@@ -142,8 +117,20 @@ partial class ReaperRotation
     #region Soul User
     private static void SoulUser(ref ActionSetting setting)
     {
-        setting.StatusProvide = [StatusID.SoulReaver, StatusID.Executioner];
+        setting.StatusProvide = [StatusID.SoulReaver, StatusID.Enshrouded, StatusID.Executioner];
         setting.ActionCheck = () => Soul >= 50;
+    }
+
+    static partial void ModifyUnveiledGibbetPvE(ref ActionSetting setting)
+    {
+        SoulUser(ref setting);
+        setting.StatusNeed = [StatusID.EnhancedGibbet];
+    }
+
+    static partial void ModifyUnveiledGallowsPvE(ref ActionSetting setting)
+    {
+        SoulUser(ref setting);
+        setting.StatusNeed = [StatusID.EnhancedGallows];
     }
 
     static partial void ModifyBloodStalkPvE(ref ActionSetting setting)
@@ -161,19 +148,33 @@ partial class ReaperRotation
         SoulUser(ref setting);
     }
 
-    static partial void ModifyEnshroudPvE(ref ActionSetting setting)
+    /// <summary>
+    /// Get <see cref="StatusID.SoulReaver"/>
+    /// </summary>
+    /// <param name="act"></param>
+    /// <returns></returns>
+    public bool UseSoulReaverGetter(out IAction? act)
     {
-        SoulUser(ref setting);
+        if (GrimSwathePvE.CanUse(out act)) return true;
+        if (UnveiledGallowsPvE.CanUse(out act)) return true;
+        if (UnveiledGibbetPvE.CanUse(out act)) return true;
+        if (BloodStalkPvE.CanUse(out act)) return true;
+        return false;
     }
     #endregion
 
     #region Enshrouded
+    static partial void ModifyEnshroudPvE(ref ActionSetting setting)
+    {
+        setting.StatusProvide = [StatusID.SoulReaver, StatusID.Enshrouded, StatusID.Executioner];
+        setting.ActionCheck = () => Shroud >= 50 || Player.HasStatus(true, StatusID.IdealHost);
+    }
+
     static partial void ModifySacrificiumPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.Enshrouded];
         setting.ActionCheck = () => Player.HasStatus(true, StatusID.Oblatio);
     }
-
 
     static partial void ModifyLemuresSlicePvE(ref ActionSetting setting)
     {
@@ -276,18 +277,17 @@ partial class ReaperRotation
         setting.StatusProvide = [StatusID.EnhancedHarpe];
     }
     #endregion
-
-    static partial void ModifyPerfectioPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.PerfectioParata];
-    }
-
     static partial void ModifyArcaneCirclePvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
         {
             TimeToKill = 10,
         };
+    }
+
+    static partial void ModifyPerfectioPvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.PerfectioParata];
     }
 
     static partial void ModifyPlentifulHarvestPvE(ref ActionSetting setting)
@@ -304,24 +304,24 @@ partial class ReaperRotation
     }
 
     /// <inheritdoc/>
+    protected override bool MoveBackAbility(out IAction? act)
+    {
+        if (HellsEgressPvE.CanUse(out act)) return true;
+        return base.MoveBackAbility(out act);
+    }
+
+    /// <inheritdoc/>
     protected override bool DefenseAreaAbility(out IAction? act)
     {
-        if (!HasSoulReaver && !HasEnshrouded && !HasExecutioner && FeintPvE.CanUse(out act)) return true;
+        if (FeintPvE.CanUse(out act)) return true;
         return base.DefenseAreaAbility(out act);
     }
 
     /// <inheritdoc/>
     protected override bool DefenseSingleAbility(out IAction? act)
     {
-        if (!HasSoulReaver && !HasEnshrouded && !HasExecutioner && ArcaneCrestPvE.CanUse(out act)) return true;
+        if (ArcaneCrestPvE.CanUse(out act)) return true;
         return base.DefenseSingleAbility(out act);
-    }
-
-    /// <inheritdoc/>
-    protected override bool MoveBackAbility(out IAction? act)
-    {
-        if (HellsEgressPvE.CanUse(out act)) return true;
-        return base.MoveBackAbility(out act);
     }
 
     /// <inheritdoc/>

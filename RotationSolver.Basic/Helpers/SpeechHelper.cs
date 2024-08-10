@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using ECommons.DalamudServices;
+using System.Diagnostics;
 using System.Text;
 
 namespace RotationSolver.Helpers;
@@ -7,6 +8,7 @@ internal static class SpeechHelper
 {
     internal static void Speak(string text)
     {
+        if (Svc.GameConfig.System.GetBool("IsSndMaster")) return;
         if (!Service.Config.SayOutStateChanged) return;
 
         ExecuteCommand(

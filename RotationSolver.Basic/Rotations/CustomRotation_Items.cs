@@ -20,8 +20,9 @@ partial class CustomRotation
     /// </summary>
     /// <param name="act"></param>
     /// <param name="clippingCheck"></param>
+    /// <param name="onLastAbility"></param>
     /// <returns></returns>
-    protected bool UseBurstMedicine(out IAction? act, bool clippingCheck = true)
+    protected bool UseBurstMedicine(out IAction? act, bool clippingCheck = true, bool onLastAbility = true)
     {
         act = null;
 
@@ -31,7 +32,7 @@ partial class CustomRotation
         {
             if (medicine.Type != MedicineType) continue;
 
-            if (medicine.CanUse(out act, clippingCheck)) return true;
+            if (medicine.CanUse(out act, clippingCheck, onLastAbility)) return true;
         }
 
         return false;
