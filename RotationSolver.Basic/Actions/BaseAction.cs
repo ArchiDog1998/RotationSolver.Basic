@@ -79,10 +79,8 @@ public class BaseAction : IBaseAction, IAction
     /// <inheritdoc/>
     public ActionSetting Setting { get; set; }
 
-    ActionConfig IBaseAction.Config => Config;
-
     /// <inheritdoc/>
-    internal ActionConfig Config
+    public ActionConfig Config
     {
         get
         {

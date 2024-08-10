@@ -65,5 +65,8 @@ public interface IBaseAction : ICanUse, IAction
     /// </summary>
     ActionSetting Setting { get; internal set; }
 
-    internal ActionConfig Config { get; }
+    /// <summary>
+    /// The user configs.
+    /// </summary>
+    ActionConfig Config { get; }
 }

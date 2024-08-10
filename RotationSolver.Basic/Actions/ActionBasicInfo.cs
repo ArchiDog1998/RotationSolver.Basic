@@ -93,7 +93,7 @@ public readonly struct ActionBasicInfo
             {
                 statusProvide = [.. statusProvide, .. _action.Setting.StatusProvide];
             }
-            return statusProvide;
+            return [..statusProvide.ToHashSet()];
         }
     }
 
@@ -109,7 +109,29 @@ public readonly struct ActionBasicInfo
             {
                 targetStatusProvide = [.. targetStatusProvide, .. _action.Setting.TargetStatusProvide];
             }
-            return targetStatusProvide;
+            return [.. targetStatusProvide.ToHashSet()];
+        }
+    }
+
+
+    /// <summary>
+    /// The status that this action needs
+    /// </summary>
+    public StatusID[] TargetStatusNeed
+    {
+        get
+        {
+            IEnumerable<StatusID> statusNeed = [];
+            if (_action.Action.SecondaryCostType == 32)
+            {
+                statusNeed = statusNeed.Append((StatusID)_action.Action.SecondaryCostValue);
+            }
+
+            if (_action.Setting.StatusNeed != null)
+            {
+                statusNeed = statusNeed.Union(_action.Setting.StatusNeed);
+            }
+            return [.. statusNeed.ToHashSet()];
         }
     }
 
@@ -215,21 +237,12 @@ public readonly struct ActionBasicInfo
 
         var player = Player.Object;
 
-        IEnumerable<StatusID> statusNeed = [];
-        if (_action.Action.SecondaryCostType == 32)
-        {
-            statusNeed = statusNeed.Append((StatusID)_action.Action.SecondaryCostValue);
-        }
 
-        if (_action.Setting.StatusNeed != null)
-        {
-            statusNeed = statusNeed.Union(_action.Setting.StatusNeed);
-        }
-
-        if (statusNeed.Any())
+        var statusNeed = TargetStatusNeed;
+        if (statusNeed.Length != 0)
         {
             if (player.WillStatusEndGCD(0, 0,
-                _action.Setting.StatusFromSelf, statusNeed.ToArray()))
+                _action.Setting.StatusFromSelf, statusNeed))
             {
                 whyCant = WhyActionCantUse.NoStatusNeed;
                 return false;

@@ -139,7 +139,7 @@ partial class CustomRotation
                 float distance = (ActionID)a.ID switch
                 {
                     ActionID.EnAvantPvE => 10,
-                    ActionID.AetherialShiftPvE => 15,
+                    ActionID.AetherialShiftPvE or ActionID.HellsIngressPvE => 15,
                     _ => (float)0,
                 };
                 if (distance > 0)
