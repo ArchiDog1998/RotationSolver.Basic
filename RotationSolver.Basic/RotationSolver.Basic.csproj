@@ -77,8 +77,6 @@
 
 	  <ProjectReference Include="..\XIVConfigUI\XIVConfigUI\XIVConfigUI.csproj" />
 
-	  <ProjectReference Include="..\XIVDrawer\XIVDrawer\XIVDrawer.csproj" />
-
       <None Include="..\Logo.png">
 		<Pack>True</Pack>
 		<PackagePath>\</PackagePath>
