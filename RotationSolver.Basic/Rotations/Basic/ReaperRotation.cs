@@ -11,6 +11,10 @@ partial class ReaperRotation
     static partial void ModifyShadowOfDeathPvE(ref ActionSetting setting)
     {
         setting.TargetStatusProvide = [StatusID.DeathsDesign];
+        setting.CreateConfig = () => new()
+        {
+             StatusGcdCount = 4,
+        };
     }
 
     static partial void ModifyWhorlOfDeathPvE(ref ActionSetting setting)
@@ -19,6 +23,7 @@ partial class ReaperRotation
         setting.CreateConfig = () => new()
         {
             AoeCount = 2,
+            StatusGcdCount = 4,
         };
     }
 
@@ -262,6 +267,7 @@ partial class ReaperRotation
     static partial void ModifyHarvestMoonPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.Soulsow];
+        setting.SpecialType = SpecialActionType.MeleeRange;
     }
     #endregion
 
@@ -293,7 +299,7 @@ partial class ReaperRotation
     static partial void ModifyPlentifulHarvestPvE(ref ActionSetting setting)
     {
         setting.StatusNeed = [StatusID.ImmortalSacrifice];
-        setting.StatusProvide = [StatusID.BloodsownCircle_2972];
+        setting.ActionCheck = () => Player.WillStatusEndGCD(0, 0, true, StatusID.BloodsownCircle_2972);
     }
 
     /// <inheritdoc/>
