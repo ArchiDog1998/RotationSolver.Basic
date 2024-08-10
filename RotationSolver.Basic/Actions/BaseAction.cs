@@ -57,9 +57,9 @@ public class BaseAction : IBaseAction, IAction
     public byte Level => Info.Level;
 
     /// <inheritdoc/>
-    public bool IsEnabled 
-    { 
-        get => Config.IsEnabled; 
+    public bool IsEnabled
+    {
+        get => Config.IsEnabled;
         set => Config.IsEnabled = value;
     }
 
@@ -88,7 +88,7 @@ public class BaseAction : IBaseAction, IAction
         {
             if (!Service.Config.RotationActionConfig.TryGetValue(ID, out var value))
             {
-                Service.Config.RotationActionConfig[ID] = value 
+                Service.Config.RotationActionConfig[ID] = value
                     = Setting.CreateConfig?.Invoke() ?? new();
                 if (Action.ClassJob.Value?.GetJobRole() == JobRole.Tank)
                 {
@@ -164,7 +164,7 @@ public class BaseAction : IBaseAction, IAction
             }
             if (TargetInfo.Range >= 20) // Range
             {
-                Setting.TargetStatusPenalty = 
+                Setting.TargetStatusPenalty =
                 [
                     StatusID.RangedResistance,
                     StatusID.EnergyField,
@@ -187,7 +187,7 @@ public class BaseAction : IBaseAction, IAction
     }
 
     /// <inheritdoc/>
-    public bool CanUse(out IAction act, bool skipStatusProvideCheck = false, bool skipComboCheck = false, bool skipCastingCheck = false, 
+    public bool CanUse(out IAction act, bool skipStatusProvideCheck = false, bool skipComboCheck = false, bool skipCastingCheck = false,
         bool usedUp = false, bool onLastAbility = false, bool skipClippingCheck = false, bool skipAoeCheck = false, byte gcdCountForAbility = 0)
     {
         act = this!;
@@ -209,7 +209,8 @@ public class BaseAction : IBaseAction, IAction
             skipClippingCheck = true;
         }
 
-        if (Player.Object.Level >= _maxLevel)
+        if (Player.Object.Level >= _maxLevel
+            || Setting.ReplacingTrait != null && Setting.ReplacingTrait.EnoughLevel)
         {
             _whyCant = WhyActionCantUse.MaxLevel;
             return false;

@@ -12,7 +12,7 @@ internal class TargetingItemAttribute : ListUIAttribute
     public override void OnClick(object obj)
     {
         if (obj is not TargetingItem data) return;
-        DrawerHelper.raw(() =>
+        DrawerHelper.Draw(() =>
         {
             var target = data.FindTarget(DataCenter.AllTargets);
             if (target == null) return [];

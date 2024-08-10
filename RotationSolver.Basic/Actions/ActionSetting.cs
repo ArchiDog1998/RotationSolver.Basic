@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Actions;
+﻿using RotationSolver.Basic.Traits;
+
+namespace RotationSolver.Basic.Actions;
 
 internal enum SpecialActionType : byte
 {
@@ -121,4 +123,9 @@ public class ActionSetting()
     internal StatusID[]? StatusProvide { get; set; } = null;
 
     internal StatusID[]? TargetStatusProvide { get; set; } = null;
+
+    /// <summary>
+    /// The replacing action trait.
+    /// </summary>
+    public IBaseTrait? ReplacingTrait { get; set; } = null;
 }
