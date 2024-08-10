@@ -546,7 +546,7 @@ public struct ActionTargetInfo(IBaseAction action)
                 {
                     type = TargetType.Move;
                 }
-                else
+                if (type != TargetType.Move)
                 {
                     IGameObjects = IGameObjects.Where(t => t.DistanceToPlayer() < 1);
                 }
