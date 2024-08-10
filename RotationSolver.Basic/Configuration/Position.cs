@@ -2,12 +2,19 @@
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Common.Component.BGCollision;
 using XIVConfigUI.Attributes;
-using XIVDrawer.Vfx;
 
 namespace RotationSolver.Basic.Configuration;
 
-[ListUI(60403)]
-[Description("Position")]
+internal class PositionAttribute() : ListUIAttribute(60403)
+{
+    public override void OnClick(object obj)
+    {
+        if (obj is not Position pos) return;
+        DrawerHelper.Draw(() => [new OmenData(OmenDataType.Static, StaticOmen.Circle, new(pos), Vector2.One, Vector4.One)]);
+    }
+}
+
+[Position, Description("Position")]
 internal class Position(float x, float y, float z)
 {
     [Range(0, 0, ConfigUnitType.Yalms)]
@@ -52,11 +59,5 @@ internal class Position(float x, float y, float z)
         X = point.X;
         Y = point.Y;
         Z = point.Z;
-    }
-
-    [UI]
-    public void Draw()
-    {
-        DrawerHelper.Draw(() => [new StaticVfx(GroundOmenFriendly.BasicCircle.Omen(), this, 0, Vector3.One)]);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using XIVConfigUI.Attributes;
-using XIVDrawer.Element3D;
+using XIVConfigUI.Overlay;
 
-namespace RotationSolver.Basic.Configuration.Drawing; 
+namespace RotationSolver.Basic.Configuration.Drawing;
 
 internal class TextDrawing
 {

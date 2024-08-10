@@ -89,7 +89,9 @@ internal class Service : IDisposable
 
     public static uint NextActionID { get; set; } = 0;
 
-    public Service()
+    public static Func<OmenData, IDisposable?>? ToDrawing { get; private set; }
+
+    public Service(Func<OmenData, IDisposable?> func)
     {
         Svc.Hook.InitializeFromAttributes(this);
 
@@ -109,6 +111,8 @@ internal class Service : IDisposable
         Svc.DutyState.DutyCompleted += DutyState_DutyCompleted;
         ClientState_Login();
         Recorder.Init();
+
+        ToDrawing = func;
     }
 
     private void DutyState_DutyCompleted(object? sender, ushort e)

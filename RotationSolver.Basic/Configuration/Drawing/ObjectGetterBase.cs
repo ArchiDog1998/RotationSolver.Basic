@@ -20,7 +20,7 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
     [UI("Target Text")]
     public TextDrawing TargetText { get; set; } = new();
 
-    public override IDisposable[] GetDrawing()
+    public override OmenData[] GetDrawing()
     {
         var objs = Svc.Objects.Where(t => Object.IsTrue(t) ?? false);
         return [..objs.SelectMany(GetTextDrawing),
@@ -41,12 +41,12 @@ internal abstract class ObjectGetterBase : BaseDrawingGetter
         }
     }
     
-    private IDisposable[] GetTextDrawing(IGameObject obj)
+    private OmenData[] GetTextDrawing(IGameObject obj)
     {
         return [..TargetGet(obj).Select(TargetText.GetText)
             .Append(ObjectText.GetText(obj))
-            .OfType<IDisposable>()];
+            .OfType<IDisposable>().Select(i => new OmenData(i))];
     }
 
-    protected abstract IDisposable[] GetObjectDrawing(IGameObject obj);
+    protected abstract OmenData[] GetObjectDrawing(IGameObject obj);
 }

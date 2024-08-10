@@ -25,5 +25,6 @@ internal abstract class BaseDrawingGetter
 
     [UI("Name")]
     public string Name { get; set; } = "Unnamed";
-    public abstract IDisposable[] GetDrawing();
+
+    public abstract OmenData[] GetDrawing();
 }

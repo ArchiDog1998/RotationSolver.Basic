@@ -244,6 +244,7 @@ partial class MonkRotation
     private static void Mediation(ref ActionSetting setting)
     {
         setting.ActionCheck = () => Chakra < 5;
+        setting.SpecialType = SpecialActionType.MeleeRange;
     }
 
     static partial void ModifyEnlightenedMeditationPvE(ref ActionSetting setting)
@@ -284,14 +285,18 @@ partial class MonkRotation
                 if (InspiritedMeditationPvE.CanUse(out act)) return true;
             }
         }
-        if (ForbiddenMeditationPvE.EnoughLevel)
-        {
-            if (ForbiddenMeditationPvE.CanUse(out act)) return true;
-        }
         else
         {
-            if (SteeledMeditationPvE.CanUse(out act)) return true;
+            if (ForbiddenMeditationPvE.EnoughLevel)
+            {
+                if (ForbiddenMeditationPvE.CanUse(out act)) return true;
+            }
+            else
+            {
+                if (SteeledMeditationPvE.CanUse(out act)) return true;
+            }
         }
+
         return false;
     }
     #endregion
@@ -303,6 +308,7 @@ partial class MonkRotation
     static partial void ModifyFormShiftPvE(ref ActionSetting setting)
     {
         setting.StatusProvide = [StatusID.FormlessFist, StatusID.PerfectBalance];
+        setting.SpecialType = SpecialActionType.MeleeRange;
     }
 
     static partial void ModifyMantraPvE(ref ActionSetting setting)

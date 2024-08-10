@@ -1,6 +1,4 @@
-﻿using ECommons.GameHelpers;
-
-namespace RotationSolver.Basic.Rotations;
+﻿namespace RotationSolver.Basic.Rotations;
 
 partial class CustomRotation
 {
@@ -58,7 +56,9 @@ partial class CustomRotation
 
     private void UpdateActions(JobRole role)
     {
+        IBaseAction.TargetOverride = TargetType.Move;
         ActionMoveForwardGCD = MoveForwardGCD(out var act) ? act : null;
+        IBaseAction.TargetOverride = null;
 
         if (!DataCenter.HPNotFull && role == JobRole.Healer)
         {

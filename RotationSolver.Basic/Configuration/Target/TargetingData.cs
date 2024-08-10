@@ -1,5 +1,4 @@
 ﻿using XIVConfigUI.Attributes;
-using XIVDrawer.Vfx;
 
 namespace RotationSolver.Basic.Configuration.Target;
 
@@ -17,7 +16,7 @@ internal class TargetingDataAttribute : ListUIAttribute
         {
             var target = data.FindTarget(DataCenter.AllTargets);
             if (target == null) return [];
-            return [new StaticVfx(GroundOmenFriendly.BasicCircle.Omen(), target, Vector3.One)];
+            return [new OmenData(OmenDataType.Static, StaticOmen.Circle, new(target), Vector2.One, Vector4.One)];
         });
     }
 }

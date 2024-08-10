@@ -1,27 +1,11 @@
-﻿using ECommons.DalamudServices;
+﻿using Dalamud.Interface.Colors;
+using ECommons.DalamudServices;
 using ECommons.GameFunctions;
 using RotationSolver.Basic.Configuration.Target;
 using XIVConfigUI.Attributes;
-using XIVDrawer;
-using XIVDrawer.Vfx;
 using GAction = Lumina.Excel.GeneratedSheets.Action;
 
 namespace RotationSolver.Basic.Configuration.Drawing;
-
-internal class OmenSelectorAttribute : ChoicesAttribute
-{
-    protected override Pair[] GetChoices()
-    {
-        var omenInfo = typeof(GroundOmenHostile).GetRuntimeFields()
-        .Concat(typeof(GroundOmenNone).GetRuntimeFields())
-        .Concat(typeof(GroundOmenFriendly).GetRuntimeFields());
-
-        return 
-        [
-            .. omenInfo.Select(f => new Pair(((string)f.GetValue(null)!).Omen(), f.Name)),
-        ];
-    }
-}
 
 [Description("Action Drawing")]
 internal class ActionDrawingGetter : BaseDrawingGetter
@@ -32,7 +16,7 @@ internal class ActionDrawingGetter : BaseDrawingGetter
     [UI("Action")]
     public ActionID ActionID { get; set; }
 
-    [OmenSelector, UI("Path")]
+    [ObjectSelector<StaticOmen>, UI("Path")]
     public string Path { get; set; } = "";
 
     [UI("X Scale")]
@@ -40,6 +24,9 @@ internal class ActionDrawingGetter : BaseDrawingGetter
 
     [UI("Y Scale")]
     public float Y { get; set; }
+
+    [UI("Color")]
+    public Vector4 Color { get; set; } = ImGuiColors.DalamudRed;
 
     [Range(0, 0, ConfigUnitType.Yalms)]
     [UI("Position Or Offset")]
@@ -52,30 +39,30 @@ internal class ActionDrawingGetter : BaseDrawingGetter
     [UI("Target")]
     public TargetingConditionSet Target { get; set; } = new();
 
-    public override IDisposable[] GetDrawing()
+    public override OmenData[] GetDrawing()
     {
         var objs = Svc.Objects.Where(t => Target.IsTrue(t) ?? false);
         if (objs.Any())
         {
-            return [.. objs.Select(GetActionDrawing).OfType<IDisposable>()];
+            return [.. objs.Select(GetActionDrawing).OfType<OmenData>()];
         }
 
         var item = GetActionDrawing(null);
         if (item == null) return [];
-        return [item];
+        return [item.Value];
     }
 
-    private IDisposable? GetActionDrawing(IGameObject? obj)
+    private OmenData? GetActionDrawing(IGameObject? obj)
     {
         if (ActionID == 0) return null;
         var action = Svc.Data.GetExcelSheet<GAction>()?.GetRow((uint)ActionID);
         if (action == null) return null;
         var omen = action.Omen.Value?.Path?.RawString;
-        omen = string.IsNullOrEmpty(omen) ? Path : omen.Omen();
+        omen = string.IsNullOrEmpty(omen) ? Path : omen;
 
         var x = X != 0 ? X : (action.XAxisModifier > 0 ? action.XAxisModifier / 2 : action.EffectRange);
         var y = Y != 0 ? Y : action.EffectRange;
-        var scale = new Vector3(x, XIVDrawerMain.HeightScale, y);
+        var scale = new Vector2(x, y);
 
         if (action.TargetArea)
         {
@@ -91,22 +78,26 @@ internal class ActionDrawingGetter : BaseDrawingGetter
                     }
                 }
             }
-            return new StaticVfx(omen, location, 0, scale);
+            return new OmenData(OmenDataType.Static, omen, new(location), scale, Color);
         }
         else
         {
-            if(obj != null)
+            if (obj != null)
             {
-                return new StaticVfx(omen, obj, scale)
+                return new OmenData(OmenDataType.Static, omen, new(obj)
                 {
-                    RotateAddition = Rotation / 180 * MathF.PI,
-                    LocationOffset = Position,
-                };
+                    Rotation = Rotation / 180 * MathF.PI,
+                    Position = Position,
+                }, scale, Color);
             }
             else
             {
-                return new StaticVfx(omen, Position, Rotation, scale);
+                return new OmenData(OmenDataType.Static, omen, new()
+                {
+                    Position = Position,
+                    Rotation = Rotation,
+                }, scale, Color);
             }
-        }
+        } 
     }
 }

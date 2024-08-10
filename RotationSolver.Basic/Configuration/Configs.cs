@@ -1,4 +1,5 @@
 ﻿using Dalamud.Configuration;
+using Dalamud.Interface.Colors;
 using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using RotationSolver.Basic.Configuration.Target;
@@ -126,14 +127,20 @@ internal partial class Configs : IPluginConfiguration
     [UI("Uses MP Potions.", (int)UiString.ConfigWindow_Auto_ActionUsage)]
     public ConditionBoolean UseMpPotions { get; private set; } = new(false, nameof(UseMpPotions));
 
-    [UI("Draws the melee buffer area on the screen.", Parent = nameof(UseOverlayWindow),
+    [UI("Draws the melee buffer area on the screen.", (int)UiString.ConfigWindow_UI_Overlay,
         Description = "Shows the area where no actions will be used between ranged and melee type actions.")]
     public ConditionBoolean DrawMeleeOffset { get; private set; } = new(true, nameof(DrawMeleeOffset));
 
-    [UI("Shows the target of the movement actions.", Parent = nameof(UseOverlayWindow))]
+    [UI("Melee Offset Color.",Parent =nameof(DrawMeleeOffset))]
+    public Vector4 MeleeOffsetColor { get; set; } = ImGuiColors.DalamudRed;
+
+    [UI("Shows the target of the movement actions.", (int)UiString.ConfigWindow_UI_Overlay)]
     public ConditionBoolean ShowMoveTarget { get; private set; } = new(true, nameof(ShowMoveTarget));
 
-    [UI("Shows Positional", Parent = nameof(UseOverlayWindow))]
+    [UI("Move Target Color", Parent = nameof(ShowMoveTarget))]
+    public Vector4 MoveTargetColor { get; set; } = ImGuiColors.ParsedPurple;
+
+    [UI("Shows Positional", (int)UiString.ConfigWindow_UI_Overlay)]
     public ConditionBoolean ShowPositional { get; private set; } = new(true, nameof(ShowPositional));
     
     [UI("Shows Positional Line", Parent = nameof(ShowPositional))]
@@ -147,7 +154,13 @@ internal partial class Configs : IPluginConfiguration
     [UI("Positional Line Length", Parent = nameof(ShowPositionalLine))]
     public float PositionalLineLength { get; private set; } = 3;
 
-    [UI("Shows target related drawing.", Parent = nameof(UseOverlayWindow),
+    [UI("Positional Color", Parent = nameof(ShowPositional))]
+    public Vector4 PositionalColor { get; set; } = ImGuiColors.ParsedGreen;
+
+    [UI("Positional Correct Color", Parent = nameof(ShowPositional))]
+    public Vector4 PositionalCorrectColor { get; set; } = ImGuiColors.DalamudWhite;
+
+    [UI("Shows target related drawing.", (int)UiString.ConfigWindow_UI_Overlay,
         Description = "Shows the next ability under the target and AoE attacks effect area")]
     public ConditionBoolean ShowTarget { get; private set; } = new(true, nameof(ShowTarget));
 
@@ -159,6 +172,9 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Show rectangle drawing.", Parent = nameof(ShowTarget))]
     public ConditionBoolean ShowRectangleTarget { get; private set; } = new(true, nameof(ShowRectangleTarget));
+
+    [UI("Target Omen Color", Parent = nameof(ShowTarget))]
+    public Vector4 TargetOmenColor { get; private set; } = ImGuiColors.TankBlue;
 
     [UI("Shows the target's estimated time to kill.",
         Parent = nameof(ShowTarget))]
@@ -415,9 +431,6 @@ internal partial class Configs : IPluginConfiguration
     [UI("Shows RS state icon.", Parent = nameof(UseOverlayWindow))]
     public ConditionBoolean ShowStateIcon { get; private set; } = new(true, nameof(ShowStateIcon));
 
-    [UI("Shows beneficial AoE locations.", Parent = nameof(UseOverlayWindow))]
-    public ConditionBoolean ShowBeneficialPositions { get; private set; } = new(true, nameof(ShowBeneficialPositions));
-
     [UI("Hides all warnings.", (int)UiString.ConfigWindow_UI_Information)]
     public ConditionBoolean HideWarning { get; private set; } = new(false, nameof(HideWarning));
 
@@ -474,13 +487,6 @@ internal partial class Configs : IPluginConfiguration
         Parent =nameof(AutoOffAfterCombat))]
     [Range(0, 600, ConfigUnitType.Seconds)]
     public float AutoOffAfterCombatTime { get; set; } = 30;
-
-    [UI("Drawing smoothness.", Parent = nameof(UseOverlayWindow))]
-    [Range(0.005f, 0.05f, ConfigUnitType.Yalms, 0.001f)]
-    public float SampleLength { get; set; } = 1;
-
-    [UI("Uses tasks for making the overlay window faster.", Parent = nameof(UseOverlayWindow))]
-    public ConditionBoolean UseTasksForOverlay { get; private set; } = new(true, nameof(UseTasksForOverlay));
 
     [UI("The angle of your vision cone.", Parent = nameof(OnlyAttackInVisionCone))]
     [Range(0, 90, ConfigUnitType.Degree, 0.02f)]
@@ -696,15 +702,6 @@ internal partial class Configs : IPluginConfiguration
 
     [UI("Box outline color of teaching mode.", Parent =nameof(TeachingMode))]
     public Vector4 TeachingModeColor { get; set; } = new(0f, 1f, 0.8f, 1f);
-
-    [UI("Target color.", Parent =nameof(TargetColor))]
-    public Vector4 TargetColor { get; set; } = new(1f, 0.2f, 0f, 0.8f);
-
-    [UI("The color of beneficial AoE positions.", Parent =nameof(ShowBeneficialPositions))]
-    public Vector4 BeneficialPositionColor { get; set; } = new(0.5f, 0.9f, 0.1f, 0.7f);
-
-    [UI("The color of the hovered beneficial position.", Parent = nameof(ShowBeneficialPositions))]
-    public Vector4 HoveredBeneficialPositionColor { get; set; } = new(1f, 0.5f, 0f, 0.8f);
 
     [UI("Locked control window's background.", Parent = nameof(ShowControlWindow))]
     public Vector4 ControlWindowLockBg { get; set; } = new (0, 0, 0, 0.55f);

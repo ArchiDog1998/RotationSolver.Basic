@@ -16,9 +16,9 @@ internal class DrawingAction : ITerritoryAction
             item.Dispose();
         }
 
-        if (Service.Config.ShowDrawing)
+        if (Service.Config.ShowDrawing && Service.ToDrawing != null)
         {
-            _drawings = [.. DrawingGetters.Where(i => i.Enable).SelectMany(i => i.GetDrawing())];
+            _drawings = [.. DrawingGetters.Where(i => i.Enable).SelectMany(i => i.GetDrawing().Select(Service.ToDrawing).OfType<IDisposable>())];
         }
         else
         {
