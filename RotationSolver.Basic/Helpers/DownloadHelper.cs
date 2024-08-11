@@ -41,9 +41,8 @@ internal static class DownloadHelper
         SupportersHash = await DownloadOneAsync<string[]>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{XIVConfigUIMain.RepoName}/main/Resources/SupportersHash.json") ?? [];
     }
 
-    static Dictionary<string, byte> _data = [];
-    static Type? _loadedType;
-    static bool _isLoading = false;
+    static readonly Dictionary<Type, Dictionary<string, byte>> loadedData = [];
+    static bool _isLoading;
     public static Dictionary<string, byte> GetRating(Type rotationType, out string rate)
     {
         var data = GetRating(rotationType);
@@ -60,7 +59,7 @@ internal static class DownloadHelper
 
     private static Dictionary<string, byte> GetRating(Type rotationType)
     {
-        if (_loadedType == rotationType) return _data;
+        if (loadedData.TryGetValue(rotationType, out var data)) return data;
         if (_isLoading) return [];
 
         _isLoading = true;
@@ -68,17 +67,18 @@ internal static class DownloadHelper
         return [];
     }
 
-    public static void ModifyMyRate(byte rate)
+    public static void ModifyMyRate(Type rotationType, byte rate)
     {
         if (!Player.Available) return;
-        _data[Player.Object.EncryptString()] = rate;
+        if (!loadedData.TryGetValue(rotationType, out var data)) return;
+
+        data[Player.Object.EncryptString()] = rate;
     }
 
     private static async void UpdateRating(Type rotationType)
     {
-        _data = await DownloadOneAsync<Dictionary<string, byte>>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/Rating/{rotationType.FullName ?? rotationType.Name}.json")
+        loadedData[rotationType] = await DownloadOneAsync<Dictionary<string, byte>>($"https://raw.githubusercontent.com/{XIVConfigUIMain.UserName}/{GithubRecourcesHelper.RepoName}/main/Rating/{rotationType.FullName ?? rotationType.Name}.json")
             ?? [];
-        _loadedType = rotationType;
         _isLoading = false;
     }
 

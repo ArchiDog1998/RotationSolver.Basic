@@ -15,11 +15,6 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// </summary>
     public CdInfo[] CoolDownGroups { get; }
 
-    /// <summary>
-    /// Recast time.
-    /// </summary>
-    public unsafe float RecastTime => CoolDownGroups[0].RecastTime;
-
     /// <summary/>
     public float RecastTimeElapsed => RecastTimeElapsedRaw - DataCenter.WeaponElapsed;
 
@@ -42,9 +37,12 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// <summary/>
     public unsafe ushort MaxCharges => Math.Max(ActionManager.GetMaxCharges(_action.Info.ID, (uint)Player.Level), (ushort)1);
 
-    internal float RecastTimeOneChargeRaw => ActionManager.GetAdjustedRecastTime(ActionType.Action, _action.Info.ID) / 1000f;
+    /// <summary>
+    /// Recast charge time
+    /// </summary>
+    public float RecastTime => ActionManager.GetAdjustedRecastTime(ActionType.Action, _action.Info.ID) / 1000f;
 
-    float ICooldown.RecastTimeOneChargeRaw => RecastTimeOneChargeRaw;
+    float ICooldown.RecastTimeOneChargeRaw => RecastTime;
 
     /// <summary/>
     public float RecastTimeRemainOneCharge => RecastTimeRemainOneChargeRaw - DataCenter.WeaponRemain;
@@ -53,7 +51,7 @@ public readonly struct ActionCooldownInfo : ICooldown
     {
         get
         {
-            var result = RecastTimeRemainRaw % RecastTimeOneChargeRaw;
+            var result = RecastTimeRemainRaw % RecastTime;
             if (CoolDownGroups.Length > 1)
             {
                 result = MathF.Max(result,  CoolDownGroups[1].RecastTimeRemain);
@@ -67,7 +65,7 @@ public readonly struct ActionCooldownInfo : ICooldown
     /// </summary>
     public float RecastTimeElapsedOneCharge => RecastTimeElapsedOneChargeRaw - DataCenter.WeaponElapsed;
 
-    float RecastTimeElapsedOneChargeRaw => RecastTimeElapsedRaw % RecastTimeOneChargeRaw;
+    float RecastTimeElapsedOneChargeRaw => RecastTimeElapsedRaw % RecastTime;
 
     /// <summary>
     /// The default constructor.
@@ -139,7 +137,7 @@ public readonly struct ActionCooldownInfo : ICooldown
     public bool JustUsedAfter(float time)
     {
         if (!IsCoolingDown) return true;
-        var elapsed = RecastTimeElapsedRaw % RecastTimeOneChargeRaw;
+        var elapsed = RecastTimeElapsedRaw % RecastTime;
         return elapsed + DataCenter.WeaponRemain < time;
     }
 

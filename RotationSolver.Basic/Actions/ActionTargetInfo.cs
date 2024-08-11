@@ -253,6 +253,9 @@ public struct ActionTargetInfo(IBaseAction action)
             return FindTargetArea(canTargets, canAffects, range, player);
         }
 
+#if DEBUG
+        //skipAoeCheck = true;
+#endif
         var targets = GetMostCanTargetObjects(canTargets, canAffects,
             skipAoeCheck ? 1 : action.Config.AoeCount);
         var target = FindTargetByType(targets, type, action.Config.AutoHealRatio, action.Setting.SpecialType, TargetingWay);

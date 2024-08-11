@@ -11,70 +11,135 @@ partial class BlackMageRotation
     /// <summary>
     /// 
     /// </summary>
-    public static bool IsPolyglotStacksMaxed => EnhancedPolyglotTrait.EnoughLevel ? PolyglotStacks == 2 : PolyglotStacks == 1;
+    public static bool IsPolyglotStacksMaxed => PolyglotStacks >= MaxPolyglotStacks;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public static byte MaxPolyglotStacks
+    {
+        get
+        {
+            if (EnhancedPolyglotIiTrait.EnoughLevel) return 3;
+            else if (EnhancedPolyglotTrait.EnoughLevel) return 2;
+            else return 1;
+        }
+    }
     #endregion
 
-    /// <summary>
-    /// 
-    /// </summary>
-    protected static bool HasFire => Player.HasStatus(true, StatusID.Firestarter);
-
-    /// <summary>
-    /// 
-    /// </summary>
-    protected static bool HasThunder => Player.HasStatus(true, StatusID.Thundercloud);
-
-    static partial void ModifyAetherialManipulationPvP(ref ActionSetting setting)
+    #region Thunder
+    private static void Thunder(ref ActionSetting setting)
     {
-        setting.SpecialType = SpecialActionType.MovingForward;
+        setting.StatusNeed = [StatusID.Thunderhead];
     }
 
     static partial void ModifyThunderPvE(ref ActionSetting setting)
     {
-        setting.MPOverride = () => HasThunder ? 0 : null;
+        Thunder(ref setting);
     }
 
     static partial void ModifyThunderIiPvE(ref ActionSetting setting)
     {
-        setting.MPOverride = () => HasThunder ? 0 : null;
+        Thunder(ref setting);
     }
 
     static partial void ModifyThunderIiiPvE(ref ActionSetting setting)
     {
-        setting.MPOverride = () => HasThunder ? 0 : null;
+        Thunder(ref setting);
     }
 
     static partial void ModifyThunderIvPvE(ref ActionSetting setting)
     {
-        setting.MPOverride = () => HasThunder ? 0 : null;
+        Thunder(ref setting);
+    }
+
+    static partial void ModifyHighThunderPvE(ref ActionSetting setting)
+    {
+        Thunder(ref setting);
+    }
+
+    static partial void ModifyHighThunderIiPvE(ref ActionSetting setting)
+    {
+        Thunder(ref setting);
+    }
+
+    /// <summary>
+    /// Use Thunder actions.
+    /// </summary>
+    /// <param name="act"></param>
+    /// <param name="skipStatusProvideCheck"></param>
+    /// <returns></returns>
+    public bool UseThunder(out IAction? act, bool skipStatusProvideCheck = false)
+    {
+        if (ThunderIiPvEReplace.CanUse(out act, skipStatusProvideCheck: skipStatusProvideCheck)) return true;
+        if (ThunderPvEReplace.CanUse(out act, skipStatusProvideCheck : skipStatusProvideCheck)) return true;
+        return false;
+    }
+    #endregion
+
+    #region Fire
+    private static void FireCheck(ref ActionSetting setting, ActionID action)
+    {
+        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > action.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyFireIiiPvE(ref ActionSetting setting)
     {
-        setting.MPOverride = () => HasFire ? 0 : null;
-        setting.ActionCheck = () => !IsLastGCD(ActionID.FireIiiPvE);
+        setting.MPOverride = () => Player.WillStatusEnd(0, true, StatusID.Firestarter) ? null : 0;
     }
 
     static partial void ModifyFireIvPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.FireIvPvE.GetCastTime() - 0.1f;
+        FireCheck(ref setting, ActionID.FireIvPvE);
     }
 
     static partial void ModifyDespairPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.DespairPvE.GetCastTime() - 0.1f;
+        FireCheck(ref setting, ActionID.DespairPvE);
     }
 
-    static partial void ModifyBlizzardIiiPvE(ref ActionSetting setting)
+    static partial void ModifyFlarePvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => !IsLastGCD(ActionID.BlizzardIvPvE);
+        FireCheck(ref setting, ActionID.FlarePvE);
+    }
+
+    static partial void ModifyFlareStarPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => AstralSoulStacks == 6
+            && InAstralFire && ElementTimeRemaining > ActionID.FlareStarPvE.GetCastTime() - 0.1f;
+    }
+    #endregion
+
+    #region Ice
+    private static void IceCheck(ref ActionSetting setting, ActionID action)
+    {
+        setting.ActionCheck = () => InUmbralIce && ElementTimeRemaining > action.GetCastTime() - 0.1f;
     }
 
     static partial void ModifyBlizzardIvPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => InUmbralIce && ElementTimeRemaining > ActionID.BlizzardIvPvE.GetCastTime() - 0.1f;
+        IceCheck(ref setting, ActionID.BlizzardIvPvE);
     }
 
+    static partial void ModifyFreezePvE(ref ActionSetting setting)
+    {
+        IceCheck(ref setting, ActionID.FreezePvE);
+    }
+
+    /// <summary>
+    /// To get the <see cref="UmbralHearts"/>
+    /// </summary>
+    /// <param name="act"></param>
+    /// <returns></returns>
+    public bool GetUmbralHearts(out IAction? act)
+    {
+        if (FreezePvE.CanUse(out act)) return true;
+        if (BlizzardIvPvE.CanUse(out act)) return true;
+        return false;
+    }
+    #endregion
+
+    #region None Elements
     static partial void ModifyXenoglossyPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => PolyglotStacks > 0;
@@ -85,32 +150,13 @@ partial class BlackMageRotation
         setting.ActionCheck = () => IsParadoxActive;
     }
 
-    static partial void ModifyFlarePvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => InAstralFire && ElementTimeRemaining > ActionID.FlarePvE.GetCastTime() - 0.1f;
-    }
-
-    static partial void ModifyFreezePvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => InUmbralIce && ElementTimeRemaining > ActionID.FreezePvE.GetCastTime() - 0.1f;
-    }
-
     static partial void ModifyFoulPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => PolyglotStacks > 0;
     }
+    #endregion
 
-    static partial void ModifyAmplifierPvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => EnochianTimer > 10 && PolyglotStacks < 2;
-    }
-
-
-    static partial void ModifyManafontPvE(ref ActionSetting setting)
-    {
-        setting.ActionCheck = () => DataCenter.CurrentMp <= 7000;
-    }
-
+    #region Leylines
     static partial void ModifyLeyLinesPvE(ref ActionSetting setting)
     {
         setting.CreateConfig = () => new()
@@ -124,11 +170,26 @@ partial class BlackMageRotation
         setting.StatusNeed = [StatusID.LeyLines];
     }
 
-    //static partial void ModifySharpcastPvE(ref ActionSetting setting)
-    //{
-    //    setting.ActionCheck = () => HasHostilesInRange;
-    //    setting.StatusProvide = [StatusID.Sharpcast];
-    //}
+    static partial void ModifyRetracePvE(ref ActionSetting setting)
+    {
+        setting.StatusNeed = [StatusID.LeyLines];
+    }
+    #endregion
+
+    static partial void ModifyAetherialManipulationPvP(ref ActionSetting setting)
+    {
+        setting.SpecialType = SpecialActionType.MovingForward;
+    }
+
+    static partial void ModifyAmplifierPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => EnochianTimer > 5 && !IsPolyglotStacksMaxed;
+    }
+
+    static partial void ModifyManafontPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => InAstralFire;
+    }
 
     static partial void ModifyTriplecastPvE(ref ActionSetting setting)
     {
@@ -142,24 +203,7 @@ partial class BlackMageRotation
 
     static partial void ModifyUmbralSoulPvE(ref ActionSetting setting)
     {
-        setting.ActionCheck = () => JobGauge.InUmbralIce && DataCenter.AnimationLocktime <= ElementTimeRemaining + DataCenter.WeaponRemain;
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    protected static float Fire4Time { get; private set; }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    protected override void UpdateInfo()
-    {
-        if (Player.CastActionId == (uint)ActionID.FireIvPvE && Player.CurrentCastTime < 0.2)
-        {
-            Fire4Time = Player.TotalCastTime;
-        }
-        base.UpdateInfo();
+        setting.ActionCheck = () => InUmbralIce && DataCenter.AnimationLocktime <= ElementTimeRemaining + DataCenter.WeaponRemain;
     }
 
     /// <inheritdoc/>
