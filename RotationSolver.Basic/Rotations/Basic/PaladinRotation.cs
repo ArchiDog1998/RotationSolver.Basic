@@ -7,23 +7,19 @@ partial class PaladinRotation
     /// <inheritdoc/>
     public override MedicineType MedicineType => MedicineType.Strength;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public override bool CanHealSingleSpell => DataCenter.PartyMembers.Length == 1 && base.CanHealSingleSpell;
 
-    /// <summary>
-    /// 
-    /// </summary>
+    /// <summary/>
     public override bool CanHealAreaAbility => false;
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.DivineMight"/>
     /// </summary>
     public static bool HasDivineMight => !Player.WillStatusEndGCD(0, 0, true, StatusID.DivineMight);
 
     /// <summary>
-    /// 
+    /// Has <see cref="StatusID.FightOrFlight"/>
     /// </summary>
     public static bool HasFightOrFlight => !Player.WillStatusEndGCD(0, 0, true, StatusID.FightOrFlight);
 

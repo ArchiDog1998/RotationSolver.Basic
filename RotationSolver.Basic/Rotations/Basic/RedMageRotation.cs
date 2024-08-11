@@ -70,30 +70,12 @@ partial class RedMageRotation
         };
     }
 
-    static void WhiteManaUsage(ref ActionSetting setting, byte mana)
+    private static bool UseWhiteMana(byte mana)
     {
-        setting.ActionCheck = () =>
-        {
-            if (WhiteMana + mana == BlackMana) return false;
-            if (WhiteMana <= BlackMana) return true;
-            if (BlackMana + mana == WhiteMana) return true;
-            return false;
-        };
-    }
-
-    static partial void ModifyVeraeroPvE(ref ActionSetting setting)
-    {
-        WhiteManaUsage(ref setting, 6);
-    }
-
-    static partial void ModifyVeraeroIiPvE(ref ActionSetting setting)
-    {
-        WhiteManaUsage(ref setting, 7);
-    }
-
-    static partial void ModifyVeraeroIiiPvE(ref ActionSetting setting)
-    {
-        WhiteManaUsage(ref setting, 6);
+        if (WhiteMana + mana == BlackMana) return false;
+        if (WhiteMana <= BlackMana) return true;
+        if (BlackMana + mana == WhiteMana) return true;
+        return false;
     }
 
     /// <summary>
@@ -103,7 +85,10 @@ partial class RedMageRotation
     /// <returns></returns>
     protected bool AoeShort(out IAction? act)
     {
-        if (VeraeroIiPvE.CanUse(out act)) return true;
+        if (UseWhiteMana(7))
+        {
+            if (VeraeroIiPvE.CanUse(out act)) return true;
+        }
         if (VerthunderIiPvE.CanUse(out act)) return true;
         return false;
     }
@@ -128,8 +113,11 @@ partial class RedMageRotation
     /// <returns></returns>
     protected bool SingleLong(out IAction? act)
     {
-        if (VeraeroIiiPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
-        if (VeraeroPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
+        if (UseWhiteMana(6))
+        {
+            if (VeraeroIiiPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
+            if (VeraeroPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
+        }
         if (VerthunderIiiPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
         if (VerthunderPvE.CanUse(out act, skipStatusProvideCheck: true)) return true;
         return false;

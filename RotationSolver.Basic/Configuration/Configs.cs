@@ -399,9 +399,16 @@ internal partial class Configs : IPluginConfiguration
     [UI("Uses beneficial AoE actions while moving.", Parent = nameof(UseGroundBeneficialAbility))]
     public ConditionBoolean UseGroundBeneficialAbilityWhenMoving { get; private set; } = new(false, nameof(UseGroundBeneficialAbilityWhenMoving));
 
-    [UI("Considers all players for friendly actions (include passerby).",
+    [UI("Only the players in party are friendly.",
         (int)UiString.ConfigWindow_Target_Config, Section = 3)]
-    public ConditionBoolean TargetAllForFriendly { get; private set; } = new(false, nameof(TargetAllForFriendly));
+    public ConditionBoolean OnlyPartiesAreFriendly { get; private set; } = new(true, nameof(OnlyPartiesAreFriendly));
+
+    [UI("Do not target pets as friendly",
+        (int)UiString.ConfigWindow_Target_Config, Section = 3)]
+    public ConditionBoolean DontTargetPetsAsFriendly { get; private set; } = new(true, nameof(DontTargetPetsAsFriendly));
+    [UI("Do not target chocobos as friendly",
+    (int)UiString.ConfigWindow_Target_Config, Section = 3)]
+    public ConditionBoolean DontTargetChocoboAsFriendly { get; private set; } = new(true, nameof(DontTargetChocoboAsFriendly));
 
     [UI("Shows cooldown window.", (int)UiString.ConfigWindow_UI_Windows)]
     public ConditionBoolean ShowCooldownWindow { get; private set; } = new(false, nameof(ShowCooldownWindow));

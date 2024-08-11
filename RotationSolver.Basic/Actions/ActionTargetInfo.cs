@@ -4,6 +4,7 @@ using ECommons.ExcelServices;
 using ECommons.GameFunctions;
 using ECommons.GameHelpers;
 using FFXIVClientStructs.FFXIV.Client.Game;
+using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Client.Graphics.Scene;
 using RotationSolver.Basic.Configuration;
 using RotationSolver.Basic.Configuration.Target;
@@ -162,45 +163,59 @@ public struct ActionTargetInfo(IBaseAction action)
         return tar.CanSee();
     }
 
-    private readonly bool GeneralCheck(IBattleChara IGameObject, bool skipStatusProvideCheck)
+    private readonly bool GeneralCheck(IBattleChara gameObject, bool skipStatusProvideCheck)
     {
-        if (!IGameObject.IsTargetable) return false;
+        if (!gameObject.IsTargetable) return false;
 
-        if (!Service.Config.TargetAllForFriendly
-            && IGameObject.IsAlliance() && !IGameObject.IsParty())
+        if (gameObject.IsAlliance())
         {
-            return false;
+            if (Service.Config.OnlyPartiesAreFriendly && !gameObject.IsParty())
+            {
+                return false;
+            }
+            
+            if (gameObject is IBattleNpc npc)
+            {
+                switch (npc.BattleNpcKind)
+                {
+                    case Dalamud.Game.ClientState.Objects.Enums.BattleNpcSubKind.Pet
+                    when Service.Config.DontTargetPetsAsFriendly:
+                    case Dalamud.Game.ClientState.Objects.Enums.BattleNpcSubKind.Chocobo
+                    when Service.Config.DontTargetChocoboAsFriendly:
+                        return false;
+                }
+            }
         }
 
-        if (IGameObject.IsEnemy())
+        if (gameObject.IsEnemy())
         {
             //Can't attack.
-            if (!IGameObject.IsAttackable()) return false;
+            if (!gameObject.IsAttackable()) return false;
         }
 
-        return CheckStatus(IGameObject, skipStatusProvideCheck) 
-            && CheckTimeToKill(IGameObject);
+        return CheckStatus(gameObject, skipStatusProvideCheck) 
+            && CheckTimeToKill(gameObject);
     }
 
-    private readonly bool CheckStatus(IGameObject IGameObject, bool skipStatusProvideCheck)
+    private readonly bool CheckStatus(IGameObject gameObject, bool skipStatusProvideCheck)
     {
         if (!action.Config.ShouldCheckStatus) return true;
 
         if (action.Setting.TargetStatusNeed != null)
         {
-            if (IGameObject.WillStatusEndGCD(0, 0,
+            if (gameObject.WillStatusEndGCD(0, 0,
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusNeed)) return false;
         }
 
         if (action.Info.TargetStatusProvide.Length > 0 && !skipStatusProvideCheck)
         {
-            if (!IGameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
+            if (!gameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
                 action.Setting.StatusFromSelf, action.Info.TargetStatusProvide)) return false;
         }
 
         if (action.Setting.TargetStatusPenalty != null)
         {
-            if (!IGameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
+            if (!gameObject.WillStatusEndGCD(action.Config.StatusGcdCount, 0,
                 action.Setting.StatusFromSelf, action.Setting.TargetStatusPenalty)) return false;
         }
         return true;
