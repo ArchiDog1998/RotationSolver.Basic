@@ -217,7 +217,8 @@ public static class ObjectHelper
 
     internal static bool IsTargetOnSelf(this IBattleChara obj)
     {
-        return obj.TargetObject?.TargetObject == obj;
+        return DataCenter.IsHostileCastingToMe
+            || obj.TargetObject?.TargetObject == obj;
     }
 
     internal static bool IsDeathToRaise(this IGameObject obj)

@@ -13,58 +13,7 @@ partial class PaladinRotation
     /// <summary/>
     public override bool CanHealAreaAbility => false;
 
-    /// <summary>
-    /// Has <see cref="StatusID.DivineMight"/>
-    /// </summary>
-    public static bool HasDivineMight => !Player.WillStatusEndGCD(0, 0, true, StatusID.DivineMight);
-
-    /// <summary>
-    /// Has <see cref="StatusID.FightOrFlight"/>
-    /// </summary>
-    public static bool HasFightOrFlight => !Player.WillStatusEndGCD(0, 0, true, StatusID.FightOrFlight);
-
-    static partial void ModifyAtonementPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.AtonementReady];
-        setting.StatusProvide = [StatusID.SupplicationReady];
-    }
-
-    static partial void ModifySupplicationPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.SupplicationReady];
-        setting.StatusProvide = [StatusID.SepulchreReady];
-    }
-
-    static partial void ModifySepulchrePvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.SepulchreReady];
-    }
-
-    static partial void ModifyConfiteorPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.ConfiteorReady];
-    }
-
-    static partial void ModifyBladeOfHonorPvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.BladeOfHonorReady];
-    }
-
-    static partial void ModifyProminencePvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.DivineMight];
-    }
-
-    static partial void ModifyGoringBladePvE(ref ActionSetting setting)
-    {
-        setting.StatusNeed = [StatusID.GoringBladeReady];
-    }
-
-    static partial void ModifyRoyalAuthorityPvE(ref ActionSetting setting)
-    {
-        setting.StatusProvide = [StatusID.DivineMight];
-        setting.StatusProvide = [StatusID.AtonementReady];
-    }
+    private protected sealed override IBaseActionSet TankStance => IronWillPvEReplace;
 
     static partial void ModifyShieldBashPvE(ref ActionSetting setting)
     {
@@ -87,7 +36,6 @@ partial class PaladinRotation
         setting.TargetType = TargetType.ProvokeOrOthers;
     }
 
-    private protected sealed override IBaseActionSet TankStance => IronWillPvEReplace;
 
     static partial void ModifyRequiescatPvE(ref ActionSetting setting)
     {
@@ -105,18 +53,41 @@ partial class PaladinRotation
         };
     }
 
+    #region Burst
+    static partial void ModifyBladeOfFaithPvE(ref ActionSetting setting)
+    {
+        setting.SkipComboCheck = setting.NeedsHighlight = true;
+    }
+
+    static partial void ModifyBladeOfTruthPvE(ref ActionSetting setting)
+    {
+        setting.SkipComboCheck = setting.NeedsHighlight = true;
+    }
+
+    static partial void ModifyBladeOfValorPvE(ref ActionSetting setting)
+    {
+        setting.SkipComboCheck = setting.NeedsHighlight = true;
+    }
+    #endregion
+
+    #region Great Defense 
     static partial void ModifySentinelPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = StatusHelper.RampartStatus;
-        setting.ActionCheck = Player.IsTargetOnSelf;
+        GreatDefense(ref setting);
     }
 
     static partial void ModifyBulwarkPvE(ref ActionSetting setting)
     {
-        setting.StatusProvide = StatusHelper.RampartStatus;
-        setting.ActionCheck = Player.IsTargetOnSelf;
+        GreatDefense(ref setting);
     }
 
+    static partial void ModifyGuardianPvE(ref ActionSetting setting)
+    {
+        GreatDefense(ref setting);
+    }
+    #endregion
+
+    #region Oath Usage
     static partial void ModifyCoverPvE(ref ActionSetting setting)
     {
         setting.ActionCheck = () => OathGauge >= 50;
@@ -131,6 +102,12 @@ partial class PaladinRotation
     {
         setting.ActionCheck = () => OathGauge >= 50 && Player.IsTargetOnSelf();
     }
+
+    static partial void ModifySheltronPvE(ref ActionSetting setting)
+    {
+        setting.ActionCheck = () => OathGauge >= 50 && Player.IsTargetOnSelf();
+    }
+    #endregion
 
     static partial void ModifyIntervenePvP(ref ActionSetting setting)
     {

@@ -124,7 +124,7 @@ partial class CustomRotation
         if (DataCenter.MergedStatus.HasFlag(AutoStatus.DefenseSingle))
         {
             if (DefenseSingleAbility(out act)) return true;
-            if (!DataCenter.IsHostileCastingToTank
+            if (!DataCenter.IsHostileCastingToOthers
                 && ArmsLengthPvE.CanUse(out act)) return true;
         }
 

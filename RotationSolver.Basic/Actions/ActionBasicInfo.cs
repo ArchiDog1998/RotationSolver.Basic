@@ -113,6 +113,21 @@ public readonly struct ActionBasicInfo
         }
     }
 
+    /// <summary>
+    /// The combo actions
+    /// </summary>
+    public ActionID[] ComboActions
+    {
+        get
+        {
+            var comboActions = (_action.Action.ActionCombo?.Row ?? 0) == 0 ? []
+                : new ActionID[] { (ActionID)_action.Action.ActionCombo!.Row };
+
+            if (_action.Setting.ComboIds == null) return comboActions;
+            else return [.. comboActions, .. _action.Setting.ComboIds];
+        }
+    }
+
 
     /// <summary>
     /// The status that this action needs
@@ -375,11 +390,7 @@ public readonly struct ActionBasicInfo
 
         if (_action.Setting.SkipComboCheck) return true;
 
-        var comboActions = (_action.Action.ActionCombo?.Row ?? 0) != 0
-            ? new ActionID[] { (ActionID)_action.Action.ActionCombo!.Row }
-            : [];
-
-        if (_action.Setting.ComboIds != null) comboActions = [.. comboActions, .. _action.Setting.ComboIds];
+        var comboActions = ComboActions;
 
         if (comboActions.Length > 0)
         {

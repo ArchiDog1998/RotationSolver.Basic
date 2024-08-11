@@ -1,4 +1,6 @@
-﻿namespace RotationSolver.Basic.Rotations;
+﻿using ECommons.GameHelpers;
+
+namespace RotationSolver.Basic.Rotations;
 partial class CustomRotation
 {
     /// <summary>
@@ -38,4 +40,10 @@ partial class CustomRotation
     public int MaxCountOfCombatTimeUsing { get; internal set; } = 0;
 
     internal long CountOfTracking { get; set; } = 0;
+
+    private protected static void GreatDefense(ref ActionSetting setting)
+    {
+        setting.StatusProvide = StatusHelper.RampartStatus;
+        setting.ActionCheck = CombatData.Player.IsTargetOnSelf;
+    }
 }

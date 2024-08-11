@@ -414,7 +414,8 @@ internal static class DataCenter
 
     public static bool IsHostileCastingAOE { get; internal set; }
 
-    public static bool IsHostileCastingToTank { get; internal set; }
+    public static bool IsHostileCastingToMe { get; internal set; }
+    public static bool IsHostileCastingToOthers { get; internal set; }
 
     public static bool IsHostileCastingKnockback { get; internal set; }
 
